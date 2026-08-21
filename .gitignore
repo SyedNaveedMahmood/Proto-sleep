@@ -1,24 +1,120 @@
-# Python
+# -----------------------------------------------------------------------------
+# Python bytecode / caches / build artefacts
+# -----------------------------------------------------------------------------
 __pycache__/
 *.py[cod]
+*$py.class
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.pytype/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+build/
+dist/
+site/
+*.egg-info/
+.eggs/
+
+# -----------------------------------------------------------------------------
+# Virtual environments / local environment files
+# -----------------------------------------------------------------------------
 .venv/
 venv/
+env/
+ENV/
+.env
+.env.*
+!.env.example
+.python-version
 
-# Jupyter
+# -----------------------------------------------------------------------------
+# Jupyter / IPython
+# -----------------------------------------------------------------------------
 .ipynb_checkpoints/
+.profile_default/
+ipython_config.py
 
-# Data / model artifacts
+# -----------------------------------------------------------------------------
+# IDE / editor / OS noise
+# -----------------------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# -----------------------------------------------------------------------------
+# EEG datasets and large local data artefacts
+# Never commit raw/preprocessed participant data.
+# -----------------------------------------------------------------------------
 data/
+dataset/
+datasets/
+external_data/
+private_data/
+*.edf
+*.bdf
+*.vhdr
+*.vmrk
+*.eeg
+*.mat
+*.h5
+*.hdf5
 *.npz
+*.npy
+*.npy.gz
+
+# -----------------------------------------------------------------------------
+# Model checkpoints / caches / experiment outputs
+# -----------------------------------------------------------------------------
 *.pt
 *.pth
 *.ckpt
-protomae_sleep_runs/
+*.safetensors
+*.onnx
 runs/
+protomae_sleep_runs/
+mist_sleep_runs/
 outputs/
+artifacts/
+checkpoints/
+cache/
+caches/
+wandb/
+mlruns/
+tensorboard/
+lightning_logs/
 
-# OS/editor
-.DS_Store
-.vscode/
-.idea/
+# -----------------------------------------------------------------------------
+# Logs / profiler / cluster output
+# -----------------------------------------------------------------------------
+*.log
+nohup.out
+slurm-*.out
+*.prof
+*.trace
+*.tmp
+*.temp
+
+# -----------------------------------------------------------------------------
+# Local result exports. Keep curated paper tables/figures outside these folders.
+# -----------------------------------------------------------------------------
+results/local/
+figures/local/
+tables/local/
+
+# -----------------------------------------------------------------------------
+# Packaging / tool-specific local state
+# -----------------------------------------------------------------------------
+.pdm-python
+.pdm-build/
+poetry.toml
+pip-wheel-metadata/
+.cache/
