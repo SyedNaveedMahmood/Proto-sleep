@@ -181,19 +181,35 @@ def load_mrcnn_checkpoint(module: MRCNN, checkpoint_path: Path | str) -> Dict[st
 
 
 def save_canonical_mrcnn_checkpoint(source: Path | str, destination: Path | str) -> Dict[str, Any]:
+    """
+    Convert any strictly compatible source checkpoint to a compact MRCNN-only checkpoint.
+
+    Provenance and split metadata are preserved at the top level so the leakage guard in
+    ``run_mist_stability.py`` remains effective after conversion.
+    """
     state, metadata = extract_mrcnn_state_dict(source)
     destination = Path(destination).expanduser().resolve()
     destination.parent.mkdir(parents=True, exist_ok=True)
-    torch.save(
-        {
-            "state_dict": state,
-            "source_checkpoint": metadata["path"],
-            "source_sha256": metadata["sha256"],
-            "source_container": metadata["container"],
-            "source_prefix": metadata["prefix"],
-        },
-        destination,
-    )
+
+    payload: Dict[str, Any] = {
+        "state_dict": state,
+        "source_checkpoint": metadata["path"],
+        "source_sha256": metadata["sha256"],
+        "source_container": metadata["container"],
+        "source_prefix": metadata["prefix"],
+    }
+    for key in (
+        "train_subjects",
+        "pretrain_subjects",
+        "subjects",
+        "fold",
+        "seed",
+        "project_version",
+    ):
+        if key in metadata:
+            payload[key] = metadata[key]
+
+    torch.save(payload, destination)
     return {**metadata, "canonical_path": str(destination)}
 
 
