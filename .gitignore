@@ -104,8 +104,10 @@ slurm-*.out
 *.temp
 
 # -----------------------------------------------------------------------------
-# Local result exports. Keep curated paper tables/figures outside these folders.
+# Local research-audit exports
 # -----------------------------------------------------------------------------
+legacy_morphmae_audit*.txt
+legacy_morphmae_audit*.json
 results/local/
 figures/local/
 tables/local/
