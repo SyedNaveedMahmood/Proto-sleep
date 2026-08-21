@@ -53,6 +53,7 @@ Proto-sleep/
 │   ├── data.py            # Sleep-EDF NPZ loading and subject-level folds
 │   ├── attnsleep.py       # AttnSleep reproduction
 │   ├── prototypes.py      # spherical prototype bank + Proto-AttnSleep
+│   ├── mist.py            # strict MAE->MRCNN bridge and matched A3/A4 builders
 │   ├── micro.py           # epoch-level metrics/training
 │   ├── cache.py           # recording-preserving feature cache
 │   ├── night.py           # padded full-night loaders
@@ -65,9 +66,13 @@ Proto-sleep/
 │   └── runner.py          # A/B/C/D/E experiment runner
 ├── scripts/
 │   ├── run_fold.py
-│   └── speed_audit.py
+│   ├── speed_audit.py
+│   ├── inspect_morphmae_checkpoint.py
+│   └── run_mist_stability.py
 ├── tests/
-│   └── test_structural.py
+│   ├── test_structural.py
+│   ├── test_losses.py
+│   └── test_mist_checkpoint.py
 └── notebooks/
     └── README.md
 ```
@@ -151,6 +156,85 @@ Do not treat a single fold as a paper result. Multi-fold development checks show
 
 This is why the repository emphasizes **reproducibility, cache/checkpoint provenance, subject-level splits, and explicit test locking** rather than presenting the current configuration as SOTA.
 
+## Next experiment: MIST mechanism stability before transfer
+
+The original MIST/MorphMAE project identified **prototype + MAE initialization without WCO** as the most promising mechanism. The next valid experiment is therefore to stabilize that interaction before attempting external transfer.
+
+The current repository does **not** claim that its spherical `ProtoAttnSleep` is byte-for-byte identical to the historical WaveSleepNet-derived prototype implementation. For that reason the new audit calls the matched pair `A3_current` and `A4_current`:
+
+- `A3_current`: current prototype model with randomly initialized AttnSleep MRCNN.
+- `A4_current`: the exact same non-MRCNN initialization, but its MRCNN is replaced by a strictly compatible MAE-pretrained MRCNN checkpoint.
+
+The A3/A4 builder uses one template plus `deepcopy`, verifies every non-MRCNN tensor is identical, performs an exact key/shape match for the pretrained MRCNN, loads with `strict=True`, and records SHA-256 provenance. It refuses to continue if the checkpoint manipulation is not actually active.
+
+### 1. Find the historical MAE/MorphMAE checkpoint
+
+```bash
+find ~/Desktop -type f \
+  \( -iname '*morph*mae*.pt' -o -iname '*morph*mae*.pth' \
+     -o -iname '*mae*encoder*.pt' -o -iname '*mae*encoder*.pth' \) \
+  -print
+```
+
+### 2. Inspect it before training
+
+```bash
+python scripts/inspect_morphmae_checkpoint.py /path/to/checkpoint.pt
+```
+
+A valid checkpoint prints `STRICT MRCNN COMPATIBILITY: PASS`, along with the detected state-dict container/prefix and file SHA-256.
+
+Optionally convert it to a canonical MRCNN-only checkpoint:
+
+```bash
+python scripts/inspect_morphmae_checkpoint.py /path/to/checkpoint.pt \
+  --write-canonical /path/to/morphmae_mrcnn_canonical.pt
+```
+
+### 3. Run a fold-0 / three-seed validation-only stability audit
+
+```bash
+python scripts/run_mist_stability.py \
+  --data-dir "/home/FA006/Desktop/Dimension/dataset/Preprocessed Sleep-EDF-20 dataset" \
+  --folds 0 \
+  --seeds 123,456,789 \
+  --mae-checkpoint /path/to/morphmae_mrcnn_canonical.pt \
+  --output-dir mist_sleep_runs/fold0_stability
+```
+
+By default the runner requires the MAE checkpoint to declare `train_subjects`, `pretrain_subjects`, or `subjects` metadata matching the current fold's training subjects. This prevents accidentally using an SSL encoder pretrained on the validation/test subject.
+
+Very old checkpoints may not contain split metadata. For an explicitly development-only pilot you may bypass only the *missing-metadata* check:
+
+```bash
+python scripts/run_mist_stability.py \
+  --data-dir "/home/FA006/Desktop/Dimension/dataset/Preprocessed Sleep-EDF-20 dataset" \
+  --folds 0 \
+  --seeds 123,456,789 \
+  --mae-checkpoint /path/to/checkpoint.pt \
+  --allow-unverified-pretrain-split \
+  --output-dir mist_sleep_runs/fold0_stability_unverified
+```
+
+Do **not** use an unverified checkpoint for a final scientific claim. If subject metadata exists and disagrees with the fold, the runner always aborts.
+
+### 4. Multi-fold stability requires fold-specific MAE pretraining
+
+A leakage-safe multi-fold A4 comparison requires a source-only MAE checkpoint for each fold. Once those exist:
+
+```bash
+python scripts/run_mist_stability.py \
+  --data-dir "/home/FA006/Desktop/Dimension/dataset/Preprocessed Sleep-EDF-20 dataset" \
+  --folds 0,1,2 \
+  --seeds 123,456,789 \
+  --mae-checkpoint-pattern "/path/to/mae/fold_{fold:02d}/encoder.pt" \
+  --output-dir mist_sleep_runs/a1_a3_a4_stability
+```
+
+If each supervised seed also has its own SSL checkpoint, `{seed}` may be included in the pattern.
+
+The stability script evaluates **validation subjects only**. Designated test subjects are never placed in an evaluation loader. It writes per-run provenance JSON, raw results, seed-averaged fold results, and paired A3/A4 effects.
+
 ## Speed audit
 
 Without touching the dataset:
@@ -166,17 +250,19 @@ pip install -e ".[dev]"
 pytest -q
 ```
 
-The structural tests cover AttnSleep shapes, prototype simplex behavior, masking, MAE forward paths, geometry loss, padding, and actual optimizer parameter updates.
+The structural tests cover AttnSleep shapes, prototype simplex behavior, masking, MAE forward paths, geometry loss, padding, actual optimizer parameter updates, AMP geometry dtype handling, and strict MAE-to-MRCNN checkpoint mapping.
 
 ## Reproducibility notes
 
-- Random seeds are fixed per fold.
+- Random seeds are fixed per fold/run.
 - Train/validation/test subjects are disjoint.
 - Recording boundaries are preserved.
 - Prototype transition statistics are fit from training nights only.
 - Validation controls model development.
 - Final test evaluation is opt-in and lock-protected.
 - `--no-reuse` should be used for wall-clock benchmarking.
+- The MIST stability audit records checkpoint SHA-256 and MRCNN state digests.
+- Fold-specific MAE pretraining must remain subject-disjoint from validation/test subjects.
 
 ## Notebook status
 
