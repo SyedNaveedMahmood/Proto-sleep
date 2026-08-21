@@ -3,7 +3,7 @@ from __future__ import annotations
 import torch
 
 from protosleep.attnsleep import MRCNN
-from protosleep.mist import extract_mrcnn_state_dict
+from protosleep.mist import extract_mrcnn_state_dict, save_canonical_mrcnn_checkpoint
 
 
 def _clone_state(model: MRCNN):
@@ -52,5 +52,39 @@ def test_extract_prefixed_wrapped_mrcnn_state_dict(tmp_path):
     assert meta["fold"] == 0
     assert meta["seed"] == 123
     assert set(found) == set(expected)
+    for key in expected:
+        assert torch.equal(found[key], expected[key])
+
+
+def test_canonical_checkpoint_preserves_split_metadata(tmp_path):
+    model = MRCNN(30)
+    expected = _clone_state(model)
+
+    source = tmp_path / "historical.pt"
+    torch.save(
+        {
+            "encoder_state_dict": {
+                f"encoder.{key}": value.clone()
+                for key, value in expected.items()
+            },
+            "train_subjects": [0, 2, 3, 4],
+            "fold": 1,
+            "seed": 777,
+            "project_version": "historical-test",
+        },
+        source,
+    )
+
+    canonical = tmp_path / "canonical.pt"
+    save_canonical_mrcnn_checkpoint(source, canonical)
+
+    found, meta = extract_mrcnn_state_dict(canonical)
+
+    assert meta["container"] == "state_dict"
+    assert meta["prefix"] == ""
+    assert meta["train_subjects"] == [0, 2, 3, 4]
+    assert meta["fold"] == 1
+    assert meta["seed"] == 777
+    assert meta["project_version"] == "historical-test"
     for key in expected:
         assert torch.equal(found[key], expected[key])
