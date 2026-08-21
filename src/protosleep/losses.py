@@ -79,16 +79,26 @@ def masked_spherical_barycenter_loss(logits: torch.Tensor, target: torch.Tensor,
 
         mu(p) = sum_k p_k P_k,   L_geo = ||mu(target)-mu(pred)||_2^2.
 
-    Thus assigning probability to a nearby learned prototype is penalized less than
-    assigning it to a geometrically distant prototype, while KL still preserves the
-    full categorical distribution. The prototype vectors are frozen during macro SSL.
+    Under CUDA autocast the MAE logits are usually float16 while cached targets and
+    frozen prototype vectors are float32. The barycenter matmuls are intentionally
+    evaluated in float32 so AMP cannot produce Half-vs-Float matmul failures and so
+    this small geometry term remains numerically stable. Gradients still flow through
+    the float32 cast back into the MAE logits.
     """
     use = mask & valid
     if not torch.any(use):
         raise RuntimeError("No masked valid positions")
-    p = target[use]
-    q = F.softmax(logits[use], dim=-1)
-    P = F.normalize(prototype_vectors, dim=-1, eps=1e-8)
+
+    # Keep the geometry calculation explicitly in FP32. This is cheap (K=48) and
+    # avoids AMP dtype mismatches such as Half @ Float on CUDA.
+    p = target[use].to(device=logits.device, dtype=torch.float32)
+    q = F.softmax(logits[use].float(), dim=-1)
+    P = F.normalize(
+        prototype_vectors.to(device=logits.device, dtype=torch.float32),
+        dim=-1,
+        eps=1e-8,
+    )
+
     mu_p = p @ P
     mu_q = q @ P
     return (mu_p - mu_q).pow(2).sum(dim=-1).mean()
