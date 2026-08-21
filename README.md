@@ -49,25 +49,26 @@ python scripts/run_fold.py --data-dir "/path/to/data" --fold 0 --no-reuse --no-a
 ```text
 Proto-sleep/
 ├── src/protosleep/
-│   ├── config.py          # experiment constants / env-controlled runtime settings
-│   ├── data.py            # Sleep-EDF NPZ loading and subject-level folds
-│   ├── attnsleep.py       # AttnSleep reproduction
-│   ├── prototypes.py      # spherical prototype bank + Proto-AttnSleep
-│   ├── mist.py            # strict MAE->MRCNN bridge and matched A3/A4 builders
-│   ├── micro.py           # epoch-level metrics/training
-│   ├── cache.py           # recording-preserving feature cache
-│   ├── night.py           # padded full-night loaders
-│   ├── masking.py         # random / transition-aware span masks
-│   ├── macro.py           # macro Transformer + masked autoencoder
-│   ├── losses.py          # prototype distribution / geometry losses
-│   ├── train_macro.py     # macro SSL and supervised fine-tuning
-│   ├── evaluation.py      # pooled and transition-window evaluation
-│   ├── selftest.py        # structural/optimizer-step checks
-│   └── runner.py          # A/B/C/D/E experiment runner
+│   ├── config.py
+│   ├── data.py
+│   ├── attnsleep.py
+│   ├── prototypes.py
+│   ├── mist.py
+│   ├── micro.py
+│   ├── cache.py
+│   ├── night.py
+│   ├── masking.py
+│   ├── macro.py
+│   ├── losses.py
+│   ├── train_macro.py
+│   ├── evaluation.py
+│   ├── selftest.py
+│   └── runner.py
 ├── scripts/
 │   ├── run_fold.py
 │   ├── speed_audit.py
 │   ├── inspect_morphmae_checkpoint.py
+│   ├── audit_legacy_morphmae.py
 │   └── run_mist_stability.py
 ├── tests/
 │   ├── test_structural.py
@@ -90,8 +91,6 @@ pip install -U pip
 pip install -e .
 ```
 
-Install the PyTorch build appropriate for your CUDA driver if the default package is not suitable.
-
 ## Data format
 
 The loader intentionally follows the AttnSleep preprocessing convention used during development:
@@ -105,122 +104,56 @@ The loader intentionally follows the AttnSleep preprocessing convention used dur
 
 Set the dataset directory either with `--data-dir` or `SLEEP_EDF_NPZ_DIR`. No data or checkpoints are committed to the repository.
 
-## Run
-
-Structural self-tests only:
-
-```bash
-python scripts/run_fold.py --self-test-only
-```
-
-Fold-0 development run:
-
-```bash
-python scripts/run_fold.py --data-dir "/path/to/Preprocessed Sleep-EDF-20 dataset" --fold 0
-```
-
-Force fresh training:
-
-```bash
-python scripts/run_fold.py --data-dir "/path/to/Preprocessed Sleep-EDF-20 dataset" --fold 0 --no-reuse
-```
-
-Optional controls:
-
-```bash
-python scripts/run_fold.py --data-dir "/path/to/data" --run-f
-python scripts/run_fold.py --data-dir "/path/to/data" --run-g
-```
-
-### Test-set safety
+## Test-set safety
 
 The normal runner builds/loads **train and validation caches only**. The designated test cache is not touched unless `--final-test` is explicitly supplied.
 
 After final-test evaluation a persistent `TEST_EVALUATED.lock` is written. Re-evaluation is blocked unless `--allow-test-rerun` is also explicitly supplied.
 
-## Experiments
-
-- **A** — AttnSleep baseline.
-- **B** — Proto-AttnSleep local prototype model.
-- **C** — supervised full-night prototype Transformer, no SSL.
-- **D** — random-span prototype masked autoencoder.
-- **E** — transition-aware prototype masked autoencoder.
-- **F** — optional continuous AFR-latent MAE control.
-- **G** — optional prototype-geometry reconstruction control.
-
-D and E use the same macro architecture and reconstruction objective; the intended controlled difference is the masking-center policy.
-
 ## Current development evidence
 
 Do not treat a single fold as a paper result. Multi-fold development checks showed substantial subject-to-subject variance. In the matched 5-fold / 3-seed audit, full-label prototype SSL was close to neutral and transition-aware masking was not consistently better than random masking. Prototype-space MAE was more consistent than the continuous latent-MAE control, but this is still a development observation rather than a final claim.
 
-This is why the repository emphasizes **reproducibility, cache/checkpoint provenance, subject-level splits, and explicit test locking** rather than presenting the current configuration as SOTA.
+## Next experiment: recover the exact historical MorphMAE v2 recipe, then pretrain fold-specific encoders
 
-## Next experiment: MIST mechanism stability before transfer
+The original MIST/MorphMAE project identified **prototype + MAE initialization without WCO** as the most promising mechanism. Historical `best_morphmae.pt` checkpoints have now been shown to be strictly compatible with the current AttnSleep MRCNN, but those old checkpoints do not declare pretraining subjects. They therefore cannot be used as leakage-safe fold checkpoints for a confirmatory A3/A4 comparison.
 
-The original MIST/MorphMAE project identified **prototype + MAE initialization without WCO** as the most promising mechanism. The next valid experiment is therefore to stabilize that interaction before attempting external transfer.
-
-The current repository does **not** claim that its spherical `ProtoAttnSleep` is byte-for-byte identical to the historical WaveSleepNet-derived prototype implementation. For that reason the new audit calls the matched pair `A3_current` and `A4_current`:
-
-- `A3_current`: current prototype model with randomly initialized AttnSleep MRCNN.
-- `A4_current`: the exact same non-MRCNN initialization, but its MRCNN is replaced by a strictly compatible MAE-pretrained MRCNN checkpoint.
-
-The A3/A4 builder uses one template plus `deepcopy`, verifies every non-MRCNN tensor is identical, performs an exact key/shape match for the pretrained MRCNN, loads with `strict=True`, and records SHA-256 provenance. It refuses to continue if the checkpoint manipulation is not actually active.
-
-### 1. Find the historical MAE/MorphMAE checkpoint
+The repository deliberately does **not** guess the missing MorphMAE-v2 training details from the report. Before porting fold-specific pretraining, audit the historical source tree and checkpoint schema:
 
 ```bash
-find ~/Desktop -type f \
-  \( -iname '*morph*mae*.pt' -o -iname '*morph*mae*.pth' \
-     -o -iname '*mae*encoder*.pt' -o -iname '*mae*encoder*.pth' \) \
-  -print
+python scripts/audit_legacy_morphmae.py \
+  "/home/FA006/Desktop/transfer/MorphMAE_Sleep_Codebase" \
+  --checkpoint "/home/FA006/Desktop/transfer/MorphMAE_Sleep_Codebase/outputs/mae_edf78_v2/best_morphmae.pt" \
+  --report legacy_morphmae_audit.txt \
+  --json legacy_morphmae_audit.json
 ```
 
-### 2. Inspect it before training
+The audit is read-only. It scans source/config files for the exact architecture, masking, loss, optimizer, epoch, batch-size, split and checkpointing implementation and summarizes the historical checkpoint without printing tensor contents. The generated audit reports are ignored by git.
+
+Once the exact historical recipe is recovered, the next code change is a **fold-specific MorphMAE-v2 pretraining runner** that:
+
+1. receives the current subject-level fold;
+2. pretrains only on that fold's training subjects;
+3. uses validation subjects for SSL checkpoint selection only if explicitly justified by the frozen protocol (otherwise a training-only SSL holdout will be created);
+4. records `train_subjects`, fold, seed, code/config hash and checkpoint SHA-256;
+5. exports a strict AttnSleep-compatible MRCNN state dict;
+6. never reads the designated test subject during pretraining.
+
+Only after those fold-specific checkpoints exist should `run_mist_stability.py` be used for the matched `A3_current` versus `A4_current` validation comparison.
+
+The current repository does **not** claim that its spherical `ProtoAttnSleep` is byte-for-byte identical to the historical WaveSleepNet-derived prototype implementation. The current matched pair is therefore named `A3_current` / `A4_current`.
+
+## MIST checkpoint inspection
 
 ```bash
 python scripts/inspect_morphmae_checkpoint.py /path/to/checkpoint.pt
 ```
 
-A valid checkpoint prints `STRICT MRCNN COMPATIBILITY: PASS`, along with the detected state-dict container/prefix and file SHA-256.
+A compatible checkpoint prints `STRICT MRCNN COMPATIBILITY: PASS`, the detected state-dict container/prefix, tensor count and file SHA-256.
 
-Optionally convert it to a canonical MRCNN-only checkpoint:
+## MIST stability runner
 
-```bash
-python scripts/inspect_morphmae_checkpoint.py /path/to/checkpoint.pt \
-  --write-canonical /path/to/morphmae_mrcnn_canonical.pt
-```
-
-### 3. Run a fold-0 / three-seed validation-only stability audit
-
-```bash
-python scripts/run_mist_stability.py \
-  --data-dir "/home/FA006/Desktop/Dimension/dataset/Preprocessed Sleep-EDF-20 dataset" \
-  --folds 0 \
-  --seeds 123,456,789 \
-  --mae-checkpoint /path/to/morphmae_mrcnn_canonical.pt \
-  --output-dir mist_sleep_runs/fold0_stability
-```
-
-By default the runner requires the MAE checkpoint to declare `train_subjects`, `pretrain_subjects`, or `subjects` metadata matching the current fold's training subjects. This prevents accidentally using an SSL encoder pretrained on the validation/test subject.
-
-Very old checkpoints may not contain split metadata. For an explicitly development-only pilot you may bypass only the *missing-metadata* check:
-
-```bash
-python scripts/run_mist_stability.py \
-  --data-dir "/home/FA006/Desktop/Dimension/dataset/Preprocessed Sleep-EDF-20 dataset" \
-  --folds 0 \
-  --seeds 123,456,789 \
-  --mae-checkpoint /path/to/checkpoint.pt \
-  --allow-unverified-pretrain-split \
-  --output-dir mist_sleep_runs/fold0_stability_unverified
-```
-
-Do **not** use an unverified checkpoint for a final scientific claim. If subject metadata exists and disagrees with the fold, the runner always aborts.
-
-### 4. Multi-fold stability requires fold-specific MAE pretraining
-
-A leakage-safe multi-fold A4 comparison requires a source-only MAE checkpoint for each fold. Once those exist:
+After leakage-safe fold-specific MAE checkpoints exist:
 
 ```bash
 python scripts/run_mist_stability.py \
@@ -231,13 +164,9 @@ python scripts/run_mist_stability.py \
   --output-dir mist_sleep_runs/a1_a3_a4_stability
 ```
 
-If each supervised seed also has its own SSL checkpoint, `{seed}` may be included in the pattern.
-
-The stability script evaluates **validation subjects only**. Designated test subjects are never placed in an evaluation loader. It writes per-run provenance JSON, raw results, seed-averaged fold results, and paired A3/A4 effects.
+The runner evaluates validation subjects only, verifies fold metadata when available, records checkpoint provenance and refuses a mismatched pretraining split.
 
 ## Speed audit
-
-Without touching the dataset:
 
 ```bash
 python scripts/speed_audit.py
@@ -250,8 +179,6 @@ pip install -e ".[dev]"
 pytest -q
 ```
 
-The structural tests cover AttnSleep shapes, prototype simplex behavior, masking, MAE forward paths, geometry loss, padding, actual optimizer parameter updates, AMP geometry dtype handling, and strict MAE-to-MRCNN checkpoint mapping.
-
 ## Reproducibility notes
 
 - Random seeds are fixed per fold/run.
@@ -261,7 +188,7 @@ The structural tests cover AttnSleep shapes, prototype simplex behavior, masking
 - Validation controls model development.
 - Final test evaluation is opt-in and lock-protected.
 - `--no-reuse` should be used for wall-clock benchmarking.
-- The MIST stability audit records checkpoint SHA-256 and MRCNN state digests.
+- MIST checkpoint bridges use exact key/shape matching and `strict=True`.
 - Fold-specific MAE pretraining must remain subject-disjoint from validation/test subjects.
 
 ## Notebook status
