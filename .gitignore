@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data / model artifacts
+data/
+*.npz
+*.pt
+*.pth
+*.ckpt
+protomae_sleep_runs/
+runs/
+outputs/
+
+# OS/editor
+.DS_Store
+.vscode/
+.idea/
