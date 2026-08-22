@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import copy
+from collections.abc import Mapping
 
 from protosleep.legacy_wavesleepnet import (
     EXPECTED_HISTORICAL_CONFIG,
@@ -26,13 +27,17 @@ def historical_config_fixture():
             "batch_size": 64,
             "lr": 0.0005,
             "weight_decay": 0.0001,
+            "early_stopping": {"mode": "min", "patience": 50},
         },
-        "early_stopping": {"patience": 50},
         "unrelated": {"keep": "identical"},
     }
     # Guard the fixture itself against accidental drift from the audited constants.
-    for (outer, inner), expected in EXPECTED_HISTORICAL_CONFIG.items():
-        assert cfg[outer][inner] == expected
+    for path, expected in EXPECTED_HISTORICAL_CONFIG.items():
+        node = cfg
+        for key in path:
+            assert isinstance(node, Mapping)
+            node = node[key]
+        assert node == expected
     return cfg
 
 
@@ -63,3 +68,16 @@ def test_historical_config_validation_fails_closed():
         assert "pd_lambda" in str(exc)
     else:
         raise AssertionError("Expected audited historical config mismatch to fail")
+
+
+def test_historical_config_requires_nested_early_stopping():
+    cfg = historical_config_fixture()
+    early_stopping = cfg["training_params"].pop("early_stopping")
+    cfg["early_stopping"] = early_stopping
+
+    try:
+        validate_historical_edf20_config(cfg)
+    except RuntimeError as exc:
+        assert "training_params.early_stopping.patience" in str(exc)
+    else:
+        raise AssertionError("Expected misplaced early-stopping config to fail")
