@@ -110,6 +110,7 @@ legacy_morphmae_audit*.txt
 legacy_morphmae_audit*.json
 legacy_prototype_audit*.txt
 legacy_prototype_audit*.json
+legacy_wavesleepnet_smoke*.json
 results/local/
 figures/local/
 tables/local/
