@@ -5,6 +5,7 @@ from collections.abc import Mapping
 
 from protosleep.legacy_wavesleepnet import (
     EXPECTED_HISTORICAL_CONFIG,
+    import_legacy_protop_module,
     patched_mist_config,
     validate_historical_edf20_config,
 )
@@ -81,3 +82,27 @@ def test_historical_config_requires_nested_early_stopping():
         assert "training_params.early_stopping.patience" in str(exc)
     else:
         raise AssertionError("Expected misplaced early-stopping config to fail")
+
+
+def test_legacy_protop_import_bridges_missing_models_attnsleep(tmp_path):
+    wave_models = tmp_path / "external" / "WaveSleepNet-main" / "models"
+    attn_model = tmp_path / "external" / "AttnSleep-main" / "model"
+    wave_models.mkdir(parents=True)
+    attn_model.mkdir(parents=True)
+
+    # Reproduce the exact import layout that failed on the recovered archive: WaveSleepNet
+    # asks for models.attnsleep even though that file is absent from its own models folder.
+    (wave_models / "protop.py").write_text(
+        "from models.attnsleep import AttnSleep\n"
+        "class ProtoPNet:\n"
+        "    imported_attnsleep = AttnSleep\n",
+        encoding="utf-8",
+    )
+    (attn_model / "model.py").write_text(
+        "class AttnSleep:\n"
+        "    source = 'bundled-original-attnsleep'\n",
+        encoding="utf-8",
+    )
+
+    module = import_legacy_protop_module(tmp_path)
+    assert module.ProtoPNet.imported_attnsleep.source == "bundled-original-attnsleep"
