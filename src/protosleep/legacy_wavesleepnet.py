@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import copy
 import hashlib
+import importlib
 import importlib.util
 import inspect
 import json
@@ -25,6 +26,15 @@ LEGACY_RELATIVE_FILES: Dict[str, str] = {
     "mae_patch": "morphmae/integrations/wavesleepnet_mae_patch.py",
     "edf20_config": "external/WaveSleepNet-main/configs/SleePyCo-Transformer_SL-10_numScales-3_Sleep-EDF-2013_wavesensing.json",
 }
+
+# WaveSleepNet's historical protop.py imports ``models.attnsleep.AttnSleep``, but the
+# archived WaveSleepNet tree does not contain models/attnsleep.py. The same recovered
+# codebase does bundle the original AttnSleep implementation under external/AttnSleep-main.
+# At import time we expose that bundled historical implementation under the module name
+# expected by WaveSleepNet. This is an import-compatibility bridge only; protop.py itself
+# remains byte-for-byte unchanged and its own MRCNN implementation is still the one used
+# by ProtoPNet.
+LEGACY_ATTNSLEEP_MODEL = "external/AttnSleep-main/model/model.py"
 
 # Frozen from the 2026-08-22 read-only legacy prototype audit. These hashes are a
 # deliberate guardrail: the recovery experiment should fail closed if the historical
@@ -151,19 +161,84 @@ def patched_mist_config(cfg: Mapping[str, Any]) -> Dict[str, Any]:
     return out
 
 
+def _pop_module_tree(prefix: str) -> Dict[str, Any]:
+    """Temporarily remove an import namespace so legacy imports cannot hit unrelated modules."""
+    saved: Dict[str, Any] = {}
+    for name in list(sys.modules):
+        if name == prefix or name.startswith(prefix + "."):
+            saved[name] = sys.modules.pop(name)
+    return saved
+
+
+def _restore_module_tree(prefix: str, saved: Mapping[str, Any]) -> None:
+    for name in list(sys.modules):
+        if name == prefix or name.startswith(prefix + "."):
+            sys.modules.pop(name, None)
+    sys.modules.update(saved)
+
+
+def _install_bundled_attnsleep_alias(legacy_root: Path, wavesleep_root: Path) -> Dict[str, str]:
+    """
+    Satisfy WaveSleepNet's missing ``models.attnsleep`` import from bundled AttnSleep.
+
+    The archived WaveSleepNet protop.py imports ``from models.attnsleep import AttnSleep``
+    but its models directory does not contain attnsleep.py. The recovery codebase includes
+    the original AttnSleep model.py, so load that exact historical file under the module name
+    WaveSleepNet expects instead of creating a stub or substituting the modern repo model.
+    """
+    native = wavesleep_root / "models" / "attnsleep.py"
+    if native.is_file():
+        return {"mode": "wavesleepnet-native", "path": str(native), "sha256": sha256_file(native)}
+
+    source = legacy_root / LEGACY_ATTNSLEEP_MODEL
+    if not source.is_file():
+        raise ModuleNotFoundError(
+            "Historical WaveSleepNet requires models.attnsleep, but the WaveSleepNet snapshot "
+            f"has no {native} and bundled AttnSleep source is missing: {source}"
+        )
+
+    # Ensure the WaveSleepNet ``models`` package/namespace is the parent package. The caller
+    # has already put wavesleep_root first on sys.path and isolated any pre-existing models.*.
+    importlib.import_module("models")
+    spec = importlib.util.spec_from_file_location("models.attnsleep", source)
+    if spec is None or spec.loader is None:
+        raise ImportError(f"Could not build import spec for bundled AttnSleep source: {source}")
+    module = importlib.util.module_from_spec(spec)
+    sys.modules["models.attnsleep"] = module
+    try:
+        spec.loader.exec_module(module)
+    except Exception:
+        sys.modules.pop("models.attnsleep", None)
+        raise
+    if not hasattr(module, "AttnSleep"):
+        raise AttributeError(f"Bundled historical AttnSleep source has no AttnSleep class: {source}")
+    return {"mode": "bundled-attnsleep-alias", "path": str(source), "sha256": sha256_file(source)}
+
+
 def import_legacy_protop_module(legacy_root: Path | str):
-    paths = legacy_paths(legacy_root)
+    root = Path(legacy_root).expanduser().resolve()
+    paths = legacy_paths(root)
     wavesleep_root = paths["protop"].parents[1]
+    attnsleep_root = root / "external" / "AttnSleep-main"
     module_path = paths["protop"]
 
-    # Put the historical repository first while executing its module so any local imports
-    # resolve to the legacy snapshot, not to similarly named modern modules.
-    root_str = str(wavesleep_root)
+    # Put the historical repositories first while executing protop.py. Isolate ``models``
+    # so an unrelated installed package cannot satisfy WaveSleepNet's absolute imports.
+    wave_str = str(wavesleep_root)
+    attn_str = str(attnsleep_root)
     old_path = list(sys.path)
+    saved_models = _pop_module_tree("models")
     try:
-        if root_str in sys.path:
-            sys.path.remove(root_str)
-        sys.path.insert(0, root_str)
+        for path_str in (attn_str, wave_str):
+            if path_str in sys.path:
+                sys.path.remove(path_str)
+        # WaveSleepNet must remain first because protop.py's other ``models.*`` imports are
+        # intended to resolve inside its own repository. AttnSleep is second for dependencies.
+        sys.path.insert(0, attn_str)
+        sys.path.insert(0, wave_str)
+
+        _install_bundled_attnsleep_alias(root, wavesleep_root)
+
         spec = importlib.util.spec_from_file_location("protosleep_legacy_wavesleepnet_protop", module_path)
         if spec is None or spec.loader is None:
             raise ImportError(f"Could not build import spec for {module_path}")
@@ -171,6 +246,7 @@ def import_legacy_protop_module(legacy_root: Path | str):
         spec.loader.exec_module(module)
     finally:
         sys.path[:] = old_path
+        _restore_module_tree("models", saved_models)
 
     if not hasattr(module, "ProtoPNet"):
         raise AttributeError(f"{module_path} does not define ProtoPNet")
