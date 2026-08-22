@@ -111,6 +111,7 @@ legacy_morphmae_audit*.json
 legacy_prototype_audit*.txt
 legacy_prototype_audit*.json
 legacy_wavesleepnet_smoke*.json
+legacy_wavesleepnet_objective_smoke*.json
 results/local/
 figures/local/
 tables/local/
