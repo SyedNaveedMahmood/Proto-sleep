@@ -41,7 +41,11 @@ EXPECTED_SHA256: Dict[str, str] = {
 # Historical Sleep-EDF-2013 WaveSleepNet values recovered by source audit. The only
 # intentional architecture adaptation for the MIST recovery is 27 -> 30 channels in
 # afr_reduced_dim/prototype_shape so MorphMAE's exact AttnSleep MRCNN can load strictly.
-EXPECTED_HISTORICAL_CONFIG: Dict[Tuple[str, str], Any] = {
+#
+# Note that early_stopping is nested under training_params in the historical JSON.
+# The original trainer confirms this structure by reading self.es_cfg from the training
+# configuration before using self.es_cfg['patience'].
+EXPECTED_HISTORICAL_CONFIG: Dict[Tuple[str, ...], Any] = {
     ("classifier", "prototype_num"): 10,
     ("classifier", "prototype_shape"): [10, 27, 1],
     ("classifier", "dist_lambda"): 17.8373,
@@ -53,7 +57,7 @@ EXPECTED_HISTORICAL_CONFIG: Dict[Tuple[str, str], Any] = {
     ("training_params", "batch_size"): 64,
     ("training_params", "lr"): 0.0005,
     ("training_params", "weight_decay"): 0.0001,
-    ("early_stopping", "patience"): 50,
+    ("training_params", "early_stopping", "patience"): 50,
 }
 
 
@@ -100,13 +104,23 @@ def load_historical_edf20_config(legacy_root: Path | str) -> Dict[str, Any]:
     return cfg
 
 
+def _nested_config_value(cfg: Mapping[str, Any], path: Sequence[str]) -> Tuple[bool, Any]:
+    current: Any = cfg
+    for key in path:
+        if not isinstance(current, Mapping) or key not in current:
+            return False, None
+        current = current[key]
+    return True, current
+
+
 def validate_historical_edf20_config(cfg: Mapping[str, Any]) -> None:
     errors: List[str] = []
-    for (outer, inner), expected in EXPECTED_HISTORICAL_CONFIG.items():
-        if outer not in cfg or not isinstance(cfg[outer], Mapping) or inner not in cfg[outer]:
-            errors.append(f"missing {outer}.{inner}")
+    for path, expected in EXPECTED_HISTORICAL_CONFIG.items():
+        dotted = ".".join(path)
+        present, actual = _nested_config_value(cfg, path)
+        if not present:
+            errors.append(f"missing {dotted}")
             continue
-        actual = cfg[outer][inner]
         if isinstance(expected, float):
             try:
                 ok = abs(float(actual) - expected) <= 1e-12
@@ -115,7 +129,7 @@ def validate_historical_edf20_config(cfg: Mapping[str, Any]) -> None:
         else:
             ok = actual == expected
         if not ok:
-            errors.append(f"{outer}.{inner}={actual!r}, expected {expected!r}")
+            errors.append(f"{dotted}={actual!r}, expected {expected!r}")
     if errors:
         raise RuntimeError(
             "Historical Sleep-EDF-2013 WaveSleepNet config does not match the audited snapshot:\n- "
