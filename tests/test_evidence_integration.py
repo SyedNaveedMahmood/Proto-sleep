@@ -11,6 +11,22 @@ from protosleep.evidence.model import EvidenceConfig
 from protosleep.evidence.train import (TrainConfig, fit_context, fit_local, safe_load)
 
 
+@pytest.fixture(autouse=True)
+def restore_process_settings():
+    # These integration tests call the production seeding helper. Do not impose
+    # deterministic CUDA settings on the old repository's unrelated tests.
+    deterministic = torch.are_deterministic_algorithms_enabled()
+    warn_only = torch.is_deterministic_algorithms_warn_only_enabled()
+    benchmark = torch.backends.cudnn.benchmark
+    cudnn_deterministic = torch.backends.cudnn.deterministic
+    threads = torch.get_num_threads()
+    yield
+    torch.use_deterministic_algorithms(deterministic, warn_only=warn_only)
+    torch.backends.cudnn.benchmark = benchmark
+    torch.backends.cudnn.deterministic = cudnn_deterministic
+    torch.set_num_threads(threads)
+
+
 def configs():
     return (EvidenceConfig(scales_samples=(100,), anchors_per_class=1, embedding_dim=8, pool_per_subject=20),
             TrainConfig(epochs=2, patience=2, batch_size=10, log_every=0))

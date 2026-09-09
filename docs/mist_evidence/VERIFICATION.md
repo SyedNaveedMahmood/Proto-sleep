@@ -3,7 +3,7 @@
 ## Executed in the editing environment
 
 - Python 3.13.5; PyTorch 2.10.0+cpu; NumPy 2.3.5; SciPy 1.17.0; scikit-learn 1.8.0; Matplotlib 3.10.8; pytest 9.0.2.
-- New regression suite: **38 passed, 1 skipped**, in 15.09 seconds on the last complete run. The skipped test is the CUDA forward/backward test because no CUDA device is available here.
+- New regression suite: **38 passed, 1 skipped**. The skipped test is the CUDA forward/backward test because no CUDA device is available here. The final run, including integration-test isolation of process-wide deterministic settings, completed in 10.50 seconds.
 - Full synthetic command: `python -u scripts/run_mist_evidence.py smoke --output-dir <new-folder> --device cpu --threads 2` completed local train/validation, atomic checkpointing, CRF training, JSON/CSV/HTML export and input perturbation checks.
 - Resume test simulated interruption immediately after an atomic epoch commit. Resumed training matched the uninterrupted final model tensor-for-tensor on this CPU stack.
 - Explicit adaptive mean bins matched PyTorch adaptive-pool outputs and input gradients. The encoder avoids relying on atomic CUDA adaptive-pool backward in deterministic mode.
