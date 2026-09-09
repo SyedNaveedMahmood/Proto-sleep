@@ -136,7 +136,7 @@ def main(argv=None):
     per_subject = 64
     if args.mode == "smoke":
         base = replace(base, scales=(100, 200), prototypes_per_scale=2, embedding_dim=8, radius=2)
-        args.variant_list, args.seed_list = ["evidence", "transport"], [123]
+        args.variant_list, args.seed_list = ["transport", "evidence"], [123]
         args.max_epochs, args.patience, args.core_epochs, args.encode_batch = 2, 2, 4, 4
         per_subject = 8
     bank_identity = {"data": io, "model": base.dictionary(), "seed": 1337, "method": args.anchor_method}
@@ -171,7 +171,8 @@ def main(argv=None):
             row = {"seed": seed, "variant": variant, "val_subject_macro_f1": metrics["mean_subject_macro_f1"],
                    "val_pooled_macro_f1": metrics["macro_f1"], "val_accuracy": metrics["accuracy"],
                    "trainable_parameters": sum(p.numel() for p in model.parameters() if p.requires_grad),
-                   "seconds_this_invocation": time.perf_counter()-started, "test_accessed": False}
+                   "seconds_this_invocation": time.perf_counter()-started, "test_accessed": False,
+                   "transport_audit": ""}
             if variant == "transport":
                 audit_x = torch.from_numpy(va[0].x[:1]).to(device)
                 row["transport_audit"] = json.dumps(model.transport_audit(audit_x), sort_keys=True)
