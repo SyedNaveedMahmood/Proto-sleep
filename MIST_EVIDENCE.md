@@ -1,8 +1,8 @@
 # MIST-Evidence v1
 
-**Branch:** `research/mist-evidence-v1`  
+**Branch:** `research/mist-evidence-v1-verified`  
 **Status:** implemented research candidate with CPU-tested software; not a validated SOTA or clinical system.  
-**Parent:** `25f76fe80595f65b019e897de62e6efff3adb879`. Existing experiments on `main` are unchanged.
+**Parent:** `25f76fe80595f65b019e897de62e6efff3adb879`. Existing experiments on `main` are unchanged. A different commit appeared on the initially created `research/mist-evidence-v1` branch during publication; it was preserved, not force-pushed. This verified branch contains the implementation tested in the verification record.
 
 The new question is: **Can a sleep classifier make its predictions through verifiable local waveform evidence, while exposing rather than concealing the contribution of neighboring epochs?**
 

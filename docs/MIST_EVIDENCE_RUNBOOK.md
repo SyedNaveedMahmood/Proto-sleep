@@ -8,8 +8,8 @@ First-time setup, from the original repository:
 cd ~/Desktop/bhi/proto-sleep/Proto-sleep
 conda activate sleep_ic
 git fetch origin
-git worktree add ../Proto-sleep-evidence -b research/mist-evidence-v1 origin/research/mist-evidence-v1
-cd ../Proto-sleep-evidence
+git worktree add ../Proto-sleep-evidence-verified -b research/mist-evidence-v1-verified origin/research/mist-evidence-v1-verified
+cd ../Proto-sleep-evidence-verified
 export PYTHONPATH="$PWD/src${PYTHONPATH:+:$PYTHONPATH}"
 export PYTHONUNBUFFERED=1
 export CUBLAS_WORKSPACE_CONFIG=:4096:8
