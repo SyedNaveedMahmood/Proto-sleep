@@ -1,0 +1,22 @@
+{
+  "model": {
+    "scales_samples": [100, 200, 400],
+    "anchors_per_class": 4,
+    "embedding_dim": 64,
+    "descriptor_weight": 0.5,
+    "temperature": 0.2,
+    "pool_per_subject": 256,
+    "arm": "evidence",
+    "aux_morph_weight": 0.0
+  },
+  "training": {
+    "seed": 123,
+    "epochs": 60,
+    "patience": 12,
+    "batch_size": 16,
+    "lr": 0.0003,
+    "weight_decay": 0.0001,
+    "grad_clip": 5.0,
+    "log_every": 100
+  }
+}
