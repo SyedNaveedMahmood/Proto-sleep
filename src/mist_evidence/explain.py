@@ -13,6 +13,27 @@ from .model import AdditiveTemporal, EvidenceModel, STAGES, normalize_wave
 from .runtime import atomic_json, write_csv
 
 
+# The additive identity is exact algebraically. On CUDA, conv1d and the explicit
+# per-feature reconstruction use different FP32 reduction orders, so their last
+# few bits need not match. Keep the acceptance window small and record the actual
+# residual in every explanation instead of silently treating it as zero.
+SCORE_RECONSTRUCTION_ATOL = 1e-4
+SCORE_RECONSTRUCTION_RTOL = 2e-5
+
+
+def score_reconstruction_close(reconstructed: torch.Tensor, reference: torch.Tensor) -> bool:
+    if reconstructed.shape != reference.shape:
+        return False
+    if not torch.isfinite(reconstructed).all() or not torch.isfinite(reference).all():
+        return False
+    return bool(torch.allclose(
+        reconstructed,
+        reference,
+        atol=SCORE_RECONSTRUCTION_ATOL,
+        rtol=SCORE_RECONSTRUCTION_RTOL,
+    ))
+
+
 @torch.no_grad()
 def export_explanation(model: EvidenceModel, recording: Recording, array_epoch: int,
                        bank: dict, output: Path, device: torch.device, encode_batch: int = 16):
@@ -34,8 +55,12 @@ def export_explanation(model: EvidenceModel, recording: Recording, array_epoch: 
     parts = model.temporal.explain_at(feature, t)
     reconstructed = parts.sum((1, 2)) + model.temporal.bias
     error = float((reconstructed - emission[t]).abs().max())
-    if not torch.allclose(reconstructed, emission[t], atol=2e-5, rtol=1e-5):
-        raise RuntimeError(f"explanation does not reconstruct model score: {error}")
+    if not score_reconstruction_close(reconstructed, emission[t]):
+        raise RuntimeError(
+            "explanation does not reconstruct model score within FP32 audit tolerance: "
+            f"max_abs_error={error}, atol={SCORE_RECONSTRUCTION_ATOL}, "
+            f"rtol={SCORE_RECONSTRUCTION_RTOL}"
+        )
     chosen = int(decoded[t])
     alternatives = emission[t].clone(); alternatives[chosen] = -float("inf")
     other = int(alternatives.argmax())
@@ -71,8 +96,10 @@ def export_explanation(model: EvidenceModel, recording: Recording, array_epoch: 
                "crf_neighbor_transition_difference": transition_delta,
                "conditional_path_score_difference": float(emission[t, chosen]-emission[t, other])+transition_delta,
                "score_reconstruction_max_abs_error": error,
+               "score_reconstruction_atol": SCORE_RECONSTRUCTION_ATOL,
+               "score_reconstruction_rtol": SCORE_RECONSTRUCTION_RTOL,
                "clinical_validation": "None. IDs denote source waveforms, not spindle/K-complex diagnoses.",
-               "explanation_scope": "Exact score accounting, not a causal physiological explanation.",
+               "explanation_scope": "Exact algebraic score accounting with recorded FP32 numerical residual, not a causal physiological explanation.",
                "continuity_assumed": recording.continuity_assumed}
     images, matches = [], []
     t_axis = np.arange(model.cfg.samples) / model.cfg.fs
