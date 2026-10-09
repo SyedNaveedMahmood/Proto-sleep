@@ -79,7 +79,7 @@ phases:
     p3_data_eligibility: VERIFIED_SC_ONLY
     p3_authorized: false
   P3A:
-    status: implemented_frozen_protocol_cuda_validation_pending
+    status: complete_pass_development_integration_stop_for_review
     authorized_parent: ffc0e176d9fe68f33414de7a16c54bebcf5561e8
     source_scope: verified_raw_SC_subset_only
     split_schema: mist-transfer-sc-source-split-v1
@@ -109,3 +109,21 @@ phases:
     st_preprocessing: false
     shhs_access: false
     p3b_authorized: false
+    implementation_commit: dde1805fee527a7f4cc0aa184e6e0932de5ef9b3
+    public_validation: reports/p3a/validation.json
+    public_summary: reports/p3a/FINAL_COPY_PASTE.txt
+    run_fingerprint: 39386d23b96866ce1cb7b21b9dc8fe2cd0552f5ce573c4fa46371ed57bc821f2
+    real_cuda_smoke_epochs_per_variant: 1
+    smoke_physical_train_epochs: 464
+    smoke_scored_train_epochs: 459
+    smoke_physical_validation_epochs: 128
+    optimizer_steps_per_variant: 116
+    focused_tests_passed: 26
+    full_regression_passed: 175
+    full_regression_skipped: 1
+    separate_cuda_numeric_passed: 1
+    completed_resume_verified: true
+    changed_resume_configuration_rejected: true
+    p3b_core_four_readiness: ready_for_review_and_separate_authorization
+    optional_augmentation_cuda: pending
+    scientific_performance_claim: none

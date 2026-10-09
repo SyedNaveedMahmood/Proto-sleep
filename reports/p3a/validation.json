@@ -1,0 +1,1643 @@
+{
+  "gate": "PASS_DEVELOPMENT_INTEGRATION_ONLY",
+  "run_fingerprint": "39386d23b96866ce1cb7b21b9dc8fe2cd0552f5ce573c4fa46371ed57bc821f2",
+  "split_fingerprint": "3e7a7260aae50ca522752f1cede41246daf1b2f6a8fd482800cfda97b4564e84",
+  "results": [
+    {
+      "baseline": "attnsleep",
+      "parameter_count": 522805,
+      "trainable_parameters": 522805,
+      "metrics": {
+        "accuracy": 0.625,
+        "macro_f1": 0.15384615384615385,
+        "per_stage_f1": [
+          0.7692307692307693,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "balanced_accuracy": 0.2,
+        "five_class_balanced_accuracy_zero_absent": 0.2,
+        "per_stage_recall": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "support": [
+          80,
+          4,
+          22,
+          12,
+          10
+        ],
+        "absent_truth_classes": [],
+        "kappa": 0.0,
+        "confusion_matrix": [
+          [
+            80,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            22,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            12,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            10,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "n_epochs": 128,
+        "absent_class_policy": "fixed-five Macro-F1: undefined F1=0; balanced accuracy averages observed truth classes; undefined kappa/recall=null",
+        "subject_metrics": {
+          "SC:02": {
+            "accuracy": 0.75,
+            "macro_f1": 0.17142857142857143,
+            "per_stage_f1": [
+              0.8571428571428571,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "balanced_accuracy": 0.25,
+            "five_class_balanced_accuracy_zero_absent": 0.2,
+            "per_stage_recall": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              null
+            ],
+            "support": [
+              24,
+              4,
+              2,
+              2,
+              0
+            ],
+            "absent_truth_classes": [
+              4
+            ],
+            "kappa": 0.0,
+            "confusion_matrix": [
+              [
+                24,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                4,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                2,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                2,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "n_epochs": 32,
+            "absent_class_policy": "fixed-five Macro-F1: undefined F1=0; balanced accuracy averages observed truth classes; undefined kappa/recall=null"
+          },
+          "SC:08": {
+            "accuracy": 0.5,
+            "macro_f1": 0.13333333333333333,
+            "per_stage_f1": [
+              0.6666666666666666,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "balanced_accuracy": 0.3333333333333333,
+            "five_class_balanced_accuracy_zero_absent": 0.2,
+            "per_stage_recall": [
+              1.0,
+              null,
+              0.0,
+              0.0,
+              null
+            ],
+            "support": [
+              16,
+              0,
+              8,
+              8,
+              0
+            ],
+            "absent_truth_classes": [
+              1,
+              4
+            ],
+            "kappa": 0.0,
+            "confusion_matrix": [
+              [
+                16,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                8,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                8,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "n_epochs": 32,
+            "absent_class_policy": "fixed-five Macro-F1: undefined F1=0; balanced accuracy averages observed truth classes; undefined kappa/recall=null"
+          },
+          "SC:11": {
+            "accuracy": 0.625,
+            "macro_f1": 0.15384615384615385,
+            "per_stage_f1": [
+              0.7692307692307693,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "balanced_accuracy": 0.25,
+            "five_class_balanced_accuracy_zero_absent": 0.2,
+            "per_stage_recall": [
+              1.0,
+              null,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "support": [
+              20,
+              0,
+              7,
+              1,
+              4
+            ],
+            "absent_truth_classes": [
+              1
+            ],
+            "kappa": 0.0,
+            "confusion_matrix": [
+              [
+                20,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                7,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                4,
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "n_epochs": 32,
+            "absent_class_policy": "fixed-five Macro-F1: undefined F1=0; balanced accuracy averages observed truth classes; undefined kappa/recall=null"
+          },
+          "SC:19": {
+            "accuracy": 0.625,
+            "macro_f1": 0.15384615384615385,
+            "per_stage_f1": [
+              0.7692307692307693,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "balanced_accuracy": 0.25,
+            "five_class_balanced_accuracy_zero_absent": 0.2,
+            "per_stage_recall": [
+              1.0,
+              null,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "support": [
+              20,
+              0,
+              5,
+              1,
+              6
+            ],
+            "absent_truth_classes": [
+              1
+            ],
+            "kappa": 0.0,
+            "confusion_matrix": [
+              [
+                20,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                5,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                6,
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "n_epochs": 32,
+            "absent_class_policy": "fixed-five Macro-F1: undefined F1=0; balanced accuracy averages observed truth classes; undefined kappa/recall=null"
+          }
+        },
+        "subject_macro_f1": {
+          "SC:02": 0.17142857142857143,
+          "SC:08": 0.13333333333333333,
+          "SC:11": 0.15384615384615385,
+          "SC:19": 0.15384615384615385
+        },
+        "mean_subject_macro_f1": 0.15311355311355312,
+        "unscored_epochs": 0,
+        "nll": 2.490246832370758,
+        "brier_score": 0.7422574447003754,
+        "ece_15_equal_width_bins": 0.36529795825481415
+      },
+      "seconds": 1.6832678979844786,
+      "optimizer_steps": 116,
+      "trained_scored_epochs": 459,
+      "scored_training_epochs_per_second": 272.68386722612615,
+      "peak_gpu_allocated_bytes": 87875072,
+      "peak_gpu_reserved_bytes": 104857600,
+      "last_state_digest": "d67b0f141bd738011017054242453e231646ad0a54ae33d0c4e27d57ad137399",
+      "finite_state": true,
+      "amp": false,
+      "development_only": true,
+      "best_epoch": 1
+    },
+    {
+      "baseline": "evidence",
+      "parameter_count": 13556,
+      "trainable_parameters": 13556,
+      "metrics": {
+        "accuracy": 0.625,
+        "macro_f1": 0.15384615384615385,
+        "per_stage_f1": [
+          0.7692307692307693,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "balanced_accuracy": 0.2,
+        "five_class_balanced_accuracy_zero_absent": 0.2,
+        "per_stage_recall": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "support": [
+          80,
+          4,
+          22,
+          12,
+          10
+        ],
+        "absent_truth_classes": [],
+        "kappa": 0.0,
+        "confusion_matrix": [
+          [
+            80,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            22,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            12,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            10,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "n_epochs": 128,
+        "absent_class_policy": "fixed-five Macro-F1: undefined F1=0; balanced accuracy averages observed truth classes; undefined kappa/recall=null",
+        "subject_metrics": {
+          "SC:02": {
+            "accuracy": 0.75,
+            "macro_f1": 0.17142857142857143,
+            "per_stage_f1": [
+              0.8571428571428571,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "balanced_accuracy": 0.25,
+            "five_class_balanced_accuracy_zero_absent": 0.2,
+            "per_stage_recall": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              null
+            ],
+            "support": [
+              24,
+              4,
+              2,
+              2,
+              0
+            ],
+            "absent_truth_classes": [
+              4
+            ],
+            "kappa": 0.0,
+            "confusion_matrix": [
+              [
+                24,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                4,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                2,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                2,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "n_epochs": 32,
+            "absent_class_policy": "fixed-five Macro-F1: undefined F1=0; balanced accuracy averages observed truth classes; undefined kappa/recall=null"
+          },
+          "SC:08": {
+            "accuracy": 0.5,
+            "macro_f1": 0.13333333333333333,
+            "per_stage_f1": [
+              0.6666666666666666,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "balanced_accuracy": 0.3333333333333333,
+            "five_class_balanced_accuracy_zero_absent": 0.2,
+            "per_stage_recall": [
+              1.0,
+              null,
+              0.0,
+              0.0,
+              null
+            ],
+            "support": [
+              16,
+              0,
+              8,
+              8,
+              0
+            ],
+            "absent_truth_classes": [
+              1,
+              4
+            ],
+            "kappa": 0.0,
+            "confusion_matrix": [
+              [
+                16,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                8,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                8,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "n_epochs": 32,
+            "absent_class_policy": "fixed-five Macro-F1: undefined F1=0; balanced accuracy averages observed truth classes; undefined kappa/recall=null"
+          },
+          "SC:11": {
+            "accuracy": 0.625,
+            "macro_f1": 0.15384615384615385,
+            "per_stage_f1": [
+              0.7692307692307693,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "balanced_accuracy": 0.25,
+            "five_class_balanced_accuracy_zero_absent": 0.2,
+            "per_stage_recall": [
+              1.0,
+              null,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "support": [
+              20,
+              0,
+              7,
+              1,
+              4
+            ],
+            "absent_truth_classes": [
+              1
+            ],
+            "kappa": 0.0,
+            "confusion_matrix": [
+              [
+                20,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                7,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                4,
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "n_epochs": 32,
+            "absent_class_policy": "fixed-five Macro-F1: undefined F1=0; balanced accuracy averages observed truth classes; undefined kappa/recall=null"
+          },
+          "SC:19": {
+            "accuracy": 0.625,
+            "macro_f1": 0.15384615384615385,
+            "per_stage_f1": [
+              0.7692307692307693,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "balanced_accuracy": 0.25,
+            "five_class_balanced_accuracy_zero_absent": 0.2,
+            "per_stage_recall": [
+              1.0,
+              null,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "support": [
+              20,
+              0,
+              5,
+              1,
+              6
+            ],
+            "absent_truth_classes": [
+              1
+            ],
+            "kappa": 0.0,
+            "confusion_matrix": [
+              [
+                20,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                5,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                6,
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "n_epochs": 32,
+            "absent_class_policy": "fixed-five Macro-F1: undefined F1=0; balanced accuracy averages observed truth classes; undefined kappa/recall=null"
+          }
+        },
+        "subject_macro_f1": {
+          "SC:02": 0.17142857142857143,
+          "SC:08": 0.13333333333333333,
+          "SC:11": 0.15384615384615385,
+          "SC:19": 0.15384615384615385
+        },
+        "mean_subject_macro_f1": 0.15311355311355312,
+        "unscored_epochs": 0,
+        "nll": 1.2128162235021591,
+        "brier_score": 0.6086204353541359,
+        "ece_15_equal_width_bins": 0.20769228227436543
+      },
+      "seconds": 1.588958514999831,
+      "optimizer_steps": 116,
+      "trained_scored_epochs": 459,
+      "scored_training_epochs_per_second": 288.8684604834059,
+      "peak_gpu_allocated_bytes": 100624896,
+      "peak_gpu_reserved_bytes": 119537664,
+      "last_state_digest": "1570d7f54c22c365916b8ba23e2b9629657b2ada7a16878854aff53a454845b8",
+      "finite_state": true,
+      "amp": false,
+      "development_only": true,
+      "best_epoch": 1
+    },
+    {
+      "baseline": "summary_only",
+      "parameter_count": 12116,
+      "trainable_parameters": 260,
+      "metrics": {
+        "accuracy": 0.625,
+        "macro_f1": 0.15384615384615385,
+        "per_stage_f1": [
+          0.7692307692307693,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "balanced_accuracy": 0.2,
+        "five_class_balanced_accuracy_zero_absent": 0.2,
+        "per_stage_recall": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "support": [
+          80,
+          4,
+          22,
+          12,
+          10
+        ],
+        "absent_truth_classes": [],
+        "kappa": 0.0,
+        "confusion_matrix": [
+          [
+            80,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            22,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            12,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            10,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "n_epochs": 128,
+        "absent_class_policy": "fixed-five Macro-F1: undefined F1=0; balanced accuracy averages observed truth classes; undefined kappa/recall=null",
+        "subject_metrics": {
+          "SC:02": {
+            "accuracy": 0.75,
+            "macro_f1": 0.17142857142857143,
+            "per_stage_f1": [
+              0.8571428571428571,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "balanced_accuracy": 0.25,
+            "five_class_balanced_accuracy_zero_absent": 0.2,
+            "per_stage_recall": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              null
+            ],
+            "support": [
+              24,
+              4,
+              2,
+              2,
+              0
+            ],
+            "absent_truth_classes": [
+              4
+            ],
+            "kappa": 0.0,
+            "confusion_matrix": [
+              [
+                24,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                4,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                2,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                2,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "n_epochs": 32,
+            "absent_class_policy": "fixed-five Macro-F1: undefined F1=0; balanced accuracy averages observed truth classes; undefined kappa/recall=null"
+          },
+          "SC:08": {
+            "accuracy": 0.5,
+            "macro_f1": 0.13333333333333333,
+            "per_stage_f1": [
+              0.6666666666666666,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "balanced_accuracy": 0.3333333333333333,
+            "five_class_balanced_accuracy_zero_absent": 0.2,
+            "per_stage_recall": [
+              1.0,
+              null,
+              0.0,
+              0.0,
+              null
+            ],
+            "support": [
+              16,
+              0,
+              8,
+              8,
+              0
+            ],
+            "absent_truth_classes": [
+              1,
+              4
+            ],
+            "kappa": 0.0,
+            "confusion_matrix": [
+              [
+                16,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                8,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                8,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "n_epochs": 32,
+            "absent_class_policy": "fixed-five Macro-F1: undefined F1=0; balanced accuracy averages observed truth classes; undefined kappa/recall=null"
+          },
+          "SC:11": {
+            "accuracy": 0.625,
+            "macro_f1": 0.15384615384615385,
+            "per_stage_f1": [
+              0.7692307692307693,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "balanced_accuracy": 0.25,
+            "five_class_balanced_accuracy_zero_absent": 0.2,
+            "per_stage_recall": [
+              1.0,
+              null,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "support": [
+              20,
+              0,
+              7,
+              1,
+              4
+            ],
+            "absent_truth_classes": [
+              1
+            ],
+            "kappa": 0.0,
+            "confusion_matrix": [
+              [
+                20,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                7,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                4,
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "n_epochs": 32,
+            "absent_class_policy": "fixed-five Macro-F1: undefined F1=0; balanced accuracy averages observed truth classes; undefined kappa/recall=null"
+          },
+          "SC:19": {
+            "accuracy": 0.625,
+            "macro_f1": 0.15384615384615385,
+            "per_stage_f1": [
+              0.7692307692307693,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "balanced_accuracy": 0.25,
+            "five_class_balanced_accuracy_zero_absent": 0.2,
+            "per_stage_recall": [
+              1.0,
+              null,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "support": [
+              20,
+              0,
+              5,
+              1,
+              6
+            ],
+            "absent_truth_classes": [
+              1
+            ],
+            "kappa": 0.0,
+            "confusion_matrix": [
+              [
+                20,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                5,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                6,
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "n_epochs": 32,
+            "absent_class_policy": "fixed-five Macro-F1: undefined F1=0; balanced accuracy averages observed truth classes; undefined kappa/recall=null"
+          }
+        },
+        "subject_macro_f1": {
+          "SC:02": 0.17142857142857143,
+          "SC:08": 0.13333333333333333,
+          "SC:11": 0.15384615384615385,
+          "SC:19": 0.15384615384615385
+        },
+        "mean_subject_macro_f1": 0.15311355311355312,
+        "unscored_epochs": 0,
+        "nll": 1.5284729897975922,
+        "brier_score": 0.7663472867532416,
+        "ece_15_equal_width_bins": 0.39631935593206435
+      },
+      "seconds": 0.30283893400337547,
+      "optimizer_steps": 116,
+      "trained_scored_epochs": 459,
+      "scored_training_epochs_per_second": 1515.6571644611718,
+      "peak_gpu_allocated_bytes": 68440576,
+      "peak_gpu_reserved_bytes": 69206016,
+      "last_state_digest": "4a92bc9d916929171e055bd2879c696cf60d953ea1686e856d00bda6efcdadf6",
+      "finite_state": true,
+      "amp": false,
+      "development_only": true,
+      "best_epoch": 1
+    },
+    {
+      "baseline": "raw_context",
+      "parameter_count": 34197,
+      "trainable_parameters": 33957,
+      "metrics": {
+        "accuracy": 0.625,
+        "macro_f1": 0.15384615384615385,
+        "per_stage_f1": [
+          0.7692307692307693,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "balanced_accuracy": 0.2,
+        "five_class_balanced_accuracy_zero_absent": 0.2,
+        "per_stage_recall": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "support": [
+          80,
+          4,
+          22,
+          12,
+          10
+        ],
+        "absent_truth_classes": [],
+        "kappa": 0.0,
+        "confusion_matrix": [
+          [
+            80,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            22,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            12,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            10,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "n_epochs": 128,
+        "absent_class_policy": "fixed-five Macro-F1: undefined F1=0; balanced accuracy averages observed truth classes; undefined kappa/recall=null",
+        "subject_metrics": {
+          "SC:02": {
+            "accuracy": 0.75,
+            "macro_f1": 0.17142857142857143,
+            "per_stage_f1": [
+              0.8571428571428571,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "balanced_accuracy": 0.25,
+            "five_class_balanced_accuracy_zero_absent": 0.2,
+            "per_stage_recall": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              null
+            ],
+            "support": [
+              24,
+              4,
+              2,
+              2,
+              0
+            ],
+            "absent_truth_classes": [
+              4
+            ],
+            "kappa": 0.0,
+            "confusion_matrix": [
+              [
+                24,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                4,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                2,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                2,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "n_epochs": 32,
+            "absent_class_policy": "fixed-five Macro-F1: undefined F1=0; balanced accuracy averages observed truth classes; undefined kappa/recall=null"
+          },
+          "SC:08": {
+            "accuracy": 0.5,
+            "macro_f1": 0.13333333333333333,
+            "per_stage_f1": [
+              0.6666666666666666,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "balanced_accuracy": 0.3333333333333333,
+            "five_class_balanced_accuracy_zero_absent": 0.2,
+            "per_stage_recall": [
+              1.0,
+              null,
+              0.0,
+              0.0,
+              null
+            ],
+            "support": [
+              16,
+              0,
+              8,
+              8,
+              0
+            ],
+            "absent_truth_classes": [
+              1,
+              4
+            ],
+            "kappa": 0.0,
+            "confusion_matrix": [
+              [
+                16,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                8,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                8,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "n_epochs": 32,
+            "absent_class_policy": "fixed-five Macro-F1: undefined F1=0; balanced accuracy averages observed truth classes; undefined kappa/recall=null"
+          },
+          "SC:11": {
+            "accuracy": 0.625,
+            "macro_f1": 0.15384615384615385,
+            "per_stage_f1": [
+              0.7692307692307693,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "balanced_accuracy": 0.25,
+            "five_class_balanced_accuracy_zero_absent": 0.2,
+            "per_stage_recall": [
+              1.0,
+              null,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "support": [
+              20,
+              0,
+              7,
+              1,
+              4
+            ],
+            "absent_truth_classes": [
+              1
+            ],
+            "kappa": 0.0,
+            "confusion_matrix": [
+              [
+                20,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                7,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                4,
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "n_epochs": 32,
+            "absent_class_policy": "fixed-five Macro-F1: undefined F1=0; balanced accuracy averages observed truth classes; undefined kappa/recall=null"
+          },
+          "SC:19": {
+            "accuracy": 0.625,
+            "macro_f1": 0.15384615384615385,
+            "per_stage_f1": [
+              0.7692307692307693,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "balanced_accuracy": 0.25,
+            "five_class_balanced_accuracy_zero_absent": 0.2,
+            "per_stage_recall": [
+              1.0,
+              null,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "support": [
+              20,
+              0,
+              5,
+              1,
+              6
+            ],
+            "absent_truth_classes": [
+              1
+            ],
+            "kappa": 0.0,
+            "confusion_matrix": [
+              [
+                20,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                5,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                6,
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "n_epochs": 32,
+            "absent_class_policy": "fixed-five Macro-F1: undefined F1=0; balanced accuracy averages observed truth classes; undefined kappa/recall=null"
+          }
+        },
+        "subject_macro_f1": {
+          "SC:02": 0.17142857142857143,
+          "SC:08": 0.13333333333333333,
+          "SC:11": 0.15384615384615385,
+          "SC:19": 0.15384615384615385
+        },
+        "mean_subject_macro_f1": 0.15311355311355312,
+        "unscored_epochs": 0,
+        "nll": 1.233121320605278,
+        "brier_score": 0.6126397124099603,
+        "ece_15_equal_width_bins": 0.20259952917695045
+      },
+      "seconds": 0.7335647599829827,
+      "optimizer_steps": 116,
+      "trained_scored_epochs": 459,
+      "scored_training_epochs_per_second": 625.7116277104805,
+      "peak_gpu_allocated_bytes": 99775488,
+      "peak_gpu_reserved_bytes": 119537664,
+      "last_state_digest": "c91a8e09c4df149e777a514f333d95b3e276b156a5efe6b116e7db5804d3586c",
+      "finite_state": true,
+      "amp": false,
+      "development_only": true,
+      "best_epoch": 1
+    }
+  ],
+  "gpu": "NVIDIA GeForce RTX 4080 SUPER",
+  "cuda_version": "12.1",
+  "elapsed_seconds": 10.335784826980671,
+  "train_subjects": 15,
+  "val_subjects": 4,
+  "reserved_subjects": 55,
+  "reserved_test_access": false,
+  "physical_train_smoke_epochs": 464,
+  "physical_val_smoke_epochs": 128,
+  "note": "one smoke epoch over geometry-selected development windows; scores are not final performance",
+  "p3b_data_and_adapter_eligibility": "VERIFIED_CORE_FOUR; full training still requires separate authorization",
+  "st_preprocessed": false,
+  "shhs_accessed": false,
+  "mcr_trained": false,
+  "normalization": {
+    "version": "source-train-global-uV-zscore-v1",
+    "mean_uV": 0.2212133625475915,
+    "std_uV": 26.680848191229344,
+    "sample_count": 239952000,
+    "physical_epoch_count": 79984,
+    "fit_subjects": [
+      "SC:00",
+      "SC:01",
+      "SC:03",
+      "SC:04",
+      "SC:05",
+      "SC:07",
+      "SC:09",
+      "SC:10",
+      "SC:12",
+      "SC:13",
+      "SC:14",
+      "SC:15",
+      "SC:16",
+      "SC:17",
+      "SC:18"
+    ],
+    "label_access": false,
+    "scored_epoch_selection": false,
+    "fit_role": "train",
+    "amplitude_stats": [
+      -0.21578733661569208,
+      0.5044897210036748
+    ]
+  },
+  "normalization_source_hashes": "experiments/splits/p3a_sc_source_v1.json (TRAIN only)",
+  "implementation_commit": "dde1805fee527a7f4cc0aa184e6e0932de5ef9b3",
+  "p2_parent": "ffc0e176d9fe68f33414de7a16c54bebcf5561e8",
+  "p2_completion_sha256": "3088497baa4f769986245206f932797d4b18280b313ef12481015f39fa3beab6",
+  "split_file_sha256": "1162a41098bb8a724a0b8bf8bb320469c2b1c02bb802d9b5cf7f2e49d2da54e5",
+  "implementation_hash": "74db703f4de5a3758ca45b66512382980d12897ec249c1c34f6f4f1458251f22",
+  "reused_implementation_hash": "dba6f80098de505c92abb664395dd7d94b5030b6b08bd2fb439315833fc582c7",
+  "tests": {
+    "focused_passed": 26,
+    "full_regression_passed": 175,
+    "full_regression_skipped": 1,
+    "skipped_reason": "CUDA hidden during CPU regression; same synthetic CUDA forward/backward test subsequently passed",
+    "cuda_numeric_passed": 1,
+    "exact_masked_resume": "parameters, optimizer state and Torch RNG matched uninterrupted CPU run",
+    "complete_real_resume": "verified all output digests and 37 development source pairs; no training/rewriting",
+    "changed_real_resume_config": "rejected before source opening"
+  },
+  "resolved_failures": [
+    {
+      "kind": "synthetic fixture",
+      "cause": "short waveform fixture retained out-of-range scored TALs",
+      "resolution": "fixture annotations limited to generated physical duration; integrity guard unchanged"
+    },
+    {
+      "kind": "test process configuration",
+      "cause": "deterministic CUDA regression lacked CUBLAS_WORKSPACE_CONFIG",
+      "resolution": "reran CUDA numeric test with :4096:8 set before process initialization; experiment CLI already sets it"
+    }
+  ],
+  "full_development_grid": {
+    "train_physical": 79984,
+    "train_scored": 79025,
+    "val_physical": 21796,
+    "val_scored": 21789
+  },
+  "runtime_measurement": {
+    "cli_wall_seconds": 11.67,
+    "runner_elapsed_seconds": 10.335784826980671,
+    "peak_process_rss_KiB": 1925244,
+    "per_baseline_seconds": "training + repeated validation + checkpoint I/O; excludes shared normalization/anchor setup",
+    "throughput": "scored TRAIN epochs / per-baseline wall time; smoke workload only",
+    "gpu_memory": "PyTorch peak allocated/reserved bytes; excludes CUDA driver/context allocations"
+  },
+  "artifact_sha256": {
+    "completion": "a037ded9691206470430c27627303b8f72400891976af8e7308458aedd6427e5",
+    "normalization": "0679b44c76e8c6667c4daba0b1915420eb04b02310be68536130f807899c5742",
+    "bank": "5e1336a4079e1def4c94794a04cb9e9c0e1806f0ed0a0604a8f446907d206e42",
+    "private_validation": "86f53cd8e9a320e92987b61d36148d89d39c461a1fb04736a486156765c57373"
+  },
+  "limitations": [
+    "One bounded epoch per variant, not full TRAIN coverage or competitive performance.",
+    "All four predict Wake on 128-epoch VAL smoke subset; no performance or tuning conclusions.",
+    "Core four adapters verified; optional evidence_aug has synthetic coverage only and requires separate CUDA check before use.",
+    "Exact interrupted resume tested on CPU; deterministic real CUDA execution and completed resume passed, but interrupted CUDA resume/different hardware not separately measured.",
+    "P3B full-training CLI remains to be enabled under separate authorization; existing streaming adapter/trainer are integrated.",
+    "Reserved SC evaluation runner is intentionally absent; evaluation may occur only after source protocol/model choices freeze.",
+    "Full SC remains quarantined for four people; subset composition limits must be retained.",
+    "SC-to-ST remains CONDITIONAL; SHHS access UNKNOWN and transfer BLOCKED. No external transfer endpoint evaluated."
+  ],
+  "scope_decisions": {
+    "SC_core_four_P3B": "READY_FOR_REVIEW_AND_AUTHORIZATION; data/adapter smoke gate VERIFIED",
+    "SC_reserved_evaluation": "RESERVED_UNACCESSED; final evaluator requires separate reviewed authorization",
+    "ST": "CONDITIONAL_NOT_PREPROCESSED",
+    "SHHS": "BLOCKED_ACCESS_UNKNOWN",
+    "MCR": "NOT_AUTHORIZED_NOT_TRAINED",
+    "optional_gain_control": "CONDITIONAL_CUDA_INTEGRATION_PENDING",
+    "AMP": "DISABLED_UNVALIDATED"
+  },
+  "environment": {
+    "python": "3.12.9 | packaged by Anaconda, Inc. | (main, Feb  6 2025, 18:56:27) [GCC 11.2.0]",
+    "packages": {
+      "torch": "2.5.1",
+      "numpy": "2.0.1",
+      "scikit-learn": "1.7.2",
+      "mne": "1.10.2",
+      "pyEDFlib": "0.1.42",
+      "threadpoolctl": "3.6.0"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+MIST-Transfer v3 P3A FINAL: PASS DEVELOPMENT INTEGRATION ONLY
+Branch: research/mist-transfer-v3-edf-shhs
+Audited implementation commit: dde1805fee527a7f4cc0aa184e6e0932de5ef9b3
+P2 parent: ffc0e176d9fe68f33414de7a16c54bebcf5561e8
+Split fingerprint: 3e7a7260aae50ca522752f1cede41246daf1b2f6a8fd482800cfda97b4564e84
+Split file SHA256: 1162a41098bb8a724a0b8bf8bb320469c2b1c02bb802d9b5cf7f2e49d2da54e5
+Run fingerprint: 39386d23b96866ce1cb7b21b9dc8fe2cd0552f5ce573c4fa46371ed57bc821f2
+P2 completion SHA256: 3088497baa4f769986245206f932797d4b18280b313ef12481015f39fa3beab6
+Roles frozen before scores: 15 TRAIN/29 recordings; 4 VAL/8 recordings; 55 reserved/109 recordings.
+VAL subjects: SC:02, SC:08, SC:11, SC:19. Exact all-role IDs/hashes: experiments/splits/p3a_sc_source_v1.json.
+Historical eligible EDF-20 development/SC extension reserve: same SC cohort; not independent external transfer.
+Full physical grid and original indices/scoring masks preserved. No test labels, waveforms or statistics opened.
+Full TRAIN physical/scored epochs: 79,984/79,025; VAL: 21,796/21,789.
+TRAIN-only label-independent normalization: 239,952,000 physical samples, mean 0.2212133625 uV, std 26.6808481912 uV.
+Anchors: 48 exact real TRAIN waveform medoids at 100/200/400 samples; source/epoch/crop/annotation provenance verified.
+Reuse: repository AttnSleep, MIST-Evidence models/descriptors/medoids, deterministic RNG, atomic checkpoint/optimizer trainer; added streaming masked evaluation callback.
+CUDA: RTX 4080 SUPER, Torch 2.5.1 / CUDA 12.1; deterministic FP32, AMP disabled.
+One geometry-only bounded epoch per baseline: 464 physical TRAIN epochs (459 scored), 128 physical/scored VAL epochs.
+Matched budget: 116 optimizer steps per baseline; VAL participant-average fixed-five Macro-F1 selects earliest best.
+CPU focused: 26 passed. Full CPU regression: 175 passed/1 CUDA skipped. Separate deterministic CUDA numeric test: 1 passed.
+Masked interrupted CPU resume: exact model/optimizer/RNG; completed real resume: verified without training/rewriting; changed config rejected.
+Baseline | total/trainable parameters | seconds | scored TRAIN epochs/s | peak allocated/reserved MiB
+attnsleep | 522805/522805 | 1.683 | 272.68 | 83.80/100.00
+evidence | 13556/13556 | 1.589 | 288.87 | 95.96/114.00
+summary_only | 12116/260 | 0.303 | 1515.66 | 65.27/66.00
+raw_context | 34197/33957 | 0.734 | 625.71 | 95.15/114.00
+Runtime: runner 10.336 s; process wall 11.67 s; peak CPU RSS 1,925,244 KiB.
+Timing includes training, VAL reevaluation and checkpoint I/O; shared setup excluded per variant. Memory is PyTorch allocated/reserved, not total driver memory.
+All four checkpoints finite. All four predicted Wake on this tiny VAL smoke subset (subject Macro-F1 0.15311355; pooled 0.15384615). These are not final performance or tuning evidence.
+Resolved failures: out-of-range annotations in generated short fixture corrected; deterministic CUDA regression process rerun with required CuBLAS setting. No data-integrity guard bypassed.
+No P1/P2 re-audit, no long/multi-seed training, MCR, ST preprocessing, SHHS access, reserved evaluation or waveform upload.
+Unresolved: full-grid matched training unexecuted; interrupted CUDA resume not separately measured; optional gain-control CUDA check pending; four SC person exclusions retained; ST conditional; SHHS blocked/access unknown.
+P3B: core four source-only SC baselines are data/adapter READY for review and separate authorization. Enable full-training dispatch in P3B; retain frozen roles and source-only fitting. Optional gain control remains conditional.
+The shared max-epoch/patience proposal is prespecified; do not claim equal realized update counts if early stopping differs in future full runs. Freeze any stricter equal-update policy before P3B scores.
+External transfer: NOT ESTABLISHED. ST/SHHS are not approved by this SC pass.
+Public report: reports/p3a/validation.json; protocol/runner: docs/TRANSFER_PROTOCOL.md and docs/P3A_RUNNER.md.
+Local full logs/checkpoints/provenance: mist_transfer_runs/p3a/session_logs/ and cuda_smoke/. Private waveform bank and checkpoints remain ignored.
+Stop after P3A for review.
