@@ -1,0 +1,5 @@
+# In an isolated venv with the existing v1 dependencies; actual full env in provenance.json.
+pytest==8.4.2
+mne==1.10.2
+pyedflib==0.1.42
+xlrd==2.0.2

@@ -127,3 +127,6 @@ pip-wheel-metadata/
 
 # MIST-Evidence outputs contain participant waveform snippets. Keep private.
 mist_evidence_runs/
+
+# Transfer audit caches and waveform data stay local.
+mist_transfer_runs/

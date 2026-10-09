@@ -1,0 +1,305 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "proto-sleep"
+version = "0.1.0"
+description = "Prototype-guided masked autoencoding experiments for single-channel EEG sleep staging"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.24",
+  "pandas>=2.0",
+  "matplotlib>=3.7",
+  "scikit-learn>=1.3",
+  "torch>=2.2",
+  "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+numpy>=1.24
+pandas>=2.0
+matplotlib>=3.7
+scikit-learn>=1.3
+torch>=2.2
+import json
+from dataclasses import replace
+from pathlib import Path
+
+import numpy as np
+import pytest
+import torch
+
+from mist_evidence.cli import synthetic_manifest, variant_config
+from mist_evidence.data import (blocks, build_anchors, edf_manifest, load_split,
+                               validate_manifest)
+from mist_evidence.explain import export_explanation
+from mist_evidence.model import EvidenceModel, ModelConfig
+from mist_evidence.runtime import TrainConfig, load_trusted, seed_all, tensor_digest, train
+
+
+@pytest.fixture(autouse=True)
+def cpu_threads():
+    torch.set_num_threads(2)
+
+
+def data(tmp_path):
+    manifest = synthetic_manifest(tmp_path / "signals")
+    return manifest, load_split(manifest, "train"), load_split(manifest, "val")
+
+
+def test_selective_loading_reserved_test_is_never_opened(tmp_path):
+    manifest, tr, va = data(tmp_path)
+    assert len(tr) == 2 and len(va) == 1
+    with pytest.raises(ValueError, match="test access"):
+        load_split(manifest, "test")
+    manifest["records"][-1]["subject"] = tr[0].subject
+    with pytest.raises(ValueError, match="crosses splits"):
+        validate_manifest(manifest)
+
+
+def test_discontinuous_indices_blocks_and_continuity_guard(tmp_path):
+    manifest = synthetic_manifest(tmp_path / "signals")
+    p = Path(manifest["records"][0]["path"])
+    with np.load(p) as z:
+        x, y = z["x"], z["y"]
+    indices = np.r_[np.arange(5), np.arange(10,15)]
+    np.savez(p, x=x, y=y, fs=100, epoch_indices=indices)
+    tr = load_split(manifest, "train")
+    first = tr[0]
+    assert first.segments() == [(0,5), (5,10)]
+    covered = []
+    for ri, a, b, lo, hi in blocks([first], 3, 2):
+        assert (a < 5 and b <= 5) or a >= 5
+        covered.extend(range(lo,hi))
+    assert covered == list(range(10))
+    np.savez(p, x=x, y=y, fs=100)
+    with pytest.raises(ValueError, match="epoch_indices"):
+        load_split(manifest, "train")
+    assert load_split(manifest, "train", assume_contiguous=True)[0].continuity_assumed
+
+
+def test_strict_npz_schema_and_fs(tmp_path):
+    manifest = synthetic_manifest(tmp_path / "signals")
+    p = Path(manifest["records"][0]["path"])
+    with np.load(p) as z:
+        x,y,idx = z["x"],z["y"],z["epoch_indices"]
+    np.savez(p,x=x,y=y+0.2,fs=100,epoch_indices=idx)
+    with pytest.raises(ValueError,match="labels"):
+        load_split(manifest,"train")
+    np.savez(p,x=x,y=y,fs=99.9,epoch_indices=idx)
+    with pytest.raises(ValueError,match="100 Hz"):
+        load_split(manifest,"train")
+
+
+def test_edf_filename_split_without_opening_files(tmp_path):
+    for sid in range(20):
+        (tmp_path/f"SC4{sid:02d}1E0.npz").write_bytes(b"not an npz; do not open")
+    manifest = edf_manifest(tmp_path,0)
+    validate_manifest(manifest)
+    assert [e["subject"] for e in manifest["records"] if e["split"]=="val"] == ["5"]
+    assert [e["subject"] for e in manifest["records"] if e["split"]=="test"] == ["14"]
+
+
+def test_actual_training_anchors_and_matching_initialization(tmp_path):
+    _, tr, _ = data(tmp_path)
+    cfg = ModelConfig(scales=(100,200),prototypes_per_scale=2,embedding_dim=8,radius=0)
+    bank = build_anchors(tr,cfg,per_subject=8)
+    records = {r.path:r for r in tr}
+    for scale,waves in enumerate(bank["waveforms"]):
+        for wave,m in zip(waves,bank["metadata"][scale]):
+            r = records[m["source_path"]]
+            segment = r.x[m["array_epoch"],0,m["start_sample"]:m["start_sample"]+m["length_samples"]]
+            assert np.array_equal(wave.numpy(),segment)
+            assert m["subject"] in bank["training_subjects"]
+    seed_all(123); a = EvidenceModel(cfg,bank["waveforms"])
+    seed_all(123); b = EvidenceModel(variant_config("raw_context",cfg),bank["waveforms"])
+    assert tensor_digest(a.banks[0].encoder.state_dict()) == tensor_digest(b.banks[0].encoder.state_dict())
+
+
+def test_resume_is_exact_and_completion_is_not_best_so_far(tmp_path):
+    _, tr, va = data(tmp_path)
+    cfg = ModelConfig(scales=(100,),prototypes_per_scale=2,embedding_dim=8,radius=0,use_crf=False)
+    bank = build_anchors(tr,cfg,per_subject=8)
+    recipe = TrainConfig(epochs=2,patience=5,core_epochs=5,encode_batch=5)
+    def fresh():
+        seed_all(123)
+        return EvidenceModel(cfg,bank["waveforms"])
+    train(fresh(),tr,va,recipe,tmp_path/"full",bank,{"code":"test"},torch.device("cpu"))
+    with pytest.raises(InterruptedError):
+        train(fresh(),tr,va,recipe,tmp_path/"resume",bank,{"code":"test"},torch.device("cpu"),interrupt_after_epoch=1)
+    assert (tmp_path/"resume"/"best.pt").exists()
+    assert not (tmp_path/"resume"/"COMPLETE.json").exists()
+    model, metrics, _ = train(fresh(),tr,va,recipe,tmp_path/"resume",bank,{"code":"test"},torch.device("cpu"),resume=True)
+    a = load_trusted(tmp_path/"full"/"last.pt")["state_dict"]
+    b = load_trusted(tmp_path/"resume"/"last.pt")["state_dict"]
+    assert tensor_digest(a) == tensor_digest(b)
+    assert (tmp_path/"resume"/"COMPLETE.json").exists()
+    train(fresh(),tr,va,recipe,tmp_path/"resume",bank,{"code":"test"},torch.device("cpu"),resume=True)
+    with pytest.raises(ValueError,match="signature"):
+        train(fresh(),tr,va,recipe,tmp_path/"resume",bank,{"code":"changed"},torch.device("cpu"),resume=True)
+    report = export_explanation(model,va[0],3,bank,tmp_path/"explain",torch.device("cpu"),5)
+    assert report["score_reconstruction_max_abs_error"] < 2e-5
+    assert (tmp_path/"explain"/"index.html").exists()
+    total = (report["center_epoch_evidence_difference"] + report["neighbor_evidence_difference"]
+             + report["bias_difference"] + report["crf_neighbor_transition_difference"])
+    assert abs(total-report["conditional_path_score_difference"]) < 1e-5
+
+
+def test_independent_epochs_do_not_invent_continuity(tmp_path):
+    manifest = synthetic_manifest(tmp_path / "signals")
+    p = Path(manifest["records"][0]["path"])
+    with np.load(p) as z:
+        x,y = z["x"],z["y"]
+    np.savez(p,x=x,y=y,fs=100)
+    rec = load_split(manifest,"train",independent_epochs=True)[0]
+    assert not rec.indices_known and not rec.continuity_assumed
+    assert rec.segments() == [(i,i+1) for i in range(len(y))]
+
+
+def test_reference_defaults_match_typed_configuration():
+    from dataclasses import asdict
+    root = Path(__file__).resolve().parents[2]
+    defaults = json.loads((root/"configs"/"mist_evidence_v1.json").read_text())
+    assert defaults["model"] == json.loads(json.dumps(asdict(ModelConfig())))
+    assert defaults["training"] == json.loads(json.dumps(asdict(TrainConfig())))
+"""Auditable HTML/JSON explanations. No clinical event names are inferred."""
+from __future__ import annotations
+
+import html
+import json
+from pathlib import Path
+
+import numpy as np
+import torch
+
+from .data import Recording
+from .model import AdditiveTemporal, EvidenceModel, STAGES, normalize_wave
+from .runtime import atomic_json, write_csv
+
+
+# The additive identity is exact algebraically. On CUDA, conv1d and the explicit
+# per-feature reconstruction use different FP32 reduction orders, so their last
+# few bits need not match. Keep the acceptance window small and record the actual
+# residual in every explanation instead of silently treating it as zero.
+SCORE_RECONSTRUCTION_ATOL = 1e-4
+SCORE_RECONSTRUCTION_RTOL = 2e-5
+
+
+def score_reconstruction_close(reconstructed: torch.Tensor, reference: torch.Tensor) -> bool:
+    if reconstructed.shape != reference.shape:
+        return False
+    if not torch.isfinite(reconstructed).all() or not torch.isfinite(reference).all():
+        return False
+    return bool(torch.allclose(
+        reconstructed,
+        reference,
+        atol=SCORE_RECONSTRUCTION_ATOL,
+        rtol=SCORE_RECONSTRUCTION_RTOL,
+    ))
+
+
+@torch.no_grad()
+def export_explanation(model: EvidenceModel, recording: Recording, array_epoch: int,
+                       bank: dict, output: Path, device: torch.device, encode_batch: int = 16):
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+
+    if not isinstance(model.temporal, AdditiveTemporal) or model.cfg.raw_control:
+        raise ValueError("raw control does not have an additive waveform explanation")
+    if not 0 <= array_epoch < len(recording.y):
+        raise ValueError("epoch is outside the recording")
+    model.eval()
+    lo, hi = next((a, b) for a, b in recording.segments() if a <= array_epoch < b)
+    x = torch.from_numpy(recording.x[lo:hi]).to(device)
+    feature = torch.cat([model.encode(x[i:i+encode_batch]) for i in range(0, len(x), encode_batch)])
+    emission = model.emissions(feature[None])[0]
+    decoded, probabilities = model.predict(emission)
+    t = array_epoch - lo
+    parts = model.temporal.explain_at(feature, t)
+    reconstructed = parts.sum((1, 2)) + model.temporal.bias
+    error = float((reconstructed - emission[t]).abs().max())
+    if not score_reconstruction_close(reconstructed, emission[t]):
+        raise RuntimeError(
+            "explanation does not reconstruct model score within FP32 audit tolerance: "
+            f"max_abs_error={error}, atol={SCORE_RECONSTRUCTION_ATOL}, "
+            f"rtol={SCORE_RECONSTRUCTION_RTOL}"
+        )
+    chosen = int(decoded[t])
+    alternatives = emission[t].clone(); alternatives[chosen] = -float("inf")
+    other = int(alternatives.argmax())
+    contrast = parts[chosen] - parts[other]
+    transition_delta = 0.0
+    if model.crf is not None:
+        crf = model.crf
+        left = crf.start if t == 0 else crf.transitions[int(decoded[t-1])]
+        right = crf.end if t == len(decoded)-1 else crf.transitions[:, int(decoded[t+1])]
+        transition_delta = float(left[chosen] - left[other] + right[chosen] - right[other])
+    rows = []
+    for lag_index, lag in enumerate(range(-model.cfg.radius, model.cfg.radius+1)):
+        j = t + lag
+        if not 0 <= j < len(feature):
+            continue
+        for f, name in enumerate(model.feature_names):
+            rows.append({"source_array_epoch": lo+j, "source_original_epoch": int(recording.indices[lo+j]) if recording.indices_known else None,
+                         "lag_epochs": lag, "feature": name, "value": float(feature[j, f]),
+                         "chosen_score_contribution": float(parts[chosen, lag_index, f]),
+                         "contrast_score_contribution": float(contrast[lag_index, f])})
+    rows.sort(key=lambda row: abs(row["contrast_score_contribution"]), reverse=True)
+    output.mkdir(parents=True, exist_ok=True)
+    write_csv(rows, output / "all_contributions.csv")
+    details = {"recording": Path(recording.path).name, "subject": recording.subject,
+               "array_epoch": array_epoch, "original_epoch": int(recording.indices[array_epoch]) if recording.indices_known else None,
+               "truth": STAGES[int(recording.y[array_epoch])], "prediction": STAGES[chosen],
+               "local_argmax": STAGES[int(emission[t].argmax())], "contrast_class": STAGES[other],
+               "model_marginals_not_calibrated_confidence": probabilities[t].cpu().tolist(),
+               "all_evidence_difference_without_bias": float(contrast.sum()),
+               "center_epoch_evidence_difference": float(contrast[model.cfg.radius].sum()),
+               "neighbor_evidence_difference": float(contrast.sum()-contrast[model.cfg.radius].sum()),
+               "bias_difference": float(model.temporal.bias[chosen]-model.temporal.bias[other]),
+               "crf_neighbor_transition_difference": transition_delta,
+               "conditional_path_score_difference": float(emission[t, chosen]-emission[t, other])+transition_delta,
+               "score_reconstruction_max_abs_error": error,
+               "score_reconstruction_atol": SCORE_RECONSTRUCTION_ATOL,
+               "score_reconstruction_rtol": SCORE_RECONSTRUCTION_RTOL,
+               "clinical_validation": "None. IDs denote source waveforms, not spindle/K-complex diagnoses.",
+               "explanation_scope": "Exact algebraic score accounting with recorded FP32 numerical residual, not a causal physiological explanation.",
+               "continuity_assumed": recording.continuity_assumed}
+    images, matches = [], []
+    t_axis = np.arange(model.cfg.samples) / model.cfg.fs
+    fig, ax = plt.subplots(figsize=(10, 2.8))
+    ax.plot(t_axis, recording.x[array_epoch, 0], linewidth=0.8)
+    ax.set(xlabel="Seconds within epoch", ylabel="Input file units",
+           title=f"Observed EEG | predicted {STAGES[chosen]} | annotated {details['truth']}")
+    fig.tight_layout(); fig.savefig(output / "epoch.png", dpi=140); plt.close(fig)
+Python: 3.12.9 | packaged by Anaconda, Inc. | (main, Feb  6 2025, 18:56:27) [GCC 11.2.0] /home/FA006/miniconda3/bin/python
+numpy 2.0.1
+scipy 1.15.2
+torch 2.5.1
+mne MISSING
+pyedflib MISSING
+pandas 2.3.3
+xlrd MISSING
+PyYAML 6.0.2
+pytest MISSING
+PATH /home/FA006/Desktop/Dimension/dataset/Preprocessed Sleep-EDF-20 dataset exists True
+entries 42 first ['MANIFEST.TXT', 'SC4001E0.npz', 'SC4002E0-PSG.edf', 'SC4002E0.npz', 'SC4002EC-Hypnogram.edf', 'SC4011E0.npz', 'SC4012E0.npz', 'SC4021E0.npz', 'SC4022E0.npz', 'SC4031E0.npz', 'SC4032E0.npz', 'SC4041E0.npz']
+PATH /home/FA006/Desktop/Dimension/dataset/Preprocessed Sleep-EDF-78 dataset exists True
+entries 154 first ['MANIFEST.TXT', 'SC4001E0.npz', 'SC4002E0.npz', 'SC4011E0.npz', 'SC4012E0.npz', 'SC4021E0.npz', 'SC4022E0.npz', 'SC4031E0.npz', 'SC4032E0.npz', 'SC4041E0.npz', 'SC4042E0.npz', 'SC4051E0.npz']
+PATH /home/FA006/Desktop/Sleep_dl/Sleep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0 exists False
+PATH /home/FA006/Desktop/Dimension/dataset/SHHS_NSRR exists False
+   2375 unattended-upgr /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+ 612456 python3         python3 /usr/bin/wsdd --no-host --discovery --listen /run/user/1001/gvfsd/wsdd
+ 629804 bash            /bin/bash -lc set -o pipefail; { cat pyproject.toml; cat requirements.txt; cat tests/evidence/test_pipeline.py; sed -n '1,110p' src/mist_evidence/explain.py; python - <<'PY' import sys,importlib.metadata as m, pathlib,os print('Python:',sys.version,sys.executable) for k in ['numpy','scipy','torch','mne','pyedflib','pandas','xlrd','PyYAML','pytest']:  try: print(k,m.version(k))  except m.PackageNotFoundError: print(k,'MISSING') roots=['/home/FA006/Desktop/Dimension/dataset/Preprocessed Sleep-EDF-20 dataset','/home/FA006/Desktop/Dimension/dataset/Preprocessed Sleep-EDF-78 dataset','/home/FA006/Desktop/Sleep_dl/Sleep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0','/home/FA006/Desktop/Dimension/dataset/SHHS_NSRR'] for p in map(pathlib.Path,roots):  print('PATH',p,'exists',p.exists())  if p.exists():   files=sorted(p.iterdir());print('entries',len(files),'first',[f.name for f in files[:12]])   if 'Preprocessed' in str(p):    import numpy as np    for f in files[:1]:     if f.suffix=='.npz':      with np.load(f,allow_pickle=False) as z:       print('NPZ',f.name,z.files)       for k in z.files:        a=z[k];print(k,a.shape,a.dtype, a.tolist() if a.size<20 else 'array (values private)') PY ps -eo pid,comm,args | rg '(python|train|nsrr)' | head -25; } 2>&1 | tee /home/FA006/Desktop/bhi/proto-sleep/mist-transfer-session-logs/003_environment_data_preflight.txt
+ 629812 bash            /bin/bash -lc set -o pipefail; { cat pyproject.toml; cat requirements.txt; cat tests/evidence/test_pipeline.py; sed -n '1,110p' src/mist_evidence/explain.py; python - <<'PY' import sys,importlib.metadata as m, pathlib,os print('Python:',sys.version,sys.executable) for k in ['numpy','scipy','torch','mne','pyedflib','pandas','xlrd','PyYAML','pytest']:  try: print(k,m.version(k))  except m.PackageNotFoundError: print(k,'MISSING') roots=['/home/FA006/Desktop/Dimension/dataset/Preprocessed Sleep-EDF-20 dataset','/home/FA006/Desktop/Dimension/dataset/Preprocessed Sleep-EDF-78 dataset','/home/FA006/Desktop/Sleep_dl/Sleep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0','/home/FA006/Desktop/Dimension/dataset/SHHS_NSRR'] for p in map(pathlib.Path,roots):  print('PATH',p,'exists',p.exists())  if p.exists():   files=sorted(p.iterdir());print('entries',len(files),'first',[f.name for f in files[:12]])   if 'Preprocessed' in str(p):    import numpy as np    for f in files[:1]:     if f.suffix=='.npz':      with np.load(f,allow_pickle=False) as z:       print('NPZ',f.name,z.files)       for k in z.files:        a=z[k];print(k,a.shape,a.dtype, a.tolist() if a.size<20 else 'array (values private)') PY ps -eo pid,comm,args | rg '(python|train|nsrr)' | head -25; } 2>&1 | tee /home/FA006/Desktop/bhi/proto-sleep/mist-transfer-session-logs/003_environment_data_preflight.txt
+ 629847 rg              rg (python|train|nsrr)

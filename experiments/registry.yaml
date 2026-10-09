@@ -1,0 +1,10 @@
+version: 1
+project: MIST-Transfer-v3
+scope: P0-P1-only
+experiments: []
+phases:
+  P0:
+    status: implemented
+    validation: reports/data_audit/session_logs/007_p0_validation.txt
+  P1:
+    status: pending

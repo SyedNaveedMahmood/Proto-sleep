@@ -1,0 +1,2 @@
+/home/FA006/Desktop/bhi/proto-sleep
+fatal: not a git repository (or any of the parent directories): .git

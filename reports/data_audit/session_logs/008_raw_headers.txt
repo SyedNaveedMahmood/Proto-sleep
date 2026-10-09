@@ -1,0 +1,28 @@
+sleep-cassette 306 PSG 153 hyp 153
+SC4001E0-PSG.edf duration 79500.0 start 1989-04-24T16:13:00 channels [{'label': 'EEG Fpz-Cz', 'dimension': 'uV', 'sample_frequency': 100.0, 'physical_max': 192.0, 'physical_min': -192.0, 'digital_max': 2047, 'digital_min': -2048, 'prefilter': 'HP:0.5Hz LP:100Hz [enhanced cassette BW]', 'transducer': 'Ag-AgCl electrodes'}, {'label': 'EEG Pz-Oz', 'dimension': 'uV', 'sample_frequency': 100.0, 'physical_max': 196.0, 'physical_min': -197.0, 'digital_max': 2047, 'digital_min': -2048, 'prefilter': 'HP:0.5Hz LP:100Hz [enhanced cassette BW]', 'transducer': 'Ag-AgCl electrodes'}, {'label': 'EOG horizontal', 'dimension': 'uV', 'sample_frequency': 100.0, 'physical_max': 1009.0, 'physical_min': -1009.0, 'digital_max': 2047, 'digital_min': -2048, 'prefilter': 'HP:0.5Hz LP:100Hz [enhanced cassette BW]', 'transducer': 'Ag-AgCl electrodes'}, {'label': 'Resp oro-nasal', 'dimension': '', 'sample_frequency': 1.0, 'physical_max': 2047.0, 'physical_min': -2048.0, 'digital_max': 2047, 'digital_min': -2048, 'prefilter': 'HP:0.03Hz LP:0.9Hz', 'transducer': 'Oral-nasal thermistors'}, {'label': 'EMG submental', 'dimension': 'uV', 'sample_frequency': 1.0, 'physical_max': 5.0, 'physical_min': -5.0, 'digital_max': 2500, 'digital_min': -2500, 'prefilter': 'HP:16Hz Rectification LP:0.7Hz', 'transducer': 'Ag-AgCl electrodes'}, {'label': 'Temp rectal', 'dimension': 'DegC', 'sample_frequency': 1.0, 'physical_max': 40.0, 'physical_min': 34.0, 'digital_max': 2731, 'digital_min': -2849, 'prefilter': '', 'transducer': 'Rectal thermistor'}, {'label': 'Event marker', 'dimension': '', 'sample_frequency': 1.0, 'physical_max': 2048.0, 'physical_min': -2047.0, 'digital_max': 2048, 'digital_min': -2047, 'prefilter': 'Hold during 2 seconds', 'transducer': 'Marker button'}]
+SC4001EC-Hypnogram.edf start 1989-04-24T16:13:00 intervals 154 labels ['Sleep stage 1', 'Sleep stage 2', 'Sleep stage 3', 'Sleep stage 4', 'Sleep stage ?', 'Sleep stage R', 'Sleep stage W'] max_end 86400.0
+sleep-telemetry 88 PSG 44 hyp 44
+ST7011J0-PSG.edf duration 35900.0 start 1994-07-12T23:00:00 channels [{'label': 'EEG Fpz-Cz', 'dimension': 'uV', 'sample_frequency': 100.0, 'physical_max': 3000.0, 'physical_min': -3000.0, 'digital_max': 8191, 'digital_min': -8192, 'prefilter': 'LP:800Hz HP:0.03Hz', 'transducer': 'Ag-AgCl electrodes'}, {'label': 'EEG Pz-Oz', 'dimension': 'uV', 'sample_frequency': 100.0, 'physical_max': 3000.0, 'physical_min': -3000.0, 'digital_max': 8191, 'digital_min': -8192, 'prefilter': 'LP:800Hz HP:0.03Hz', 'transducer': 'Ag-AgCl electrodes'}, {'label': 'EOG horizontal', 'dimension': 'uV', 'sample_frequency': 100.0, 'physical_max': 3000.0, 'physical_min': -3000.0, 'digital_max': 8191, 'digital_min': -8192, 'prefilter': 'LP:800Hz HP:0.03Hz', 'transducer': 'Ag-AgCl electrodes'}, {'label': 'EMG submental', 'dimension': 'uV', 'sample_frequency': 100.0, 'physical_max': 3000.0, 'physical_min': -3000.0, 'digital_max': 8191, 'digital_min': -8192, 'prefilter': 'LP:800Hz HP:0.03Hz', 'transducer': 'Ag-AgCl electrodes'}, {'label': 'Marker', 'dimension': 'ID+M-E', 'sample_frequency': 10.0, 'physical_max': 63.0, 'physical_min': -64.0, 'digital_max': 63, 'digital_min': -64, 'prefilter': '', 'transducer': 'MarkerButton'}]
+ST7011JP-Hypnogram.edf start 1994-07-12T23:00:00 intervals 231 labels ['Sleep stage 1', 'Sleep stage 2', 'Sleep stage 3', 'Sleep stage 4', 'Sleep stage R', 'Sleep stage W'] max_end 32760.0
+SC-subjects.xls (154, 5)
+subject night age sex (F=1) LightsOff
+      0     1  33         1  00:38:00
+      0     2  33         1  21:57:00
+      1     1  33         1  22:44:00
+      1     2  33         1  22:15:00
+      2     1  26         1  22:50:00
+      2     2  26         1  22:57:00
+      3     1  26         1  00:02:00
+      3     2  26         1  00:24:00
+      4     1  34         1  23:12:00
+ST-subjects.xls (24, 7)
+Subject - age - sex NaN   NaN Placebo night        NaN Temazepam night        NaN
+                 Nr Age M1/F2      night nr lights off        night nr lights off
+                  1  60     1             1   23:01:00               2   23:48:00
+                  2  35     2             2   23:27:00               1   00:00:00
+                  4  18     2             1   23:53:00               2   22:37:00
+                  5  32     2             2   23:23:00               1   23:34:00
+                  6  35     2             1   23:28:00               2   23:26:00
+                  7  51     2             1   00:02:00               2   23:24:00
+                  8  66     2             2   23:20:00               1   23:53:00
+                  9  47     1             2   00:30:00               1   23:42:00

@@ -1,0 +1,7 @@
+From https://github.com/SyedNaveedMahmood/Proto-sleep
+ * branch            research/mist-evidence-v1-verified -> FETCH_HEAD
+676963bea58b749d90662d133217fe72c4156981
+676963bea58b749d90662d133217fe72c4156981
+Preparing worktree (new branch 'research/mist-transfer-v3-edf-shhs')
+branch 'research/mist-transfer-v3-edf-shhs' set up to track 'origin/research/mist-transfer-v3-edf-shhs'.
+HEAD is now at 3f614e7 Document EDF20/78 and optional SHHS transfer research plan

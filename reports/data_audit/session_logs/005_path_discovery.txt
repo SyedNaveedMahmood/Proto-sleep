@@ -1,0 +1,17 @@
+/home/FA006/Desktop/Sleep_dl ['loso_outputs', 'torch', 'wavesleepnet_edf78_plots', 'Macro+Micro_Shared_embedding.ipynb', 'SLeep_edf_fulldataset', 'checkpoints', 'Shared_embedding_old.ipynb', 'nn', 'np', 'edf to NPZ', 'Shared_embedding.ipynb', 'Shared_embedding _TCE.ipynb', 'pred_raw_02.npy', 'Variant 2 old with general EEG MRCNN.ipynb', 'results', 'wavesleepnet_singlefile_flatdata.py', 'wavesleepnet_singlefile_flatdata.ipynb', 'argparse', 'orginal_attnsleep.ipynb', 'wavesleep_faithful.ipynb', 'pred_proc_02.npy', 'inference_test', 'waveSleepNet_SharedEmbed.ipynb', 'attnsleep+waveSeensing.ipynb', 'edf78_5fold_outputs', 'WaveSleepNet-main', 'SC4002E0-PSG.edf', 'fold2_outputs', 'Shared_embedding_Fixed_TCN_dilation_1.ipynb', 'V3', 'Hypnogram_Comparison_SC4002_AttnSleepWaveSensing_sharedEmbed.png', '__pycache__', 'SC4002EC-Hypnogram.edf']
+/home/FA006/Desktop/Sleep_dl/Sleep_edf_fulldataset MISSING
+/home/FA006/Desktop/Dimension/dataset ['shhs', 'Preprocessed Sleep-EDF-20 dataset', 'Preprocessed Sleep-EDF-78 dataset', 'Preprocessed_Sleep-EDF_PzOz_npz', 'Preprocessed Sleep-EDF-.zip', 'cap_npz_out_fixed', 'cap_npz_out', 'Transfer Learning Test on Attnsleep and WaveSleep', 'cap_npz_out_fixed2', 'cap']
+SC4001E0.npz ['x', 'y', 'fs', 'ch_label', 'header_raw', 'header_annotation']
+x (841, 3000, 1) float32 private array
+y (841,) int32 private array
+fs () float64 100.0
+ch_label () <U10 EEG Fpz-Cz
+header_raw UNTRUSTED OBJECT metadata; not unpickled Object arrays cannot be loaded when allow_pickle=False
+header_annotation UNTRUSTED OBJECT metadata; not unpickled Object arrays cannot be loaded when allow_pickle=False
+SC4001E0.npz ['x', 'y', 'fs', 'ch_label', 'header_raw', 'header_annotation']
+x (841, 3000, 1) float32 private array
+y (841,) int32 private array
+fs () float64 100.0
+ch_label () <U10 EEG Fpz-Cz
+header_raw UNTRUSTED OBJECT metadata; not unpickled Object arrays cannot be loaded when allow_pickle=False
+header_annotation UNTRUSTED OBJECT metadata; not unpickled Object arrays cannot be loaded when allow_pickle=False

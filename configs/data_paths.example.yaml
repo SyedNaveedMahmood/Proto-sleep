@@ -1,0 +1,7 @@
+sleep_edf_20_npz: "/home/FA006/Desktop/Dimension/dataset/Preprocessed Sleep-EDF-20 dataset"
+sleep_edf_78_npz: "/home/FA006/Desktop/Dimension/dataset/Preprocessed Sleep-EDF-78 dataset"
+sleep_edfx_original_root: "/home/FA006/Desktop/Sleep_dl/Sleep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0"
+sleep_edfx_sc_raw: "/home/FA006/Desktop/Sleep_dl/Sleep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-cassette"
+sleep_edfx_st_raw: "/home/FA006/Desktop/Sleep_dl/Sleep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-telemetry"
+shhs_nsrr_root_if_approved: "/home/FA006/Desktop/Dimension/dataset/SHHS_NSRR"
+shhs_access_authorized: false

@@ -1,0 +1,656 @@
+## research/mist-transfer-v3-edf-shhs...origin/research/mist-transfer-v3-edf-shhs
+requirements.txt
+src/protosleep/data.py
+src/protosleep/selftest.py
+src/mist_evidence/runtime.py
+src/mist_evidence/data.py
+src/mist_evidence/explain.py
+.gitignore
+tests/test_mist_multifold.py
+tests/test_morphspec_frozen_transfer_protocol.py
+tests/test_legacy_prototype_audit.py
+tests/test_morphspec_downstream_protocol.py
+tests/test_morphmae_transfer.py
+tests/test_morphmae_representation.py
+tests/test_mist_checkpoint.py
+tests/test_legacy_wavesleepnet_bridge.py
+tests/test_morphmae_bridge.py
+tests/test_structural.py
+tests/test_prototype_baseline.py
+pyproject.toml
+tests/evidence/test_pipeline.py
+tests/evidence/test_explanation_numeric.py
+tests/evidence/test_model.py
+tests/test_morphspec_confirm.py
+tests/test_losses.py
+tests/test_legacy_wavesleepnet_objective.py
+tests/test_legacy_wavesleepnet_train.py
+tests/test_mae_baseline.py
+# -----------------------------------------------------------------------------
+# Python bytecode / caches / build artefacts
+# -----------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.pytype/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+build/
+dist/
+site/
+*.egg-info/
+.eggs/
+
+# -----------------------------------------------------------------------------
+# Virtual environments / local environment files
+# -----------------------------------------------------------------------------
+.venv/
+venv/
+env/
+ENV/
+.env
+.env.*
+!.env.example
+.python-version
+
+# -----------------------------------------------------------------------------
+# Jupyter / IPython
+# -----------------------------------------------------------------------------
+.ipynb_checkpoints/
+.profile_default/
+ipython_config.py
+
+# -----------------------------------------------------------------------------
+# IDE / editor / OS noise
+# -----------------------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# -----------------------------------------------------------------------------
+# EEG datasets and large local data artefacts
+# Never commit raw/preprocessed participant data.
+# -----------------------------------------------------------------------------
+data/
+dataset/
+datasets/
+external_data/
+private_data/
+*.edf
+*.bdf
+*.vhdr
+*.vmrk
+*.eeg
+*.mat
+*.h5
+*.hdf5
+*.npz
+*.npy
+*.npy.gz
+
+# -----------------------------------------------------------------------------
+# Model checkpoints / caches / experiment outputs
+# -----------------------------------------------------------------------------
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+runs/
+protomae_sleep_runs/
+mist_sleep_runs/
+outputs/
+artifacts/
+checkpoints/
+cache/
+caches/
+wandb/
+mlruns/
+tensorboard/
+lightning_logs/
+
+# -----------------------------------------------------------------------------
+# Logs / profiler / cluster output
+# -----------------------------------------------------------------------------
+*.log
+nohup.out
+slurm-*.out
+*.prof
+*.trace
+*.tmp
+*.temp
+
+# -----------------------------------------------------------------------------
+# Local research-audit exports
+# -----------------------------------------------------------------------------
+legacy_morphmae_audit*.txt
+legacy_morphmae_audit*.json
+legacy_prototype_audit*.txt
+legacy_prototype_audit*.json
+legacy_wavesleepnet_smoke*.json
+legacy_wavesleepnet_objective_smoke*.json
+results/local/
+figures/local/
+tables/local/
+
+# -----------------------------------------------------------------------------
+# Packaging / tool-specific local state
+# -----------------------------------------------------------------------------
+.pdm-python
+.pdm-build/
+poetry.toml
+pip-wheel-metadata/
+.cache/
+
+# MIST-Evidence outputs contain participant waveform snippets. Keep private.
+mist_evidence_runs/
+"""Explicit split manifests, selective NPZ access, and real waveform anchors."""
+from __future__ import annotations
+
+import hashlib
+import json
+from dataclasses import dataclass
+from pathlib import Path
+
+import numpy as np
+import torch
+from sklearn.cluster import MiniBatchKMeans
+
+from .model import ModelConfig, observed_parts
+
+ORDER = (14, 5, 4, 17, 8, 7, 19, 12, 0, 15, 16, 9, 11, 10, 3, 1, 6, 18, 2, 13)
+
+
+def sha256_file(path: Path) -> str:
+    h = hashlib.sha256()
+    with path.open("rb") as f:
+        for block in iter(lambda: f.read(1 << 20), b""):
+            h.update(block)
+    return h.hexdigest()
+
+
+def fingerprint(obj) -> str:
+    return hashlib.sha256(json.dumps(obj, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
+
+
+def edf_manifest(root: Path, fold: int) -> dict:
+    """Filename discovery only. Does not open NPZs, including reserved test files."""
+    if not 0 <= fold < 20:
+        raise ValueError("EDF-20 fold must be in 0..19")
+    entries = []
+    for path in sorted(root.expanduser().resolve().glob("*.npz")):
+        name = path.name
+        if len(name) < 5 or not name[3:5].isdigit():
+            raise ValueError(f"cannot parse subject from filename[3:5]: {name}")
+        sid = int(name[3:5])
+        split = "test" if sid == ORDER[fold] else "val" if sid == ORDER[(fold+1) % 20] else "train"
+        entries.append({"path": str(path), "subject": str(sid), "split": split})
+    if {int(e["subject"]) for e in entries} != set(range(20)):
+        raise ValueError("EDF convenience mode requires exactly subjects 0..19")
+    return {"dataset": "Sleep-EDF-20", "purpose": "development_only", "fold": fold, "records": entries}
+
+
+def read_manifest(path: Path) -> dict:
+    value = json.loads(path.read_text())
+    for entry in value.get("records", []):
+        p = Path(entry["path"]).expanduser()
+        entry["path"] = str((path.parent / p if not p.is_absolute() else p).resolve())
+        entry["subject"] = str(entry["subject"])
+    return value
+
+
+def validate_manifest(manifest: dict) -> None:
+    entries = manifest.get("records", [])
+    if not entries or not manifest.get("dataset"):
+        raise ValueError("manifest requires dataset and records")
+    subjects, paths = {}, set()
+    for e in entries:
+        if e.get("split") not in {"train", "val", "test"} or not str(e.get("subject", "")):
+            raise ValueError("every record needs a subject and train/val/test split")
+        path = str(Path(e["path"]).expanduser().resolve())
+        if path in paths:
+            raise ValueError("duplicate recording path in manifest")
+        paths.add(path)
+        sid = str(e["subject"])
+        if sid in subjects and subjects[sid] != e["split"]:
+            raise ValueError(f"subject {sid} crosses splits")
+        subjects[sid] = e["split"]
+    if not {"train", "val", "test"}.issubset(set(subjects.values())):
+        raise ValueError("explicit nonempty train, validation, and reserved test subjects required")
+
+
+@dataclass
+class Recording:
+    path: str
+    subject: str
+    x: np.ndarray
+    y: np.ndarray
+    indices: np.ndarray
+    file_hash: str
+    continuity_assumed: bool
+    indices_known: bool = True
+    independent_epochs: bool = False
+
+    def segments(self):
+        if self.independent_epochs:
+            return [(i, i+1) for i in range(len(self.y))]
+        cuts = np.flatnonzero(np.diff(self.indices) != 1) + 1
+        bounds = np.r_[0, cuts, len(self.y)]
+        return [(int(a), int(b)) for a, b in zip(bounds[:-1], bounds[1:])]
+
+
+def load_split(manifest: dict, split: str, assume_contiguous: bool = False, independent_epochs: bool = False) -> list[Recording]:
+    """This development runner deliberately has no test-opening code path."""
+    validate_manifest(manifest)
+    if split not in {"train", "val"}:
+        raise ValueError("test access is not implemented; use a separately frozen evaluation protocol")
+    result = []
+    for e in manifest["records"]:
+        if e["split"] != split:
+            continue
+        path = Path(e["path"])
+        with np.load(path, allow_pickle=False) as z:
+            if "x" not in z.files or "y" not in z.files:
+                raise ValueError(f"{path.name}: x/y arrays required")
+            x, labels = np.asarray(z["x"]), np.asarray(z["y"]).reshape(-1)
+            if x.ndim == 2:
+                x = x[:, None]
+            elif x.ndim == 3 and x.shape[1:] == (3000, 1):
+                x = x.transpose(0, 2, 1)
+            if x.ndim != 3 or x.shape[1:] != (1, 3000) or len(x) != len(labels) or not len(x):
+                raise ValueError(f"{path.name}: expected x [N,1,3000] and y [N]")
+            if not np.isfinite(x).all() or not np.isfinite(labels).all():
+                raise ValueError(f"{path.name}: non-finite signal or labels")
+            if not np.equal(labels, labels.astype(np.int64)).all() or not np.isin(labels, range(5)).all():
+                raise ValueError(f"{path.name}: labels must already map to Wake/N1/N2/N3/REM = 0..4")
+            fs = np.asarray(z["fs"]).reshape(-1) if "fs" in z.files else np.array([100.0])
+            if fs.size != 1 or abs(float(fs[0]) - 100.0) > 1e-8:
+                raise ValueError(f"{path.name}: 100 Hz required; no silent resampling")
+            present = [k for k in ("epoch_indices", "epoch_index") if k in z.files]
+            if len(present) > 1:
+                raise ValueError(f"{path.name}: ambiguous epoch index arrays")
+            assumed = not present and assume_contiguous and not independent_epochs
+            if not present and not assume_contiguous and not independent_epochs:
+                raise ValueError(f"{path.name}: no epoch_indices. Verify temporal continuity before using "
+                                 "--assume-contiguous; removed epochs must retain their original indices. "
+                                 "Use --epoch-only for safe non-temporal development.")
+            idx = np.asarray(z[present[0]]).reshape(-1) if present else np.arange(len(x))
+            if len(idx) != len(x) or not np.isfinite(idx).all() or not np.equal(idx, idx.astype(np.int64)).all():
+                raise ValueError(f"{path.name}: invalid epoch indices")
+            if np.any(np.diff(idx) <= 0) or np.any(idx < 0):
+                raise ValueError(f"{path.name}: epoch indices must be strictly increasing and nonnegative")
+        result.append(Recording(str(path), str(e["subject"]), x.astype(np.float32), labels.astype(np.int64),
+                                idx.astype(np.int64), sha256_file(path), assumed, bool(present), independent_epochs))
+    if not result:
+        raise ValueError(f"empty {split} split")
+    # Reject exact duplicate recording files even under different names/subjects.
+    if len({r.file_hash for r in result}) != len(result):
+        raise ValueError(f"duplicate recording bytes within {split}")
+    return result
+
+
+def blocks(recordings: list[Recording], core: int, radius: int):
+    """Nonoverlapping scored cores with context halos. Never cross nights or gaps."""
+    if core < 1 or radius < 0:
+        raise ValueError("invalid block size")
+    output = []
+    for ri, r in enumerate(recordings):
+        for a, b in r.segments():
+            for lo in range(a, b, core):
+                hi = min(lo + core, b)
+                output.append((ri, max(a, lo-radius), min(b, hi+radius), lo, hi))
+    return output
+
+
+def build_anchors(recordings: list[Recording], cfg: ModelConfig, seed: int = 1337,
+                  per_subject: int = 64, method: str = "medoid") -> dict:
+    """Subject/stage-balanced candidates; unsupervised clustering; actual medoids.
+
+    Stage labels are used ONLY to balance candidate sampling from training data.
+    The anchor's stage label is not a clinical label for the waveform structure.
+    """
+    if method not in {"medoid", "random"} or per_subject < 5:
+        raise ValueError("invalid bank construction settings")
+    log_rms = np.concatenate([np.log(np.std(r.x, axis=(1,2)).clip(min=1e-6)) for r in recordings])
+    amplitude_stats = (float(log_rms.mean()), max(0.1, float(log_rms.std())))
+    rng = np.random.default_rng(seed)
+    subjects = sorted({r.subject for r in recordings})
+    waves, metadata = [], []
+    for length in cfg.scales:
+        candidates, identities, seen = [], [], set()
+        for sid in subjects:
+            rids = [i for i, r in enumerate(recordings) if r.subject == sid]
+            by_stage = {s: [(i, int(j)) for i in rids for j in np.flatnonzero(recordings[i].y == s)]
+                        for s in range(5)}
+            available = [s for s in range(5) if by_stage[s]]
+            for trial in range(per_subject * 4):
+                s = available[trial % len(available)]
+                pool = by_stage[s]
+                ri, ep = pool[int(rng.integers(len(pool)))]
+                start = int(rng.integers((cfg.samples-length)//cfg.stride + 1)) * cfg.stride
+                key = (ri, ep, start)
+                if key in seen:
+                    continue
+                patch = recordings[ri].x[ep, 0, start:start+length].copy()
+                if float(patch.std()) <= 1e-6:
+                    continue
+                seen.add(key)
+                candidates.append(patch)
+                r = recordings[ri]
+                identities.append({"source_path": r.path, "source_sha256": r.file_hash,
+                                   "subject": r.subject, "array_epoch": ep,
+                                   "original_epoch": int(r.indices[ep]) if r.indices_known else None, "start_sample": start,
+                                   "length_samples": length, "stage_at_source_epoch": int(r.y[ep]),
+                                   "clinical_event_label": None})
+                if sum(m["subject"] == sid for m in identities) >= per_subject:
+                    break
+        k = cfg.prototypes_per_scale
+        if len(candidates) < k:
+            raise ValueError(f"only {len(candidates)} nonflat candidate windows for {k} anchors")
+        bank = torch.tensor(np.stack(candidates))
+        with torch.no_grad():
+            shape, power, envelope, _ = observed_parts(bank)
+            pooled = torch.nn.functional.adaptive_avg_pool1d(shape[:, None], 32)[:, 0]
+            desc = torch.cat((torch.nn.functional.normalize(pooled, dim=-1), power, envelope), -1).numpy()
+        if method == "random":
+            chosen = rng.choice(len(bank), k, replace=False).tolist()
+        else:
+            km = MiniBatchKMeans(n_clusters=k, random_state=seed, n_init=3,
+                                 batch_size=min(256, len(bank)), reassignment_ratio=0.0).fit(desc)
+            chosen = []
+            for center in km.cluster_centers_:
+                order = np.argsort(np.square(desc-center).sum(-1), kind="stable")
+                chosen.append(next(int(i) for i in order if int(i) not in chosen))
+        waves.append(bank[chosen])
+        metadata.append([identities[i] for i in chosen])
+    return {"waveforms": waves, "metadata": metadata, "seed": seed, "method": method,
+            "training_subjects": subjects, "candidate_labels_used": True,
+            "config": cfg.dictionary(), "amplitude_stats": amplitude_stats,
+            "amplitude_statistics_fit": "training only; input file units, not inferred microvolts"}
+"""Training and validation with completion markers and epoch-boundary resume."""
+from __future__ import annotations
+
+import csv
+import hashlib
+import json
+import os
+import random
+import time
+from dataclasses import asdict, dataclass
+from pathlib import Path
+
+import numpy as np
+import torch
+from sklearn.metrics import accuracy_score, cohen_kappa_score, confusion_matrix, f1_score
+
+from .data import Recording, blocks, fingerprint
+from .model import EvidenceModel
+
+
+@dataclass(frozen=True)
+class TrainConfig:
+    epochs: int = 60
+    patience: int = 12
+    lr: float = 3e-4
+    weight_decay: float = 1e-4
+    core_epochs: int = 16
+    encode_batch: int = 16
+    grad_clip: float = 5.0
+    seed: int = 123
+    deterministic: bool = True
+
+    def __post_init__(self):
+        if min(self.epochs, self.patience, self.core_epochs, self.encode_batch) < 1 or self.lr <= 0:
+            raise ValueError("invalid training settings")
+
+
+def seed_all(seed: int, deterministic: bool = True):
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed_all(seed)
+    torch.backends.cudnn.benchmark = False
+    torch.backends.cudnn.deterministic = deterministic
+    torch.use_deterministic_algorithms(deterministic)
+
+
+def atomic_torch_save(obj, path: Path):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    with tmp.open("wb") as f:
+        torch.save(obj, f)
+        f.flush()
+        os.fsync(f.fileno())
+    os.replace(tmp, path)
+
+
+def atomic_json(obj, path: Path):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    with tmp.open("w") as f:
+        json.dump(obj, f, indent=2, allow_nan=False)
+        f.flush()
+        os.fsync(f.fileno())
+    os.replace(tmp, path)
+
+
+def tensor_digest(state: dict) -> str:
+    h = hashlib.sha256()
+    for key, tensor in sorted(state.items()):
+        h.update(key.encode())
+        h.update(tensor.detach().cpu().contiguous().numpy().tobytes())
+    return h.hexdigest()
+
+
+def rng_state():
+    return {"python": random.getstate(), "numpy": np.random.get_state(), "torch": torch.get_rng_state(),
+            "cuda": torch.cuda.get_rng_state_all() if torch.cuda.is_available() else []}
+
+
+def restore_rng(state):
+    random.setstate(state["python"])
+    np.random.set_state(state["numpy"])
+    torch.set_rng_state(state["torch"].cpu())
+    if state["cuda"] and torch.cuda.is_available():
+        torch.cuda.set_rng_state_all([s.cpu() for s in state["cuda"]])
+
+
+def load_trusted(path: Path):
+    """Only use with this runner's local, trusted checkpoints (contains RNG objects)."""
+    return torch.load(path, map_location="cpu", weights_only=False)
+
+
+@torch.no_grad()
+def evaluate(model: EvidenceModel, recordings: list[Recording], device: torch.device, batch: int):
+    model.eval()
+    truth, predicted, rows, sums = [], [], [], []
+    subject_data = {}
+    for r in recordings:
+        encoded = [model.encode(torch.from_numpy(r.x[i:i+batch]).to(device)).cpu()
+                   for i in range(0, len(r.y), batch)]
+        features = torch.cat(encoded).to(device)
+        for lo, hi in r.segments():
+            emissions = model.emissions(features[lo:hi][None])[0]
+            pred, probs = model.predict(emissions)
+            y = torch.from_numpy(r.y[lo:hi]).to(device)
+            valid = torch.ones((1, hi-lo), dtype=torch.bool, device=device)
+            nll = float(model.loss(emissions[None], y[None], valid))
+            sums.append((nll, hi-lo))
+            pred_np, prob_np = pred.cpu().numpy(), probs.cpu().numpy()
+            truth.extend(r.y[lo:hi].tolist())
+            predicted.extend(pred_np.tolist())
+            sy, sp = subject_data.setdefault(r.subject, ([], []))
+            sy.extend(r.y[lo:hi].tolist()); sp.extend(pred_np.tolist())
+            for j, (yt, yp, probability) in enumerate(zip(r.y[lo:hi], pred_np, prob_np), lo):
+                rows.append({"recording": Path(r.path).name, "subject": r.subject,
+                             "array_epoch": j, "original_epoch": int(r.indices[j]) if r.indices_known else None,
+                             "truth": int(yt), "pred": int(yp),
+                             **{f"p_{k}": float(v) for k, v in enumerate(probability)}})
+    kappa = float(cohen_kappa_score(truth, predicted, labels=list(range(5))))
+    result = {"accuracy": float(accuracy_score(truth, predicted)),
+              "macro_f1": float(f1_score(truth, predicted, labels=list(range(5)), average="macro", zero_division=0)),
+              "kappa": kappa if np.isfinite(kappa) else None,
+              "per_stage_f1": f1_score(truth, predicted, labels=list(range(5)), average=None, zero_division=0).tolist(),
+              "confusion_matrix": confusion_matrix(truth, predicted, labels=list(range(5))).tolist(),
+              "nll": sum(loss*n for loss, n in sums) / sum(n for _, n in sums),
+              "n_epochs": len(truth),
+              "subject_macro_f1": {sid: float(f1_score(a, b, labels=list(range(5)), average="macro", zero_division=0))
+                                   for sid, (a, b) in subject_data.items()}}
+    result["mean_subject_macro_f1"] = float(np.mean(list(result["subject_macro_f1"].values())))
+    return result, rows
+
+
+def write_csv(rows: list[dict], path: Path):
+    if not rows:
+        return
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    with tmp.open("w", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=list(rows[0]))
+        writer.writeheader(); writer.writerows(rows)
+    os.replace(tmp, path)
+
+
+def train(model: EvidenceModel, train_records: list[Recording], val_records: list[Recording],
+          cfg: TrainConfig, run: Path, bank: dict, provenance: dict, device: torch.device,
+          resume: bool = False, interrupt_after_epoch: int | None = None):
+    """Train core-block conditional likelihoods; evaluate whole continuous segments.
+
+    Checkpoints are saved at epoch boundaries. Mid-epoch interruption repeats that
+    epoch; never pretends a saved best-so-far model means training is complete.
+    """
+    run.mkdir(parents=True, exist_ok=True)
+    identity = {"model": model.cfg.dictionary(), "train": asdict(cfg), "provenance": provenance,
+                "bank_digest": tensor_digest({str(i): w for i, w in enumerate(bank["waveforms"])}),
+                "bank_metadata_digest": fingerprint({k:v for k,v in bank.items() if k != "waveforms"})}
+    signature = fingerprint(identity)
+    last, best, done = run / "last.pt", run / "best.pt", run / "COMPLETE.json"
+    seed_all(cfg.seed, cfg.deterministic)
+    model.to(device)
+    optimizer = torch.optim.AdamW([p for p in model.parameters() if p.requires_grad],
+                                  lr=cfg.lr, weight_decay=cfg.weight_decay)
+    best_score, best_epoch, stale, start, history = -float("inf"), 0, 0, 1, []
+    if any(p.exists() for p in (last, best, done)) and not resume:
+        raise FileExistsError(f"{run}: output exists; use --resume or a new directory")
+    if resume and done.exists():
+        finished = json.loads(done.read_text())
+        if finished["signature"] != signature:
+            raise ValueError("completed run configuration/data signature mismatch")
+        payload = load_trusted(best)
+        if payload["signature"] != signature or tensor_digest(payload["state_dict"]) != finished["best_state_digest"]:
+            raise ValueError("completed checkpoint does not match completion marker")
+        model.load_state_dict(payload["state_dict"])
+        metrics, rows = evaluate(model, val_records, device, cfg.encode_batch)
+        if abs(metrics["mean_subject_macro_f1"] - finished["metrics"]["mean_subject_macro_f1"]) > 1e-5:
+            raise RuntimeError("checkpoint re-evaluation changed primary validation metric")
+        print(f"VERIFIED COMPLETE: {run}", flush=True)
+        return model, metrics, rows
+    if resume and last.exists():
+        state = load_trusted(last)
+        if state["signature"] != signature:
+            raise ValueError("resume refused: data, anchors, configuration or provenance changed")
+        model.load_state_dict(state["state_dict"])
+        optimizer.load_state_dict(state["optimizer"])
+        best_score, best_epoch, stale = state["best_score"], state["best_epoch"], state["stale"]
+        start, history = state["epoch"] + 1, state["history"]
+        restore_rng(state["rng"])
+    elif resume and best.exists():
+        raise RuntimeError("best.pt without last.pt is not a resumable completed experiment")
+    atomic_json({**identity, "signature": signature}, run / "provenance.json")
+    items = blocks(train_records, cfg.core_epochs, model.cfg.radius)
+    if not items:
+        raise ValueError("no training blocks")
+    for epoch in range(start, cfg.epochs+1):
+        if stale >= cfg.patience:
+            break
+        model.train()
+        total, count = 0.0, 0
+        order = torch.randperm(len(items)).tolist()
+        t0 = time.perf_counter()
+        for number in order:
+            ri, a, b, lo, hi = items[number]
+            x = torch.from_numpy(train_records[ri].x[a:b]).to(device)
+            y = torch.from_numpy(train_records[ri].y[lo:hi]).to(device)[None]
+            optimizer.zero_grad(set_to_none=True)
+            # Each chunk is independently encoded; no cross-epoch normalization.
+            features = torch.cat([model.encode(x[i:i+cfg.encode_batch])
+                                  for i in range(0, len(x), cfg.encode_batch)])
+            emissions = model.emissions(features[None])[:, lo-a:hi-a]
+            valid = torch.ones(y.shape, dtype=torch.bool, device=device)
+            loss = model.loss(emissions, y, valid)
+            if not torch.isfinite(loss):
+                raise FloatingPointError("non-finite training loss")
+            loss.backward()
+            norm = torch.nn.utils.clip_grad_norm_(model.parameters(), cfg.grad_clip, error_if_nonfinite=True)
+            optimizer.step()
+            total += float(loss.detach()) * (hi-lo); count += hi-lo
+        metrics, rows = evaluate(model, val_records, device, cfg.encode_batch)
+        score = metrics["mean_subject_macro_f1"]
+        improved = score > best_score + 1e-8
+        stale = 0 if improved else stale+1
+        if improved:
+            best_score, best_epoch = score, epoch
+            atomic_torch_save({"state_dict": model.state_dict(), "model_config": model.cfg.dictionary(),
+                               "bank": bank, "signature": signature, "best_epoch": epoch,
+                               "metrics": metrics}, best)
+        elapsed = time.perf_counter()-t0
+        history.append({"epoch": epoch, "train_nll": total/count, "val_nll": metrics["nll"],
+                        "val_subject_macro_f1": score, "val_pooled_macro_f1": metrics["macro_f1"],
+                        "val_accuracy": metrics["accuracy"], "best_epoch": best_epoch,
+                        "stale": stale, "seconds": elapsed, "optimizer_steps": len(items),
+                        "last_grad_norm": float(norm)})
+        write_csv(history, run / "history.csv")
+        atomic_torch_save({"state_dict": model.state_dict(), "optimizer": optimizer.state_dict(),
+                           "signature": signature, "epoch": epoch, "best_score": best_score,
+                           "best_epoch": best_epoch, "stale": stale, "history": history,
+                           "rng": rng_state()}, last)
+        print(f"e{epoch:03d} nll={total/count:.5f} valMF1={score:.5f} "
+              f"valAcc={metrics['accuracy']:.5f} best={best_epoch} steps={len(items)} {elapsed:.1f}s", flush=True)
+        if interrupt_after_epoch == epoch:
+            raise InterruptedError("test-only simulated epoch-boundary interruption")
+    payload = load_trusted(best)
+    if payload["signature"] != signature:
+        raise ValueError("best checkpoint signature mismatch")
+    model.load_state_dict(payload["state_dict"])
+    metrics, rows = evaluate(model, val_records, device, cfg.encode_batch)
+    write_csv(rows, run / "validation_predictions.csv")
+    atomic_json({"signature": signature, "best_epoch": best_epoch, "metrics": metrics,
+                 "best_state_digest": tensor_digest(payload["state_dict"]),
+                 "test_data_accessed": False, "development_only": True}, done)
+    print(f"COMPLETE best={best_epoch} validation subject-MF1={metrics['mean_subject_macro_f1']:.5f}", flush=True)
+    return model, metrics, rows
+total 252
+drwxrwxr-x 2 FA006 FA006  4096 Oct  9 18:31 .
+drwxrwxr-x 9 FA006 FA006  4096 Oct  9 18:31 ..
+-rw-rw-r-- 1 FA006 FA006 10730 Oct  9 18:31 audit_legacy_morphmae.py
+-rw-rw-r-- 1 FA006 FA006  9794 Oct  9 18:31 audit_legacy_prototype.py
+-rw-rw-r-- 1 FA006 FA006  1014 Oct  9 18:31 inspect_morphmae_checkpoint.py
+-rw-rw-r-- 1 FA006 FA006  2099 Oct  9 18:31 run_fold.py
+-rw-rw-r-- 1 FA006 FA006  8377 Oct  9 18:31 run_fold_morphmae_pretrain.py
+-rw-rw-r-- 1 FA006 FA006 13051 Oct  9 18:31 run_legacy_mist_stability.py
+-rw-rw-r-- 1 FA006 FA006   248 Oct  9 18:31 run_mist_evidence.py
+-rwxrwxr-x 1 FA006 FA006  1452 Oct  9 18:31 run_mist_evidence_dev.sh
+-rw-rw-r-- 1 FA006 FA006 11337 Oct  9 18:31 run_mist_mae_baseline_stability.py
+-rw-rw-r-- 1 FA006 FA006  8511 Oct  9 18:31 run_mist_multifold.py
+-rw-rw-r-- 1 FA006 FA006 12955 Oct  9 18:31 run_mist_stability.py
+-rw-rw-r-- 1 FA006 FA006 11651 Oct  9 18:31 run_morphmae_refined_probe.py
+-rw-rw-r-- 1 FA006 FA006  6666 Oct  9 18:31 run_morphmae_representation_refine.py
+-rw-rw-r-- 1 FA006 FA006 16354 Oct  9 18:31 run_morphmae_transfer_recovery.py
+-rw-rw-r-- 1 FA006 FA006 13451 Oct  9 18:31 run_morphspec_confirmatory_probe.py
+-rw-rw-r-- 1 FA006 FA006 19495 Oct  9 18:31 run_morphspec_downstream_confirm.py
+-rw-rw-r-- 1 FA006 FA006 21860 Oct  9 18:31 run_morphspec_frozen_transfer_confirm.py
+-rw-rw-r-- 1 FA006 FA006 16901 Oct  9 18:31 run_prototype_matched_20fold.py
+-rw-rw-r-- 1 FA006 FA006  5672 Oct  9 18:31 smoke_legacy_wavesleepnet.py
+-rw-rw-r-- 1 FA006 FA006  6756 Oct  9 18:31 smoke_legacy_wavesleepnet_objective.py
+-rw-rw-r-- 1 FA006 FA006  1839 Oct  9 18:31 speed_audit.py

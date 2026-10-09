@@ -1,0 +1,39 @@
+ .gitignore                                         |   3 +
+ configs/data_paths.example.yaml                    |   7 +
+ configs/requirements-transfer-audit.txt            |   5 +
+ docs/DATA_CONTRACT.md                              |  19 +
+ docs/PROVENANCE.md                                 |  22 +
+ docs/TRANSFER_PROTOCOL.md                          |  26 +
+ experiments/registry.yaml                          |  10 +
+ reports/data_audit/P0_FINAL_COPY_PASTE.txt         |  13 +
+ reports/data_audit/p0_provenance.json              | 198 +++++++
+ .../data_audit/session_logs/000_initial_cwd.txt    |   2 +
+ .../session_logs/000_master_plan_read.txt          | 305 ++++++++++
+ .../data_audit/session_logs/001_branch_setup.txt   |   7 +
+ .../session_logs/002_targeted_inspection.txt       | 656 +++++++++++++++++++++
+ .../003_environment_data_preflight.txt             | 305 ++++++++++
+ .../session_logs/004_metadata_dependencies.txt     | 121 ++++
+ .../data_audit/session_logs/005_path_discovery.txt |  17 +
+ .../data_audit/session_logs/006_raw_override.txt   |  26 +
+ .../session_logs/007_p0_implementation.txt         |   1 +
+ .../data_audit/session_logs/007_p0_validation.txt  | 182 ++++++
+ .../data_audit/session_logs/008_raw_headers.txt    |  28 +
+ reports/data_audit/session_logs/009_p0_commit.txt  |   0
+ scripts/transfer_repro_smoke.py                    |  32 +
+ src/mist_transfer/__init__.py                      |   1 +
+ src/mist_transfer/provenance.py                    |  90 +++
+ tests/transfer/test_provenance.py                  |  20 +
+ 25 files changed, 2096 insertions(+)
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'FA006@administrator-Z690-AORUS-ELITE.(none)')

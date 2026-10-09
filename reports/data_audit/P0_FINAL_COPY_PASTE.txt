@@ -1,0 +1,13 @@
+MIST-Transfer v3 P0 COMPLETE (2026-10-09)
+Input HEAD: 3f614e7dc32937d46d997cc747a5d551f43a7f33
+Verified v1 parent: 676963bea58b749d90662d133217fe72c4156981
+Separate worktree, same research branch; main/v2 unchanged.
+26 focused tests PASS (new audit transaction + existing v1 suite).
+CPU-only reproducibility smoke and --resume: bit-identical outputs.
+CLI help PASS. Full environment versions saved in 007_p0_validation.txt.
+No dataset training, preprocessing or GPU job launched.
+P1 preflight: EDF20/EDF78 present; raw default has capitalization error.
+Validated explicit raw-root override: /home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0
+Observed raw inventory preflight: SC 153 pairs, ST 44 pairs.
+SHHS optional, no authorization confirmed, not opened.
+NEXT: implement and run P1 audit only, then STOP for review.
