@@ -1,0 +1,1 @@
+Strict annotation compatibility validator written.

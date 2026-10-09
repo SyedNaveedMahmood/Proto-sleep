@@ -1,0 +1,41 @@
+QUARANTINES [{'recording_id': 'SC4062E0', 'error': 'paired fixed clock or patient/recording fields disagree'}, {'recording_id': 'SC4231E0', 'error': 'paired fixed clock or patient/recording fields disagree'}, {'recording_id': 'SC4362F0', 'error': 'scored annotation extends beyond full physical signal grid'}, {'recording_id': 'SC4742E0', 'error': 'paired fixed clock or patient/recording fields disagree'}]
+SC4062E0 {'hypnogram_sex': 'F', 'psg_sex': 'M', 'spreadsheet': {'age': 31, 'sex': 'F'}, 'cause': 'UNKNOWN; no header repair or automatic identity adjudication', 'proposed_policy': 'quarantine all nights of this SC subject'} None
+SC4231E0 {'hypnogram_sex': 'F', 'psg_sex': 'M', 'spreadsheet': {'age': 50, 'sex': 'F'}, 'cause': 'UNKNOWN; no header repair or automatic identity adjudication', 'proposed_policy': 'quarantine all nights of this SC subject'} None
+SC4362F0 {'hypnogram_sex': 'M', 'psg_sex': 'M', 'spreadsheet': {'age': 51, 'sex': 'M'}, 'cause': 'UNKNOWN; no header repair or automatic identity adjudication', 'proposed_policy': 'quarantine all nights of this SC subject'} None
+SC4742E0 {'hypnogram_sex': 'M', 'psg_sex': 'F', 'spreadsheet': {'age': 92, 'sex': 'M'}, 'cause': 'UNKNOWN; no header repair or automatic identity adjudication', 'proposed_policy': 'quarantine all nights of this SC subject'} None
+SC gate {'data_status': 'VERIFIED', 'p2_eligibility': 'VERIFIED', 'scope': 'raw SC person-quarantined subset only', 'full_78_person_scope_status': 'BLOCKED', 'quarantined_subjects': ['SC:06', 'SC:23', 'SC:36', 'SC:74'], 'eligible_subjects': ['SC:00', 'SC:01', 'SC:02', 'SC:03', 'SC:04', 'SC:05', 'SC:07', 'SC:08', 'SC:09', 'SC:10', 'SC:11', 'SC:12', 'SC:13', 'SC:14', 'SC:15', 'SC:16', 'SC:17', 'SC:18', 'SC:19', 'SC:20', 'SC:21', 'SC:22', 'SC:24', 'SC:25', 'SC:26', 'SC:27', 'SC:28', 'SC:29', 'SC:30', 'SC:31', 'SC:32', 'SC:33', 'SC:34', 'SC:35', 'SC:37', 'SC:38', 'SC:40', 'SC:41', 'SC:42', 'SC:43', 'SC:44', 'SC:45', 'SC:46', 'SC:47', 'SC:48', 'SC:49', 'SC:50', 'SC:51', 'SC:52', 'SC:53', 'SC:54', 'SC:55', 'SC:56', 'SC:57', 'SC:58', 'SC:59', 'SC:60', 'SC:61', 'SC:62', 'SC:63', 'SC:64', 'SC:65', 'SC:66', 'SC:67', 'SC:70', 'SC:71', 'SC:72', 'SC:73', 'SC:75', 'SC:76', 'SC:77', 'SC:80', 'SC:81', 'SC:82'], 'eligible_recordings': ['SC4001E0', 'SC4002E0', 'SC4011E0', 'SC4012E0', 'SC4021E0', 'SC4022E0', 'SC4031E0', 'SC4032E0', 'SC4041E0', 'SC4042E0', 'SC4051E0', 'SC4052E0', 'SC4071E0', 'SC4072E0', 'SC4081E0', 'SC4082E0', 'SC4091E0', 'SC4092E0', 'SC4101E0', 'SC4102E0', 'SC4111E0', 'SC4112E0', 'SC4121E0', 'SC4122E0', 'SC4131E0', 'SC4141E0', 'SC4142E0', 'SC4151E0', 'SC4152E0', 'SC4161E0', 'SC4162E0', 'SC4171E0', 'SC4172E0', 'SC4181E0', 'SC4182E0', 'SC4191E0', 'SC4192E0', 'SC4201E0', 'SC4202E0', 'SC4211E0', 'SC4212E0', 'SC4221E0', 'SC4222E0', 'SC4241E0', 'SC4242E0', 'SC4251E0', 'SC4252E0', 'SC4261F0', 'SC4262F0', 'SC4271F0', 'SC4272F0', 'SC4281G0', 'SC4282G0', 'SC4291G0', 'SC4292G0', 'SC4301E0', 'SC4302E0', 'SC4311E0', 'SC4312E0', 'SC4321E0', 'SC4322E0', 'SC4331F0', 'SC4332F0', 'SC4341F0', 'SC4342F0', 'SC4351F0', 'SC4352F0', 'SC4371F0', 'SC4372F0', 'SC4381F0', 'SC4382F0', 'SC4401E0', 'SC4402E0', 'SC4411E0', 'SC4412E0', 'SC4421E0', 'SC4422E0', 'SC4431E0', 'SC4432E0', 'SC4441E0', 'SC4442E0', 'SC4451F0', 'SC4452F0', 'SC4461F0', 'SC4462F0', 'SC4471F0', 'SC4472F0', 'SC4481F0', 'SC4482F0', 'SC4491G0', 'SC4492G0', 'SC4501E0', 'SC4502E0', 'SC4511E0', 'SC4512E0', 'SC4522E0', 'SC4531E0', 'SC4532E0', 'SC4541F0', 'SC4542F0', 'SC4551F0', 'SC4552F0', 'SC4561F0', 'SC4562F0', 'SC4571F0', 'SC4572F0', 'SC4581G0', 'SC4582G0', 'SC4591G0', 'SC4592G0', 'SC4601E0', 'SC4602E0', 'SC4611E0', 'SC4612E0', 'SC4621E0', 'SC4622E0', 'SC4631E0', 'SC4632E0', 'SC4641E0', 'SC4642E0', 'SC4651E0', 'SC4652E0', 'SC4661E0', 'SC4662E0', 'SC4671G0', 'SC4672G0', 'SC4701E0', 'SC4702E0', 'SC4711E0', 'SC4712E0', 'SC4721E0', 'SC4722E0', 'SC4731E0', 'SC4732E0', 'SC4751E0', 'SC4752E0', 'SC4761E0', 'SC4762E0', 'SC4771G0', 'SC4772G0', 'SC4801G0', 'SC4802G0', 'SC4811G0', 'SC4812G0', 'SC4821G0', 'SC4822G0'], 'experiment_status': 'CONDITIONAL', 'conditions': ['apply prespecified full-recording label-independent inference policy', 'EDF20/78 is same cohort; remove all shared subjects/nights from extension', 'new subject-grouped split guards and P2 acceptance tests before experiments', 'quarantine every night of SC people with unresolved pair demographic disagreement; no demographic adjudication from labels'], 'existing_npz_zero_shot_eligibility': 'BLOCKED', 'eligible_extension_subjects': ['SC:20', 'SC:21', 'SC:22', 'SC:24', 'SC:25', 'SC:26', 'SC:27', 'SC:28', 'SC:29', 'SC:30', 'SC:31', 'SC:32', 'SC:33', 'SC:34', 'SC:35', 'SC:37', 'SC:38', 'SC:40', 'SC:41', 'SC:42', 'SC:43', 'SC:44', 'SC:45', 'SC:46', 'SC:47', 'SC:48', 'SC:49', 'SC:50', 'SC:51', 'SC:52', 'SC:53', 'SC:54', 'SC:55', 'SC:56', 'SC:57', 'SC:58', 'SC:59', 'SC:60', 'SC:61', 'SC:62', 'SC:63', 'SC:64', 'SC:65', 'SC:66', 'SC:67', 'SC:70', 'SC:71', 'SC:72', 'SC:73', 'SC:75', 'SC:76', 'SC:77', 'SC:80', 'SC:81', 'SC:82']}
+ST counts: {'placebo': 22, 'temazepam': 22}
+Scored partial tails: ['ST7072J0', 'ST7081J0', 'ST7171J0', 'ST7172J0', 'ST7201J0']
+Date exception count: 7
+Reference evidence [{'path': '/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb', 'sha256': '1ed9687fa717f7de455af039b059fbe7f5c1c995b4b7865521d0749d353f6a6b', 'role': 'candidate preprocessing reference only; UNKNOWN execution lineage; never executed'}, {'path': '/home/FA006/Desktop/Sleep_dl/edf to NPZ/deepsleepnet/prepare_physionet.py', 'sha256': 'b1ae90a4aa1f462b3fbf2d7343d03604a58ae17b41fea6d4e8c074ebb3285673', 'role': 'candidate preprocessing reference only; UNKNOWN execution lineage; never executed'}]
+Selection totals: {
+  "edf20_npz": {
+    "Wake_retained": 8285,
+    "Wake_excluded": 64106,
+    "N1_retained": 2804,
+    "N1_excluded": 0,
+    "N2_retained": 17799,
+    "N2_excluded": 0,
+    "N3_retained": 5703,
+    "N3_excluded": 0,
+    "REM_retained": 7717,
+    "REM_excluded": 0,
+    "unscored_retained": 0,
+    "unscored_excluded": 966
+  },
+  "edf78_npz": {
+    "Wake_retained": 65951,
+    "Wake_excluded": 219482,
+    "N1_retained": 21522,
+    "N1_excluded": 0,
+    "N2_retained": 69132,
+    "N2_excluded": 0,
+    "N3_retained": 13039,
+    "N3_excluded": 0,
+    "REM_retained": 25835,
+    "REM_excluded": 0,
+    "unscored_retained": 0,
+    "unscored_excluded": 1463
+  }
+}
+Physical vs compressed candidate mismatch: [('edf20_npz', 'SC4092E0'), ('edf78_npz', 'SC4092E0'), ('edf78_npz', 'SC4571F0')]

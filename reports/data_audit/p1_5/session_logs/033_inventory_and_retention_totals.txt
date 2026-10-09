@@ -1,0 +1,209 @@
+Overlap evidence: [
+  {
+    "dataset_a": "edf20_npz",
+    "dataset_b": "edf20_npz",
+    "overlap_subjects": 20,
+    "overlap_recordings": 39,
+    "equal_full_signal_hashes": 39,
+    "raw_waveform_verified_common_recordings": 39,
+    "independent_cohort_comparison": false
+  },
+  {
+    "dataset_a": "edf20_npz",
+    "dataset_b": "edf78_npz",
+    "overlap_subjects": 20,
+    "overlap_recordings": 39,
+    "equal_full_signal_hashes": 39,
+    "raw_waveform_verified_common_recordings": 39,
+    "independent_cohort_comparison": false
+  },
+  {
+    "dataset_a": "edf20_npz",
+    "dataset_b": "raw_sc",
+    "overlap_subjects": 20,
+    "overlap_recordings": 39,
+    "equal_full_signal_hashes": 0,
+    "raw_waveform_verified_common_recordings": 39,
+    "independent_cohort_comparison": null
+  },
+  {
+    "dataset_a": "edf20_npz",
+    "dataset_b": "raw_st",
+    "overlap_subjects": 0,
+    "overlap_recordings": 0,
+    "equal_full_signal_hashes": 0,
+    "raw_waveform_verified_common_recordings": 0,
+    "independent_cohort_comparison": null
+  },
+  {
+    "dataset_a": "edf78_npz",
+    "dataset_b": "edf78_npz",
+    "overlap_subjects": 78,
+    "overlap_recordings": 153,
+    "equal_full_signal_hashes": 153,
+    "raw_waveform_verified_common_recordings": 153,
+    "independent_cohort_comparison": false
+  },
+  {
+    "dataset_a": "edf78_npz",
+    "dataset_b": "raw_sc",
+    "overlap_subjects": 78,
+    "overlap_recordings": 153,
+    "equal_full_signal_hashes": 0,
+    "raw_waveform_verified_common_recordings": 153,
+    "independent_cohort_comparison": null
+  },
+  {
+    "dataset_a": "edf78_npz",
+    "dataset_b": "raw_st",
+    "overlap_subjects": 0,
+    "overlap_recordings": 0,
+    "equal_full_signal_hashes": 0,
+    "raw_waveform_verified_common_recordings": 0,
+    "independent_cohort_comparison": null
+  },
+  {
+    "dataset_a": "raw_sc",
+    "dataset_b": "raw_sc",
+    "overlap_subjects": 78,
+    "overlap_recordings": 153,
+    "equal_full_signal_hashes": 153,
+    "raw_waveform_verified_common_recordings": 153,
+    "independent_cohort_comparison": null
+  },
+  {
+    "dataset_a": "raw_sc",
+    "dataset_b": "raw_st",
+    "overlap_subjects": 0,
+    "overlap_recordings": 0,
+    "equal_full_signal_hashes": 0,
+    "raw_waveform_verified_common_recordings": 0,
+    "independent_cohort_comparison": null
+  },
+  {
+    "dataset_a": "raw_st",
+    "dataset_b": "raw_st",
+    "overlap_subjects": 22,
+    "overlap_recordings": 44,
+    "equal_full_signal_hashes": 0,
+    "raw_waveform_verified_common_recordings": 37,
+    "independent_cohort_comparison": null
+  }
+]
+NPZ record schema: ['study', 'subject_id', 'night', 'pair_id', 'recording_id', 'recording_variant', 'dataset', 'path', 'source_sha256', 'annotation_source', 'annotation_sha256', 'treatment', 'channels', 'duration_seconds', 'start_datetime', 'n_epochs', 'indices_status', 'n_original_full_epochs', 'raw_stage_counts', 'excluded_epoch_ranges', 'annotation_tails', 'partial_signal_tail_seconds', 'nonstage_annotations', 'mapped_stage_counts', 'excluded_epochs', 'signal_sha256', 'shape_sha256']
+RAW SC example: {
+  "study": "SC",
+  "subject_id": "SC:00",
+  "night": 1,
+  "pair_id": "SC4001E",
+  "recording_id": "SC4001E0",
+  "recording_variant": "E",
+  "dataset": "raw_sc",
+  "path": "/home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-cassette/SC4001E0-PSG.edf",
+  "source_sha256": "2b40a18adf76af69a42d6db1f30f31d26b369f6d27ca0050ef30147ef892b131",
+  "annotation_source": "/home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-cassette/SC4001EC-Hypnogram.edf",
+  "annotation_sha256": "a4cf67694ade1b52a0ddd06d5817fd45d2d3e8bac5302f640f3e9cfbbf12a996",
+  "treatment": null,
+  "channels": [
+    {
+      "label": "EEG Fpz-Cz",
+      "dimension": "uV",
+      "sample_frequency": 100.0,
+      "physical_max": 192.0,
+      "physical_min": -192.0,
+      "digital_max": 2047,
+      "digital_min": -2048,
+      "prefilter": "HP:0.5Hz LP:100Hz [enhanced cassette BW]",
+      "transducer": "Ag-AgCl electrodes"
+    },
+    {
+      "label": "EEG Pz-Oz",
+      "dimension": "uV",
+      "sample_frequency": 100.0,
+      "physical_max": 196.0,
+      "physical_min": -197.0,
+      "digital_max": 2047,
+      "digital_min": -2048,
+      "prefilter": "HP:0.5Hz LP:100Hz [enhanced cassette BW]",
+      "transducer": "Ag-AgCl electrodes"
+    },
+    {
+      "label": "EOG horizontal",
+      "dimension": "uV",
+      "sample_frequency": 100.0,
+      "physical_max": 1009.0,
+      "physical_min": -1009.0,
+      "digital_max": 2047,
+      "digital_min": -2048,
+      "prefilter": "HP:0.5Hz LP:100Hz [enhanced cassette BW]",
+      "transducer": "Ag-AgCl electrodes"
+    },
+    {
+      "label": "Resp oro-nasal",
+      "dimension": "",
+      "sample_frequency": 1.0,
+      "physical_max": 2047.0,
+      "physical_min": -2048.0,
+      "digital_max": 2047,
+      "digital_min": -2048,
+      "prefilter": "HP:0.03Hz LP:0.9Hz",
+      "transducer": "Oral-nasal thermistors"
+    },
+    {
+      "label": "EMG submental",
+      "dimension": "uV",
+      "sample_frequency": 1.0,
+      "physical_max": 5.0,
+      "physical_min": -5.0,
+      "digital_max": 2500,
+      "digital_min": -2500,
+      "prefilter": "HP:16Hz Rectification LP:0.7Hz",
+      "transducer": "Ag-AgCl electrodes"
+    },
+    {
+      "label": "Temp rectal",
+      "dimension": "DegC",
+      "sample_frequency": 1.0,
+      "physical_max": 40.0,
+      "physical_min": 34.0,
+      "digital_max": 2731,
+      "digital_min": -2849,
+      "prefilter": "",
+      "transducer": "Rectal thermistor"
+    },
+    {
+      "label": "Event marker",
+      "dimension": "",
+      "sample_frequency": 1.0,
+      "physical_max": 2048.0,
+      "physical_min": -2047.0,
+      "digital_max": 2048,
+      "digital_min": -2047,
+      "prefilter": "Hold during 2 seconds",
+      "transducer": "Marker button"
+    }
+  ],
+  "duration_seconds": 79500.0,
+  "start_datetime": "1989-04-24T16:13:00",
+  "n_epochs": 2650,
+  "indices_status": "original_raw_grid",
+  "n_original_full_epochs": 2650,
+  "annotation_tails": [
+    {
+      "description": "Sleep stage ?",
+      "start_seconds": 79500.0,
+      "stop_seconds": 86400.0,
+      "reason": "outside_full_signal_epochs"
+    }
+  ],
+  "partial_signal_tail_seconds": 0.0,
+  "nonstage_annotations": [],
+  "excluded_epochs": 0,
+  "signal_sha256": "84b6701224602ca536572b52aa44e51ebabe2a18f31c0090c5f8d3b6064a8f3e",
+  "shape_sha256": "e5fc27b3bcd79462211e3534a03addea5360b3c715ea897a52c9d81834831fe4"
+}
+Seven compatibility clocks: [('ST7021J0', '1994-09-20T00:00:30', '1994-09-19', 135, 1020), ('ST7071J0', '1994-07-26T00:01:30', '1994-07-25', 139, 915), ('ST7092J0', '1994-08-23T00:29:30', '1994-08-22', 190, 962), ('ST7131J0', '1994-08-02T00:37:30', '1994-08-01', 89, 922), ('ST7132J0', '1994-08-09T00:31:00', '1994-08-08', 116, 899), ('ST7141J0', '1994-08-02T00:39:00', '1994-08-01', 127, 920), ('ST7142J0', '1994-09-06T00:51:30', '1994-09-05', 91, 917)]
+Scope extension: 55
+Selection count totals:
+edf20_npz {'Wake': {'retained': 8285, 'excluded': 64106}, 'N1': {'retained': 2804, 'excluded': 0}, 'N2': {'retained': 17799, 'excluded': 0}, 'N3': {'retained': 5703, 'excluded': 0}, 'REM': {'retained': 7717, 'excluded': 0}, 'unscored': {'retained': 0, 'excluded': 966}}
+edf78_npz {'Wake': {'retained': 65951, 'excluded': 219482}, 'N1': {'retained': 21522, 'excluded': 0}, 'N2': {'retained': 69132, 'excluded': 0}, 'N3': {'retained': 13039, 'excluded': 0}, 'REM': {'retained': 25835, 'excluded': 0}, 'unscored': {'retained': 0, 'excluded': 1463}}

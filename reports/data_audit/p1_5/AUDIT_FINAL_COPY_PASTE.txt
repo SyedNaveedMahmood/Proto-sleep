@@ -1,0 +1,19 @@
+MIST-Transfer v3 P1.5; STOP FOR REVIEW
+Input code SHA: 2d789c688225b8f3b3beab59a38d4020c3f56586
+Historical P1 FAIL remains immutable. Input hashes unchanged: 594.
+Waveform re-alignments: 0; NPZ arrays reopened: 0.
+Annotation resolutions: {'READERS_AGREE': 186, 'QUARANTINE': 4, 'READ_ONLY_COMPATIBILITY': 7}; quarantines: 4.
+NPZ masks described: 192; candidate matches: {'remove_unscored_then_60_scored_epochs_each_edge': 192, '60_original_epochs_each_edge_then_remove_unscored': 189, 'all_scored_epochs': 1}.
+Manifest: 50/153, 103 unlisted; no listed size conflict.
+Partial bundled index is not a full cohort manifest; author intent UNKNOWN.
+Label-conditioned candidate fit does not prove upstream execution lineage.
+Prespecified evaluation policy: infer on every complete physical epoch before consulting labels; score annotated stages afterwards.
+SC raw P2 eligibility: VERIFIED
+SC -> ST P2 eligibility: CONDITIONAL
+SHHS P2 eligibility: BLOCKED
+Existing trimmed NPZ zero-shot evaluation: BLOCKED.
+Recommended next scope: SC-only raw preprocessing after review; no P2 action taken.
+SC eligible raw subset: 74 subjects / 146 recordings.
+SC quarantined subjects: ['SC:06', 'SC:23', 'SC:36', 'SC:74']
+No models, preprocessing arrays, downloads, target metrics or SHHS access.
+NEXT SINGLE SAFE COMMAND: git status --short --branch

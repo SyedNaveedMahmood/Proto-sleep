@@ -1,0 +1,40 @@
+
+RECORDING ST7011J0 size 6356 header_bytes 512      reserved b'EDF+C                                       ' records/duration/channels b'1       0       1   '
+recording_field b'Startdate 12-JUL-1994 X X X                                                     ' date_time b'12.07.9423.00.00' payload_prefix b'+0\x14\x14\x00+0\x151560\x14Sleep stage W\x14\x00+1560\x1590\x14Sleep stage 1\x14\x00+1650\x15570\x14Sleep stage 2\x14\x00+'
+pyedflib PASS 231
+mne FAIL TypeError("read_annotations() got an unexpected keyword argument 'verbose'")
+
+RECORDING ST7021J0 size 3942 header_bytes 512      reserved b'EDF+C                                       ' records/duration/channels b'1       0       1   '
+recording_field b'Startdate 19-SEP-1994 X X X                                                     ' date_time b'20.09.9400.00.30' payload_prefix b'+0\x14\x14\x00+0\x15630\x14Sleep stage W\x14\x00+630\x15120\x14Sleep stage 1\x14\x00+750\x15180\x14Sleep stage W\x14\x00+93'
+pyedflib FAIL /home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-telemetry/ST7021JM-Hypnogram.edf: the file is not EDF(+) or BDF(+) compliant (EDF+ Recordingfield)
+mne FAIL TypeError("read_annotations() got an unexpected keyword argument 'verbose'")
+
+RECORDING ST7071J0 size 4050 header_bytes 512      reserved b'EDF+C                                       ' records/duration/channels b'1       0       1   '
+recording_field b'Startdate 25-JUL-1994 X X X                                                     ' date_time b'26.07.9400.01.30' payload_prefix b'+0\x14\x14\x00+30\x15750\x14Sleep stage W\x14\x00+780\x15210\x14Sleep stage 1\x14\x00+990\x15690\x14Sleep stage 2\x14\x00+1'
+pyedflib FAIL /home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-telemetry/ST7071JA-Hypnogram.edf: the file is not EDF(+) or BDF(+) compliant (EDF+ Recordingfield)
+mne FAIL TypeError("read_annotations() got an unexpected keyword argument 'verbose'")
+
+RECORDING ST7092J0 size 5332 header_bytes 512      reserved b'EDF+C                                       ' records/duration/channels b'1       0       1   '
+recording_field b'Startdate 22-AUG-1994 X X X                                                     ' date_time b'23.08.9400.29.30' payload_prefix b'+0\x14\x14\x00+0\x15450\x14Sleep stage W\x14\x00+450\x15330\x14Sleep stage 1\x14\x00+780\x1590\x14Sleep stage W\x14\x00+870'
+pyedflib FAIL /home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-telemetry/ST7092JE-Hypnogram.edf: the file is not EDF(+) or BDF(+) compliant (EDF+ Recordingfield)
+mne FAIL TypeError("read_annotations() got an unexpected keyword argument 'verbose'")
+
+RECORDING ST7131J0 size 2792 header_bytes 512      reserved b'EDF+C                                       ' records/duration/channels b'1       0       1   '
+recording_field b'Startdate 01-AUG-1994 X X X                                                     ' date_time b'02.08.9400.37.30' payload_prefix b'+0\x14\x14\x00+30\x15510\x14Sleep stage W\x14\x00+540\x15120\x14Sleep stage 1\x14\x00+660\x15870\x14Sleep stage 2\x14\x00+1'
+pyedflib FAIL /home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-telemetry/ST7131JR-Hypnogram.edf: the file is not EDF(+) or BDF(+) compliant (EDF+ Recordingfield)
+mne FAIL TypeError("read_annotations() got an unexpected keyword argument 'verbose'")
+
+RECORDING ST7132J0 size 3464 header_bytes 512      reserved b'EDF+C                                       ' records/duration/channels b'1       0       1   '
+recording_field b'Startdate 08-AUG-1994 X X X                                                     ' date_time b'09.08.9400.31.00' payload_prefix b'+0\x14\x14\x00+30\x151200\x14Sleep stage W\x14\x00+1230\x15120\x14Sleep stage 1\x14\x00+1350\x15180\x14Sleep stage W\x14'
+pyedflib FAIL /home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-telemetry/ST7132JR-Hypnogram.edf: the file is not EDF(+) or BDF(+) compliant (EDF+ Recordingfield)
+mne FAIL TypeError("read_annotations() got an unexpected keyword argument 'verbose'")
+
+RECORDING ST7141J0 size 3738 header_bytes 512      reserved b'EDF+C                                       ' records/duration/channels b'1       0       1   '
+recording_field b'Startdate 01-AUG-1994 X X X                                                     ' date_time b'02.08.9400.39.00' payload_prefix b'+0\x14\x14\x00+30\x15420\x14Sleep stage W\x14\x00+450\x15150\x14Sleep stage 1\x14\x00+600\x1560\x14Sleep stage W\x14\x00+66'
+pyedflib FAIL /home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-telemetry/ST7141JE-Hypnogram.edf: the file is not EDF(+) or BDF(+) compliant (EDF+ Recordingfield)
+mne FAIL TypeError("read_annotations() got an unexpected keyword argument 'verbose'")
+
+RECORDING ST7142J0 size 2836 header_bytes 512      reserved b'EDF+C                                       ' records/duration/channels b'1       0       1   '
+recording_field b'Startdate 05-SEP-1994 X X X                                                     ' date_time b'06.09.9400.51.30' payload_prefix b'+0\x14\x14\x00+30\x15480\x14Sleep stage W\x14\x00+510\x1530\x14Sleep stage 1\x14\x00+540\x1560\x14Sleep stage W\x14\x00+600'
+pyedflib FAIL /home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-telemetry/ST7142JE-Hypnogram.edf: the file is not EDF(+) or BDF(+) compliant (EDF+ Recordingfield)
+mne FAIL TypeError("read_annotations() got an unexpected keyword argument 'verbose'")

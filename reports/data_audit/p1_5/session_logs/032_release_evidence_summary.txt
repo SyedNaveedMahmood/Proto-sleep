@@ -1,0 +1,290 @@
+Historical inventory: {
+  "edf20_npz": {
+    "recordings": 39,
+    "subjects": 20,
+    "epochs": 42308,
+    "fully_aligned_recordings": 39,
+    "annotation_verified_recordings": 39
+  },
+  "edf78_npz": {
+    "recordings": 153,
+    "subjects": 78,
+    "epochs": 195479,
+    "fully_aligned_recordings": 153,
+    "annotation_verified_recordings": 153
+  },
+  "raw_sc": {
+    "recordings": 153,
+    "subjects": 78,
+    "epochs": 416424,
+    "fully_aligned_recordings": 0,
+    "annotation_verified_recordings": 153
+  },
+  "raw_st": {
+    "recordings": 44,
+    "subjects": 22,
+    "epochs": 45446,
+    "fully_aligned_recordings": 0,
+    "annotation_verified_recordings": 37
+  }
+}
+Historical overlap: ['gate', 'errors', 'blockers', 'warnings', 'paths', 'inventory', 'records', 'overlap_matrix', 'subject_disjoint_partitions', 'public_provenance_checks', 'extra_edf_copies', 'leakage_flags', 'scientific_limits', 'training_performed', 'p2_can_begin', 'provenance', 'signature']
+QUARANTINE: {
+  "study": "SC",
+  "subject_id": "SC:06",
+  "night": 2,
+  "recording_id": "SC4062E0",
+  "path": "/home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-cassette/SC4062E0-PSG.edf",
+  "source_sha256": "1b5e626a290030f334c5e5bf5e31b1960e3d63fdaf9a6c0f1227a3b1a045c328",
+  "annotation_source": "/home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-cassette/SC4062EC-Hypnogram.edf",
+  "annotation_sha256": "2f22cf8744e481f3fcb08b22ed884a7b382f5a7d88fea5a13afb6f526ad55e40",
+  "historical_p1_status": "original_raw_grid",
+  "status": "BLOCKED",
+  "resolution": "QUARANTINE",
+  "error": "paired fixed clock or patient/recording fields disagree",
+  "payload_status": "VERIFIED_DIAGNOSTIC_ONLY",
+  "demographic_conflict": {
+    "hypnogram_patient_field": "X F X Female_31yr",
+    "psg_patient_field": "X M X Male_31yr",
+    "spreadsheet": {
+      "age": 31,
+      "sex": "F"
+    },
+    "cause": "UNKNOWN; no header repair or automatic identity adjudication"
+  },
+  "proposed_policy": "quarantine all nights of this SC subject pending source metadata/extent review",
+  "validation": {
+    "fixed_start_datetime": "1989-05-09T15:55:00",
+    "recording_date": "1989-05-09",
+    "payload_sha256": "f75212b9c9c463e1e041e36020a8d930d03753d4da42b861e6229cce336fc9e0",
+    "profile": "one EDF+C annotation signal / one zero-duration record / full byte consumption",
+    "n_intervals": 98,
+    "original_bytes_modified": false,
+    "n_original_full_epochs": 2830,
+    "raw_stage_counts": {
+      "Sleep stage W": 2007,
+      "Sleep stage 1": 90,
+      "Sleep stage 2": 417,
+      "Sleep stage 3": 96,
+      "Sleep stage 4": 33,
+      "Sleep stage R": 187,
+      "Sleep stage ?": 0
+    },
+    "excluded_epoch_ranges": {},
+    "annotation_tails": [
+      {
+        "description": "Sleep stage ?",
+        "start_seconds": 84900.0,
+        "stop_seconds": 86400.0,
+        "reason": "outside_full_signal_epochs"
+      }
+    ],
+    "partial_signal_tail_seconds": 0.0,
+    "nonstage_annotations": []
+  },
+  "proposed_scope_eligibility": "BLOCKED"
+}
+QUARANTINE: {
+  "study": "SC",
+  "subject_id": "SC:23",
+  "night": 1,
+  "recording_id": "SC4231E0",
+  "path": "/home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-cassette/SC4231E0-PSG.edf",
+  "source_sha256": "d247ea53f0200a8b9ad4d72952f0fed51b512fda11e7e7568ca2be292e0f85fd",
+  "annotation_source": "/home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-cassette/SC4231EJ-Hypnogram.edf",
+  "annotation_sha256": "479e24b8749df0a747183cda96e56370a40fe1f380a67595628544fc674ef412",
+  "historical_p1_status": "original_raw_grid",
+  "status": "BLOCKED",
+  "resolution": "QUARANTINE",
+  "error": "paired fixed clock or patient/recording fields disagree",
+  "payload_status": "VERIFIED_DIAGNOSTIC_ONLY",
+  "demographic_conflict": {
+    "hypnogram_patient_field": "X F X Female_49yr",
+    "psg_patient_field": "X M X Male_49yr",
+    "spreadsheet": {
+      "age": 50,
+      "sex": "F"
+    },
+    "cause": "UNKNOWN; no header repair or automatic identity adjudication"
+  },
+  "proposed_policy": "quarantine all nights of this SC subject pending source metadata/extent review",
+  "validation": {
+    "fixed_start_datetime": "1989-06-28T16:07:00",
+    "recording_date": "1989-06-28",
+    "payload_sha256": "7e8d3a695b4cce701f24bc6acff7c30682cc70c9b7e3b0686969ccc20c989c9e",
+    "profile": "one EDF+C annotation signal / one zero-duration record / full byte consumption",
+    "n_intervals": 112,
+    "original_bytes_modified": false,
+    "n_original_full_epochs": 2746,
+    "raw_stage_counts": {
+      "Sleep stage W": 1966,
+      "Sleep stage 1": 139,
+      "Sleep stage 2": 414,
+      "Sleep stage 3": 12,
+      "Sleep stage R": 212,
+      "Movement time": 3,
+      "Sleep stage ?": 0
+    },
+    "excluded_epoch_ranges": {
+      "movement": [
+        {
+          "array_start": 0,
+          "array_stop": 1,
+          "original_start": 1247,
+          "original_stop": 1248
+        },
+        {
+          "array_start": 1,
+          "array_stop": 2,
+          "original_start": 1390,
+          "original_stop": 1391
+        },
+        {
+          "array_start": 2,
+          "array_stop": 3,
+          "original_start": 1721,
+          "original_stop": 1722
+        }
+      ]
+    },
+    "annotation_tails": [
+      {
+        "description": "Sleep stage ?",
+        "start_seconds": 82380.0,
+        "stop_seconds": 86400.0,
+        "reason": "outside_full_signal_epochs"
+      }
+    ],
+    "partial_signal_tail_seconds": 0.0,
+    "nonstage_annotations": []
+  },
+  "proposed_scope_eligibility": "BLOCKED"
+}
+QUARANTINE: {
+  "study": "SC",
+  "subject_id": "SC:36",
+  "night": 2,
+  "recording_id": "SC4362F0",
+  "path": "/home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-cassette/SC4362F0-PSG.edf",
+  "source_sha256": "e9b67e13606abf693138bad8f236e6781de45100b1cdf9b2ce1745a4eed33a44",
+  "annotation_source": "/home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-cassette/SC4362FC-Hypnogram.edf",
+  "annotation_sha256": "13e4568c76fb57bfab7c4f1ff12081609dbe04947bd850dc728f8e5d6663c2bf",
+  "historical_p1_status": "original_raw_grid",
+  "status": "BLOCKED",
+  "resolution": "QUARANTINE",
+  "error": "scored annotation extends beyond full physical signal grid",
+  "payload_status": "VERIFIED_DIAGNOSTIC_ONLY",
+  "annotation_extent_conflict": {
+    "physical_signal_duration_seconds": 67980.0,
+    "scored_annotation_tails": [
+      {
+        "description": "Sleep stage W",
+        "start_seconds": 67980,
+        "stop_seconds": 83100.0,
+        "reason": "outside_full_signal_epochs"
+      }
+    ],
+    "scored_signal_overhang_seconds": 15120.0,
+    "cause": "UNKNOWN; annotations exceed physically available signal; no signal or annotation extension"
+  },
+  "proposed_policy": "quarantine all nights of this SC subject pending source metadata/extent review",
+  "validation": {
+    "fixed_start_datetime": "1990-06-07T15:27:00",
+    "recording_date": "1990-06-07",
+    "payload_sha256": "187e34cf119568588a828bccc3643fea09da88e5e5a946df3b8ece854ded8058",
+    "profile": "one EDF+C annotation signal / one zero-duration record / full byte consumption",
+    "n_intervals": 87,
+    "original_bytes_modified": false,
+    "n_original_full_epochs": 2266,
+    "raw_stage_counts": {
+      "Sleep stage W": 1598,
+      "Sleep stage 1": 53,
+      "Sleep stage 2": 499,
+      "Sleep stage 3": 48,
+      "Sleep stage R": 68,
+      "Sleep stage ?": 0
+    },
+    "excluded_epoch_ranges": {},
+    "annotation_tails": [
+      {
+        "description": "Sleep stage W",
+        "start_seconds": 67980,
+        "stop_seconds": 83100.0,
+        "reason": "outside_full_signal_epochs"
+      },
+      {
+        "description": "Sleep stage ?",
+        "start_seconds": 83100.0,
+        "stop_seconds": 86400.0,
+        "reason": "outside_full_signal_epochs"
+      }
+    ],
+    "partial_signal_tail_seconds": 0.0,
+    "nonstage_annotations": []
+  },
+  "proposed_scope_eligibility": "BLOCKED"
+}
+QUARANTINE: {
+  "study": "SC",
+  "subject_id": "SC:74",
+  "night": 2,
+  "recording_id": "SC4742E0",
+  "path": "/home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-cassette/SC4742E0-PSG.edf",
+  "source_sha256": "e8ac7e5f918a486b4b50a5f9120bdb6100030d2cc78e543dc515ca93a844b878",
+  "annotation_source": "/home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-cassette/SC4742EC-Hypnogram.edf",
+  "annotation_sha256": "93648f89f3a85afc7b7cdcf2ac538ebd277a9f96be8efab40bc23a6af0b7297a",
+  "historical_p1_status": "original_raw_grid",
+  "status": "BLOCKED",
+  "resolution": "QUARANTINE",
+  "error": "paired fixed clock or patient/recording fields disagree",
+  "payload_status": "VERIFIED_DIAGNOSTIC_ONLY",
+  "demographic_conflict": {
+    "hypnogram_patient_field": "X M X Male_92yr",
+    "psg_patient_field": "X F X Female_92yr",
+    "spreadsheet": {
+      "age": 92,
+      "sex": "M"
+    },
+    "cause": "UNKNOWN; no header repair or automatic identity adjudication"
+  },
+  "proposed_policy": "quarantine all nights of this SC subject pending source metadata/extent review",
+  "validation": {
+    "fixed_start_datetime": "1989-10-10T14:40:00",
+    "recording_date": "1989-10-10",
+    "payload_sha256": "0997c7f699032d49cc606c0cc419927b435b98f11cae9647baef38c77d04c6f4",
+    "profile": "one EDF+C annotation signal / one zero-duration record / full byte consumption",
+    "n_intervals": 86,
+    "original_bytes_modified": false,
+    "n_original_full_epochs": 2650,
+    "raw_stage_counts": {
+      "Sleep stage W": 1895,
+      "Sleep stage 1": 207,
+      "Sleep stage 2": 340,
+      "Sleep stage R": 208,
+      "Sleep stage ?": 0
+    },
+    "excluded_epoch_ranges": {},
+    "annotation_tails": [
+      {
+        "description": "Sleep stage ?",
+        "start_seconds": 79500.0,
+        "stop_seconds": 86400.0,
+        "reason": "outside_full_signal_epochs"
+      }
+    ],
+    "partial_signal_tail_seconds": 0.0,
+    "nonstage_annotations": []
+  },
+  "proposed_scope_eligibility": "BLOCKED"
+}
+SC resolution statuses {'VERIFIED': 149, 'BLOCKED': 4}
+SC proposed scope statuses {'VERIFIED': 146, 'BLOCKED': 7}
+ST resolution statuses {'VERIFIED': 44}
+ST proposed scope statuses {'CONDITIONAL': 44}
+INCOMPLETE_SIGNAL_TAIL: ST7072J0 10.0 [{'description': 'Sleep stage W', 'start_seconds': 27450, 'stop_seconds': 27480.0, 'reason': 'outside_full_signal_epochs'}]
+INCOMPLETE_SIGNAL_TAIL: ST7081J0 20.0 [{'description': 'Sleep stage W', 'start_seconds': 28980, 'stop_seconds': 29010.0, 'reason': 'outside_full_signal_epochs'}]
+INCOMPLETE_SIGNAL_TAIL: ST7171J0 10.0 [{'description': 'Sleep stage W', 'start_seconds': 28920, 'stop_seconds': 28950.0, 'reason': 'outside_full_signal_epochs'}]
+INCOMPLETE_SIGNAL_TAIL: ST7172J0 20.0 [{'description': 'Sleep stage W', 'start_seconds': 30180, 'stop_seconds': 30210.0, 'reason': 'outside_full_signal_epochs'}]
+INCOMPLETE_SIGNAL_TAIL: ST7201J0 20.0 [{'description': 'Sleep stage W', 'start_seconds': 29100, 'stop_seconds': 29130.0, 'reason': 'outside_full_signal_epochs'}]
+Reference SHA evidence: [{'path': '/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb', 'sha256': '1ed9687fa717f7de455af039b059fbe7f5c1c995b4b7865521d0749d353f6a6b', 'role': 'candidate preprocessing reference only; UNKNOWN execution lineage; never executed'}, {'path': '/home/FA006/Desktop/Sleep_dl/edf to NPZ/deepsleepnet/prepare_physionet.py', 'sha256': 'b1ae90a4aa1f462b3fbf2d7343d03604a58ae17b41fea6d4e8c074ebb3285673', 'role': 'candidate preprocessing reference only; UNKNOWN execution lineage; never executed'}]
+Release artifacts: [('revised_audit.json', 1329764), ('FINAL_COPY_PASTE.txt', 1329), ('COMPLETE.json', 947), ('inference_policy.json', 1650), ('selection_analysis.json', 386022), ('provenance.json', 118792), ('manifest_resolution.json', 3087), ('selection_counts.csv', 14068), ('per_recording_resolution.csv', 14625), ('gate_decisions.json', 7178)]

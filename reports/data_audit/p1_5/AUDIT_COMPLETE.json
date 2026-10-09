@@ -1,0 +1,15 @@
+{
+  "signature": "7de9032894e0d8e98c57ac6f1d7b5b3dd82c9d24b8bd683d0e149bb3fbc10f59",
+  "outputs": {
+    "revised_audit.json": "e7e81576802a0ba6fe959842ccaeba8251ba6e024f2e4c7346be63b3785a96b8",
+    "gate_decisions.json": "71773546eca2c8e6cc88e6a91cd5a703861c0e4f746ee1a5731b58263948912b",
+    "inference_policy.json": "ab130efff20156671144ff9bb7ea5bf914e15d2baf91d13f3bc69be90b185c60",
+    "selection_analysis.json": "cc3fb583d42e978f6c97de10462c8e1ac24329a8c7c2c6ec4e17756955e859c2",
+    "manifest_resolution.json": "4247b71d504944e006301574c5f7a2b83c7045cdd9e01f0c09cee77661484ab3",
+    "per_recording_resolution.csv": "e02a8f6b247016bb1d6a16dc3d9a8e9df26696edf78fd4e5de84aee4fef4516f",
+    "selection_counts.csv": "fa45350f273ca2fa8629021e40059cf5a198b3a196b47a8123693e94fa828770",
+    "FINAL_COPY_PASTE.txt": "c2e4a7ed573f9f6d508e3a1412f2a957d99cc939f4df90a161e490e1758539e4"
+  },
+  "gate": "SCOPED_QUARANTINE",
+  "training_performed": false
+}

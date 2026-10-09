@@ -1,0 +1,627 @@
+"""P1.5 blocker resolution from immutable P1 proofs and small annotation files."""
+from __future__ import annotations
+from collections import Counter
+import hashlib
+import json
+from pathlib import Path
+import re
+import zipfile
+import numpy as np
+import mne
+import pyedflib
+import pandas as pd
+from .annotation_compat import paired_annotations, read_annotation_profile, fixed_header
+from .audit import discover
+from .integrity import STAGES, index_runs, validate_indices, annotation_grid
+from .provenance import AuditRun, atomic_json, atomic_csv, atomic_text, fingerprint, sha256_file
+
+
+def verify_reuse(prior, proof_path):
+    """Revalidate hashes once; reuse expensive waveform checks only on identical inputs.
+
+    A locally generated proof permits later invocations to reuse current digests
+    only while device/inode/size/mtime/ctime remain unchanged. It is not an
+    adversarial tamper-proof cache and must remain local/trusted.
+    """
+    expected = prior['provenance']['source_recording_hashes']
+    _, current = discover(prior['provenance']['config'])
+    if set(current) != set(expected):
+        raise ValueError('source inventory changed; new P1 audit required')
+    old = json.loads(proof_path.read_text()) if proof_path.exists() else {}
+    cache = old.get('files', {}) if old.get('prior_signature') == prior['signature'] else {}
+    results, reads = {}, 0
+    for name,digest in sorted(expected.items()):
+        p = Path(name); stat = p.stat()
+        signature = [stat.st_dev,stat.st_ino,stat.st_size,stat.st_mtime_ns,stat.st_ctime_ns]
+        previous = cache.get(name,{})
+        if previous.get('stat') == signature and previous.get('sha256') == digest:
+            actual = digest
+        else:
+            actual = sha256_file(p); reads += 1
+        if actual != digest:
+            raise ValueError('source hash changed; cached waveform proof invalid: '+name)
+        results[name] = {'stat':signature,'sha256':actual}
+    atomic_json({'prior_signature':prior['signature'],'files':results},proof_path)
+    return {'status':'VERIFIED','input_count':len(results),'files_rehashed':reads,
+            'waveform_realignments':0,'npz_arrays_reopened':0,
+            'verified_recording_hashes':dict(expected), 'proof_sha256':sha256_file(proof_path)}
+
+
+def recovered_indices(row):
+    runs = row['original_epoch_runs']
+    cursor, pieces = 0, []
+    for run in runs:
+        if run['array_start'] != cursor or run['array_stop']-cursor != run['original_stop']-run['original_start']:
+            raise ValueError('invalid cached epoch run topology')
+        pieces.append(np.arange(run['original_start'],run['original_stop'],dtype=np.int64))
+        cursor = run['array_stop']
+    idx = validate_indices(np.concatenate(pieces) if pieces else [], row['n_epochs'])
+    digest = hashlib.sha256(idx.astype('<i8').tobytes()).hexdigest()
+    if digest != row['original_epoch_index_sha256']:
+        raise ValueError('cached recovered epoch digest mismatch')
+    return idx
+
+
+def selection_analysis(labels, indices):
+    """Describe measured inclusion and test candidate rules; never certify lineage."""
+    n = len(labels); idx = validate_indices(indices,len(indices))
+    if len(idx) and idx[-1] >= n:
+        raise ValueError('retained original index outside recording')
+    keep = np.zeros(n,dtype=bool); keep[idx] = True
+    if np.any(labels[idx] < 0):
+        raise ValueError('NPZ retains movement/unknown/unannotated epoch')
+    scored = np.flatnonzero(labels >= 0)
+    nonwake = np.flatnonzero(labels[scored] > 0)
+    candidates = {'all_scored_epochs':scored}
+    if len(nonwake):
+        lo,hi = max(0,int(nonwake[0])-60), min(len(scored),int(nonwake[-1])+61)
+        candidates['remove_unscored_then_60_scored_epochs_each_edge'] = scored[lo:hi]
+        physical = np.flatnonzero(labels > 0)
+        candidates['60_original_epochs_each_edge_then_remove_unscored'] = np.flatnonzero(
+            (labels>=0) & (np.arange(n)>=max(0,int(physical[0])-60)) &
+            (np.arange(n)<=min(n-1,int(physical[-1])+60)))
+    counts = {name:{'retained':int(np.sum(keep & (labels==i))),
+                    'excluded':int(np.sum(~keep & (labels==i)))} for i,name in enumerate(STAGES)}
+    counts['unscored'] = {'retained':int(np.sum(keep & (labels<0))), 'excluded':int(np.sum(~keep & (labels<0)))}
+    matches = {name:bool(np.array_equal(idx,want)) for name,want in candidates.items()}
+    return {'observed_mask_status':'VERIFIED','counts_by_stage':counts,
+            'retained_original_epoch_runs':index_runs(idx),
+            'excluded_original_epoch_runs':index_runs(np.flatnonzero(~keep)),
+            'candidate_rule_matches':matches,
+            'label_dependent_candidate_fit':any(v for k,v in matches.items() if k!='all_scored_epochs'),
+            'label_dependence_causal_status':'UNKNOWN; exact match to label-conditioned rule is evidence of compatibility, not execution lineage',
+            'exact_upstream_recipe_status':'UNKNOWN',
+            'zero_shot_evaluation_use':'BLOCKED; retained mask is label-conditioned-compatible; rebuild from raw'}
+
+
+def manifest_analysis(config, archive_path=None):
+    root = Path(config['sleep_edf_78_npz']); path = root/'MANIFEST.TXT'
+    listed = {}
+    for line in path.read_text().splitlines():
+        m = re.fullmatch(r'([^ ]+\.npz) \(application/octet-stream\) (\d+) bytes\.',line)
+        if not m or m[1] in listed:
+            raise ValueError('invalid or duplicate distribution manifest entry')
+        listed[m[1]] = int(m[2])
+    actual = {p.name:p.stat().st_size for p in root.glob('*.npz')}
+    missing = sorted(set(listed)-set(actual))
+    size_conflicts = [k for k in set(listed)&set(actual) if listed[k] != actual[k]]
+    if missing or size_conflicts:
+        raise ValueError('listed manifest files/sizes disagree')
+    result = {'coverage_status':'VERIFIED_PARTIAL_INDEX','listed_files':len(listed),'actual_files':len(actual),
+              'unlisted_files':sorted(set(actual)-set(listed)), 'missing_listed_files':missing,'size_conflicts':size_conflicts,
+              'scope_intent_status':'UNKNOWN; no author statement or generation log available',
+              'manifest_sha256':sha256_file(path),
+              'data_corruption_evidence':False,'source_traceability':'153 NPZ files previously waveform-aligned; re-used only after hash validation'}
+    if archive_path and Path(archive_path).is_file():
+        with zipfile.ZipFile(archive_path) as z:
+            infos = z.infolist(); names=[i.filename for i in infos]
+            if len(names)!=len(set(names)):
+                raise ValueError('duplicate archive member identity')
+            name = root.name+'/MANIFEST.TXT'
+            member = z.getinfo(name)
+            if member.file_size > 100000:
+                raise ValueError('oversized archive manifest')
+            data = z.read(name)  # checks member CRC; never extract patient NPZ payloads
+            members = {Path(i.filename).name:i.file_size for i in infos if i.filename.startswith(root.name+'/') and i.filename.endswith('.npz')}
+            result['archive_evidence'] = {'path':str(Path(archive_path).resolve()),
+                'member_count':len(infos),'edf78_npz_members':len(members),
+                'npz_names_and_uncompressed_sizes_equal_directory':members==actual,
+                'manifest_member_identical':data==path.read_bytes(),
+                'toc_sha256':fingerprint([(i.filename,i.file_size,i.compress_size,i.CRC) for i in infos]),
+                'manifest_member_sha256':hashlib.sha256(data).hexdigest(),
+                'archive_payloads_extracted':False,'archive_npz_content_crc_checked':False}
+            if not result['archive_evidence']['manifest_member_identical'] or members != actual:
+                raise ValueError('adjacent archive does not corroborate directory index/coverage')
+    return result
+
+
+INFERENCE_POLICY = {
+    'status':'PRESPECIFIED_FOR_REVIEW; specification only, no P2 pipeline executed',
+    'channel':'calibrated EEG Fpz-Cz; Pz-Oz only as separately declared montage sensitivity scope',
+    'input_selection':'all complete physical 30-second epochs of each recording; signal duration only',
+    'timing':'retain original_epoch_index and start_seconds = 30 * index plus original fixed clock; no concatenation across records',
+    'partial_tail':'record actual trailing duration/samples; exclude incomplete 30-second tail solely by signal geometry',
+    'annotation_access':'inference epoch enumeration, signal loading and normalization do not consult stage labels',
+    'scoring_mask':'attach W/1/2/3+4/R labels after input enumeration; unknown/movement/unannotated are unscored, not removed from inference',
+    'gaps':'retain scoring/exclusion reasons and original positions; absent signal/discontinuous recording breaks context; scoring-mask gaps do not compress time',
+    'units':'preserve native EEG calibration, fs, units, montage; any conversion/normalization explicit and source-TRAIN fitted only',
+    'identity':'canonical study/person/night/full PSG ID; all nights of person stay in one split; source/annotation SHA256 recorded',
+    'st_clock_policy':'same fixed PSG/hyp clock + patient/recording fields; explicit previous-day Recordingfield exception only after strict TAL/MNE agreement',
+    'prohibited':'no sleep-onset/last-sleep bounds, label-dependent Wake trimming, target-fitted scaling or inferred continuity',
+    'p2_acceptance_required':'synthetic fixtures, differential checks and ten participant-night audits before any model training'}
+
+
+def scope_gates(prior, resolutions, reuse_verified=True):
+    raw = {study:[r for r in resolutions if r['study']==study] for study in ['SC','ST']}
+    # A questionable night excludes every night of that person from the proposed
+    # smallest scope. Annotation decoding and person eligibility are separate.
+    excluded = {r.get('subject_id',r['recording_id']) for r in raw['SC'] if r['status']!='VERIFIED'}
+    eligible = [r for r in raw['SC'] if r['status']=='VERIFIED' and r.get('subject_id',r['recording_id']) not in excluded]
+    sc = reuse_verified and len(raw['SC'])==prior['inventory']['raw_sc']['recordings'] and bool(eligible)
+    st = reuse_verified and len(raw['ST'])==prior['inventory']['raw_st']['recordings'] and all(r['status']=='VERIFIED' for r in raw['ST'])
+    for row in raw['SC']:
+        row['proposed_scope_eligibility']='BLOCKED' if row.get('subject_id',row['recording_id']) in excluded else 'VERIFIED'
+    for row in raw['ST']:
+        row['proposed_scope_eligibility']='CONDITIONAL' if row['status']=='VERIFIED' else 'BLOCKED'
+    extension=set(prior['subject_disjoint_partitions']['edf78_sc_extension_subjects'])-excluded
+    return {
+      'status_vocabulary':{'VERIFIED':'directly validated evidence; scoped to stated measurements',
+                           'CONDITIONAL':'permitted scope only with listed prerequisites',
+                           'BLOCKED':'must not proceed', 'UNKNOWN':'evidence insufficient; no assumption substituted'},
+      'sc_within_cohort':{'data_status':'VERIFIED' if sc else 'BLOCKED',
+          'p2_eligibility':'VERIFIED' if sc else 'BLOCKED', 'scope':'raw SC person-quarantined subset only',
+          'full_78_person_scope_status':'BLOCKED' if excluded else 'VERIFIED',
+          'quarantined_subjects':sorted(excluded),
+          'eligible_subjects':sorted({r.get('subject_id',r['recording_id']) for r in eligible}),
+          'eligible_recordings':sorted(r['recording_id'] for r in eligible),
+          'experiment_status':'CONDITIONAL' if sc else 'BLOCKED',
+          'conditions':['apply prespecified full-recording label-independent inference policy',
+                        'EDF20/78 is same cohort; remove all shared subjects/nights from extension',
+                        'new subject-grouped split guards and P2 acceptance tests before experiments',
+                        'quarantine every night of SC people with unresolved pair demographic disagreement; no demographic adjudication from labels'],
+          'existing_npz_zero_shot_eligibility':'BLOCKED',
+          'eligible_extension_subjects':sorted(extension)},
+      'sc_to_st_proxy':{'data_status':'VERIFIED' if st else 'CONDITIONAL' if any(r['status']=='VERIFIED' for r in raw['ST']) else 'BLOCKED',
+          'p2_eligibility':'CONDITIONAL' if st and sc else 'BLOCKED',
+          'experiment_status':'CONDITIONAL' if st and sc else 'BLOCKED',
+          'conditions':['include explicit validated annotation compatibility path and preserve original malformed header evidence',
+                        'review/accept fixed-clock policy; never shift TAL onsets by 24 hours',
+                        'discard incomplete signal tail by geometry, preserve all original annotation overhang diagnostics',
+                        'freeze ST development/locked-evaluation role before any score; keep participant nights grouped',
+                        'report placebo/temazepam, setting/population confounds and unknown cross-study person linkage',
+                        'complete independent ST P2 fixture and sample differential checks'],
+          'cross_study_person_linkage':'UNKNOWN', 'independent_external_cohort_claim':'BLOCKED',
+          'quarantined_recordings':[r['recording_id'] for r in raw['ST'] if r['status']!='VERIFIED']},
+      'shhs_external':{'data_status':'UNKNOWN','access_authorization':'UNKNOWN','p2_eligibility':'BLOCKED',
+"""Tests for the actual ST midnight header, partial index and retention problems."""
+from pathlib import Path
+from types import SimpleNamespace
+import datetime as dt
+import hashlib
+import json
+import zipfile
+from unittest.mock import patch
+import numpy as np
+import pytest
+from mist_transfer.annotation_compat import (parse_tals, read_annotation_profile, paired_annotations)
+from mist_transfer.p1_5 import (selection_analysis, recovered_indices, manifest_analysis, scope_gates, verify_reuse)
+from mist_transfer.integrity import index_runs
+
+
+def pad(value,n):
+    return str(value).encode('ascii').ljust(n,b' ')
+
+
+def fixture(tmp_path, previous_day=False, study='ST', payload=None):
+    start=dt.datetime(1994,9,20,0,0,30)
+    recording_day=start.date()-dt.timedelta(days=int(previous_day))
+    record='Startdate '+recording_day.strftime('%d-%b-%Y').upper()+' X X X'
+    def header(records,duration):
+        return b'0       '+pad('X X X X',80)+pad(record,80)+start.strftime('%d.%m.%y%H.%M.%S').encode()+pad(512,8)+pad('EDF+C',44)+pad(records,8)+pad(duration,8)+pad(1,4)
+    data=payload if payload is not None else b'+0\x14\x14\x00+30\x1530\x14Sleep stage W\x14\x00+60\x1530\x14Sleep stage R\x14\x00'
+    if len(data)%2:data+=b'\x00'
+    signal=pad('EDF Annotations',16)+b' '*80+b' '*8+pad(0,8)+pad(1,8)+pad(-32768,8)+pad(32767,8)+b' '*80+pad(len(data)//2,8)+b' '*32
+    stem='ST7011J' if study=='ST' else 'SC4001E'
+    hyp=tmp_path/(stem+'P-Hypnogram.edf');psg=tmp_path/(stem+'0-PSG.edf')
+    hyp.write_bytes(header(1,0)+signal+data)
+    psg.write_bytes(header(4,30)+b' '*256)
+    return hyp,psg
+
+
+def test_midnight_compatibility_is_read_only_and_preserves_leading_gap(tmp_path):
+    hyp,psg=fixture(tmp_path,previous_day=True)
+    before=hyp.read_bytes()
+    labels,meta=paired_annotations(hyp,psg,120)
+    assert labels.tolist()==[-1,0,4,-1]
+    assert meta['recording_date_delta_days']==-1
+    assert meta['pyedflib_comparison']['status']=='COMPATIBILITY_REQUIRED'
+    assert meta['mne_comparison']['status']=='VERIFIED'
+    assert meta['fixed_start_datetime']=='1994-09-20T00:00:30'
+    assert meta['excluded_epoch_ranges']['unannotated'][0]['original_start']==0
+    assert hyp.read_bytes()==before and not meta['original_bytes_modified']
+
+
+def test_same_day_control_agrees_with_both_independent_readers(tmp_path):
+    hyp,psg=fixture(tmp_path)
+    labels,meta=paired_annotations(hyp,psg,120)
+    assert meta['pyedflib_comparison']['status']=='VERIFIED'
+    assert labels.tolist()==[-1,0,4,-1]
+
+
+@pytest.mark.parametrize('payload',[
+    b'+0\x14\x14\x00garbage+30\x1530\x14Sleep stage W\x14\x00',
+    b'+0\x14\x14\x00+30\x1530\x14Sleep stage W\x14',
+    b'+0\x14\x14\x00+30\x15-30\x14Sleep stage W\x14\x00',
+    b'+0\x14\x14\x00+30\x1530\x14Sleep stage X\x14\x00',
+    b'+0\x14\x14\x00+30\x1530\x14Sleep stage W\x14\x00\x00HIDDEN',
+    b'+30\x14\x14\x00+30\x1530\x14Sleep stage W\x14\x00',
+])
+def test_malformed_tal_is_not_regex_skipped(payload):
+    with pytest.raises(ValueError):parse_tals(payload)
+
+
+def test_header_size_and_format_and_pairing_are_not_relaxed(tmp_path):
+    hyp,psg=fixture(tmp_path,previous_day=True)
+    source=hyp.read_bytes()
+    hyp.write_bytes(source+b'\x00\x00')
+    with pytest.raises(ValueError,match='payload size'):read_annotation_profile(hyp)
+    hyp.write_bytes(source)
+    p=psg.read_bytes();psg.write_bytes(p[:176]+b'00.01.00'+p[184:])
+    with pytest.raises(ValueError,match='paired fixed clock'):paired_annotations(hyp,psg,120)
+
+
+def test_only_the_documented_st_previous_day_exception_is_permitted(tmp_path):
+    hyp,psg=fixture(tmp_path,previous_day=True,study='SC')
+    with pytest.raises(ValueError,match='unresolved Recordingfield'):paired_annotations(hyp,psg,120)
+    for p in (hyp,psg):
+        b=p.read_bytes();p.write_bytes(b[:98]+b'18-SEP-1994'+b[109:])
+    with pytest.raises(ValueError,match='unresolved Recordingfield'):paired_annotations(hyp,psg,120)
+
+
+def test_reader_disagreement_quarantines_instead_of_selecting_favorable_decoder(tmp_path):
+    hyp,psg=fixture(tmp_path)
+    ann=SimpleNamespace(onset=np.array([30.,60.]),duration=np.array([30.,60.]),
+                        description=np.array(['Sleep stage W','Sleep stage R']),orig_time=None)
+    with patch('mne.read_annotations',return_value=ann):
+        with pytest.raises(ValueError,match='MNE annotation disagreement'):paired_annotations(hyp,psg,120)
+
+
+@pytest.mark.parametrize('onset,duration',[(31,30),(30,31),(90,60)])
+def test_off_grid_and_beyond_signal_stages_fail(tmp_path,onset,duration):
+    data=f'+0\x14\x14\x00+{onset}\x15{duration}\x14Sleep stage W\x14\x00'.encode()
+    hyp,psg=fixture(tmp_path,payload=data)
+    with pytest.raises(ValueError):paired_annotations(hyp,psg,120)
+
+
+def test_selection_analysis_retains_gaps_and_does_not_claim_exact_lineage():
+    labels=np.zeros(250,dtype=int);labels[100:151]=2;labels[110]=-1
+    scored=np.flatnonzero(labels>=0);nw=np.flatnonzero(labels[scored]>0)
+    indices=scored[max(0,nw[0]-60):nw[-1]+61]
+    r=selection_analysis(labels,indices)
+    assert r['candidate_rule_matches']['remove_unscored_then_60_scored_epochs_each_edge']
+    assert len(r['retained_original_epoch_runs'])==2
+    assert r['counts_by_stage']['N2']['excluded']==0
+    assert r['counts_by_stage']['Wake']['excluded']>0
+    assert r['exact_upstream_recipe_status']=='UNKNOWN'
+    assert r['zero_shot_evaluation_use'].startswith('BLOCKED')
+    with pytest.raises(ValueError,match='unknown/unannotated'):selection_analysis(labels,[110])
+
+
+def test_retained_cache_topology_and_digest_are_checked():
+    idx=np.array([1,2,5],dtype=np.int64)
+    row={'original_epoch_runs':index_runs(idx),'n_epochs':3,
+         'original_epoch_index_sha256':hashlib.sha256(idx.astype('<i8').tobytes()).hexdigest()}
+    assert recovered_indices(row).tolist()==idx.tolist()
+    row['original_epoch_index_sha256']='wrong'
+    with pytest.raises(ValueError,match='digest mismatch'):recovered_indices(row)
+
+
+def test_partial_bundled_index_is_not_corruption_or_an_invented_full_manifest(tmp_path):
+    root=tmp_path/'edf78';root.mkdir();a=root/'SC4001E0.npz';b=root/'SC4011E0.npz'
+    a.write_bytes(b'one');b.write_bytes(b'two')
+    text='SC4001E0.npz (application/octet-stream) 3 bytes.\n'
+    (root/'MANIFEST.TXT').write_text(text)
+    archive=tmp_path/'bundle.zip'
+    with zipfile.ZipFile(archive,'w') as z:
+        for p in root.iterdir():z.write(p,root.name+'/'+p.name)
+    r=manifest_analysis({'sleep_edf_78_npz':str(root)},archive)
+    assert r['listed_files']==1 and r['actual_files']==2
+    assert r['archive_evidence']['manifest_member_identical']
+    assert r['unlisted_files']==['SC4011E0.npz'] and not r['data_corruption_evidence']
+    assert r['scope_intent_status'].startswith('UNKNOWN')
+    assert (root/'MANIFEST.TXT').read_text()==text
+    a.write_bytes(b'changed')
+    with pytest.raises(ValueError,match='sizes disagree'):manifest_analysis({'sleep_edf_78_npz':str(root)},archive)
+
+
+def test_cached_waveform_proof_reuse_refuses_changed_inputs(tmp_path):
+    root=tmp_path/'npz';root.mkdir();p=root/'SC4001E0.npz';p.write_bytes(b'synthetic bytes')
+    config={k:str(tmp_path/k) for k in ['sleep_edf_20_npz','sleep_edf_78_npz','sleep_edfx_original_root',
+                  'sleep_edfx_sc_raw','sleep_edfx_st_raw','shhs_nsrr_root_if_approved']}
+    config['sleep_edf_20_npz']=str(root)
+    prior={'signature':'prior','provenance':{'config':config,'source_recording_hashes':{str(p):hashlib.sha256(p.read_bytes()).hexdigest()}}}
+    proof=tmp_path/'proof.json'
+    assert verify_reuse(prior,proof)['files_rehashed']==1
+    with patch('mist_transfer.p1_5.sha256_file',side_effect=lambda path:hashlib.sha256(Path(path).read_bytes()).hexdigest()) as h:
+        assert verify_reuse(prior,proof)['files_rehashed']==0
+        assert all(call.args[0]!=p for call in h.call_args_list)
+    p.write_bytes(b'changed bytes')
+    with pytest.raises(ValueError,match='source hash changed'):verify_reuse(prior,proof)
+
+
+def test_sc_success_never_automatically_approves_st_or_shhs():
+    prior={'inventory':{'raw_sc':{'recordings':1},'raw_st':{'recordings':1}},
+           'subject_disjoint_partitions':{'edf78_sc_extension_subjects':['SC:20']}}
+    r=scope_gates(prior,[{'study':'SC','status':'VERIFIED','recording_id':'SC4001E0'},
+                         {'study':'ST','status':'BLOCKED','recording_id':'ST7011J0'}])
+    assert r['sc_within_cohort']['p2_eligibility']=='VERIFIED'
+    assert r['sc_to_st_proxy']['p2_eligibility']=='BLOCKED'
+    assert r['sc_to_st_proxy']['quarantined_recordings']==['ST7011J0']
+    assert r['shhs_external']['p2_eligibility']=='BLOCKED'
+    assert not r['p2_executed']
+
+
+def test_single_incomplete_signal_tail_is_diagnostic_not_a_fabricated_epoch(tmp_path):
+    payload=b'+0\x14\x14\x00+0\x15150\x14Sleep stage W\x14\x00'
+    hyp,psg=fixture(tmp_path,payload=payload)
+    b=psg.read_bytes();psg.write_bytes(b[:236]+pad(5,8)+pad(25,8)+b[252:])
+    labels,meta=paired_annotations(hyp,psg,125)
+    assert len(labels)==4
+    assert meta['partial_signal_tail_seconds']==5
+    assert meta['scored_tail_status'].startswith('ONE_INCOMPLETE')
+    assert meta['annotation_signal_end_overhang_seconds']==25
+    assert meta['annotation_tails'][0]['stop_seconds']==150
+
+
+def test_anonymous_sex_conflict_is_quarantined_and_all_nights_stay_grouped(tmp_path):
+    hyp,psg=fixture(tmp_path,study='SC')
+    b=hyp.read_bytes();hyp.write_bytes(b[:8]+pad('X F X X',80)+b[88:])
+    with pytest.raises(ValueError,match='patient/recording fields'):paired_annotations(hyp,psg,120)
+    rows=[{'study':'SC','subject_id':'SC:00','recording_id':'SC4001E0','status':'BLOCKED'},
+          {'study':'SC','subject_id':'SC:00','recording_id':'SC4002E0','status':'VERIFIED'},
+          {'study':'SC','subject_id':'SC:01','recording_id':'SC4011E0','status':'VERIFIED'},
+          {'study':'ST','subject_id':'ST:01','recording_id':'ST7011J0','status':'VERIFIED'}]
+    prior={'inventory':{'raw_sc':{'recordings':3},'raw_st':{'recordings':1}},
+           'subject_disjoint_partitions':{'edf78_sc_extension_subjects':['SC:00','SC:01']}}
+    gates=scope_gates(prior,rows)
+    assert gates['sc_within_cohort']['eligible_recordings']==['SC4011E0']
+    assert gates['sc_within_cohort']['quarantined_subjects']==['SC:00']
+    assert rows[1]['proposed_scope_eligibility']=='BLOCKED'
+    assert gates['sc_to_st_proxy']['p2_eligibility']=='CONDITIONAL'
+
+
+def test_derived_equipment_field_difference_is_recorded_without_changing_identity(tmp_path):
+    hyp,psg=fixture(tmp_path,study='SC')
+    b=psg.read_bytes();record=b[88:168].decode().strip();record=record[:-1]+'Polyman'
+    psg.write_bytes(b[:88]+pad(record,80)+b[168:])
+    _,meta=paired_annotations(hyp,psg,120)
+    assert meta['recording_equipment_field_difference']
+    assert meta['pyedflib_comparison']['status']=='VERIFIED'
+"""Strict read-only Sleep-EDF annotation-only EDF+ compatibility validation.
+
+Narrow profile: one zero-duration data record, one EDF Annotations signal.
+An ST previous-day Recordingfield is accepted only when the paired PSG has
+identical fixed clock, patient/recording identification fields and canonical
+night ID, and independently decoded TALs agree. Original bytes are never fixed.
+Spec: https://www.edfplus.info/specs/edfplus.html sections 2.1.3, 2.2.
+"""
+from __future__ import annotations
+import datetime as dt
+import hashlib
+from pathlib import Path
+import re
+import warnings
+import numpy as np
+import mne
+import pyedflib
+from .integrity import STAGE_MAP, annotation_grid, identity
+
+MONTHS = dict(zip('JAN FEB MAR APR MAY JUN JUL AUG SEP OCT NOV DEC'.split(), range(1,13)))
+NUMBER = re.compile(rb'[+-]\d+(?:\.\d+)?')
+DURATION = re.compile(rb'\d+(?:\.\d+)?')
+
+
+def fixed_header(path):
+    with Path(path).open('rb') as f:
+        b = f.read(256)
+    if len(b) != 256 or b[:8] != b'0       ' or any(x < 32 or x > 126 for x in b):
+        raise ValueError('invalid printable EDF fixed header')
+    if not re.fullmatch(rb'\d{2}\.\d{2}\.\d{2}', b[168:176]) or not re.fullmatch(rb'\d{2}\.\d{2}\.\d{2}', b[176:184]):
+        raise ValueError('invalid fixed date/time')
+    day, month, year = map(int, b[168:176].split(b'.'))
+    hour, minute, second = map(int, b[176:184].split(b'.'))
+    start = dt.datetime(1900+year if year >= 85 else 2000+year, month, day, hour, minute, second)
+    return b, start
+
+
+def recording_date(header):
+    fields = header[88:168].decode('ascii').strip().split()
+    if len(fields) < 5 or fields[0] != 'Startdate':
+        raise ValueError('unsupported EDF+ Recordingfield layout')
+    if fields[1] == 'X':
+        return None
+    if not re.fullmatch(r'\d{2}-[A-Z]{3}-\d{4}', fields[1]):
+        raise ValueError('invalid Recordingfield date')
+    day, month, year = fields[1].split('-')
+    if month not in MONTHS:
+        raise ValueError('invalid Recordingfield month')
+    return dt.date(int(year), MONTHS[month], int(day))
+
+
+def parse_tals(payload):
+    """Consume every byte; reject regex-skipped garbage, truncation or hidden TALs."""
+    offset, entries, first = 0, [], True
+    while offset < len(payload):
+        if payload[offset] == 0:
+            if any(payload[offset:]):
+                raise ValueError('nonzero bytes after annotation padding')
+            break
+        end = payload.find(b'\x00', offset)
+        if end < 0:
+            raise ValueError('unterminated TAL')
+        tal = payload[offset:end]
+        offset = end+1
+        if not tal.endswith(b'\x14') or b'\x14' not in tal:
+            raise ValueError('invalid TAL separators')
+        timing, descriptions = tal.split(b'\x14',1)
+        parts = timing.split(b'\x15')
+        if len(parts) not in {1,2} or not NUMBER.fullmatch(parts[0]):
+            raise ValueError('invalid TAL onset')
+        onset = float(parts[0])
+        if not np.isfinite(onset):
+            raise ValueError('nonfinite TAL onset')
+        if first:
+            if onset != 0 or not parts[0].startswith(b'+') or len(parts) != 1 or descriptions != b'\x14':
+                raise ValueError('first TAL must be empty timekeeping at +0')
+            first = False
+            continue
+        if len(parts) != 2 or not DURATION.fullmatch(parts[1]):
+            raise ValueError('stage TAL requires unsigned duration')
+        duration = float(parts[1])
+        if not np.isfinite(duration) or duration <= 0 or onset < 0:
+            raise ValueError('invalid stage TAL interval')
+        texts = descriptions[:-1].split(b'\x14')
+        if len(texts) != 1:
+            raise ValueError('Sleep-EDF profile requires one stage per TAL')
+        text = texts[0].decode('utf-8', errors='strict')
+        if text not in STAGE_MAP:
+            raise ValueError('unknown or nonstage annotation in Sleep-EDF hypnogram')
+        entries.append((onset,duration,text))
+    if first or not entries:
+        raise ValueError('missing timekeeping or sleep annotations')
+    return entries
+
+
+def read_annotation_profile(path):
+    """Decode bounded annotation-only bytes; date conflicts remain unresolved here."""
+    path = Path(path)
+    if path.stat().st_size > (1 << 20):
+        raise ValueError('outside bounded Sleep-EDF annotation profile')
+    header, start = fixed_header(path)
+    b = path.read_bytes()
+    if int(header[184:192]) != 512 or int(header[236:244]) != 1 or int(header[252:256]) != 1:
+        raise ValueError('requires one annotation signal and one data record')
+    if float(header[244:252]) != 0 or header[192:236].strip() != b'EDF+C':
+        raise ValueError('requires contiguous zero-duration annotation-only record')
+    if len(b) < 512 or any(x < 32 or x > 126 for x in b[256:512]):
+        raise ValueError('invalid annotation signal header')
+    sh = b[256:512]
+    if sh[:16].strip() != b'EDF Annotations':
+        raise ValueError('not an EDF Annotations signal')
+    if int(sh[120:128]) != -32768 or int(sh[128:136]) != 32767:
+        raise ValueError('invalid annotation digital bounds')
+    pmin, pmax = float(sh[104:112]), float(sh[112:120])
+    if not np.isfinite([pmin,pmax]).all() or pmin == pmax:
+        raise ValueError('invalid annotation physical bounds')
+    if any(sh[a:z].strip() for a,z in [(16,104),(136,216),(224,256)]):
+        raise ValueError('unsupported annotation transducer/units/prefilter/reserved fields')
+    samples = int(sh[216:224])
+    if samples <= 0 or len(b) != 512+2*samples:
+        raise ValueError('annotation payload size disagrees with header')
+    entries = parse_tals(b[512:])
+    onsets = np.array([x[0] for x in entries]); durations = np.array([x[1] for x in entries])
+    texts = np.array([x[2] for x in entries])
+    meta = {'fixed_start_datetime':start.isoformat(),
+            'recording_date':recording_date(header).isoformat() if recording_date(header) else None,
+            'payload_sha256':hashlib.sha256(b[512:]).hexdigest(),
+            'profile':'one EDF+C annotation signal / one zero-duration record / full byte consumption',
+            'n_intervals':len(entries),'original_bytes_modified':False}
+    return header, start, (onsets,durations,texts), meta
+
+
+def paired_annotations(hyp_path, psg_path, duration_seconds):
+    """Validate profile, clock/identity pairing and exact independent-reader agreement.
+
+    Any exception must lead to explicit quarantine in the calling audit. Reader
+    agreement alone never excuses malformed bytes or an ambiguous 24-hour origin.
+    """
+    h_id, p_id = identity(Path(hyp_path).name,'hyp'), identity(Path(psg_path).name,'psg')
+    if h_id['recording_id'] != p_id['recording_id']:
+        raise ValueError('canonical PSG/hypnogram pairing disagreement')
+    h, start, arrays, meta = read_annotation_profile(hyp_path)
+    p, pstart = fixed_header(psg_path)
+    if start != pstart or h[8:88] != p[8:88]:
+        raise ValueError('paired fixed clock or patient/recording fields disagree')
+    hrec,prec = h[88:168].decode().strip().split(),p[88:168].decode().strip().split()
+    if hrec[:4] != prec[:4]:
+        raise ValueError('paired core recording identification fields disagree')
+    meta['recording_equipment_field_difference'] = hrec[4:] != prec[4:]
+    meta['recording_equipment_note'] = 'derived annotation and PSG equipment/program fields differ; canonical ID, date, investigation/technician fields and patient field agree' if hrec[4:] != prec[4:] else None
+    p_duration = int(p[236:244])*float(p[244:252])
+    if not np.isfinite([p_duration,duration_seconds]).all() or p_duration <= 0 or abs(p_duration-duration_seconds) > 1e-8:
+        raise ValueError('paired PSG duration disagrees with audited recording')
+    date = recording_date(h)
+    delta = (date-start.date()).days if date else None
+    if delta not in {None,0} and not (h_id['study']=='ST' and delta==-1):
+        raise ValueError('unresolved Recordingfield/fixed-date discrepancy')
+    if delta==-1 and h[88:168]!=p[88:168]:
+        raise ValueError('midnight compatibility requires identical recording fields')
+    meta.update(recording_date_delta_days=delta, pairing='canonical ID + equal fixed clock + equal patient/recording fields',
+                timing_origin='paired fixed EDF date/time + TAL onset; no 24-hour adjustment',
+                header_exception='ST previous-day Recordingfield corroborated by paired PSG' if delta==-1 else None)
+    onsets,durations,texts = arrays
+    with warnings.catch_warnings(record=True) as caught:
+        ann = mne.read_annotations(hyp_path)
+    if caught:
+        raise ValueError('independent-reader warnings require review: '+str([str(w.message) for w in caught]))
+    if not (np.array_equal(onsets,ann.onset) and np.array_equal(durations,ann.duration) and np.array_equal(texts,ann.description)):
+        raise ValueError('strict TAL/MNE annotation disagreement')
+    meta['mne_comparison'] = {'status':'VERIFIED','orig_time':str(ann.orig_time),
+                              'warnings':[str(w.message) for w in caught]}
+    strict_error = None
+    try:
+        with pyedflib.EdfReader(str(hyp_path)) as reader:
+            po,pd,pt = reader.readAnnotations()
+            if not (np.array_equal(onsets,po) and np.array_equal(durations,pd) and np.array_equal(texts,pt)):
+                raise ValueError('strict TAL/pyEDFlib annotation disagreement')
+            if reader.getStartdatetime() != start:
+                raise ValueError('pyEDFlib/fixed-clock disagreement')
+    except OSError as exc:
+        strict_error = str(exc)
+        if delta != -1 or 'EDF+ Recordingfield' not in strict_error:
+            raise ValueError('unexpected strict-reader rejection: '+strict_error) from exc
+    meta['pyedflib_comparison'] = {'status':'COMPATIBILITY_REQUIRED' if strict_error else 'VERIFIED',
+                                   'error':strict_error}
+    labels, grid = annotation_grid(onsets,durations,texts,duration_seconds)
+    # Only the single physically incomplete final epoch may have a scored TAL
+    # overhang. Preserve its original interval as diagnostics; never create a
+    # complete signal epoch from it. Longer scored overhang is quarantined.
+    scored_tails=[t for t in grid['annotation_tails'] if t['description'] not in {'Sleep stage ?','Movement time','Sleep stage M'}]
+    for tail in scored_tails:
+        if grid['partial_signal_tail_seconds'] <= 0 or tail['stop_seconds'] > (len(labels)+1)*30:
+            raise ValueError('scored annotation extends beyond full physical signal grid')
+    meta['scored_tail_status'] = 'ONE_INCOMPLETE_SIGNAL_EPOCH; diagnostic only, no inference/scoring epoch' if scored_tails else 'NONE'
+    meta['annotation_signal_end_overhang_seconds'] = max(0,float(max(onsets+durations))-duration_seconds)
+    return labels, {**meta, **grid}
+#!/usr/bin/env python
+"""P1.5 read-only blocker resolution, reusing hash-validated P1 waveform proofs."""
+import argparse
+import json
+from pathlib import Path
+import sys
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'src'))
+from mist_transfer.p1_5 import resolve
+from mist_transfer.provenance import git_info, environment
+
+
+def main():
+    p=argparse.ArgumentParser(description=__doc__)
+    p.add_argument('--prior-audit',type=Path,default=Path('reports/data_audit/audit.json'))
+    p.add_argument('--output-dir',type=Path,default=Path('mist_transfer_runs/p1_5'))
+    p.add_argument('--archive',type=Path,help='Optional adjacent archive; read directory and tiny manifest only')
+    p.add_argument('--reference',type=Path,action='append',default=[],help='Hash-only local candidate code reference; never executed')
+    p.add_argument('--seed',type=int,default=123)
+    p.add_argument('--resume',action='store_true')
+    p.add_argument('--dry-run',action='store_true')
+    a=p.parse_args()
+    if a.dry_run:
+        print(json.dumps({'git':git_info(),'environment':environment(),'prior_audit':str(a.prior_audit),
+                         'output_dir':str(a.output_dir),'seed':a.seed,'split_ids':{},'training':False,
+                         'preprocessing':False,'waveform_realignments':0},indent=2))
+        return 0
+    return resolve(a.prior_audit,a.output_dir,a.archive,a.seed,a.resume,a.reference)
+
+if __name__=='__main__':
+    raise SystemExit(main())
+## research/mist-transfer-v3-edf-shhs...origin/research/mist-transfer-v3-edf-shhs [ahead 1]
+?? reports/data_audit/p1_5/

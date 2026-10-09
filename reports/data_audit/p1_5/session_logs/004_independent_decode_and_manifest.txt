@@ -1,0 +1,30 @@
+
+RECORDING ST7011J0 PSG datetime b'12.07.9423.00.00' PSG recording date b'Startdate 12-JUL-1994 X X X                                                     ' P1 start 1994-07-12T23:00:00
+MNE 231 orig_time None first3 [(0.0, 1560.0, 'Sleep stage W'), (1560.0, 90.0, 'Sleep stage 1'), (1650.0, 570.0, 'Sleep stage 2')] end 32760.0 warnings []
+
+RECORDING ST7021J0 PSG datetime b'20.09.9400.00.30' PSG recording date b'Startdate 19-SEP-1994 X X X                                                     ' P1 start 1994-09-20T00:00:30
+MNE 135 orig_time None first3 [(0.0, 630.0, 'Sleep stage W'), (630.0, 120.0, 'Sleep stage 1'), (750.0, 180.0, 'Sleep stage W')] end 27600.0 warnings []
+
+RECORDING ST7071J0 PSG datetime b'26.07.9400.01.30' PSG recording date b'Startdate 25-JUL-1994 X X X                                                     ' P1 start 1994-07-26T00:01:30
+MNE 139 orig_time None first3 [(30.0, 750.0, 'Sleep stage W'), (780.0, 210.0, 'Sleep stage 1'), (990.0, 690.0, 'Sleep stage 2')] end 24660.0 warnings []
+
+RECORDING ST7092J0 PSG datetime b'23.08.9400.29.30' PSG recording date b'Startdate 22-AUG-1994 X X X                                                     ' P1 start 1994-08-23T00:29:30
+MNE 190 orig_time None first3 [(0.0, 450.0, 'Sleep stage W'), (450.0, 330.0, 'Sleep stage 1'), (780.0, 90.0, 'Sleep stage W')] end 27690.0 warnings []
+
+RECORDING ST7131J0 PSG datetime b'02.08.9400.37.30' PSG recording date b'Startdate 01-AUG-1994 X X X                                                     ' P1 start 1994-08-02T00:37:30
+MNE 89 orig_time None first3 [(30.0, 510.0, 'Sleep stage W'), (540.0, 120.0, 'Sleep stage 1'), (660.0, 870.0, 'Sleep stage 2')] end 25800.0 warnings []
+
+RECORDING ST7132J0 PSG datetime b'09.08.9400.31.00' PSG recording date b'Startdate 08-AUG-1994 X X X                                                     ' P1 start 1994-08-09T00:31:00
+MNE 116 orig_time None first3 [(30.0, 1200.0, 'Sleep stage W'), (1230.0, 120.0, 'Sleep stage 1'), (1350.0, 180.0, 'Sleep stage W')] end 25590.0 warnings []
+
+RECORDING ST7141J0 PSG datetime b'02.08.9400.39.00' PSG recording date b'Startdate 01-AUG-1994 X X X                                                     ' P1 start 1994-08-02T00:39:00
+MNE 127 orig_time None first3 [(30.0, 420.0, 'Sleep stage W'), (450.0, 150.0, 'Sleep stage 1'), (600.0, 60.0, 'Sleep stage W')] end 25890.0 warnings []
+
+RECORDING ST7142J0 PSG datetime b'06.09.9400.51.30' PSG recording date b'Startdate 05-SEP-1994 X X X                                                     ' P1 start 1994-09-06T00:51:30
+MNE 91 orig_time None first3 [(30.0, 480.0, 'Sleep stage W'), (510.0, 30.0, 'Sleep stage 1'), (540.0, 60.0, 'Sleep stage W')] end 26490.0 warnings []
+
+MANIFEST first/last lines: ['SC4721E0.npz (application/octet-stream) 12380118 bytes.', 'SC4762E0.npz (application/octet-stream) 31958642 bytes.', 'SC4742E0.npz (application/octet-stream) 12764257 bytes.', 'SC4522E0.npz (application/octet-stream) 11971982 bytes.'] ['SC4652E0.npz (application/octet-stream) 23159723 bytes.', 'SC4731E0.npz (application/octet-stream) 32018671 bytes.', 'SC4611E0.npz (application/octet-stream) 19834608 bytes.', 'SC4552F0.npz (application/octet-stream) 13088354 bytes.']
+stat manifest 2850 1735401018000000000
+manifest subject ids [52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 70, 71, 72, 73, 74, 75, 76, 77, 80, 81]
+metadata siblings ['MANIFEST.TXT']
+preprocessing reference directory /home/FA006/Desktop/Sleep_dl/edf to NPZ ['deepsleepnet', 'dhedfreader.py', '__pycache__', 'processor.ipynb']

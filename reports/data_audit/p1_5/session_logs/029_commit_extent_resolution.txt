@@ -1,0 +1,9 @@
+ docs/DATA_CONTRACT.md                  | 10 +++++++++-
+ docs/PROVENANCE.md                     |  4 +++-
+ src/mist_transfer/annotation_compat.py |  5 +++++
+ src/mist_transfer/p1_5.py              | 35 ++++++++++++++++++++++++++--------
+ tests/transfer/test_p1_5.py            | 19 ++++++++++++++++--
+ 5 files changed, 61 insertions(+), 12 deletions(-)
+[research/mist-transfer-v3-edf-shhs 2d789c6] P1.5: quarantine scored annotation extent conflicts without metadata repair
+ 5 files changed, 61 insertions(+), 12 deletions(-)
+2d789c688225b8f3b3beab59a38d4020c3f56586

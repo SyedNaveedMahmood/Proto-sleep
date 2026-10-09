@@ -1,0 +1,12 @@
+Published source digests, 197 recording rows, 7 ST resolution rows, 192 retention rows: VERIFIED.
+Public report/log files: 49 bytes: 2102910
+Original P1 gate retained; P2 not executed; file allowlist and credential-pattern checks passed.
+Historical report diff: (unchanged)
+## research/mist-transfer-v3-edf-shhs...origin/research/mist-transfer-v3-edf-shhs [ahead 2]
+ M docs/PROVENANCE.md
+ M docs/TRANSFER_PROTOCOL.md
+ M experiments/registry.yaml
+?? reports/data_audit/p1_5/
+2d789c6 P1.5: quarantine scored annotation extent conflicts without metadata repair
+d4c7775 P1.5: validate ST annotation compatibility and scope audit resolution
+f86ac39 P1: publish measured EDF overlap audit and unresolved data gates

@@ -1,0 +1,5 @@
+Kept ST compatibility exception narrow; full SC cohort blocked until demographic discrepancies reviewed.
+P1.5 contract/provenance documentation updated; original P1 evidence untouched.
+........................................................................ [ 84%]
+.............                                                            [100%]
+85 passed in 4.10s

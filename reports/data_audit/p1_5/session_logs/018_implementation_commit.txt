@@ -1,0 +1,13 @@
+ docs/DATA_CONTRACT.md                  |  44 +++++
+ docs/PROVENANCE.md                     |  28 +++
+ scripts/resolve_transfer_audit.py      |  30 +++
+ src/mist_transfer/annotation_compat.py | 196 +++++++++++++++++++
+ src/mist_transfer/p1_5.py              | 336 +++++++++++++++++++++++++++++++++
+ tests/transfer/test_p1_5.py            | 204 ++++++++++++++++++++
+ 6 files changed, 838 insertions(+)
+[research/mist-transfer-v3-edf-shhs d4c7775] P1.5: validate ST annotation compatibility and scope audit resolution
+ 6 files changed, 838 insertions(+)
+ create mode 100644 scripts/resolve_transfer_audit.py
+ create mode 100644 src/mist_transfer/annotation_compat.py
+ create mode 100644 src/mist_transfer/p1_5.py
+ create mode 100644 tests/transfer/test_p1_5.py

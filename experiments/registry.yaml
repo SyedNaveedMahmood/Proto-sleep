@@ -1,6 +1,6 @@
 version: 1
 project: MIST-Transfer-v3
-scope: P0-P1-only
+scope: P0-P1-plus-authorized-P1.5-only
 experiments: []
 phases:
   P0:
@@ -15,3 +15,23 @@ phases:
     console_log: reports/data_audit/session_logs/029_p1_final_audit.txt
     gate: FAIL
     p2_authorized: false
+  P1.5:
+    status: completed_scoped_quarantine_stop_for_review
+    implementation_commits:
+      - d4c7775919042d5dec19d626968f5085ad93109a
+      - 2d789c688225b8f3b3beab59a38d4020c3f56586
+    audit: reports/data_audit/p1_5/revised_audit.json
+    validation: reports/data_audit/p1_5/validation.json
+    scope_gates: reports/data_audit/p1_5/gate_decisions.json
+    summary: reports/data_audit/p1_5/FINAL_COPY_PASTE.txt
+    console_log: reports/data_audit/p1_5/session_logs/030_release_resolution_audit.txt
+    historical_p1_gate: FAIL
+    sc_raw_subset_p2_data_eligibility: VERIFIED
+    sc_eligible_people: 74
+    sc_eligible_recordings: 146
+    sc_full_cohort_eligibility: BLOCKED
+    existing_trimmed_npz_zero_shot_eligibility: BLOCKED
+    sc_to_st_p2_eligibility: CONDITIONAL
+    shhs_p2_eligibility: BLOCKED
+    p2_authorized: false
+    p2_executed: false

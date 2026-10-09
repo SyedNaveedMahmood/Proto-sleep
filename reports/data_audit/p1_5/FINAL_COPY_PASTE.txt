@@ -1,0 +1,39 @@
+MIST-Transfer v3 P1.5 — STOP FOR REVIEW (2026-10-09)
+Branch: research/mist-transfer-v3-edf-shhs
+Audited implementation: 2d789c688225b8f3b3beab59a38d4020c3f56586
+Initial P1.5 implementation: d4c7775919042d5dec19d626968f5085ad93109a
+Historical P1 report commit: f86ac39863cf8c0c40faff105db824206b69b497; historical FAIL remains unchanged.
+
+INVENTORY AND REUSE
+EDF-20: 20 SC people, 39 NPZ recordings, 42,308 retained epochs.
+EDF-78: 78 SC people, 153 NPZ recordings, 195,479 retained epochs.
+Original SC: 78 people, 153 PSG/hypnogram pairs, 416,424 complete physical epochs.
+Original ST: 22 people, 44 pairs, 45,446 complete physical epochs (22 placebo, 22 temazepam nights).
+EDF-20/78 overlap: 20 people and 39 recordings, with 39 identical full-signal hashes. These are the same SC cohort, never independent cross-dataset transfer.
+594 unchanged P1 input hashes support reuse of all 192 complete NPZ/raw waveform alignments. No waveform realignment or NPZ array reload. Both audited EEG montages are 100 Hz/uV; native calibration and all channels remain in P1 inventory.
+
+ANNOTATION RESOLUTION
+Seven checksum-valid ST hypnograms decoded strictly read-only: ST7021J0, ST7071J0, ST7092J0, ST7131J0, ST7132J0, ST7141J0, ST7142J0.
+EDF+ Recordingfield date is the previous day; fixed clock, patient and full Recordingfield match paired PSG. Full TAL byte consumption and exact MNE agreement verify onset/duration/stages; pyEDFlib controls agree on compliant files. No 24-hour shift or file repair. Leading unannotated epochs remain explicit.
+All 44 ST pairs are annotation-verified; none quarantined. Five single incomplete signal tails are excluded solely by geometry, with original annotation overhangs preserved.
+Four SC recordings are BLOCKED: SC4062E0, SC4231E0, SC4742E0 have conflicting PSG/hypnogram demographics; SC4362F0 has scored Wake extending 15,120 seconds beyond its 67,980-second signal. Causes UNKNOWN. Quarantine every available night of people 06, 23, 36, 74: seven recordings total. Do not correct headers or extrapolate signal.
+
+MANIFEST AND RETENTION
+EDF-78 MANIFEST lists 50/153; 103 unlisted. No listed file/size mismatch. Adjacent archive contains all 153 names/sizes and the identical partial manifest. Archive evidence is central-directory/manifest CRC only, not a whole-archive payload audit. This is incomplete index coverage, not evidence of local NPZ corruption; author intent UNKNOWN.
+All 192 retained masks exactly match dropping unscored epochs then keeping first/last non-Wake plus 60 scored epochs each side. Physical-index margin fits only 189. Exact producer/execution lineage and causal label use remain UNKNOWN, despite matching local candidate code.
+All mapped non-Wake epochs are retained. EDF-20 excludes 64,106 Wake + 966 unscored epochs; EDF-78 excludes 219,482 Wake + 1,463 unscored epochs. These totals include quarantined recordings for diagnostics only.
+Existing trimmed NPZ zero-shot evaluation: BLOCKED. Prespecified rebuild: enumerate every complete physical 30-second raw epoch without labels; attach annotations/scoring masks afterwards; preserve unscored positions, original indices, clock, gaps, record boundaries, calibration, montage and source/annotation hashes. Fit normalization on source TRAIN only.
+
+SCOPED GATES (eligibility is not execution authorization)
+SC-only raw P2 data eligibility: VERIFIED for 74 people/146 recordings. Full 78-person scope BLOCKED. Eligible EDF-20 subset: 19 people/37 recordings; person-disjoint extension: 55 people/109 recordings. Subject-grouped splits and P2 acceptance tests still required; never select models on test people.
+SC-to-ST P2 eligibility: CONDITIONAL; accept the fixed-clock compatibility policy separately, implement/test it in P2, freeze participant-level development/evaluation roles before scores, and preserve treatment/population/setting confounds. Cross-study person linkage UNKNOWN; independent external-cohort claim BLOCKED.
+SHHS: authorization/data UNKNOWN; P2 and external-transfer experiments BLOCKED. No SHHS data opened or downloaded.
+Experiment eligibility remains CONDITIONAL for SC/ST; no models, target scores or morphology/novelty/SOTA claims.
+
+VALIDATION AND NEXT ACTION
+Focused P1.5 tests: 23 passed. Relevant regression: 92 passed, zero failures in final runs.
+Audit exit 2 is intentional: source conflicts remain explicitly quarantined; there is no blanket scientific PASS.
+Original P1 reports/logs are byte-identical to f86ac39. Complete terminal logs: session_logs/*.txt. Source artifact digests and test commands: validation.json; full per-recording evidence: revised_audit.json and per_recording_resolution.csv.
+Remaining unknowns: four SC conflict causes, manifest authorship/intent, exact NPZ producer, SC/ST person linkage, SHHS access/usability. Quarantine may change age/sex composition; report exclusions before experiments.
+Recommend review of SC-only raw preprocessing scope first. P2 not executed or automatically started. Future external-cohort zero-shot endpoint remains untested.
+NEXT SINGLE SAFE COMMAND: git status --short --branch

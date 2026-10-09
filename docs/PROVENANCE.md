@@ -75,3 +75,21 @@ EDF+ normative reference (header and TAL grammar):
 https://www.edfplus.info/specs/edfplus.html . These rules permit zero record
 duration for annotation-only files, prescribe timestamped annotation lists, and
 separate the fixed clock from the EDF+ descriptive recording identification.
+
+Published P1.5 audit implementation: `2d789c688225b8f3b3beab59a38d4020c3f56586`
+(initial compatibility resolver: `d4c7775919042d5dec19d626968f5085ad93109a`).
+Release validation: 23 focused P1.5 tests and 92 relevant regression tests pass.
+The read-only audit intentionally exits 2 for four unresolved SC recording
+conflicts; person-level quarantine removes seven nights. All 47 historical P1
+report/log files were checked byte-for-byte against `f86ac39` before publication.
+No P2, recording-data training, GPU job or SHHS access occurred.
+
+All P1.5 audit JSON/CSV files and `AUDIT_FINAL_COPY_PASTE.txt` are byte-exact run
+outputs. `AUDIT_COMPLETE.json` preserves the original completion digests, with
+its `FINAL_COPY_PASTE.txt` entry mapped to `AUDIT_FINAL_COPY_PASTE.txt`.
+The expanded `FINAL_COPY_PASTE.txt` and `REVISED_AUDIT.txt` are session reports;
+they are not claimed as unchanged source outputs. `validation.json` records the
+artifact map, exact test commands and historical byte checks. Audit and test
+terminal output is preserved in `reports/data_audit/p1_5/session_logs/*.txt`;
+commit/push verification output remains in the ignored local run directory to
+avoid changing a committed report merely to record its own publication SHA.

@@ -1,0 +1,4 @@
+SC4362F0 physical duration 67980.0 full epochs 2266 partial signal tail 0.0
+Original annotation tails [{'description': 'Sleep stage W', 'start_seconds': 67980, 'stop_seconds': 83100.0, 'reason': 'outside_full_signal_epochs'}, {'description': 'Sleep stage ?', 'start_seconds': 83100.0, 'stop_seconds': 86400.0, 'reason': 'outside_full_signal_epochs'}]
+PSG equipment program difference: original PSG Polyman, annotation X; shared fixed clock, core recording fields, patient field.
+Sheet sex evidence is preserved verbatim; it does not establish the cause of the three conflicting header demographics.

@@ -1,0 +1,58 @@
+{
+  "phase": "P1.5",
+  "historical_publication_commit": "f86ac39863cf8c0c40faff105db824206b69b497",
+  "implementation_commits": [
+    "d4c7775919042d5dec19d626968f5085ad93109a",
+    "2d789c688225b8f3b3beab59a38d4020c3f56586"
+  ],
+  "audited_code_commit": "2d789c688225b8f3b3beab59a38d4020c3f56586",
+  "audit_signature": "7de9032894e0d8e98c57ac6f1d7b5b3dd82c9d24b8bd683d0e149bb3fbc10f59",
+  "historical_audit_sha256": "0eb2cfa8e83bd0e5700b6c8c79cd967eb45ea6d50d62a821a27575bcfa0b1aa3",
+  "historical_p1_artifacts_byte_identical": true,
+  "historical_artifacts_checked": 47,
+  "focused_tests": {
+    "passed": 23,
+    "failed": 0,
+    "command": "PYTHONPATH=src .venv/bin/python -m pytest -q tests/transfer/test_p1_5.py",
+    "log": "session_logs/024_focused_resolution_tests.txt"
+  },
+  "regression": {
+    "passed": 92,
+    "failed": 0,
+    "command": "PYTHONPATH=src .venv/bin/python -m pytest tests/transfer tests/evidence tests/test_mist_checkpoint.py tests/test_mist_multifold.py -ra",
+    "log": "session_logs/028_final_relevant_regression.txt"
+  },
+  "audit_exit_code": 2,
+  "audit_exit_reason": "four genuine SC recording integrity conflicts retained; person-level scoped quarantine, not a universal PASS",
+  "revalidated_p1_input_hashes": 594,
+  "release_files_rehashed": 0,
+  "waveform_realignments": 0,
+  "npz_arrays_reopened": 0,
+  "original_data_modified": false,
+  "dataset_preprocessing_executed": false,
+  "dataset_training_performed": false,
+  "gpu_training_performed": false,
+  "shhs_accessed": false,
+  "scope_eligibility": {
+    "sc_within_cohort": "VERIFIED",
+    "sc_to_st_proxy": "CONDITIONAL",
+    "shhs_external": "BLOCKED"
+  },
+  "initial_validation_corrections": "Earlier synthetic expectation correction and two resumed-shell test invocation errors were corrected; preserved logs contain their complete output.",
+  "output_digest_verification": {
+    "revised_audit.json": "e7e81576802a0ba6fe959842ccaeba8251ba6e024f2e4c7346be63b3785a96b8",
+    "gate_decisions.json": "71773546eca2c8e6cc88e6a91cd5a703861c0e4f746ee1a5731b58263948912b",
+    "inference_policy.json": "ab130efff20156671144ff9bb7ea5bf914e15d2baf91d13f3bc69be90b185c60",
+    "selection_analysis.json": "cc3fb583d42e978f6c97de10462c8e1ac24329a8c7c2c6ec4e17756955e859c2",
+    "manifest_resolution.json": "4247b71d504944e006301574c5f7a2b83c7045cdd9e01f0c09cee77661484ab3",
+    "per_recording_resolution.csv": "e02a8f6b247016bb1d6a16dc3d9a8e9df26696edf78fd4e5de84aee4fef4516f",
+    "selection_counts.csv": "fa45350f273ca2fa8629021e40059cf5a198b3a196b47a8123693e94fa828770",
+    "FINAL_COPY_PASTE.txt": "c2e4a7ed573f9f6d508e3a1412f2a957d99cc939f4df90a161e490e1758539e4"
+  },
+  "run_output_mapping": {
+    "FINAL_COPY_PASTE.txt": "AUDIT_FINAL_COPY_PASTE.txt",
+    "COMPLETE.json": "AUDIT_COMPLETE.json"
+  },
+  "publication_note": "AUDIT_FINAL_COPY_PASTE and all audit JSON/CSV outputs are byte-exact run artifacts. FINAL_COPY_PASTE and REVISED_AUDIT add session findings; the original run marker does not claim their digests.",
+  "synthetic_regression_note": "Existing v1 checkpoint tests include tiny CPU synthetic optimizer steps; no recording data or GPU training."
+}

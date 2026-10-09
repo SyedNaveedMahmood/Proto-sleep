@@ -1,0 +1,620 @@
+# Data integrity contract (P0/P1)
+
+The future output contract is 30 s, one EEG, 100 Hz, 3000 samples and
+Wake/N1/N2/N3/REM = 0/1/2/3/4. Raw input properties must be measured.
+Sleep-EDF R&K 3 and 4 merge into N3; Movement and unknown are excluded with
+original positions retained. Annotation gaps are retained, never compressed.
+
+Canonical identity includes study, participant, night and full PSG recording ID.
+SC4ssN (observed E/F/G recording variants) and ST7ssN (J) are distinct naming schemes and study namespaces. Filename
+identity is checked against paired raw data and public provenance inputs; it
+alone cannot certify absence of signal duplication. Reject ambiguous mappings.
+Do not unpickle NPZ object headers. Units of normalized NPZ remain unknown until
+raw alignment and the conversion are verified. Label-code semantics cannot be
+established from integer values alone. A verified sample is not a full-epoch
+provenance reconstruction; unknown original indices forbid temporal models.
+
+Default paths are user-reported. CLI/env overrides are explicit and recorded.
+SHHS data are not opened without separately confirmed authorization; access
+and metadata usability remain optional blockers to an external-cohort claim.
+
+An optional NPZ MANIFEST.TXT may describe a partial download. Missing listed files
+or changed listed sizes are integrity errors. Unlisted NPZ files are explicitly
+unknown distribution provenance and block acceptance pending review; their
+waveforms may still be checked read-only against checksum-verified raw sources.
+# MIST-Transfer v3 provenance
+
+Authoritative scope: root `next_plan.md`, P0/P1 only, 2026-10-09.
+
+Verified v1 parent: `676963bea58b749d90662d133217fe72c4156981`.
+Initial research branch HEAD: `3f614e7` (master plan added above that parent).
+Development uses a separate worktree on `research/mist-transfer-v3-edf-shhs`.
+Main and the v2 comparator remain untouched. No running job was interrupted.
+
+Reuse inspected: v1 file/config SHA256, atomic JSON, selective train/validation
+access, gap handling, actual training waveform-anchor provenance, additive
+explanation numerical checks, and safe checkpoint completion/resume tests.
+P0/P1 directly import proven digests and atomic JSON. No v1 code is changed.
+The EDF-20-specific manifest and synthetic contiguous-index fallback are not
+used in the new audit. No model or preprocessing pipeline is implemented.
+
+All console logs are `.txt`; local waveform caches remain Git-ignored. Audit
+outputs contain public Sleep-EDF inventory/counts/digests, never waveform arrays,
+pickled patient headers, credentials, or SHHS records. SHHS defaults disabled.
+Full installed package versions, git/source/config hashes, seed, output path,
+split IDs and access flags accompany every run. `COMPLETE.json` means an audit
+finished writing validated outputs, not that its scientific gate passed.
+
+P0 committed as `97c9bddf814b0d86f85ef231710e297647f332ae`.
+P1 implementation committed as `3f770c6c65c107eb171425142eefce91dd107bf0`.
+The final audit ran against that exact committed implementation. Its provenance
+records all 594 inventory input hashes and full package versions. Scientific gate
+FAIL is preserved: seven checksum-valid ST annotation files cannot be read by
+pyEDFlib 0.1.42; EDF78's optional distribution manifest lists only 50/153 files.
+The complete console history includes failed preflights and corrected parser/
+checker defects; none are presented as passing data runs.
+
+Supplied raw path uses `Sleep_edf_fulldataset`; actual accessible path uses
+`SLeep_edf_fulldataset`. The three explicit overrides are recorded in audit
+provenance. Default user paths remain unchanged in the example config.
+
+Official filename/label/study reference:
+https://physionet.org/content/sleep-edfx/1.0.0/ . SC variants E/F/G were verified
+against local published checksums and participant/night spreadsheets. No study
+metadata or waveform snippets were invented. No clinical event labels assigned.
+
+Final regression: 63 passed. Only existing v1 tests run tiny CPU synthetic
+optimization to verify checkpoint behavior; no recording-data model was trained.
+Run completion markers remain in ignored local runs. Published `audit.json` and
+`AUDIT_FINAL_COPY_PASTE.txt` are exact audit outputs. `FINAL_COPY_PASTE.txt` adds
+session validation/findings, so it is not misrepresented as an unchanged run
+artifact with the original completion digest.
+version: 1
+project: MIST-Transfer-v3
+scope: P0-P1-only
+experiments: []
+phases:
+  P0:
+    status: complete
+    commit: 97c9bddf814b0d86f85ef231710e297647f332ae
+    validation: reports/data_audit/P0_FINAL_COPY_PASTE.txt
+  P1:
+    status: implemented_audited_scientific_gate_failed
+    implementation_commit: 3f770c6c65c107eb171425142eefce91dd107bf0
+    audit: reports/data_audit/audit.json
+    validation: reports/data_audit/validation.json
+    console_log: reports/data_audit/session_logs/029_p1_final_audit.txt
+    gate: FAIL
+    p2_authorized: false
+"""Study-aware identities, annotation grids, waveform alignment and split guards."""
+from __future__ import annotations
+import hashlib
+import re
+from pathlib import Path
+import numpy as np
+
+STAGE_MAP = {'Sleep stage W': 0, 'Sleep stage 1': 1, 'Sleep stage 2': 2,
+             'Sleep stage 3': 3, 'Sleep stage 4': 3, 'Sleep stage R': 4,
+             'Sleep stage ?': -1, 'Movement time': -1, 'Sleep stage M': -1}
+STAGES = ['Wake', 'N1', 'N2', 'N3', 'REM']
+
+
+def identity(name: str, kind='npz'):
+    suffix = {'npz': '.npz', 'psg': '-PSG.edf', 'hyp': '-Hypnogram.edf'}[kind]
+    if not name.endswith(suffix):
+        raise ValueError(f'unrecognized recording filename: {name}')
+    stem = name[:-len(suffix)]
+    match = re.fullmatch(r'(SC4|ST7)(\d{2})([12])([EFGJ])([A-Z0-9])', stem)
+    if not match:
+        raise ValueError(f'ambiguous subject/night identity: {name}')
+    prefix, sid, night, equipment, scorer = match.groups()
+    study = 'SC' if prefix == 'SC4' else 'ST'
+    if equipment not in ({'E','F','G'} if study == 'SC' else {'J'}) or (kind != 'hyp' and scorer != '0'):
+        raise ValueError(f'conflicting acquisition/recording identity: {name}')
+    return {'study': study, 'subject_id': f'{study}:{sid}', 'night': int(night),
+            'pair_id': stem[:7], 'recording_id': stem[:7]+'0', 'recording_variant': equipment}
+
+
+def validate_splits(records):
+    """Before opening any file, reject subject/recording/hash leakage across roles."""
+    seen = {key: {} for key in ('subject_id', 'recording_id', 'source_sha256', 'signal_sha256', 'shape_sha256')}
+    paths = set()
+    for row in records:
+        if row.get('split') not in {'train','val','test'}:
+            raise ValueError('explicit train/val/test role required')
+        if not row.get('subject_id') or not row.get('recording_id'):
+            raise ValueError('canonical subject and recording identities required')
+        if row.get('path'):
+            path = str(Path(row['path']).expanduser().resolve())
+            if path in paths:
+                raise ValueError('duplicate recording path')
+            paths.add(path)
+        for key, values in seen.items():
+            value = row.get(key)
+            if value:
+                if value in values and values[value] != row['split']:
+                    raise ValueError(f'leakage: {key} {value} crosses splits')
+                values[value] = row['split']
+
+
+def open_development_npz(row):
+    if row.get('split') not in {'train','val'}:
+        raise ValueError('reserved test opening is prohibited')
+    return np.load(row['path'], allow_pickle=False)
+
+
+def validate_indices(indices, n):
+    a = np.asarray(indices)
+    if a.ndim != 1 or len(a) != n or not np.isfinite(a).all() or not np.equal(a, a.astype(np.int64)).all():
+        raise ValueError('invalid original epoch indices')
+    if np.any(a < 0) or np.any(np.diff(a) <= 0):
+        raise ValueError('non-monotone original epoch indices')
+    return a.astype(np.int64)
+
+
+def index_runs(indices):
+    """Lossless array -> original-index mapping, preserving every discontinuity."""
+    a = validate_indices(indices, len(indices))
+    if not len(a):
+        return []
+    bounds = np.r_[0, np.flatnonzero(np.diff(a) != 1)+1, len(a)]
+    return [{'array_start': int(lo), 'array_stop': int(hi), 'original_start': int(a[lo]),
+             'original_stop': int(a[hi-1]+1)} for lo, hi in zip(bounds[:-1], bounds[1:])]
+
+
+def annotation_grid(onsets, durations, descriptions, duration_seconds):
+    """Original PSG-relative 30-s grid, with unscored time and excluded tails."""
+    if not (len(onsets) == len(durations) == len(descriptions)):
+        raise ValueError('annotation lengths disagree')
+    if not np.isfinite(duration_seconds) or duration_seconds <= 0:
+        raise ValueError('invalid recording duration')
+    n = int(np.floor(duration_seconds/30 + 1e-8))
+    labels = np.full(n, -1, dtype=np.int64)
+    reasons = np.full(n, 'unannotated', dtype=object)
+    previous_end = 0.0
+    raw_counts, tails, nonstage = {}, [], []
+    for onset, duration, text in zip(onsets, durations, descriptions):
+        onset, duration, text = float(onset), float(duration), str(text)
+        if text not in STAGE_MAP:
+            if text.startswith('Sleep stage') or 'Movement' in text:
+                raise ValueError(f'unknown stage mapping: {text}')
+            nonstage.append(text)
+            continue
+        if not np.isfinite([onset,duration]).all() or onset < 0 or duration <= 0:
+            raise ValueError('invalid annotation interval')
+        if onset < previous_end - 1e-6:
+            raise ValueError('non-monotone or overlapping stage annotations')
+        previous_end = onset + duration
+        if abs(onset/30-round(onset/30)) > 1e-6 or abs(duration/30-round(duration/30)) > 1e-6:
+            raise ValueError('annotation not on original 30-s grid')
+        lo, hi = int(round(onset/30)), int(round((onset+duration)/30))
+        raw_counts[text] = raw_counts.get(text, 0)+max(0, min(hi,n)-min(lo,n))
+        if hi > n:
+            tails.append({'description': text, 'start_seconds': max(onset, n*30),
+                          'stop_seconds': onset+duration, 'reason': 'outside_full_signal_epochs'})
+        lo, hi = min(lo,n), min(hi,n)
+        labels[lo:hi] = STAGE_MAP[text]
+        reasons[lo:hi] = '' if STAGE_MAP[text] >= 0 else ('movement' if 'M' in text else 'unknown')
+    exclusions = {reason: index_runs(np.flatnonzero(reasons == reason)) for reason in sorted(set(reasons)-{''})}
+    return labels, {'n_original_full_epochs': n, 'raw_stage_counts': raw_counts,
+                    'excluded_epoch_ranges': exclusions, 'annotation_tails': tails,
+                    'partial_signal_tail_seconds': float(duration_seconds-n*30),
+                    'nonstage_annotations': sorted(set(nonstage))}
+
+
+def calibration(header):
+    if not header.get('dimension', '').strip() or header['dimension'] not in {'uV','µV','μV','mV','V'}:
+        raise ValueError('missing or unsupported physical EEG units')
+    values = [header[k] for k in ['physical_min','physical_max','digital_min','digital_max','sample_frequency']]
+    if not np.isfinite(values).all() or values[1] <= values[0] or values[3] <= values[2] or values[4] <= 0:
+        raise ValueError('invalid physical calibration')
+
+
+def affine_match(query, source, tolerance=2e-6):
+    q, s = np.asarray(query, dtype=np.float64), np.asarray(source, dtype=np.float64)
+    if q.shape != s.shape or not np.isfinite(q).all() or not np.isfinite(s).all():
+        return None
+    q0, s0 = q-q.mean(), s-s.mean()
+    qnorm, snorm = np.linalg.norm(q0), np.linalg.norm(s0)
+    if min(qnorm, snorm) < 1e-10:
+        return None
+    gain = float(np.dot(q0, s0)/snorm**2)
+    offset = float(q.mean()-gain*s.mean())
+    residual = float(np.linalg.norm(q-(gain*s+offset))/qnorm)
+    if gain <= 0 or residual > tolerance:
+        return None
+    return {'gain_npz_per_raw_unit': gain, 'offset_npz_units': offset,
+            'relative_residual': residual}
+
+
+def shape_features(epochs):
+    f = np.asarray(epochs[:, ::100], dtype=np.float64)
+    f = f-f.mean(axis=1, keepdims=True)
+    norm = np.linalg.norm(f, axis=1, keepdims=True)
+    return f / np.maximum(norm, 1e-12)
+
+
+def shape_key(features):
+    return hashlib.sha256(np.round(features, 4).astype('<f4').tobytes()).hexdigest()
+
+
+def align_epochs(query, raw_epochs):
+    """Align by waveform, never by labels, then validate every 3000-sample match.
+
+    Quantized shape sketches propose candidates; positive affine full-waveform
+    residual <=2e-6 certifies them. Hash-bin boundary misses get a nearest-shape
+    search. More than one valid source epoch is ambiguous and is rejected.
+    """
+    if query.ndim != 2 or raw_epochs.ndim != 2 or query.shape[1] != raw_epochs.shape[1]:
+        raise ValueError('waveform length disagreement')
+    rf, qf = shape_features(raw_epochs), shape_features(query)
+    lookup = {}
+    for i, f in enumerate(rf):
+        lookup.setdefault(shape_key(f), []).append(i)
+    indices, fits = [], []
+    for q, f in zip(query, qf):
+        candidates = lookup.get(shape_key(f), [])
+        # Also include near-identical signatures across quantization bins, to
+        # detect ambiguous duplicate waveforms rather than only the first hash.
+        distances = None
+        if not candidates:
+            distances = np.square(rf-f).sum(axis=1)
+            candidates = np.flatnonzero(distances <= max(1e-8, float(distances.min())+1e-12)).tolist()
+        else:
+            distances = np.square(rf-f).sum(axis=1)
+            candidates = sorted(set(candidates) | set(np.flatnonzero(distances < 1e-8).tolist()))
+        matches = [(i, fit) for i in candidates if (fit := affine_match(q, raw_epochs[i])) is not None]
+        if len(matches) != 1:
+            raise ValueError(f'waveform alignment {"ambiguous" if matches else "unverified"}: {len(matches)} matches')
+        indices.append(matches[0][0]); fits.append(matches[0][1])
+    idx = validate_indices(indices, len(query))
+    return idx, {'n_verified_epochs': len(idx),
+                 'max_relative_residual': max(f['relative_residual'] for f in fits),
+                 'gain_min': min(f['gain_npz_per_raw_unit'] for f in fits),
+                 'gain_max': max(f['gain_npz_per_raw_unit'] for f in fits),
+                 'offset_min': min(f['offset_npz_units'] for f in fits),
+                 'offset_max': max(f['offset_npz_units'] for f in fits),
+                 'operator': 'positive affine (gain + offset), no filtering/resampling/warping',
+                 'tolerance': 2e-6}
+"""Read-only Sleep-EDF P1 inventory. No preprocessing output or model code."""
+from __future__ import annotations
+import hashlib
+import itertools
+import json
+import os
+from pathlib import Path
+import zipfile
+import numpy as np
+import pandas as pd
+import pyedflib
+import yaml
+from .integrity import (STAGES, identity, annotation_grid, calibration, align_epochs,
+                        index_runs, validate_indices, validate_splits, shape_features, shape_key)
+from .provenance import (AuditRun, atomic_json, atomic_csv, atomic_text, sha256_file, git_info, environment, fingerprint)
+
+PATH_KEYS = ['sleep_edf_20_npz', 'sleep_edf_78_npz', 'sleep_edfx_original_root',
+             'sleep_edfx_sc_raw', 'sleep_edfx_st_raw', 'shhs_nsrr_root_if_approved']
+
+
+def load_config(path, overrides=()):
+    value = yaml.safe_load(Path(path).read_text())
+    if not isinstance(value, dict):
+        raise ValueError('config must be a mapping')
+    for key in PATH_KEYS:
+        if os.environ.get('MIST_'+key.upper()):
+            value[key] = os.environ['MIST_'+key.upper()]
+    for override in overrides:
+        key, sep, val = override.partition('=')
+        if not sep or key not in PATH_KEYS:
+            raise ValueError('path override must be a recognized KEY=PATH')
+        value[key] = val
+    missing = set(PATH_KEYS)-value.keys()
+    if missing:
+        raise ValueError(f'missing path configuration: {sorted(missing)}')
+    return value
+
+
+def discover(config):
+    files, roots = {}, {}
+    for key in PATH_KEYS:
+        if key == 'shhs_nsrr_root_if_approved':
+            # P1 implements no SHHS adapter or access; do not enumerate restricted files.
+            roots[key] = {'path': config[key], 'status': 'disabled; authorization and usable data unconfirmed'}
+            continue
+        p = Path(config[key]).expanduser().resolve()
+        roots[key] = {'path': str(p), 'exists': p.is_dir(), 'readable': os.access(p, os.R_OK)}
+        if not p.is_dir():
+            continue
+        if 'npz' in key:
+            selected = list(p.glob('*.npz'))+list(p.glob('*PSG.edf'))+list(p.glob('*Hypnogram.edf'))
+            if (p/'MANIFEST.TXT').is_file():
+                selected.append(p/'MANIFEST.TXT')
+        elif key.endswith('_raw'):
+            selected = list(p.glob('*.edf'))
+        else:
+            selected = [p/name for name in ['RECORDS','SHA256SUMS.txt','SC-subjects.xls','ST-subjects.xls'] if (p/name).is_file()]
+        for f in selected:
+            files[str(f)] = f
+    return roots, files
+
+
+def npz_headers(path):
+    result = {}
+    with zipfile.ZipFile(path) as z:
+        members = z.namelist()
+        if len(members) != len(set(members)):
+            raise ValueError('duplicate NPZ keys')
+        for name in members:
+            if not name.endswith('.npy') or '/' in name:
+                raise ValueError('unexpected NPZ member')
+            with z.open(name) as f:
+                version = np.lib.format.read_magic(f)
+                if version == (1,0):
+                    shape, fortran, dtype = np.lib.format.read_array_header_1_0(f)
+                elif version == (2,0):
+                    shape, fortran, dtype = np.lib.format.read_array_header_2_0(f)
+                else:
+                    raise ValueError(f'unsupported NPY header version {version}')
+            result[name[:-4]] = {'shape': list(shape), 'dtype': str(dtype),
+                                'object_metadata_not_opened': bool(dtype.hasobject)}
+    return result
+
+
+def read_npz(path):
+    headers = npz_headers(path)
+    with np.load(path, allow_pickle=False) as z:
+        if not {'x','y','fs','ch_label'}.issubset(z.files):
+            raise ValueError('NPZ missing x/y/fs/channel metadata')
+        x, y = z['x'], z['y']
+        if x.ndim == 3 and x.shape[1:] == (3000,1):
+            x = x[:,:,0]
+        elif x.ndim == 3 and x.shape[1:] == (1,3000):
+            x = x[:,0,:]
+        if x.ndim != 2 or x.shape[1] != 3000 or y.ndim != 1 or len(x) != len(y) or not len(x):
+            raise ValueError('NPZ signal/annotation length or shape disagreement')
+        if not np.isfinite(x).all() or not np.isfinite(y).all():
+            raise ValueError('nonfinite NPZ signal/labels')
+        if not np.equal(y, y.astype(np.int64)).all() or not np.isin(y,range(5)).all():
+            raise ValueError('NPZ stage coding outside integer 0..4')
+        fs = np.asarray(z['fs'])
+        if fs.size != 1 or float(fs.item()) != 100:
+            raise ValueError('NPZ sampling-rate mismatch: output contract requires explicit 100 Hz')
+        ch = np.asarray(z['ch_label'])
+        if ch.size != 1 or ch.dtype.kind not in {'U','S'}:
+            raise ValueError('ambiguous channel label')
+        channel = str(ch.item()) if ch.dtype.kind == 'U' else ch.item().decode()
+        present = [k for k in ('epoch_indices','epoch_index','original_epoch_index') if k in z.files]
+        if len(present) > 1:
+            raise ValueError('conflicting epoch index metadata')
+        idx = validate_indices(z[present[0]],len(x)) if present else None
+        units = None
+        for k in ('units','raw_units'):
+            if k in z.files:
+                a = z[k]
+                if a.size != 1 or a.dtype.kind != 'U':
+                    raise ValueError('invalid NPZ units metadata')
+                if units is not None and units != str(a.item()):
+                    raise ValueError('conflicting NPZ unit metadata')
+                units = str(a.item())
+    digest = hashlib.sha256(np.ascontiguousarray(x, dtype='<f4').tobytes()).hexdigest()
+    features = shape_features(x)
+    sketch = [shape_key(f) for f in features]
+    return x, y.astype(np.int64), idx, {'npz_keys': list(headers), 'npz_headers': headers,
+                'fs': float(fs.item()), 'channel': channel, 'declared_units': units,
+                'signal_sha256': digest, 'shape_sha256': hashlib.sha256(''.join(sketch).encode()).hexdigest(),
+                'epoch_shape_hashes': sketch, 'n_epochs': len(y)}
+
+
+def treatment_metadata(root):
+    p = root/'ST-subjects.xls'
+    if not p.is_file():
+        return {}, 'ST treatment metadata missing'
+    table = pd.read_excel(p,header=None)
+    if table.shape[1] != 7 or str(table.iloc[0,3]) != 'Placebo night' or str(table.iloc[0,5]) != 'Temazepam night':
+        raise ValueError('unrecognized ST treatment metadata layout')
+    treatment = {}
+    for row in table.iloc[2:].itertuples(index=False, name=None):
+        sid, placebo, drug = int(row[0]), int(row[3]), int(row[5])
+        if {placebo,drug} != {1,2}:
+            raise ValueError('invalid ST treatment night mapping')
+        for night, condition in [(placebo,'placebo'),(drug,'temazepam')]:
+            key = (f'ST:{sid:02d}',night)
+            if key in treatment:
+                raise ValueError('duplicate ST participant/night metadata')
+            treatment[key] = condition
+    return treatment, None
+
+
+def sc_metadata(root):
+    p = root/'SC-subjects.xls'
+    if not p.is_file():
+        return set(), 'SC participant metadata missing'
+    table = pd.read_excel(p)
+    if not {'subject','night','age','sex (F=1)'}.issubset(table.columns):
+        raise ValueError('unrecognized SC subject metadata layout')
+    keys = [(f'SC:{int(row.subject):02d}',int(row.night)) for row in table.itertuples(index=False)]
+    if len(set(keys)) != len(keys):
+        raise ValueError('duplicate SC participant/night metadata')
+    return set(keys), None
+
+
+def public_checks(root, files, hashes):
+    results, errors = {}, []
+    p = root/'SHA256SUMS.txt'
+    expected = {}
+    if p.is_file():
+        for line in p.read_text().splitlines():
+            digest, name = line.split(maxsplit=1)
+            name = name.lstrip('*')
+            if name in expected:
+                raise ValueError('duplicate external checksum identity')
+            expected[name] = digest
+    p = root/'RECORDS'
+    listed = set(p.read_text().splitlines()) if p.is_file() else set()
+    checked, listed_psg, missing = 0, 0, []
+    for path in files.values():
+        if not path.is_relative_to(root):
+            continue
+        rel = str(path.relative_to(root))
+        if rel in expected:
+            checked += 1
+            if hashes[str(path)] != expected[rel]:
+                errors.append({'file': rel, 'error': 'external SHA256 checksum mismatch'})
+        elif path.suffix == '.edf':
+            missing.append(rel)
+        if path.name.endswith('-PSG.edf') and (rel in listed or rel.removesuffix('-PSG.edf') in listed):
+            listed_psg += 1
+    results = {'checksum_inputs_present': bool(expected), 'n_verified_file_checksums': checked,
+               'checksum_entries': len(expected), 'raw_files_without_published_checksum': missing,
+               'records_entries': len(listed), 'n_psg_in_RECORDS': listed_psg}
+    # RECORDS may contain complete filenames or stems; validate both forms.
+    missing_records = [str(p.relative_to(root)) for p in files.values() if p.is_relative_to(root)
+                       and p.name.endswith('-PSG.edf') and str(p.relative_to(root)) not in listed
+                       and str(p.relative_to(root)).removesuffix('-PSG.edf') not in listed]
+    if listed and missing_records:
+        errors.append({'error': 'PSG files absent from RECORDS', 'files': missing_records})
+    if expected and missing:
+        errors.append({'error': 'raw files missing external checksums', 'files': missing})
+    return results, errors
+
+
+def pair_raw(config):
+    raw, nights = {}, set()
+    for key, study in [('sleep_edfx_sc_raw','SC'),('sleep_edfx_st_raw','ST')]:
+        root = Path(config[key]).expanduser().resolve()
+        by_pair = {}
+        for p in sorted(root.glob('*.edf')):
+            if p.name.endswith('-PSG.edf'):
+                kind = 'psg'
+            elif p.name.endswith('-Hypnogram.edf'):
+                kind = 'hyp'
+            else:
+                raise ValueError(f'unrecognized raw EDF filename: {p.name}')
+            ident = identity(p.name,kind)
+            if ident['study'] != study:
+                raise ValueError('raw file in wrong study directory')
+            entry = by_pair.setdefault(ident['pair_id'],{**ident})
+            if kind in entry:
+                raise ValueError(f'duplicate or ambiguous {kind} pair: {p.name}')
+            entry[kind] = p
+        for entry in by_pair.values():
+            if not {'psg','hyp'}.issubset(entry):
+                raise ValueError(f'unpaired raw recording: {entry["recording_id"]}')
+            if entry['recording_id'] in raw:
+                raise ValueError('duplicate raw recording ID')
+            night_key = (entry['subject_id'],entry['night'])
+            if night_key in nights:
+                raise ValueError('conflicting raw recording variants for one participant/night')
+            nights.add(night_key)
+            raw[entry['recording_id']] = entry
+    return raw
+
+
+def summary_rows(rows):
+    result = {}
+    for dataset in sorted({r['dataset'] for r in rows}):
+        group = [r for r in rows if r['dataset']==dataset]
+        result[dataset] = {'recordings': len(group), 'subjects': len({r['subject_id'] for r in group}),
+                           'epochs': sum(r.get('n_epochs',0) for r in group),
+"""Reuse v1 digests/atomic JSON; add audit transaction and CPU-only provenance."""
+from __future__ import annotations
+import csv
+import io
+import json
+import os
+import platform
+import subprocess
+import sys
+from importlib import metadata
+from pathlib import Path
+from mist_evidence.data import fingerprint, sha256_file
+from mist_evidence.runtime import atomic_json
+
+
+def atomic_text(text: str, path: Path):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_suffix(path.suffix + '.tmp')
+    with tmp.open('w') as f:
+        f.write(text)
+        f.flush()
+        os.fsync(f.fileno())
+    os.replace(tmp, path)
+
+
+def atomic_csv(rows, fields, path):
+    stream = io.StringIO(newline='')
+    writer = csv.DictWriter(stream, fieldnames=fields)
+    writer.writeheader()
+    writer.writerows(rows)
+    atomic_text(stream.getvalue(), path)
+
+
+def environment():
+    return {'python': sys.version, 'executable': sys.executable, 'platform': platform.platform(),
+            'packages': dict(sorted((d.metadata['Name'], d.version) for d in metadata.distributions()
+                                    if d.metadata['Name']))}
+
+
+def git_info():
+    root = Path(__file__).resolve().parents[2]
+    def git(*args):
+        return subprocess.check_output(['git', '-C', str(root), *args], text=True).strip()
+    # Source digest protects resume while implementation is uncommitted. Output
+    # reports/logs are deliberately excluded from the implementation digest.
+    files = [p for base in ('src/mist_transfer', 'scripts') for p in (root/base).glob('*.py')]
+    return {'sha': git('rev-parse', 'HEAD'), 'branch': git('branch', '--show-current'),
+            'dirty': bool(git('status', '--porcelain')),
+            'implementation_hash': fingerprint({str(p.relative_to(root)): sha256_file(p) for p in sorted(files)})}
+
+
+class AuditRun:
+    """Single-writer, atomic completion; interrupted audit can restart on same inputs.
+
+    Completion is established only after every output digest is verified. This
+    deliberately leaves the v1 training/checkpoint protocol untouched.
+    """
+    def __init__(self, output, config, sources, seed=123, resume=False, split_ids=None):
+        self.output = Path(output).resolve()
+        self.identity = {'git': git_info(), 'environment': environment(), 'config': config,
+                         'config_hash': fingerprint(config), 'source_recording_hashes': sources,
+                         'seed': seed, 'split_ids': split_ids or {}, 'output_directory': str(self.output),
+                         'leakage_flags': {'split_selection': False, 'test_metrics': False,
+                                           'shhs_access': False}}
+        # Dirty status can change as reports are written; code hash still binds code.
+        signature_identity = json.loads(json.dumps(self.identity))
+        signature_identity['git'].pop('dirty')
+        self.signature = fingerprint(signature_identity)
+        self.output.mkdir(parents=True, exist_ok=True)
+        self.complete = self.output/'COMPLETE.json'
+        self.provenance = self.output/'provenance.json'
+        if self.provenance.exists():
+            if not resume:
+                raise FileExistsError('output exists: use --resume or a new output directory')
+            previous = json.loads(self.provenance.read_text())
+            if previous['signature'] != self.signature:
+                raise ValueError('resume signature mismatch: source/config/code/environment changed')
+            if self.complete.exists():
+                done = json.loads(self.complete.read_text())
+                if done['signature'] != self.signature:
+                    raise ValueError('completion signature mismatch')
+                for name, digest in done['outputs'].items():
+                    if sha256_file(self.output/name) != digest:
+                        raise ValueError('completion output digest mismatch')
+        else:
+            atomic_json({**self.identity, 'signature': self.signature}, self.provenance)
+
+    def finish(self, outputs, gate):
+        atomic_json({'signature': self.signature, 'outputs': {name: sha256_file(self.output/name)
+                    for name in outputs}, 'gate': gate, 'training_performed': False}, self.complete)
+P1 identity f768cbccf5b7307033c1b05ca0c7fcef2325fbb53513c893e8b8901d74f680be {'sha': '3f770c6c65c107eb171425142eefce91dd107bf0', 'branch': 'research/mist-transfer-v3-edf-shhs', 'dirty': True, 'implementation_hash': 'c5fd00392ec16c39b97fca3891cc76100fa15ba727fb5bd629193a1582daa33a'}
+Errors [{'recording_id': 'ST7021J0', 'error': '/home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-telemetry/ST7021JM-Hypnogram.edf: the file is not EDF(+) or BDF(+) compliant (EDF+ Recordingfield)', 'hard_stop': True}, {'recording_id': 'ST7071J0', 'error': '/home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-telemetry/ST7071JA-Hypnogram.edf: the file is not EDF(+) or BDF(+) compliant (EDF+ Recordingfield)', 'hard_stop': True}, {'recording_id': 'ST7092J0', 'error': '/home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-telemetry/ST7092JE-Hypnogram.edf: the file is not EDF(+) or BDF(+) compliant (EDF+ Recordingfield)', 'hard_stop': True}, {'recording_id': 'ST7131J0', 'error': '/home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-telemetry/ST7131JR-Hypnogram.edf: the file is not EDF(+) or BDF(+) compliant (EDF+ Recordingfield)', 'hard_stop': True}, {'recording_id': 'ST7132J0', 'error': '/home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-telemetry/ST7132JR-Hypnogram.edf: the file is not EDF(+) or BDF(+) compliant (EDF+ Recordingfield)', 'hard_stop': True}, {'recording_id': 'ST7141J0', 'error': '/home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-telemetry/ST7141JE-Hypnogram.edf: the file is not EDF(+) or BDF(+) compliant (EDF+ Recordingfield)', 'hard_stop': True}, {'recording_id': 'ST7142J0', 'error': '/home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-telemetry/ST7142JE-Hypnogram.edf: the file is not EDF(+) or BDF(+) compliant (EDF+ Recordingfield)', 'hard_stop': True}]
+edf20_npz example {'study': 'SC', 'subject_id': 'SC:00', 'night': 1, 'pair_id': 'SC4001E', 'recording_id': 'SC4001E0', 'recording_variant': 'E', 'dataset': 'edf20_npz', 'path': '/home/FA006/Desktop/Dimension/dataset/Preprocessed Sleep-EDF-20 dataset/SC4001E0.npz', 'source_sha256': 'dd228377a29a5270d69a53505877e8618d8a6df1ed75da26fb098b1020f50dbe', 'indices_status': 'all_epochs_waveform_verified', 'raw_units': 'uV', 'preprocessing_provenance': 'unknown upstream script/policy', 'npz_keys': ['x', 'y', 'fs', 'ch_label', 'header_raw', 'header_annotation'], 'fs': 100.0, 'channel': 'EEG Fpz-Cz', 'declared_units': None, 'signal_sha256': 'e4f54083d28565de26f4a243f7ad2aedebfcf2ab9341e375301c4985e6025588', 'shape_sha256': '623db3fb93daa93195b8ee0a65369f5a51997e252255db2c700eed03ec74909f', 'n_epochs': 841, 'mapped_stage_counts': {'Wake': 188, 'N1': 58, 'N2': 250, 'N3': 220, 'REM': 125}, 'original_epoch_runs': [{'array_start': 0, 'array_stop': 841, 'original_start': 961, 'original_stop': 1802}], 'original_epoch_index_sha256': 'b8137835e35fad189db10748838488b5140644e489ea39d260fc1400814c6206', 'start_seconds_first': 28830, 'start_seconds_last': 54030, 'waveform_verification': {'n_verified_epochs': 841, 'max_relative_residual': 2.6254162345345394e-08, 'gain_min': 0.9999999922325147, 'gain_max': 1.0000000289682462, 'offset_min': -1.500621286121273e-07, 'offset_max': 1.0398158697966231e-07, 'operator': 'positive affine (gain + offset), no filtering/resampling/warping', 'tolerance': 2e-06}, 'stage_semantics': 'all aligned labels verified against R&K mapping', 'raw_source_sha256': '2b40a18adf76af69a42d6db1f30f31d26b369f6d27ca0050ef30147ef892b131', 'raw_annotation_sha256': 'a4cf67694ade1b52a0ddd06d5817fd45d2d3e8bac5302f640f3e9cfbbf12a996', 'units_status': 'verified identity to calibrated raw EEG', 'selection_status': 'retained subset; upstream trimming/exclusion policy unknown', 'omitted_original_full_epochs': 1809}
+manifest {'entries': 39, 'actual_files': 39, 'matches_filenames_and_sizes': True, 'missing_listed_files': [], 'unlisted_files': [], 'size_conflicts': [], 'sha256': 'ce7c54f8cf7376cdf15b442d98e45d5ed4cdf1e75cfa77102fea28babeef8901'}
+edf78_npz example {'study': 'SC', 'subject_id': 'SC:00', 'night': 1, 'pair_id': 'SC4001E', 'recording_id': 'SC4001E0', 'recording_variant': 'E', 'dataset': 'edf78_npz', 'path': '/home/FA006/Desktop/Dimension/dataset/Preprocessed Sleep-EDF-78 dataset/SC4001E0.npz', 'source_sha256': '227c7e3b35b94dc7098942b7534b5ab4b1c2f8a2ada1a2ca2c266dd0a64e6417', 'indices_status': 'all_epochs_waveform_verified', 'raw_units': 'uV', 'preprocessing_provenance': 'unknown upstream script/policy', 'npz_keys': ['x', 'y', 'fs', 'ch_label', 'header_raw', 'header_annotation'], 'fs': 100.0, 'channel': 'EEG Fpz-Cz', 'declared_units': None, 'signal_sha256': 'e4f54083d28565de26f4a243f7ad2aedebfcf2ab9341e375301c4985e6025588', 'shape_sha256': '623db3fb93daa93195b8ee0a65369f5a51997e252255db2c700eed03ec74909f', 'n_epochs': 841, 'mapped_stage_counts': {'Wake': 188, 'N1': 58, 'N2': 250, 'N3': 220, 'REM': 125}, 'original_epoch_runs': [{'array_start': 0, 'array_stop': 841, 'original_start': 961, 'original_stop': 1802}], 'original_epoch_index_sha256': 'b8137835e35fad189db10748838488b5140644e489ea39d260fc1400814c6206', 'start_seconds_first': 28830, 'start_seconds_last': 54030, 'waveform_verification': {'n_verified_epochs': 841, 'max_relative_residual': 2.6254162345345394e-08, 'gain_min': 0.9999999922325147, 'gain_max': 1.0000000289682462, 'offset_min': -1.500621286121273e-07, 'offset_max': 1.0398158697966231e-07, 'operator': 'positive affine (gain + offset), no filtering/resampling/warping', 'tolerance': 2e-06}, 'stage_semantics': 'all aligned labels verified against R&K mapping', 'raw_source_sha256': '2b40a18adf76af69a42d6db1f30f31d26b369f6d27ca0050ef30147ef892b131', 'raw_annotation_sha256': 'a4cf67694ade1b52a0ddd06d5817fd45d2d3e8bac5302f640f3e9cfbbf12a996', 'units_status': 'verified identity to calibrated raw EEG', 'selection_status': 'retained subset; upstream trimming/exclusion policy unknown', 'omitted_original_full_epochs': 1809}
+manifest {'entries': 50, 'actual_files': 153, 'matches_filenames_and_sizes': False, 'missing_listed_files': [], 'unlisted_files': ['SC4001E0.npz', 'SC4002E0.npz', 'SC4011E0.npz', 'SC4012E0.npz', 'SC4021E0.npz', 'SC4022E0.npz', 'SC4031E0.npz', 'SC4032E0.npz', 'SC4041E0.npz', 'SC4042E0.npz', 'SC4051E0.npz', 'SC4052E0.npz', 'SC4061E0.npz', 'SC4062E0.npz', 'SC4071E0.npz', 'SC4072E0.npz', 'SC4081E0.npz', 'SC4082E0.npz', 'SC4091E0.npz', 'SC4092E0.npz', 'SC4101E0.npz', 'SC4102E0.npz', 'SC4111E0.npz', 'SC4112E0.npz', 'SC4121E0.npz', 'SC4122E0.npz', 'SC4131E0.npz', 'SC4141E0.npz', 'SC4142E0.npz', 'SC4151E0.npz', 'SC4152E0.npz', 'SC4161E0.npz', 'SC4162E0.npz', 'SC4171E0.npz', 'SC4172E0.npz', 'SC4181E0.npz', 'SC4182E0.npz', 'SC4191E0.npz', 'SC4192E0.npz', 'SC4201E0.npz', 'SC4202E0.npz', 'SC4211E0.npz', 'SC4212E0.npz', 'SC4221E0.npz', 'SC4222E0.npz', 'SC4231E0.npz', 'SC4232E0.npz', 'SC4241E0.npz', 'SC4242E0.npz', 'SC4251E0.npz', 'SC4252E0.npz', 'SC4261F0.npz', 'SC4262F0.npz', 'SC4271F0.npz', 'SC4272F0.npz', 'SC4281G0.npz', 'SC4282G0.npz', 'SC4291G0.npz', 'SC4292G0.npz', 'SC4301E0.npz', 'SC4302E0.npz', 'SC4311E0.npz', 'SC4312E0.npz', 'SC4321E0.npz', 'SC4322E0.npz', 'SC4331F0.npz', 'SC4332F0.npz', 'SC4341F0.npz', 'SC4342F0.npz', 'SC4351F0.npz', 'SC4352F0.npz', 'SC4362F0.npz', 'SC4371F0.npz', 'SC4372F0.npz', 'SC4381F0.npz', 'SC4382F0.npz', 'SC4401E0.npz', 'SC4402E0.npz', 'SC4411E0.npz', 'SC4412E0.npz', 'SC4421E0.npz', 'SC4422E0.npz', 'SC4431E0.npz', 'SC4432E0.npz', 'SC4441E0.npz', 'SC4442E0.npz', 'SC4451F0.npz', 'SC4452F0.npz', 'SC4461F0.npz', 'SC4462F0.npz', 'SC4471F0.npz', 'SC4472F0.npz', 'SC4481F0.npz', 'SC4482F0.npz', 'SC4491G0.npz', 'SC4492G0.npz', 'SC4501E0.npz', 'SC4502E0.npz', 'SC4511E0.npz', 'SC4512E0.npz', 'SC4812G0.npz', 'SC4821G0.npz', 'SC4822G0.npz'], 'size_conflicts': [], 'sha256': '899db643c3fc3762fa8c05d30e93d1e4f54174597b6fd15e60036e1249ae14da'}
+HYPNOGRAM HEADER ST7021J0 b'0       X F X Female_35yr                                                               Startdate 19-SEP-1994 X X X                                                     20.09.9400.00.30512     EDF+C                                       1       0       1   ' size 3942
+HYPNOGRAM HEADER ST7011J0 b'0       X M X Male_60yr                                                                 Startdate 12-JUL-1994 X X X                                                     12.07.9423.00.00512     EDF+C                                       1       0       1   ' size 6356
+   2375 unattended-upgr /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+ 612456 python3         python3 /usr/bin/wsdd --no-host --discovery --listen /run/user/1001/gvfsd/wsdd
+ 643421 bash            /bin/bash -lc set -o pipefail; { cat docs/DATA_CONTRACT.md; cat docs/PROVENANCE.md; cat experiments/registry.yaml; cat src/mist_transfer/integrity.py; sed -n '1,240p' src/mist_transfer/audit.py; cat src/mist_transfer/provenance.py; .venv/bin/python - <<'PY' import json, pathlib, os r=json.load(open('reports/data_audit/audit.json')) print('P1 identity',r['signature'],r['provenance']['git']) print('Errors',r['errors']) for d in ['edf20_npz','edf78_npz']:  rows=[x for x in r['records'] if x['dataset']==d]  print(d,'example', {k:v for k,v in rows[0].items() if k not in ['npz_headers']})  print('manifest',r['public_provenance_checks'][d+'_manifest']) for f in [r['errors'][0]['recording_id'], 'ST7011J0']:  row=next(x for x in r['records'] if x['recording_id']==f)  with open(row['annotation_source'],'rb') as h:b=h.read(256)  print('HYPNOGRAM HEADER',f,repr(b),'size',os.stat(row['annotation_source']).st_size) PY ps -eo pid,comm,args | rg '[p]ython|[n]srr' | head -15; } 2>&1 | tee reports/data_audit/p1_5/session_logs/002_targeted_inspection.txt
+ 643429 bash            /bin/bash -lc set -o pipefail; { cat docs/DATA_CONTRACT.md; cat docs/PROVENANCE.md; cat experiments/registry.yaml; cat src/mist_transfer/integrity.py; sed -n '1,240p' src/mist_transfer/audit.py; cat src/mist_transfer/provenance.py; .venv/bin/python - <<'PY' import json, pathlib, os r=json.load(open('reports/data_audit/audit.json')) print('P1 identity',r['signature'],r['provenance']['git']) print('Errors',r['errors']) for d in ['edf20_npz','edf78_npz']:  rows=[x for x in r['records'] if x['dataset']==d]  print(d,'example', {k:v for k,v in rows[0].items() if k not in ['npz_headers']})  print('manifest',r['public_provenance_checks'][d+'_manifest']) for f in [r['errors'][0]['recording_id'], 'ST7011J0']:  row=next(x for x in r['records'] if x['recording_id']==f)  with open(row['annotation_source'],'rb') as h:b=h.read(256)  print('HYPNOGRAM HEADER',f,repr(b),'size',os.stat(row['annotation_source']).st_size) PY ps -eo pid,comm,args | rg '[p]ython|[n]srr' | head -15; } 2>&1 | tee reports/data_audit/p1_5/session_logs/002_targeted_inspection.txt

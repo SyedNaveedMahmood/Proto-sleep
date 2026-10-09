@@ -1,0 +1,23 @@
+Per-record scope eligibility, postflight proof and candidate-reference lineage added.
+usage: resolve_transfer_audit.py [-h] [--prior-audit PRIOR_AUDIT]
+                                 [--output-dir OUTPUT_DIR] [--archive ARCHIVE]
+                                 [--reference REFERENCE] [--seed SEED]
+                                 [--resume] [--dry-run]
+
+P1.5 read-only blocker resolution, reusing hash-validated P1 waveform proofs.
+
+options:
+  -h, --help            show this help message and exit
+  --prior-audit PRIOR_AUDIT
+  --output-dir OUTPUT_DIR
+  --archive ARCHIVE     Optional adjacent archive; read directory and tiny
+                        manifest only
+  --reference REFERENCE
+                        Hash-only local candidate code reference; never
+                        executed
+  --seed SEED
+  --resume
+  --dry-run
+........................................................................ [ 84%]
+.............                                                            [100%]
+85 passed in 4.10s

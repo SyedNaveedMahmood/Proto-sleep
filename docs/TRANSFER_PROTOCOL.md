@@ -24,3 +24,28 @@ to different evaluation roles is the hard-stop leakage violation.
 
 Stop after P1. P2 may only start after review of audit blockers; no P3 training,
 architecture redesign, morphology diagnoses, novelty or SOTA claims are made.
+
+The authorized P1.5 follow-up characterizes blockers without overriding the
+historical P1 FAIL. Its revised gate applies to the 74-person/146-recording raw
+SC subset, excluding all nights of people 06, 23, 36 and 74. These exclusions
+must be declared before experiments and their effects on cohort composition
+reported. Within-cohort experiments may use the eligible EDF-20 membership
+(19 people/37 recordings) and a disjoint extension (55 people/109 recordings);
+their observations remain within the SC cohort. No split has been assigned.
+
+The measured NPZ masks match a label-conditioned selection rule, but the
+upstream executable and causal selection policy remain UNKNOWN. Existing
+trimmed NPZs cannot provide the zero-shot endpoint. Rebuild inference inputs
+from every complete physical raw epoch before accessing stage labels; retain
+unscored time positions and attach metric masks afterwards. Use source-TRAIN
+normalization and source-only model selection. This is a specification for P2,
+not an executed preprocessing pipeline.
+
+ST annotations are verified, including seven strictly validated read-only
+Recordingfield compatibility cases. ST preprocessing remains CONDITIONAL on
+separate fixed-clock policy review and P2 decoder/sample checks. Keep treatment
+and participant-night grouping; freeze development versus evaluation roles
+before target scores. SC/ST person linkage is UNKNOWN, so this remains an
+exploratory cross-study proxy. SHHS access/usability is UNKNOWN and P2 BLOCKED.
+See `reports/data_audit/p1_5/gate_decisions.json` for scope-specific evidence.
+Stop after P1.5 for review; no scope is authorized to run P2 in this session.

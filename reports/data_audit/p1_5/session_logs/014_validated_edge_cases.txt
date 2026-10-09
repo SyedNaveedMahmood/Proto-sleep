@@ -1,0 +1,3 @@
+Bounded incomplete-tail handling and recording equipment metadata distinction added; demographic conflicts remain quarantined.
+...................                                                      [100%]
+19 passed in 1.29s

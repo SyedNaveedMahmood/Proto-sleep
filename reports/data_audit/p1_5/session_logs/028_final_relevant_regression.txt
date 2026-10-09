@@ -1,0 +1,24 @@
+{
+  "P0_commit": "97c9bddf814b0d86f85ef231710e297647f332ae",
+  "P1_implementation_commit": "3f770c6c65c107eb171425142eefce91dd107bf0",
+  "focused_and_v1_regression": {
+    "passed": 63,
+    "failed": 0,
+    "console_log": "session_logs/027_final_code_regression.txt"
+  },
+  "P0_focused_tests": {
+    "passed": 26,
+    "failed": 0
+  },
+  "p0_smoke": "identical seed-123 output on resume",
+  "dataset_training_performed": false,
+  "gpu_training_performed": false,
+  "note": "Unchanged v1 regression tests include tiny CPU synthetic optimizer/checkpoint smokes.",
+  "audit_exit_code": 2,
+  "scientific_gate": "FAIL",
+  "p2_can_begin": false,
+  "audit_source_signature": "f768cbccf5b7307033c1b05ca0c7fcef2325fbb53513c893e8b8901d74f680be"
+}
+........................................................................ [ 78%]
+....................                                                     [100%]
+92 passed in 4.22s

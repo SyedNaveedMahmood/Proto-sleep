@@ -1,0 +1,17 @@
+SC4062E0 clock equal True patient field equal False recording field equal True
+patient tokens hyp ['X', 'F', 'X', 'Female_31yr'] psg ['X', 'M', 'X', 'Male_31yr']
+recording hyp Startdate 09-MAY-1989 X X X psg Startdate 09-MAY-1989 X X X
+SC4231E0 clock equal True patient field equal False recording field equal True
+patient tokens hyp ['X', 'F', 'X', 'Female_49yr'] psg ['X', 'M', 'X', 'Male_49yr']
+recording hyp Startdate 28-JUN-1989 X X X psg Startdate 28-JUN-1989 X X X
+SC4362F0 clock equal True patient field equal True recording field equal False
+patient tokens hyp ['X', 'M', 'X', 'Male_51yr'] psg ['X', 'M', 'X', 'Male_51yr']
+recording hyp Startdate 07-JUN-1990 X X X psg Startdate 07-JUN-1990 X X Polyman
+SC4742E0 clock equal True patient field equal False recording field equal True
+patient tokens hyp ['X', 'M', 'X', 'Male_92yr'] psg ['X', 'F', 'X', 'Female_92yr']
+recording hyp Startdate 10-OCT-1989 X X X psg Startdate 10-OCT-1989 X X X
+ST7072J0 physical duration 27460.0 partial tail 10.0 annotation tails [{'description': 'Sleep stage W', 'start_seconds': 27450, 'stop_seconds': 27480.0, 'reason': 'outside_full_signal_epochs'}] maxannotationend 27480.0
+ST7081J0 physical duration 29000.0 partial tail 20.0 annotation tails [{'description': 'Sleep stage W', 'start_seconds': 28980, 'stop_seconds': 29010.0, 'reason': 'outside_full_signal_epochs'}] maxannotationend 29010.0
+ST7171J0 physical duration 28930.0 partial tail 10.0 annotation tails [{'description': 'Sleep stage W', 'start_seconds': 28920, 'stop_seconds': 28950.0, 'reason': 'outside_full_signal_epochs'}] maxannotationend 28950.0
+ST7172J0 physical duration 30200.0 partial tail 20.0 annotation tails [{'description': 'Sleep stage W', 'start_seconds': 30180, 'stop_seconds': 30210.0, 'reason': 'outside_full_signal_epochs'}] maxannotationend 30210.0
+ST7201J0 physical duration 29120.0 partial tail 20.0 annotation tails [{'description': 'Sleep stage W', 'start_seconds': 29100, 'stop_seconds': 29130.0, 'reason': 'outside_full_signal_epochs'}] maxannotationend 29130.0

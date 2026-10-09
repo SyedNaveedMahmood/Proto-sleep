@@ -1,0 +1,275 @@
+'''
+Reader for EDF+ files.
+TODO:
+ - add support for log-transformed channels:
+   http://www.edfplus.info/specs/edffloat.html and test with
+   data generated with
+   http://www.edfplus.info/downloads/software/NeuroLoopGain.zip.
+ - check annotations with Schalk's Physiobank data.
+Copyright (c) 2012 Boris Reuderink.
+'''
+
+import re, datetime, operator, logging
+import numpy as np
+from collections import namedtuple
+from functools import reduce
+
+EVENT_CHANNEL = 'EDF Annotations'
+log = logging.getLogger(__name__)
+
+class EDFEndOfData(BaseException): pass
+
+
+def tal(tal_str):
+  '''Return a list with (onset, duration, annotation) tuples for an EDF+ TAL
+  stream.
+  '''
+  exp = '(?P<onset>[+\-]\d+(?:\.\d*)?)' + \
+    '(?:\x15(?P<duration>\d+(?:\.\d*)?))?' + \
+    '(\x14(?P<annotation>[^\x00]*))?' + \
+    '(?:\x14\x00)'
+
+  def annotation_to_list(annotation):
+    #return str(annotation, 'utf-8').split('\x14') if annotation else []
+    return annotation.split('\x14') if annotation else []
+
+  def parse(dic):
+    return (
+      float(dic['onset']),
+      float(dic['duration']) if dic['duration'] else 0.,
+      annotation_to_list(dic['annotation']))
+
+  return [parse(m.groupdict()) for m in re.finditer(exp, tal_str)]
+
+
+def edf_header(f):
+  h = {}
+  assert f.tell() == 0  # check file position
+  assert f.read(8) == '0       '
+
+  # recording info)
+  h['local_subject_id'] = f.read(80).strip()
+  h['local_recording_id'] = f.read(80).strip()
+
+  # parse timestamp
+  (day, month, year) = [int(x) for x in re.findall('(\d+)', f.read(8))]
+  (hour, minute, sec)= [int(x) for x in re.findall('(\d+)', f.read(8))]
+  h['date_time'] = str(datetime.datetime(year + 2000, month, day,
+    hour, minute, sec))
+
+  # misc
+  header_nbytes = int(f.read(8))
+  subtype = f.read(44)[:5]
+  h['EDF+'] = subtype in ['EDF+C', 'EDF+D']
+  h['contiguous'] = subtype != 'EDF+D'
+  h['n_records'] = int(f.read(8))
+  h['record_length'] = float(f.read(8))  # in seconds
+  nchannels = h['n_channels'] = int(f.read(4))
+
+  # read channel info
+  channels = list(range(h['n_channels']))
+  h['label'] = [f.read(16).strip() for n in channels]
+  h['transducer_type'] = [f.read(80).strip() for n in channels]
+  h['units'] = [f.read(8).strip() for n in channels]
+  h['physical_min'] = np.asarray([float(f.read(8)) for n in channels])
+  h['physical_max'] = np.asarray([float(f.read(8)) for n in channels])
+  h['digital_min'] = np.asarray([float(f.read(8)) for n in channels])
+  h['digital_max'] = np.asarray([float(f.read(8)) for n in channels])
+  h['prefiltering'] = [f.read(80).strip() for n in channels]
+  h['n_samples_per_record'] = [int(f.read(8)) for n in channels]
+  f.read(32 * nchannels)  # reserved
+
+  assert f.tell() == header_nbytes
+  return h
+
+
+class BaseEDFReader:
+  def __init__(self, file):
+    self.file = file
+
+
+  def read_header(self):
+    self.header = h = edf_header(self.file)
+
+    # calculate ranges for rescaling
+    self.dig_min = h['digital_min']
+    self.phys_min = h['physical_min']
+    phys_range = h['physical_max'] - h['physical_min']
+    dig_range = h['digital_max'] - h['digital_min']
+    assert np.all(phys_range > 0)
+    assert np.all(dig_range > 0)
+    self.gain = phys_range / dig_range
+
+
+  def read_raw_record(self):
+    '''Read a record with data and return a list containing arrays with raw
+    bytes.
+    '''
+    result = []
+    for nsamp in self.header['n_samples_per_record']:
+      samples = self.file.read(nsamp * 2)
+      if len(samples) != nsamp * 2:
+        raise EDFEndOfData
+      result.append(samples)
+    return result
+
+
+  def convert_record(self, raw_record):
+    '''Convert a raw record to a (time, signals, events) tuple based on
+    information in the header.
+    '''
+    h = self.header
+    dig_min, phys_min, gain = self.dig_min, self.phys_min, self.gain
+    time = float('nan')
+    signals = []
+    events = []
+    for (i, samples) in enumerate(raw_record):
+      if h['label'][i] == EVENT_CHANNEL:
+        ann = tal(samples)
+        time = ann[0][0]
+        events.extend(ann[1:])
+        # print(i, samples)
+        # exit()
+      else:
+        # 2-byte little-endian integers
+        dig = np.fromstring(samples, '<i2').astype(np.float32)
+        phys = (dig - dig_min[i]) * gain[i] + phys_min[i]
+        signals.append(phys)
+
+    return time, signals, events
+
+
+  def read_record(self):
+    return self.convert_record(self.read_raw_record())
+
+
+  def records(self):
+    '''
+    Record generator.
+    '''
+    try:
+      while True:
+        yield self.read_record()
+    except EDFEndOfData:
+      pass
+
+
+def load_edf(edffile):
+  '''Load an EDF+ file.
+  Very basic reader for EDF and EDF+ files. While BaseEDFReader does support
+  exotic features like non-homogeneous sample rates and loading only parts of
+  the stream, load_edf expects a single fixed sample rate for all channels and
+  tries to load the whole file.
+  Parameters
+  ----------
+  edffile : file-like object or string
+  Returns
+  -------
+  Named tuple with the fields:
+    X : NumPy array with shape p by n.
+      Raw recording of n samples in p dimensions.
+    sample_rate : float
+      The sample rate of the recording. Note that mixed sample-rates are not
+      supported.
+    sens_lab : list of length p with strings
+      The labels of the sensors used to record X.
+    time : NumPy array with length n
+      The time offset in the recording for each sample.
+    annotations : a list with tuples
+      EDF+ annotations are stored in (start, duration, description) tuples.
+      start : float
+        Indicates the start of the event in seconds.
+      duration : float
+        Indicates the duration of the event in seconds.
+      description : list with strings
+        Contains (multiple?) descriptions of the annotation event.
+  '''
+  if isinstance(edffile, str):
+    with open(edffile, 'rb') as f:
+      return load_edf(f)  # convert filename to file
+
+  reader = BaseEDFReader(edffile)
+  reader.read_header()
+
+  h = reader.header
+  log.debug('EDF header: %s' % h)
+
+  # get sample rate info
+  nsamp = np.unique(
+    [n for (l, n) in zip(h['label'], h['n_samples_per_record'])
+    if l != EVENT_CHANNEL])
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:13:      "/home/FA006/miniconda3/envs/sleep_ic/lib/python3.10/site-packages/pandas/core/computation/expressions.py:21: UserWarning: Pandas requires version '2.8.4' or newer of 'numexpr' (version '2.8.0' currently installed).\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:19:     "evalue": "No PSG/Hypnogram EDFs found.\nDATA_DIR=/home/FA006/Desktop/Dimension/journal/Work 10th nov/Sleep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0\nsearch_root=/home/FA006/Desktop/Dimension/journal/Work 10th nov/Sleep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-cassette\nExpected e.g. .../sleep-cassette/SCxxxxE0-PSG.edf and ...-Hypnogram.edf",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:24:      "Cell \u001b[0;32mIn[1], line 101\u001b[0m\n\u001b[1;32m     98\u001b[0m ann_fnames \u001b[38;5;241m=\u001b[39m \u001b[38;5;28msorted\u001b[39m(glob\u001b[38;5;241m.\u001b[39mglob(os\u001b[38;5;241m.\u001b[39mpath\u001b[38;5;241m.\u001b[39mjoin(search_root, \u001b[38;5;124m\"\u001b[39m\u001b[38;5;124m**\u001b[39m\u001b[38;5;124m\"\u001b[39m, \u001b[38;5;124m\"\u001b[39m\u001b[38;5;124m*Hypnogram.edf\u001b[39m\u001b[38;5;124m\"\u001b[39m), recursive\u001b[38;5;241m=\u001b[39m\u001b[38;5;28;01mTrue\u001b[39;00m))\n\u001b[1;32m    100\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;28mlen\u001b[39m(psg_fnames) \u001b[38;5;241m==\u001b[39m \u001b[38;5;241m0\u001b[39m \u001b[38;5;129;01mor\u001b[39;00m \u001b[38;5;28mlen\u001b[39m(ann_fnames) \u001b[38;5;241m==\u001b[39m \u001b[38;5;241m0\u001b[39m:\n\u001b[0;32m--> 101\u001b[0m     \u001b[38;5;28;01mraise\u001b[39;00m \u001b[38;5;167;01mFileNotFoundError\u001b[39;00m(\n\u001b[1;32m    102\u001b[0m         \u001b[38;5;124mf\u001b[39m\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mNo PSG/Hypnogram EDFs found.\u001b[39m\u001b[38;5;130;01m\\n\u001b[39;00m\u001b[38;5;124m\"\u001b[39m\n\u001b[1;32m    103\u001b[0m         \u001b[38;5;124mf\u001b[39m\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mDATA_DIR=\u001b[39m\u001b[38;5;132;01m{\u001b[39;00mDATA_DIR\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;130;01m\\n\u001b[39;00m\u001b[38;5;124msearch_root=\u001b[39m\u001b[38;5;132;01m{\u001b[39;00msearch_root\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;130;01m\\n\u001b[39;00m\u001b[38;5;124m\"\u001b[39m\n\u001b[1;32m    104\u001b[0m         \u001b[38;5;124mf\u001b[39m\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mExpected e.g. .../sleep-cassette/SCxxxxE0-PSG.edf and ...-Hypnogram.edf\u001b[39m\u001b[38;5;124m\"\u001b[39m\n\u001b[1;32m    105\u001b[0m     )\n\u001b[1;32m    107\u001b[0m ann_map \u001b[38;5;241m=\u001b[39m {key_from_path(a): a \u001b[38;5;28;01mfor\u001b[39;00m a \u001b[38;5;129;01min\u001b[39;00m ann_fnames}\n\u001b[1;32m    108\u001b[0m pairs \u001b[38;5;241m=\u001b[39m [(p, ann_map[key_from_path(p)]) \u001b[38;5;28;01mfor\u001b[39;00m p \u001b[38;5;129;01min\u001b[39;00m psg_fnames \u001b[38;5;28;01mif\u001b[39;00m key_from_path(p) \u001b[38;5;129;01min\u001b[39;00m ann_map]\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:25:      "\u001b[0;31mFileNotFoundError\u001b[0m: No PSG/Hypnogram EDFs found.\nDATA_DIR=/home/FA006/Desktop/Dimension/journal/Work 10th nov/Sleep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0\nsearch_root=/home/FA006/Desktop/Dimension/journal/Work 10th nov/Sleep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-cassette\nExpected e.g. .../sleep-cassette/SCxxxxE0-PSG.edf and ...-Hypnogram.edf"
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:31:    "# Sleep-EDF (sleep-edfx/1.0.0) -> NPZ (EEG Pz-Oz) | DeepSleepNet-style\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:47:    "# dhedfreader comes from https://github.com/akaraspt/deepsleepnet (file: dhedfreader.py)\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:54:    "        \"  git clone https://github.com/akaraspt/deepsleepnet\\n\"\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:65:    "# .../physionet.org/files/sleep-edfx/1.0.0\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:66:    "DATA_DIR = \"/home/FA006/Desktop/Dimension/journal/Work 10th nov/Sleep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0\"\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:71:    "# Channel selection\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:74:    "# If you want EDF-20 style (sleep-cassette only): True\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:78:    "EPOCH_SEC_SIZE = 30\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:83:    "W, N1, N2, N3, REM, UNKNOWN = 0, 1, 2, 3, 4, 5\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:84:    "ann2label = {\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:92:    "    \"Movement time\": 5\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:94:    "stage_dict = {\"W\": W, \"N1\": N1, \"N2\": N2, \"N3\": N3, \"REM\": REM, \"UNKNOWN\": UNKNOWN}\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:97:    "def resolve_channel_name(raw, desired_label: str) -> str:\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:102:    "    if desired_label in raw.ch_names:\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:103:    "        return desired_label\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:105:    "    key = desired_label.replace(\"EEG\", \"\").strip()  # e.g., \"Pz-Oz\"\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:115:    "    raise KeyError(f\"Could not find channel '{desired_label}'. Available: {raw.ch_names}\")\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:126:    "search_root = os.path.join(DATA_DIR, \"sleep-cassette\") if ONLY_CASSETTE else DATA_DIR\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:135:    "        f\"Expected e.g. .../sleep-cassette/SCxxxxE0-PSG.edf and ...-Hypnogram.edf\"\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:147:    "print(f\"Subset:                {'sleep-cassette only' if ONLY_CASSETTE else 'cassette + telemetry'}\")\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:159:    "saved, failed, skipped_no_nonwake = 0, 0, 0\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:164:    "        # ---- Read PSG & extract selected EEG channel ----\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:191:    "        # ---- Generate labels and indices ----\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:192:    "        remove_idx, labels_list, label_idx_list = [], [], []\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:197:    "            label = ann2label[ann_str[2:-1]]\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:203:    "            if label != UNKNOWN:\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:205:    "                    raise ValueError(\"Annotation duration not divisible by 30s.\")\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:206:    "                duration_epoch = int(duration_sec / EPOCH_SEC_SIZE)\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:207:    "                labels_list.append(np.ones(duration_epoch, dtype=np.int32) * label)\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:208:    "                label_idx_list.append(idx)\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:212:    "        labels = np.hstack(labels_list) if labels_list else np.array([], dtype=np.int32)\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:217:    "            select_idx = np.setdiff1d(np.arange(len(raw_ch_df)), remove_idx)\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:219:    "            select_idx = np.arange(len(raw_ch_df))\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:221:    "        # Keep only samples with labels\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:222:    "        label_idx = np.hstack(label_idx_list) if label_idx_list else np.array([], dtype=np.int64)\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:223:    "        select_idx = np.intersect1d(select_idx, label_idx)\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:225:    "        # Trim extra labels if needed (tail)\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:226:    "        if len(label_idx) > len(select_idx) and len(select_idx) > 0:\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:227:    "            extra_idx = np.setdiff1d(label_idx, select_idx)\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:228:    "            if np.all(extra_idx > select_idx[-1]):\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:229:    "                n_label_trims = int(math.ceil(len(extra_idx) / (EPOCH_SEC_SIZE * sr)))\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:230:    "                if n_label_trims != 0:\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:231:    "                    labels = labels[:-n_label_trims]\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:233:    "        raw_ch = raw_ch_df.values[select_idx]  # (n_samples, 1)\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:236:    "        epoch_samps = int(EPOCH_SEC_SIZE * sr)\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:237:    "        if epoch_samps <= 0:\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:240:    "        if len(raw_ch) % epoch_samps != 0:\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:241:    "            raise ValueError(\"Selected signal length not divisible by epoch size.\")\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:243:    "        n_epochs = int(len(raw_ch) / epoch_samps)\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:244:    "        x = np.asarray(np.split(raw_ch, n_epochs)).astype(np.float32)  # (epochs, epoch_samps, 1)\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:245:    "        y = labels.astype(np.int32)\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:250:    "        # Select sleep periods (same as original script)\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:251:    "        w_edge_mins = 30\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:254:    "            skipped_no_nonwake += 1\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:268:    "        np.savez(\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:273:    "            ch_label=ch_name,\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:288:    "print(f\"Skipped (no nonwake): {skipped_no_nonwake}\")\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:314:    "    ch_label = d[\"ch_label\"]\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:316:    "    # Expectations (for EEG in Sleep-EDF this should be 100 Hz => 3000 samples per epoch)\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:326:    "    assert np.all((y >= 0) & (y <= 4)), f\"{os.path.basename(f)}: labels outside 0..4\"\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:327:    "    assert (\"Pz-Oz\" in str(ch_label)) or (\"pz-oz\" in str(ch_label).lower()), (\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:328:    "        f\"{os.path.basename(f)}: ch_label does not look like Pz-Oz: {ch_label}\"\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:331:    "    print(f\"[OK] {os.path.basename(f)} | ch_label={ch_label} | fs={fs} | x={x.shape} | y={y.shape}\")\n",
+/home/FA006/Desktop/Sleep_dl/edf to NPZ/processor.ipynb:350:   "display_name": "sleep_ic",
+ST7021J0 same_patient_field True same_recording_field True signal_header b'EDF Annotations                                                                                         0       1       -32768  32767                                                                                   1715                                    '
+ST7071J0 same_patient_field True same_recording_field True signal_header b'EDF Annotations                                                                                         0       1       -32768  32767                                                                                   1769                                    '
+ST7092J0 same_patient_field True same_recording_field True signal_header b'EDF Annotations                                                                                         0       1       -32768  32767                                                                                   2410                                    '
+ST7131J0 same_patient_field True same_recording_field True signal_header b'EDF Annotations                                                                                         0       1       -32768  32767                                                                                   1140                                    '
+ST7132J0 same_patient_field True same_recording_field True signal_header b'EDF Annotations                                                                                         0       1       -32768  32767                                                                                   1476                                    '
+ST7141J0 same_patient_field True same_recording_field True signal_header b'EDF Annotations                                                                                         0       1       -32768  32767                                                                                   1613                                    '
+ST7142J0 same_patient_field True same_recording_field True signal_header b'EDF Annotations                                                                                         0       1       -32768  32767                                                                                   1162                                    '

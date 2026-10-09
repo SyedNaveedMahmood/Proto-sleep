@@ -1,0 +1,15 @@
+{
+  "status": "PRESPECIFIED_FOR_REVIEW; specification only, no P2 pipeline executed",
+  "channel": "calibrated EEG Fpz-Cz; Pz-Oz only as separately declared montage sensitivity scope",
+  "input_selection": "all complete physical 30-second epochs of each recording; signal duration only",
+  "timing": "retain original_epoch_index and start_seconds = 30 * index plus original fixed clock; no concatenation across records",
+  "partial_tail": "record actual trailing duration/samples; exclude incomplete 30-second tail solely by signal geometry",
+  "annotation_access": "inference epoch enumeration, signal loading and normalization do not consult stage labels",
+  "scoring_mask": "attach W/1/2/3+4/R labels after input enumeration; unknown/movement/unannotated are unscored, not removed from inference",
+  "gaps": "retain scoring/exclusion reasons and original positions; absent signal/discontinuous recording breaks context; scoring-mask gaps do not compress time",
+  "units": "preserve native EEG calibration, fs, units, montage; any conversion/normalization explicit and source-TRAIN fitted only",
+  "identity": "canonical study/person/night/full PSG ID; all nights of person stay in one split; source/annotation SHA256 recorded",
+  "st_clock_policy": "same fixed PSG/hyp clock + patient/recording fields; explicit previous-day Recordingfield exception only after strict TAL/MNE agreement",
+  "prohibited": "no sleep-onset/last-sleep bounds, label-dependent Wake trimming, target-fitted scaling or inferred continuity",
+  "p2_acceptance_required": "synthetic fixtures, differential checks and ten participant-night audits before any model training"
+}

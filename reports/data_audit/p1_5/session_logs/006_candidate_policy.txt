@@ -1,0 +1,286 @@
+DATA_DIR = "/home/FA006/Desktop/Dimension/journal/Work 10th nov/Sleep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0"
+
+# Output folder for NEW Pz-Oz NPZs (this folder will be deleted & recreated)
+OUTPUT_DIR = "/home/FA006/Desktop/Dimension/dataset/Preprocessed_Sleep-EDF_PzOz_npz"
+
+# Channel selection
+SELECT_CH = "EEG Pz-Oz"#Change Channel
+
+# If you want EDF-20 style (sleep-cassette only): True
+# If you want everything (cassette + telemetry): False
+ONLY_CASSETTE = True
+
+EPOCH_SEC_SIZE = 30
+
+# ======================
+# LABEL MAP (same as your script)
+# ======================
+W, N1, N2, N3, REM, UNKNOWN = 0, 1, 2, 3, 4, 5
+ann2label = {
+    "Sleep stage W": 0,
+OUTPUT_DIR = "/home/FA006/Desktop/Dimension/dataset/Preprocessed_Sleep-EDF_PzOz_npz"
+
+# Channel selection
+SELECT_CH = "EEG Pz-Oz"#Change Channel
+
+# If you want EDF-20 style (sleep-cassette only): True
+# If you want everything (cassette + telemetry): False
+ONLY_CASSETTE = True
+
+EPOCH_SEC_SIZE = 30
+
+# ======================
+# LABEL MAP (same as your script)
+# ======================
+W, N1, N2, N3, REM, UNKNOWN = 0, 1, 2, 3, 4, 5
+ann2label = {
+    "Sleep stage W": 0,
+    "Sleep stage 1": 1,
+    "Sleep stage 2": 2,
+    "Sleep stage 3": 3,
+print(f"PSG EDFs found:        {len(psg_fnames)}")
+print(f"Hypnogram EDFs found:  {len(ann_fnames)}")
+print(f"Matched PSG+Hyp pairs: {len(pairs)}")
+print(f"Selected channel:      {SELECT_CH}")
+print(f"Subset:                {'sleep-cassette only' if ONLY_CASSETTE else 'cassette + telemetry'}")
+
+# ======================
+# PREP OUTPUT DIR
+# ======================
+if os.path.exists(OUTPUT_DIR):
+    shutil.rmtree(OUTPUT_DIR)
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+# ======================
+# PREPROCESS
+# ======================
+saved, failed, skipped_no_nonwake = 0, 0, 0
+fail_log = []
+
+for psg_path, ann_path in tqdm(pairs, desc=f"NPZ build ({SELECT_CH})"):
+# ======================
+# PREP OUTPUT DIR
+# ======================
+if os.path.exists(OUTPUT_DIR):
+    shutil.rmtree(OUTPUT_DIR)
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+# ======================
+# PREPROCESS
+# ======================
+saved, failed, skipped_no_nonwake = 0, 0, 0
+fail_log = []
+
+for psg_path, ann_path in tqdm(pairs, desc=f"NPZ build ({SELECT_CH})"):
+    try:
+        # ---- Read PSG & extract selected EEG channel ----
+        raw = read_raw_edf(psg_path, preload=False, stim_channel=None, verbose=False)
+        ch_name = resolve_channel_name(raw, SELECT_CH)
+        raw.pick([ch_name]).load_data()
+        sr = float(raw.info["sfreq"])
+# PREP OUTPUT DIR
+# ======================
+if os.path.exists(OUTPUT_DIR):
+    shutil.rmtree(OUTPUT_DIR)
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+# ======================
+# PREPROCESS
+# ======================
+saved, failed, skipped_no_nonwake = 0, 0, 0
+fail_log = []
+
+for psg_path, ann_path in tqdm(pairs, desc=f"NPZ build ({SELECT_CH})"):
+    try:
+        # ---- Read PSG & extract selected EEG channel ----
+        raw = read_raw_edf(psg_path, preload=False, stim_channel=None, verbose=False)
+        ch_name = resolve_channel_name(raw, SELECT_CH)
+        raw.pick([ch_name]).load_data()
+        sr = float(raw.info["sfreq"])
+
+# ======================
+if os.path.exists(OUTPUT_DIR):
+    shutil.rmtree(OUTPUT_DIR)
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+# ======================
+# PREPROCESS
+# ======================
+saved, failed, skipped_no_nonwake = 0, 0, 0
+fail_log = []
+
+for psg_path, ann_path in tqdm(pairs, desc=f"NPZ build ({SELECT_CH})"):
+    try:
+        # ---- Read PSG & extract selected EEG channel ----
+        raw = read_raw_edf(psg_path, preload=False, stim_channel=None, verbose=False)
+        ch_name = resolve_channel_name(raw, SELECT_CH)
+        raw.pick([ch_name]).load_data()
+        sr = float(raw.info["sfreq"])
+
+        sig = raw.get_data()[0]  # (n_samples,)
+saved, failed, skipped_no_nonwake = 0, 0, 0
+fail_log = []
+
+for psg_path, ann_path in tqdm(pairs, desc=f"NPZ build ({SELECT_CH})"):
+    try:
+        # ---- Read PSG & extract selected EEG channel ----
+        raw = read_raw_edf(psg_path, preload=False, stim_channel=None, verbose=False)
+        ch_name = resolve_channel_name(raw, SELECT_CH)
+        raw.pick([ch_name]).load_data()
+        sr = float(raw.info["sfreq"])
+
+        sig = raw.get_data()[0]  # (n_samples,)
+        raw_ch_df = pd.DataFrame({ch_name: sig})
+        raw_ch_df.set_index(np.arange(len(raw_ch_df)), inplace=True)
+
+        # ---- Raw header ----
+        with open(psg_path, "r", errors="ignore") as f:
+            reader_raw = dhedfreader.BaseEDFReader(f)
+            reader_raw.read_header()
+            h_raw = reader_raw.header
+    try:
+        # ---- Read PSG & extract selected EEG channel ----
+        raw = read_raw_edf(psg_path, preload=False, stim_channel=None, verbose=False)
+        ch_name = resolve_channel_name(raw, SELECT_CH)
+        raw.pick([ch_name]).load_data()
+        sr = float(raw.info["sfreq"])
+
+        sig = raw.get_data()[0]  # (n_samples,)
+        raw_ch_df = pd.DataFrame({ch_name: sig})
+        raw_ch_df.set_index(np.arange(len(raw_ch_df)), inplace=True)
+
+        # ---- Raw header ----
+        with open(psg_path, "r", errors="ignore") as f:
+            reader_raw = dhedfreader.BaseEDFReader(f)
+            reader_raw.read_header()
+            h_raw = reader_raw.header
+        raw_start_dt = datetime.strptime(h_raw["date_time"], "%Y-%m-%d %H:%M:%S")
+
+        # ---- Annotation header + records ----
+        with open(ann_path, "r", errors="ignore") as f:
+            raise ValueError(f"x/y mismatch: x={x.shape}, y={y.shape}")
+
+        # Select sleep periods (same as original script)
+        w_edge_mins = 30
+        nw_idx = np.where(y != stage_dict["W"])[0]
+        if len(nw_idx) == 0:
+            skipped_no_nonwake += 1
+            continue
+
+        start_idx = nw_idx[0] - (w_edge_mins * 2)
+        end_idx = nw_idx[-1] + (w_edge_mins * 2)
+        if start_idx < 0: start_idx = 0
+        if end_idx >= len(y): end_idx = len(y) - 1
+
+        sel = np.arange(start_idx, end_idx + 1)
+        x = x[sel]
+        y = y[sel]
+
+        # Save NPZ (same keys as your old dataset)
+        filename = ntpath.basename(psg_path).replace("-PSG.edf", ".npz")
+            skipped_no_nonwake += 1
+            continue
+
+        start_idx = nw_idx[0] - (w_edge_mins * 2)
+        end_idx = nw_idx[-1] + (w_edge_mins * 2)
+        if start_idx < 0: start_idx = 0
+        if end_idx >= len(y): end_idx = len(y) - 1
+
+        sel = np.arange(start_idx, end_idx + 1)
+        x = x[sel]
+        y = y[sel]
+
+        # Save NPZ (same keys as your old dataset)
+        filename = ntpath.basename(psg_path).replace("-PSG.edf", ".npz")
+        np.savez(
+            os.path.join(OUTPUT_DIR, filename),
+            x=x,
+            y=y,
+            fs=sr,
+            ch_label=ch_name,
+            continue
+
+        start_idx = nw_idx[0] - (w_edge_mins * 2)
+        end_idx = nw_idx[-1] + (w_edge_mins * 2)
+        if start_idx < 0: start_idx = 0
+        if end_idx >= len(y): end_idx = len(y) - 1
+
+        sel = np.arange(start_idx, end_idx + 1)
+        x = x[sel]
+        y = y[sel]
+
+        # Save NPZ (same keys as your old dataset)
+        filename = ntpath.basename(psg_path).replace("-PSG.edf", ".npz")
+        np.savez(
+            os.path.join(OUTPUT_DIR, filename),
+            x=x,
+            y=y,
+            fs=sr,
+            ch_label=ch_name,
+            header_raw=h_raw,
+        # Save NPZ (same keys as your old dataset)
+        filename = ntpath.basename(psg_path).replace("-PSG.edf", ".npz")
+        np.savez(
+            os.path.join(OUTPUT_DIR, filename),
+            x=x,
+            y=y,
+            fs=sr,
+            ch_label=ch_name,
+            header_raw=h_raw,
+            header_annotation=h_ann
+        )
+        saved += 1
+
+    except Exception as e:
+        failed += 1
+        fail_log.append((os.path.basename(psg_path), str(e)))
+
+print("\n====================")
+print("PREPROCESS SUMMARY")
+print("====================")
+print(f"Saved NPZ:            {saved}")
+print(f"Failed:               {failed}")
+print(f"Skipped (no nonwake): {skipped_no_nonwake}")
+print(f"Output dir:           {OUTPUT_DIR}")
+
+if failed > 0:
+    print("\nFirst 10 failures (if any):")
+    for item in fail_log[:10]:
+        print("  ", item)
+
+# ======================
+# SANITY TESTS
+# ======================
+print("\n====================")
+print("SANITY TESTS")
+print("====================")
+
+npz_files = sorted(glob.glob(os.path.join(OUTPUT_DIR, "*.npz")))
+if len(npz_files) == 0:
+    raise RuntimeError("No NPZ produced. Check the failure log above.")
+print("SANITY TESTS")
+print("====================")
+
+npz_files = sorted(glob.glob(os.path.join(OUTPUT_DIR, "*.npz")))
+if len(npz_files) == 0:
+    raise RuntimeError("No NPZ produced. Check the failure log above.")
+
+# Load a few and validate
+check_n = min(3, len(npz_files))
+for f in npz_files[:check_n]:
+    d = np.load(f, allow_pickle=True)
+    x = d["x"]
+    y = d["y"]
+    fs = float(d["fs"])
+    ch_label = d["ch_label"]
+
+    # Expectations (for EEG in Sleep-EDF this should be 100 Hz => 3000 samples per epoch)
+    expected_len = int(EPOCH_SEC_SIZE * fs)
+
+    assert x.ndim == 3, f"{os.path.basename(f)}: x must be 3D, got {x.ndim}D"
+
+print("\nSANITY TESTS PASSED.")
+print("\nNEXT STEP:")
+print("1) Set your training DATA_DIR to OUTPUT_DIR above.")
+print("2) Train exactly as before. Your model will now use EEG Pz-Oz instead of Fpz-Cz.")
+Reference filenames ['prepare_physionet.py', '.git/hooks/prepare-commit-msg.sample']

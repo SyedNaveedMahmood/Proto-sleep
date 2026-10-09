@@ -1,0 +1,61 @@
+..............F....                                                      [100%]
+=================================== FAILURES ===================================
+____ test_selection_analysis_retains_gaps_and_does_not_claim_exact_lineage _____
+
+    def test_selection_analysis_retains_gaps_and_does_not_claim_exact_lineage():
+        labels=np.zeros(250,dtype=int);labels[100:151]=2;labels[110]=-1
+        scored=np.flatnonzero(labels>=0);nw=np.flatnonzero(labels[scored]>0)
+        indices=scored[max(0,nw[0]-60):nw[-1]+61]
+        r=selection_analysis(labels,indices)
+        assert r['candidate_rule_matches']['remove_unscored_then_60_scored_epochs_each_edge']
+        assert len(r['retained_original_epoch_runs'])==2
+        assert r['counts_by_stage']['N2']['excluded']==0
+        assert r['counts_by_stage']['Wake']['excluded']>0
+        assert r['exact_upstream_recipe_status']=='UNKNOWN'
+        assert r['zero_shot_evaluation_use'].startswith('BLOCKED')
+>       with pytest.raises(ValueError,match='unscored'):selection_analysis(labels,[110])
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/transfer/test_p1_5.py:112: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+labels = array([ 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
+        0,  0,  0,  0,  0,  0,  0,  0,  0, ... 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
+        0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0])
+indices = [110]
+
+    def selection_analysis(labels, indices):
+        """Describe measured inclusion and test candidate rules; never certify lineage."""
+        n = len(labels); idx = validate_indices(indices,len(indices))
+        if len(idx) and idx[-1] >= n:
+            raise ValueError('retained original index outside recording')
+        keep = np.zeros(n,dtype=bool); keep[idx] = True
+        if np.any(labels[idx] < 0):
+>           raise ValueError('NPZ retains movement/unknown/unannotated epoch')
+E           ValueError: NPZ retains movement/unknown/unannotated epoch
+
+src/mist_transfer/p1_5.py:69: ValueError
+
+During handling of the above exception, another exception occurred:
+
+    def test_selection_analysis_retains_gaps_and_does_not_claim_exact_lineage():
+        labels=np.zeros(250,dtype=int);labels[100:151]=2;labels[110]=-1
+        scored=np.flatnonzero(labels>=0);nw=np.flatnonzero(labels[scored]>0)
+        indices=scored[max(0,nw[0]-60):nw[-1]+61]
+        r=selection_analysis(labels,indices)
+        assert r['candidate_rule_matches']['remove_unscored_then_60_scored_epochs_each_edge']
+        assert len(r['retained_original_epoch_runs'])==2
+        assert r['counts_by_stage']['N2']['excluded']==0
+        assert r['counts_by_stage']['Wake']['excluded']>0
+        assert r['exact_upstream_recipe_status']=='UNKNOWN'
+        assert r['zero_shot_evaluation_use'].startswith('BLOCKED')
+>       with pytest.raises(ValueError,match='unscored'):selection_analysis(labels,[110])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: Regex pattern did not match.
+E        Regex: 'unscored'
+E        Input: 'NPZ retains movement/unknown/unannotated epoch'
+
+tests/transfer/test_p1_5.py:112: AssertionError
+=========================== short test summary info ============================
+FAILED tests/transfer/test_p1_5.py::test_selection_analysis_retains_gaps_and_does_not_claim_exact_lineage
+1 failed, 18 passed in 1.29s
