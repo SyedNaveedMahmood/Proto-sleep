@@ -45,3 +45,31 @@ Run completion markers remain in ignored local runs. Published `audit.json` and
 `AUDIT_FINAL_COPY_PASTE.txt` are exact audit outputs. `FINAL_COPY_PASTE.txt` adds
 session validation/findings, so it is not misrepresented as an unchanged run
 artifact with the original completion digest.
+
+## P1.5 (2026-10-09; authorized follow-up scope)
+
+Historical input/report commit: `f86ac39863cf8c0c40faff105db824206b69b497`.
+The original failed P1 report and console logs remain unchanged. P1.5 reports
+live exclusively under `reports/data_audit/p1_5/`. Expensive waveform proofs are
+reused only after input hashes match the 594 recorded P1 hashes; no raw waveform
+realignment or NPZ-array loading is required. A local trusted stat/hash receipt
+supports subsequent reuse and a cheap postflight guards input stability.
+
+Annotation validation independently compares a bounded full-byte TAL decoder,
+MNE 1.10.2 and pyEDFlib 0.1.42 controls. No reader writes original data. The EDF+
+Recordingfield/fixed-clock exception is documented alongside the original
+headers and decoded timing evidence. Header demographic disagreements are
+quarantined conservatively at person level. No epoch duration, stage or date is
+repaired to obtain a passing result.
+
+Adjacent archive evidence uses its central directory and CRC-checked tiny
+MANIFEST.TXT members only. NPZ payloads are not extracted or re-audited from the
+archive; the directory's cached raw-waveform proofs remain the content evidence.
+Local `processor.ipynb` and DeepSleepNet `prepare_physionet.py` are hash-bound
+candidate references, never executed. A Pz-Oz notebook cannot establish Fpz-Cz
+NPZ execution lineage; candidate-rule agreement is reported as compatibility.
+
+EDF+ normative reference (header and TAL grammar):
+https://www.edfplus.info/specs/edfplus.html . These rules permit zero record
+duration for annotation-only files, prescribe timestamped annotation lists, and
+separate the fixed clock from the EDF+ descriptive recording identification.
