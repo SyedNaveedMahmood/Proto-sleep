@@ -90,3 +90,8 @@ four VAL people; seeds are repeated optimizations, not independent subjects.
 Detailed predictions, waveform banks/checkpoints and logs stay local/ignored.
 Publish aggregate metrics only. Stop after P3B; source validation establishes
 reference models, not reserved performance or independent external transfer.
+
+
+## Validated completion
+
+All 12 frozen-v1 runs completed; see [the aggregate report](../reports/p3b/FINAL_COPY_PASTE.txt). Training implementation commit: 661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23. The later report-only commit intentionally changes Git HEAD. To use the runner to verify/resume these historical artifacts, retain the original frozen implementation identity and environment; a current report-commit HEAD is rejected rather than silently accepted. Standalone read-only output digest verification does not change training or model selection. The completed-run resume check was performed before creating the report commit and did not train or alter sealed outputs.

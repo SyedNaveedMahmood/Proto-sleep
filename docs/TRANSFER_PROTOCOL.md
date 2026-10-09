@@ -141,3 +141,21 @@ validated output markers. See `docs/P3B_RUNNER.md` for execution/resource rules.
 Stop after P3B. This phase supplies SC development reference models, without
 reserved SC evaluation or genuine external-transfer evidence. Four VAL people
 limit inference about performance variability; seeds are not new participants.
+
+
+## Completed P3B source-only reference runs
+
+All 12 model/seed runs have validated completion markers. The frozen implementation is 661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23; run fingerprint a9146071f32c148e30ed84a6763d77cc82c3de83bf6f90719be0f774c114754b. Source roles, split, preprocessing, five-stage mapping and selection policy were unchanged. No reserved SC waveforms/annotations, ST or SHHS were accessed; no MCR or augmentation was trained.
+
+| Model | Participant Macro-F1 mean ± seed SD | Pooled Macro-F1 mean ± seed SD |
+|---|---:|---:|
+| attnsleep | 0.312650 ± 0.007300 | 0.335615 ± 0.010289 |
+| evidence | 0.718031 ± 0.016188 | 0.738142 ± 0.015252 |
+| summary_only | 0.512157 ± 0.000532 | 0.515835 ± 0.000254 |
+| raw_context | 0.723511 ± 0.005192 | 0.740560 ± 0.004202 |
+
+These are checkpoint-selection source-VAL scores from four participants, pooling nights within participant. Seeds are repeated optimization/anchor variation, not independent people. Maximum budgets matched, while realized early-stop epochs/updates differed. AttnSleep was weak; its selected seed-789 model predicted no N3 or REM. Summary-only mean N1 F1 was 0.006557. These negative results were retained without changing the recipe. This is the frozen repository-baseline policy and does not establish published AttnSleep accuracy, clinical morphology, novelty, SOTA, reserved performance or independent external transfer. EDF-20/78 overlap.
+
+Gate A passed with a maximum-budget estimate of 11.297 GPU hours against the prespecified 24-hour ceiling. Gate B completed in 5:56:13; all runs used deterministic FP32 with AMP/TF32 off. The 433 realized epochs involved 2,155,474 optimizer updates. Focused CPU tests: 40 passed/4 CUDA skipped; CPU regression: 189 passed/5 CUDA skipped; all four required CUDA exact-resume fixtures passed separately. Completed-run resume verified unchanged outputs, and changed learning rate under resume was rejected before data access.
+
+Full per-seed metrics, stage F1/confusions, calibration, participant variability, parameter counts and resource measurements are in [the P3B aggregate report](../reports/p3b/FINAL_COPY_PASTE.txt) and [machine-readable results](../reports/p3b/results.json). Checkpoints, predictions, banks and full console logs remain local/ignored. Stop after P3B for review; additional MCR, reserved-cohort or external-study work requires separate authorization and applicable data gates.

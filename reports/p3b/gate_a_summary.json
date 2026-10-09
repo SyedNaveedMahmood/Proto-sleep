@@ -1,0 +1,220 @@
+{
+  "benchmarks": [
+    {
+      "class_diagnostics": {
+        "largest_class_fraction": 1.0,
+        "near_collapse_98_percent": true,
+        "one_predicted_class": true,
+        "predicted_class_counts": [
+          21789,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "parameters": 522805,
+      "resources": {
+        "best_checkpoint_seconds": 0.022972011007368565,
+        "best_epoch": 1,
+        "epoch": 1,
+        "epoch_wall_seconds": 69.63641162900603,
+        "finite_loss_logits_gradients_state": true,
+        "last_and_history_checkpoint_seconds": 0.07017883300432004,
+        "last_grad_norm": 0.8267336487770081,
+        "maximum_grad_norm": 106.68700408935547,
+        "optimizer_steps": 4978,
+        "peak_gpu_allocated_bytes": 693566464,
+        "peak_gpu_reserved_bytes": 2315255808,
+        "peak_process_rss_KiB": 1666892,
+        "scored_training_epochs": 79025,
+        "seconds": 69.56623279600171,
+        "stale": 0,
+        "train_io_seconds": 6.073884121666197,
+        "train_nll": 0.6455547568543935,
+        "train_scored_epochs_per_second": 1213.8776796363459,
+        "train_seconds": 65.10128765500849,
+        "val_accuracy": 0.6684106659323512,
+        "val_io_seconds": 1.629499781964114,
+        "val_nll": 2.4337790597043534,
+        "val_physical_epochs_per_second": 4913.913160730207,
+        "val_pooled_macro_f1": 0.1602508733804638,
+        "val_subject_macro_f1": 0.15996934189194667,
+        "validation_seconds": 4.43556882001576
+      },
+      "seed": 123,
+      "trainable_parameters": 522805,
+      "variant": "attnsleep"
+    },
+    {
+      "class_diagnostics": {
+        "largest_class_fraction": 0.7466611593005645,
+        "near_collapse_98_percent": false,
+        "one_predicted_class": false,
+        "predicted_class_counts": [
+          16269,
+          0,
+          4712,
+          682,
+          126
+        ]
+      },
+      "parameters": 13556,
+      "resources": {
+        "best_checkpoint_seconds": 0.021768869017250836,
+        "best_epoch": 1,
+        "epoch": 1,
+        "epoch_wall_seconds": 85.9032546330127,
+        "finite_loss_logits_gradients_state": true,
+        "last_and_history_checkpoint_seconds": 0.0051091590139549226,
+        "last_grad_norm": 9.084442138671875,
+        "maximum_grad_norm": 45.21136474609375,
+        "optimizer_steps": 4978,
+        "peak_gpu_allocated_bytes": 195537408,
+        "peak_gpu_reserved_bytes": 257949696,
+        "peak_process_rss_KiB": 1873620,
+        "scored_training_epochs": 79025,
+        "seconds": 85.89814547399874,
+        "stale": 0,
+        "train_io_seconds": 6.200110198667971,
+        "train_nll": 0.6802566017329985,
+        "train_scored_epochs_per_second": 1046.791226506677,
+        "train_seconds": 75.49260826699901,
+        "val_accuracy": 0.835605121850475,
+        "val_io_seconds": 1.6439844823034946,
+        "val_nll": 0.5064502847610679,
+        "val_physical_epochs_per_second": 2099.7556629280903,
+        "val_pooled_macro_f1": 0.4715802764409827,
+        "val_subject_macro_f1": 0.42599140587434975,
+        "validation_seconds": 10.380255372001557
+      },
+      "seed": 123,
+      "trainable_parameters": 13556,
+      "variant": "evidence"
+    },
+    {
+      "class_diagnostics": {
+        "largest_class_fraction": 0.9990821056496397,
+        "near_collapse_98_percent": true,
+        "one_predicted_class": false,
+        "predicted_class_counts": [
+          21769,
+          0,
+          20,
+          0,
+          0
+        ]
+      },
+      "parameters": 12116,
+      "resources": {
+        "best_checkpoint_seconds": 0.004389688983792439,
+        "best_epoch": 1,
+        "epoch": 1,
+        "epoch_wall_seconds": 18.30116226398968,
+        "finite_loss_logits_gradients_state": true,
+        "last_and_history_checkpoint_seconds": 0.0024623670033179224,
+        "last_grad_norm": 0.6377195715904236,
+        "maximum_grad_norm": 3.0591092109680176,
+        "optimizer_steps": 4978,
+        "peak_gpu_allocated_bytes": 68585472,
+        "peak_gpu_reserved_bytes": 69206016,
+        "peak_process_rss_KiB": 1873620,
+        "scored_training_epochs": 79025,
+        "seconds": 18.298699896986363,
+        "stale": 0,
+        "train_io_seconds": 5.963880080846138,
+        "train_nll": 0.9548123839941631,
+        "train_scored_epochs_per_second": 5336.674298765274,
+        "train_seconds": 14.807911365001928,
+        "val_accuracy": 0.6693285602827115,
+        "val_io_seconds": 1.616996382974321,
+        "val_nll": 0.8977661432654856,
+        "val_physical_epochs_per_second": 6254.28703526233,
+        "val_pooled_macro_f1": 0.16248789040705552,
+        "val_subject_macro_f1": 0.16161003668517154,
+        "validation_seconds": 3.484969570010435
+      },
+      "seed": 123,
+      "trainable_parameters": 260,
+      "variant": "summary_only"
+    },
+    {
+      "class_diagnostics": {
+        "largest_class_fraction": 0.7199963284225985,
+        "near_collapse_98_percent": false,
+        "one_predicted_class": false,
+        "predicted_class_counts": [
+          15688,
+          0,
+          4402,
+          1027,
+          672
+        ]
+      },
+      "parameters": 34197,
+      "resources": {
+        "best_checkpoint_seconds": 0.02019316199584864,
+        "best_epoch": 1,
+        "epoch": 1,
+        "epoch_wall_seconds": 52.09846899702097,
+        "finite_loss_logits_gradients_state": true,
+        "last_and_history_checkpoint_seconds": 0.005497183999978006,
+        "last_grad_norm": 10.611851692199707,
+        "maximum_grad_norm": 116.13584899902344,
+        "optimizer_steps": 4978,
+        "peak_gpu_allocated_bytes": 194019840,
+        "peak_gpu_reserved_bytes": 243269632,
+        "peak_process_rss_KiB": 1878468,
+        "scored_training_epochs": 79025,
+        "seconds": 52.092971813020995,
+        "stale": 0,
+        "train_io_seconds": 6.093868096562801,
+        "train_nll": 0.42059629497834244,
+        "train_scored_epochs_per_second": 1672.993657485633,
+        "train_seconds": 47.23568415601039,
+        "val_accuracy": 0.8602505851576484,
+        "val_io_seconds": 1.6244119617913384,
+        "val_nll": 0.5632578094571596,
+        "val_physical_epochs_per_second": 4509.562399511815,
+        "val_pooled_macro_f1": 0.5586188407716303,
+        "val_subject_macro_f1": 0.5180510585973684,
+        "validation_seconds": 4.833284933003597
+      },
+      "seed": 123,
+      "trainable_parameters": 33957,
+      "variant": "raw_context"
+    }
+  ],
+  "estimated_maximum_training_hours": 11.296964876151469,
+  "grid": {
+    "optimizer_steps_per_epoch": 4978,
+    "reserved_access": false,
+    "smoke": false,
+    "train_physical_epochs": 79984,
+    "train_recordings": 29,
+    "train_scored_epochs": 79025,
+    "train_subjects": 15,
+    "val_physical_epochs": 21796,
+    "val_recordings": 8,
+    "val_scored_epochs": 21789,
+    "val_subjects": 4
+  },
+  "hardware": {
+    "capability": [
+      8,
+      9
+    ],
+    "cublas_workspace_config": ":4096:8",
+    "cuda": "12.1",
+    "cudnn": 90100,
+    "cudnn_allow_tf32": false,
+    "matmul_allow_tf32": false,
+    "name": "NVIDIA GeForce RTX 4080 SUPER",
+    "total_memory_bytes": 16718168064
+  },
+  "initial_epochs_complete": false,
+  "initial_epochs_resumable": true,
+  "operational_ceiling_hours": 24,
+  "run_fingerprint": "a9146071f32c148e30ed84a6763d77cc82c3de83bf6f90719be0f774c114754b",
+  "status": "PASS"
+}

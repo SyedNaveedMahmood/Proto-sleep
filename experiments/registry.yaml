@@ -128,7 +128,7 @@ phases:
     optional_augmentation_cuda: pending
     scientific_performance_claim: none
   P3B:
-    status: implementation_pending_gate_A
+    status: complete_all_12_validated_source_VAL_stop_for_review
     reviewed_parent: de33464ec8c2e849bafd39fa3498ce3991e52f94
     version: p3b-sc-full-v1
     configuration: configs/p3b_sc_matched_v1.json
@@ -156,3 +156,30 @@ phases:
     optional_augmentation: false
     local_output: mist_transfer_runs/p3b/v1/
     local_summary: mist_transfer_runs/p3b/FINAL_COPY_PASTE.txt
+
+    implementation_commit: 661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23
+    run_fingerprint: a9146071f32c148e30ed84a6763d77cc82c3de83bf6f90719be0f774c114754b
+    gate_a_status: PASS
+    gate_a_estimated_maximum_hours: 11.296964876151469
+    gate_b_status: ALL_12_VALIDATED_COMPLETE
+    completed_runs: 12
+    actual_epochs_total: 433
+    optimizer_updates_total: 2155474
+    focused_tests_passed: 40
+    regression_tests_passed: 189
+    regression_skipped_cuda: 5
+    separate_cuda_exact_resume_passed: 4
+    completed_resume_verified: true
+    changed_resume_policy_rejected: true
+    numerical_failures: 0
+    software_failures: 0
+    public_summary: reports/p3b/FINAL_COPY_PASTE.txt
+    public_results: reports/p3b/results.json
+    public_validation: reports/p3b/validation_summary.json
+    primary_macro_f1_mean_by_model:
+      attnsleep: 0.31264998510934044
+      evidence: 0.718031413500929
+      summary_only: 0.5121572415899456
+      raw_context: 0.7235109184392426
+    next_phase_authorized: false
+    scientific_performance_scope: checkpoint_selection_source_VAL_four_participants_only
