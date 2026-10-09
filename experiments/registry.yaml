@@ -1,6 +1,6 @@
 version: 1
 project: MIST-Transfer-v3
-scope: P0-P1-P1.5-P2-SC-plus-authorized-P3A-development-only
+scope: P0-P1-P1.5-P2-SC-P3A-plus-authorized-P3B-source-TRAIN-VAL-only
 experiments: []
 phases:
   P0:
@@ -127,3 +127,32 @@ phases:
     p3b_core_four_readiness: ready_for_review_and_separate_authorization
     optional_augmentation_cuda: pending
     scientific_performance_claim: none
+  P3B:
+    status: implementation_pending_gate_A
+    reviewed_parent: de33464ec8c2e849bafd39fa3498ce3991e52f94
+    version: p3b-sc-full-v1
+    configuration: configs/p3b_sc_matched_v1.json
+    runner: scripts/run_transfer_p3b.py
+    correctness_runner: scripts/check_transfer_p3b.py
+    split_fingerprint: 3e7a7260aae50ca522752f1cede41246daf1b2f6a8fd482800cfda97b4564e84
+    variants: [attnsleep, evidence, summary_only, raw_context]
+    seeds: [123, 456, 789]
+    train_subjects: 15
+    train_recordings: 29
+    train_physical_epochs: 79984
+    train_scored_epochs: 79025
+    val_subjects: 4
+    val_recordings: 8
+    val_physical_epochs: 21796
+    val_scored_epochs: 21789
+    maximum_epochs: 60
+    patience: 12
+    gate_a_estimated_maximum_hours_ceiling: 24
+    authorized: true
+    reserved_access: false
+    st_access: false
+    shhs_access: false
+    mcr_trained: false
+    optional_augmentation: false
+    local_output: mist_transfer_runs/p3b/v1/
+    local_summary: mist_transfer_runs/p3b/FINAL_COPY_PASTE.txt

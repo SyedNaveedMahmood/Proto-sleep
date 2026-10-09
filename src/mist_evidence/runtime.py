@@ -6,6 +6,7 @@ import hashlib
 import json
 import os
 import random
+import resource
 import time
 from dataclasses import asdict, dataclass
 from pathlib import Path
@@ -14,7 +15,29 @@ import numpy as np
 import torch
 from sklearn.metrics import accuracy_score, cohen_kappa_score, confusion_matrix, f1_score
 
-from .data import Recording, blocks, fingerprint
+from .data import Recording, blocks, fingerprint, sha256_file
+
+
+class EpochPaused(InterruptedError):
+    """A saved epoch boundary, never a completed training run."""
+
+
+def pause_epoch(run,signature,epoch):
+    atomic_json({'signature':signature,'epoch':epoch,'status':'PAUSED_NOT_COMPLETE',
+        'outputs':{name:sha256_file(run/name) for name in ['last.pt','best.pt','history.csv','provenance.json']}},run/'PAUSED.json')
+    print(f'PAUSED at epoch {epoch}: resumable under unchanged training configuration',flush=True)
+    raise EpochPaused(f'paused after epoch {epoch}')
+
+
+def finite_checkpoint(model,optimizer):
+    tensors=list(model.state_dict().values())
+    tensors.extend(v for state in optimizer.state.values() for v in state.values() if torch.is_tensor(v))
+    if not all(torch.isfinite(v).all().item() for v in tensors):
+        raise FloatingPointError('non-finite model/optimizer checkpoint state')
+
+
+def io_snapshot(recordings):
+    return sum(getattr(r.x,'io_seconds',0.) for r in recordings)
 from .model import EvidenceModel
 
 
@@ -144,7 +167,8 @@ def write_csv(rows: list[dict], path: Path):
 
 def train(model: EvidenceModel, train_records: list[Recording], val_records: list[Recording],
           cfg: TrainConfig, run: Path, bank: dict, provenance: dict, device: torch.device,
-          resume: bool = False, interrupt_after_epoch: int | None = None, evaluate_fn=None):
+          resume: bool = False, interrupt_after_epoch: int | None = None, evaluate_fn=None,
+          pause_after_epoch: int | None = None, epoch_callback=None, monitor: bool = False):
     """Train core-block conditional likelihoods; evaluate whole continuous segments.
 
     Checkpoints are saved at epoch boundaries. Mid-epoch interruption repeats that
@@ -178,6 +202,11 @@ def train(model: EvidenceModel, train_records: list[Recording], val_records: lis
         print(f"VERIFIED COMPLETE: {run}", flush=True)
         return model, metrics, rows
     if resume and last.exists():
+        paused=run/'PAUSED.json'
+        if paused.exists():
+            marker=json.loads(paused.read_text())
+            if marker['signature']!=signature or any(sha256_file(run/name)!=digest for name,digest in marker['outputs'].items()):
+                raise ValueError('paused checkpoint digest/signature mismatch')
         state = load_trusted(last)
         if state["signature"] != signature:
             raise ValueError("resume refused: data, anchors, configuration or provenance changed")
@@ -186,6 +215,7 @@ def train(model: EvidenceModel, train_records: list[Recording], val_records: lis
         best_score, best_epoch, stale = state["best_score"], state["best_epoch"], state["stale"]
         start, history = state["epoch"] + 1, state["history"]
         restore_rng(state["rng"])
+        if paused.exists():paused.unlink()
     elif resume and best.exists():
         raise RuntimeError("best.pt without last.pt is not a resumable completed experiment")
     atomic_json({**identity, "signature": signature}, run / "provenance.json")
@@ -199,6 +229,9 @@ def train(model: EvidenceModel, train_records: list[Recording], val_records: lis
         total, count = 0.0, 0
         order = torch.randperm(len(items)).tolist()
         t0 = time.perf_counter()
+        io_start=io_snapshot(train_records);val_io_start=io_snapshot(val_records)
+        maximum_grad_norm=0.;progress=t0
+        if monitor and device.type=='cuda':torch.cuda.reset_peak_memory_stats()
         for number in order:
             ri, a, b, lo, hi = items[number]
             x = torch.from_numpy(train_records[ri].x[a:b]).to(device)
@@ -208,16 +241,25 @@ def train(model: EvidenceModel, train_records: list[Recording], val_records: lis
             features = torch.cat([model.encode(x[i:i+cfg.encode_batch])
                                   for i in range(0, len(x), cfg.encode_batch)])
             emissions = model.emissions(features[None])[:, lo-a:hi-a]
+            if not torch.isfinite(emissions).all():raise FloatingPointError('non-finite training logits')
             valid = torch.ones(y.shape, dtype=torch.bool, device=device)
             loss = model.loss(emissions, y, valid)
             if not torch.isfinite(loss):
                 raise FloatingPointError("non-finite training loss")
             loss.backward()
             norm = torch.nn.utils.clip_grad_norm_(model.parameters(), cfg.grad_clip, error_if_nonfinite=True)
+            maximum_grad_norm=max(maximum_grad_norm,float(norm))
             optimizer.step()
             total += float(loss.detach()) * (hi-lo); count += hi-lo
+            if monitor and time.perf_counter()-progress>=30:
+                print(f'epoch {epoch}: trained {count} scored epochs, {time.perf_counter()-t0:.1f}s',flush=True)
+                progress=time.perf_counter()
+        train_seconds=time.perf_counter()-t0;val_start=time.perf_counter()
         metrics, rows = evaluator(model, val_records, device, cfg.encode_batch)
+        validation_seconds=time.perf_counter()-val_start
+        finite_checkpoint(model,optimizer)
         score = metrics["mean_subject_macro_f1"]
+        best_save_start=time.perf_counter()
         improved = score > best_score + 1e-8
         stale = 0 if improved else stale+1
         if improved:
@@ -225,12 +267,23 @@ def train(model: EvidenceModel, train_records: list[Recording], val_records: lis
             atomic_torch_save({"state_dict": model.state_dict(), "model_config": model.cfg.dictionary(),
                                "bank": bank, "signature": signature, "best_epoch": epoch,
                                "metrics": metrics}, best)
+        best_save_seconds=time.perf_counter()-best_save_start if improved else 0.
         elapsed = time.perf_counter()-t0
         history.append({"epoch": epoch, "train_nll": total/count, "val_nll": metrics["nll"],
                         "val_subject_macro_f1": score, "val_pooled_macro_f1": metrics["macro_f1"],
                         "val_accuracy": metrics["accuracy"], "best_epoch": best_epoch,
                         "stale": stale, "seconds": elapsed, "optimizer_steps": len(items),
                         "last_grad_norm": float(norm)})
+        if monitor:
+            history[-1].update(train_seconds=train_seconds,validation_seconds=validation_seconds,
+                train_io_seconds=io_snapshot(train_records)-io_start,val_io_seconds=io_snapshot(val_records)-val_io_start,
+                scored_training_epochs=count,maximum_grad_norm=maximum_grad_norm,
+                peak_gpu_allocated_bytes=torch.cuda.max_memory_allocated() if device.type=='cuda' else 0,
+                peak_gpu_reserved_bytes=torch.cuda.max_memory_reserved() if device.type=='cuda' else 0,
+                peak_process_rss_KiB=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,
+                best_checkpoint_seconds=best_save_seconds,
+                finite_loss_logits_gradients_state=True)
+        checkpoint_start=time.perf_counter()
         write_csv(history, run / "history.csv")
         atomic_torch_save({"state_dict": model.state_dict(), "optimizer": optimizer.state_dict(),
                            "signature": signature, "epoch": epoch, "best_score": best_score,
@@ -238,6 +291,10 @@ def train(model: EvidenceModel, train_records: list[Recording], val_records: lis
                            "rng": rng_state()}, last)
         print(f"e{epoch:03d} nll={total/count:.5f} valMF1={score:.5f} "
               f"valAcc={metrics['accuracy']:.5f} best={best_epoch} steps={len(items)} {elapsed:.1f}s", flush=True)
+        if epoch_callback is not None:
+            epoch_callback(run,signature,history[-1],metrics,time.perf_counter()-checkpoint_start)
+        if pause_after_epoch==epoch:
+            pause_epoch(run,signature,epoch)
         if interrupt_after_epoch == epoch:
             raise InterruptedError("test-only simulated epoch-boundary interruption")
     payload = load_trusted(best)

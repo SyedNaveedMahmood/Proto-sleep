@@ -103,3 +103,41 @@ outside P3A authorization. AMP is disabled until separately validated. The
 optional conservative source gain adapter is not part of the core four-way
 CUDA smoke. See `docs/P3A_RUNNER.md` for streaming, resume and provenance rules.
 Stop after P3A for review; the SC gate does not approve ST or SHHS.
+
+## P3B authorized full-data source reference training
+
+The subsequent P3B authorization preserves the exact P3A split, SC eligibility,
+channel, stage mapping, physical grid, scoring masks, radius zero/no-CRF and
+fixed-five metrics. Development remains 15 TRAIN/4 VAL people only; all 55
+reserved participants, ST and SHHS remain inaccessible. Do not regenerate the
+split or inspect reserved descriptors in this phase.
+
+The reviewed proposed budget is now frozen in `configs/p3b_sc_matched_v1.json`:
+AttnSleep/evidence/summary_only/raw_context, seeds 123/456/789, AdamW lr 0.0003,
+weight decay 0.0001, maximum 60 epochs, patience 12, core/encoding batch 16,
+gradient clip 5, deterministic FP32. Full physical TRAIN/VAL counts are
+79,984/21,796; scored loss/metric counts are 79,025/21,789. All controls share
+the same maximum budget and stopping/selection policy; report realized epochs
+and updates rather than claiming equal realized compute. Preserve negative
+model results/class collapse without recipe changes.
+
+Reuse verified full-TRAIN normalization. Before full scores, freeze a real
+TRAIN waveform-medoid bank per seed using the existing recipe, with the same
+bank across the seed's four controls. No augmentation, additional losses or
+architecture changes are authorized. The existing P3A CLI stays smoke-only;
+`scripts/run_transfer_p3b.py` is a separate explicitly authorized full-data path.
+
+Gate A requires synthetic/regression success, exact interrupted CUDA resume,
+full-grid identity/mask checks, and one full TRAIN epoch plus VAL pass per model
+at seed 123. Initial epochs pause with complete optimizer/RNG state under the
+unchanged 60-epoch configuration, without completion markers. The prespecified
+practicality ceiling is a measured maximum-budget estimate of 24 GPU hours.
+Gate B may resume only after correctness/capacity PASS, running all 12 model/seed
+combinations sequentially. Freeze/commit code before benchmarking; any later
+correctness fix requires a new versioned identity. All terminal output and
+checkpoint/metric provenance must be retained. Never claim completion without
+validated output markers. See `docs/P3B_RUNNER.md` for execution/resource rules.
+
+Stop after P3B. This phase supplies SC development reference models, without
+reserved SC evaluation or genuine external-transfer evidence. Four VAL people
+limit inference about performance variability; seeds are not new participants.

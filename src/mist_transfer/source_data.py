@@ -1,6 +1,7 @@
 """TRAIN-only statistics/anchors and bounded lazy source recording views."""
 from __future__ import annotations
 import math
+import time
 import numpy as np
 import pyedflib
 from pathlib import Path
@@ -38,6 +39,7 @@ class LazyEpochArray:
     def __init__(self,record,indices,normalization):
         check_development([record]);self.record=record;self.indices=indices;self.normalization=normalization
         self.shape=(len(indices),1,3000);self.dtype=np.dtype('float32');self.peak_bytes=0;self.read_epochs=0
+        self.io_seconds=0.;self.read_batches=0
         proofs=SourceProofs()
         for path,sha,saved in [('path','source_sha256','source_stat_proof'),('annotation_source','annotation_sha256','annotation_stat_proof')]:
             proofs.checked[str(Path(record[path]).resolve())]=record[saved];proofs.verify(record[path],record[sha])
@@ -50,6 +52,7 @@ class LazyEpochArray:
     def __len__(self):return len(self.indices)
 
     def __getitem__(self,selection):
+        started=time.perf_counter()
         chosen=self.indices[selection];single=np.ndim(chosen)==0;chosen=np.atleast_1d(chosen)
         wave=np.empty((len(chosen),1,3000),dtype=np.float32)
         if len(chosen):
@@ -64,6 +67,7 @@ class LazyEpochArray:
         wave=(wave-self.normalization['mean_uV'])/self.normalization['std_uV']
         if not np.isfinite(wave).all():raise ValueError('nonfinite normalized source')
         self.peak_bytes=max(self.peak_bytes,wave.nbytes);self.read_epochs+=len(wave)
+        self.read_batches+=1;self.io_seconds+=time.perf_counter()-started
         return wave[0] if single else wave
 
 
