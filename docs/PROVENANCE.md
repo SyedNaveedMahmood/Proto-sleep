@@ -114,9 +114,9 @@ Reproduction (from this worktree; redirect full output to .txt with pipefail):
 
 ```
 .venv/bin/python scripts/build_transfer_manifest.py --help
-.venv/bin/python scripts/build_transfer_manifest.py --mode pilot --seed 123 --dry-run --output-dir mist_transfer_runs/p2_sc/pilot
-.venv/bin/python scripts/build_transfer_manifest.py --mode pilot --seed 123 --output-dir mist_transfer_runs/p2_sc/pilot
-.venv/bin/python scripts/build_transfer_manifest.py --mode complete --seed 123 --pilot-dir mist_transfer_runs/p2_sc/pilot --output-dir mist_transfer_runs/p2_sc/canonical
+.venv/bin/python scripts/build_transfer_manifest.py --mode pilot --seed 123 --dry-run --output-dir mist_transfer_runs/p2_sc/v1/pilot
+.venv/bin/python scripts/build_transfer_manifest.py --mode pilot --seed 123 --output-dir mist_transfer_runs/p2_sc/v1/pilot
+.venv/bin/python scripts/build_transfer_manifest.py --mode complete --seed 123 --pilot-dir mist_transfer_runs/p2_sc/v1/pilot --output-dir mist_transfer_runs/p2_sc/v1/canonical
 ```
 
 Use --resume with the same code/environment/inputs after interruption or to
@@ -126,3 +126,32 @@ then `mist_transfer.preprocessing.iter_recording` for lazy inference chunks.
 Canonical manifests, annotation metadata, waveform checks and terminal logs
 stay local under ignored `mist_transfer_runs/p2_sc/`; no participant arrays or
 private outputs are committed. Tests generate only synthetic EDF+ fixtures.
+
+Validated implementation: `9f4ba06c71f0e577ebb58e2a8eba57f88605010e`
+(initial implementation: `dc53edab7ef308a6fc99a5af42c6a35715afe60b`).
+Canonical v1 covers exactly 74 subjects/146 recordings/397,832 physical epochs:
+396,378 scored plus 119 Movement and 1,335 unknown positions. No extra subject
+was excluded; no real input invariant failed. All 96 historical P1/P1.5 report
+files remain byte-identical to the reviewed parent.
+
+Focused tests: 25 passed. Full CPU regression: 149 passed, one CUDA-only test
+skipped with GPU disabled. The ten-person E/F/G and gap-case pilot streamed
+27,678 physical epochs and compared 66 bounded waveform epochs against MNE
+and digital calibration. Maximum discrepancy was 7.616352832e-6 uV, within the
+prespecified float32 tolerance. Full build verified 292 unchanged SC file
+proofs without rehashing or repeating NPZ waveform alignment. Completed pilot
+and full manifests resumed with all output digests verified and no EEG reload.
+
+Final pilot external wall time: 4.14 s; peak RSS 600,532 KiB. Full metadata build:
+2.31 s; peak RSS 562,084 KiB (includes library/import and JSON overhead). Largest
+float32 waveform batch: 192,000 bytes. No signal arrays were exported. Earlier
+implementation outputs remain local as historical checks; `p2_sc/v1/` is final.
+Detailed measurements, exact key commands and full terminal output are in
+`mist_transfer_runs/p2_sc/{validation_summary.json,COMMANDS.txt,session_logs/}`.
+
+AuditRun resume binds the recorded Git SHA as well as the implementation hash,
+environment/config/sources. To resume these completed runs after later commits,
+use a worktree at the validated implementation with the same environment/output
+identity, or create a new output directory. `load_complete` verifies and loads
+the existing manifests under the current code without rerunning preprocessing.
+No split, normalization fit, P3 baseline development or training was performed.

@@ -126,3 +126,12 @@ volts converted to uV and an EDF digital-calibration oracle. Tolerance is fixed
 before data: rtol=2*float32 eps, atol=2e-5 uV. Atomically completed manifests
 verify every descriptor digest; resume binds code/environment/config/sources.
 Outputs in `mist_transfer_runs/p2_sc/` stay out of GitHub.
+
+P2-SC validation passed for 397,832 full physical epochs across the exact
+146-recording subset. Scoring masks retain 119 Movement and 1,335 unknown
+epochs for inference. The eligible real subset has no incomplete physical
+tails or unannotated epochs; these cases are covered by synthetic fixtures.
+Canonical manifest: `mist_transfer_runs/p2_sc/v1/canonical/manifest.json`.
+The data gate is VERIFIED_SC_ONLY for future baseline development; before
+training, freeze source subject roles and enforce masked loss/metrics and
+TRAIN-only fitting. No ST/SHHS scope is approved by this SC gate.

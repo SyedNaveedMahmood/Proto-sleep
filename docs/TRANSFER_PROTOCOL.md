@@ -49,3 +49,11 @@ before target scores. SC/ST person linkage is UNKNOWN, so this remains an
 exploratory cross-study proxy. SHHS access/usability is UNKNOWN and P2 BLOCKED.
 See `reports/data_audit/p1_5/gate_decisions.json` for scope-specific evidence.
 Stop after P1.5 for review; no scope is authorized to run P2 in this session.
+
+The subsequent authorized P2-SC phase implements only the reviewed raw SC
+subset and passes its data gate: 74 subjects/146 recordings, all complete
+physical epochs retained with scoring masks. Earlier stop statements describe
+their respective historical sessions. P3 source-only baseline development is
+data-eligible after review; freeze explicit subject-grouped source roles and
+source-TRAIN-only fitting before training. No final test split was chosen in
+P2. Stop after P2-SC; ST/SHHS decisions remain separate and unchanged.

@@ -36,8 +36,12 @@ phases:
     p2_authorized: false
     p2_executed: false
   P2-SC:
-    status: implementation_validated_pilot_pending
+    status: complete_pass_sc_only_stop_for_review
     reviewed_parent: 19351edfd79807ba1716189bd3cc9671f2c97499
+    implementation_commits:
+      - dc53edab7ef308a6fc99a5af42c6a35715afe60b
+      - 9f4ba06c71f0e577ebb58e2a8eba57f88605010e
+    audited_implementation: 9f4ba06c71f0e577ebb58e2a8eba57f88605010e
     schema_version: mist-transfer-sc-epochs-v1
     allowed_subjects: 74
     allowed_recordings: 146
@@ -47,6 +51,24 @@ phases:
     input_policy: all_complete_physical_30s_epochs_before_labels
     pipeline: scripts/build_transfer_manifest.py
     local_output: mist_transfer_runs/p2_sc/
+    local_canonical_manifest: mist_transfer_runs/p2_sc/v1/canonical/manifest.json
+    local_validation: mist_transfer_runs/p2_sc/validation_summary.json
+    local_summary: mist_transfer_runs/p2_sc/FINAL_COPY_PASTE.txt
+    canonical_completion_sha256: 3088497baa4f769986245206f932797d4b18280b313ef12481015f39fa3beab6
+    validation_summary_sha256: 5ace86b5a6015a655bb3cce003b7d0907d5aec30ec1fd095d44e110d4893e98a
+    gate: PASS_SC_ONLY
+    physical_epochs: 397832
+    scored_epochs: 396378
+    unscored_epochs: 1454
+    movement_epochs: 119
+    unknown_epochs: 1335
+    pilot_subjects: 10
+    pilot_streamed_epochs: 27678
+    pilot_waveform_differential_epochs: 66
+    source_files_verified: 292
+    source_files_rehashed: 0
+    p1_waveform_realignments: 0
+    completed_resume_verified: true
     focused_tests_passed: 25
     regression_passed: 149
     regression_skipped: 1
@@ -54,4 +76,5 @@ phases:
     training_performed: false
     st_preprocessing: false
     shhs_access: false
+    p3_data_eligibility: VERIFIED_SC_ONLY
     p3_authorized: false
