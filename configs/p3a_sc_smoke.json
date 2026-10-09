@@ -1,0 +1,15 @@
+{
+  "purpose": "P3A_DEVELOPMENT_ONLY_SMOKE",
+  "split_seed": 123,
+  "variants": ["attnsleep", "evidence", "summary_only", "raw_context"],
+  "optional_source_control": "evidence_aug: calibrated TRAIN gain uniform [0.98,1.02]; no evaluation augmentation",
+  "amp": false,
+  "threads": 2,
+  "smoke_selection": "all TRAIN/VAL nights; four 4-epoch physical windows at 20/40/60/80%; no labels for selection",
+  "checkpoint_selection": "participant-averaged fixed-five Macro-F1 on source VAL; earliest best on ties",
+  "training": {
+    "epochs": 1, "patience": 2, "lr": 0.0003, "weight_decay": 0.0001,
+    "core_epochs": 16, "encode_batch": 16, "grad_clip": 5.0,
+    "seed": 123, "deterministic": true
+  }
+}

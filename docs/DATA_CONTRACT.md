@@ -135,3 +135,28 @@ Canonical manifest: `mist_transfer_runs/p2_sc/v1/canonical/manifest.json`.
 The data gate is VERIFIED_SC_ONLY for future baseline development; before
 training, freeze source subject roles and enforce masked loss/metrics and
 TRAIN-only fitting. No ST/SHHS scope is approved by this SC gate.
+
+P3A freezes these descriptors into metadata-only subject-grouped roles before
+scores. Development may open only the 29 TRAIN and 8 VAL descriptors; the 109
+reserved descriptors have no development-opening path. Split construction reads
+only the identity prefix of reviewed P2 descriptors, without fetching annotation
+blocks. The P2 completion and manifest hashes must match, and local descriptor
+stat times must not postdate the trusted completion. Development descriptors
+are subsequently digest-checked in full. The immutable freeze binds original
+SC subject/night identities, raw and annotation hashes, exact waveform and
+shape hashes, descriptor hashes, roles, policy and seed. This is a trusted local
+stat-proof optimization, not adversarial tamper resistance; changed source stats
+trigger SHA verification. No prior signal-alignment audit is repeated.
+
+Source-TRAIN scaling pools all complete physical TRAIN samples in float64,
+without consulting stages, and applies one calibrated-uV mean/std to every
+baseline and VAL input. Descriptor amplitude statistics also use all physical
+TRAIN epochs. Real waveform medoids use scored, stage-balanced TRAIN candidates
+only and preserve original epoch/crop offsets and annotation provenance.
+Stage balancing is TRAIN supervision, not an inference selection policy.
+The source adapter streams bounded slices with no all-night waveform cache.
+Scored training cores do not bridge unscored epochs, physical gaps or nights.
+Validation predicts the full physical view before applying metric masks.
+The development smoke subsamples fixed physical windows before labels; its
+indices and gaps remain explicit and it is never treated as full-cohort
+evaluation. Reserved annotations, waveforms and statistics are never consulted.

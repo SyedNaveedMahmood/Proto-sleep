@@ -144,12 +144,13 @@ def write_csv(rows: list[dict], path: Path):
 
 def train(model: EvidenceModel, train_records: list[Recording], val_records: list[Recording],
           cfg: TrainConfig, run: Path, bank: dict, provenance: dict, device: torch.device,
-          resume: bool = False, interrupt_after_epoch: int | None = None):
+          resume: bool = False, interrupt_after_epoch: int | None = None, evaluate_fn=None):
     """Train core-block conditional likelihoods; evaluate whole continuous segments.
 
     Checkpoints are saved at epoch boundaries. Mid-epoch interruption repeats that
     epoch; never pretends a saved best-so-far model means training is complete.
     """
+    evaluator = evaluate if evaluate_fn is None else evaluate_fn
     run.mkdir(parents=True, exist_ok=True)
     identity = {"model": model.cfg.dictionary(), "train": asdict(cfg), "provenance": provenance,
                 "bank_digest": tensor_digest({str(i): w for i, w in enumerate(bank["waveforms"])}),
@@ -171,7 +172,7 @@ def train(model: EvidenceModel, train_records: list[Recording], val_records: lis
         if payload["signature"] != signature or tensor_digest(payload["state_dict"]) != finished["best_state_digest"]:
             raise ValueError("completed checkpoint does not match completion marker")
         model.load_state_dict(payload["state_dict"])
-        metrics, rows = evaluate(model, val_records, device, cfg.encode_batch)
+        metrics, rows = evaluator(model, val_records, device, cfg.encode_batch)
         if abs(metrics["mean_subject_macro_f1"] - finished["metrics"]["mean_subject_macro_f1"]) > 1e-5:
             raise RuntimeError("checkpoint re-evaluation changed primary validation metric")
         print(f"VERIFIED COMPLETE: {run}", flush=True)
@@ -215,7 +216,7 @@ def train(model: EvidenceModel, train_records: list[Recording], val_records: lis
             norm = torch.nn.utils.clip_grad_norm_(model.parameters(), cfg.grad_clip, error_if_nonfinite=True)
             optimizer.step()
             total += float(loss.detach()) * (hi-lo); count += hi-lo
-        metrics, rows = evaluate(model, val_records, device, cfg.encode_batch)
+        metrics, rows = evaluator(model, val_records, device, cfg.encode_batch)
         score = metrics["mean_subject_macro_f1"]
         improved = score > best_score + 1e-8
         stale = 0 if improved else stale+1
@@ -243,7 +244,7 @@ def train(model: EvidenceModel, train_records: list[Recording], val_records: lis
     if payload["signature"] != signature:
         raise ValueError("best checkpoint signature mismatch")
     model.load_state_dict(payload["state_dict"])
-    metrics, rows = evaluate(model, val_records, device, cfg.encode_batch)
+    metrics, rows = evaluator(model, val_records, device, cfg.encode_batch)
     write_csv(rows, run / "validation_predictions.csv")
     atomic_json({"signature": signature, "best_epoch": best_epoch, "metrics": metrics,
                  "best_state_digest": tensor_digest(payload["state_dict"]),

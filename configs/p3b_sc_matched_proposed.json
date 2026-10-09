@@ -1,0 +1,23 @@
+{
+  "purpose": "P3B_PRESPECIFIED_FOR_REVIEW_NOT_AUTHORIZED",
+  "split_seed": 123,
+  "variants": ["attnsleep", "evidence", "summary_only", "raw_context"],
+  "seeds": [123, 456, 789],
+  "input": "all complete physical epochs; loss and scoring masks exclude unscored only",
+  "normalization": "all complete source TRAIN epochs only",
+  "anchors": "source TRAIN medoids; original waveform crops with immutable physical provenance",
+  "temporal_radius": 0,
+  "crf": false,
+  "amp": false,
+  "optimizer": "AdamW",
+  "max_epochs": 60,
+  "patience": 12,
+  "lr": 0.0003,
+  "weight_decay": 0.0001,
+  "core_epochs": 16,
+  "encode_batch": 16,
+  "grad_clip": 5.0,
+  "selection": "source-VAL participant-mean fixed-five Macro-F1; no reserved scores",
+  "reserved_evaluation": "separate frozen runner required after development; no P3A access",
+  "optional_gain_control": "evidence_aug; requires separate CUDA integration before including as a matched fifth baseline"
+}

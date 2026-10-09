@@ -1,6 +1,6 @@
 version: 1
 project: MIST-Transfer-v3
-scope: P0-P1-P1.5-plus-authorized-P2-SC-only
+scope: P0-P1-P1.5-P2-SC-plus-authorized-P3A-development-only
 experiments: []
 phases:
   P0:
@@ -78,3 +78,34 @@ phases:
     shhs_access: false
     p3_data_eligibility: VERIFIED_SC_ONLY
     p3_authorized: false
+  P3A:
+    status: implemented_frozen_protocol_cuda_validation_pending
+    authorized_parent: ffc0e176d9fe68f33414de7a16c54bebcf5561e8
+    source_scope: verified_raw_SC_subset_only
+    split_schema: mist-transfer-sc-source-split-v1
+    split_fingerprint: 3e7a7260aae50ca522752f1cede41246daf1b2f6a8fd482800cfda97b4564e84
+    split_file_sha256: 1162a41098bb8a724a0b8bf8bb320469c2b1c02bb802d9b5cf7f2e49d2da54e5
+    frozen_manifest: experiments/splits/p3a_sc_source_v1.json
+    frozen_receipt: experiments/splits/p3a_sc_source_v1.receipt.json
+    split_seed: 123
+    train_subjects: 15
+    train_recordings: 29
+    validation_subjects: 4
+    validation_recordings: 8
+    reserved_subjects: 55
+    reserved_recordings: 109
+    endpoint: within_SC_subject_generalization_not_external_transfer
+    baseline_variants: [attnsleep, evidence, summary_only, raw_context]
+    temporal_radius: 0
+    crf: false
+    amp: false
+    runner: scripts/run_transfer_experiment.py
+    configuration: configs/p3a_sc_smoke.json
+    proposed_matched_configuration: configs/p3b_sc_matched_proposed.json
+    primary_selection: participant_averaged_fixed_five_class_macro_f1_source_VAL
+    local_summary: mist_transfer_runs/p3a/FINAL_COPY_PASTE.txt
+    reserved_test_access: false
+    mcr_training: false
+    st_preprocessing: false
+    shhs_access: false
+    p3b_authorized: false

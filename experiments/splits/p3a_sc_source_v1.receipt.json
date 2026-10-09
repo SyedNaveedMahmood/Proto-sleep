@@ -1,0 +1,22 @@
+{
+  "split_fingerprint": "3e7a7260aae50ca522752f1cede41246daf1b2f6a8fd482800cfda97b4564e84",
+  "file_sha256": "1162a41098bb8a724a0b8bf8bb320469c2b1c02bb802d9b5cf7f2e49d2da54e5",
+  "git": {
+    "sha": "ffc0e176d9fe68f33414de7a16c54bebcf5561e8",
+    "branch": "research/mist-transfer-v3-edf-shhs",
+    "dirty": true,
+    "implementation_hash": "f4d824b5c84895550a437df3581fc598a9d074041ccfffb4b64da6c037ba85f4"
+  },
+  "frozen_before_scores": true,
+  "reserved_labels_read": false,
+  "role_subject_counts": {
+    "train": 15,
+    "val": 4,
+    "test": 55
+  },
+  "role_recording_counts": {
+    "train": 29,
+    "val": 8,
+    "test": 109
+  }
+}
