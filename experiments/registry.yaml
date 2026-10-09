@@ -1,6 +1,6 @@
 version: 1
 project: MIST-Transfer-v3
-scope: P0-P1-plus-authorized-P1.5-only
+scope: P0-P1-P1.5-plus-authorized-P2-SC-only
 experiments: []
 phases:
   P0:
@@ -35,3 +35,23 @@ phases:
     shhs_p2_eligibility: BLOCKED
     p2_authorized: false
     p2_executed: false
+  P2-SC:
+    status: implementation_validated_pilot_pending
+    reviewed_parent: 19351edfd79807ba1716189bd3cc9671f2c97499
+    schema_version: mist-transfer-sc-epochs-v1
+    allowed_subjects: 74
+    allowed_recordings: 146
+    excluded_subjects: ['SC:06', 'SC:23', 'SC:36', 'SC:74']
+    channel: EEG Fpz-Cz
+    output: native_100Hz_calibrated_uV_float32
+    input_policy: all_complete_physical_30s_epochs_before_labels
+    pipeline: scripts/build_transfer_manifest.py
+    local_output: mist_transfer_runs/p2_sc/
+    focused_tests_passed: 25
+    regression_passed: 149
+    regression_skipped: 1
+    final_split_chosen: false
+    training_performed: false
+    st_preprocessing: false
+    shhs_access: false
+    p3_authorized: false

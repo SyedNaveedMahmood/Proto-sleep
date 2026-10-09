@@ -93,3 +93,36 @@ artifact map, exact test commands and historical byte checks. Audit and test
 terminal output is preserved in `reports/data_audit/p1_5/session_logs/*.txt`;
 commit/push verification output remains in the ignored local run directory to
 avoid changing a committed report merely to record its own publication SHA.
+
+## P2-SC authorized follow-up (2026-10-09)
+
+Reviewed parent: `19351edfd79807ba1716189bd3cc9671f2c97499`. The user authorized
+SC-only P2 in the attached request. Earlier P1/P1.5 stop decisions remain
+historical; ST preprocessing, SHHS access and P3/model training remain excluded.
+
+Reuse: v1 SHA256/fingerprint/atomic JSON; transfer atomic CSV/text and AuditRun
+transactions; canonical identities, calibration, annotation grids and split
+guards; P1.5 strict paired annotation decoder and unchanged-input hash receipts.
+The EDF-20 NPZ loader/20-fold order is unsuitable for the expanded raw SC grid
+and is not used. Cached P1 waveform alignments are never repeated. Only selected
+SC EDF/hypnogram sources are checked; no NPZ/ST/SHHS data discovery or opening.
+If a trusted local stat receipt no longer matches, recompute that source digest
+and stop on a changed hash. Every pilot/full run records source hashes, code,
+environment, seed, scope proof, elapsed seconds and process peak RSS.
+
+Reproduction (from this worktree; redirect full output to .txt with pipefail):
+
+```
+.venv/bin/python scripts/build_transfer_manifest.py --help
+.venv/bin/python scripts/build_transfer_manifest.py --mode pilot --seed 123 --dry-run --output-dir mist_transfer_runs/p2_sc/pilot
+.venv/bin/python scripts/build_transfer_manifest.py --mode pilot --seed 123 --output-dir mist_transfer_runs/p2_sc/pilot
+.venv/bin/python scripts/build_transfer_manifest.py --mode complete --seed 123 --pilot-dir mist_transfer_runs/p2_sc/pilot --output-dir mist_transfer_runs/p2_sc/canonical
+```
+
+Use --resume with the same code/environment/inputs after interruption or to
+verify completed output without waveform reloading. Import
+`mist_transfer.manifest.load_complete` to verify/load normalized descriptors,
+then `mist_transfer.preprocessing.iter_recording` for lazy inference chunks.
+Canonical manifests, annotation metadata, waveform checks and terminal logs
+stay local under ignored `mist_transfer_runs/p2_sc/`; no participant arrays or
+private outputs are committed. Tests generate only synthetic EDF+ fixtures.

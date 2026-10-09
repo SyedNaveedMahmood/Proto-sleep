@@ -1,4 +1,4 @@
-# Data integrity contract (P0/P1)
+# Data integrity contract (P0/P1/P1.5/P2-SC)
 
 The future output contract is 30 s, one EEG, 100 Hz, 3000 samples and
 Wake/N1/N2/N3/REM = 0/1/2/3/4. Raw input properties must be measured.
@@ -74,3 +74,51 @@ three PSG/hypnogram demographic conflicts and SC4362's scored Wake ending at
 raw scope contains 74 people/146 recordings; the subject-disjoint EDF-78
 extension contains 55 people/109 recordings. The original 20-person/39-recording
 EDF-20/78 overlap is unchanged. Full-cohort acceptance remains BLOCKED.
+
+## Authorized P2-SC canonical manifest and lazy data access
+
+The follow-up authorizes only the exact reviewed 74-person/146-recording SC
+subset. `load_sc_scope` hash-binds P1.5 gates/resolutions and the historical P1
+proof. Excluded people cannot enter manifests. ST/SHHS are outside this phase.
+
+`mist-transfer-sc-epochs-v1` stores recording descriptors joined by canonical
+recording ID. Each descriptor includes source/annotation paths and SHA256,
+study/person/night/variant, native clock (timezone UNKNOWN), duration, Fpz-Cz
+montage, calibration bounds, acquisition prefilter, native/output rates and
+units. Dense original-index/start-sample/start-second ranges preserve every
+complete physical epoch. The grid is constructed from signal samples before
+annotation access. Exact file byte extent, sample counts, contiguous EDF format,
+100 Hz/uV and audited calibration/clock are validated; unsupported discontinuous
+EDF, truncation or metadata changes stop the run, with the recording identified.
+
+Original annotation descriptions/codes and TAL intervals remain explicit. R&K
+3/4 map to N3. Movement/unknown/unannotated positions have y=-1 and a false
+scoring mask, and stay in the inference timeline. A missing annotation is None,
+not an invented stage. The manifest is normalized metadata: epoch i joins its
+recording descriptor, starts at sample 3000*i and second 30*i, and inherits that
+recording's source/calibration/annotation provenance. There is no cross-record
+context join or inference-time label-based selection. Incomplete signal tails
+are recorded in samples/seconds and excluded by geometry only.
+
+`iter_recording(record, chunk_epochs=16, include_labels=False)` reads CPU float32
+microvolts as [N,1,3000]. Batches expose original indices, physical start times
+and the recording provenance join; include_labels=True additionally exposes y,
+scoring_mask, original codes/descriptions and exclusion reasons. Inference does
+not access annotation files or consult labels. Downstream supervised loss and
+metrics MUST use scoring_mask; never compress unscored time into contiguous
+context. No default Pz-Oz input, added filter, resampling, waveform export or
+fitted normalization exists in P2.
+
+`assign_subject_roles` accepts an explicit complete person-to-role map and
+reuses the audit split guards, adding duplicate identities/nights/paths/source
+checks. All nights stay together. `iter_development_split` opens train/val only
+and rejects reserved test access before reading EEG. P2 assigns no final split
+and fits no statistics; future normalization must use source TRAIN only.
+
+The CLI requires a passing ten-person E/F/G and gap-case pilot before the
+complete build. Pilot validation streams all physical epochs, checks all labels
+with independent pyEDFlib and compares bounded waveform positions with MNE
+volts converted to uV and an EDF digital-calibration oracle. Tolerance is fixed
+before data: rtol=2*float32 eps, atol=2e-5 uV. Atomically completed manifests
+verify every descriptor digest; resume binds code/environment/config/sources.
+Outputs in `mist_transfer_runs/p2_sc/` stay out of GitHub.
