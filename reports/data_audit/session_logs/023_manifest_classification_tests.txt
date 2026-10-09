@@ -1,0 +1,2 @@
+Incomplete optional manifest recorded as explicit blocker; listed-file/size conflicts remain hard-stop errors. No gate bypass added.
+.............................                                            [100%]

@@ -1,0 +1,2 @@
+Validated SC E/F/G variants; one participant/night cannot map to conflicting variants.
+.............................                                            [100%]

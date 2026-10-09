@@ -1,0 +1,1484 @@
+dataset,recording_id,channel,fs,units,physical_min,physical_max,digital_min,digital_max,prefilter,transducer
+raw_sc,SC4001E0,EEG Fpz-Cz,100.0,uV,-192.0,192.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4001E0,EEG Pz-Oz,100.0,uV,-197.0,196.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4001E0,EOG horizontal,100.0,uV,-1009.0,1009.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4001E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4001E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4001E0,Temp rectal,1.0,DegC,34.0,40.0,-2849,2731,,Rectal thermistor
+raw_sc,SC4001E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf20_npz,SC4001E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+edf78_npz,SC4001E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4002E0,EEG Fpz-Cz,100.0,uV,-208.0,209.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4002E0,EEG Pz-Oz,100.0,uV,-200.0,202.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4002E0,EOG horizontal,100.0,uV,-987.0,988.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4002E0,Resp oro-nasal,1.0,,-32768.0,32767.0,-32768,32767,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4002E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4002E0,Temp rectal,1.0,DegC,34.0,40.0,-3234,3144,,Rectal thermistor
+raw_sc,SC4002E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf20_npz,SC4002E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+edf78_npz,SC4002E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4011E0,EEG Fpz-Cz,100.0,uV,-204.0,204.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4011E0,EEG Pz-Oz,100.0,uV,-185.0,185.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4011E0,EOG horizontal,100.0,uV,-1027.0,1028.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4011E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4011E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4011E0,Temp rectal,1.0,DegC,34.0,40.0,-2476,2603,,Rectal thermistor
+raw_sc,SC4011E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf20_npz,SC4011E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+edf78_npz,SC4011E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4012E0,EEG Fpz-Cz,100.0,uV,-192.0,189.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4012E0,EEG Pz-Oz,100.0,uV,-199.0,197.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4012E0,EOG horizontal,100.0,uV,-915.0,906.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4012E0,Resp oro-nasal,1.0,,-32768.0,32767.0,-32768,32767,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4012E0,EMG submental,1.0,uV,-6.0,6.0,-3000,3000,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4012E0,Temp rectal,1.0,,34.0,40.0,-2476,2603,,Rectal thermistor
+raw_sc,SC4012E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf20_npz,SC4012E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+edf78_npz,SC4012E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4021E0,EEG Fpz-Cz,100.0,uV,-189.0,189.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4021E0,EEG Pz-Oz,100.0,uV,-212.0,212.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4021E0,EOG horizontal,100.0,uV,-930.0,930.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4021E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4021E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4021E0,Temp rectal,1.0,DegC,34.0,40.0,-2737,2867,,Rectal thermistor
+raw_sc,SC4021E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf20_npz,SC4021E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+edf78_npz,SC4021E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4022E0,EEG Fpz-Cz,100.0,uV,-193.0,190.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4022E0,EEG Pz-Oz,100.0,uV,-175.0,175.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4022E0,EOG horizontal,100.0,uV,-876.0,873.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4022E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4022E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4022E0,Temp rectal,1.0,DegC,34.0,40.0,-2768,2935,,Rectal thermistor
+raw_sc,SC4022E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf20_npz,SC4022E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+edf78_npz,SC4022E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4031E0,EEG Fpz-Cz,100.0,uV,-197.0,199.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4031E0,EEG Pz-Oz,100.0,uV,-194.0,196.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4031E0,EOG horizontal,100.0,uV,-917.0,924.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4031E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4031E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4031E0,Temp rectal,1.0,DegC,4.0,70.0,-30250,30250,,Rectal thermistor
+raw_sc,SC4031E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf20_npz,SC4031E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+edf78_npz,SC4031E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4032E0,EEG Fpz-Cz,100.0,uV,-203.0,203.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4032E0,EEG Pz-Oz,100.0,uV,-193.0,193.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4032E0,EOG horizontal,100.0,uV,-920.0,920.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4032E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4032E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4032E0,Temp rectal,1.0,DegC,34.0,40.0,-3052,3272,,Rectal thermistor
+raw_sc,SC4032E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf20_npz,SC4032E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+edf78_npz,SC4032E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4041E0,EEG Fpz-Cz,100.0,uV,-193.0,193.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4041E0,EEG Pz-Oz,100.0,uV,-197.0,198.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4041E0,EOG horizontal,100.0,uV,-910.0,910.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4041E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4041E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4041E0,Temp rectal,1.0,DegC,34.0,40.0,-4017,3381,,Rectal thermistor
+raw_sc,SC4041E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf20_npz,SC4041E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+edf78_npz,SC4041E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4042E0,EEG Fpz-Cz,100.0,uV,-198.0,198.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4042E0,EEG Pz-Oz,100.0,uV,-201.0,199.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4042E0,EOG horizontal,100.0,uV,-908.0,906.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4042E0,Resp oro-nasal,1.0,,-32768.0,32767.0,-32768,32767,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4042E0,EMG submental,1.0,uV,-50.0,50.0,-25000,25000,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4042E0,Temp rectal,1.0,DegC,34.0,40.0,-2447,2623,,Rectal thermistor
+raw_sc,SC4042E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf20_npz,SC4042E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+edf78_npz,SC4042E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4051E0,EEG Fpz-Cz,100.0,uV,-180.0,182.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4051E0,EEG Pz-Oz,100.0,uV,-194.0,195.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4051E0,EOG horizontal,100.0,uV,-899.0,902.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4051E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4051E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4051E0,Temp rectal,1.0,DegC,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4051E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf20_npz,SC4051E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+edf78_npz,SC4051E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4052E0,EEG Fpz-Cz,100.0,uV,-180.0,180.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4052E0,EEG Pz-Oz,100.0,uV,-182.0,182.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4052E0,EOG horizontal,100.0,uV,-923.0,924.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4052E0,Resp oro-nasal,1.0,,-30000.0,30000.0,-30000,30000,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4052E0,EMG submental,1.0,uV,-50.0,50.0,-25000,25000,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4052E0,Temp rectal,1.0,DegC,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4052E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf20_npz,SC4052E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+edf78_npz,SC4052E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4061E0,EEG Fpz-Cz,100.0,uV,-194.0,196.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4061E0,EEG Pz-Oz,100.0,uV,-187.0,189.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4061E0,EOG horizontal,100.0,uV,-900.0,904.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4061E0,Resp oro-nasal,1.0,,-30000.0,30000.0,-30000,30000,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4061E0,EMG submental,1.0,uV,-50.0,50.0,-25000,25000,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4061E0,Temp rectal,1.0,DegC,1.0,73.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4061E0,Event marker,1.0,,-30470.0,30480.0,-30470,30480,Hold during 2 seconds,Marker button
+edf20_npz,SC4061E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+edf78_npz,SC4061E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4062E0,EEG Fpz-Cz,100.0,uV,-188.0,188.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4062E0,EEG Pz-Oz,100.0,uV,-201.0,200.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4062E0,EOG horizontal,100.0,uV,-927.0,920.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4062E0,Resp oro-nasal,1.0,,-30000.0,30000.0,-30000,30000,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4062E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4062E0,Temp rectal,1.0,DegC,34.0,40.0,-2774,2743,,Rectal thermistor
+raw_sc,SC4062E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf20_npz,SC4062E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+edf78_npz,SC4062E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4071E0,EEG Fpz-Cz,100.0,uV,-202.0,207.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4071E0,EEG Pz-Oz,100.0,uV,-174.0,179.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4071E0,EOG horizontal,100.0,uV,-888.0,901.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4071E0,Resp oro-nasal,1.0,,-3000.0,3000.0,-3000,3000,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4071E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4071E0,Temp rectal,1.0,DegC,34.0,40.0,-3000,2907,,Rectal thermistor
+raw_sc,SC4071E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf20_npz,SC4071E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+edf78_npz,SC4071E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4072E0,EEG Fpz-Cz,100.0,uV,-181.0,180.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4072E0,EEG Pz-Oz,100.0,uV,-191.0,190.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4072E0,EOG horizontal,100.0,uV,-1021.0,1009.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4072E0,Resp oro-nasal,1.0,,-3000.0,3000.0,-3000,3000,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4072E0,EMG submental,1.0,uV,-6.0,6.0,-3000,3000,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4072E0,Temp rectal,1.0,DegC,34.0,40.0,-3068,3070,,Rectal thermistor
+raw_sc,SC4072E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf20_npz,SC4072E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+edf78_npz,SC4072E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4081E0,EEG Fpz-Cz,100.0,uV,-195.0,192.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4081E0,EEG Pz-Oz,100.0,uV,-191.0,189.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4081E0,EOG horizontal,100.0,uV,-918.0,912.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4081E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4081E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4081E0,Temp rectal,1.0,DegC,34.0,40.0,-2625,2664,,Rectal thermistor
+raw_sc,SC4081E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf20_npz,SC4081E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+edf78_npz,SC4081E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4082E0,EEG Fpz-Cz,100.0,uV,-202.0,187.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4082E0,EEG Pz-Oz,100.0,uV,-197.0,197.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4082E0,EOG horizontal,100.0,uV,-949.0,949.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4082E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4082E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4082E0,Temp rectal,1.0,DegC,34.0,40.0,-2772,2817,,Rectal thermistor
+raw_sc,SC4082E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf20_npz,SC4082E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+edf78_npz,SC4082E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4091E0,EEG Fpz-Cz,100.0,uV,-194.0,194.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4091E0,EEG Pz-Oz,100.0,uV,-186.0,187.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4091E0,EOG horizontal,100.0,uV,-974.0,978.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4091E0,Resp oro-nasal,1.0,,-3000.0,3000.0,-3000,3000,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4091E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4091E0,Temp rectal,1.0,DegC,34.0,40.0,-2811,3012,,Rectal thermistor
+raw_sc,SC4091E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf20_npz,SC4091E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+edf78_npz,SC4091E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4092E0,EEG Fpz-Cz,100.0,uV,-196.0,196.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4092E0,EEG Pz-Oz,100.0,uV,-186.0,186.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4092E0,EOG horizontal,100.0,uV,-882.0,882.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4092E0,Resp oro-nasal,1.0,,-3000.0,3000.0,-3000,3000,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4092E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4092E0,Temp rectal,1.0,DegC,34.0,40.0,-2853,3003,,Rectal thermistor
+raw_sc,SC4092E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf20_npz,SC4092E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+edf78_npz,SC4092E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4101E0,EEG Fpz-Cz,100.0,uV,-195.0,193.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4101E0,EEG Pz-Oz,100.0,uV,-190.0,190.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4101E0,EOG horizontal,100.0,uV,-852.0,850.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4101E0,Resp oro-nasal,1.0,,-3000.0,3000.0,-3000,3000,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4101E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4101E0,Temp rectal,1.0,,34.0,40.0,-2750,2750,,Rectal thermistor
+raw_sc,SC4101E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf20_npz,SC4101E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+edf78_npz,SC4101E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4102E0,EEG Fpz-Cz,100.0,uV,-192.0,193.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4102E0,EEG Pz-Oz,100.0,uV,-191.0,192.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4102E0,EOG horizontal,100.0,uV,-1007.0,1007.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4102E0,Resp oro-nasal,1.0,,-3000.0,3000.0,-3000,3000,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4102E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4102E0,Temp rectal,1.0,,34.0,40.0,-2750,2750,,Rectal thermistor
+raw_sc,SC4102E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf20_npz,SC4102E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+edf78_npz,SC4102E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4111E0,EEG Fpz-Cz,100.0,uV,-204.0,201.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4111E0,EEG Pz-Oz,100.0,uV,-176.0,175.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4111E0,EOG horizontal,100.0,uV,-1035.0,1032.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4111E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4111E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4111E0,Temp rectal,1.0,,34.0,40.0,-2750,2750,,Rectal thermistor
+raw_sc,SC4111E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf20_npz,SC4111E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+edf78_npz,SC4111E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4112E0,EEG Fpz-Cz,100.0,uV,-199.0,199.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4112E0,EEG Pz-Oz,100.0,uV,-177.0,179.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4112E0,EOG horizontal,100.0,uV,-954.0,955.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4112E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4112E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4112E0,Temp rectal,1.0,,34.0,40.0,-2750,2750,,Rectal thermistor
+raw_sc,SC4112E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf20_npz,SC4112E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+edf78_npz,SC4112E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4121E0,EEG Fpz-Cz,100.0,uV,-178.0,180.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4121E0,EEG Pz-Oz,100.0,uV,-207.0,207.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4121E0,EOG horizontal,100.0,uV,-978.0,978.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4121E0,Resp oro-nasal,1.0,,-3000.0,3000.0,-3000,3000,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4121E0,EMG submental,1.0,uV,-6.0,6.0,-3000,3000,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4121E0,Temp rectal,1.0,,34.0,43.0,-2750,5500,,Rectal thermistor
+raw_sc,SC4121E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf20_npz,SC4121E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+edf78_npz,SC4121E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4122E0,EEG Fpz-Cz,100.0,uV,-178.0,179.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4122E0,EEG Pz-Oz,100.0,uV,-189.0,189.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4122E0,EOG horizontal,100.0,uV,-999.0,1003.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4122E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4122E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4122E0,Temp rectal,1.0,,34.0,40.0,-2750,2750,,Rectal thermistor
+raw_sc,SC4122E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf20_npz,SC4122E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+edf78_npz,SC4122E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4131E0,EEG Fpz-Cz,100.0,uV,-192.0,192.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4131E0,EEG Pz-Oz,100.0,uV,-180.0,181.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4131E0,EOG horizontal,100.0,uV,-925.0,929.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4131E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4131E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4131E0,Temp rectal,1.0,,0.0,30.0,-15000,15000,,Rectal thermistor
+raw_sc,SC4131E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf20_npz,SC4131E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+edf78_npz,SC4131E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4141E0,EEG Fpz-Cz,100.0,uV,-187.0,187.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4141E0,EEG Pz-Oz,100.0,uV,-188.0,188.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4141E0,EOG horizontal,100.0,uV,-1023.0,1024.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4141E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4141E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4141E0,Temp rectal,1.0,DegC,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4141E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf20_npz,SC4141E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+edf78_npz,SC4141E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4142E0,EEG Fpz-Cz,100.0,uV,-178.0,178.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4142E0,EEG Pz-Oz,100.0,uV,-181.0,180.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4142E0,EOG horizontal,100.0,uV,-915.0,909.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4142E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4142E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4142E0,Temp rectal,1.0,DegC,34.0,40.0,-2806,2969,,Rectal thermistor
+raw_sc,SC4142E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf20_npz,SC4142E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+edf78_npz,SC4142E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4151E0,EEG Fpz-Cz,100.0,uV,-179.0,180.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4151E0,EEG Pz-Oz,100.0,uV,-177.0,179.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4151E0,EOG horizontal,100.0,uV,-982.0,994.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4151E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4151E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4151E0,Temp rectal,1.0,DegC,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4151E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf20_npz,SC4151E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+edf78_npz,SC4151E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4152E0,EEG Fpz-Cz,100.0,uV,-192.0,192.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4152E0,EEG Pz-Oz,100.0,uV,-193.0,193.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4152E0,EOG horizontal,100.0,uV,-965.0,962.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4152E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4152E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4152E0,Temp rectal,1.0,DegC,34.0,40.0,-3071,3154,,Rectal thermistor
+raw_sc,SC4152E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf20_npz,SC4152E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+edf78_npz,SC4152E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4161E0,EEG Fpz-Cz,100.0,uV,-190.0,191.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4161E0,EEG Pz-Oz,100.0,uV,-211.0,209.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4161E0,EOG horizontal,100.0,uV,-1031.0,1028.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4161E0,Resp oro-nasal,1.0,,-3000.0,3000.0,-3000,3000,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4161E0,EMG submental,1.0,uV,-6.0,6.0,-3000,3000,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4161E0,Temp rectal,1.0,DegC,34.0,40.0,-2630,2518,,Rectal thermistor
+raw_sc,SC4161E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf20_npz,SC4161E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+edf78_npz,SC4161E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4162E0,EEG Fpz-Cz,100.0,uV,-184.0,184.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4162E0,EEG Pz-Oz,100.0,uV,-188.0,188.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4162E0,EOG horizontal,100.0,uV,-954.0,955.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4162E0,Resp oro-nasal,1.0,,-3000.0,3000.0,-3000,3000,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4162E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4162E0,Temp rectal,1.0,DegC,34.0,40.0,-2953,2783,,Rectal thermistor
+raw_sc,SC4162E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf20_npz,SC4162E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+edf78_npz,SC4162E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4171E0,EEG Fpz-Cz,100.0,uV,-205.0,203.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4171E0,EEG Pz-Oz,100.0,uV,-181.0,181.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4171E0,EOG horizontal,100.0,uV,-894.0,895.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4171E0,Resp oro-nasal,1.0,,-3000.0,3000.0,-3000,3000,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4171E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4171E0,Temp rectal,1.0,DegC,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4171E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf20_npz,SC4171E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+edf78_npz,SC4171E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4172E0,EEG Fpz-Cz,100.0,uV,-188.0,189.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4172E0,EEG Pz-Oz,100.0,uV,-191.0,189.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4172E0,EOG horizontal,100.0,uV,-893.0,881.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4172E0,Resp oro-nasal,1.0,,-3000.0,3000.0,-3000,3000,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4172E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4172E0,Temp rectal,1.0,DegC,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4172E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf20_npz,SC4172E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+edf78_npz,SC4172E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4181E0,EEG Fpz-Cz,100.0,uV,-176.0,175.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4181E0,EEG Pz-Oz,100.0,uV,-178.0,177.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4181E0,EOG horizontal,100.0,uV,-1023.0,1011.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4181E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4181E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4181E0,Temp rectal,1.0,DegC,4.0,70.0,-30250,30250,,Rectal thermistor
+raw_sc,SC4181E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf20_npz,SC4181E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+edf78_npz,SC4181E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4182E0,EEG Fpz-Cz,100.0,uV,-208.0,208.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4182E0,EEG Pz-Oz,100.0,uV,-184.0,185.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4182E0,EOG horizontal,100.0,uV,-932.0,932.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4182E0,Resp oro-nasal,1.0,,-30000.0,30000.0,-30000,30000,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4182E0,EMG submental,1.0,uV,-5.0,50.0,-2500,25000,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4182E0,Temp rectal,1.0,DegC,1.0,73.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4182E0,Event marker,1.0,,-30000.0,30000.0,-30000,30000,Hold during 2 seconds,Marker button
+edf20_npz,SC4182E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+edf78_npz,SC4182E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4191E0,EEG Fpz-Cz,100.0,uV,-183.0,181.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4191E0,EEG Pz-Oz,100.0,uV,-174.0,173.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4191E0,EOG horizontal,100.0,uV,-1015.0,1007.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4191E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4191E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4191E0,Temp rectal,1.0,DegC,31.0,40.0,-6001,3071,,Rectal thermistor
+raw_sc,SC4191E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf20_npz,SC4191E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+edf78_npz,SC4191E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4192E0,EEG Fpz-Cz,100.0,uV,-199.0,200.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4192E0,EEG Pz-Oz,100.0,uV,-197.0,197.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4192E0,EOG horizontal,100.0,uV,-1019.0,1019.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4192E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4192E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4192E0,Temp rectal,1.0,DegC,7.0,40.0,-29430,2973,,Rectal thermistor
+raw_sc,SC4192E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf20_npz,SC4192E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+edf78_npz,SC4192E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4201E0,EEG Fpz-Cz,100.0,uV,-197.0,198.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4201E0,EEG Pz-Oz,100.0,uV,-185.0,185.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4201E0,EOG horizontal,100.0,uV,-933.0,927.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4201E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4201E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4201E0,Temp rectal,1.0,,0.0,30.0,-15000,15000,,Rectal thermistor
+raw_sc,SC4201E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4201E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4202E0,EEG Fpz-Cz,100.0,uV,-188.0,188.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4202E0,EEG Pz-Oz,100.0,uV,-178.0,177.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4202E0,EOG horizontal,100.0,uV,-927.0,920.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4202E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4202E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4202E0,Temp rectal,1.0,,0.0,30.0,-15000,15000,,Rectal thermistor
+raw_sc,SC4202E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4202E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4211E0,EEG Fpz-Cz,100.0,uV,-206.0,205.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4211E0,EEG Pz-Oz,100.0,uV,-188.0,187.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4211E0,EOG horizontal,100.0,uV,-928.0,919.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4211E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4211E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4211E0,Temp rectal,1.0,DegC,34.0,40.0,-2915,2917,,Rectal thermistor
+raw_sc,SC4211E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4211E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4212E0,EEG Fpz-Cz,100.0,uV,-196.0,197.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4212E0,EEG Pz-Oz,100.0,uV,-184.0,184.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4212E0,EOG horizontal,100.0,uV,-1042.0,1042.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4212E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4212E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4212E0,Temp rectal,1.0,DegC,34.0,40.0,-2929,2921,,Rectal thermistor
+raw_sc,SC4212E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4212E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4221E0,EEG Fpz-Cz,100.0,uV,-178.0,178.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4221E0,EEG Pz-Oz,100.0,uV,-181.0,181.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4221E0,EOG horizontal,100.0,uV,-997.0,994.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4221E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4221E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4221E0,Temp rectal,1.0,,4.0,70.0,-30250,30250,,Rectal thermistor
+raw_sc,SC4221E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4221E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4222E0,EEG Fpz-Cz,100.0,uV,-248.0,167.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4222E0,EEG Pz-Oz,100.0,uV,-206.0,147.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4222E0,EOG horizontal,100.0,uV,-1176.0,863.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4222E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4222E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4222E0,Temp rectal,1.0,,31.0,40.0,-5500,2750,,Rectal thermistor
+raw_sc,SC4222E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4222E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4231E0,EEG Fpz-Cz,100.0,uV,-199.0,201.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4231E0,EEG Pz-Oz,100.0,uV,-188.0,188.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4231E0,EOG horizontal,100.0,uV,-969.0,969.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4231E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4231E0,EMG submental,1.0,uV,-50.0,50.0,-25000,25000,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4231E0,Temp rectal,1.0,,34.0,40.0,-2750,2750,,Rectal thermistor
+raw_sc,SC4231E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4231E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4232E0,EEG Fpz-Cz,100.0,uV,-196.0,193.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4232E0,EEG Pz-Oz,100.0,uV,-187.0,187.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4232E0,EOG horizontal,100.0,uV,-987.0,988.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4232E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4232E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4232E0,Temp rectal,1.0,,34.0,40.0,-2750,2750,,Rectal thermistor
+raw_sc,SC4232E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4232E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4241E0,EEG Fpz-Cz,100.0,uV,-181.0,179.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4241E0,EEG Pz-Oz,100.0,uV,-184.0,182.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4241E0,EOG horizontal,100.0,uV,-905.0,902.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4241E0,Resp oro-nasal,1.0,,-3000.0,3000.0,-3000,3000,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4241E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4241E0,Temp rectal,1.0,,4.0,40.0,-30250,2750,,Rectal thermistor
+raw_sc,SC4241E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4241E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4242E0,EEG Fpz-Cz,100.0,uV,-194.0,194.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4242E0,EEG Pz-Oz,100.0,uV,-196.0,196.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4242E0,EOG horizontal,100.0,uV,-1023.0,1024.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4242E0,Resp oro-nasal,1.0,,-3000.0,3000.0,-3000,3000,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4242E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4242E0,Temp rectal,1.0,,34.0,40.0,-2750,2750,,Rectal thermistor
+raw_sc,SC4242E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4242E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4251E0,EEG Fpz-Cz,100.0,uV,-190.0,193.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4251E0,EEG Pz-Oz,100.0,uV,-186.0,189.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4251E0,EOG horizontal,100.0,uV,-974.0,982.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4251E0,Resp oro-nasal,1.0,,-3000.0,3000.0,-3000,3000,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4251E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4251E0,Temp rectal,1.0,DegC,34.0,40.0,-2949,2811,,Rectal thermistor
+raw_sc,SC4251E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4251E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4252E0,EEG Fpz-Cz,100.0,uV,-179.0,180.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4252E0,EEG Pz-Oz,100.0,uV,-175.0,175.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4252E0,EOG horizontal,100.0,uV,-960.0,960.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4252E0,Resp oro-nasal,1.0,,-3000.0,3000.0,-3000,3000,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4252E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4252E0,Temp rectal,1.0,DegC,34.0,40.0,-3056,2929,,Rectal thermistor
+raw_sc,SC4252E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4252E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4261F0,EEG Fpz-Cz,100.0,uV,-192.0,195.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4261F0,EEG Pz-Oz,100.0,uV,-186.0,187.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4261F0,EOG horizontal,100.0,uV,-942.0,953.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4261F0,Resp oro-nasal,1.0,,-3000.0,3000.0,-3000,3000,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4261F0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4261F0,Temp rectal,1.0,DegC,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4261F0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4261F0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4262F0,EEG Fpz-Cz,100.0,uV,-201.0,201.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4262F0,EEG Pz-Oz,100.0,uV,-184.0,184.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4262F0,EOG horizontal,100.0,uV,-1003.0,1003.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4262F0,Resp oro-nasal,1.0,,-3000.0,3000.0,-3000,3000,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4262F0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4262F0,Temp rectal,1.0,DegC,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4262F0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4262F0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4271F0,EEG Fpz-Cz,100.0,uV,-187.0,187.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4271F0,EEG Pz-Oz,100.0,uV,-188.0,189.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4271F0,EOG horizontal,100.0,uV,-1055.0,1055.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4271F0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4271F0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4271F0,Temp rectal,1.0,,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4271F0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4271F0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4272F0,EEG Fpz-Cz,100.0,uV,-179.0,180.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4272F0,EEG Pz-Oz,100.0,uV,-205.0,206.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4272F0,EOG horizontal,100.0,uV,-902.0,902.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4272F0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4272F0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4272F0,Temp rectal,1.0,,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4272F0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4272F0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4281G0,EEG Fpz-Cz,100.0,uV,-182.0,181.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4281G0,EEG Pz-Oz,100.0,uV,-193.0,192.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4281G0,EOG horizontal,100.0,uV,-942.0,939.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4281G0,Resp oro-nasal,1.0,,-3000.0,3000.0,-3000,3000,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4281G0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4281G0,Temp rectal,1.0,,0.0,30.0,-15000,15000,,Rectal thermistor
+raw_sc,SC4281G0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4281G0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4282G0,EEG Fpz-Cz,100.0,uV,-190.0,189.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4282G0,EEG Pz-Oz,100.0,uV,-184.0,182.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4282G0,EOG horizontal,100.0,uV,-969.0,962.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4282G0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4282G0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4282G0,Temp rectal,1.0,,0.0,30.0,-15000,15000,,Rectal thermistor
+raw_sc,SC4282G0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4282G0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4291G0,EEG Fpz-Cz,100.0,uV,-189.0,187.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4291G0,EEG Pz-Oz,100.0,uV,-185.0,185.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4291G0,EOG horizontal,100.0,uV,-997.0,998.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4291G0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4291G0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4291G0,Temp rectal,1.0,DegC,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4291G0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4291G0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4292G0,EEG Fpz-Cz,100.0,uV,-198.0,198.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4292G0,EEG Pz-Oz,100.0,uV,-201.0,202.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4292G0,EOG horizontal,100.0,uV,-974.0,975.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4292G0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4292G0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4292G0,Temp rectal,1.0,DegC,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4292G0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4292G0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4301E0,EEG Fpz-Cz,100.0,uV,-182.0,183.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4301E0,EEG Pz-Oz,100.0,uV,-186.0,187.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4301E0,EOG horizontal,100.0,uV,-902.0,906.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4301E0,Resp oro-nasal,1.0,,-3000.0,3000.0,-3000,3000,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4301E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4301E0,Temp rectal,1.0,DegC,34.0,40.0,-3012,2934,,Rectal thermistor
+raw_sc,SC4301E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4301E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4302E0,EEG Fpz-Cz,100.0,uV,-178.0,176.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4302E0,EEG Pz-Oz,100.0,uV,-186.0,185.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4302E0,EOG horizontal,100.0,uV,-1029.0,1017.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4302E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4302E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4302E0,Temp rectal,1.0,DegC,34.0,40.0,-2894,2767,,Rectal thermistor
+raw_sc,SC4302E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4302E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4311E0,EEG Fpz-Cz,100.0,uV,-177.0,176.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4311E0,EEG Pz-Oz,100.0,uV,-178.0,177.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4311E0,EOG horizontal,100.0,uV,-1055.0,1051.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4311E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4311E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4311E0,Temp rectal,1.0,DegC,34.0,40.0,-2668,2690,,Rectal thermistor
+raw_sc,SC4311E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4311E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4312E0,EEG Fpz-Cz,100.0,uV,-176.0,184.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4312E0,EEG Pz-Oz,100.0,uV,-186.0,186.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4312E0,EOG horizontal,100.0,uV,-1044.0,1040.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4312E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4312E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4312E0,Temp rectal,1.0,DegC,34.0,40.0,-2500,2567,,Rectal thermistor
+raw_sc,SC4312E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4312E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4321E0,EEG Fpz-Cz,100.0,uV,-200.0,200.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4321E0,EEG Pz-Oz,100.0,uV,-200.0,200.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4321E0,EOG horizontal,100.0,uV,-932.0,932.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4321E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4321E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4321E0,Temp rectal,1.0,DegC,34.0,40.0,-2688,2730,,Rectal thermistor
+raw_sc,SC4321E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4321E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4322E0,EEG Fpz-Cz,100.0,uV,-204.0,206.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4322E0,EEG Pz-Oz,100.0,uV,-181.0,182.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4322E0,EOG horizontal,100.0,uV,-848.0,851.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4322E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4322E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4322E0,Temp rectal,1.0,DegC,34.0,40.0,-3174,3258,,Rectal thermistor
+raw_sc,SC4322E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4322E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4331F0,EEG Fpz-Cz,100.0,uV,-181.0,185.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4331F0,EEG Pz-Oz,100.0,uV,-186.0,189.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4331F0,EOG horizontal,100.0,uV,-857.0,872.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4331F0,Resp oro-nasal,1.0,,-3000.0,3000.0,-3000,3000,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4331F0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4331F0,Temp rectal,1.0,DegC,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4331F0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4331F0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4332F0,EEG Fpz-Cz,100.0,uV,-197.0,198.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4332F0,EEG Pz-Oz,100.0,uV,-184.0,186.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4332F0,EOG horizontal,100.0,uV,-984.0,988.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4332F0,Resp oro-nasal,1.0,,-30000.0,30000.0,-30000,30000,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4332F0,EMG submental,1.0,uV,-50.0,50.0,-25000,25000,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4332F0,Temp rectal,1.0,DegC,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4332F0,Event marker,1.0,,-30000.0,30000.0,-30000,30000,Hold during 2 seconds,Marker button
+edf78_npz,SC4332F0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4341F0,EEG Fpz-Cz,100.0,uV,-192.0,193.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4341F0,EEG Pz-Oz,100.0,uV,-186.0,187.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4341F0,EOG horizontal,100.0,uV,-995.0,1007.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4341F0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4341F0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4341F0,Temp rectal,1.0,DegC,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4341F0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4341F0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4342F0,EEG Fpz-Cz,100.0,uV,-170.0,170.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4342F0,EEG Pz-Oz,100.0,uV,-177.0,177.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4342F0,EOG horizontal,100.0,uV,-937.0,934.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4342F0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4342F0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4342F0,Temp rectal,1.0,DegC,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4342F0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4342F0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4351F0,EEG Fpz-Cz,100.0,uV,-188.0,188.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4351F0,EEG Pz-Oz,100.0,uV,-205.0,204.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4351F0,EOG horizontal,100.0,uV,-956.0,956.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4351F0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4351F0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4351F0,Temp rectal,1.0,,0.0,30.0,-15000,15000,,Rectal thermistor
+raw_sc,SC4351F0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4351F0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4352F0,EEG Fpz-Cz,100.0,uV,-184.0,185.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4352F0,EEG Pz-Oz,100.0,uV,-184.0,186.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4352F0,EOG horizontal,100.0,uV,-956.0,957.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4352F0,Resp oro-nasal,1.0,,-3000.0,3000.0,-3000,3000,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4352F0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4352F0,Temp rectal,1.0,,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4352F0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4352F0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4362F0,EEG Fpz-Cz,100.0,uV,-205.0,203.0,-32768,32767,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4362F0,EEG Pz-Oz,100.0,uV,-187.0,186.0,-32768,32767,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4362F0,EOG horizontal,100.0,uV,-935.0,922.0,-32768,32767,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4362F0,Resp oro-nasal,1.0,,-2048.0,2047.0,-32768,32767,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4362F0,EMG submental,1.0,uV,-5.0,5.0,-32768,32767,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4362F0,Temp rectal,1.0,DegC,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4362F0,Event marker,1.0,,-2047.0,2048.0,-32768,32767,Hold during 2 seconds,Marker button
+edf78_npz,SC4362F0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4371F0,EEG Fpz-Cz,100.0,uV,-184.0,188.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4371F0,EEG Pz-Oz,100.0,uV,-177.0,180.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4371F0,EOG horizontal,100.0,uV,-949.0,964.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4371F0,Resp oro-nasal,1.0,,-3000.0,3000.0,-3000,3000,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4371F0,EMG submental,1.0,uV,-7.0,7.0,-3500,3500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4371F0,Temp rectal,1.0,DegC,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4371F0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4371F0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4372F0,EEG Fpz-Cz,100.0,uV,-176.0,176.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4372F0,EEG Pz-Oz,100.0,uV,-172.0,172.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4372F0,EOG horizontal,100.0,uV,-893.0,893.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4372F0,Resp oro-nasal,1.0,,-4000.0,4000.0,-4000,4000,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4372F0,EMG submental,1.0,uV,-7.0,7.0,-3500,3500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4372F0,Temp rectal,1.0,DegC,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4372F0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4372F0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4381F0,EEG Fpz-Cz,100.0,uV,-177.0,175.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4381F0,EEG Pz-Oz,100.0,uV,-181.0,179.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4381F0,EOG horizontal,100.0,uV,-1061.0,1049.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4381F0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4381F0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4381F0,Temp rectal,1.0,DegC,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4381F0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4381F0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4382F0,EEG Fpz-Cz,100.0,uV,-192.0,193.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4382F0,EEG Pz-Oz,100.0,uV,-181.0,183.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4382F0,EOG horizontal,100.0,uV,-982.0,986.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4382F0,Resp oro-nasal,1.0,,-3000.0,3000.0,-3000,3000,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4382F0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4382F0,Temp rectal,1.0,DegC,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4382F0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4382F0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4401E0,EEG Fpz-Cz,100.0,uV,-194.0,206.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4401E0,EEG Pz-Oz,100.0,uV,-196.0,195.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4401E0,EOG horizontal,100.0,uV,-965.0,962.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4401E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4401E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4401E0,Temp rectal,1.0,DegC,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4401E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4401E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4402E0,EEG Fpz-Cz,100.0,uV,-186.0,185.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4402E0,EEG Pz-Oz,100.0,uV,-184.0,184.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4402E0,EOG horizontal,100.0,uV,-912.0,909.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4402E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4402E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4402E0,Temp rectal,1.0,DegC,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4402E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4402E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4411E0,EEG Fpz-Cz,100.0,uV,-202.0,199.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4411E0,EEG Pz-Oz,100.0,uV,-187.0,185.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4411E0,EOG horizontal,100.0,uV,-969.0,958.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4411E0,Resp oro-nasal,1.0,,-4000.0,4000.0,-4000,4000,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4411E0,EMG submental,1.0,uV,-50.0,50.0,-25000,25000,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4411E0,Temp rectal,1.0,DegC,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4411E0,Event marker,1.0,,-3000.0,3000.0,-3000,3000,Hold during 2 seconds,Marker button
+edf78_npz,SC4411E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4412E0,EEG Fpz-Cz,100.0,uV,-181.0,184.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4412E0,EEG Pz-Oz,100.0,uV,-185.0,187.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4412E0,EOG horizontal,100.0,uV,-913.0,924.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4412E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4412E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4412E0,Temp rectal,1.0,DegC,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4412E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4412E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4421E0,EEG Fpz-Cz,100.0,uV,-177.0,174.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4421E0,EEG Pz-Oz,100.0,uV,-195.0,193.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4421E0,EOG horizontal,100.0,uV,-940.0,930.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4421E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4421E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4421E0,Temp rectal,1.0,DegC,34.0,40.0,-2459,2512,,Rectal thermistor
+raw_sc,SC4421E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4421E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4422E0,EEG Fpz-Cz,100.0,uV,-201.0,202.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4422E0,EEG Pz-Oz,100.0,uV,-187.0,191.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4422E0,EOG horizontal,100.0,uV,-900.0,911.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4422E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4422E0,EMG submental,1.0,uV,-50.0,50.0,-25000,25000,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4422E0,Temp rectal,1.0,DegC,34.0,40.0,-2692,2768,,Rectal thermistor
+raw_sc,SC4422E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4422E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4431E0,EEG Fpz-Cz,100.0,uV,-200.0,200.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4431E0,EEG Pz-Oz,100.0,uV,-192.0,192.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4431E0,EOG horizontal,100.0,uV,-930.0,927.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4431E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4431E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4431E0,Temp rectal,1.0,DegC,34.0,40.0,-2861,2929,,Rectal thermistor
+raw_sc,SC4431E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4431E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4432E0,EEG Fpz-Cz,100.0,uV,-192.0,192.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4432E0,EEG Pz-Oz,100.0,uV,-179.0,180.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4432E0,EOG horizontal,100.0,uV,-897.0,898.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4432E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4432E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4432E0,Temp rectal,1.0,DegC,34.0,40.0,-3058,3293,,Rectal thermistor
+raw_sc,SC4432E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4432E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4441E0,EEG Fpz-Cz,100.0,uV,-185.0,184.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4441E0,EEG Pz-Oz,100.0,uV,-199.0,198.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4441E0,EOG horizontal,100.0,uV,-897.0,888.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4441E0,Resp oro-nasal,1.0,,-3000.0,3000.0,-3000,3000,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4441E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4441E0,Temp rectal,1.0,DegC,34.0,40.0,-2686,2876,,Rectal thermistor
+raw_sc,SC4441E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4441E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4442E0,EEG Fpz-Cz,100.0,uV,-181.0,180.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4442E0,EEG Pz-Oz,100.0,uV,-186.0,186.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4442E0,EOG horizontal,100.0,uV,-945.0,942.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4442E0,Resp oro-nasal,1.0,,-3000.0,3000.0,-3000,3000,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4442E0,EMG submental,1.0,uV,-10.0,10.0,-5000,5000,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4442E0,Temp rectal,1.0,DegC,4.0,70.0,-30250,30250,,Rectal thermistor
+raw_sc,SC4442E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4442E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4451F0,EEG Fpz-Cz,100.0,uV,-175.0,174.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4451F0,EEG Pz-Oz,100.0,uV,-180.0,180.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4451F0,EOG horizontal,100.0,uV,-899.0,887.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4451F0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4451F0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4451F0,Temp rectal,1.0,,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4451F0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4451F0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4452F0,EEG Fpz-Cz,100.0,uV,-196.0,195.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4452F0,EEG Pz-Oz,100.0,uV,-212.0,211.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4452F0,EOG horizontal,100.0,uV,-935.0,929.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4452F0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4452F0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4452F0,Temp rectal,1.0,,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4452F0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4452F0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4461F0,EEG Fpz-Cz,100.0,uV,-180.0,180.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4461F0,EEG Pz-Oz,100.0,uV,-185.0,187.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4461F0,EOG horizontal,100.0,uV,-917.0,920.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4461F0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4461F0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4461F0,Temp rectal,1.0,,0.0,30.0,-15000,15000,,Rectal thermistor
+raw_sc,SC4461F0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4461F0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4462F0,EEG Fpz-Cz,100.0,uV,-184.0,199.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4462F0,EEG Pz-Oz,100.0,uV,-183.0,181.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4462F0,EOG horizontal,100.0,uV,-980.0,969.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4462F0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4462F0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4462F0,Temp rectal,1.0,,0.0,30.0,-15000,15000,,Rectal thermistor
+raw_sc,SC4462F0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4462F0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4471F0,EEG Fpz-Cz,100.0,uV,-183.0,182.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4471F0,EEG Pz-Oz,100.0,uV,-183.0,183.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4471F0,EOG horizontal,100.0,uV,-1023.0,1024.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4471F0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4471F0,EMG submental,1.0,uV,-50.0,50.0,-25000,25000,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4471F0,Temp rectal,1.0,,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4471F0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4471F0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4472F0,EEG Fpz-Cz,100.0,uV,-203.0,201.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4472F0,EEG Pz-Oz,100.0,uV,-191.0,191.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4472F0,EOG horizontal,100.0,uV,-930.0,924.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4472F0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4472F0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4472F0,Temp rectal,1.0,,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4472F0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4472F0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4481F0,EEG Fpz-Cz,100.0,uV,-176.0,192.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4481F0,EEG Pz-Oz,100.0,uV,-180.0,180.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4481F0,EOG horizontal,100.0,uV,-877.0,878.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4481F0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4481F0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4481F0,Temp rectal,1.0,,0.0,30.0,-15000,15000,,Rectal thermistor
+raw_sc,SC4481F0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4481F0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4482F0,EEG Fpz-Cz,100.0,uV,-185.0,186.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4482F0,EEG Pz-Oz,100.0,uV,-183.0,183.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4482F0,EOG horizontal,100.0,uV,-942.0,939.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4482F0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4482F0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4482F0,Temp rectal,1.0,,0.0,30.0,-15000,15000,,Rectal thermistor
+raw_sc,SC4482F0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4482F0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4491G0,EEG Fpz-Cz,100.0,uV,-171.0,171.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4491G0,EEG Pz-Oz,100.0,uV,-177.0,177.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4491G0,EOG horizontal,100.0,uV,-858.0,859.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4491G0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4491G0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4491G0,Temp rectal,1.0,,0.0,30.0,-15000,15000,,Rectal thermistor
+raw_sc,SC4491G0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4491G0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4492G0,EEG Fpz-Cz,100.0,uV,-173.0,173.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4492G0,EEG Pz-Oz,100.0,uV,-177.0,177.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4492G0,EOG horizontal,100.0,uV,-1005.0,998.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4492G0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4492G0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4492G0,Temp rectal,1.0,,0.0,30.0,-15000,15000,,Rectal thermistor
+raw_sc,SC4492G0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4492G0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4501E0,EEG Fpz-Cz,100.0,uV,-165.0,172.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4501E0,EEG Pz-Oz,100.0,uV,-174.0,175.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4501E0,EOG horizontal,100.0,uV,-930.0,934.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4501E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4501E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4501E0,Temp rectal,1.0,,0.0,30.0,-15000,15000,,Rectal thermistor
+raw_sc,SC4501E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4501E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4502E0,EEG Fpz-Cz,100.0,uV,-182.0,182.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4502E0,EEG Pz-Oz,100.0,uV,-185.0,187.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4502E0,EOG horizontal,100.0,uV,-928.0,936.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4502E0,Resp oro-nasal,1.0,,-3000.0,3000.0,-3000,3000,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4502E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4502E0,Temp rectal,1.0,,0.0,30.0,-15000,15000,,Rectal thermistor
+raw_sc,SC4502E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4502E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4511E0,EEG Fpz-Cz,100.0,uV,-193.0,188.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4511E0,EEG Pz-Oz,100.0,uV,-200.0,201.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4511E0,EOG horizontal,100.0,uV,-991.0,992.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4511E0,Resp oro-nasal,1.0,,-3000.0,3000.0,-3000,3000,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4511E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4511E0,Temp rectal,1.0,DegC,34.0,40.0,-2825,2785,,Rectal thermistor
+raw_sc,SC4511E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4511E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4512E0,EEG Fpz-Cz,100.0,uV,-189.0,184.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4512E0,EEG Pz-Oz,100.0,uV,-206.0,203.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4512E0,EOG horizontal,100.0,uV,-928.0,919.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4512E0,Resp oro-nasal,1.0,,-3000.0,3000.0,-3000,3000,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4512E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4512E0,Temp rectal,1.0,DegC,34.0,40.0,-2829,2724,,Rectal thermistor
+raw_sc,SC4512E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4512E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4522E0,EEG Fpz-Cz,100.0,uV,-165.0,172.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4522E0,EEG Pz-Oz,100.0,uV,-181.0,183.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4522E0,EOG horizontal,100.0,uV,-923.0,937.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4522E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4522E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4522E0,Temp rectal,1.0,,0.0,30.0,-15000,15000,,Rectal thermistor
+raw_sc,SC4522E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4522E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4531E0,EEG Fpz-Cz,100.0,uV,-215.0,201.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4531E0,EEG Pz-Oz,100.0,uV,-197.0,197.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4531E0,EOG horizontal,100.0,uV,-870.0,870.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4531E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4531E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4531E0,Temp rectal,1.0,DegC,34.0,40.0,-2600,2761,,Rectal thermistor
+raw_sc,SC4531E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4531E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4532E0,EEG Fpz-Cz,100.0,uV,-206.0,206.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4532E0,EEG Pz-Oz,100.0,uV,-191.0,190.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4532E0,EOG horizontal,100.0,uV,-1025.0,1021.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4532E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4532E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4532E0,Temp rectal,1.0,DegC,34.0,40.0,-2470,2612,,Rectal thermistor
+raw_sc,SC4532E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4532E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4541F0,EEG Fpz-Cz,100.0,uV,-193.0,192.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4541F0,EEG Pz-Oz,100.0,uV,-185.0,185.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4541F0,EOG horizontal,100.0,uV,-930.0,930.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4541F0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4541F0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4541F0,Temp rectal,1.0,DegC,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4541F0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4541F0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4542F0,EEG Fpz-Cz,100.0,uV,-188.0,194.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4542F0,EEG Pz-Oz,100.0,uV,-183.0,185.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4542F0,EOG horizontal,100.0,uV,-1011.0,1019.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4542F0,Resp oro-nasal,1.0,,-3000.0,3000.0,-3000,3000,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4542F0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4542F0,Temp rectal,1.0,DegC,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4542F0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4542F0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4551F0,EEG Fpz-Cz,100.0,uV,-174.0,174.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4551F0,EEG Pz-Oz,100.0,uV,-185.0,186.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4551F0,EOG horizontal,100.0,uV,-986.0,986.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4551F0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4551F0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4551F0,Temp rectal,1.0,,0.0,30.0,-15000,15000,,Rectal thermistor
+raw_sc,SC4551F0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4551F0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4552F0,EEG Fpz-Cz,100.0,uV,-183.0,183.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4552F0,EEG Pz-Oz,100.0,uV,-198.0,196.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4552F0,EOG horizontal,100.0,uV,-908.0,902.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4552F0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4552F0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4552F0,Temp rectal,1.0,,0.0,30.0,-15000,15000,,Rectal thermistor
+raw_sc,SC4552F0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4552F0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4561F0,EEG Fpz-Cz,100.0,uV,-182.0,181.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4561F0,EEG Pz-Oz,100.0,uV,-198.0,197.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4561F0,EOG horizontal,100.0,uV,-896.0,890.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4561F0,Resp oro-nasal,1.0,,-3000.0,3000.0,-3000,3000,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4561F0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4561F0,Temp rectal,1.0,DegC,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4561F0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4561F0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4562F0,EEG Fpz-Cz,100.0,uV,-193.0,193.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4562F0,EEG Pz-Oz,100.0,uV,-192.0,193.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4562F0,EOG horizontal,100.0,uV,-937.0,941.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4562F0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4562F0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4562F0,Temp rectal,1.0,DegC,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4562F0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4562F0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4571F0,EEG Fpz-Cz,100.0,uV,-192.0,194.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4571F0,EEG Pz-Oz,100.0,uV,-177.0,179.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4571F0,EOG horizontal,100.0,uV,-944.0,948.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4571F0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4571F0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4571F0,Temp rectal,1.0,,0.0,30.0,-15000,15000,,Rectal thermistor
+raw_sc,SC4571F0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4571F0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4572F0,EEG Fpz-Cz,100.0,uV,-180.0,181.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4572F0,EEG Pz-Oz,100.0,uV,-177.0,176.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4572F0,EOG horizontal,100.0,uV,-958.0,958.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4572F0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4572F0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4572F0,Temp rectal,1.0,,0.0,30.0,-15000,15000,,Rectal thermistor
+raw_sc,SC4572F0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4572F0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4581G0,EEG Fpz-Cz,100.0,uV,-179.0,179.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4581G0,EEG Pz-Oz,100.0,uV,-181.0,180.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4581G0,EOG horizontal,100.0,uV,-844.0,907.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4581G0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4581G0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4581G0,Temp rectal,1.0,,0.0,30.0,-15000,15000,,Rectal thermistor
+raw_sc,SC4581G0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4581G0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4582G0,EEG Fpz-Cz,100.0,uV,-186.0,186.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4582G0,EEG Pz-Oz,100.0,uV,-187.0,188.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4582G0,EOG horizontal,100.0,uV,-899.0,902.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4582G0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4582G0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4582G0,Temp rectal,1.0,,0.0,30.0,-15000,15000,,Rectal thermistor
+raw_sc,SC4582G0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4582G0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4591G0,EEG Fpz-Cz,100.0,uV,-173.0,172.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4591G0,EEG Pz-Oz,100.0,uV,-201.0,201.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4591G0,EOG horizontal,100.0,uV,-888.0,882.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4591G0,Resp oro-nasal,1.0,,-3000.0,3000.0,-3000,3000,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4591G0,EMG submental,1.0,uV,-10.0,10.0,-5000,5000,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4591G0,Temp rectal,1.0,,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4591G0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4591G0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4592G0,EEG Fpz-Cz,100.0,uV,-192.0,190.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4592G0,EEG Pz-Oz,100.0,uV,-186.0,183.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4592G0,EOG horizontal,100.0,uV,-913.0,904.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4592G0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4592G0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4592G0,Temp rectal,1.0,,0.0,30.0,-15000,15000,,Rectal thermistor
+raw_sc,SC4592G0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4592G0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4601E0,EEG Fpz-Cz,100.0,uV,-175.0,176.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4601E0,EEG Pz-Oz,100.0,uV,-192.0,192.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4601E0,EOG horizontal,100.0,uV,-999.0,1000.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4601E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4601E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4601E0,Temp rectal,1.0,DegC,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4601E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4601E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4602E0,EEG Fpz-Cz,100.0,uV,-177.0,175.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4602E0,EEG Pz-Oz,100.0,uV,-201.0,201.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4602E0,EOG horizontal,100.0,uV,-997.0,986.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4602E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4602E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4602E0,Temp rectal,1.0,DegC,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4602E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4602E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4611E0,EEG Fpz-Cz,100.0,uV,-199.0,197.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4611E0,EEG Pz-Oz,100.0,uV,-181.0,181.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4611E0,EOG horizontal,100.0,uV,-1001.0,994.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4611E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4611E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4611E0,Temp rectal,1.0,,0.0,30.0,-15000,15000,,Rectal thermistor
+raw_sc,SC4611E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4611E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4612E0,EEG Fpz-Cz,100.0,uV,-197.0,199.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4612E0,EEG Pz-Oz,100.0,uV,-175.0,176.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4612E0,EOG horizontal,100.0,uV,-862.0,869.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4612E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4612E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4612E0,Temp rectal,1.0,,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4612E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4612E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4621E0,EEG Fpz-Cz,100.0,uV,-193.0,193.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4621E0,EEG Pz-Oz,100.0,uV,-193.0,194.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4621E0,EOG horizontal,100.0,uV,-905.0,909.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4621E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4621E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4621E0,Temp rectal,1.0,,0.0,30.0,-15000,15000,,Rectal thermistor
+raw_sc,SC4621E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4621E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4622E0,EEG Fpz-Cz,100.0,uV,-185.0,185.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4622E0,EEG Pz-Oz,100.0,uV,-177.0,177.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4622E0,EOG horizontal,100.0,uV,-965.0,966.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4622E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4622E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4622E0,Temp rectal,1.0,,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4622E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4622E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4631E0,EEG Fpz-Cz,100.0,uV,-182.0,181.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4631E0,EEG Pz-Oz,100.0,uV,-180.0,180.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4631E0,EOG horizontal,100.0,uV,-945.0,939.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4631E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4631E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4631E0,Temp rectal,1.0,DegC,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4631E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4631E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4632E0,EEG Fpz-Cz,100.0,uV,-200.0,198.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4632E0,EEG Pz-Oz,100.0,uV,-180.0,180.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4632E0,EOG horizontal,100.0,uV,-995.0,996.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4632E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4632E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4632E0,Temp rectal,1.0,DegC,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4632E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4632E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4641E0,EEG Fpz-Cz,100.0,uV,-189.0,191.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4641E0,EEG Pz-Oz,100.0,uV,-204.0,206.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4641E0,EOG horizontal,100.0,uV,-920.0,930.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4641E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4641E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4641E0,Temp rectal,1.0,,0.0,30.0,-15000,15000,,Rectal thermistor
+raw_sc,SC4641E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4641E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4642E0,EEG Fpz-Cz,100.0,uV,-179.0,181.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4642E0,EEG Pz-Oz,100.0,uV,-180.0,183.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4642E0,EOG horizontal,100.0,uV,-1025.0,1042.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4642E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4642E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4642E0,Temp rectal,1.0,,0.0,30.0,-15000,15000,,Rectal thermistor
+raw_sc,SC4642E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4642E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4651E0,EEG Fpz-Cz,100.0,uV,-177.0,180.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4651E0,EEG Pz-Oz,100.0,uV,-195.0,192.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4651E0,EOG horizontal,100.0,uV,-989.0,982.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4651E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4651E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4651E0,Temp rectal,1.0,DegC,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4651E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4651E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4652E0,EEG Fpz-Cz,100.0,uV,-199.0,199.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4652E0,EEG Pz-Oz,100.0,uV,-189.0,189.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4652E0,EOG horizontal,100.0,uV,-867.0,870.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4652E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4652E0,EMG submental,1.0,uV,-10.0,10.0,-5000,5000,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4652E0,Temp rectal,1.0,DegC,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4652E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4652E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4661E0,EEG Fpz-Cz,100.0,uV,-189.0,190.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4661E0,EEG Pz-Oz,100.0,uV,-197.0,199.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4661E0,EOG horizontal,100.0,uV,-1025.0,1026.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4661E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4661E0,EMG submental,1.0,uV,-10.0,10.0,-5000,5000,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4661E0,Temp rectal,1.0,,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4661E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4661E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4662E0,EEG Fpz-Cz,100.0,uV,-167.0,174.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4662E0,EEG Pz-Oz,100.0,uV,-189.0,189.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4662E0,EOG horizontal,100.0,uV,-917.0,924.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4662E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4662E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4662E0,Temp rectal,1.0,,0.0,30.0,-15000,15000,,Rectal thermistor
+raw_sc,SC4662E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4662E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4671G0,EEG Fpz-Cz,100.0,uV,-207.0,207.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4671G0,EEG Pz-Oz,100.0,uV,-179.0,179.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4671G0,EOG horizontal,100.0,uV,-1055.0,1055.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4671G0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4671G0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4671G0,Temp rectal,1.0,,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4671G0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4671G0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4672G0,EEG Fpz-Cz,100.0,uV,-178.0,179.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4672G0,EEG Pz-Oz,100.0,uV,-164.0,166.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4672G0,EOG horizontal,100.0,uV,-945.0,949.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4672G0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4672G0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4672G0,Temp rectal,1.0,,0.0,30.0,-15000,15000,,Rectal thermistor
+raw_sc,SC4672G0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4672G0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4701E0,EEG Fpz-Cz,100.0,uV,-190.0,191.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4701E0,EEG Pz-Oz,100.0,uV,-178.0,179.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4701E0,EOG horizontal,100.0,uV,-927.0,927.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4701E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4701E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4701E0,Temp rectal,1.0,,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4701E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4701E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4702E0,EEG Fpz-Cz,100.0,uV,-179.0,185.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4702E0,EEG Pz-Oz,100.0,uV,-185.0,185.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4702E0,EOG horizontal,100.0,uV,-965.0,969.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4702E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4702E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4702E0,Temp rectal,1.0,,0.0,30.0,-15000,15000,,Rectal thermistor
+raw_sc,SC4702E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4702E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4711E0,EEG Fpz-Cz,100.0,uV,-200.0,200.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4711E0,EEG Pz-Oz,100.0,uV,-204.0,204.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4711E0,EOG horizontal,100.0,uV,-861.0,861.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4711E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4711E0,EMG submental,1.0,uV,-10.0,10.0,-5000,5000,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4711E0,Temp rectal,1.0,,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4711E0,Event marker,1.0,,-5000.0,5000.0,-5000,5000,Hold during 2 seconds,Marker button
+edf78_npz,SC4711E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4712E0,EEG Fpz-Cz,100.0,uV,-192.0,193.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4712E0,EEG Pz-Oz,100.0,uV,-184.0,184.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4712E0,EOG horizontal,100.0,uV,-1021.0,1026.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4712E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4712E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4712E0,Temp rectal,1.0,DegC,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4712E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4712E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4721E0,EEG Fpz-Cz,100.0,uV,-184.0,184.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4721E0,EEG Pz-Oz,100.0,uV,-187.0,188.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4721E0,EOG horizontal,100.0,uV,-900.0,901.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4721E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4721E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4721E0,Temp rectal,1.0,,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4721E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4721E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4722E0,EEG Fpz-Cz,100.0,uV,-199.0,198.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4722E0,EEG Pz-Oz,100.0,uV,-211.0,212.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4722E0,EOG horizontal,100.0,uV,-952.0,953.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4722E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4722E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4722E0,Temp rectal,1.0,,0.0,30.0,-15000,15000,,Rectal thermistor
+raw_sc,SC4722E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4722E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4731E0,EEG Fpz-Cz,100.0,uV,-194.0,195.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4731E0,EEG Pz-Oz,100.0,uV,-206.0,207.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4731E0,EOG horizontal,100.0,uV,-1042.0,1042.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4731E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4731E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4731E0,Temp rectal,1.0,DegC,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4731E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4731E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4732E0,EEG Fpz-Cz,100.0,uV,-203.0,201.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4732E0,EEG Pz-Oz,100.0,uV,-204.0,202.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4732E0,EOG horizontal,100.0,uV,-1059.0,1038.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4732E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4732E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4732E0,Temp rectal,1.0,DegC,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4732E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4732E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4741E0,EEG Fpz-Cz,100.0,uV,-197.0,199.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4741E0,EEG Pz-Oz,100.0,uV,-192.0,193.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4741E0,EOG horizontal,100.0,uV,-1023.0,1024.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4741E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4741E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4741E0,Temp rectal,1.0,DegC,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4741E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4741E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4742E0,EEG Fpz-Cz,100.0,uV,-174.0,177.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4742E0,EEG Pz-Oz,100.0,uV,-191.0,189.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4742E0,EOG horizontal,100.0,uV,-1013.0,998.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4742E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4742E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4742E0,Temp rectal,1.0,DegC,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4742E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4742E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4751E0,EEG Fpz-Cz,100.0,uV,-181.0,182.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4751E0,EEG Pz-Oz,100.0,uV,-193.0,195.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4751E0,EOG horizontal,100.0,uV,-995.0,1000.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4751E0,Resp oro-nasal,1.0,,-32768.0,32767.0,-32768,32767,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4751E0,EMG submental,1.0,uV,-50.0,50.0,-25000,25000,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4751E0,Temp rectal,1.0,DegC,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4751E0,Event marker,1.0,,-32768.0,32767.0,-32768,32767,Hold during 2 seconds,Marker button
+edf78_npz,SC4751E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4752E0,EEG Fpz-Cz,100.0,uV,-180.0,179.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4752E0,EEG Pz-Oz,100.0,uV,-193.0,193.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4752E0,EOG horizontal,100.0,uV,-905.0,899.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4752E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4752E0,EMG submental,1.0,uV,-50.0,50.0,-5000,5000,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4752E0,Temp rectal,1.0,DegC,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4752E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4752E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4761E0,EEG Fpz-Cz,100.0,uV,-212.0,212.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4761E0,EEG Pz-Oz,100.0,uV,-198.0,200.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4761E0,EOG horizontal,100.0,uV,-1011.0,1011.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4761E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4761E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4761E0,Temp rectal,1.0,,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4761E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4761E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4762E0,EEG Fpz-Cz,100.0,uV,-169.0,167.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4762E0,EEG Pz-Oz,100.0,uV,-186.0,185.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4762E0,EOG horizontal,100.0,uV,-944.0,937.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4762E0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4762E0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4762E0,Temp rectal,1.0,,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4762E0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4762E0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4771G0,EEG Fpz-Cz,100.0,uV,-185.0,186.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4771G0,EEG Pz-Oz,100.0,uV,-207.0,208.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4771G0,EOG horizontal,100.0,uV,-987.0,992.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4771G0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4771G0,EMG submental,1.0,uV,-10.0,10.0,-5000,5000,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4771G0,Temp rectal,1.0,,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4771G0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4771G0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4772G0,EEG Fpz-Cz,100.0,uV,-176.0,176.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4772G0,EEG Pz-Oz,100.0,uV,-176.0,177.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4772G0,EOG horizontal,100.0,uV,-1017.0,1017.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4772G0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4772G0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4772G0,Temp rectal,1.0,,0.0,30.0,-15000,15000,,Rectal thermistor
+raw_sc,SC4772G0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4772G0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4801G0,EEG Fpz-Cz,100.0,uV,-173.0,176.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4801G0,EEG Pz-Oz,100.0,uV,-201.0,201.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4801G0,EOG horizontal,100.0,uV,-1029.0,1030.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4801G0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4801G0,EMG submental,1.0,uV,-10.0,10.0,-5000,5000,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4801G0,Temp rectal,1.0,,0.0,30.0,-15000,15000,,Rectal thermistor
+raw_sc,SC4801G0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4801G0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4802G0,EEG Fpz-Cz,100.0,uV,-205.0,206.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4802G0,EEG Pz-Oz,100.0,uV,-187.0,188.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4802G0,EOG horizontal,100.0,uV,-905.0,906.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4802G0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4802G0,EMG submental,1.0,uV,-10.0,10.0,-5000,5000,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4802G0,Temp rectal,1.0,,0.0,30.0,-15000,15000,,Rectal thermistor
+raw_sc,SC4802G0,Event marker,1.0,,-3000.0,3000.0,-3000,3000,Hold during 2 seconds,Marker button
+edf78_npz,SC4802G0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4811G0,EEG Fpz-Cz,100.0,uV,-193.0,191.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4811G0,EEG Pz-Oz,100.0,uV,-191.0,190.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4811G0,EOG horizontal,100.0,uV,-891.0,888.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4811G0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4811G0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4811G0,Temp rectal,1.0,,0.0,30.0,-15000,15000,,Rectal thermistor
+raw_sc,SC4811G0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4811G0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4812G0,EEG Fpz-Cz,100.0,uV,-190.0,192.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4812G0,EEG Pz-Oz,100.0,uV,-185.0,187.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4812G0,EOG horizontal,100.0,uV,-1029.0,1034.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4812G0,Resp oro-nasal,1.0,,-2048.0,2047.0,-2048,2047,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4812G0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4812G0,Temp rectal,1.0,,0.0,30.0,-15000,15000,,Rectal thermistor
+raw_sc,SC4812G0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4812G0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4821G0,EEG Fpz-Cz,100.0,uV,-181.0,181.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4821G0,EEG Pz-Oz,100.0,uV,-196.0,197.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4821G0,EOG horizontal,100.0,uV,-996.0,995.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4821G0,Resp oro-nasal,1.0,,-3000.0,3000.0,-3000,3000,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4821G0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4821G0,Temp rectal,1.0,,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4821G0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4821G0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_sc,SC4822G0,EEG Fpz-Cz,100.0,uV,-182.0,182.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4822G0,EEG Pz-Oz,100.0,uV,-194.0,195.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4822G0,EOG horizontal,100.0,uV,-993.0,994.0,-2048,2047,HP:0.5Hz LP:100Hz [enhanced cassette BW],Ag-AgCl electrodes
+raw_sc,SC4822G0,Resp oro-nasal,1.0,,-3000.0,3000.0,-3000,3000,HP:0.03Hz LP:0.9Hz,Oral-nasal thermistors
+raw_sc,SC4822G0,EMG submental,1.0,uV,-5.0,5.0,-2500,2500,HP:16Hz Rectification LP:0.7Hz,Ag-AgCl electrodes
+raw_sc,SC4822G0,Temp rectal,1.0,,0.0,30.0,-32768,32767,,Rectal thermistor
+raw_sc,SC4822G0,Event marker,1.0,,-2047.0,2048.0,-2047,2048,Hold during 2 seconds,Marker button
+edf78_npz,SC4822G0,EEG Fpz-Cz,100.0,uV,,,,,unknown upstream process,"raw linked, upstream unknown"
+raw_st,ST7011J0,EEG Fpz-Cz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7011J0,EEG Pz-Oz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7011J0,EOG horizontal,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7011J0,EMG submental,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7011J0,Marker,10.0,ID+M-E,-64.0,63.0,-64,63,,MarkerButton
+raw_st,ST7012J0,EEG Fpz-Cz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7012J0,EEG Pz-Oz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7012J0,EOG horizontal,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7012J0,EMG submental,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7012J0,Marker,10.0,ID+M-E,-64.0,63.0,-64,63,,MarkerButton
+raw_st,ST7021J0,EEG Fpz-Cz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7021J0,EEG Pz-Oz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7021J0,EOG horizontal,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7021J0,EMG submental,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7021J0,Marker,10.0,ID+M-E,-64.0,63.0,-64,63,,MarkerButton
+raw_st,ST7022J0,EEG Fpz-Cz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7022J0,EEG Pz-Oz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7022J0,EOG horizontal,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7022J0,EMG submental,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7022J0,Marker,10.0,ID+M-E,-64.0,63.0,-64,63,,MarkerButton
+raw_st,ST7041J0,EEG Fpz-Cz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7041J0,EEG Pz-Oz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7041J0,EOG horizontal,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7041J0,EMG submental,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7041J0,Marker,10.0,ID+M-E,-64.0,63.0,-64,63,,MarkerButton
+raw_st,ST7042J0,EEG Fpz-Cz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7042J0,EEG Pz-Oz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7042J0,EOG horizontal,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7042J0,EMG submental,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7042J0,Marker,10.0,ID+M-E,-64.0,63.0,-64,63,,MarkerButton
+raw_st,ST7051J0,EEG Fpz-Cz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7051J0,EEG Pz-Oz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7051J0,EOG horizontal,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7051J0,EMG submental,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7051J0,Marker,10.0,ID+M-E,-64.0,63.0,-64,63,,MarkerButton
+raw_st,ST7052J0,EEG Fpz-Cz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7052J0,EEG Pz-Oz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7052J0,EOG horizontal,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7052J0,EMG submental,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7052J0,Marker,10.0,ID+M-E,-64.0,63.0,-64,63,,MarkerButton
+raw_st,ST7061J0,EEG Fpz-Cz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7061J0,EEG Pz-Oz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7061J0,EOG horizontal,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7061J0,EMG submental,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7061J0,Marker,10.0,ID+M-E,-64.0,63.0,-64,63,,MarkerButton
+raw_st,ST7062J0,EEG Fpz-Cz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7062J0,EEG Pz-Oz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7062J0,EOG horizontal,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7062J0,EMG submental,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7062J0,Marker,10.0,ID+M-E,-64.0,63.0,-64,63,,MarkerButton
+raw_st,ST7071J0,EEG Fpz-Cz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7071J0,EEG Pz-Oz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7071J0,EOG horizontal,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7071J0,EMG submental,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7071J0,Marker,10.0,ID+M-E,-64.0,63.0,-64,63,,MarkerButton
+raw_st,ST7072J0,EEG Fpz-Cz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7072J0,EEG Pz-Oz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7072J0,EOG horizontal,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7072J0,EMG submental,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7072J0,Marker,10.0,ID+M-E,-64.0,63.0,-64,63,,MarkerButton
+raw_st,ST7081J0,EEG Fpz-Cz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7081J0,EEG Pz-Oz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7081J0,EOG horizontal,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7081J0,EMG submental,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7081J0,Marker,10.0,ID+M-E,-64.0,63.0,-64,63,,MarkerButton
+raw_st,ST7082J0,EEG Fpz-Cz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7082J0,EEG Pz-Oz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7082J0,EOG horizontal,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7082J0,EMG submental,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7082J0,Marker,10.0,ID+M-E,-64.0,63.0,-64,63,,MarkerButton
+raw_st,ST7091J0,EEG Fpz-Cz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7091J0,EEG Pz-Oz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7091J0,EOG horizontal,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7091J0,EMG submental,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7091J0,Marker,10.0,ID+M-E,-64.0,63.0,-64,63,,MarkerButton
+raw_st,ST7092J0,EEG Fpz-Cz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7092J0,EEG Pz-Oz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7092J0,EOG horizontal,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7092J0,EMG submental,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7092J0,Marker,10.0,ID+M-E,-64.0,63.0,-64,63,,MarkerButton
+raw_st,ST7101J0,EEG Fpz-Cz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7101J0,EEG Pz-Oz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7101J0,EOG horizontal,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7101J0,EMG submental,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7101J0,Marker,10.0,ID+M-E,-64.0,63.0,-64,63,,MarkerButton
+raw_st,ST7102J0,EEG Fpz-Cz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7102J0,EEG Pz-Oz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7102J0,EOG horizontal,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7102J0,EMG submental,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7102J0,Marker,10.0,ID+M-E,-64.0,63.0,-64,63,,MarkerButton
+raw_st,ST7111J0,EEG Fpz-Cz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7111J0,EEG Pz-Oz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7111J0,EOG horizontal,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7111J0,EMG submental,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7111J0,Marker,10.0,ID+M-E,-64.0,63.0,-64,63,,MarkerButton
+raw_st,ST7112J0,EEG Fpz-Cz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7112J0,EEG Pz-Oz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7112J0,EOG horizontal,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7112J0,EMG submental,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7112J0,Marker,10.0,ID+M-E,-64.0,63.0,-64,63,,MarkerButton
+raw_st,ST7121J0,EEG Fpz-Cz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7121J0,EEG Pz-Oz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7121J0,EOG horizontal,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7121J0,EMG submental,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7121J0,Marker,10.0,ID+M-E,-64.0,63.0,-64,63,,MarkerButton
+raw_st,ST7122J0,EEG Fpz-Cz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7122J0,EEG Pz-Oz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7122J0,EOG horizontal,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7122J0,EMG submental,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7122J0,Marker,10.0,ID+M-E,-64.0,63.0,-64,63,,MarkerButton
+raw_st,ST7131J0,EEG Fpz-Cz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7131J0,EEG Pz-Oz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7131J0,EOG horizontal,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7131J0,EMG submental,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7131J0,Marker,10.0,ID+M-E,-64.0,63.0,-64,63,,MarkerButton
+raw_st,ST7132J0,EEG Fpz-Cz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7132J0,EEG Pz-Oz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7132J0,EOG horizontal,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7132J0,EMG submental,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7132J0,Marker,10.0,ID+M-E,-64.0,63.0,-64,63,,MarkerButton
+raw_st,ST7141J0,EEG Fpz-Cz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7141J0,EEG Pz-Oz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7141J0,EOG horizontal,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7141J0,EMG submental,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7141J0,Marker,10.0,ID+M-E,-64.0,63.0,-64,63,,MarkerButton
+raw_st,ST7142J0,EEG Fpz-Cz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7142J0,EEG Pz-Oz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7142J0,EOG horizontal,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7142J0,EMG submental,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7142J0,Marker,10.0,ID+M-E,-64.0,63.0,-64,63,,MarkerButton
+raw_st,ST7151J0,EEG Fpz-Cz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7151J0,EEG Pz-Oz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7151J0,EOG horizontal,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7151J0,EMG submental,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7151J0,Marker,10.0,ID+M-E,-64.0,63.0,-64,63,,MarkerButton
+raw_st,ST7152J0,EEG Fpz-Cz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7152J0,EEG Pz-Oz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7152J0,EOG horizontal,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7152J0,EMG submental,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7152J0,Marker,10.0,ID+M-E,-64.0,63.0,-64,63,,MarkerButton
+raw_st,ST7161J0,EEG Fpz-Cz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7161J0,EEG Pz-Oz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7161J0,EOG horizontal,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7161J0,EMG submental,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7161J0,Marker,10.0,ID+M-E,-64.0,63.0,-64,63,,MarkerButton
+raw_st,ST7162J0,EEG Fpz-Cz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7162J0,EEG Pz-Oz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7162J0,EOG horizontal,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7162J0,EMG submental,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7162J0,Marker,10.0,ID+M-E,-64.0,63.0,-64,63,,MarkerButton
+raw_st,ST7171J0,EEG Fpz-Cz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7171J0,EEG Pz-Oz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7171J0,EOG horizontal,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7171J0,EMG submental,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7171J0,Marker,10.0,ID+M-E,-64.0,63.0,-64,63,,MarkerButton
+raw_st,ST7172J0,EEG Fpz-Cz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7172J0,EEG Pz-Oz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7172J0,EOG horizontal,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7172J0,EMG submental,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7172J0,Marker,10.0,ID+M-E,-64.0,63.0,-64,63,,MarkerButton
+raw_st,ST7181J0,EEG Fpz-Cz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7181J0,EEG Pz-Oz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7181J0,EOG horizontal,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7181J0,EMG submental,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7181J0,Marker,10.0,ID+M-E,-64.0,63.0,-64,63,,MarkerButton
+raw_st,ST7182J0,EEG Fpz-Cz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7182J0,EEG Pz-Oz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7182J0,EOG horizontal,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7182J0,EMG submental,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7182J0,Marker,10.0,ID+M-E,-64.0,63.0,-64,63,,MarkerButton
+raw_st,ST7191J0,EEG Fpz-Cz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7191J0,EEG Pz-Oz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7191J0,EOG horizontal,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7191J0,EMG submental,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7191J0,Marker,10.0,ID+M-E,-64.0,63.0,-64,63,,MarkerButton
+raw_st,ST7192J0,EEG Fpz-Cz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7192J0,EEG Pz-Oz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7192J0,EOG horizontal,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7192J0,EMG submental,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7192J0,Marker,10.0,ID+M-E,-64.0,63.0,-64,63,,MarkerButton
+raw_st,ST7201J0,EEG Fpz-Cz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7201J0,EEG Pz-Oz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7201J0,EOG horizontal,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7201J0,EMG submental,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7201J0,Marker,10.0,ID+M-E,-64.0,63.0,-64,63,,MarkerButton
+raw_st,ST7202J0,EEG Fpz-Cz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7202J0,EEG Pz-Oz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7202J0,EOG horizontal,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7202J0,EMG submental,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7202J0,Marker,10.0,ID+M-E,-64.0,63.0,-64,63,,MarkerButton
+raw_st,ST7211J0,EEG Fpz-Cz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7211J0,EEG Pz-Oz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7211J0,EOG horizontal,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7211J0,EMG submental,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7211J0,Marker,10.0,ID+M-E,-64.0,63.0,-64,63,,MarkerButton
+raw_st,ST7212J0,EEG Fpz-Cz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7212J0,EEG Pz-Oz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7212J0,EOG horizontal,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7212J0,EMG submental,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7212J0,Marker,10.0,ID+M-E,-64.0,63.0,-64,63,,MarkerButton
+raw_st,ST7221J0,EEG Fpz-Cz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7221J0,EEG Pz-Oz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7221J0,EOG horizontal,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7221J0,EMG submental,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7221J0,Marker,10.0,ID+M-E,-64.0,63.0,-64,63,,MarkerButton
+raw_st,ST7222J0,EEG Fpz-Cz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7222J0,EEG Pz-Oz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7222J0,EOG horizontal,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7222J0,EMG submental,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7222J0,Marker,10.0,ID+M-E,-64.0,63.0,-64,63,,MarkerButton
+raw_st,ST7241J0,EEG Fpz-Cz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7241J0,EEG Pz-Oz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7241J0,EOG horizontal,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7241J0,EMG submental,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7241J0,Marker,10.0,ID+M-E,-64.0,63.0,-64,63,,MarkerButton
+raw_st,ST7242J0,EEG Fpz-Cz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7242J0,EEG Pz-Oz,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7242J0,EOG horizontal,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7242J0,EMG submental,100.0,uV,-3000.0,3000.0,-8192,8191,LP:800Hz HP:0.03Hz,Ag-AgCl electrodes
+raw_st,ST7242J0,Marker,10.0,ID+M-E,-64.0,63.0,-64,63,,MarkerButton

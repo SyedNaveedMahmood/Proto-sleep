@@ -1,0 +1,77 @@
+MIST-Transfer v3 P1 DATA AUDIT ONLY
+Git input SHA: 3f770c6c65c107eb171425142eefce91dd107bf0
+Gate: FAIL
+P2 can begin: False
+No preprocessing, model training, target metrics or SHHS access.
+edf20_npz: {"annotation_verified_recordings": 39, "epochs": 42308, "fully_aligned_recordings": 39, "recordings": 39, "subjects": 20}
+edf78_npz: {"annotation_verified_recordings": 153, "epochs": 195479, "fully_aligned_recordings": 153, "recordings": 153, "subjects": 78}
+raw_sc: {"annotation_verified_recordings": 153, "epochs": 416424, "fully_aligned_recordings": 0, "recordings": 153, "subjects": 78}
+raw_st: {"annotation_verified_recordings": 37, "epochs": 45446, "fully_aligned_recordings": 0, "recordings": 44, "subjects": 22}
+Overlap: {"dataset_a": "edf20_npz", "dataset_b": "edf78_npz", "equal_full_signal_hashes": 39, "independent_cohort_comparison": false, "overlap_recordings": 39, "overlap_subjects": 20, "raw_waveform_verified_common_recordings": 39}
+Overlap: {"dataset_a": "edf20_npz", "dataset_b": "raw_sc", "equal_full_signal_hashes": 0, "independent_cohort_comparison": null, "overlap_recordings": 39, "overlap_subjects": 20, "raw_waveform_verified_common_recordings": 39}
+Overlap: {"dataset_a": "edf20_npz", "dataset_b": "raw_st", "equal_full_signal_hashes": 0, "independent_cohort_comparison": null, "overlap_recordings": 0, "overlap_subjects": 0, "raw_waveform_verified_common_recordings": 0}
+Overlap: {"dataset_a": "edf78_npz", "dataset_b": "raw_sc", "equal_full_signal_hashes": 0, "independent_cohort_comparison": null, "overlap_recordings": 153, "overlap_subjects": 78, "raw_waveform_verified_common_recordings": 153}
+Overlap: {"dataset_a": "edf78_npz", "dataset_b": "raw_st", "equal_full_signal_hashes": 0, "independent_cohort_comparison": null, "overlap_recordings": 0, "overlap_subjects": 0, "raw_waveform_verified_common_recordings": 0}
+Overlap: {"dataset_a": "raw_sc", "dataset_b": "raw_st", "equal_full_signal_hashes": 0, "independent_cohort_comparison": null, "overlap_recordings": 0, "overlap_subjects": 0, "raw_waveform_verified_common_recordings": 0}
+Errors: 7; blockers: 1; warnings: 193
+EDF20 vs EDF78 is same SC cohort, never independent cross-dataset transfer.
+Unknown upstream NPZ selection policy: rebuild from raw; do not trim target evaluation using labels.
+Test results: see session test logs; no test-stage performance measured.
+ERROR: {"error": "/home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-telemetry/ST7021JM-Hypnogram.edf: the file is not EDF(+) or BDF(+) compliant (EDF+ Recordingfield)", "hard_stop": true, "recording_id": "ST7021J0"}
+ERROR: {"error": "/home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-telemetry/ST7071JA-Hypnogram.edf: the file is not EDF(+) or BDF(+) compliant (EDF+ Recordingfield)", "hard_stop": true, "recording_id": "ST7071J0"}
+ERROR: {"error": "/home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-telemetry/ST7092JE-Hypnogram.edf: the file is not EDF(+) or BDF(+) compliant (EDF+ Recordingfield)", "hard_stop": true, "recording_id": "ST7092J0"}
+ERROR: {"error": "/home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-telemetry/ST7131JR-Hypnogram.edf: the file is not EDF(+) or BDF(+) compliant (EDF+ Recordingfield)", "hard_stop": true, "recording_id": "ST7131J0"}
+ERROR: {"error": "/home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-telemetry/ST7132JR-Hypnogram.edf: the file is not EDF(+) or BDF(+) compliant (EDF+ Recordingfield)", "hard_stop": true, "recording_id": "ST7132J0"}
+ERROR: {"error": "/home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-telemetry/ST7141JE-Hypnogram.edf: the file is not EDF(+) or BDF(+) compliant (EDF+ Recordingfield)", "hard_stop": true, "recording_id": "ST7141J0"}
+ERROR: {"error": "/home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-telemetry/ST7142JE-Hypnogram.edf: the file is not EDF(+) or BDF(+) compliant (EDF+ Recordingfield)", "hard_stop": true, "recording_id": "ST7142J0"}
+BLOCKER: edf78_npz: incomplete optional MANIFEST.TXT (50/153 files listed; 103 unlisted); provenance review required
+NEXT SINGLE SAFE COMMAND: git status --short --branch (STOP after P0/P1 for review).
+
+SESSION VALIDATION AND REPRODUCIBILITY
+P0 commit: 97c9bddf814b0d86f85ef231710e297647f332ae
+P1 implementation commit: 3f770c6c65c107eb171425142eefce91dd107bf0
+Final relevant regression: 63 passed, 0 failed (027_final_code_regression.txt).
+P0 focused regression: 26 passed; reproducibility smoke bit-identical on resume.
+Only unchanged v1 regression tests perform tiny CPU synthetic optimizer smokes.
+No patient-data/model experiment training, GPU training, preprocessing output,
+large download, SHHS access, main/v2 edits or job interruption.
+
+MEASURED DATA FINDINGS
+EDF20: 39 recordings / 20 subjects / 42,308 retained epochs.
+EDF78: 153 recordings / 78 subjects / 195,479 retained epochs.
+Original SC: 153 PSG/hypnogram pairs / 78 subjects / 416,424 full source epochs.
+Original ST: 44 pairs / 22 subjects / 45,446 full source epochs; labels verified
+for 37 recordings only. No stage counts invented for the seven reader failures.
+All 394 original EDF files match published SHA256SUMS. Together with three
+metadata inputs, 397 published checksums verified; all 197 PSGs in RECORDS.
+192 NPZs fully waveform-aligned to raw Fpz-Cz EEG, 100 Hz, calibrated uV;
+maximum full-waveform affine relative residual 9.516496607969274e-08.
+All NPZ labels checked against aligned R&K W/1/2/3+4/R -> 0/1/2/3/4.
+39 shared EDF20/EDF78 recordings have identical full signal payload hashes.
+20 shared subjects: EDF20 vs EDF78 is NOT independent cross-dataset transfer.
+Subject-disjoint extension: 58 SC subjects / 114 recordings; same cohort.
+Original indices recovered for every NPZ epoch. Internal discontinuities:
+17 EDF20 files and 48 EDF78 files. Never assume retained-array continuity.
+Every NPZ is a retained subset; upstream selection script/policy remains unknown.
+EDF78 retains all mapped non-Wake epochs but 219,482 fewer Wake epochs than raw
+SC; this observation does not establish the upstream recipe. Rebuild evaluation
+inputs from raw and prohibit target-label-based sleep trimming.
+Both raw studies have EEG Fpz-Cz and Pz-Oz at 100 Hz with uV calibration.
+Other channel rates differ: SC EMG 1 Hz, ST EMG 100 Hz, ST marker 10 Hz.
+SC Temp rectal has absent units in some headers; no EEG-unit gaps were found.
+ST-subjects.xls maps 22 placebo and 22 temazepam nights; study/setting/treatment
+confounds remain. Study-scoped IDs do not establish SC/ST person-level linkage.
+No train/val/test split was assigned and no test subject was used for selection.
+No actual split-leakage claim is made; split guards must run before experiments.
+SHHS remains optional: authorization/usable paired data unconfirmed, never opened.
+
+UNRESOLVED SCIENTIFIC/DATA ISSUES AND STOP
+Seven checksum-valid ST hypnograms rejected by pyEDFlib 0.1.42 with
+'EDF+ Recordingfield' compliance errors: ST7021, ST7071, ST7092, ST7131,
+ST7132, ST7141, ST7142. See audit.json for full IDs/paths/errors.
+EDF78 optional MANIFEST.TXT covers only 50/153 NPZs; 103 files unlisted,
+0 missing listed files, 0 listed-file size conflicts. Provenance review required.
+NPZ upstream selection recipe unknown; object headers were never unpickled.
+P1 SCIENTIFIC GATE FAIL / audit exit 2. P2 must not begin yet. Resolve/review the
+ST parser failures and partial NPZ provenance, then explicitly approve P2 scope.
+STOP after P0/P1. NEXT SINGLE SAFE COMMAND: git status --short --branch

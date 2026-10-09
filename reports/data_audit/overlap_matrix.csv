@@ -1,0 +1,11 @@
+dataset_a,dataset_b,overlap_subjects,overlap_recordings,equal_full_signal_hashes,raw_waveform_verified_common_recordings,independent_cohort_comparison
+edf20_npz,edf20_npz,20,39,39,39,False
+edf20_npz,edf78_npz,20,39,39,39,False
+edf20_npz,raw_sc,20,39,0,39,
+edf20_npz,raw_st,0,0,0,0,
+edf78_npz,edf78_npz,78,153,153,153,False
+edf78_npz,raw_sc,78,153,0,153,
+edf78_npz,raw_st,0,0,0,0,
+raw_sc,raw_sc,78,153,153,153,
+raw_sc,raw_st,0,0,0,0,
+raw_st,raw_st,22,44,0,37,

@@ -1,0 +1,226 @@
+Hashing 594 inventory inputs (read-only)
+Audited SC4001E0: raw=True npz_sets=2
+Audited SC4002E0: raw=True npz_sets=2
+Audited SC4011E0: raw=True npz_sets=2
+Audited SC4012E0: raw=True npz_sets=2
+Audited SC4021E0: raw=True npz_sets=2
+Audited SC4022E0: raw=True npz_sets=2
+Audited SC4031E0: raw=True npz_sets=2
+Audited SC4032E0: raw=True npz_sets=2
+Audited SC4041E0: raw=True npz_sets=2
+Audited SC4042E0: raw=True npz_sets=2
+Audited SC4051E0: raw=True npz_sets=2
+Audited SC4052E0: raw=True npz_sets=2
+Audited SC4061E0: raw=True npz_sets=2
+Audited SC4062E0: raw=True npz_sets=2
+Audited SC4071E0: raw=True npz_sets=2
+Audited SC4072E0: raw=True npz_sets=2
+Audited SC4081E0: raw=True npz_sets=2
+Audited SC4082E0: raw=True npz_sets=2
+Audited SC4091E0: raw=True npz_sets=2
+Audited SC4092E0: raw=True npz_sets=2
+Audited SC4101E0: raw=True npz_sets=2
+Audited SC4102E0: raw=True npz_sets=2
+Audited SC4111E0: raw=True npz_sets=2
+Audited SC4112E0: raw=True npz_sets=2
+Audited SC4121E0: raw=True npz_sets=2
+Audited SC4122E0: raw=True npz_sets=2
+Audited SC4131E0: raw=True npz_sets=2
+Audited SC4141E0: raw=True npz_sets=2
+Audited SC4142E0: raw=True npz_sets=2
+Audited SC4151E0: raw=True npz_sets=2
+Audited SC4152E0: raw=True npz_sets=2
+Audited SC4161E0: raw=True npz_sets=2
+Audited SC4162E0: raw=True npz_sets=2
+Audited SC4171E0: raw=True npz_sets=2
+Audited SC4172E0: raw=True npz_sets=2
+Audited SC4181E0: raw=True npz_sets=2
+Audited SC4182E0: raw=True npz_sets=2
+Audited SC4191E0: raw=True npz_sets=2
+Audited SC4192E0: raw=True npz_sets=2
+Audited SC4201E0: raw=True npz_sets=1
+Audited SC4202E0: raw=True npz_sets=1
+Audited SC4211E0: raw=True npz_sets=1
+Audited SC4212E0: raw=True npz_sets=1
+Audited SC4221E0: raw=True npz_sets=1
+Audited SC4222E0: raw=True npz_sets=1
+Audited SC4231E0: raw=True npz_sets=1
+Audited SC4232E0: raw=True npz_sets=1
+Audited SC4241E0: raw=True npz_sets=1
+Audited SC4242E0: raw=True npz_sets=1
+Audited SC4251E0: raw=True npz_sets=1
+Audited SC4252E0: raw=True npz_sets=1
+Audited SC4261F0: raw=True npz_sets=1
+Audited SC4262F0: raw=True npz_sets=1
+Audited SC4271F0: raw=True npz_sets=1
+Audited SC4272F0: raw=True npz_sets=1
+Audited SC4281G0: raw=True npz_sets=1
+Audited SC4282G0: raw=True npz_sets=1
+Audited SC4291G0: raw=True npz_sets=1
+Audited SC4292G0: raw=True npz_sets=1
+Audited SC4301E0: raw=True npz_sets=1
+Audited SC4302E0: raw=True npz_sets=1
+Audited SC4311E0: raw=True npz_sets=1
+Audited SC4312E0: raw=True npz_sets=1
+Audited SC4321E0: raw=True npz_sets=1
+Audited SC4322E0: raw=True npz_sets=1
+Audited SC4331F0: raw=True npz_sets=1
+Audited SC4332F0: raw=True npz_sets=1
+Audited SC4341F0: raw=True npz_sets=1
+Audited SC4342F0: raw=True npz_sets=1
+Audited SC4351F0: raw=True npz_sets=1
+Audited SC4352F0: raw=True npz_sets=1
+Audited SC4362F0: raw=True npz_sets=1
+Audited SC4371F0: raw=True npz_sets=1
+Audited SC4372F0: raw=True npz_sets=1
+Audited SC4381F0: raw=True npz_sets=1
+Audited SC4382F0: raw=True npz_sets=1
+Audited SC4401E0: raw=True npz_sets=1
+Audited SC4402E0: raw=True npz_sets=1
+Audited SC4411E0: raw=True npz_sets=1
+Audited SC4412E0: raw=True npz_sets=1
+Audited SC4421E0: raw=True npz_sets=1
+Audited SC4422E0: raw=True npz_sets=1
+Audited SC4431E0: raw=True npz_sets=1
+Audited SC4432E0: raw=True npz_sets=1
+Audited SC4441E0: raw=True npz_sets=1
+Audited SC4442E0: raw=True npz_sets=1
+Audited SC4451F0: raw=True npz_sets=1
+Audited SC4452F0: raw=True npz_sets=1
+Audited SC4461F0: raw=True npz_sets=1
+Audited SC4462F0: raw=True npz_sets=1
+Audited SC4471F0: raw=True npz_sets=1
+Audited SC4472F0: raw=True npz_sets=1
+Audited SC4481F0: raw=True npz_sets=1
+Audited SC4482F0: raw=True npz_sets=1
+Audited SC4491G0: raw=True npz_sets=1
+Audited SC4492G0: raw=True npz_sets=1
+Audited SC4501E0: raw=True npz_sets=1
+Audited SC4502E0: raw=True npz_sets=1
+Audited SC4511E0: raw=True npz_sets=1
+Audited SC4512E0: raw=True npz_sets=1
+Audited SC4522E0: raw=True npz_sets=1
+Audited SC4531E0: raw=True npz_sets=1
+Audited SC4532E0: raw=True npz_sets=1
+Audited SC4541F0: raw=True npz_sets=1
+Audited SC4542F0: raw=True npz_sets=1
+Audited SC4551F0: raw=True npz_sets=1
+Audited SC4552F0: raw=True npz_sets=1
+Audited SC4561F0: raw=True npz_sets=1
+Audited SC4562F0: raw=True npz_sets=1
+Audited SC4571F0: raw=True npz_sets=1
+Audited SC4572F0: raw=True npz_sets=1
+Audited SC4581G0: raw=True npz_sets=1
+Audited SC4582G0: raw=True npz_sets=1
+Audited SC4591G0: raw=True npz_sets=1
+Audited SC4592G0: raw=True npz_sets=1
+Audited SC4601E0: raw=True npz_sets=1
+Audited SC4602E0: raw=True npz_sets=1
+Audited SC4611E0: raw=True npz_sets=1
+Audited SC4612E0: raw=True npz_sets=1
+Audited SC4621E0: raw=True npz_sets=1
+Audited SC4622E0: raw=True npz_sets=1
+Audited SC4631E0: raw=True npz_sets=1
+Audited SC4632E0: raw=True npz_sets=1
+Audited SC4641E0: raw=True npz_sets=1
+Audited SC4642E0: raw=True npz_sets=1
+Audited SC4651E0: raw=True npz_sets=1
+Audited SC4652E0: raw=True npz_sets=1
+Audited SC4661E0: raw=True npz_sets=1
+Audited SC4662E0: raw=True npz_sets=1
+Audited SC4671G0: raw=True npz_sets=1
+Audited SC4672G0: raw=True npz_sets=1
+Audited SC4701E0: raw=True npz_sets=1
+Audited SC4702E0: raw=True npz_sets=1
+Audited SC4711E0: raw=True npz_sets=1
+Audited SC4712E0: raw=True npz_sets=1
+Audited SC4721E0: raw=True npz_sets=1
+Audited SC4722E0: raw=True npz_sets=1
+Audited SC4731E0: raw=True npz_sets=1
+Audited SC4732E0: raw=True npz_sets=1
+Audited SC4741E0: raw=True npz_sets=1
+Audited SC4742E0: raw=True npz_sets=1
+Audited SC4751E0: raw=True npz_sets=1
+Audited SC4752E0: raw=True npz_sets=1
+Audited SC4761E0: raw=True npz_sets=1
+Audited SC4762E0: raw=True npz_sets=1
+Audited SC4771G0: raw=True npz_sets=1
+Audited SC4772G0: raw=True npz_sets=1
+Audited SC4801G0: raw=True npz_sets=1
+Audited SC4802G0: raw=True npz_sets=1
+Audited SC4811G0: raw=True npz_sets=1
+Audited SC4812G0: raw=True npz_sets=1
+Audited SC4821G0: raw=True npz_sets=1
+Audited SC4822G0: raw=True npz_sets=1
+Audited ST7011J0: raw=True npz_sets=0
+Audited ST7012J0: raw=True npz_sets=0
+Audited ST7021J0: raw=True npz_sets=0
+Audited ST7022J0: raw=True npz_sets=0
+Audited ST7041J0: raw=True npz_sets=0
+Audited ST7042J0: raw=True npz_sets=0
+Audited ST7051J0: raw=True npz_sets=0
+Audited ST7052J0: raw=True npz_sets=0
+Audited ST7061J0: raw=True npz_sets=0
+Audited ST7062J0: raw=True npz_sets=0
+Audited ST7071J0: raw=True npz_sets=0
+Audited ST7072J0: raw=True npz_sets=0
+Audited ST7081J0: raw=True npz_sets=0
+Audited ST7082J0: raw=True npz_sets=0
+Audited ST7091J0: raw=True npz_sets=0
+Audited ST7092J0: raw=True npz_sets=0
+Audited ST7101J0: raw=True npz_sets=0
+Audited ST7102J0: raw=True npz_sets=0
+Audited ST7111J0: raw=True npz_sets=0
+Audited ST7112J0: raw=True npz_sets=0
+Audited ST7121J0: raw=True npz_sets=0
+Audited ST7122J0: raw=True npz_sets=0
+Audited ST7131J0: raw=True npz_sets=0
+Audited ST7132J0: raw=True npz_sets=0
+Audited ST7141J0: raw=True npz_sets=0
+Audited ST7142J0: raw=True npz_sets=0
+Audited ST7151J0: raw=True npz_sets=0
+Audited ST7152J0: raw=True npz_sets=0
+Audited ST7161J0: raw=True npz_sets=0
+Audited ST7162J0: raw=True npz_sets=0
+Audited ST7171J0: raw=True npz_sets=0
+Audited ST7172J0: raw=True npz_sets=0
+Audited ST7181J0: raw=True npz_sets=0
+Audited ST7182J0: raw=True npz_sets=0
+Audited ST7191J0: raw=True npz_sets=0
+Audited ST7192J0: raw=True npz_sets=0
+Audited ST7201J0: raw=True npz_sets=0
+Audited ST7202J0: raw=True npz_sets=0
+Audited ST7211J0: raw=True npz_sets=0
+Audited ST7212J0: raw=True npz_sets=0
+Audited ST7221J0: raw=True npz_sets=0
+Audited ST7222J0: raw=True npz_sets=0
+Audited ST7241J0: raw=True npz_sets=0
+Audited ST7242J0: raw=True npz_sets=0
+MIST-Transfer v3 P1 DATA AUDIT ONLY
+Git input SHA: 3f770c6c65c107eb171425142eefce91dd107bf0
+Gate: FAIL
+P2 can begin: False
+No preprocessing, model training, target metrics or SHHS access.
+edf20_npz: {"annotation_verified_recordings": 39, "epochs": 42308, "fully_aligned_recordings": 39, "recordings": 39, "subjects": 20}
+edf78_npz: {"annotation_verified_recordings": 153, "epochs": 195479, "fully_aligned_recordings": 153, "recordings": 153, "subjects": 78}
+raw_sc: {"annotation_verified_recordings": 153, "epochs": 416424, "fully_aligned_recordings": 0, "recordings": 153, "subjects": 78}
+raw_st: {"annotation_verified_recordings": 37, "epochs": 45446, "fully_aligned_recordings": 0, "recordings": 44, "subjects": 22}
+Overlap: {"dataset_a": "edf20_npz", "dataset_b": "edf78_npz", "equal_full_signal_hashes": 39, "independent_cohort_comparison": false, "overlap_recordings": 39, "overlap_subjects": 20, "raw_waveform_verified_common_recordings": 39}
+Overlap: {"dataset_a": "edf20_npz", "dataset_b": "raw_sc", "equal_full_signal_hashes": 0, "independent_cohort_comparison": null, "overlap_recordings": 39, "overlap_subjects": 20, "raw_waveform_verified_common_recordings": 39}
+Overlap: {"dataset_a": "edf20_npz", "dataset_b": "raw_st", "equal_full_signal_hashes": 0, "independent_cohort_comparison": null, "overlap_recordings": 0, "overlap_subjects": 0, "raw_waveform_verified_common_recordings": 0}
+Overlap: {"dataset_a": "edf78_npz", "dataset_b": "raw_sc", "equal_full_signal_hashes": 0, "independent_cohort_comparison": null, "overlap_recordings": 153, "overlap_subjects": 78, "raw_waveform_verified_common_recordings": 153}
+Overlap: {"dataset_a": "edf78_npz", "dataset_b": "raw_st", "equal_full_signal_hashes": 0, "independent_cohort_comparison": null, "overlap_recordings": 0, "overlap_subjects": 0, "raw_waveform_verified_common_recordings": 0}
+Overlap: {"dataset_a": "raw_sc", "dataset_b": "raw_st", "equal_full_signal_hashes": 0, "independent_cohort_comparison": null, "overlap_recordings": 0, "overlap_subjects": 0, "raw_waveform_verified_common_recordings": 0}
+Errors: 7; blockers: 1; warnings: 193
+EDF20 vs EDF78 is same SC cohort, never independent cross-dataset transfer.
+Unknown upstream NPZ selection policy: rebuild from raw; do not trim target evaluation using labels.
+Test results: see session test logs; no test-stage performance measured.
+ERROR: {"error": "/home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-telemetry/ST7021JM-Hypnogram.edf: the file is not EDF(+) or BDF(+) compliant (EDF+ Recordingfield)", "hard_stop": true, "recording_id": "ST7021J0"}
+ERROR: {"error": "/home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-telemetry/ST7071JA-Hypnogram.edf: the file is not EDF(+) or BDF(+) compliant (EDF+ Recordingfield)", "hard_stop": true, "recording_id": "ST7071J0"}
+ERROR: {"error": "/home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-telemetry/ST7092JE-Hypnogram.edf: the file is not EDF(+) or BDF(+) compliant (EDF+ Recordingfield)", "hard_stop": true, "recording_id": "ST7092J0"}
+ERROR: {"error": "/home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-telemetry/ST7131JR-Hypnogram.edf: the file is not EDF(+) or BDF(+) compliant (EDF+ Recordingfield)", "hard_stop": true, "recording_id": "ST7131J0"}
+ERROR: {"error": "/home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-telemetry/ST7132JR-Hypnogram.edf: the file is not EDF(+) or BDF(+) compliant (EDF+ Recordingfield)", "hard_stop": true, "recording_id": "ST7132J0"}
+ERROR: {"error": "/home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-telemetry/ST7141JE-Hypnogram.edf: the file is not EDF(+) or BDF(+) compliant (EDF+ Recordingfield)", "hard_stop": true, "recording_id": "ST7141J0"}
+ERROR: {"error": "/home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-telemetry/ST7142JE-Hypnogram.edf: the file is not EDF(+) or BDF(+) compliant (EDF+ Recordingfield)", "hard_stop": true, "recording_id": "ST7142J0"}
+BLOCKER: edf78_npz: incomplete optional MANIFEST.TXT (50/153 files listed; 103 unlisted); provenance review required
+NEXT SINGLE SAFE COMMAND: git status --short --branch (STOP after P0/P1 for review).

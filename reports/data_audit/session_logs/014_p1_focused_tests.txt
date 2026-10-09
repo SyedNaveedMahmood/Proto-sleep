@@ -1,0 +1,20 @@
+usage: audit_edf_transfer_data.py [-h] [--config CONFIG]
+                                  [--output-dir OUTPUT_DIR]
+                                  [--set-path KEY=PATH] [--seed SEED]
+                                  [--resume] [--dry-run]
+                                  [--split-manifest SPLIT_MANIFEST]
+
+P1 read-only dataset inventory and leakage audit; no preprocessing/training.
+
+options:
+  -h, --help            show this help message and exit
+  --config CONFIG
+  --output-dir OUTPUT_DIR
+  --set-path KEY=PATH   Explicit path override; env MIST_<KEY> also supported
+  --seed SEED
+  --resume
+  --dry-run             Discover files without opening datasets
+  --split-manifest SPLIT_MANIFEST
+                        Optional split integrity preflight; reserved test
+                        opening prohibited
+.............................                                            [100%]

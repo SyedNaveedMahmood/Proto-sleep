@@ -1,0 +1,46 @@
+sleep-cassette/SC4001E0-PSG.edf
+sleep-cassette/SC4002E0-PSG.edf
+sleep-cassette/SC4011E0-PSG.edf
+sleep-cassette/SC4012E0-PSG.edf
+sleep-cassette/SC4021E0-PSG.edf
+b377133e03897559e3e9fa8ef468f4505becaecebe1bc0c988d39a9158267758 ST-subjects.xls
+444cb5be68f22dfcc1a4114e6b8b8f99319e28ce7cdd130750d75109b1408286 RECORDS
+414a4be8a5a5b41b7c479525ee6cf6b0afcb0a67d2de50be8077a586964821ec sleep-cassette/SC4512EW-Hypnogram.edf
+073b005bf8f0804ae52f60b394dd68b00426de8acbc23c6557e236d50edc60f2 sleep-cassette/SC4411EJ-Hypnogram.edf
+7900f773292c0946e28bf9f006d4c7cf4f7165a6f0f5beecce939b50c654902d sleep-cassette/SC4212E0-PSG.edf
+{
+  "paths": {
+    "sleep_edf_20_npz": {
+      "path": "/home/FA006/Desktop/Dimension/dataset/Preprocessed Sleep-EDF-20 dataset",
+      "exists": true,
+      "readable": true
+    },
+    "sleep_edf_78_npz": {
+      "path": "/home/FA006/Desktop/Dimension/dataset/Preprocessed Sleep-EDF-78 dataset",
+      "exists": true,
+      "readable": true
+    },
+    "sleep_edfx_original_root": {
+      "path": "/home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0",
+      "exists": true,
+      "readable": true
+    },
+    "sleep_edfx_sc_raw": {
+      "path": "/home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-cassette",
+      "exists": true,
+      "readable": true
+    },
+    "sleep_edfx_st_raw": {
+      "path": "/home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-telemetry",
+      "exists": true,
+      "readable": true
+    },
+    "shhs_nsrr_root_if_approved": {
+      "path": "/home/FA006/Desktop/Dimension/dataset/SHHS_NSRR",
+      "status": "disabled; authorization and usable data unconfirmed"
+    }
+  },
+  "files_to_hash": 594,
+  "training": false,
+  "note": "discovery only; files not opened; no scientific acceptance"
+}

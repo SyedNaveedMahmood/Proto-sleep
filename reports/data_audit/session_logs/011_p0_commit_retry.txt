@@ -1,0 +1,26 @@
+[research/mist-transfer-v3-edf-shhs 97c9bdd] P0: establish transfer audit reproducibility skeleton
+ 25 files changed, 2135 insertions(+)
+ create mode 100644 configs/data_paths.example.yaml
+ create mode 100644 configs/requirements-transfer-audit.txt
+ create mode 100644 docs/DATA_CONTRACT.md
+ create mode 100644 docs/PROVENANCE.md
+ create mode 100644 docs/TRANSFER_PROTOCOL.md
+ create mode 100644 experiments/registry.yaml
+ create mode 100644 reports/data_audit/P0_FINAL_COPY_PASTE.txt
+ create mode 100644 reports/data_audit/p0_provenance.json
+ create mode 100644 reports/data_audit/session_logs/000_initial_cwd.txt
+ create mode 100644 reports/data_audit/session_logs/000_master_plan_read.txt
+ create mode 100644 reports/data_audit/session_logs/001_branch_setup.txt
+ create mode 100644 reports/data_audit/session_logs/002_targeted_inspection.txt
+ create mode 100644 reports/data_audit/session_logs/003_environment_data_preflight.txt
+ create mode 100644 reports/data_audit/session_logs/004_metadata_dependencies.txt
+ create mode 100644 reports/data_audit/session_logs/005_path_discovery.txt
+ create mode 100644 reports/data_audit/session_logs/006_raw_override.txt
+ create mode 100644 reports/data_audit/session_logs/007_p0_implementation.txt
+ create mode 100644 reports/data_audit/session_logs/007_p0_validation.txt
+ create mode 100644 reports/data_audit/session_logs/008_raw_headers.txt
+ create mode 100644 reports/data_audit/session_logs/009_p0_commit.txt
+ create mode 100644 scripts/transfer_repro_smoke.py
+ create mode 100644 src/mist_transfer/__init__.py
+ create mode 100644 src/mist_transfer/provenance.py
+ create mode 100644 tests/transfer/test_provenance.py

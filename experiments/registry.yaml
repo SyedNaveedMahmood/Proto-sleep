@@ -4,7 +4,14 @@ scope: P0-P1-only
 experiments: []
 phases:
   P0:
-    status: implemented
-    validation: reports/data_audit/session_logs/007_p0_validation.txt
+    status: complete
+    commit: 97c9bddf814b0d86f85ef231710e297647f332ae
+    validation: reports/data_audit/P0_FINAL_COPY_PASTE.txt
   P1:
-    status: pending
+    status: implemented_audited_scientific_gate_failed
+    implementation_commit: 3f770c6c65c107eb171425142eefce91dd107bf0
+    audit: reports/data_audit/audit.json
+    validation: reports/data_audit/validation.json
+    console_log: reports/data_audit/session_logs/029_p1_final_audit.txt
+    gate: FAIL
+    p2_authorized: false

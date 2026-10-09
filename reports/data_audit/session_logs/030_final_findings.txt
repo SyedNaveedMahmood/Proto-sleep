@@ -1,0 +1,153 @@
+Inventory: {
+  "edf20_npz": {
+    "recordings": 39,
+    "subjects": 20,
+    "epochs": 42308,
+    "fully_aligned_recordings": 39,
+    "annotation_verified_recordings": 39
+  },
+  "edf78_npz": {
+    "recordings": 153,
+    "subjects": 78,
+    "epochs": 195479,
+    "fully_aligned_recordings": 153,
+    "annotation_verified_recordings": 153
+  },
+  "raw_sc": {
+    "recordings": 153,
+    "subjects": 78,
+    "epochs": 416424,
+    "fully_aligned_recordings": 0,
+    "annotation_verified_recordings": 153
+  },
+  "raw_st": {
+    "recordings": 44,
+    "subjects": 22,
+    "epochs": 45446,
+    "fully_aligned_recordings": 0,
+    "annotation_verified_recordings": 37
+  }
+}
+Errors: 7 blockers: ['edf78_npz: incomplete optional MANIFEST.TXT (50/153 files listed; 103 unlisted); provenance review required']
+Extension: 58 subjects 114 recordings
+Aligned NPZs: 192 max residual 9.516496607969274e-08
+NPZ verified units: Counter({'uV': 192})
+NPZ files with original gaps: Counter({'edf78_npz': 48, 'edf20_npz': 17})
+Index ranges first/last: 0 2880
+ST conditions: Counter({'placebo': 22, 'temazepam': 22})
+External provenance: {'checksum_inputs_present': True, 'n_verified_file_checksums': 397, 'checksum_entries': 398, 'raw_files_without_published_checksum': [], 'records_entries': 197, 'n_psg_in_RECORDS': 197}
+Mapped stage totals: {
+  "raw_sc": {
+    "Wake": 285433,
+    "N1": 21522,
+    "N2": 69132,
+    "N3": 13039,
+    "REM": 25835
+  },
+  "edf20_npz": {
+    "Wake": 8285,
+    "N1": 2804,
+    "N2": 17799,
+    "N3": 5703,
+    "REM": 7717
+  },
+  "edf78_npz": {
+    "Wake": 65951,
+    "N1": 21522,
+    "N2": 69132,
+    "N3": 13039,
+    "REM": 25835
+  },
+  "raw_st": {
+    "Wake": 3666,
+    "N1": 3110,
+    "N2": 17265,
+    "N3": 5434,
+    "REM": 7110
+  }
+}
+Channel/rate/unit contracts: {
+  "raw_sc": [
+    [
+      "EEG Fpz-Cz",
+      "100.0",
+      "uV"
+    ],
+    [
+      "EEG Pz-Oz",
+      "100.0",
+      "uV"
+    ],
+    [
+      "EMG submental",
+      "1.0",
+      "uV"
+    ],
+    [
+      "EOG horizontal",
+      "100.0",
+      "uV"
+    ],
+    [
+      "Event marker",
+      "1.0",
+      ""
+    ],
+    [
+      "Resp oro-nasal",
+      "1.0",
+      ""
+    ],
+    [
+      "Temp rectal",
+      "1.0",
+      ""
+    ],
+    [
+      "Temp rectal",
+      "1.0",
+      "DegC"
+    ]
+  ],
+  "edf20_npz": [
+    [
+      "EEG Fpz-Cz",
+      "100.0",
+      "uV"
+    ]
+  ],
+  "edf78_npz": [
+    [
+      "EEG Fpz-Cz",
+      "100.0",
+      "uV"
+    ]
+  ],
+  "raw_st": [
+    [
+      "EEG Fpz-Cz",
+      "100.0",
+      "uV"
+    ],
+    [
+      "EEG Pz-Oz",
+      "100.0",
+      "uV"
+    ],
+    [
+      "EMG submental",
+      "100.0",
+      "uV"
+    ],
+    [
+      "EOG horizontal",
+      "100.0",
+      "uV"
+    ],
+    [
+      "Marker",
+      "10.0",
+      "ID+M-E"
+    ]
+  ]
+}

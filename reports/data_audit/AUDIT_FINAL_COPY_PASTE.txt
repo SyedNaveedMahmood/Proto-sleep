@@ -1,0 +1,28 @@
+MIST-Transfer v3 P1 DATA AUDIT ONLY
+Git input SHA: 3f770c6c65c107eb171425142eefce91dd107bf0
+Gate: FAIL
+P2 can begin: False
+No preprocessing, model training, target metrics or SHHS access.
+edf20_npz: {"annotation_verified_recordings": 39, "epochs": 42308, "fully_aligned_recordings": 39, "recordings": 39, "subjects": 20}
+edf78_npz: {"annotation_verified_recordings": 153, "epochs": 195479, "fully_aligned_recordings": 153, "recordings": 153, "subjects": 78}
+raw_sc: {"annotation_verified_recordings": 153, "epochs": 416424, "fully_aligned_recordings": 0, "recordings": 153, "subjects": 78}
+raw_st: {"annotation_verified_recordings": 37, "epochs": 45446, "fully_aligned_recordings": 0, "recordings": 44, "subjects": 22}
+Overlap: {"dataset_a": "edf20_npz", "dataset_b": "edf78_npz", "equal_full_signal_hashes": 39, "independent_cohort_comparison": false, "overlap_recordings": 39, "overlap_subjects": 20, "raw_waveform_verified_common_recordings": 39}
+Overlap: {"dataset_a": "edf20_npz", "dataset_b": "raw_sc", "equal_full_signal_hashes": 0, "independent_cohort_comparison": null, "overlap_recordings": 39, "overlap_subjects": 20, "raw_waveform_verified_common_recordings": 39}
+Overlap: {"dataset_a": "edf20_npz", "dataset_b": "raw_st", "equal_full_signal_hashes": 0, "independent_cohort_comparison": null, "overlap_recordings": 0, "overlap_subjects": 0, "raw_waveform_verified_common_recordings": 0}
+Overlap: {"dataset_a": "edf78_npz", "dataset_b": "raw_sc", "equal_full_signal_hashes": 0, "independent_cohort_comparison": null, "overlap_recordings": 153, "overlap_subjects": 78, "raw_waveform_verified_common_recordings": 153}
+Overlap: {"dataset_a": "edf78_npz", "dataset_b": "raw_st", "equal_full_signal_hashes": 0, "independent_cohort_comparison": null, "overlap_recordings": 0, "overlap_subjects": 0, "raw_waveform_verified_common_recordings": 0}
+Overlap: {"dataset_a": "raw_sc", "dataset_b": "raw_st", "equal_full_signal_hashes": 0, "independent_cohort_comparison": null, "overlap_recordings": 0, "overlap_subjects": 0, "raw_waveform_verified_common_recordings": 0}
+Errors: 7; blockers: 1; warnings: 193
+EDF20 vs EDF78 is same SC cohort, never independent cross-dataset transfer.
+Unknown upstream NPZ selection policy: rebuild from raw; do not trim target evaluation using labels.
+Test results: see session test logs; no test-stage performance measured.
+ERROR: {"error": "/home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-telemetry/ST7021JM-Hypnogram.edf: the file is not EDF(+) or BDF(+) compliant (EDF+ Recordingfield)", "hard_stop": true, "recording_id": "ST7021J0"}
+ERROR: {"error": "/home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-telemetry/ST7071JA-Hypnogram.edf: the file is not EDF(+) or BDF(+) compliant (EDF+ Recordingfield)", "hard_stop": true, "recording_id": "ST7071J0"}
+ERROR: {"error": "/home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-telemetry/ST7092JE-Hypnogram.edf: the file is not EDF(+) or BDF(+) compliant (EDF+ Recordingfield)", "hard_stop": true, "recording_id": "ST7092J0"}
+ERROR: {"error": "/home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-telemetry/ST7131JR-Hypnogram.edf: the file is not EDF(+) or BDF(+) compliant (EDF+ Recordingfield)", "hard_stop": true, "recording_id": "ST7131J0"}
+ERROR: {"error": "/home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-telemetry/ST7132JR-Hypnogram.edf: the file is not EDF(+) or BDF(+) compliant (EDF+ Recordingfield)", "hard_stop": true, "recording_id": "ST7132J0"}
+ERROR: {"error": "/home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-telemetry/ST7141JE-Hypnogram.edf: the file is not EDF(+) or BDF(+) compliant (EDF+ Recordingfield)", "hard_stop": true, "recording_id": "ST7141J0"}
+ERROR: {"error": "/home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-telemetry/ST7142JE-Hypnogram.edf: the file is not EDF(+) or BDF(+) compliant (EDF+ Recordingfield)", "hard_stop": true, "recording_id": "ST7142J0"}
+BLOCKER: edf78_npz: incomplete optional MANIFEST.TXT (50/153 files listed; 103 unlisted); provenance review required
+NEXT SINGLE SAFE COMMAND: git status --short --branch (STOP after P0/P1 for review).

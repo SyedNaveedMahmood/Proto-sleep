@@ -1,0 +1,12 @@
+ docs/DATA_CONTRACT.md              |   7 +-
+ scripts/audit_edf_transfer_data.py |  24 ++
+ src/mist_transfer/audit.py         | 566 +++++++++++++++++++++++++++++++++++++
+ src/mist_transfer/integrity.py     | 190 +++++++++++++
+ tests/transfer/test_integrity.py   | 276 ++++++++++++++++++
+ 5 files changed, 1062 insertions(+), 1 deletion(-)
+[research/mist-transfer-v3-edf-shhs 3f770c6] P1: implement study-aware EDF inventory and fail-closed leakage audit
+ 5 files changed, 1062 insertions(+), 1 deletion(-)
+ create mode 100644 scripts/audit_edf_transfer_data.py
+ create mode 100644 src/mist_transfer/audit.py
+ create mode 100644 src/mist_transfer/integrity.py
+ create mode 100644 tests/transfer/test_integrity.py

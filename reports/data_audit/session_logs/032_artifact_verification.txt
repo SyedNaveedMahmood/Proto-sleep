@@ -1,0 +1,72 @@
+Published artifact equality, completion digests, explicit failure gate, count assertions PASS.
+ docs/PROVENANCE.md                                 |    25 +
+ experiments/registry.yaml                          |    13 +-
+ reports/data_audit/AUDIT_FINAL_COPY_PASTE.txt      |    28 +
+ reports/data_audit/FINAL_COPY_PASTE.txt            |    77 +
+ reports/data_audit/audit.json                      | 47492 +++++++++++++++++++
+ reports/data_audit/channel_units.csv               |  1484 +
+ reports/data_audit/edf_inventory.csv               |   390 +
+ reports/data_audit/overlap_matrix.csv              |    11 +
+ reports/data_audit/provenance.json                 |   799 +
+ .../session_logs/010_alignment_preflight.txt       |     4 +
+ .../session_logs/011_p0_commit_retry.txt           |    26 +
+ .../session_logs/012_resume_preflight.txt          |     9 +
+ .../session_logs/013_p1_implementation.txt         |     1 +
+ .../session_logs/014_p1_focused_tests.txt          |    20 +
+ reports/data_audit/session_logs/015_p1_dry_run.txt |    46 +
+ .../session_logs/016_p1_preflight_validation.txt   |     2 +
+ .../data_audit/session_logs/017_p1_real_audit.txt  |    12 +
+ .../data_audit/session_logs/018_code_review.txt    |    90 +
+ .../session_logs/019_filename_variants.txt         |     8 +
+ .../session_logs/020_filename_fix_tests.txt        |     2 +
+ .../session_logs/021_p1_real_audit_v2.txt          |    12 +
+ .../session_logs/022_manifest_failure_evidence.txt |     8 +
+ .../023_manifest_classification_tests.txt          |     2 +
+ .../session_logs/024_p1_complete_inventory.txt     |   265 +
+ .../session_logs/025_relevant_regression.txt       |     1 +
+ .../data_audit/session_logs/026_failure_review.txt |   139 +
+ .../session_logs/027_final_code_regression.txt     |     3 +
+ .../session_logs/028_p1_implementation_commit.txt  |    12 +
+ .../data_audit/session_logs/029_p1_final_audit.txt |   226 +
+ .../data_audit/session_logs/030_final_findings.txt |   153 +
+ .../session_logs/031_report_publication.txt        |     3 +
+ .../session_logs/032_artifact_verification.txt     |     1 +
+ reports/data_audit/stage_distributions.csv         |  3161 ++
+ .../data_audit/subject_disjoint_partitions.json    |   247 +
+ reports/data_audit/validation.json                 |    21 +
+ 35 files changed, 54790 insertions(+), 3 deletions(-)
+docs/PROVENANCE.md
+experiments/registry.yaml
+reports/data_audit/AUDIT_FINAL_COPY_PASTE.txt
+reports/data_audit/FINAL_COPY_PASTE.txt
+reports/data_audit/audit.json
+reports/data_audit/channel_units.csv
+reports/data_audit/edf_inventory.csv
+reports/data_audit/overlap_matrix.csv
+reports/data_audit/provenance.json
+reports/data_audit/session_logs/010_alignment_preflight.txt
+reports/data_audit/session_logs/011_p0_commit_retry.txt
+reports/data_audit/session_logs/012_resume_preflight.txt
+reports/data_audit/session_logs/013_p1_implementation.txt
+reports/data_audit/session_logs/014_p1_focused_tests.txt
+reports/data_audit/session_logs/015_p1_dry_run.txt
+reports/data_audit/session_logs/016_p1_preflight_validation.txt
+reports/data_audit/session_logs/017_p1_real_audit.txt
+reports/data_audit/session_logs/018_code_review.txt
+reports/data_audit/session_logs/019_filename_variants.txt
+reports/data_audit/session_logs/020_filename_fix_tests.txt
+reports/data_audit/session_logs/021_p1_real_audit_v2.txt
+reports/data_audit/session_logs/022_manifest_failure_evidence.txt
+reports/data_audit/session_logs/023_manifest_classification_tests.txt
+reports/data_audit/session_logs/024_p1_complete_inventory.txt
+reports/data_audit/session_logs/025_relevant_regression.txt
+reports/data_audit/session_logs/026_failure_review.txt
+reports/data_audit/session_logs/027_final_code_regression.txt
+reports/data_audit/session_logs/028_p1_implementation_commit.txt
+reports/data_audit/session_logs/029_p1_final_audit.txt
+reports/data_audit/session_logs/030_final_findings.txt
+reports/data_audit/session_logs/031_report_publication.txt
+reports/data_audit/session_logs/032_artifact_verification.txt
+reports/data_audit/stage_distributions.csv
+reports/data_audit/subject_disjoint_partitions.json
+reports/data_audit/validation.json

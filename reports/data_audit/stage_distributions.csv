@@ -1,0 +1,3161 @@
+dataset,recording_id,stage,epochs
+raw_sc,SC4001E0,Wake,1997
+raw_sc,SC4001E0,N1,58
+raw_sc,SC4001E0,N2,250
+raw_sc,SC4001E0,N3,220
+raw_sc,SC4001E0,REM,125
+raw_sc,SC4001E0,raw:Sleep stage W,1997
+raw_sc,SC4001E0,raw:Sleep stage 1,58
+raw_sc,SC4001E0,raw:Sleep stage 2,250
+raw_sc,SC4001E0,raw:Sleep stage 3,101
+raw_sc,SC4001E0,raw:Sleep stage 4,119
+raw_sc,SC4001E0,raw:Sleep stage R,125
+raw_sc,SC4001E0,raw:Sleep stage ?,0
+edf20_npz,SC4001E0,npz_code:Wake,188
+edf20_npz,SC4001E0,npz_code:N1,58
+edf20_npz,SC4001E0,npz_code:N2,250
+edf20_npz,SC4001E0,npz_code:N3,220
+edf20_npz,SC4001E0,npz_code:REM,125
+edf78_npz,SC4001E0,npz_code:Wake,188
+edf78_npz,SC4001E0,npz_code:N1,58
+edf78_npz,SC4001E0,npz_code:N2,250
+edf78_npz,SC4001E0,npz_code:N3,220
+edf78_npz,SC4001E0,npz_code:REM,125
+raw_sc,SC4002E0,Wake,1885
+raw_sc,SC4002E0,N1,59
+raw_sc,SC4002E0,N2,373
+raw_sc,SC4002E0,N3,297
+raw_sc,SC4002E0,REM,215
+raw_sc,SC4002E0,raw:Sleep stage W,1885
+raw_sc,SC4002E0,raw:Sleep stage 1,59
+raw_sc,SC4002E0,raw:Sleep stage 2,373
+raw_sc,SC4002E0,raw:Sleep stage 3,94
+raw_sc,SC4002E0,raw:Sleep stage 4,203
+raw_sc,SC4002E0,raw:Movement time,1
+raw_sc,SC4002E0,raw:Sleep stage R,215
+raw_sc,SC4002E0,raw:Sleep stage ?,0
+edf20_npz,SC4002E0,npz_code:Wake,183
+edf20_npz,SC4002E0,npz_code:N1,59
+edf20_npz,SC4002E0,npz_code:N2,373
+edf20_npz,SC4002E0,npz_code:N3,297
+edf20_npz,SC4002E0,npz_code:REM,215
+edf78_npz,SC4002E0,npz_code:Wake,183
+edf78_npz,SC4002E0,npz_code:N1,59
+edf78_npz,SC4002E0,npz_code:N2,373
+edf78_npz,SC4002E0,npz_code:N3,297
+edf78_npz,SC4002E0,npz_code:REM,215
+raw_sc,SC4011E0,Wake,1856
+raw_sc,SC4011E0,N1,109
+raw_sc,SC4011E0,N2,562
+raw_sc,SC4011E0,N3,105
+raw_sc,SC4011E0,REM,170
+raw_sc,SC4011E0,raw:Sleep stage W,1856
+raw_sc,SC4011E0,raw:Sleep stage 1,109
+raw_sc,SC4011E0,raw:Sleep stage 2,562
+raw_sc,SC4011E0,raw:Sleep stage 3,96
+raw_sc,SC4011E0,raw:Sleep stage 4,9
+raw_sc,SC4011E0,raw:Sleep stage R,170
+raw_sc,SC4011E0,raw:Sleep stage ?,0
+edf20_npz,SC4011E0,npz_code:Wake,157
+edf20_npz,SC4011E0,npz_code:N1,109
+edf20_npz,SC4011E0,npz_code:N2,562
+edf20_npz,SC4011E0,npz_code:N3,105
+edf20_npz,SC4011E0,npz_code:REM,170
+edf78_npz,SC4011E0,npz_code:Wake,157
+edf78_npz,SC4011E0,npz_code:N1,109
+edf78_npz,SC4011E0,npz_code:N2,562
+edf78_npz,SC4011E0,npz_code:N3,105
+edf78_npz,SC4011E0,npz_code:REM,170
+raw_sc,SC4012E0,Wake,1824
+raw_sc,SC4012E0,N1,92
+raw_sc,SC4012E0,N2,660
+raw_sc,SC4012E0,N3,96
+raw_sc,SC4012E0,REM,176
+raw_sc,SC4012E0,raw:Sleep stage W,1824
+raw_sc,SC4012E0,raw:Sleep stage 1,92
+raw_sc,SC4012E0,raw:Sleep stage 2,660
+raw_sc,SC4012E0,raw:Sleep stage 3,80
+raw_sc,SC4012E0,raw:Sleep stage 4,16
+raw_sc,SC4012E0,raw:Sleep stage R,176
+raw_sc,SC4012E0,raw:Sleep stage ?,2
+edf20_npz,SC4012E0,npz_code:Wake,162
+edf20_npz,SC4012E0,npz_code:N1,92
+edf20_npz,SC4012E0,npz_code:N2,660
+edf20_npz,SC4012E0,npz_code:N3,96
+edf20_npz,SC4012E0,npz_code:REM,176
+edf78_npz,SC4012E0,npz_code:Wake,162
+edf78_npz,SC4012E0,npz_code:N1,92
+edf78_npz,SC4012E0,npz_code:N2,660
+edf78_npz,SC4012E0,npz_code:N3,96
+edf78_npz,SC4012E0,npz_code:REM,176
+raw_sc,SC4021E0,Wake,1907
+raw_sc,SC4021E0,N1,94
+raw_sc,SC4021E0,N2,545
+raw_sc,SC4021E0,N3,95
+raw_sc,SC4021E0,REM,163
+raw_sc,SC4021E0,raw:Sleep stage W,1907
+raw_sc,SC4021E0,raw:Sleep stage 1,94
+raw_sc,SC4021E0,raw:Sleep stage 2,545
+raw_sc,SC4021E0,raw:Sleep stage 3,73
+raw_sc,SC4021E0,raw:Sleep stage 4,22
+raw_sc,SC4021E0,raw:Sleep stage R,163
+raw_sc,SC4021E0,raw:Sleep stage ?,0
+edf20_npz,SC4021E0,npz_code:Wake,128
+edf20_npz,SC4021E0,npz_code:N1,94
+edf20_npz,SC4021E0,npz_code:N2,545
+edf20_npz,SC4021E0,npz_code:N3,95
+edf20_npz,SC4021E0,npz_code:REM,163
+edf78_npz,SC4021E0,npz_code:Wake,128
+edf78_npz,SC4021E0,npz_code:N1,94
+edf78_npz,SC4021E0,npz_code:N2,545
+edf78_npz,SC4021E0,npz_code:N3,95
+edf78_npz,SC4021E0,npz_code:REM,163
+raw_sc,SC4022E0,Wake,1871
+raw_sc,SC4022E0,N1,184
+raw_sc,SC4022E0,N2,402
+raw_sc,SC4022E0,N3,119
+raw_sc,SC4022E0,REM,179
+raw_sc,SC4022E0,raw:Sleep stage W,1871
+raw_sc,SC4022E0,raw:Sleep stage 1,184
+raw_sc,SC4022E0,raw:Sleep stage 2,402
+raw_sc,SC4022E0,raw:Sleep stage 3,81
+raw_sc,SC4022E0,raw:Sleep stage 4,38
+raw_sc,SC4022E0,raw:Sleep stage R,179
+raw_sc,SC4022E0,raw:Movement time,1
+raw_sc,SC4022E0,raw:Sleep stage ?,0
+edf20_npz,SC4022E0,npz_code:Wake,125
+edf20_npz,SC4022E0,npz_code:N1,184
+edf20_npz,SC4022E0,npz_code:N2,402
+edf20_npz,SC4022E0,npz_code:N3,119
+edf20_npz,SC4022E0,npz_code:REM,179
+edf78_npz,SC4022E0,npz_code:Wake,125
+edf78_npz,SC4022E0,npz_code:N1,184
+edf78_npz,SC4022E0,npz_code:N2,402
+edf78_npz,SC4022E0,npz_code:N3,119
+edf78_npz,SC4022E0,npz_code:REM,179
+raw_sc,SC4031E0,Wake,2008
+raw_sc,SC4031E0,N1,61
+raw_sc,SC4031E0,N2,485
+raw_sc,SC4031E0,N3,57
+raw_sc,SC4031E0,REM,209
+raw_sc,SC4031E0,raw:Sleep stage W,2008
+raw_sc,SC4031E0,raw:Sleep stage 1,61
+raw_sc,SC4031E0,raw:Sleep stage 2,485
+raw_sc,SC4031E0,raw:Sleep stage 3,56
+raw_sc,SC4031E0,raw:Sleep stage 4,1
+raw_sc,SC4031E0,raw:Sleep stage R,209
+raw_sc,SC4031E0,raw:Sleep stage ?,0
+edf20_npz,SC4031E0,npz_code:Wake,140
+edf20_npz,SC4031E0,npz_code:N1,61
+edf20_npz,SC4031E0,npz_code:N2,485
+edf20_npz,SC4031E0,npz_code:N3,57
+edf20_npz,SC4031E0,npz_code:REM,209
+edf78_npz,SC4031E0,npz_code:Wake,140
+edf78_npz,SC4031E0,npz_code:N1,61
+edf78_npz,SC4031E0,npz_code:N2,485
+edf78_npz,SC4031E0,npz_code:N3,57
+edf78_npz,SC4031E0,npz_code:REM,209
+raw_sc,SC4032E0,Wake,1957
+raw_sc,SC4032E0,N1,45
+raw_sc,SC4032E0,N2,400
+raw_sc,SC4032E0,N3,131
+raw_sc,SC4032E0,REM,199
+raw_sc,SC4032E0,raw:Sleep stage W,1957
+raw_sc,SC4032E0,raw:Sleep stage 1,45
+raw_sc,SC4032E0,raw:Sleep stage 2,400
+raw_sc,SC4032E0,raw:Sleep stage 3,54
+raw_sc,SC4032E0,raw:Sleep stage 4,77
+raw_sc,SC4032E0,raw:Sleep stage R,199
+raw_sc,SC4032E0,raw:Sleep stage ?,0
+edf20_npz,SC4032E0,npz_code:Wake,136
+edf20_npz,SC4032E0,npz_code:N1,45
+edf20_npz,SC4032E0,npz_code:N2,400
+edf20_npz,SC4032E0,npz_code:N3,131
+edf20_npz,SC4032E0,npz_code:REM,199
+edf78_npz,SC4032E0,npz_code:Wake,136
+edf78_npz,SC4032E0,npz_code:N1,45
+edf78_npz,SC4032E0,npz_code:N2,400
+edf78_npz,SC4032E0,npz_code:N3,131
+edf78_npz,SC4032E0,npz_code:REM,199
+raw_sc,SC4041E0,Wake,1534
+raw_sc,SC4041E0,N1,166
+raw_sc,SC4041E0,N2,620
+raw_sc,SC4041E0,N3,53
+raw_sc,SC4041E0,REM,196
+raw_sc,SC4041E0,raw:Sleep stage W,1534
+raw_sc,SC4041E0,raw:Sleep stage 1,166
+raw_sc,SC4041E0,raw:Sleep stage 2,620
+raw_sc,SC4041E0,raw:Sleep stage 3,53
+raw_sc,SC4041E0,raw:Sleep stage R,196
+raw_sc,SC4041E0,raw:Movement time,1
+raw_sc,SC4041E0,raw:Sleep stage ?,0
+edf20_npz,SC4041E0,npz_code:Wake,200
+edf20_npz,SC4041E0,npz_code:N1,166
+edf20_npz,SC4041E0,npz_code:N2,620
+edf20_npz,SC4041E0,npz_code:N3,53
+edf20_npz,SC4041E0,npz_code:REM,196
+edf78_npz,SC4041E0,npz_code:Wake,200
+edf78_npz,SC4041E0,npz_code:N1,166
+edf78_npz,SC4041E0,npz_code:N2,620
+edf78_npz,SC4041E0,npz_code:N3,53
+edf78_npz,SC4041E0,npz_code:REM,196
+raw_sc,SC4042E0,Wake,1773
+raw_sc,SC4042E0,N1,137
+raw_sc,SC4042E0,N2,514
+raw_sc,SC4042E0,N3,94
+raw_sc,SC4042E0,REM,270
+raw_sc,SC4042E0,raw:Sleep stage W,1773
+raw_sc,SC4042E0,raw:Sleep stage 1,137
+raw_sc,SC4042E0,raw:Sleep stage 2,514
+raw_sc,SC4042E0,raw:Sleep stage 3,88
+raw_sc,SC4042E0,raw:Sleep stage R,270
+raw_sc,SC4042E0,raw:Movement time,4
+raw_sc,SC4042E0,raw:Sleep stage 4,6
+raw_sc,SC4042E0,raw:Sleep stage ?,0
+edf20_npz,SC4042E0,npz_code:Wake,185
+edf20_npz,SC4042E0,npz_code:N1,137
+edf20_npz,SC4042E0,npz_code:N2,514
+edf20_npz,SC4042E0,npz_code:N3,94
+edf20_npz,SC4042E0,npz_code:REM,270
+edf78_npz,SC4042E0,npz_code:Wake,185
+edf78_npz,SC4042E0,npz_code:N1,137
+edf78_npz,SC4042E0,npz_code:N2,514
+edf78_npz,SC4042E0,npz_code:N3,94
+edf78_npz,SC4042E0,npz_code:REM,270
+raw_sc,SC4051E0,Wake,2258
+raw_sc,SC4051E0,N1,44
+raw_sc,SC4051E0,N2,217
+raw_sc,SC4051E0,N3,135
+raw_sc,SC4051E0,REM,68
+raw_sc,SC4051E0,raw:Sleep stage W,2258
+raw_sc,SC4051E0,raw:Sleep stage 1,44
+raw_sc,SC4051E0,raw:Sleep stage 2,217
+raw_sc,SC4051E0,raw:Sleep stage 3,116
+raw_sc,SC4051E0,raw:Sleep stage 4,19
+raw_sc,SC4051E0,raw:Sleep stage R,68
+raw_sc,SC4051E0,raw:Sleep stage ?,0
+edf20_npz,SC4051E0,npz_code:Wake,208
+edf20_npz,SC4051E0,npz_code:N1,44
+edf20_npz,SC4051E0,npz_code:N2,217
+edf20_npz,SC4051E0,npz_code:N3,135
+edf20_npz,SC4051E0,npz_code:REM,68
+edf78_npz,SC4051E0,npz_code:Wake,208
+edf78_npz,SC4051E0,npz_code:N1,44
+edf78_npz,SC4051E0,npz_code:N2,217
+edf78_npz,SC4051E0,npz_code:N3,135
+edf78_npz,SC4051E0,npz_code:REM,68
+raw_sc,SC4052E0,Wake,1780
+raw_sc,SC4052E0,N1,114
+raw_sc,SC4052E0,N2,616
+raw_sc,SC4052E0,N3,114
+raw_sc,SC4052E0,REM,180
+raw_sc,SC4052E0,raw:Sleep stage W,1780
+raw_sc,SC4052E0,raw:Sleep stage 1,114
+raw_sc,SC4052E0,raw:Sleep stage 2,616
+raw_sc,SC4052E0,raw:Sleep stage 3,106
+raw_sc,SC4052E0,raw:Sleep stage 4,8
+raw_sc,SC4052E0,raw:Movement time,2
+raw_sc,SC4052E0,raw:Sleep stage R,180
+raw_sc,SC4052E0,raw:Sleep stage ?,0
+edf20_npz,SC4052E0,npz_code:Wake,222
+edf20_npz,SC4052E0,npz_code:N1,114
+edf20_npz,SC4052E0,npz_code:N2,616
+edf20_npz,SC4052E0,npz_code:N3,114
+edf20_npz,SC4052E0,npz_code:REM,180
+edf78_npz,SC4052E0,npz_code:Wake,222
+edf78_npz,SC4052E0,npz_code:N1,114
+edf78_npz,SC4052E0,npz_code:N2,616
+edf78_npz,SC4052E0,npz_code:N3,114
+edf78_npz,SC4052E0,npz_code:REM,180
+raw_sc,SC4061E0,Wake,2069
+raw_sc,SC4061E0,N1,56
+raw_sc,SC4061E0,N2,407
+raw_sc,SC4061E0,N3,136
+raw_sc,SC4061E0,REM,102
+raw_sc,SC4061E0,raw:Sleep stage W,2069
+raw_sc,SC4061E0,raw:Sleep stage 1,56
+raw_sc,SC4061E0,raw:Sleep stage 2,407
+raw_sc,SC4061E0,raw:Sleep stage 3,35
+raw_sc,SC4061E0,raw:Sleep stage 4,101
+raw_sc,SC4061E0,raw:Sleep stage R,102
+raw_sc,SC4061E0,raw:Sleep stage ?,0
+edf20_npz,SC4061E0,npz_code:Wake,142
+edf20_npz,SC4061E0,npz_code:N1,56
+edf20_npz,SC4061E0,npz_code:N2,407
+edf20_npz,SC4061E0,npz_code:N3,136
+edf20_npz,SC4061E0,npz_code:REM,102
+edf78_npz,SC4061E0,npz_code:Wake,142
+edf78_npz,SC4061E0,npz_code:N1,56
+edf78_npz,SC4061E0,npz_code:N2,407
+edf78_npz,SC4061E0,npz_code:N3,136
+edf78_npz,SC4061E0,npz_code:REM,102
+raw_sc,SC4062E0,Wake,2007
+raw_sc,SC4062E0,N1,90
+raw_sc,SC4062E0,N2,417
+raw_sc,SC4062E0,N3,129
+raw_sc,SC4062E0,REM,187
+raw_sc,SC4062E0,raw:Sleep stage W,2007
+raw_sc,SC4062E0,raw:Sleep stage 1,90
+raw_sc,SC4062E0,raw:Sleep stage 2,417
+raw_sc,SC4062E0,raw:Sleep stage 3,96
+raw_sc,SC4062E0,raw:Sleep stage 4,33
+raw_sc,SC4062E0,raw:Sleep stage R,187
+raw_sc,SC4062E0,raw:Sleep stage ?,0
+edf20_npz,SC4062E0,npz_code:Wake,193
+edf20_npz,SC4062E0,npz_code:N1,90
+edf20_npz,SC4062E0,npz_code:N2,417
+edf20_npz,SC4062E0,npz_code:N3,129
+edf20_npz,SC4062E0,npz_code:REM,187
+edf78_npz,SC4062E0,npz_code:Wake,193
+edf78_npz,SC4062E0,npz_code:N1,90
+edf78_npz,SC4062E0,npz_code:N2,417
+edf78_npz,SC4062E0,npz_code:N3,129
+edf78_npz,SC4062E0,npz_code:REM,187
+raw_sc,SC4071E0,Wake,1958
+raw_sc,SC4071E0,N1,89
+raw_sc,SC4071E0,N2,403
+raw_sc,SC4071E0,N3,162
+raw_sc,SC4071E0,REM,198
+raw_sc,SC4071E0,raw:Sleep stage W,1958
+raw_sc,SC4071E0,raw:Sleep stage 1,89
+raw_sc,SC4071E0,raw:Sleep stage 2,403
+raw_sc,SC4071E0,raw:Sleep stage 3,80
+raw_sc,SC4071E0,raw:Sleep stage 4,82
+raw_sc,SC4071E0,raw:Sleep stage R,198
+raw_sc,SC4071E0,raw:Sleep stage ?,0
+edf20_npz,SC4071E0,npz_code:Wake,124
+edf20_npz,SC4071E0,npz_code:N1,89
+edf20_npz,SC4071E0,npz_code:N2,403
+edf20_npz,SC4071E0,npz_code:N3,162
+edf20_npz,SC4071E0,npz_code:REM,198
+edf78_npz,SC4071E0,npz_code:Wake,124
+edf78_npz,SC4071E0,npz_code:N1,89
+edf78_npz,SC4071E0,npz_code:N2,403
+edf78_npz,SC4071E0,npz_code:N3,162
+edf78_npz,SC4071E0,npz_code:REM,198
+raw_sc,SC4072E0,Wake,1904
+raw_sc,SC4072E0,N1,84
+raw_sc,SC4072E0,N2,392
+raw_sc,SC4072E0,N3,222
+raw_sc,SC4072E0,REM,168
+raw_sc,SC4072E0,raw:Sleep stage W,1904
+raw_sc,SC4072E0,raw:Sleep stage 1,84
+raw_sc,SC4072E0,raw:Sleep stage 2,392
+raw_sc,SC4072E0,raw:Sleep stage 3,59
+raw_sc,SC4072E0,raw:Sleep stage 4,163
+raw_sc,SC4072E0,raw:Sleep stage R,168
+raw_sc,SC4072E0,raw:Sleep stage ?,0
+edf20_npz,SC4072E0,npz_code:Wake,407
+edf20_npz,SC4072E0,npz_code:N1,84
+edf20_npz,SC4072E0,npz_code:N2,392
+edf20_npz,SC4072E0,npz_code:N3,222
+edf20_npz,SC4072E0,npz_code:REM,168
+edf78_npz,SC4072E0,npz_code:Wake,407
+edf78_npz,SC4072E0,npz_code:N1,84
+edf78_npz,SC4072E0,npz_code:N2,392
+edf78_npz,SC4072E0,npz_code:N3,222
+edf78_npz,SC4072E0,npz_code:REM,168
+raw_sc,SC4081E0,Wake,1985
+raw_sc,SC4081E0,N1,68
+raw_sc,SC4081E0,N2,262
+raw_sc,SC4081E0,N3,350
+raw_sc,SC4081E0,REM,131
+raw_sc,SC4081E0,raw:Sleep stage W,1985
+raw_sc,SC4081E0,raw:Sleep stage 1,68
+raw_sc,SC4081E0,raw:Sleep stage 2,262
+raw_sc,SC4081E0,raw:Sleep stage 3,158
+raw_sc,SC4081E0,raw:Sleep stage 4,192
+raw_sc,SC4081E0,raw:Sleep stage R,131
+raw_sc,SC4081E0,raw:Sleep stage ?,0
+edf20_npz,SC4081E0,npz_code:Wake,323
+edf20_npz,SC4081E0,npz_code:N1,68
+edf20_npz,SC4081E0,npz_code:N2,262
+edf20_npz,SC4081E0,npz_code:N3,350
+edf20_npz,SC4081E0,npz_code:REM,131
+edf78_npz,SC4081E0,npz_code:Wake,323
+edf78_npz,SC4081E0,npz_code:N1,68
+edf78_npz,SC4081E0,npz_code:N2,262
+edf78_npz,SC4081E0,npz_code:N3,350
+edf78_npz,SC4081E0,npz_code:REM,131
+raw_sc,SC4082E0,Wake,1724
+raw_sc,SC4082E0,N1,39
+raw_sc,SC4082E0,N2,329
+raw_sc,SC4082E0,N3,282
+raw_sc,SC4082E0,REM,260
+raw_sc,SC4082E0,raw:Sleep stage W,1724
+raw_sc,SC4082E0,raw:Sleep stage 1,39
+raw_sc,SC4082E0,raw:Sleep stage 2,329
+raw_sc,SC4082E0,raw:Sleep stage 3,84
+raw_sc,SC4082E0,raw:Sleep stage 4,198
+raw_sc,SC4082E0,raw:Sleep stage R,260
+raw_sc,SC4082E0,raw:Sleep stage ?,0
+edf20_npz,SC4082E0,npz_code:Wake,144
+edf20_npz,SC4082E0,npz_code:N1,39
+edf20_npz,SC4082E0,npz_code:N2,329
+edf20_npz,SC4082E0,npz_code:N3,282
+edf20_npz,SC4082E0,npz_code:REM,260
+edf78_npz,SC4082E0,npz_code:Wake,144
+edf78_npz,SC4082E0,npz_code:N1,39
+edf78_npz,SC4082E0,npz_code:N2,329
+edf78_npz,SC4082E0,npz_code:N3,282
+edf78_npz,SC4082E0,npz_code:REM,260
+raw_sc,SC4091E0,Wake,1739
+raw_sc,SC4091E0,N1,19
+raw_sc,SC4091E0,N2,561
+raw_sc,SC4091E0,N3,170
+raw_sc,SC4091E0,REM,232
+raw_sc,SC4091E0,raw:Sleep stage W,1739
+raw_sc,SC4091E0,raw:Sleep stage 1,19
+raw_sc,SC4091E0,raw:Sleep stage 2,561
+raw_sc,SC4091E0,raw:Sleep stage 3,87
+raw_sc,SC4091E0,raw:Sleep stage 4,83
+raw_sc,SC4091E0,raw:Sleep stage R,232
+raw_sc,SC4091E0,raw:Movement time,11
+raw_sc,SC4091E0,raw:Sleep stage ?,0
+edf20_npz,SC4091E0,npz_code:Wake,150
+edf20_npz,SC4091E0,npz_code:N1,19
+edf20_npz,SC4091E0,npz_code:N2,561
+edf20_npz,SC4091E0,npz_code:N3,170
+edf20_npz,SC4091E0,npz_code:REM,232
+edf78_npz,SC4091E0,npz_code:Wake,150
+edf78_npz,SC4091E0,npz_code:N1,19
+edf78_npz,SC4091E0,npz_code:N2,561
+edf78_npz,SC4091E0,npz_code:N3,170
+edf78_npz,SC4091E0,npz_code:REM,232
+raw_sc,SC4092E0,Wake,1079
+raw_sc,SC4092E0,N1,81
+raw_sc,SC4092E0,N2,512
+raw_sc,SC4092E0,N3,107
+raw_sc,SC4092E0,REM,265
+raw_sc,SC4092E0,raw:Sleep stage W,1079
+raw_sc,SC4092E0,raw:Sleep stage 1,81
+raw_sc,SC4092E0,raw:Sleep stage 2,512
+raw_sc,SC4092E0,raw:Sleep stage 3,103
+raw_sc,SC4092E0,raw:Sleep stage R,265
+raw_sc,SC4092E0,raw:Movement time,12
+raw_sc,SC4092E0,raw:Sleep stage 4,4
+raw_sc,SC4092E0,raw:Sleep stage ?,802
+edf20_npz,SC4092E0,npz_code:Wake,140
+edf20_npz,SC4092E0,npz_code:N1,81
+edf20_npz,SC4092E0,npz_code:N2,512
+edf20_npz,SC4092E0,npz_code:N3,107
+edf20_npz,SC4092E0,npz_code:REM,265
+edf78_npz,SC4092E0,npz_code:Wake,140
+edf78_npz,SC4092E0,npz_code:N1,81
+edf78_npz,SC4092E0,npz_code:N2,512
+edf78_npz,SC4092E0,npz_code:N3,107
+edf78_npz,SC4092E0,npz_code:REM,265
+raw_sc,SC4101E0,Wake,1770
+raw_sc,SC4101E0,N1,65
+raw_sc,SC4101E0,N2,671
+raw_sc,SC4101E0,N3,6
+raw_sc,SC4101E0,REM,207
+raw_sc,SC4101E0,raw:Sleep stage W,1770
+raw_sc,SC4101E0,raw:Sleep stage 1,65
+raw_sc,SC4101E0,raw:Sleep stage 2,671
+raw_sc,SC4101E0,raw:Sleep stage 3,6
+raw_sc,SC4101E0,raw:Sleep stage R,207
+raw_sc,SC4101E0,raw:Movement time,1
+raw_sc,SC4101E0,raw:Sleep stage ?,0
+edf20_npz,SC4101E0,npz_code:Wake,155
+edf20_npz,SC4101E0,npz_code:N1,65
+edf20_npz,SC4101E0,npz_code:N2,671
+edf20_npz,SC4101E0,npz_code:N3,6
+edf20_npz,SC4101E0,npz_code:REM,207
+edf78_npz,SC4101E0,npz_code:Wake,155
+edf78_npz,SC4101E0,npz_code:N1,65
+edf78_npz,SC4101E0,npz_code:N2,671
+edf78_npz,SC4101E0,npz_code:N3,6
+edf78_npz,SC4101E0,npz_code:REM,207
+raw_sc,SC4102E0,Wake,1909
+raw_sc,SC4102E0,N1,117
+raw_sc,SC4102E0,N2,607
+raw_sc,SC4102E0,N3,25
+raw_sc,SC4102E0,REM,199
+raw_sc,SC4102E0,raw:Sleep stage W,1909
+raw_sc,SC4102E0,raw:Sleep stage 1,117
+raw_sc,SC4102E0,raw:Sleep stage 2,607
+raw_sc,SC4102E0,raw:Sleep stage 3,25
+raw_sc,SC4102E0,raw:Sleep stage R,199
+raw_sc,SC4102E0,raw:Movement time,1
+raw_sc,SC4102E0,raw:Sleep stage ?,0
+edf20_npz,SC4102E0,npz_code:Wake,144
+edf20_npz,SC4102E0,npz_code:N1,117
+edf20_npz,SC4102E0,npz_code:N2,607
+edf20_npz,SC4102E0,npz_code:N3,25
+edf20_npz,SC4102E0,npz_code:REM,199
+edf78_npz,SC4102E0,npz_code:Wake,144
+edf78_npz,SC4102E0,npz_code:N1,117
+edf78_npz,SC4102E0,npz_code:N2,607
+edf78_npz,SC4102E0,npz_code:N3,25
+edf78_npz,SC4102E0,npz_code:REM,199
+raw_sc,SC4111E0,Wake,1839
+raw_sc,SC4111E0,N1,13
+raw_sc,SC4111E0,N2,502
+raw_sc,SC4111E0,N3,129
+raw_sc,SC4111E0,REM,158
+raw_sc,SC4111E0,raw:Sleep stage W,1839
+raw_sc,SC4111E0,raw:Sleep stage 1,13
+raw_sc,SC4111E0,raw:Sleep stage 2,502
+raw_sc,SC4111E0,raw:Sleep stage 3,80
+raw_sc,SC4111E0,raw:Sleep stage 4,49
+raw_sc,SC4111E0,raw:Sleep stage R,158
+raw_sc,SC4111E0,raw:Movement time,1
+raw_sc,SC4111E0,raw:Sleep stage ?,0
+edf20_npz,SC4111E0,npz_code:Wake,126
+edf20_npz,SC4111E0,npz_code:N1,13
+edf20_npz,SC4111E0,npz_code:N2,502
+edf20_npz,SC4111E0,npz_code:N3,129
+edf20_npz,SC4111E0,npz_code:REM,158
+edf78_npz,SC4111E0,npz_code:Wake,126
+edf78_npz,SC4111E0,npz_code:N1,13
+edf78_npz,SC4111E0,npz_code:N2,502
+edf78_npz,SC4111E0,npz_code:N3,129
+edf78_npz,SC4111E0,npz_code:REM,158
+raw_sc,SC4112E0,Wake,2104
+raw_sc,SC4112E0,N1,18
+raw_sc,SC4112E0,N2,396
+raw_sc,SC4112E0,N3,111
+raw_sc,SC4112E0,REM,151
+raw_sc,SC4112E0,raw:Sleep stage W,2104
+raw_sc,SC4112E0,raw:Sleep stage 1,18
+raw_sc,SC4112E0,raw:Sleep stage 2,396
+raw_sc,SC4112E0,raw:Sleep stage 3,90
+raw_sc,SC4112E0,raw:Sleep stage 4,21
+raw_sc,SC4112E0,raw:Sleep stage R,151
+raw_sc,SC4112E0,raw:Sleep stage ?,0
+edf20_npz,SC4112E0,npz_code:Wake,126
+edf20_npz,SC4112E0,npz_code:N1,18
+edf20_npz,SC4112E0,npz_code:N2,396
+edf20_npz,SC4112E0,npz_code:N3,111
+edf20_npz,SC4112E0,npz_code:REM,151
+edf78_npz,SC4112E0,npz_code:Wake,126
+edf78_npz,SC4112E0,npz_code:N1,18
+edf78_npz,SC4112E0,npz_code:N2,396
+edf78_npz,SC4112E0,npz_code:N3,111
+edf78_npz,SC4112E0,npz_code:REM,151
+raw_sc,SC4121E0,Wake,1809
+raw_sc,SC4121E0,N1,48
+raw_sc,SC4121E0,N2,463
+raw_sc,SC4121E0,N3,107
+raw_sc,SC4121E0,REM,258
+raw_sc,SC4121E0,raw:Sleep stage W,1809
+raw_sc,SC4121E0,raw:Sleep stage 1,48
+raw_sc,SC4121E0,raw:Sleep stage 2,463
+raw_sc,SC4121E0,raw:Sleep stage 3,47
+raw_sc,SC4121E0,raw:Sleep stage 4,60
+raw_sc,SC4121E0,raw:Sleep stage R,258
+raw_sc,SC4121E0,raw:Sleep stage ?,101
+edf20_npz,SC4121E0,npz_code:Wake,176
+edf20_npz,SC4121E0,npz_code:N1,48
+edf20_npz,SC4121E0,npz_code:N2,463
+edf20_npz,SC4121E0,npz_code:N3,107
+edf20_npz,SC4121E0,npz_code:REM,258
+edf78_npz,SC4121E0,npz_code:Wake,176
+edf78_npz,SC4121E0,npz_code:N1,48
+edf78_npz,SC4121E0,npz_code:N2,463
+edf78_npz,SC4121E0,npz_code:N3,107
+edf78_npz,SC4121E0,npz_code:REM,258
+raw_sc,SC4122E0,Wake,1919
+raw_sc,SC4122E0,N1,121
+raw_sc,SC4122E0,N2,287
+raw_sc,SC4122E0,N3,80
+raw_sc,SC4122E0,REM,199
+raw_sc,SC4122E0,raw:Sleep stage W,1919
+raw_sc,SC4122E0,raw:Sleep stage 1,121
+raw_sc,SC4122E0,raw:Sleep stage 2,287
+raw_sc,SC4122E0,raw:Sleep stage R,199
+raw_sc,SC4122E0,raw:Sleep stage 3,50
+raw_sc,SC4122E0,raw:Sleep stage 4,30
+raw_sc,SC4122E0,raw:Sleep stage ?,0
+edf20_npz,SC4122E0,npz_code:Wake,290
+edf20_npz,SC4122E0,npz_code:N1,121
+edf20_npz,SC4122E0,npz_code:N2,287
+edf20_npz,SC4122E0,npz_code:N3,80
+edf20_npz,SC4122E0,npz_code:REM,199
+edf78_npz,SC4122E0,npz_code:Wake,290
+edf78_npz,SC4122E0,npz_code:N1,121
+edf78_npz,SC4122E0,npz_code:N2,287
+edf78_npz,SC4122E0,npz_code:N3,80
+edf78_npz,SC4122E0,npz_code:REM,199
+raw_sc,SC4131E0,Wake,1941
+raw_sc,SC4131E0,N1,57
+raw_sc,SC4131E0,N2,497
+raw_sc,SC4131E0,N3,147
+raw_sc,SC4131E0,REM,172
+raw_sc,SC4131E0,raw:Sleep stage W,1941
+raw_sc,SC4131E0,raw:Sleep stage 1,57
+raw_sc,SC4131E0,raw:Sleep stage 2,497
+raw_sc,SC4131E0,raw:Sleep stage 3,63
+raw_sc,SC4131E0,raw:Sleep stage 4,84
+raw_sc,SC4131E0,raw:Sleep stage R,172
+raw_sc,SC4131E0,raw:Sleep stage ?,0
+edf20_npz,SC4131E0,npz_code:Wake,155
+edf20_npz,SC4131E0,npz_code:N1,57
+edf20_npz,SC4131E0,npz_code:N2,497
+edf20_npz,SC4131E0,npz_code:N3,147
+edf20_npz,SC4131E0,npz_code:REM,172
+edf78_npz,SC4131E0,npz_code:Wake,155
+edf78_npz,SC4131E0,npz_code:N1,57
+edf78_npz,SC4131E0,npz_code:N2,497
+edf78_npz,SC4131E0,npz_code:N3,147
+edf78_npz,SC4131E0,npz_code:REM,172
+raw_sc,SC4141E0,Wake,1939
+raw_sc,SC4141E0,N1,29
+raw_sc,SC4141E0,N2,404
+raw_sc,SC4141E0,N3,151
+raw_sc,SC4141E0,REM,233
+raw_sc,SC4141E0,raw:Sleep stage W,1939
+raw_sc,SC4141E0,raw:Sleep stage 1,29
+raw_sc,SC4141E0,raw:Sleep stage 2,404
+raw_sc,SC4141E0,raw:Sleep stage 3,88
+raw_sc,SC4141E0,raw:Sleep stage 4,63
+raw_sc,SC4141E0,raw:Sleep stage R,233
+raw_sc,SC4141E0,raw:Sleep stage ?,0
+edf20_npz,SC4141E0,npz_code:Wake,187
+edf20_npz,SC4141E0,npz_code:N1,29
+edf20_npz,SC4141E0,npz_code:N2,404
+edf20_npz,SC4141E0,npz_code:N3,151
+edf20_npz,SC4141E0,npz_code:REM,233
+edf78_npz,SC4141E0,npz_code:Wake,187
+edf78_npz,SC4141E0,npz_code:N1,29
+edf78_npz,SC4141E0,npz_code:N2,404
+edf78_npz,SC4141E0,npz_code:N3,151
+edf78_npz,SC4141E0,npz_code:REM,233
+raw_sc,SC4142E0,Wake,2003
+raw_sc,SC4142E0,N1,27
+raw_sc,SC4142E0,N2,386
+raw_sc,SC4142E0,N3,145
+raw_sc,SC4142E0,REM,213
+raw_sc,SC4142E0,raw:Sleep stage W,2003
+raw_sc,SC4142E0,raw:Sleep stage 1,27
+raw_sc,SC4142E0,raw:Sleep stage 2,386
+raw_sc,SC4142E0,raw:Sleep stage 3,67
+raw_sc,SC4142E0,raw:Sleep stage 4,78
+raw_sc,SC4142E0,raw:Sleep stage R,213
+raw_sc,SC4142E0,raw:Sleep stage ?,0
+edf20_npz,SC4142E0,npz_code:Wake,181
+edf20_npz,SC4142E0,npz_code:N1,27
+edf20_npz,SC4142E0,npz_code:N2,386
+edf20_npz,SC4142E0,npz_code:N3,145
+edf20_npz,SC4142E0,npz_code:REM,213
+edf78_npz,SC4142E0,npz_code:Wake,181
+edf78_npz,SC4142E0,npz_code:N1,27
+edf78_npz,SC4142E0,npz_code:N2,386
+edf78_npz,SC4142E0,npz_code:N3,145
+edf78_npz,SC4142E0,npz_code:REM,213
+raw_sc,SC4151E0,Wake,1836
+raw_sc,SC4151E0,N1,41
+raw_sc,SC4151E0,N2,354
+raw_sc,SC4151E0,N3,177
+raw_sc,SC4151E0,REM,208
+raw_sc,SC4151E0,raw:Sleep stage W,1836
+raw_sc,SC4151E0,raw:Sleep stage 1,41
+raw_sc,SC4151E0,raw:Sleep stage 2,354
+raw_sc,SC4151E0,raw:Movement time,4
+raw_sc,SC4151E0,raw:Sleep stage 3,114
+raw_sc,SC4151E0,raw:Sleep stage R,208
+raw_sc,SC4151E0,raw:Sleep stage 4,63
+raw_sc,SC4151E0,raw:Sleep stage ?,0
+edf20_npz,SC4151E0,npz_code:Wake,172
+edf20_npz,SC4151E0,npz_code:N1,41
+edf20_npz,SC4151E0,npz_code:N2,354
+edf20_npz,SC4151E0,npz_code:N3,177
+edf20_npz,SC4151E0,npz_code:REM,208
+edf78_npz,SC4151E0,npz_code:Wake,172
+edf78_npz,SC4151E0,npz_code:N1,41
+edf78_npz,SC4151E0,npz_code:N2,354
+edf78_npz,SC4151E0,npz_code:N3,177
+edf78_npz,SC4151E0,npz_code:REM,208
+raw_sc,SC4152E0,Wake,1904
+raw_sc,SC4152E0,N1,47
+raw_sc,SC4152E0,N2,438
+raw_sc,SC4152E0,N3,178
+raw_sc,SC4152E0,REM,292
+raw_sc,SC4152E0,raw:Sleep stage W,1904
+raw_sc,SC4152E0,raw:Sleep stage 1,47
+raw_sc,SC4152E0,raw:Sleep stage 2,438
+raw_sc,SC4152E0,raw:Sleep stage R,292
+raw_sc,SC4152E0,raw:Sleep stage 3,113
+raw_sc,SC4152E0,raw:Sleep stage 4,65
+raw_sc,SC4152E0,raw:Movement time,5
+raw_sc,SC4152E0,raw:Sleep stage ?,0
+edf20_npz,SC4152E0,npz_code:Wake,807
+edf20_npz,SC4152E0,npz_code:N1,47
+edf20_npz,SC4152E0,npz_code:N2,438
+edf20_npz,SC4152E0,npz_code:N3,178
+edf20_npz,SC4152E0,npz_code:REM,292
+edf78_npz,SC4152E0,npz_code:Wake,807
+edf78_npz,SC4152E0,npz_code:N1,47
+edf78_npz,SC4152E0,npz_code:N2,438
+edf78_npz,SC4152E0,npz_code:N3,178
+edf78_npz,SC4152E0,npz_code:REM,292
+raw_sc,SC4161E0,Wake,1693
+raw_sc,SC4161E0,N1,55
+raw_sc,SC4161E0,N2,448
+raw_sc,SC4161E0,N3,165
+raw_sc,SC4161E0,REM,260
+raw_sc,SC4161E0,raw:Sleep stage W,1693
+raw_sc,SC4161E0,raw:Sleep stage 1,55
+raw_sc,SC4161E0,raw:Sleep stage 2,448
+raw_sc,SC4161E0,raw:Sleep stage 3,123
+raw_sc,SC4161E0,raw:Sleep stage 4,42
+raw_sc,SC4161E0,raw:Sleep stage R,260
+raw_sc,SC4161E0,raw:Movement time,5
+raw_sc,SC4161E0,raw:Sleep stage ?,0
+edf20_npz,SC4161E0,npz_code:Wake,216
+edf20_npz,SC4161E0,npz_code:N1,55
+edf20_npz,SC4161E0,npz_code:N2,448
+edf20_npz,SC4161E0,npz_code:N3,165
+edf20_npz,SC4161E0,npz_code:REM,260
+edf78_npz,SC4161E0,npz_code:Wake,216
+edf78_npz,SC4161E0,npz_code:N1,55
+edf78_npz,SC4161E0,npz_code:N2,448
+edf78_npz,SC4161E0,npz_code:N3,165
+edf78_npz,SC4161E0,npz_code:REM,260
+raw_sc,SC4162E0,Wake,1926
+raw_sc,SC4162E0,N1,42
+raw_sc,SC4162E0,N2,459
+raw_sc,SC4162E0,N3,128
+raw_sc,SC4162E0,REM,195
+raw_sc,SC4162E0,raw:Sleep stage W,1926
+raw_sc,SC4162E0,raw:Sleep stage 1,42
+raw_sc,SC4162E0,raw:Sleep stage 2,459
+raw_sc,SC4162E0,raw:Sleep stage 3,97
+raw_sc,SC4162E0,raw:Sleep stage 4,31
+raw_sc,SC4162E0,raw:Sleep stage R,195
+raw_sc,SC4162E0,raw:Movement time,2
+raw_sc,SC4162E0,raw:Sleep stage ?,0
+edf20_npz,SC4162E0,npz_code:Wake,179
+edf20_npz,SC4162E0,npz_code:N1,42
+edf20_npz,SC4162E0,npz_code:N2,459
+edf20_npz,SC4162E0,npz_code:N3,128
+edf20_npz,SC4162E0,npz_code:REM,195
+edf78_npz,SC4162E0,npz_code:Wake,179
+edf78_npz,SC4162E0,npz_code:N1,42
+edf78_npz,SC4162E0,npz_code:N2,459
+edf78_npz,SC4162E0,npz_code:N3,128
+edf78_npz,SC4162E0,npz_code:REM,195
+raw_sc,SC4171E0,Wake,1915
+raw_sc,SC4171E0,N1,21
+raw_sc,SC4171E0,N2,328
+raw_sc,SC4171E0,N3,215
+raw_sc,SC4171E0,REM,262
+raw_sc,SC4171E0,raw:Sleep stage W,1915
+raw_sc,SC4171E0,raw:Sleep stage 1,21
+raw_sc,SC4171E0,raw:Sleep stage 2,328
+raw_sc,SC4171E0,raw:Sleep stage 3,175
+raw_sc,SC4171E0,raw:Sleep stage 4,40
+raw_sc,SC4171E0,raw:Movement time,1
+raw_sc,SC4171E0,raw:Sleep stage R,262
+raw_sc,SC4171E0,raw:Sleep stage ?,0
+edf20_npz,SC4171E0,npz_code:Wake,176
+edf20_npz,SC4171E0,npz_code:N1,21
+edf20_npz,SC4171E0,npz_code:N2,328
+edf20_npz,SC4171E0,npz_code:N3,215
+edf20_npz,SC4171E0,npz_code:REM,262
+edf78_npz,SC4171E0,npz_code:Wake,176
+edf78_npz,SC4171E0,npz_code:N1,21
+edf78_npz,SC4171E0,npz_code:N2,328
+edf78_npz,SC4171E0,npz_code:N3,215
+edf78_npz,SC4171E0,npz_code:REM,262
+raw_sc,SC4172E0,Wake,1636
+raw_sc,SC4172E0,N1,44
+raw_sc,SC4172E0,N2,687
+raw_sc,SC4172E0,N3,188
+raw_sc,SC4172E0,REM,165
+raw_sc,SC4172E0,raw:Sleep stage W,1636
+raw_sc,SC4172E0,raw:Sleep stage 2,687
+raw_sc,SC4172E0,raw:Sleep stage 3,139
+raw_sc,SC4172E0,raw:Sleep stage 4,49
+raw_sc,SC4172E0,raw:Sleep stage 1,44
+raw_sc,SC4172E0,raw:Movement time,4
+raw_sc,SC4172E0,raw:Sleep stage R,165
+raw_sc,SC4172E0,raw:Sleep stage ?,0
+edf20_npz,SC4172E0,npz_code:Wake,689
+edf20_npz,SC4172E0,npz_code:N1,44
+edf20_npz,SC4172E0,npz_code:N2,687
+edf20_npz,SC4172E0,npz_code:N3,188
+edf20_npz,SC4172E0,npz_code:REM,165
+edf78_npz,SC4172E0,npz_code:Wake,689
+edf78_npz,SC4172E0,npz_code:N1,44
+edf78_npz,SC4172E0,npz_code:N2,687
+edf78_npz,SC4172E0,npz_code:N3,188
+edf78_npz,SC4172E0,npz_code:REM,165
+raw_sc,SC4181E0,Wake,1930
+raw_sc,SC4181E0,N1,29
+raw_sc,SC4181E0,N2,388
+raw_sc,SC4181E0,N3,291
+raw_sc,SC4181E0,REM,118
+raw_sc,SC4181E0,raw:Sleep stage W,1930
+raw_sc,SC4181E0,raw:Sleep stage 1,29
+raw_sc,SC4181E0,raw:Sleep stage 2,388
+raw_sc,SC4181E0,raw:Sleep stage 3,152
+raw_sc,SC4181E0,raw:Sleep stage 4,139
+raw_sc,SC4181E0,raw:Sleep stage R,118
+raw_sc,SC4181E0,raw:Sleep stage ?,0
+edf20_npz,SC4181E0,npz_code:Wake,138
+edf20_npz,SC4181E0,npz_code:N1,29
+edf20_npz,SC4181E0,npz_code:N2,388
+edf20_npz,SC4181E0,npz_code:N3,291
+edf20_npz,SC4181E0,npz_code:REM,118
+edf78_npz,SC4181E0,npz_code:Wake,138
+edf78_npz,SC4181E0,npz_code:N1,29
+edf78_npz,SC4181E0,npz_code:N2,388
+edf78_npz,SC4181E0,npz_code:N3,291
+edf78_npz,SC4181E0,npz_code:REM,118
+raw_sc,SC4182E0,Wake,2069
+raw_sc,SC4182E0,N1,151
+raw_sc,SC4182E0,N2,290
+raw_sc,SC4182E0,N3,216
+raw_sc,SC4182E0,REM,116
+raw_sc,SC4182E0,raw:Sleep stage W,2069
+raw_sc,SC4182E0,raw:Sleep stage 1,151
+raw_sc,SC4182E0,raw:Sleep stage 2,290
+raw_sc,SC4182E0,raw:Sleep stage 3,102
+raw_sc,SC4182E0,raw:Sleep stage 4,114
+raw_sc,SC4182E0,raw:Sleep stage R,116
+raw_sc,SC4182E0,raw:Sleep stage ?,0
+edf20_npz,SC4182E0,npz_code:Wake,147
+edf20_npz,SC4182E0,npz_code:N1,151
+edf20_npz,SC4182E0,npz_code:N2,290
+edf20_npz,SC4182E0,npz_code:N3,216
+edf20_npz,SC4182E0,npz_code:REM,116
+edf78_npz,SC4182E0,npz_code:Wake,147
+edf78_npz,SC4182E0,npz_code:N1,151
+edf78_npz,SC4182E0,npz_code:N2,290
+edf78_npz,SC4182E0,npz_code:N3,216
+edf78_npz,SC4182E0,npz_code:REM,116
+raw_sc,SC4191E0,Wake,1427
+raw_sc,SC4191E0,N1,118
+raw_sc,SC4191E0,N2,833
+raw_sc,SC4191E0,N3,110
+raw_sc,SC4191E0,REM,286
+raw_sc,SC4191E0,raw:Sleep stage W,1427
+raw_sc,SC4191E0,raw:Sleep stage 1,118
+raw_sc,SC4191E0,raw:Sleep stage 2,833
+raw_sc,SC4191E0,raw:Sleep stage 3,80
+raw_sc,SC4191E0,raw:Sleep stage 4,30
+raw_sc,SC4191E0,raw:Sleep stage R,286
+raw_sc,SC4191E0,raw:Sleep stage ?,0
+edf20_npz,SC4191E0,npz_code:Wake,188
+edf20_npz,SC4191E0,npz_code:N1,118
+edf20_npz,SC4191E0,npz_code:N2,833
+edf20_npz,SC4191E0,npz_code:N3,110
+edf20_npz,SC4191E0,npz_code:REM,286
+edf78_npz,SC4191E0,npz_code:Wake,188
+edf78_npz,SC4191E0,npz_code:N1,118
+edf78_npz,SC4191E0,npz_code:N2,833
+edf78_npz,SC4191E0,npz_code:N3,110
+edf78_npz,SC4191E0,npz_code:REM,286
+raw_sc,SC4192E0,Wake,1707
+raw_sc,SC4192E0,N1,72
+raw_sc,SC4192E0,N2,434
+raw_sc,SC4192E0,N3,60
+raw_sc,SC4192E0,REM,332
+raw_sc,SC4192E0,raw:Sleep stage W,1707
+raw_sc,SC4192E0,raw:Sleep stage 1,72
+raw_sc,SC4192E0,raw:Sleep stage 2,434
+raw_sc,SC4192E0,raw:Sleep stage 3,59
+raw_sc,SC4192E0,raw:Sleep stage 4,1
+raw_sc,SC4192E0,raw:Sleep stage R,332
+raw_sc,SC4192E0,raw:Movement time,5
+raw_sc,SC4192E0,raw:Sleep stage ?,0
+edf20_npz,SC4192E0,npz_code:Wake,376
+edf20_npz,SC4192E0,npz_code:N1,72
+edf20_npz,SC4192E0,npz_code:N2,434
+edf20_npz,SC4192E0,npz_code:N3,60
+edf20_npz,SC4192E0,npz_code:REM,332
+edf78_npz,SC4192E0,npz_code:Wake,376
+edf78_npz,SC4192E0,npz_code:N1,72
+edf78_npz,SC4192E0,npz_code:N2,434
+edf78_npz,SC4192E0,npz_code:N3,60
+edf78_npz,SC4192E0,npz_code:REM,332
+raw_sc,SC4201E0,Wake,2044
+raw_sc,SC4201E0,N1,39
+raw_sc,SC4201E0,N2,539
+raw_sc,SC4201E0,N3,4
+raw_sc,SC4201E0,REM,177
+raw_sc,SC4201E0,raw:Sleep stage W,2044
+raw_sc,SC4201E0,raw:Sleep stage 1,39
+raw_sc,SC4201E0,raw:Sleep stage 2,539
+raw_sc,SC4201E0,raw:Sleep stage 3,4
+raw_sc,SC4201E0,raw:Sleep stage R,177
+raw_sc,SC4201E0,raw:Movement time,1
+raw_sc,SC4201E0,raw:Sleep stage ?,0
+edf78_npz,SC4201E0,npz_code:Wake,263
+edf78_npz,SC4201E0,npz_code:N1,39
+edf78_npz,SC4201E0,npz_code:N2,539
+edf78_npz,SC4201E0,npz_code:N3,4
+edf78_npz,SC4201E0,npz_code:REM,177
+raw_sc,SC4202E0,Wake,1864
+raw_sc,SC4202E0,N1,120
+raw_sc,SC4202E0,N2,479
+raw_sc,SC4202E0,N3,0
+raw_sc,SC4202E0,REM,207
+raw_sc,SC4202E0,raw:Sleep stage W,1864
+raw_sc,SC4202E0,raw:Sleep stage 1,120
+raw_sc,SC4202E0,raw:Sleep stage 2,479
+raw_sc,SC4202E0,raw:Sleep stage R,207
+raw_sc,SC4202E0,raw:Sleep stage ?,0
+edf78_npz,SC4202E0,npz_code:Wake,215
+edf78_npz,SC4202E0,npz_code:N1,120
+edf78_npz,SC4202E0,npz_code:N2,479
+edf78_npz,SC4202E0,npz_code:N3,0
+edf78_npz,SC4202E0,npz_code:REM,207
+raw_sc,SC4211E0,Wake,1972
+raw_sc,SC4211E0,N1,106
+raw_sc,SC4211E0,N2,527
+raw_sc,SC4211E0,N3,49
+raw_sc,SC4211E0,REM,151
+raw_sc,SC4211E0,raw:Sleep stage W,1972
+raw_sc,SC4211E0,raw:Sleep stage 1,106
+raw_sc,SC4211E0,raw:Sleep stage 2,527
+raw_sc,SC4211E0,raw:Sleep stage 3,49
+raw_sc,SC4211E0,raw:Movement time,5
+raw_sc,SC4211E0,raw:Sleep stage R,151
+raw_sc,SC4211E0,raw:Sleep stage ?,0
+edf78_npz,SC4211E0,npz_code:Wake,745
+edf78_npz,SC4211E0,npz_code:N1,106
+edf78_npz,SC4211E0,npz_code:N2,527
+edf78_npz,SC4211E0,npz_code:N3,49
+edf78_npz,SC4211E0,npz_code:REM,151
+raw_sc,SC4212E0,Wake,2075
+raw_sc,SC4212E0,N1,87
+raw_sc,SC4212E0,N2,402
+raw_sc,SC4212E0,N3,43
+raw_sc,SC4212E0,REM,87
+raw_sc,SC4212E0,raw:Sleep stage W,2075
+raw_sc,SC4212E0,raw:Sleep stage 1,87
+raw_sc,SC4212E0,raw:Sleep stage 2,402
+raw_sc,SC4212E0,raw:Sleep stage 3,43
+raw_sc,SC4212E0,raw:Sleep stage R,87
+raw_sc,SC4212E0,raw:Sleep stage ?,0
+edf78_npz,SC4212E0,npz_code:Wake,189
+edf78_npz,SC4212E0,npz_code:N1,87
+edf78_npz,SC4212E0,npz_code:N2,402
+edf78_npz,SC4212E0,npz_code:N3,43
+edf78_npz,SC4212E0,npz_code:REM,87
+raw_sc,SC4221E0,Wake,1774
+raw_sc,SC4221E0,N1,221
+raw_sc,SC4221E0,N2,461
+raw_sc,SC4221E0,N3,62
+raw_sc,SC4221E0,REM,182
+raw_sc,SC4221E0,raw:Sleep stage W,1774
+raw_sc,SC4221E0,raw:Sleep stage 1,221
+raw_sc,SC4221E0,raw:Sleep stage 2,461
+raw_sc,SC4221E0,raw:Sleep stage 3,60
+raw_sc,SC4221E0,raw:Sleep stage 4,2
+raw_sc,SC4221E0,raw:Sleep stage R,182
+raw_sc,SC4221E0,raw:Sleep stage ?,0
+edf78_npz,SC4221E0,npz_code:Wake,173
+edf78_npz,SC4221E0,npz_code:N1,221
+edf78_npz,SC4221E0,npz_code:N2,461
+edf78_npz,SC4221E0,npz_code:N3,62
+edf78_npz,SC4221E0,npz_code:REM,182
+raw_sc,SC4222E0,Wake,1819
+raw_sc,SC4222E0,N1,90
+raw_sc,SC4222E0,N2,497
+raw_sc,SC4222E0,N3,134
+raw_sc,SC4222E0,REM,220
+raw_sc,SC4222E0,raw:Sleep stage W,1819
+raw_sc,SC4222E0,raw:Sleep stage 1,90
+raw_sc,SC4222E0,raw:Sleep stage 2,497
+raw_sc,SC4222E0,raw:Sleep stage 3,87
+raw_sc,SC4222E0,raw:Sleep stage 4,47
+raw_sc,SC4222E0,raw:Sleep stage R,220
+raw_sc,SC4222E0,raw:Sleep stage ?,0
+edf78_npz,SC4222E0,npz_code:Wake,167
+edf78_npz,SC4222E0,npz_code:N1,90
+edf78_npz,SC4222E0,npz_code:N2,497
+edf78_npz,SC4222E0,npz_code:N3,134
+edf78_npz,SC4222E0,npz_code:REM,220
+raw_sc,SC4231E0,Wake,1966
+raw_sc,SC4231E0,N1,139
+raw_sc,SC4231E0,N2,414
+raw_sc,SC4231E0,N3,12
+raw_sc,SC4231E0,REM,212
+raw_sc,SC4231E0,raw:Sleep stage W,1966
+raw_sc,SC4231E0,raw:Sleep stage 1,139
+raw_sc,SC4231E0,raw:Sleep stage 2,414
+raw_sc,SC4231E0,raw:Sleep stage 3,12
+raw_sc,SC4231E0,raw:Sleep stage R,212
+raw_sc,SC4231E0,raw:Movement time,3
+raw_sc,SC4231E0,raw:Sleep stage ?,0
+edf78_npz,SC4231E0,npz_code:Wake,127
+edf78_npz,SC4231E0,npz_code:N1,139
+edf78_npz,SC4231E0,npz_code:N2,414
+edf78_npz,SC4231E0,npz_code:N3,12
+edf78_npz,SC4231E0,npz_code:REM,212
+raw_sc,SC4232E0,Wake,1822
+raw_sc,SC4232E0,N1,382
+raw_sc,SC4232E0,N2,213
+raw_sc,SC4232E0,N3,1
+raw_sc,SC4232E0,REM,217
+raw_sc,SC4232E0,raw:Sleep stage W,1822
+raw_sc,SC4232E0,raw:Sleep stage 1,382
+raw_sc,SC4232E0,raw:Sleep stage 2,213
+raw_sc,SC4232E0,raw:Sleep stage R,217
+raw_sc,SC4232E0,raw:Sleep stage 3,1
+raw_sc,SC4232E0,raw:Movement time,5
+raw_sc,SC4232E0,raw:Sleep stage ?,0
+edf78_npz,SC4232E0,npz_code:Wake,916
+edf78_npz,SC4232E0,npz_code:N1,382
+edf78_npz,SC4232E0,npz_code:N2,213
+edf78_npz,SC4232E0,npz_code:N3,1
+edf78_npz,SC4232E0,npz_code:REM,217
+raw_sc,SC4241E0,Wake,1873
+raw_sc,SC4241E0,N1,85
+raw_sc,SC4241E0,N2,514
+raw_sc,SC4241E0,N3,44
+raw_sc,SC4241E0,REM,184
+raw_sc,SC4241E0,raw:Sleep stage W,1873
+raw_sc,SC4241E0,raw:Sleep stage 1,85
+raw_sc,SC4241E0,raw:Sleep stage 2,514
+raw_sc,SC4241E0,raw:Sleep stage 3,44
+raw_sc,SC4241E0,raw:Sleep stage R,184
+raw_sc,SC4241E0,raw:Movement time,2
+raw_sc,SC4241E0,raw:Sleep stage ?,0
+edf78_npz,SC4241E0,npz_code:Wake,846
+edf78_npz,SC4241E0,npz_code:N1,85
+edf78_npz,SC4241E0,npz_code:N2,514
+edf78_npz,SC4241E0,npz_code:N3,44
+edf78_npz,SC4241E0,npz_code:REM,184
+raw_sc,SC4242E0,Wake,1879
+raw_sc,SC4242E0,N1,94
+raw_sc,SC4242E0,N2,556
+raw_sc,SC4242E0,N3,5
+raw_sc,SC4242E0,REM,176
+raw_sc,SC4242E0,raw:Sleep stage W,1879
+raw_sc,SC4242E0,raw:Sleep stage 1,94
+raw_sc,SC4242E0,raw:Sleep stage 2,556
+raw_sc,SC4242E0,raw:Sleep stage 3,5
+raw_sc,SC4242E0,raw:Sleep stage R,176
+raw_sc,SC4242E0,raw:Sleep stage ?,0
+edf78_npz,SC4242E0,npz_code:Wake,944
+edf78_npz,SC4242E0,npz_code:N1,94
+edf78_npz,SC4242E0,npz_code:N2,556
+edf78_npz,SC4242E0,npz_code:N3,5
+edf78_npz,SC4242E0,npz_code:REM,176
+raw_sc,SC4251E0,Wake,1921
+raw_sc,SC4251E0,N1,102
+raw_sc,SC4251E0,N2,569
+raw_sc,SC4251E0,N3,22
+raw_sc,SC4251E0,REM,146
+raw_sc,SC4251E0,raw:Sleep stage W,1921
+raw_sc,SC4251E0,raw:Sleep stage 1,102
+raw_sc,SC4251E0,raw:Sleep stage 2,569
+raw_sc,SC4251E0,raw:Sleep stage 3,22
+raw_sc,SC4251E0,raw:Sleep stage R,146
+raw_sc,SC4251E0,raw:Sleep stage ?,0
+edf78_npz,SC4251E0,npz_code:Wake,133
+edf78_npz,SC4251E0,npz_code:N1,102
+edf78_npz,SC4251E0,npz_code:N2,569
+edf78_npz,SC4251E0,npz_code:N3,22
+edf78_npz,SC4251E0,npz_code:REM,146
+raw_sc,SC4252E0,Wake,1855
+raw_sc,SC4252E0,N1,113
+raw_sc,SC4252E0,N2,425
+raw_sc,SC4252E0,N3,98
+raw_sc,SC4252E0,REM,174
+raw_sc,SC4252E0,raw:Sleep stage W,1855
+raw_sc,SC4252E0,raw:Sleep stage 1,113
+raw_sc,SC4252E0,raw:Sleep stage 2,425
+raw_sc,SC4252E0,raw:Sleep stage 3,90
+raw_sc,SC4252E0,raw:Sleep stage 4,8
+raw_sc,SC4252E0,raw:Movement time,1
+raw_sc,SC4252E0,raw:Sleep stage R,174
+raw_sc,SC4252E0,raw:Sleep stage ?,0
+edf78_npz,SC4252E0,npz_code:Wake,210
+edf78_npz,SC4252E0,npz_code:N1,113
+edf78_npz,SC4252E0,npz_code:N2,425
+edf78_npz,SC4252E0,npz_code:N3,98
+edf78_npz,SC4252E0,npz_code:REM,174
+raw_sc,SC4261F0,Wake,1830
+raw_sc,SC4261F0,N1,245
+raw_sc,SC4261F0,N2,405
+raw_sc,SC4261F0,N3,94
+raw_sc,SC4261F0,REM,226
+raw_sc,SC4261F0,raw:Sleep stage W,1830
+raw_sc,SC4261F0,raw:Sleep stage 1,245
+raw_sc,SC4261F0,raw:Sleep stage 2,405
+raw_sc,SC4261F0,raw:Sleep stage 3,85
+raw_sc,SC4261F0,raw:Sleep stage R,226
+raw_sc,SC4261F0,raw:Sleep stage 4,9
+raw_sc,SC4261F0,raw:Sleep stage ?,0
+edf78_npz,SC4261F0,npz_code:Wake,627
+edf78_npz,SC4261F0,npz_code:N1,245
+edf78_npz,SC4261F0,npz_code:N2,405
+edf78_npz,SC4261F0,npz_code:N3,94
+edf78_npz,SC4261F0,npz_code:REM,226
+raw_sc,SC4262F0,Wake,1907
+raw_sc,SC4262F0,N1,77
+raw_sc,SC4262F0,N2,464
+raw_sc,SC4262F0,N3,79
+raw_sc,SC4262F0,REM,193
+raw_sc,SC4262F0,raw:Sleep stage W,1907
+raw_sc,SC4262F0,raw:Sleep stage 1,77
+raw_sc,SC4262F0,raw:Sleep stage 2,464
+raw_sc,SC4262F0,raw:Sleep stage 3,73
+raw_sc,SC4262F0,raw:Sleep stage R,193
+raw_sc,SC4262F0,raw:Sleep stage 4,6
+raw_sc,SC4262F0,raw:Sleep stage ?,0
+edf78_npz,SC4262F0,npz_code:Wake,167
+edf78_npz,SC4262F0,npz_code:N1,77
+edf78_npz,SC4262F0,npz_code:N2,464
+edf78_npz,SC4262F0,npz_code:N3,79
+edf78_npz,SC4262F0,npz_code:REM,193
+raw_sc,SC4271F0,Wake,1556
+raw_sc,SC4271F0,N1,72
+raw_sc,SC4271F0,N2,475
+raw_sc,SC4271F0,N3,163
+raw_sc,SC4271F0,REM,174
+raw_sc,SC4271F0,raw:Sleep stage W,1556
+raw_sc,SC4271F0,raw:Sleep stage 1,72
+raw_sc,SC4271F0,raw:Sleep stage 2,475
+raw_sc,SC4271F0,raw:Sleep stage 3,89
+raw_sc,SC4271F0,raw:Sleep stage 4,74
+raw_sc,SC4271F0,raw:Sleep stage R,174
+raw_sc,SC4271F0,raw:Sleep stage ?,0
+edf78_npz,SC4271F0,npz_code:Wake,168
+edf78_npz,SC4271F0,npz_code:N1,72
+edf78_npz,SC4271F0,npz_code:N2,475
+edf78_npz,SC4271F0,npz_code:N3,163
+edf78_npz,SC4271F0,npz_code:REM,174
+raw_sc,SC4272F0,Wake,2003
+raw_sc,SC4272F0,N1,87
+raw_sc,SC4272F0,N2,379
+raw_sc,SC4272F0,N3,178
+raw_sc,SC4272F0,REM,223
+raw_sc,SC4272F0,raw:Sleep stage W,2003
+raw_sc,SC4272F0,raw:Sleep stage 1,87
+raw_sc,SC4272F0,raw:Sleep stage 2,379
+raw_sc,SC4272F0,raw:Sleep stage 3,48
+raw_sc,SC4272F0,raw:Sleep stage 4,130
+raw_sc,SC4272F0,raw:Sleep stage R,223
+raw_sc,SC4272F0,raw:Sleep stage ?,0
+edf78_npz,SC4272F0,npz_code:Wake,223
+edf78_npz,SC4272F0,npz_code:N1,87
+edf78_npz,SC4272F0,npz_code:N2,379
+edf78_npz,SC4272F0,npz_code:N3,178
+edf78_npz,SC4272F0,npz_code:REM,223
+raw_sc,SC4281G0,Wake,1854
+raw_sc,SC4281G0,N1,76
+raw_sc,SC4281G0,N2,530
+raw_sc,SC4281G0,N3,159
+raw_sc,SC4281G0,REM,169
+raw_sc,SC4281G0,raw:Sleep stage W,1854
+raw_sc,SC4281G0,raw:Sleep stage 1,76
+raw_sc,SC4281G0,raw:Sleep stage 2,530
+raw_sc,SC4281G0,raw:Sleep stage 3,98
+raw_sc,SC4281G0,raw:Sleep stage 4,61
+raw_sc,SC4281G0,raw:Sleep stage R,169
+raw_sc,SC4281G0,raw:Sleep stage ?,0
+edf78_npz,SC4281G0,npz_code:Wake,193
+edf78_npz,SC4281G0,npz_code:N1,76
+edf78_npz,SC4281G0,npz_code:N2,530
+edf78_npz,SC4281G0,npz_code:N3,159
+edf78_npz,SC4281G0,npz_code:REM,169
+raw_sc,SC4282G0,Wake,1948
+raw_sc,SC4282G0,N1,81
+raw_sc,SC4282G0,N2,474
+raw_sc,SC4282G0,N3,145
+raw_sc,SC4282G0,REM,166
+raw_sc,SC4282G0,raw:Sleep stage W,1948
+raw_sc,SC4282G0,raw:Sleep stage 1,81
+raw_sc,SC4282G0,raw:Sleep stage 2,474
+raw_sc,SC4282G0,raw:Sleep stage 3,109
+raw_sc,SC4282G0,raw:Sleep stage 4,36
+raw_sc,SC4282G0,raw:Sleep stage R,166
+raw_sc,SC4282G0,raw:Sleep stage ?,0
+edf78_npz,SC4282G0,npz_code:Wake,204
+edf78_npz,SC4282G0,npz_code:N1,81
+edf78_npz,SC4282G0,npz_code:N2,474
+edf78_npz,SC4282G0,npz_code:N3,145
+edf78_npz,SC4282G0,npz_code:REM,166
+raw_sc,SC4291G0,Wake,1869
+raw_sc,SC4291G0,N1,181
+raw_sc,SC4291G0,N2,427
+raw_sc,SC4291G0,N3,104
+raw_sc,SC4291G0,REM,175
+raw_sc,SC4291G0,raw:Sleep stage W,1869
+raw_sc,SC4291G0,raw:Sleep stage 1,181
+raw_sc,SC4291G0,raw:Sleep stage 2,427
+raw_sc,SC4291G0,raw:Sleep stage 3,47
+raw_sc,SC4291G0,raw:Sleep stage 4,57
+raw_sc,SC4291G0,raw:Sleep stage R,175
+raw_sc,SC4291G0,raw:Sleep stage ?,0
+edf78_npz,SC4291G0,npz_code:Wake,244
+edf78_npz,SC4291G0,npz_code:N1,181
+edf78_npz,SC4291G0,npz_code:N2,427
+edf78_npz,SC4291G0,npz_code:N3,104
+edf78_npz,SC4291G0,npz_code:REM,175
+raw_sc,SC4292G0,Wake,1935
+raw_sc,SC4292G0,N1,49
+raw_sc,SC4292G0,N2,457
+raw_sc,SC4292G0,N3,146
+raw_sc,SC4292G0,REM,220
+raw_sc,SC4292G0,raw:Sleep stage W,1935
+raw_sc,SC4292G0,raw:Sleep stage 1,49
+raw_sc,SC4292G0,raw:Sleep stage 2,457
+raw_sc,SC4292G0,raw:Sleep stage 3,60
+raw_sc,SC4292G0,raw:Sleep stage 4,86
+raw_sc,SC4292G0,raw:Sleep stage R,220
+raw_sc,SC4292G0,raw:Movement time,3
+raw_sc,SC4292G0,raw:Sleep stage ?,0
+edf78_npz,SC4292G0,npz_code:Wake,733
+edf78_npz,SC4292G0,npz_code:N1,49
+edf78_npz,SC4292G0,npz_code:N2,457
+edf78_npz,SC4292G0,npz_code:N3,146
+edf78_npz,SC4292G0,npz_code:REM,220
+raw_sc,SC4301E0,Wake,1926
+raw_sc,SC4301E0,N1,109
+raw_sc,SC4301E0,N2,457
+raw_sc,SC4301E0,N3,30
+raw_sc,SC4301E0,REM,122
+raw_sc,SC4301E0,raw:Sleep stage W,1926
+raw_sc,SC4301E0,raw:Sleep stage 1,109
+raw_sc,SC4301E0,raw:Sleep stage 2,457
+raw_sc,SC4301E0,raw:Sleep stage 3,30
+raw_sc,SC4301E0,raw:Sleep stage R,122
+raw_sc,SC4301E0,raw:Movement time,2
+raw_sc,SC4301E0,raw:Sleep stage ?,0
+edf78_npz,SC4301E0,npz_code:Wake,211
+edf78_npz,SC4301E0,npz_code:N1,109
+edf78_npz,SC4301E0,npz_code:N2,457
+edf78_npz,SC4301E0,npz_code:N3,30
+edf78_npz,SC4301E0,npz_code:REM,122
+raw_sc,SC4302E0,Wake,2127
+raw_sc,SC4302E0,N1,96
+raw_sc,SC4302E0,N2,418
+raw_sc,SC4302E0,N3,32
+raw_sc,SC4302E0,REM,135
+raw_sc,SC4302E0,raw:Sleep stage W,2127
+raw_sc,SC4302E0,raw:Sleep stage 1,96
+raw_sc,SC4302E0,raw:Sleep stage 2,418
+raw_sc,SC4302E0,raw:Sleep stage 3,32
+raw_sc,SC4302E0,raw:Sleep stage R,135
+raw_sc,SC4302E0,raw:Sleep stage ?,0
+edf78_npz,SC4302E0,npz_code:Wake,173
+edf78_npz,SC4302E0,npz_code:N1,96
+edf78_npz,SC4302E0,npz_code:N2,418
+edf78_npz,SC4302E0,npz_code:N3,32
+edf78_npz,SC4302E0,npz_code:REM,135
+raw_sc,SC4311E0,Wake,1974
+raw_sc,SC4311E0,N1,79
+raw_sc,SC4311E0,N2,362
+raw_sc,SC4311E0,N3,113
+raw_sc,SC4311E0,REM,142
+raw_sc,SC4311E0,raw:Sleep stage W,1974
+raw_sc,SC4311E0,raw:Sleep stage 1,79
+raw_sc,SC4311E0,raw:Sleep stage 2,362
+raw_sc,SC4311E0,raw:Sleep stage 3,82
+raw_sc,SC4311E0,raw:Sleep stage 4,31
+raw_sc,SC4311E0,raw:Sleep stage R,142
+raw_sc,SC4311E0,raw:Sleep stage ?,0
+edf78_npz,SC4311E0,npz_code:Wake,358
+edf78_npz,SC4311E0,npz_code:N1,79
+edf78_npz,SC4311E0,npz_code:N2,362
+edf78_npz,SC4311E0,npz_code:N3,113
+edf78_npz,SC4311E0,npz_code:REM,142
+raw_sc,SC4312E0,Wake,1832
+raw_sc,SC4312E0,N1,152
+raw_sc,SC4312E0,N2,334
+raw_sc,SC4312E0,N3,191
+raw_sc,SC4312E0,REM,191
+raw_sc,SC4312E0,raw:Sleep stage W,1832
+raw_sc,SC4312E0,raw:Sleep stage 1,152
+raw_sc,SC4312E0,raw:Sleep stage 2,334
+raw_sc,SC4312E0,raw:Sleep stage 3,119
+raw_sc,SC4312E0,raw:Sleep stage 4,72
+raw_sc,SC4312E0,raw:Sleep stage R,191
+raw_sc,SC4312E0,raw:Sleep stage ?,0
+edf78_npz,SC4312E0,npz_code:Wake,313
+edf78_npz,SC4312E0,npz_code:N1,152
+edf78_npz,SC4312E0,npz_code:N2,334
+edf78_npz,SC4312E0,npz_code:N3,191
+edf78_npz,SC4312E0,npz_code:REM,191
+raw_sc,SC4321E0,Wake,1775
+raw_sc,SC4321E0,N1,204
+raw_sc,SC4321E0,N2,424
+raw_sc,SC4321E0,N3,0
+raw_sc,SC4321E0,REM,286
+raw_sc,SC4321E0,raw:Sleep stage W,1775
+raw_sc,SC4321E0,raw:Sleep stage 1,204
+raw_sc,SC4321E0,raw:Sleep stage 2,424
+raw_sc,SC4321E0,raw:Sleep stage R,286
+raw_sc,SC4321E0,raw:Movement time,1
+raw_sc,SC4321E0,raw:Sleep stage ?,0
+edf78_npz,SC4321E0,npz_code:Wake,646
+edf78_npz,SC4321E0,npz_code:N1,204
+edf78_npz,SC4321E0,npz_code:N2,424
+edf78_npz,SC4321E0,npz_code:N3,0
+edf78_npz,SC4321E0,npz_code:REM,286
+raw_sc,SC4322E0,Wake,1755
+raw_sc,SC4322E0,N1,144
+raw_sc,SC4322E0,N2,475
+raw_sc,SC4322E0,N3,1
+raw_sc,SC4322E0,REM,241
+raw_sc,SC4322E0,raw:Sleep stage W,1755
+raw_sc,SC4322E0,raw:Sleep stage 1,144
+raw_sc,SC4322E0,raw:Sleep stage 2,475
+raw_sc,SC4322E0,raw:Sleep stage R,241
+raw_sc,SC4322E0,raw:Sleep stage 3,1
+raw_sc,SC4322E0,raw:Sleep stage ?,0
+edf78_npz,SC4322E0,npz_code:Wake,160
+edf78_npz,SC4322E0,npz_code:N1,144
+edf78_npz,SC4322E0,npz_code:N2,475
+edf78_npz,SC4322E0,npz_code:N3,1
+edf78_npz,SC4322E0,npz_code:REM,241
+raw_sc,SC4331F0,Wake,1976
+raw_sc,SC4331F0,N1,212
+raw_sc,SC4331F0,N2,453
+raw_sc,SC4331F0,N3,0
+raw_sc,SC4331F0,REM,168
+raw_sc,SC4331F0,raw:Sleep stage W,1976
+raw_sc,SC4331F0,raw:Sleep stage 1,212
+raw_sc,SC4331F0,raw:Sleep stage 2,453
+raw_sc,SC4331F0,raw:Sleep stage R,168
+raw_sc,SC4331F0,raw:Movement time,1
+raw_sc,SC4331F0,raw:Sleep stage ?,0
+edf78_npz,SC4331F0,npz_code:Wake,1055
+edf78_npz,SC4331F0,npz_code:N1,212
+edf78_npz,SC4331F0,npz_code:N2,453
+edf78_npz,SC4331F0,npz_code:N3,0
+edf78_npz,SC4331F0,npz_code:REM,168
+raw_sc,SC4332F0,Wake,1881
+raw_sc,SC4332F0,N1,91
+raw_sc,SC4332F0,N2,648
+raw_sc,SC4332F0,N3,0
+raw_sc,SC4332F0,REM,138
+raw_sc,SC4332F0,raw:Sleep stage W,1881
+raw_sc,SC4332F0,raw:Sleep stage 1,91
+raw_sc,SC4332F0,raw:Sleep stage 2,648
+raw_sc,SC4332F0,raw:Sleep stage R,138
+raw_sc,SC4332F0,raw:Movement time,2
+raw_sc,SC4332F0,raw:Sleep stage ?,0
+edf78_npz,SC4332F0,npz_code:Wake,435
+edf78_npz,SC4332F0,npz_code:N1,91
+edf78_npz,SC4332F0,npz_code:N2,648
+edf78_npz,SC4332F0,npz_code:N3,0
+edf78_npz,SC4332F0,npz_code:REM,138
+raw_sc,SC4341F0,Wake,1867
+raw_sc,SC4341F0,N1,150
+raw_sc,SC4341F0,N2,561
+raw_sc,SC4341F0,N3,0
+raw_sc,SC4341F0,REM,172
+raw_sc,SC4341F0,raw:Sleep stage W,1867
+raw_sc,SC4341F0,raw:Sleep stage 1,150
+raw_sc,SC4341F0,raw:Sleep stage 2,561
+raw_sc,SC4341F0,raw:Sleep stage R,172
+raw_sc,SC4341F0,raw:Sleep stage ?,0
+edf78_npz,SC4341F0,npz_code:Wake,618
+edf78_npz,SC4341F0,npz_code:N1,150
+edf78_npz,SC4341F0,npz_code:N2,561
+edf78_npz,SC4341F0,npz_code:N3,0
+edf78_npz,SC4341F0,npz_code:REM,172
+raw_sc,SC4342F0,Wake,1892
+raw_sc,SC4342F0,N1,136
+raw_sc,SC4342F0,N2,596
+raw_sc,SC4342F0,N3,0
+raw_sc,SC4342F0,REM,166
+raw_sc,SC4342F0,raw:Sleep stage W,1892
+raw_sc,SC4342F0,raw:Sleep stage 1,136
+raw_sc,SC4342F0,raw:Sleep stage 2,596
+raw_sc,SC4342F0,raw:Sleep stage R,166
+raw_sc,SC4342F0,raw:Sleep stage ?,0
+edf78_npz,SC4342F0,npz_code:Wake,684
+edf78_npz,SC4342F0,npz_code:N1,136
+edf78_npz,SC4342F0,npz_code:N2,596
+edf78_npz,SC4342F0,npz_code:N3,0
+edf78_npz,SC4342F0,npz_code:REM,166
+raw_sc,SC4351F0,Wake,2085
+raw_sc,SC4351F0,N1,78
+raw_sc,SC4351F0,N2,419
+raw_sc,SC4351F0,N3,104
+raw_sc,SC4351F0,REM,24
+raw_sc,SC4351F0,raw:Sleep stage W,2085
+raw_sc,SC4351F0,raw:Sleep stage 1,78
+raw_sc,SC4351F0,raw:Sleep stage 2,419
+raw_sc,SC4351F0,raw:Sleep stage 3,104
+raw_sc,SC4351F0,raw:Sleep stage R,24
+raw_sc,SC4351F0,raw:Sleep stage ?,0
+edf78_npz,SC4351F0,npz_code:Wake,351
+edf78_npz,SC4351F0,npz_code:N1,78
+edf78_npz,SC4351F0,npz_code:N2,419
+edf78_npz,SC4351F0,npz_code:N3,104
+edf78_npz,SC4351F0,npz_code:REM,24
+raw_sc,SC4352F0,Wake,1789
+raw_sc,SC4352F0,N1,66
+raw_sc,SC4352F0,N2,498
+raw_sc,SC4352F0,N3,105
+raw_sc,SC4352F0,REM,72
+raw_sc,SC4352F0,raw:Sleep stage W,1789
+raw_sc,SC4352F0,raw:Sleep stage 1,66
+raw_sc,SC4352F0,raw:Sleep stage 2,498
+raw_sc,SC4352F0,raw:Sleep stage 3,100
+raw_sc,SC4352F0,raw:Sleep stage 4,5
+raw_sc,SC4352F0,raw:Movement time,2
+raw_sc,SC4352F0,raw:Sleep stage R,72
+raw_sc,SC4352F0,raw:Sleep stage ?,0
+edf78_npz,SC4352F0,npz_code:Wake,222
+edf78_npz,SC4352F0,npz_code:N1,66
+edf78_npz,SC4352F0,npz_code:N2,498
+edf78_npz,SC4352F0,npz_code:N3,105
+edf78_npz,SC4352F0,npz_code:REM,72
+raw_sc,SC4362F0,Wake,1598
+raw_sc,SC4362F0,N1,53
+raw_sc,SC4362F0,N2,499
+raw_sc,SC4362F0,N3,48
+raw_sc,SC4362F0,REM,68
+raw_sc,SC4362F0,raw:Sleep stage W,1598
+raw_sc,SC4362F0,raw:Sleep stage 1,53
+raw_sc,SC4362F0,raw:Sleep stage 2,499
+raw_sc,SC4362F0,raw:Sleep stage 3,48
+raw_sc,SC4362F0,raw:Sleep stage R,68
+raw_sc,SC4362F0,raw:Sleep stage ?,0
+edf78_npz,SC4362F0,npz_code:Wake,156
+edf78_npz,SC4362F0,npz_code:N1,53
+edf78_npz,SC4362F0,npz_code:N2,499
+edf78_npz,SC4362F0,npz_code:N3,48
+edf78_npz,SC4362F0,npz_code:REM,68
+raw_sc,SC4371F0,Wake,2076
+raw_sc,SC4371F0,N1,234
+raw_sc,SC4371F0,N2,484
+raw_sc,SC4371F0,N3,11
+raw_sc,SC4371F0,REM,45
+raw_sc,SC4371F0,raw:Sleep stage W,2076
+raw_sc,SC4371F0,raw:Sleep stage 1,234
+raw_sc,SC4371F0,raw:Sleep stage 2,484
+raw_sc,SC4371F0,raw:Sleep stage 3,11
+raw_sc,SC4371F0,raw:Sleep stage R,45
+raw_sc,SC4371F0,raw:Sleep stage ?,0
+edf78_npz,SC4371F0,npz_code:Wake,144
+edf78_npz,SC4371F0,npz_code:N1,234
+edf78_npz,SC4371F0,npz_code:N2,484
+edf78_npz,SC4371F0,npz_code:N3,11
+edf78_npz,SC4371F0,npz_code:REM,45
+raw_sc,SC4372F0,Wake,2013
+raw_sc,SC4372F0,N1,282
+raw_sc,SC4372F0,N2,433
+raw_sc,SC4372F0,N3,6
+raw_sc,SC4372F0,REM,106
+raw_sc,SC4372F0,raw:Sleep stage W,2013
+raw_sc,SC4372F0,raw:Sleep stage 1,282
+raw_sc,SC4372F0,raw:Sleep stage 2,433
+raw_sc,SC4372F0,raw:Sleep stage 3,6
+raw_sc,SC4372F0,raw:Sleep stage R,106
+raw_sc,SC4372F0,raw:Sleep stage ?,0
+edf78_npz,SC4372F0,npz_code:Wake,682
+edf78_npz,SC4372F0,npz_code:N1,282
+edf78_npz,SC4372F0,npz_code:N2,433
+edf78_npz,SC4372F0,npz_code:N3,6
+edf78_npz,SC4372F0,npz_code:REM,106
+raw_sc,SC4381F0,Wake,1867
+raw_sc,SC4381F0,N1,95
+raw_sc,SC4381F0,N2,612
+raw_sc,SC4381F0,N3,16
+raw_sc,SC4381F0,REM,160
+raw_sc,SC4381F0,raw:Sleep stage W,1867
+raw_sc,SC4381F0,raw:Sleep stage 1,95
+raw_sc,SC4381F0,raw:Sleep stage 2,612
+raw_sc,SC4381F0,raw:Sleep stage 3,16
+raw_sc,SC4381F0,raw:Sleep stage R,160
+raw_sc,SC4381F0,raw:Sleep stage ?,0
+edf78_npz,SC4381F0,npz_code:Wake,893
+edf78_npz,SC4381F0,npz_code:N1,95
+edf78_npz,SC4381F0,npz_code:N2,612
+edf78_npz,SC4381F0,npz_code:N3,16
+edf78_npz,SC4381F0,npz_code:REM,160
+raw_sc,SC4382F0,Wake,1878
+raw_sc,SC4382F0,N1,103
+raw_sc,SC4382F0,N2,583
+raw_sc,SC4382F0,N3,37
+raw_sc,SC4382F0,REM,169
+raw_sc,SC4382F0,raw:Sleep stage W,1878
+raw_sc,SC4382F0,raw:Sleep stage 1,103
+raw_sc,SC4382F0,raw:Sleep stage 2,583
+raw_sc,SC4382F0,raw:Sleep stage 3,36
+raw_sc,SC4382F0,raw:Sleep stage 4,1
+raw_sc,SC4382F0,raw:Sleep stage R,169
+raw_sc,SC4382F0,raw:Sleep stage ?,0
+edf78_npz,SC4382F0,npz_code:Wake,979
+edf78_npz,SC4382F0,npz_code:N1,103
+edf78_npz,SC4382F0,npz_code:N2,583
+edf78_npz,SC4382F0,npz_code:N3,37
+edf78_npz,SC4382F0,npz_code:REM,169
+raw_sc,SC4401E0,Wake,1976
+raw_sc,SC4401E0,N1,163
+raw_sc,SC4401E0,N2,377
+raw_sc,SC4401E0,N3,4
+raw_sc,SC4401E0,REM,110
+raw_sc,SC4401E0,raw:Sleep stage W,1976
+raw_sc,SC4401E0,raw:Sleep stage 1,163
+raw_sc,SC4401E0,raw:Sleep stage 2,377
+raw_sc,SC4401E0,raw:Sleep stage 3,4
+raw_sc,SC4401E0,raw:Sleep stage R,110
+raw_sc,SC4401E0,raw:Sleep stage ?,0
+edf78_npz,SC4401E0,npz_code:Wake,410
+edf78_npz,SC4401E0,npz_code:N1,163
+edf78_npz,SC4401E0,npz_code:N2,377
+edf78_npz,SC4401E0,npz_code:N3,4
+edf78_npz,SC4401E0,npz_code:REM,110
+raw_sc,SC4402E0,Wake,1927
+raw_sc,SC4402E0,N1,92
+raw_sc,SC4402E0,N2,375
+raw_sc,SC4402E0,N3,142
+raw_sc,SC4402E0,REM,254
+raw_sc,SC4402E0,raw:Sleep stage W,1927
+raw_sc,SC4402E0,raw:Sleep stage 1,92
+raw_sc,SC4402E0,raw:Sleep stage 2,375
+raw_sc,SC4402E0,raw:Sleep stage 3,137
+raw_sc,SC4402E0,raw:Sleep stage 4,5
+raw_sc,SC4402E0,raw:Sleep stage R,254
+raw_sc,SC4402E0,raw:Sleep stage ?,0
+edf78_npz,SC4402E0,npz_code:Wake,209
+edf78_npz,SC4402E0,npz_code:N1,92
+edf78_npz,SC4402E0,npz_code:N2,375
+edf78_npz,SC4402E0,npz_code:N3,142
+edf78_npz,SC4402E0,npz_code:REM,254
+raw_sc,SC4411E0,Wake,1831
+raw_sc,SC4411E0,N1,145
+raw_sc,SC4411E0,N2,502
+raw_sc,SC4411E0,N3,46
+raw_sc,SC4411E0,REM,204
+raw_sc,SC4411E0,raw:Sleep stage W,1831
+raw_sc,SC4411E0,raw:Sleep stage 1,145
+raw_sc,SC4411E0,raw:Sleep stage 2,502
+raw_sc,SC4411E0,raw:Sleep stage 3,45
+raw_sc,SC4411E0,raw:Sleep stage R,204
+raw_sc,SC4411E0,raw:Sleep stage 4,1
+raw_sc,SC4411E0,raw:Sleep stage ?,0
+edf78_npz,SC4411E0,npz_code:Wake,181
+edf78_npz,SC4411E0,npz_code:N1,145
+edf78_npz,SC4411E0,npz_code:N2,502
+edf78_npz,SC4411E0,npz_code:N3,46
+edf78_npz,SC4411E0,npz_code:REM,204
+raw_sc,SC4412E0,Wake,2019
+raw_sc,SC4412E0,N1,64
+raw_sc,SC4412E0,N2,356
+raw_sc,SC4412E0,N3,226
+raw_sc,SC4412E0,REM,100
+raw_sc,SC4412E0,raw:Sleep stage W,2019
+raw_sc,SC4412E0,raw:Sleep stage 1,64
+raw_sc,SC4412E0,raw:Sleep stage 2,356
+raw_sc,SC4412E0,raw:Sleep stage 3,142
+raw_sc,SC4412E0,raw:Sleep stage 4,84
+raw_sc,SC4412E0,raw:Sleep stage R,100
+raw_sc,SC4412E0,raw:Sleep stage ?,93
+edf78_npz,SC4412E0,npz_code:Wake,178
+edf78_npz,SC4412E0,npz_code:N1,64
+edf78_npz,SC4412E0,npz_code:N2,356
+edf78_npz,SC4412E0,npz_code:N3,226
+edf78_npz,SC4412E0,npz_code:REM,100
+raw_sc,SC4421E0,Wake,2126
+raw_sc,SC4421E0,N1,34
+raw_sc,SC4421E0,N2,283
+raw_sc,SC4421E0,N3,163
+raw_sc,SC4421E0,REM,158
+raw_sc,SC4421E0,raw:Sleep stage W,2126
+raw_sc,SC4421E0,raw:Sleep stage 1,34
+raw_sc,SC4421E0,raw:Sleep stage 2,283
+raw_sc,SC4421E0,raw:Sleep stage 3,67
+raw_sc,SC4421E0,raw:Sleep stage 4,96
+raw_sc,SC4421E0,raw:Sleep stage R,158
+raw_sc,SC4421E0,raw:Sleep stage ?,0
+edf78_npz,SC4421E0,npz_code:Wake,147
+edf78_npz,SC4421E0,npz_code:N1,34
+edf78_npz,SC4421E0,npz_code:N2,283
+edf78_npz,SC4421E0,npz_code:N3,163
+edf78_npz,SC4421E0,npz_code:REM,158
+raw_sc,SC4422E0,Wake,2013
+raw_sc,SC4422E0,N1,159
+raw_sc,SC4422E0,N2,298
+raw_sc,SC4422E0,N3,124
+raw_sc,SC4422E0,REM,88
+raw_sc,SC4422E0,raw:Sleep stage W,2013
+raw_sc,SC4422E0,raw:Sleep stage 1,159
+raw_sc,SC4422E0,raw:Sleep stage 2,298
+raw_sc,SC4422E0,raw:Sleep stage 3,58
+raw_sc,SC4422E0,raw:Sleep stage 4,66
+raw_sc,SC4422E0,raw:Sleep stage R,88
+raw_sc,SC4422E0,raw:Sleep stage ?,0
+edf78_npz,SC4422E0,npz_code:Wake,215
+edf78_npz,SC4422E0,npz_code:N1,159
+edf78_npz,SC4422E0,npz_code:N2,298
+edf78_npz,SC4422E0,npz_code:N3,124
+edf78_npz,SC4422E0,npz_code:REM,88
+raw_sc,SC4431E0,Wake,2166
+raw_sc,SC4431E0,N1,63
+raw_sc,SC4431E0,N2,331
+raw_sc,SC4431E0,N3,82
+raw_sc,SC4431E0,REM,81
+raw_sc,SC4431E0,raw:Sleep stage W,2166
+raw_sc,SC4431E0,raw:Sleep stage 1,63
+raw_sc,SC4431E0,raw:Sleep stage 2,331
+raw_sc,SC4431E0,raw:Sleep stage 3,74
+raw_sc,SC4431E0,raw:Sleep stage 4,8
+raw_sc,SC4431E0,raw:Sleep stage R,81
+raw_sc,SC4431E0,raw:Sleep stage ?,87
+edf78_npz,SC4431E0,npz_code:Wake,142
+edf78_npz,SC4431E0,npz_code:N1,63
+edf78_npz,SC4431E0,npz_code:N2,331
+edf78_npz,SC4431E0,npz_code:N3,82
+edf78_npz,SC4431E0,npz_code:REM,81
+raw_sc,SC4432E0,Wake,1968
+raw_sc,SC4432E0,N1,41
+raw_sc,SC4432E0,N2,430
+raw_sc,SC4432E0,N3,144
+raw_sc,SC4432E0,REM,197
+raw_sc,SC4432E0,raw:Sleep stage W,1968
+raw_sc,SC4432E0,raw:Sleep stage 1,41
+raw_sc,SC4432E0,raw:Sleep stage 2,430
+raw_sc,SC4432E0,raw:Sleep stage 3,133
+raw_sc,SC4432E0,raw:Sleep stage 4,11
+raw_sc,SC4432E0,raw:Sleep stage R,197
+raw_sc,SC4432E0,raw:Sleep stage ?,0
+edf78_npz,SC4432E0,npz_code:Wake,150
+edf78_npz,SC4432E0,npz_code:N1,41
+edf78_npz,SC4432E0,npz_code:N2,430
+edf78_npz,SC4432E0,npz_code:N3,144
+edf78_npz,SC4432E0,npz_code:REM,197
+raw_sc,SC4441E0,Wake,1841
+raw_sc,SC4441E0,N1,183
+raw_sc,SC4441E0,N2,405
+raw_sc,SC4441E0,N3,91
+raw_sc,SC4441E0,REM,100
+raw_sc,SC4441E0,raw:Sleep stage W,1841
+raw_sc,SC4441E0,raw:Sleep stage 1,183
+raw_sc,SC4441E0,raw:Sleep stage 2,405
+raw_sc,SC4441E0,raw:Sleep stage 3,69
+raw_sc,SC4441E0,raw:Sleep stage 4,22
+raw_sc,SC4441E0,raw:Sleep stage R,100
+raw_sc,SC4441E0,raw:Sleep stage ?,0
+edf78_npz,SC4441E0,npz_code:Wake,416
+edf78_npz,SC4441E0,npz_code:N1,183
+edf78_npz,SC4441E0,npz_code:N2,405
+edf78_npz,SC4441E0,npz_code:N3,91
+edf78_npz,SC4441E0,npz_code:REM,100
+raw_sc,SC4442E0,Wake,1968
+raw_sc,SC4442E0,N1,92
+raw_sc,SC4442E0,N2,530
+raw_sc,SC4442E0,N3,92
+raw_sc,SC4442E0,REM,96
+raw_sc,SC4442E0,raw:Sleep stage W,1968
+raw_sc,SC4442E0,raw:Sleep stage 1,92
+raw_sc,SC4442E0,raw:Sleep stage 2,530
+raw_sc,SC4442E0,raw:Sleep stage 3,80
+raw_sc,SC4442E0,raw:Sleep stage 4,12
+raw_sc,SC4442E0,raw:Sleep stage R,96
+raw_sc,SC4442E0,raw:Sleep stage ?,0
+edf78_npz,SC4442E0,npz_code:Wake,282
+edf78_npz,SC4442E0,npz_code:N1,92
+edf78_npz,SC4442E0,npz_code:N2,530
+edf78_npz,SC4442E0,npz_code:N3,92
+edf78_npz,SC4442E0,npz_code:REM,96
+raw_sc,SC4451F0,Wake,1851
+raw_sc,SC4451F0,N1,235
+raw_sc,SC4451F0,N2,258
+raw_sc,SC4451F0,N3,307
+raw_sc,SC4451F0,REM,139
+raw_sc,SC4451F0,raw:Sleep stage W,1851
+raw_sc,SC4451F0,raw:Sleep stage 1,235
+raw_sc,SC4451F0,raw:Sleep stage 2,258
+raw_sc,SC4451F0,raw:Sleep stage 3,86
+raw_sc,SC4451F0,raw:Sleep stage 4,221
+raw_sc,SC4451F0,raw:Sleep stage R,139
+raw_sc,SC4451F0,raw:Sleep stage ?,0
+edf78_npz,SC4451F0,npz_code:Wake,269
+edf78_npz,SC4451F0,npz_code:N1,235
+edf78_npz,SC4451F0,npz_code:N2,258
+edf78_npz,SC4451F0,npz_code:N3,307
+edf78_npz,SC4451F0,npz_code:REM,139
+raw_sc,SC4452F0,Wake,1695
+raw_sc,SC4452F0,N1,162
+raw_sc,SC4452F0,N2,358
+raw_sc,SC4452F0,N3,267
+raw_sc,SC4452F0,REM,188
+raw_sc,SC4452F0,raw:Sleep stage W,1695
+raw_sc,SC4452F0,raw:Sleep stage 1,162
+raw_sc,SC4452F0,raw:Sleep stage 2,358
+raw_sc,SC4452F0,raw:Sleep stage 3,124
+raw_sc,SC4452F0,raw:Sleep stage 4,143
+raw_sc,SC4452F0,raw:Sleep stage R,188
+raw_sc,SC4452F0,raw:Sleep stage ?,0
+edf78_npz,SC4452F0,npz_code:Wake,191
+edf78_npz,SC4452F0,npz_code:N1,162
+edf78_npz,SC4452F0,npz_code:N2,358
+edf78_npz,SC4452F0,npz_code:N3,267
+edf78_npz,SC4452F0,npz_code:REM,188
+raw_sc,SC4461F0,Wake,1908
+raw_sc,SC4461F0,N1,118
+raw_sc,SC4461F0,N2,484
+raw_sc,SC4461F0,N3,9
+raw_sc,SC4461F0,REM,176
+raw_sc,SC4461F0,raw:Sleep stage W,1908
+raw_sc,SC4461F0,raw:Sleep stage 1,118
+raw_sc,SC4461F0,raw:Sleep stage 2,484
+raw_sc,SC4461F0,raw:Sleep stage 3,9
+raw_sc,SC4461F0,raw:Sleep stage R,176
+raw_sc,SC4461F0,raw:Movement time,1
+raw_sc,SC4461F0,raw:Sleep stage ?,0
+edf78_npz,SC4461F0,npz_code:Wake,196
+edf78_npz,SC4461F0,npz_code:N1,118
+edf78_npz,SC4461F0,npz_code:N2,484
+edf78_npz,SC4461F0,npz_code:N3,9
+edf78_npz,SC4461F0,npz_code:REM,176
+raw_sc,SC4462F0,Wake,1979
+raw_sc,SC4462F0,N1,198
+raw_sc,SC4462F0,N2,472
+raw_sc,SC4462F0,N3,19
+raw_sc,SC4462F0,REM,186
+raw_sc,SC4462F0,raw:Sleep stage W,1979
+raw_sc,SC4462F0,raw:Sleep stage 1,198
+raw_sc,SC4462F0,raw:Sleep stage 2,472
+raw_sc,SC4462F0,raw:Sleep stage 3,19
+raw_sc,SC4462F0,raw:Sleep stage R,186
+raw_sc,SC4462F0,raw:Movement time,2
+raw_sc,SC4462F0,raw:Sleep stage ?,0
+edf78_npz,SC4462F0,npz_code:Wake,147
+edf78_npz,SC4462F0,npz_code:N1,198
+edf78_npz,SC4462F0,npz_code:N2,472
+edf78_npz,SC4462F0,npz_code:N3,19
+edf78_npz,SC4462F0,npz_code:REM,186
+raw_sc,SC4471F0,Wake,1917
+raw_sc,SC4471F0,N1,78
+raw_sc,SC4471F0,N2,349
+raw_sc,SC4471F0,N3,275
+raw_sc,SC4471F0,REM,120
+raw_sc,SC4471F0,raw:Sleep stage W,1917
+raw_sc,SC4471F0,raw:Sleep stage 1,78
+raw_sc,SC4471F0,raw:Sleep stage 2,349
+raw_sc,SC4471F0,raw:Sleep stage 3,128
+raw_sc,SC4471F0,raw:Sleep stage 4,147
+raw_sc,SC4471F0,raw:Sleep stage R,120
+raw_sc,SC4471F0,raw:Movement time,1
+raw_sc,SC4471F0,raw:Sleep stage ?,0
+edf78_npz,SC4471F0,npz_code:Wake,365
+edf78_npz,SC4471F0,npz_code:N1,78
+edf78_npz,SC4471F0,npz_code:N2,349
+edf78_npz,SC4471F0,npz_code:N3,275
+edf78_npz,SC4471F0,npz_code:REM,120
+raw_sc,SC4472F0,Wake,2065
+raw_sc,SC4472F0,N1,161
+raw_sc,SC4472F0,N2,299
+raw_sc,SC4472F0,N3,144
+raw_sc,SC4472F0,REM,120
+raw_sc,SC4472F0,raw:Sleep stage W,2065
+raw_sc,SC4472F0,raw:Sleep stage 1,161
+raw_sc,SC4472F0,raw:Sleep stage 2,299
+raw_sc,SC4472F0,raw:Sleep stage 3,80
+raw_sc,SC4472F0,raw:Sleep stage 4,64
+raw_sc,SC4472F0,raw:Sleep stage R,120
+raw_sc,SC4472F0,raw:Movement time,1
+raw_sc,SC4472F0,raw:Sleep stage ?,0
+edf78_npz,SC4472F0,npz_code:Wake,1437
+edf78_npz,SC4472F0,npz_code:N1,161
+edf78_npz,SC4472F0,npz_code:N2,299
+edf78_npz,SC4472F0,npz_code:N3,144
+edf78_npz,SC4472F0,npz_code:REM,120
+raw_sc,SC4481F0,Wake,1779
+raw_sc,SC4481F0,N1,299
+raw_sc,SC4481F0,N2,471
+raw_sc,SC4481F0,N3,95
+raw_sc,SC4481F0,REM,236
+raw_sc,SC4481F0,raw:Sleep stage W,1779
+raw_sc,SC4481F0,raw:Sleep stage 1,299
+raw_sc,SC4481F0,raw:Sleep stage 2,471
+raw_sc,SC4481F0,raw:Sleep stage 3,88
+raw_sc,SC4481F0,raw:Sleep stage R,236
+raw_sc,SC4481F0,raw:Sleep stage 4,7
+edf78_npz,SC4481F0,npz_code:Wake,926
+edf78_npz,SC4481F0,npz_code:N1,299
+edf78_npz,SC4481F0,npz_code:N2,471
+edf78_npz,SC4481F0,npz_code:N3,95
+edf78_npz,SC4481F0,npz_code:REM,236
+raw_sc,SC4482F0,Wake,1938
+raw_sc,SC4482F0,N1,146
+raw_sc,SC4482F0,N2,520
+raw_sc,SC4482F0,N3,116
+raw_sc,SC4482F0,REM,160
+raw_sc,SC4482F0,raw:Sleep stage W,1938
+raw_sc,SC4482F0,raw:Sleep stage 1,146
+raw_sc,SC4482F0,raw:Sleep stage 2,520
+raw_sc,SC4482F0,raw:Sleep stage 3,104
+raw_sc,SC4482F0,raw:Sleep stage R,160
+raw_sc,SC4482F0,raw:Sleep stage 4,12
+edf78_npz,SC4482F0,npz_code:Wake,968
+edf78_npz,SC4482F0,npz_code:N1,146
+edf78_npz,SC4482F0,npz_code:N2,520
+edf78_npz,SC4482F0,npz_code:N3,116
+edf78_npz,SC4482F0,npz_code:REM,160
+raw_sc,SC4491G0,Wake,1909
+raw_sc,SC4491G0,N1,149
+raw_sc,SC4491G0,N2,512
+raw_sc,SC4491G0,N3,14
+raw_sc,SC4491G0,REM,216
+raw_sc,SC4491G0,raw:Sleep stage W,1909
+raw_sc,SC4491G0,raw:Sleep stage 1,149
+raw_sc,SC4491G0,raw:Sleep stage 2,512
+raw_sc,SC4491G0,raw:Sleep stage 3,14
+raw_sc,SC4491G0,raw:Sleep stage R,216
+raw_sc,SC4491G0,raw:Sleep stage ?,0
+edf78_npz,SC4491G0,npz_code:Wake,210
+edf78_npz,SC4491G0,npz_code:N1,149
+edf78_npz,SC4491G0,npz_code:N2,512
+edf78_npz,SC4491G0,npz_code:N3,14
+edf78_npz,SC4491G0,npz_code:REM,216
+raw_sc,SC4492G0,Wake,1402
+raw_sc,SC4492G0,N1,157
+raw_sc,SC4492G0,N2,416
+raw_sc,SC4492G0,N3,27
+raw_sc,SC4492G0,REM,133
+raw_sc,SC4492G0,raw:Sleep stage W,1402
+raw_sc,SC4492G0,raw:Sleep stage 1,157
+raw_sc,SC4492G0,raw:Sleep stage 2,416
+raw_sc,SC4492G0,raw:Sleep stage 3,26
+raw_sc,SC4492G0,raw:Sleep stage 4,1
+raw_sc,SC4492G0,raw:Sleep stage R,133
+raw_sc,SC4492G0,raw:Movement time,1
+raw_sc,SC4492G0,raw:Sleep stage ?,0
+edf78_npz,SC4492G0,npz_code:Wake,307
+edf78_npz,SC4492G0,npz_code:N1,157
+edf78_npz,SC4492G0,npz_code:N2,416
+edf78_npz,SC4492G0,npz_code:N3,27
+edf78_npz,SC4492G0,npz_code:REM,133
+raw_sc,SC4501E0,Wake,1963
+raw_sc,SC4501E0,N1,190
+raw_sc,SC4501E0,N2,402
+raw_sc,SC4501E0,N3,2
+raw_sc,SC4501E0,REM,193
+raw_sc,SC4501E0,raw:Sleep stage W,1963
+raw_sc,SC4501E0,raw:Sleep stage 1,190
+raw_sc,SC4501E0,raw:Sleep stage 2,402
+raw_sc,SC4501E0,raw:Sleep stage 3,2
+raw_sc,SC4501E0,raw:Sleep stage R,193
+raw_sc,SC4501E0,raw:Sleep stage ?,0
+edf78_npz,SC4501E0,npz_code:Wake,539
+edf78_npz,SC4501E0,npz_code:N1,190
+edf78_npz,SC4501E0,npz_code:N2,402
+edf78_npz,SC4501E0,npz_code:N3,2
+edf78_npz,SC4501E0,npz_code:REM,193
+raw_sc,SC4502E0,Wake,1966
+raw_sc,SC4502E0,N1,78
+raw_sc,SC4502E0,N2,493
+raw_sc,SC4502E0,N3,42
+raw_sc,SC4502E0,REM,191
+raw_sc,SC4502E0,raw:Sleep stage W,1966
+raw_sc,SC4502E0,raw:Sleep stage 1,78
+raw_sc,SC4502E0,raw:Sleep stage 2,493
+raw_sc,SC4502E0,raw:Sleep stage 3,42
+raw_sc,SC4502E0,raw:Sleep stage R,191
+raw_sc,SC4502E0,raw:Sleep stage ?,0
+edf78_npz,SC4502E0,npz_code:Wake,299
+edf78_npz,SC4502E0,npz_code:N1,78
+edf78_npz,SC4502E0,npz_code:N2,493
+edf78_npz,SC4502E0,npz_code:N3,42
+edf78_npz,SC4502E0,npz_code:REM,191
+raw_sc,SC4511E0,Wake,1776
+raw_sc,SC4511E0,N1,409
+raw_sc,SC4511E0,N2,398
+raw_sc,SC4511E0,N3,3
+raw_sc,SC4511E0,REM,126
+raw_sc,SC4511E0,raw:Sleep stage W,1776
+raw_sc,SC4511E0,raw:Sleep stage 1,409
+raw_sc,SC4511E0,raw:Sleep stage 2,398
+raw_sc,SC4511E0,raw:Sleep stage 3,3
+raw_sc,SC4511E0,raw:Sleep stage R,126
+raw_sc,SC4511E0,raw:Sleep stage ?,0
+edf78_npz,SC4511E0,npz_code:Wake,151
+edf78_npz,SC4511E0,npz_code:N1,409
+edf78_npz,SC4511E0,npz_code:N2,398
+edf78_npz,SC4511E0,npz_code:N3,3
+edf78_npz,SC4511E0,npz_code:REM,126
+raw_sc,SC4512E0,Wake,2022
+raw_sc,SC4512E0,N1,179
+raw_sc,SC4512E0,N2,435
+raw_sc,SC4512E0,N3,2
+raw_sc,SC4512E0,REM,112
+raw_sc,SC4512E0,raw:Sleep stage W,2022
+raw_sc,SC4512E0,raw:Sleep stage 1,179
+raw_sc,SC4512E0,raw:Sleep stage 2,435
+raw_sc,SC4512E0,raw:Sleep stage R,112
+raw_sc,SC4512E0,raw:Sleep stage 3,2
+raw_sc,SC4512E0,raw:Sleep stage ?,0
+edf78_npz,SC4512E0,npz_code:Wake,226
+edf78_npz,SC4512E0,npz_code:N1,179
+edf78_npz,SC4512E0,npz_code:N2,435
+edf78_npz,SC4512E0,npz_code:N3,2
+edf78_npz,SC4512E0,npz_code:REM,112
+raw_sc,SC4522E0,Wake,2060
+raw_sc,SC4522E0,N1,89
+raw_sc,SC4522E0,N2,530
+raw_sc,SC4522E0,N3,11
+raw_sc,SC4522E0,REM,84
+raw_sc,SC4522E0,raw:Sleep stage W,2060
+raw_sc,SC4522E0,raw:Sleep stage 1,89
+raw_sc,SC4522E0,raw:Sleep stage 2,530
+raw_sc,SC4522E0,raw:Sleep stage R,84
+raw_sc,SC4522E0,raw:Sleep stage 3,11
+raw_sc,SC4522E0,raw:Sleep stage ?,0
+edf78_npz,SC4522E0,npz_code:Wake,283
+edf78_npz,SC4522E0,npz_code:N1,89
+edf78_npz,SC4522E0,npz_code:N2,530
+edf78_npz,SC4522E0,npz_code:N3,11
+edf78_npz,SC4522E0,npz_code:REM,84
+raw_sc,SC4531E0,Wake,1748
+raw_sc,SC4531E0,N1,124
+raw_sc,SC4531E0,N2,465
+raw_sc,SC4531E0,N3,85
+raw_sc,SC4531E0,REM,180
+raw_sc,SC4531E0,raw:Sleep stage W,1748
+raw_sc,SC4531E0,raw:Sleep stage 1,124
+raw_sc,SC4531E0,raw:Sleep stage 2,465
+raw_sc,SC4531E0,raw:Sleep stage 3,84
+raw_sc,SC4531E0,raw:Sleep stage R,180
+raw_sc,SC4531E0,raw:Sleep stage 4,1
+raw_sc,SC4531E0,raw:Sleep stage ?,0
+edf78_npz,SC4531E0,npz_code:Wake,242
+edf78_npz,SC4531E0,npz_code:N1,124
+edf78_npz,SC4531E0,npz_code:N2,465
+edf78_npz,SC4531E0,npz_code:N3,85
+edf78_npz,SC4531E0,npz_code:REM,180
+raw_sc,SC4532E0,Wake,1863
+raw_sc,SC4532E0,N1,147
+raw_sc,SC4532E0,N2,543
+raw_sc,SC4532E0,N3,21
+raw_sc,SC4532E0,REM,170
+raw_sc,SC4532E0,raw:Sleep stage W,1863
+raw_sc,SC4532E0,raw:Sleep stage 1,147
+raw_sc,SC4532E0,raw:Sleep stage 2,543
+raw_sc,SC4532E0,raw:Sleep stage 3,21
+raw_sc,SC4532E0,raw:Sleep stage R,170
+raw_sc,SC4532E0,raw:Sleep stage ?,0
+edf78_npz,SC4532E0,npz_code:Wake,175
+edf78_npz,SC4532E0,npz_code:N1,147
+edf78_npz,SC4532E0,npz_code:N2,543
+edf78_npz,SC4532E0,npz_code:N3,21
+edf78_npz,SC4532E0,npz_code:REM,170
+raw_sc,SC4541F0,Wake,1843
+raw_sc,SC4541F0,N1,199
+raw_sc,SC4541F0,N2,557
+raw_sc,SC4541F0,N3,5
+raw_sc,SC4541F0,REM,135
+raw_sc,SC4541F0,raw:Sleep stage W,1843
+raw_sc,SC4541F0,raw:Sleep stage 1,199
+raw_sc,SC4541F0,raw:Sleep stage 2,557
+raw_sc,SC4541F0,raw:Sleep stage R,135
+raw_sc,SC4541F0,raw:Sleep stage 3,5
+raw_sc,SC4541F0,raw:Movement time,1
+raw_sc,SC4541F0,raw:Sleep stage ?,0
+edf78_npz,SC4541F0,npz_code:Wake,820
+edf78_npz,SC4541F0,npz_code:N1,199
+edf78_npz,SC4541F0,npz_code:N2,557
+edf78_npz,SC4541F0,npz_code:N3,5
+edf78_npz,SC4541F0,npz_code:REM,135
+raw_sc,SC4542F0,Wake,1813
+raw_sc,SC4542F0,N1,208
+raw_sc,SC4542F0,N2,461
+raw_sc,SC4542F0,N3,78
+raw_sc,SC4542F0,REM,120
+raw_sc,SC4542F0,raw:Sleep stage W,1813
+raw_sc,SC4542F0,raw:Sleep stage 1,208
+raw_sc,SC4542F0,raw:Sleep stage 2,461
+raw_sc,SC4542F0,raw:Sleep stage 3,76
+raw_sc,SC4542F0,raw:Sleep stage R,120
+raw_sc,SC4542F0,raw:Sleep stage 4,2
+raw_sc,SC4542F0,raw:Sleep stage ?,0
+edf78_npz,SC4542F0,npz_code:Wake,281
+edf78_npz,SC4542F0,npz_code:N1,208
+edf78_npz,SC4542F0,npz_code:N2,461
+edf78_npz,SC4542F0,npz_code:N3,78
+edf78_npz,SC4542F0,npz_code:REM,120
+raw_sc,SC4551F0,Wake,2039
+raw_sc,SC4551F0,N1,91
+raw_sc,SC4551F0,N2,487
+raw_sc,SC4551F0,N3,48
+raw_sc,SC4551F0,REM,107
+raw_sc,SC4551F0,raw:Sleep stage W,2039
+raw_sc,SC4551F0,raw:Sleep stage 1,91
+raw_sc,SC4551F0,raw:Sleep stage 2,487
+raw_sc,SC4551F0,raw:Sleep stage 3,48
+raw_sc,SC4551F0,raw:Sleep stage R,107
+raw_sc,SC4551F0,raw:Sleep stage ?,0
+edf78_npz,SC4551F0,npz_code:Wake,314
+edf78_npz,SC4551F0,npz_code:N1,91
+edf78_npz,SC4551F0,npz_code:N2,487
+edf78_npz,SC4551F0,npz_code:N3,48
+edf78_npz,SC4551F0,npz_code:REM,107
+raw_sc,SC4552F0,Wake,2054
+raw_sc,SC4552F0,N1,115
+raw_sc,SC4552F0,N2,395
+raw_sc,SC4552F0,N3,1
+raw_sc,SC4552F0,REM,245
+raw_sc,SC4552F0,raw:Sleep stage W,2054
+raw_sc,SC4552F0,raw:Sleep stage 1,115
+raw_sc,SC4552F0,raw:Sleep stage 2,395
+raw_sc,SC4552F0,raw:Sleep stage R,245
+raw_sc,SC4552F0,raw:Sleep stage 3,1
+raw_sc,SC4552F0,raw:Sleep stage ?,0
+edf78_npz,SC4552F0,npz_code:Wake,334
+edf78_npz,SC4552F0,npz_code:N1,115
+edf78_npz,SC4552F0,npz_code:N2,395
+edf78_npz,SC4552F0,npz_code:N3,1
+edf78_npz,SC4552F0,npz_code:REM,245
+raw_sc,SC4561F0,Wake,1746
+raw_sc,SC4561F0,N1,521
+raw_sc,SC4561F0,N2,272
+raw_sc,SC4561F0,N3,50
+raw_sc,SC4561F0,REM,113
+raw_sc,SC4561F0,raw:Sleep stage W,1746
+raw_sc,SC4561F0,raw:Sleep stage 1,521
+raw_sc,SC4561F0,raw:Sleep stage 2,272
+raw_sc,SC4561F0,raw:Sleep stage 3,49
+raw_sc,SC4561F0,raw:Sleep stage R,113
+raw_sc,SC4561F0,raw:Sleep stage 4,1
+raw_sc,SC4561F0,raw:Movement time,2
+raw_sc,SC4561F0,raw:Sleep stage ?,0
+edf78_npz,SC4561F0,npz_code:Wake,281
+edf78_npz,SC4561F0,npz_code:N1,521
+edf78_npz,SC4561F0,npz_code:N2,272
+edf78_npz,SC4561F0,npz_code:N3,50
+edf78_npz,SC4561F0,npz_code:REM,113
+raw_sc,SC4562F0,Wake,1935
+raw_sc,SC4562F0,N1,365
+raw_sc,SC4562F0,N2,335
+raw_sc,SC4562F0,N3,28
+raw_sc,SC4562F0,REM,137
+raw_sc,SC4562F0,raw:Sleep stage W,1935
+raw_sc,SC4562F0,raw:Sleep stage 1,365
+raw_sc,SC4562F0,raw:Sleep stage 2,335
+raw_sc,SC4562F0,raw:Sleep stage 3,28
+raw_sc,SC4562F0,raw:Sleep stage R,137
+raw_sc,SC4562F0,raw:Sleep stage ?,0
+edf78_npz,SC4562F0,npz_code:Wake,283
+edf78_npz,SC4562F0,npz_code:N1,365
+edf78_npz,SC4562F0,npz_code:N2,335
+edf78_npz,SC4562F0,npz_code:N3,28
+edf78_npz,SC4562F0,npz_code:REM,137
+raw_sc,SC4571F0,Wake,1887
+raw_sc,SC4571F0,N1,186
+raw_sc,SC4571F0,N2,513
+raw_sc,SC4571F0,N3,0
+raw_sc,SC4571F0,REM,250
+raw_sc,SC4571F0,raw:Sleep stage W,1887
+raw_sc,SC4571F0,raw:Sleep stage 1,186
+raw_sc,SC4571F0,raw:Sleep stage 2,513
+raw_sc,SC4571F0,raw:Sleep stage R,250
+raw_sc,SC4571F0,raw:Sleep stage ?,14
+edf78_npz,SC4571F0,npz_code:Wake,287
+edf78_npz,SC4571F0,npz_code:N1,186
+edf78_npz,SC4571F0,npz_code:N2,513
+edf78_npz,SC4571F0,npz_code:N3,0
+edf78_npz,SC4571F0,npz_code:REM,250
+raw_sc,SC4572F0,Wake,1953
+raw_sc,SC4572F0,N1,104
+raw_sc,SC4572F0,N2,569
+raw_sc,SC4572F0,N3,29
+raw_sc,SC4572F0,REM,218
+raw_sc,SC4572F0,raw:Sleep stage W,1953
+raw_sc,SC4572F0,raw:Sleep stage 1,104
+raw_sc,SC4572F0,raw:Sleep stage 2,569
+raw_sc,SC4572F0,raw:Sleep stage 3,29
+raw_sc,SC4572F0,raw:Sleep stage R,218
+raw_sc,SC4572F0,raw:Movement time,7
+edf78_npz,SC4572F0,npz_code:Wake,175
+edf78_npz,SC4572F0,npz_code:N1,104
+edf78_npz,SC4572F0,npz_code:N2,569
+edf78_npz,SC4572F0,npz_code:N3,29
+edf78_npz,SC4572F0,npz_code:REM,218
+raw_sc,SC4581G0,Wake,1837
+raw_sc,SC4581G0,N1,152
+raw_sc,SC4581G0,N2,578
+raw_sc,SC4581G0,N3,10
+raw_sc,SC4581G0,REM,161
+raw_sc,SC4581G0,raw:Sleep stage W,1837
+raw_sc,SC4581G0,raw:Sleep stage 1,152
+raw_sc,SC4581G0,raw:Sleep stage 2,578
+raw_sc,SC4581G0,raw:Sleep stage 3,10
+raw_sc,SC4581G0,raw:Sleep stage R,161
+raw_sc,SC4581G0,raw:Sleep stage ?,0
+edf78_npz,SC4581G0,npz_code:Wake,194
+edf78_npz,SC4581G0,npz_code:N1,152
+edf78_npz,SC4581G0,npz_code:N2,578
+edf78_npz,SC4581G0,npz_code:N3,10
+edf78_npz,SC4581G0,npz_code:REM,161
+raw_sc,SC4582G0,Wake,1804
+raw_sc,SC4582G0,N1,195
+raw_sc,SC4582G0,N2,543
+raw_sc,SC4582G0,N3,6
+raw_sc,SC4582G0,REM,86
+raw_sc,SC4582G0,raw:Sleep stage W,1804
+raw_sc,SC4582G0,raw:Sleep stage 1,195
+raw_sc,SC4582G0,raw:Sleep stage 2,543
+raw_sc,SC4582G0,raw:Sleep stage 3,6
+raw_sc,SC4582G0,raw:Sleep stage R,86
+raw_sc,SC4582G0,raw:Sleep stage ?,0
+edf78_npz,SC4582G0,npz_code:Wake,345
+edf78_npz,SC4582G0,npz_code:N1,195
+edf78_npz,SC4582G0,npz_code:N2,543
+edf78_npz,SC4582G0,npz_code:N3,6
+edf78_npz,SC4582G0,npz_code:REM,86
+raw_sc,SC4591G0,Wake,1842
+raw_sc,SC4591G0,N1,199
+raw_sc,SC4591G0,N2,363
+raw_sc,SC4591G0,N3,157
+raw_sc,SC4591G0,REM,258
+raw_sc,SC4591G0,raw:Sleep stage W,1842
+raw_sc,SC4591G0,raw:Sleep stage 1,199
+raw_sc,SC4591G0,raw:Sleep stage 2,363
+raw_sc,SC4591G0,raw:Sleep stage 3,157
+raw_sc,SC4591G0,raw:Sleep stage R,258
+raw_sc,SC4591G0,raw:Movement time,1
+raw_sc,SC4591G0,raw:Sleep stage ?,0
+edf78_npz,SC4591G0,npz_code:Wake,863
+edf78_npz,SC4591G0,npz_code:N1,199
+edf78_npz,SC4591G0,npz_code:N2,363
+edf78_npz,SC4591G0,npz_code:N3,157
+edf78_npz,SC4591G0,npz_code:REM,258
+raw_sc,SC4592G0,Wake,1313
+raw_sc,SC4592G0,N1,194
+raw_sc,SC4592G0,N2,277
+raw_sc,SC4592G0,N3,101
+raw_sc,SC4592G0,REM,155
+raw_sc,SC4592G0,raw:Sleep stage W,1313
+raw_sc,SC4592G0,raw:Sleep stage 1,194
+raw_sc,SC4592G0,raw:Sleep stage 2,277
+raw_sc,SC4592G0,raw:Sleep stage R,155
+raw_sc,SC4592G0,raw:Sleep stage 3,86
+raw_sc,SC4592G0,raw:Sleep stage 4,15
+raw_sc,SC4592G0,raw:Sleep stage ?,0
+edf78_npz,SC4592G0,npz_code:Wake,504
+edf78_npz,SC4592G0,npz_code:N1,194
+edf78_npz,SC4592G0,npz_code:N2,277
+edf78_npz,SC4592G0,npz_code:N3,101
+edf78_npz,SC4592G0,npz_code:REM,155
+raw_sc,SC4601E0,Wake,1982
+raw_sc,SC4601E0,N1,38
+raw_sc,SC4601E0,N2,252
+raw_sc,SC4601E0,N3,288
+raw_sc,SC4601E0,REM,170
+raw_sc,SC4601E0,raw:Sleep stage W,1982
+raw_sc,SC4601E0,raw:Sleep stage 1,38
+raw_sc,SC4601E0,raw:Sleep stage 2,252
+raw_sc,SC4601E0,raw:Sleep stage 3,248
+raw_sc,SC4601E0,raw:Sleep stage 4,40
+raw_sc,SC4601E0,raw:Sleep stage R,170
+raw_sc,SC4601E0,raw:Sleep stage ?,0
+edf78_npz,SC4601E0,npz_code:Wake,601
+edf78_npz,SC4601E0,npz_code:N1,38
+edf78_npz,SC4601E0,npz_code:N2,252
+edf78_npz,SC4601E0,npz_code:N3,288
+edf78_npz,SC4601E0,npz_code:REM,170
+raw_sc,SC4602E0,Wake,1868
+raw_sc,SC4602E0,N1,223
+raw_sc,SC4602E0,N2,264
+raw_sc,SC4602E0,N3,196
+raw_sc,SC4602E0,REM,249
+raw_sc,SC4602E0,raw:Sleep stage W,1868
+raw_sc,SC4602E0,raw:Sleep stage 1,223
+raw_sc,SC4602E0,raw:Sleep stage 2,264
+raw_sc,SC4602E0,raw:Sleep stage 3,165
+raw_sc,SC4602E0,raw:Sleep stage 4,31
+raw_sc,SC4602E0,raw:Sleep stage R,249
+raw_sc,SC4602E0,raw:Sleep stage ?,0
+edf78_npz,SC4602E0,npz_code:Wake,1111
+edf78_npz,SC4602E0,npz_code:N1,223
+edf78_npz,SC4602E0,npz_code:N2,264
+edf78_npz,SC4602E0,npz_code:N3,196
+edf78_npz,SC4602E0,npz_code:REM,249
+raw_sc,SC4611E0,Wake,1707
+raw_sc,SC4611E0,N1,123
+raw_sc,SC4611E0,N2,276
+raw_sc,SC4611E0,N3,139
+raw_sc,SC4611E0,REM,399
+raw_sc,SC4611E0,raw:Sleep stage W,1707
+raw_sc,SC4611E0,raw:Sleep stage 1,123
+raw_sc,SC4611E0,raw:Sleep stage 2,276
+raw_sc,SC4611E0,raw:Sleep stage 3,113
+raw_sc,SC4611E0,raw:Sleep stage R,399
+raw_sc,SC4611E0,raw:Sleep stage 4,26
+raw_sc,SC4611E0,raw:Sleep stage ?,6
+edf78_npz,SC4611E0,npz_code:Wake,715
+edf78_npz,SC4611E0,npz_code:N1,123
+edf78_npz,SC4611E0,npz_code:N2,276
+edf78_npz,SC4611E0,npz_code:N3,139
+edf78_npz,SC4611E0,npz_code:REM,399
+raw_sc,SC4612E0,Wake,1876
+raw_sc,SC4612E0,N1,96
+raw_sc,SC4612E0,N2,479
+raw_sc,SC4612E0,N3,65
+raw_sc,SC4612E0,REM,214
+raw_sc,SC4612E0,raw:Sleep stage W,1876
+raw_sc,SC4612E0,raw:Sleep stage 1,96
+raw_sc,SC4612E0,raw:Sleep stage 2,479
+raw_sc,SC4612E0,raw:Sleep stage 3,64
+raw_sc,SC4612E0,raw:Sleep stage 4,1
+raw_sc,SC4612E0,raw:Sleep stage R,214
+raw_sc,SC4612E0,raw:Sleep stage ?,0
+edf78_npz,SC4612E0,npz_code:Wake,208
+edf78_npz,SC4612E0,npz_code:N1,96
+edf78_npz,SC4612E0,npz_code:N2,479
+edf78_npz,SC4612E0,npz_code:N3,65
+edf78_npz,SC4612E0,npz_code:REM,214
+raw_sc,SC4621E0,Wake,1499
+raw_sc,SC4621E0,N1,276
+raw_sc,SC4621E0,N2,745
+raw_sc,SC4621E0,N3,14
+raw_sc,SC4621E0,REM,78
+raw_sc,SC4621E0,raw:Sleep stage W,1499
+raw_sc,SC4621E0,raw:Sleep stage 1,276
+raw_sc,SC4621E0,raw:Sleep stage 2,745
+raw_sc,SC4621E0,raw:Sleep stage R,78
+raw_sc,SC4621E0,raw:Sleep stage 3,14
+raw_sc,SC4621E0,raw:Sleep stage ?,0
+edf78_npz,SC4621E0,npz_code:Wake,332
+edf78_npz,SC4621E0,npz_code:N1,276
+edf78_npz,SC4621E0,npz_code:N2,745
+edf78_npz,SC4621E0,npz_code:N3,14
+edf78_npz,SC4621E0,npz_code:REM,78
+raw_sc,SC4622E0,Wake,1959
+raw_sc,SC4622E0,N1,347
+raw_sc,SC4622E0,N2,431
+raw_sc,SC4622E0,N3,4
+raw_sc,SC4622E0,REM,115
+raw_sc,SC4622E0,raw:Sleep stage W,1959
+raw_sc,SC4622E0,raw:Sleep stage 1,347
+raw_sc,SC4622E0,raw:Sleep stage 2,431
+raw_sc,SC4622E0,raw:Sleep stage 3,4
+raw_sc,SC4622E0,raw:Sleep stage R,115
+raw_sc,SC4622E0,raw:Sleep stage ?,0
+edf78_npz,SC4622E0,npz_code:Wake,926
+edf78_npz,SC4622E0,npz_code:N1,347
+edf78_npz,SC4622E0,npz_code:N2,431
+edf78_npz,SC4622E0,npz_code:N3,4
+edf78_npz,SC4622E0,npz_code:REM,115
+raw_sc,SC4631E0,Wake,1987
+raw_sc,SC4631E0,N1,131
+raw_sc,SC4631E0,N2,481
+raw_sc,SC4631E0,N3,39
+raw_sc,SC4631E0,REM,120
+raw_sc,SC4631E0,raw:Sleep stage W,1987
+raw_sc,SC4631E0,raw:Sleep stage 1,131
+raw_sc,SC4631E0,raw:Sleep stage 2,481
+raw_sc,SC4631E0,raw:Sleep stage 3,39
+raw_sc,SC4631E0,raw:Sleep stage R,120
+raw_sc,SC4631E0,raw:Sleep stage ?,0
+edf78_npz,SC4631E0,npz_code:Wake,292
+edf78_npz,SC4631E0,npz_code:N1,131
+edf78_npz,SC4631E0,npz_code:N2,481
+edf78_npz,SC4631E0,npz_code:N3,39
+edf78_npz,SC4631E0,npz_code:REM,120
+raw_sc,SC4632E0,Wake,1965
+raw_sc,SC4632E0,N1,157
+raw_sc,SC4632E0,N2,558
+raw_sc,SC4632E0,N3,28
+raw_sc,SC4632E0,REM,140
+raw_sc,SC4632E0,raw:Sleep stage W,1965
+raw_sc,SC4632E0,raw:Sleep stage 1,157
+raw_sc,SC4632E0,raw:Sleep stage 2,558
+raw_sc,SC4632E0,raw:Sleep stage 3,28
+raw_sc,SC4632E0,raw:Sleep stage R,140
+raw_sc,SC4632E0,raw:Sleep stage ?,0
+edf78_npz,SC4632E0,npz_code:Wake,224
+edf78_npz,SC4632E0,npz_code:N1,157
+edf78_npz,SC4632E0,npz_code:N2,558
+edf78_npz,SC4632E0,npz_code:N3,28
+edf78_npz,SC4632E0,npz_code:REM,140
+raw_sc,SC4641E0,Wake,2041
+raw_sc,SC4641E0,N1,179
+raw_sc,SC4641E0,N2,382
+raw_sc,SC4641E0,N3,0
+raw_sc,SC4641E0,REM,78
+raw_sc,SC4641E0,raw:Sleep stage W,2041
+raw_sc,SC4641E0,raw:Sleep stage 1,179
+raw_sc,SC4641E0,raw:Sleep stage 2,382
+raw_sc,SC4641E0,raw:Sleep stage R,78
+raw_sc,SC4641E0,raw:Sleep stage ?,0
+edf78_npz,SC4641E0,npz_code:Wake,632
+edf78_npz,SC4641E0,npz_code:N1,179
+edf78_npz,SC4641E0,npz_code:N2,382
+edf78_npz,SC4641E0,npz_code:N3,0
+edf78_npz,SC4641E0,npz_code:REM,78
+raw_sc,SC4642E0,Wake,1902
+raw_sc,SC4642E0,N1,243
+raw_sc,SC4642E0,N2,518
+raw_sc,SC4642E0,N3,0
+raw_sc,SC4642E0,REM,127
+raw_sc,SC4642E0,raw:Sleep stage W,1902
+raw_sc,SC4642E0,raw:Sleep stage 1,243
+raw_sc,SC4642E0,raw:Sleep stage 2,518
+raw_sc,SC4642E0,raw:Sleep stage R,127
+raw_sc,SC4642E0,raw:Sleep stage ?,0
+edf78_npz,SC4642E0,npz_code:Wake,1161
+edf78_npz,SC4642E0,npz_code:N1,243
+edf78_npz,SC4642E0,npz_code:N2,518
+edf78_npz,SC4642E0,npz_code:N3,0
+edf78_npz,SC4642E0,npz_code:REM,127
+raw_sc,SC4651E0,Wake,1640
+raw_sc,SC4651E0,N1,100
+raw_sc,SC4651E0,N2,821
+raw_sc,SC4651E0,N3,140
+raw_sc,SC4651E0,REM,159
+raw_sc,SC4651E0,raw:Sleep stage W,1640
+raw_sc,SC4651E0,raw:Sleep stage 2,821
+raw_sc,SC4651E0,raw:Sleep stage 1,100
+raw_sc,SC4651E0,raw:Sleep stage 3,124
+raw_sc,SC4651E0,raw:Sleep stage 4,16
+raw_sc,SC4651E0,raw:Sleep stage R,159
+raw_sc,SC4651E0,raw:Sleep stage ?,0
+edf78_npz,SC4651E0,npz_code:Wake,1424
+edf78_npz,SC4651E0,npz_code:N1,100
+edf78_npz,SC4651E0,npz_code:N2,821
+edf78_npz,SC4651E0,npz_code:N3,140
+edf78_npz,SC4651E0,npz_code:REM,159
+raw_sc,SC4652E0,Wake,1774
+raw_sc,SC4652E0,N1,204
+raw_sc,SC4652E0,N2,463
+raw_sc,SC4652E0,N3,186
+raw_sc,SC4652E0,REM,211
+raw_sc,SC4652E0,raw:Sleep stage W,1774
+raw_sc,SC4652E0,raw:Sleep stage 1,204
+raw_sc,SC4652E0,raw:Sleep stage 2,463
+raw_sc,SC4652E0,raw:Sleep stage 3,128
+raw_sc,SC4652E0,raw:Sleep stage 4,58
+raw_sc,SC4652E0,raw:Sleep stage R,211
+raw_sc,SC4652E0,raw:Movement time,1
+raw_sc,SC4652E0,raw:Sleep stage ?,1
+edf78_npz,SC4652E0,npz_code:Wake,865
+edf78_npz,SC4652E0,npz_code:N1,204
+edf78_npz,SC4652E0,npz_code:N2,463
+edf78_npz,SC4652E0,npz_code:N3,186
+edf78_npz,SC4652E0,npz_code:REM,211
+raw_sc,SC4661E0,Wake,1717
+raw_sc,SC4661E0,N1,375
+raw_sc,SC4661E0,N2,422
+raw_sc,SC4661E0,N3,40
+raw_sc,SC4661E0,REM,110
+raw_sc,SC4661E0,raw:Sleep stage W,1717
+raw_sc,SC4661E0,raw:Sleep stage 1,375
+raw_sc,SC4661E0,raw:Sleep stage 2,422
+raw_sc,SC4661E0,raw:Sleep stage 3,40
+raw_sc,SC4661E0,raw:Sleep stage R,110
+raw_sc,SC4661E0,raw:Sleep stage ?,76
+edf78_npz,SC4661E0,npz_code:Wake,1079
+edf78_npz,SC4661E0,npz_code:N1,375
+edf78_npz,SC4661E0,npz_code:N2,422
+edf78_npz,SC4661E0,npz_code:N3,40
+edf78_npz,SC4661E0,npz_code:REM,110
+raw_sc,SC4662E0,Wake,1843
+raw_sc,SC4662E0,N1,235
+raw_sc,SC4662E0,N2,414
+raw_sc,SC4662E0,N3,78
+raw_sc,SC4662E0,REM,250
+raw_sc,SC4662E0,raw:Sleep stage W,1843
+raw_sc,SC4662E0,raw:Sleep stage 1,235
+raw_sc,SC4662E0,raw:Sleep stage 2,414
+raw_sc,SC4662E0,raw:Sleep stage 3,74
+raw_sc,SC4662E0,raw:Sleep stage 4,4
+raw_sc,SC4662E0,raw:Sleep stage R,250
+raw_sc,SC4662E0,raw:Sleep stage ?,0
+edf78_npz,SC4662E0,npz_code:Wake,1017
+edf78_npz,SC4662E0,npz_code:N1,235
+edf78_npz,SC4662E0,npz_code:N2,414
+edf78_npz,SC4662E0,npz_code:N3,78
+edf78_npz,SC4662E0,npz_code:REM,250
+raw_sc,SC4671G0,Wake,1751
+raw_sc,SC4671G0,N1,356
+raw_sc,SC4671G0,N2,507
+raw_sc,SC4671G0,N3,17
+raw_sc,SC4671G0,REM,149
+raw_sc,SC4671G0,raw:Sleep stage W,1751
+raw_sc,SC4671G0,raw:Sleep stage 1,356
+raw_sc,SC4671G0,raw:Sleep stage 2,507
+raw_sc,SC4671G0,raw:Sleep stage R,149
+raw_sc,SC4671G0,raw:Sleep stage 3,17
+raw_sc,SC4671G0,raw:Sleep stage ?,0
+edf78_npz,SC4671G0,npz_code:Wake,939
+edf78_npz,SC4671G0,npz_code:N1,356
+edf78_npz,SC4671G0,npz_code:N2,507
+edf78_npz,SC4671G0,npz_code:N3,17
+edf78_npz,SC4671G0,npz_code:REM,149
+raw_sc,SC4672G0,Wake,1904
+raw_sc,SC4672G0,N1,213
+raw_sc,SC4672G0,N2,339
+raw_sc,SC4672G0,N3,29
+raw_sc,SC4672G0,REM,95
+raw_sc,SC4672G0,raw:Sleep stage W,1904
+raw_sc,SC4672G0,raw:Sleep stage 1,213
+raw_sc,SC4672G0,raw:Sleep stage 2,339
+raw_sc,SC4672G0,raw:Sleep stage R,95
+raw_sc,SC4672G0,raw:Sleep stage 3,28
+raw_sc,SC4672G0,raw:Sleep stage 4,1
+raw_sc,SC4672G0,raw:Sleep stage ?,0
+edf78_npz,SC4672G0,npz_code:Wake,345
+edf78_npz,SC4672G0,npz_code:N1,213
+edf78_npz,SC4672G0,npz_code:N2,339
+edf78_npz,SC4672G0,npz_code:N3,29
+edf78_npz,SC4672G0,npz_code:REM,95
+raw_sc,SC4701E0,Wake,1698
+raw_sc,SC4701E0,N1,143
+raw_sc,SC4701E0,N2,698
+raw_sc,SC4701E0,N3,35
+raw_sc,SC4701E0,REM,105
+raw_sc,SC4701E0,raw:Sleep stage W,1698
+raw_sc,SC4701E0,raw:Sleep stage 1,143
+raw_sc,SC4701E0,raw:Sleep stage 2,698
+raw_sc,SC4701E0,raw:Sleep stage 3,35
+raw_sc,SC4701E0,raw:Sleep stage R,105
+raw_sc,SC4701E0,raw:Movement time,1
+raw_sc,SC4701E0,raw:Sleep stage ?,0
+edf78_npz,SC4701E0,npz_code:Wake,736
+edf78_npz,SC4701E0,npz_code:N1,143
+edf78_npz,SC4701E0,npz_code:N2,698
+edf78_npz,SC4701E0,npz_code:N3,35
+edf78_npz,SC4701E0,npz_code:REM,105
+raw_sc,SC4702E0,Wake,1816
+raw_sc,SC4702E0,N1,233
+raw_sc,SC4702E0,N2,444
+raw_sc,SC4702E0,N3,33
+raw_sc,SC4702E0,REM,98
+raw_sc,SC4702E0,raw:Sleep stage W,1816
+raw_sc,SC4702E0,raw:Sleep stage 1,233
+raw_sc,SC4702E0,raw:Sleep stage 2,444
+raw_sc,SC4702E0,raw:Sleep stage 3,33
+raw_sc,SC4702E0,raw:Sleep stage R,98
+raw_sc,SC4702E0,raw:Sleep stage ?,0
+edf78_npz,SC4702E0,npz_code:Wake,707
+edf78_npz,SC4702E0,npz_code:N1,233
+edf78_npz,SC4702E0,npz_code:N2,444
+edf78_npz,SC4702E0,npz_code:N3,33
+edf78_npz,SC4702E0,npz_code:REM,98
+raw_sc,SC4711E0,Wake,1769
+raw_sc,SC4711E0,N1,234
+raw_sc,SC4711E0,N2,605
+raw_sc,SC4711E0,N3,4
+raw_sc,SC4711E0,REM,118
+raw_sc,SC4711E0,raw:Sleep stage W,1769
+raw_sc,SC4711E0,raw:Sleep stage 1,234
+raw_sc,SC4711E0,raw:Sleep stage 2,605
+raw_sc,SC4711E0,raw:Sleep stage 3,4
+raw_sc,SC4711E0,raw:Sleep stage R,118
+raw_sc,SC4711E0,raw:Sleep stage ?,0
+edf78_npz,SC4711E0,npz_code:Wake,452
+edf78_npz,SC4711E0,npz_code:N1,234
+edf78_npz,SC4711E0,npz_code:N2,605
+edf78_npz,SC4711E0,npz_code:N3,4
+edf78_npz,SC4711E0,npz_code:REM,118
+raw_sc,SC4712E0,Wake,2009
+raw_sc,SC4712E0,N1,230
+raw_sc,SC4712E0,N2,446
+raw_sc,SC4712E0,N3,0
+raw_sc,SC4712E0,REM,135
+raw_sc,SC4712E0,raw:Sleep stage W,2009
+raw_sc,SC4712E0,raw:Sleep stage 1,230
+raw_sc,SC4712E0,raw:Sleep stage 2,446
+raw_sc,SC4712E0,raw:Sleep stage R,135
+raw_sc,SC4712E0,raw:Sleep stage ?,0
+edf78_npz,SC4712E0,npz_code:Wake,430
+edf78_npz,SC4712E0,npz_code:N1,230
+edf78_npz,SC4712E0,npz_code:N2,446
+edf78_npz,SC4712E0,npz_code:N3,0
+edf78_npz,SC4712E0,npz_code:REM,135
+raw_sc,SC4721E0,Wake,1568
+raw_sc,SC4721E0,N1,259
+raw_sc,SC4721E0,N2,341
+raw_sc,SC4721E0,N3,0
+raw_sc,SC4721E0,REM,174
+raw_sc,SC4721E0,raw:Sleep stage W,1568
+raw_sc,SC4721E0,raw:Sleep stage 1,259
+raw_sc,SC4721E0,raw:Sleep stage 2,341
+raw_sc,SC4721E0,raw:Sleep stage R,174
+raw_sc,SC4721E0,raw:Sleep stage ?,0
+edf78_npz,SC4721E0,npz_code:Wake,257
+edf78_npz,SC4721E0,npz_code:N1,259
+edf78_npz,SC4721E0,npz_code:N2,341
+edf78_npz,SC4721E0,npz_code:N3,0
+edf78_npz,SC4721E0,npz_code:REM,174
+raw_sc,SC4722E0,Wake,1926
+raw_sc,SC4722E0,N1,240
+raw_sc,SC4722E0,N2,444
+raw_sc,SC4722E0,N3,0
+raw_sc,SC4722E0,REM,136
+raw_sc,SC4722E0,raw:Sleep stage W,1926
+raw_sc,SC4722E0,raw:Sleep stage 1,240
+raw_sc,SC4722E0,raw:Sleep stage 2,444
+raw_sc,SC4722E0,raw:Sleep stage R,136
+raw_sc,SC4722E0,raw:Sleep stage ?,0
+edf78_npz,SC4722E0,npz_code:Wake,310
+edf78_npz,SC4722E0,npz_code:N1,240
+edf78_npz,SC4722E0,npz_code:N2,444
+edf78_npz,SC4722E0,npz_code:N3,0
+edf78_npz,SC4722E0,npz_code:REM,136
+raw_sc,SC4731E0,Wake,1953
+raw_sc,SC4731E0,N1,222
+raw_sc,SC4731E0,N2,470
+raw_sc,SC4731E0,N3,0
+raw_sc,SC4731E0,REM,135
+raw_sc,SC4731E0,raw:Sleep stage W,1953
+raw_sc,SC4731E0,raw:Sleep stage 1,222
+raw_sc,SC4731E0,raw:Sleep stage 2,470
+raw_sc,SC4731E0,raw:Sleep stage R,135
+raw_sc,SC4731E0,raw:Sleep stage ?,0
+edf78_npz,SC4731E0,npz_code:Wake,1840
+edf78_npz,SC4731E0,npz_code:N1,222
+edf78_npz,SC4731E0,npz_code:N2,470
+edf78_npz,SC4731E0,npz_code:N3,0
+edf78_npz,SC4731E0,npz_code:REM,135
+raw_sc,SC4732E0,Wake,1550
+raw_sc,SC4732E0,N1,470
+raw_sc,SC4732E0,N2,363
+raw_sc,SC4732E0,N3,0
+raw_sc,SC4732E0,REM,136
+raw_sc,SC4732E0,raw:Sleep stage W,1550
+raw_sc,SC4732E0,raw:Sleep stage 1,470
+raw_sc,SC4732E0,raw:Sleep stage 2,363
+raw_sc,SC4732E0,raw:Sleep stage R,136
+raw_sc,SC4732E0,raw:Movement time,1
+raw_sc,SC4732E0,raw:Sleep stage ?,0
+edf78_npz,SC4732E0,npz_code:Wake,1349
+edf78_npz,SC4732E0,npz_code:N1,470
+edf78_npz,SC4732E0,npz_code:N2,363
+edf78_npz,SC4732E0,npz_code:N3,0
+edf78_npz,SC4732E0,npz_code:REM,136
+raw_sc,SC4741E0,Wake,1708
+raw_sc,SC4741E0,N1,158
+raw_sc,SC4741E0,N2,610
+raw_sc,SC4741E0,N3,0
+raw_sc,SC4741E0,REM,213
+raw_sc,SC4741E0,raw:Sleep stage W,1708
+raw_sc,SC4741E0,raw:Sleep stage 1,158
+raw_sc,SC4741E0,raw:Sleep stage 2,610
+raw_sc,SC4741E0,raw:Sleep stage R,213
+raw_sc,SC4741E0,raw:Movement time,1
+raw_sc,SC4741E0,raw:Sleep stage ?,0
+edf78_npz,SC4741E0,npz_code:Wake,1229
+edf78_npz,SC4741E0,npz_code:N1,158
+edf78_npz,SC4741E0,npz_code:N2,610
+edf78_npz,SC4741E0,npz_code:N3,0
+edf78_npz,SC4741E0,npz_code:REM,213
+raw_sc,SC4742E0,Wake,1895
+raw_sc,SC4742E0,N1,207
+raw_sc,SC4742E0,N2,340
+raw_sc,SC4742E0,N3,0
+raw_sc,SC4742E0,REM,208
+raw_sc,SC4742E0,raw:Sleep stage W,1895
+raw_sc,SC4742E0,raw:Sleep stage 1,207
+raw_sc,SC4742E0,raw:Sleep stage 2,340
+raw_sc,SC4742E0,raw:Sleep stage R,208
+raw_sc,SC4742E0,raw:Sleep stage ?,0
+edf78_npz,SC4742E0,npz_code:Wake,308
+edf78_npz,SC4742E0,npz_code:N1,207
+edf78_npz,SC4742E0,npz_code:N2,340
+edf78_npz,SC4742E0,npz_code:N3,0
+edf78_npz,SC4742E0,npz_code:REM,208
+raw_sc,SC4751E0,Wake,2064
+raw_sc,SC4751E0,N1,102
+raw_sc,SC4751E0,N2,467
+raw_sc,SC4751E0,N3,0
+raw_sc,SC4751E0,REM,47
+raw_sc,SC4751E0,raw:Sleep stage W,2064
+raw_sc,SC4751E0,raw:Sleep stage 1,102
+raw_sc,SC4751E0,raw:Sleep stage 2,467
+raw_sc,SC4751E0,raw:Sleep stage R,47
+raw_sc,SC4751E0,raw:Sleep stage ?,0
+edf78_npz,SC4751E0,npz_code:Wake,1428
+edf78_npz,SC4751E0,npz_code:N1,102
+edf78_npz,SC4751E0,npz_code:N2,467
+edf78_npz,SC4751E0,npz_code:N3,0
+edf78_npz,SC4751E0,npz_code:REM,47
+raw_sc,SC4752E0,Wake,1799
+raw_sc,SC4752E0,N1,143
+raw_sc,SC4752E0,N2,436
+raw_sc,SC4752E0,N3,20
+raw_sc,SC4752E0,REM,72
+raw_sc,SC4752E0,raw:Sleep stage W,1799
+raw_sc,SC4752E0,raw:Sleep stage 1,143
+raw_sc,SC4752E0,raw:Sleep stage 2,436
+raw_sc,SC4752E0,raw:Sleep stage 3,20
+raw_sc,SC4752E0,raw:Sleep stage R,72
+raw_sc,SC4752E0,raw:Sleep stage ?,0
+edf78_npz,SC4752E0,npz_code:Wake,378
+edf78_npz,SC4752E0,npz_code:N1,143
+edf78_npz,SC4752E0,npz_code:N2,436
+edf78_npz,SC4752E0,npz_code:N3,20
+edf78_npz,SC4752E0,npz_code:REM,72
+raw_sc,SC4761E0,Wake,1996
+raw_sc,SC4761E0,N1,127
+raw_sc,SC4761E0,N2,425
+raw_sc,SC4761E0,N3,27
+raw_sc,SC4761E0,REM,35
+raw_sc,SC4761E0,raw:Sleep stage W,1996
+raw_sc,SC4761E0,raw:Sleep stage 1,127
+raw_sc,SC4761E0,raw:Sleep stage 2,425
+raw_sc,SC4761E0,raw:Sleep stage ?,20
+raw_sc,SC4761E0,raw:Sleep stage 3,27
+raw_sc,SC4761E0,raw:Sleep stage R,35
+edf78_npz,SC4761E0,npz_code:Wake,1069
+edf78_npz,SC4761E0,npz_code:N1,127
+edf78_npz,SC4761E0,npz_code:N2,425
+edf78_npz,SC4761E0,npz_code:N3,27
+edf78_npz,SC4761E0,npz_code:REM,35
+raw_sc,SC4762E0,Wake,1839
+raw_sc,SC4762E0,N1,161
+raw_sc,SC4762E0,N2,268
+raw_sc,SC4762E0,N3,0
+raw_sc,SC4762E0,REM,394
+raw_sc,SC4762E0,raw:Sleep stage W,1839
+raw_sc,SC4762E0,raw:Sleep stage 1,161
+raw_sc,SC4762E0,raw:Sleep stage 2,268
+raw_sc,SC4762E0,raw:Sleep stage ?,133
+raw_sc,SC4762E0,raw:Movement time,15
+raw_sc,SC4762E0,raw:Sleep stage R,394
+edf78_npz,SC4762E0,npz_code:Wake,1839
+edf78_npz,SC4762E0,npz_code:N1,161
+edf78_npz,SC4762E0,npz_code:N2,268
+edf78_npz,SC4762E0,npz_code:N3,0
+edf78_npz,SC4762E0,npz_code:REM,394
+raw_sc,SC4771G0,Wake,1833
+raw_sc,SC4771G0,N1,348
+raw_sc,SC4771G0,N2,461
+raw_sc,SC4771G0,N3,5
+raw_sc,SC4771G0,REM,109
+raw_sc,SC4771G0,raw:Sleep stage W,1833
+raw_sc,SC4771G0,raw:Sleep stage 1,348
+raw_sc,SC4771G0,raw:Sleep stage 2,461
+raw_sc,SC4771G0,raw:Sleep stage 3,5
+raw_sc,SC4771G0,raw:Sleep stage R,109
+raw_sc,SC4771G0,raw:Sleep stage ?,0
+edf78_npz,SC4771G0,npz_code:Wake,402
+edf78_npz,SC4771G0,npz_code:N1,348
+edf78_npz,SC4771G0,npz_code:N2,461
+edf78_npz,SC4771G0,npz_code:N3,5
+edf78_npz,SC4771G0,npz_code:REM,109
+raw_sc,SC4772G0,Wake,1671
+raw_sc,SC4772G0,N1,111
+raw_sc,SC4772G0,N2,240
+raw_sc,SC4772G0,N3,87
+raw_sc,SC4772G0,REM,133
+raw_sc,SC4772G0,raw:Sleep stage W,1671
+raw_sc,SC4772G0,raw:Sleep stage 1,111
+raw_sc,SC4772G0,raw:Sleep stage 2,240
+raw_sc,SC4772G0,raw:Sleep stage R,133
+raw_sc,SC4772G0,raw:Sleep stage 3,78
+raw_sc,SC4772G0,raw:Sleep stage 4,9
+raw_sc,SC4772G0,raw:Sleep stage ?,0
+edf78_npz,SC4772G0,npz_code:Wake,753
+edf78_npz,SC4772G0,npz_code:N1,111
+edf78_npz,SC4772G0,npz_code:N2,240
+edf78_npz,SC4772G0,npz_code:N3,87
+edf78_npz,SC4772G0,npz_code:REM,133
+raw_sc,SC4801G0,Wake,1821
+raw_sc,SC4801G0,N1,203
+raw_sc,SC4801G0,N2,595
+raw_sc,SC4801G0,N3,13
+raw_sc,SC4801G0,REM,142
+raw_sc,SC4801G0,raw:Sleep stage W,1821
+raw_sc,SC4801G0,raw:Sleep stage 1,203
+raw_sc,SC4801G0,raw:Sleep stage 2,595
+raw_sc,SC4801G0,raw:Sleep stage 3,13
+raw_sc,SC4801G0,raw:Sleep stage R,142
+raw_sc,SC4801G0,raw:Sleep stage ?,0
+edf78_npz,SC4801G0,npz_code:Wake,288
+edf78_npz,SC4801G0,npz_code:N1,203
+edf78_npz,SC4801G0,npz_code:N2,595
+edf78_npz,SC4801G0,npz_code:N3,13
+edf78_npz,SC4801G0,npz_code:REM,142
+raw_sc,SC4802G0,Wake,1923
+raw_sc,SC4802G0,N1,204
+raw_sc,SC4802G0,N2,541
+raw_sc,SC4802G0,N3,6
+raw_sc,SC4802G0,REM,136
+raw_sc,SC4802G0,raw:Sleep stage W,1923
+raw_sc,SC4802G0,raw:Sleep stage 1,204
+raw_sc,SC4802G0,raw:Sleep stage 2,541
+raw_sc,SC4802G0,raw:Sleep stage R,136
+raw_sc,SC4802G0,raw:Sleep stage 3,6
+raw_sc,SC4802G0,raw:Sleep stage ?,0
+edf78_npz,SC4802G0,npz_code:Wake,342
+edf78_npz,SC4802G0,npz_code:N1,204
+edf78_npz,SC4802G0,npz_code:N2,541
+edf78_npz,SC4802G0,npz_code:N3,6
+edf78_npz,SC4802G0,npz_code:REM,136
+raw_sc,SC4811G0,Wake,1469
+raw_sc,SC4811G0,N1,88
+raw_sc,SC4811G0,N2,528
+raw_sc,SC4811G0,N3,121
+raw_sc,SC4811G0,REM,196
+raw_sc,SC4811G0,raw:Sleep stage W,1469
+raw_sc,SC4811G0,raw:Sleep stage 2,528
+raw_sc,SC4811G0,raw:Sleep stage 1,88
+raw_sc,SC4811G0,raw:Sleep stage 3,89
+raw_sc,SC4811G0,raw:Sleep stage 4,32
+raw_sc,SC4811G0,raw:Sleep stage R,196
+raw_sc,SC4811G0,raw:Sleep stage ?,0
+edf78_npz,SC4811G0,npz_code:Wake,360
+edf78_npz,SC4811G0,npz_code:N1,88
+edf78_npz,SC4811G0,npz_code:N2,528
+edf78_npz,SC4811G0,npz_code:N3,121
+edf78_npz,SC4811G0,npz_code:REM,196
+raw_sc,SC4812G0,Wake,1689
+raw_sc,SC4812G0,N1,138
+raw_sc,SC4812G0,N2,347
+raw_sc,SC4812G0,N3,102
+raw_sc,SC4812G0,REM,138
+raw_sc,SC4812G0,raw:Sleep stage W,1689
+raw_sc,SC4812G0,raw:Sleep stage 1,138
+raw_sc,SC4812G0,raw:Sleep stage 2,347
+raw_sc,SC4812G0,raw:Sleep stage 3,79
+raw_sc,SC4812G0,raw:Sleep stage R,138
+raw_sc,SC4812G0,raw:Sleep stage 4,23
+raw_sc,SC4812G0,raw:Movement time,2
+raw_sc,SC4812G0,raw:Sleep stage ?,0
+edf78_npz,SC4812G0,npz_code:Wake,458
+edf78_npz,SC4812G0,npz_code:N1,138
+edf78_npz,SC4812G0,npz_code:N2,347
+edf78_npz,SC4812G0,npz_code:N3,102
+edf78_npz,SC4812G0,npz_code:REM,138
+raw_sc,SC4821G0,Wake,1858
+raw_sc,SC4821G0,N1,66
+raw_sc,SC4821G0,N2,407
+raw_sc,SC4821G0,N3,162
+raw_sc,SC4821G0,REM,228
+raw_sc,SC4821G0,raw:Sleep stage W,1858
+raw_sc,SC4821G0,raw:Sleep stage 1,66
+raw_sc,SC4821G0,raw:Sleep stage 2,407
+raw_sc,SC4821G0,raw:Sleep stage 3,83
+raw_sc,SC4821G0,raw:Sleep stage 4,79
+raw_sc,SC4821G0,raw:Sleep stage R,228
+raw_sc,SC4821G0,raw:Movement time,1
+raw_sc,SC4821G0,raw:Sleep stage ?,0
+edf78_npz,SC4821G0,npz_code:Wake,841
+edf78_npz,SC4821G0,npz_code:N1,66
+edf78_npz,SC4821G0,npz_code:N2,407
+edf78_npz,SC4821G0,npz_code:N3,162
+edf78_npz,SC4821G0,npz_code:REM,228
+raw_sc,SC4822G0,Wake,1954
+raw_sc,SC4822G0,N1,121
+raw_sc,SC4822G0,N2,400
+raw_sc,SC4822G0,N3,156
+raw_sc,SC4822G0,REM,179
+raw_sc,SC4822G0,raw:Sleep stage W,1954
+raw_sc,SC4822G0,raw:Sleep stage 1,121
+raw_sc,SC4822G0,raw:Sleep stage 2,400
+raw_sc,SC4822G0,raw:Sleep stage 3,107
+raw_sc,SC4822G0,raw:Sleep stage 4,49
+raw_sc,SC4822G0,raw:Sleep stage R,179
+raw_sc,SC4822G0,raw:Sleep stage ?,0
+edf78_npz,SC4822G0,npz_code:Wake,510
+edf78_npz,SC4822G0,npz_code:N1,121
+edf78_npz,SC4822G0,npz_code:N2,400
+edf78_npz,SC4822G0,npz_code:N3,156
+edf78_npz,SC4822G0,npz_code:REM,179
+raw_st,ST7011J0,Wake,204
+raw_st,ST7011J0,N1,101
+raw_st,ST7011J0,N2,529
+raw_st,ST7011J0,N3,136
+raw_st,ST7011J0,REM,122
+raw_st,ST7011J0,raw:Sleep stage W,204
+raw_st,ST7011J0,raw:Sleep stage 1,101
+raw_st,ST7011J0,raw:Sleep stage 2,529
+raw_st,ST7011J0,raw:Sleep stage 3,93
+raw_st,ST7011J0,raw:Sleep stage R,122
+raw_st,ST7011J0,raw:Sleep stage 4,43
+raw_st,ST7012J0,Wake,103
+raw_st,ST7012J0,N1,62
+raw_st,ST7012J0,N2,586
+raw_st,ST7012J0,N3,109
+raw_st,ST7012J0,REM,180
+raw_st,ST7012J0,raw:Sleep stage W,103
+raw_st,ST7012J0,raw:Sleep stage 1,62
+raw_st,ST7012J0,raw:Sleep stage 2,586
+raw_st,ST7012J0,raw:Sleep stage 3,104
+raw_st,ST7012J0,raw:Sleep stage R,180
+raw_st,ST7012J0,raw:Sleep stage 4,5
+raw_st,ST7022J0,Wake,74
+raw_st,ST7022J0,N1,74
+raw_st,ST7022J0,N2,353
+raw_st,ST7022J0,N3,284
+raw_st,ST7022J0,REM,159
+raw_st,ST7022J0,raw:Sleep stage W,74
+raw_st,ST7022J0,raw:Sleep stage 1,74
+raw_st,ST7022J0,raw:Sleep stage 2,353
+raw_st,ST7022J0,raw:Sleep stage 3,127
+raw_st,ST7022J0,raw:Sleep stage 4,157
+raw_st,ST7022J0,raw:Sleep stage R,159
+raw_st,ST7041J0,Wake,55
+raw_st,ST7041J0,N1,66
+raw_st,ST7041J0,N2,536
+raw_st,ST7041J0,N3,132
+raw_st,ST7041J0,REM,218
+raw_st,ST7041J0,raw:Sleep stage 1,66
+raw_st,ST7041J0,raw:Sleep stage 2,536
+raw_st,ST7041J0,raw:Sleep stage 3,61
+raw_st,ST7041J0,raw:Sleep stage W,55
+raw_st,ST7041J0,raw:Sleep stage 4,71
+raw_st,ST7041J0,raw:Sleep stage R,218
+raw_st,ST7041J0,raw:Movement time,1
+raw_st,ST7042J0,Wake,110
+raw_st,ST7042J0,N1,60
+raw_st,ST7042J0,N2,622
+raw_st,ST7042J0,N3,122
+raw_st,ST7042J0,REM,216
+raw_st,ST7042J0,raw:Sleep stage 1,60
+raw_st,ST7042J0,raw:Sleep stage W,110
+raw_st,ST7042J0,raw:Sleep stage 2,622
+raw_st,ST7042J0,raw:Sleep stage 3,80
+raw_st,ST7042J0,raw:Sleep stage 4,42
+raw_st,ST7042J0,raw:Sleep stage R,216
+raw_st,ST7042J0,raw:Movement time,1
+raw_st,ST7051J0,Wake,74
+raw_st,ST7051J0,N1,103
+raw_st,ST7051J0,N2,368
+raw_st,ST7051J0,N3,248
+raw_st,ST7051J0,REM,225
+raw_st,ST7051J0,raw:Sleep stage 1,103
+raw_st,ST7051J0,raw:Sleep stage W,74
+raw_st,ST7051J0,raw:Sleep stage 2,368
+raw_st,ST7051J0,raw:Sleep stage 3,79
+raw_st,ST7051J0,raw:Sleep stage 4,169
+raw_st,ST7051J0,raw:Sleep stage R,225
+raw_st,ST7052J0,Wake,111
+raw_st,ST7052J0,N1,121
+raw_st,ST7052J0,N2,396
+raw_st,ST7052J0,N3,180
+raw_st,ST7052J0,REM,226
+raw_st,ST7052J0,raw:Sleep stage W,111
+raw_st,ST7052J0,raw:Sleep stage 1,121
+raw_st,ST7052J0,raw:Sleep stage 2,396
+raw_st,ST7052J0,raw:Sleep stage 3,53
+raw_st,ST7052J0,raw:Sleep stage 4,127
+raw_st,ST7052J0,raw:Sleep stage R,226
+raw_st,ST7061J0,Wake,49
+raw_st,ST7061J0,N1,89
+raw_st,ST7061J0,N2,589
+raw_st,ST7061J0,N3,10
+raw_st,ST7061J0,REM,271
+raw_st,ST7061J0,raw:Sleep stage W,49
+raw_st,ST7061J0,raw:Sleep stage 1,89
+raw_st,ST7061J0,raw:Sleep stage 2,589
+raw_st,ST7061J0,raw:Sleep stage 3,10
+raw_st,ST7061J0,raw:Sleep stage R,271
+raw_st,ST7062J0,Wake,52
+raw_st,ST7062J0,N1,47
+raw_st,ST7062J0,N2,581
+raw_st,ST7062J0,N3,26
+raw_st,ST7062J0,REM,246
+raw_st,ST7062J0,raw:Sleep stage W,52
+raw_st,ST7062J0,raw:Sleep stage 1,47
+raw_st,ST7062J0,raw:Sleep stage 2,581
+raw_st,ST7062J0,raw:Sleep stage 3,26
+raw_st,ST7062J0,raw:Sleep stage R,246
+raw_st,ST7072J0,Wake,240
+raw_st,ST7072J0,N1,57
+raw_st,ST7072J0,N2,345
+raw_st,ST7072J0,N3,160
+raw_st,ST7072J0,REM,112
+raw_st,ST7072J0,raw:Sleep stage W,240
+raw_st,ST7072J0,raw:Sleep stage 1,57
+raw_st,ST7072J0,raw:Sleep stage 2,345
+raw_st,ST7072J0,raw:Sleep stage 3,118
+raw_st,ST7072J0,raw:Sleep stage 4,42
+raw_st,ST7072J0,raw:Sleep stage R,112
+raw_st,ST7081J0,Wake,163
+raw_st,ST7081J0,N1,79
+raw_st,ST7081J0,N2,468
+raw_st,ST7081J0,N3,168
+raw_st,ST7081J0,REM,88
+raw_st,ST7081J0,raw:Sleep stage W,163
+raw_st,ST7081J0,raw:Sleep stage 1,79
+raw_st,ST7081J0,raw:Sleep stage 2,468
+raw_st,ST7081J0,raw:Sleep stage 3,168
+raw_st,ST7081J0,raw:Sleep stage R,88
+raw_st,ST7082J0,Wake,154
+raw_st,ST7082J0,N1,171
+raw_st,ST7082J0,N2,450
+raw_st,ST7082J0,N3,45
+raw_st,ST7082J0,REM,111
+raw_st,ST7082J0,raw:Sleep stage W,154
+raw_st,ST7082J0,raw:Sleep stage 1,171
+raw_st,ST7082J0,raw:Sleep stage 2,450
+raw_st,ST7082J0,raw:Sleep stage 3,45
+raw_st,ST7082J0,raw:Sleep stage R,111
+raw_st,ST7091J0,Wake,140
+raw_st,ST7091J0,N1,91
+raw_st,ST7091J0,N2,464
+raw_st,ST7091J0,N3,62
+raw_st,ST7091J0,REM,186
+raw_st,ST7091J0,raw:Sleep stage W,140
+raw_st,ST7091J0,raw:Sleep stage 1,91
+raw_st,ST7091J0,raw:Sleep stage 2,464
+raw_st,ST7091J0,raw:Sleep stage 3,62
+raw_st,ST7091J0,raw:Sleep stage R,186
+raw_st,ST7101J0,Wake,131
+raw_st,ST7101J0,N1,72
+raw_st,ST7101J0,N2,303
+raw_st,ST7101J0,N3,305
+raw_st,ST7101J0,REM,231
+raw_st,ST7101J0,raw:Sleep stage W,131
+raw_st,ST7101J0,raw:Sleep stage 1,72
+raw_st,ST7101J0,raw:Sleep stage 2,303
+raw_st,ST7101J0,raw:Sleep stage 3,179
+raw_st,ST7101J0,raw:Sleep stage 4,126
+raw_st,ST7101J0,raw:Sleep stage R,231
+raw_st,ST7101J0,raw:Movement time,7
+raw_st,ST7102J0,Wake,55
+raw_st,ST7102J0,N1,30
+raw_st,ST7102J0,N2,258
+raw_st,ST7102J0,N3,294
+raw_st,ST7102J0,REM,343
+raw_st,ST7102J0,raw:Sleep stage W,55
+raw_st,ST7102J0,raw:Sleep stage 1,30
+raw_st,ST7102J0,raw:Sleep stage 2,258
+raw_st,ST7102J0,raw:Sleep stage 3,85
+raw_st,ST7102J0,raw:Sleep stage 4,209
+raw_st,ST7102J0,raw:Sleep stage R,343
+raw_st,ST7102J0,raw:Movement time,6
+raw_st,ST7111J0,Wake,45
+raw_st,ST7111J0,N1,25
+raw_st,ST7111J0,N2,408
+raw_st,ST7111J0,N3,224
+raw_st,ST7111J0,REM,315
+raw_st,ST7111J0,raw:Sleep stage W,45
+raw_st,ST7111J0,raw:Sleep stage 1,25
+raw_st,ST7111J0,raw:Sleep stage 2,408
+raw_st,ST7111J0,raw:Sleep stage 3,29
+raw_st,ST7111J0,raw:Sleep stage 4,195
+raw_st,ST7111J0,raw:Movement time,6
+raw_st,ST7111J0,raw:Sleep stage R,315
+raw_st,ST7112J0,Wake,49
+raw_st,ST7112J0,N1,37
+raw_st,ST7112J0,N2,388
+raw_st,ST7112J0,N3,211
+raw_st,ST7112J0,REM,293
+raw_st,ST7112J0,raw:Sleep stage W,49
+raw_st,ST7112J0,raw:Sleep stage 1,37
+raw_st,ST7112J0,raw:Sleep stage 2,388
+raw_st,ST7112J0,raw:Sleep stage 3,64
+raw_st,ST7112J0,raw:Sleep stage 4,147
+raw_st,ST7112J0,raw:Movement time,8
+raw_st,ST7112J0,raw:Sleep stage R,293
+raw_st,ST7121J0,Wake,70
+raw_st,ST7121J0,N1,34
+raw_st,ST7121J0,N2,452
+raw_st,ST7121J0,N3,203
+raw_st,ST7121J0,REM,267
+raw_st,ST7121J0,raw:Sleep stage W,70
+raw_st,ST7121J0,raw:Sleep stage 1,34
+raw_st,ST7121J0,raw:Sleep stage 2,452
+raw_st,ST7121J0,raw:Sleep stage 3,120
+raw_st,ST7121J0,raw:Sleep stage 4,83
+raw_st,ST7121J0,raw:Sleep stage R,267
+raw_st,ST7121J0,raw:Movement time,9
+raw_st,ST7122J0,Wake,90
+raw_st,ST7122J0,N1,73
+raw_st,ST7122J0,N2,480
+raw_st,ST7122J0,N3,158
+raw_st,ST7122J0,REM,144
+raw_st,ST7122J0,raw:Sleep stage W,90
+raw_st,ST7122J0,raw:Sleep stage 1,73
+raw_st,ST7122J0,raw:Sleep stage 2,480
+raw_st,ST7122J0,raw:Sleep stage 3,45
+raw_st,ST7122J0,raw:Sleep stage 4,113
+raw_st,ST7122J0,raw:Movement time,24
+raw_st,ST7122J0,raw:Sleep stage R,144
+raw_st,ST7151J0,Wake,104
+raw_st,ST7151J0,N1,78
+raw_st,ST7151J0,N2,304
+raw_st,ST7151J0,N3,268
+raw_st,ST7151J0,REM,143
+raw_st,ST7151J0,raw:Sleep stage W,104
+raw_st,ST7151J0,raw:Sleep stage 1,78
+raw_st,ST7151J0,raw:Sleep stage 2,304
+raw_st,ST7151J0,raw:Sleep stage 3,142
+raw_st,ST7151J0,raw:Sleep stage 4,126
+raw_st,ST7151J0,raw:Sleep stage R,143
+raw_st,ST7152J0,Wake,56
+raw_st,ST7152J0,N1,81
+raw_st,ST7152J0,N2,447
+raw_st,ST7152J0,N3,261
+raw_st,ST7152J0,REM,200
+raw_st,ST7152J0,raw:Sleep stage W,56
+raw_st,ST7152J0,raw:Sleep stage 1,81
+raw_st,ST7152J0,raw:Sleep stage 2,447
+raw_st,ST7152J0,raw:Sleep stage 3,85
+raw_st,ST7152J0,raw:Sleep stage 4,176
+raw_st,ST7152J0,raw:Sleep stage R,200
+raw_st,ST7161J0,Wake,124
+raw_st,ST7161J0,N1,92
+raw_st,ST7161J0,N2,445
+raw_st,ST7161J0,N3,204
+raw_st,ST7161J0,REM,192
+raw_st,ST7161J0,raw:Sleep stage 1,92
+raw_st,ST7161J0,raw:Sleep stage W,124
+raw_st,ST7161J0,raw:Sleep stage 2,445
+raw_st,ST7161J0,raw:Sleep stage 3,115
+raw_st,ST7161J0,raw:Sleep stage 4,89
+raw_st,ST7161J0,raw:Sleep stage R,192
+raw_st,ST7162J0,Wake,158
+raw_st,ST7162J0,N1,102
+raw_st,ST7162J0,N2,430
+raw_st,ST7162J0,N3,218
+raw_st,ST7162J0,REM,80
+raw_st,ST7162J0,raw:Sleep stage W,158
+raw_st,ST7162J0,raw:Sleep stage 1,102
+raw_st,ST7162J0,raw:Sleep stage 2,430
+raw_st,ST7162J0,raw:Sleep stage 3,128
+raw_st,ST7162J0,raw:Sleep stage 4,90
+raw_st,ST7162J0,raw:Sleep stage R,80
+raw_st,ST7171J0,Wake,225
+raw_st,ST7171J0,N1,140
+raw_st,ST7171J0,N2,294
+raw_st,ST7171J0,N3,176
+raw_st,ST7171J0,REM,129
+raw_st,ST7171J0,raw:Sleep stage W,225
+raw_st,ST7171J0,raw:Sleep stage 1,140
+raw_st,ST7171J0,raw:Sleep stage 2,294
+raw_st,ST7171J0,raw:Sleep stage 3,139
+raw_st,ST7171J0,raw:Sleep stage 4,37
+raw_st,ST7171J0,raw:Sleep stage R,129
+raw_st,ST7172J0,Wake,140
+raw_st,ST7172J0,N1,180
+raw_st,ST7172J0,N2,382
+raw_st,ST7172J0,N3,155
+raw_st,ST7172J0,REM,148
+raw_st,ST7172J0,raw:Sleep stage W,140
+raw_st,ST7172J0,raw:Sleep stage 1,180
+raw_st,ST7172J0,raw:Sleep stage 2,382
+raw_st,ST7172J0,raw:Sleep stage 3,137
+raw_st,ST7172J0,raw:Sleep stage 4,18
+raw_st,ST7172J0,raw:Sleep stage R,148
+raw_st,ST7181J0,Wake,108
+raw_st,ST7181J0,N1,119
+raw_st,ST7181J0,N2,569
+raw_st,ST7181J0,N3,27
+raw_st,ST7181J0,REM,136
+raw_st,ST7181J0,raw:Sleep stage W,108
+raw_st,ST7181J0,raw:Sleep stage 1,119
+raw_st,ST7181J0,raw:Sleep stage 2,569
+raw_st,ST7181J0,raw:Sleep stage 3,27
+raw_st,ST7181J0,raw:Sleep stage R,136
+raw_st,ST7182J0,Wake,46
+raw_st,ST7182J0,N1,73
+raw_st,ST7182J0,N2,525
+raw_st,ST7182J0,N3,72
+raw_st,ST7182J0,REM,251
+raw_st,ST7182J0,raw:Sleep stage W,46
+raw_st,ST7182J0,raw:Sleep stage 1,73
+raw_st,ST7182J0,raw:Sleep stage 2,525
+raw_st,ST7182J0,raw:Sleep stage 3,67
+raw_st,ST7182J0,raw:Sleep stage 4,5
+raw_st,ST7182J0,raw:Sleep stage R,251
+raw_st,ST7191J0,Wake,71
+raw_st,ST7191J0,N1,68
+raw_st,ST7191J0,N2,423
+raw_st,ST7191J0,N3,193
+raw_st,ST7191J0,REM,200
+raw_st,ST7191J0,raw:Sleep stage W,71
+raw_st,ST7191J0,raw:Sleep stage 1,68
+raw_st,ST7191J0,raw:Sleep stage 2,423
+raw_st,ST7191J0,raw:Sleep stage 3,49
+raw_st,ST7191J0,raw:Sleep stage 4,144
+raw_st,ST7191J0,raw:Sleep stage R,200
+raw_st,ST7192J0,Wake,21
+raw_st,ST7192J0,N1,21
+raw_st,ST7192J0,N2,545
+raw_st,ST7192J0,N3,112
+raw_st,ST7192J0,REM,232
+raw_st,ST7192J0,raw:Sleep stage W,21
+raw_st,ST7192J0,raw:Sleep stage 1,21
+raw_st,ST7192J0,raw:Sleep stage 2,545
+raw_st,ST7192J0,raw:Sleep stage 3,59
+raw_st,ST7192J0,raw:Sleep stage 4,53
+raw_st,ST7192J0,raw:Sleep stage R,232
+raw_st,ST7201J0,Wake,16
+raw_st,ST7201J0,N1,69
+raw_st,ST7201J0,N2,610
+raw_st,ST7201J0,N3,92
+raw_st,ST7201J0,REM,134
+raw_st,ST7201J0,raw:Sleep stage 1,69
+raw_st,ST7201J0,raw:Sleep stage 2,610
+raw_st,ST7201J0,raw:Sleep stage W,16
+raw_st,ST7201J0,raw:Sleep stage 3,66
+raw_st,ST7201J0,raw:Sleep stage 4,26
+raw_st,ST7201J0,raw:Sleep stage R,134
+raw_st,ST7201J0,raw:Movement time,2
+raw_st,ST7202J0,Wake,21
+raw_st,ST7202J0,N1,34
+raw_st,ST7202J0,N2,625
+raw_st,ST7202J0,N3,44
+raw_st,ST7202J0,REM,174
+raw_st,ST7202J0,raw:Sleep stage 1,34
+raw_st,ST7202J0,raw:Sleep stage W,21
+raw_st,ST7202J0,raw:Sleep stage 2,625
+raw_st,ST7202J0,raw:Sleep stage 3,44
+raw_st,ST7202J0,raw:Sleep stage R,174
+raw_st,ST7202J0,raw:Movement time,2
+raw_st,ST7211J0,Wake,172
+raw_st,ST7211J0,N1,60
+raw_st,ST7211J0,N2,538
+raw_st,ST7211J0,N3,151
+raw_st,ST7211J0,REM,156
+raw_st,ST7211J0,raw:Sleep stage W,172
+raw_st,ST7211J0,raw:Sleep stage 1,60
+raw_st,ST7211J0,raw:Sleep stage 2,538
+raw_st,ST7211J0,raw:Sleep stage 3,92
+raw_st,ST7211J0,raw:Sleep stage 4,59
+raw_st,ST7211J0,raw:Sleep stage R,156
+raw_st,ST7212J0,Wake,155
+raw_st,ST7212J0,N1,135
+raw_st,ST7212J0,N2,378
+raw_st,ST7212J0,N3,198
+raw_st,ST7212J0,REM,144
+raw_st,ST7212J0,raw:Sleep stage W,155
+raw_st,ST7212J0,raw:Sleep stage 1,135
+raw_st,ST7212J0,raw:Sleep stage 2,378
+raw_st,ST7212J0,raw:Sleep stage 3,44
+raw_st,ST7212J0,raw:Sleep stage 4,154
+raw_st,ST7212J0,raw:Sleep stage R,144
+raw_st,ST7221J0,Wake,151
+raw_st,ST7221J0,N1,211
+raw_st,ST7221J0,N2,438
+raw_st,ST7221J0,N3,2
+raw_st,ST7221J0,REM,231
+raw_st,ST7221J0,raw:Sleep stage W,151
+raw_st,ST7221J0,raw:Sleep stage 1,211
+raw_st,ST7221J0,raw:Sleep stage 2,438
+raw_st,ST7221J0,raw:Sleep stage 3,2
+raw_st,ST7221J0,raw:Sleep stage R,231
+raw_st,ST7222J0,Wake,85
+raw_st,ST7222J0,N1,191
+raw_st,ST7222J0,N2,475
+raw_st,ST7222J0,N3,0
+raw_st,ST7222J0,REM,200
+raw_st,ST7222J0,raw:Sleep stage W,85
+raw_st,ST7222J0,raw:Sleep stage 1,191
+raw_st,ST7222J0,raw:Sleep stage 2,475
+raw_st,ST7222J0,raw:Sleep stage R,200
+raw_st,ST7241J0,Wake,27
+raw_st,ST7241J0,N1,42
+raw_st,ST7241J0,N2,670
+raw_st,ST7241J0,N3,45
+raw_st,ST7241J0,REM,237
+raw_st,ST7241J0,raw:Sleep stage 1,42
+raw_st,ST7241J0,raw:Sleep stage W,27
+raw_st,ST7241J0,raw:Sleep stage 2,670
+raw_st,ST7241J0,raw:Sleep stage 3,38
+raw_st,ST7241J0,raw:Sleep stage 4,7
+raw_st,ST7241J0,raw:Movement time,3
+raw_st,ST7241J0,raw:Sleep stage R,237
+raw_st,ST7242J0,Wake,17
+raw_st,ST7242J0,N1,22
+raw_st,ST7242J0,N2,591
+raw_st,ST7242J0,N3,139
+raw_st,ST7242J0,REM,170
+raw_st,ST7242J0,raw:Sleep stage 1,22
+raw_st,ST7242J0,raw:Sleep stage 2,591
+raw_st,ST7242J0,raw:Sleep stage 3,98
+raw_st,ST7242J0,raw:Sleep stage 4,41
+raw_st,ST7242J0,raw:Sleep stage W,17
+raw_st,ST7242J0,raw:Sleep stage R,170
+raw_st,ST7242J0,raw:Movement time,1

@@ -1,0 +1,139 @@
+    # already reserved test annotations or signals. Fail closed before enumeration.
+    if split_rows:
+        try:
+            validate_splits(split_rows)
+            if any(r['split']=='test' for r in split_rows):
+                raise ValueError('reserved test opening prohibited in development inventory; audit before reserving test roles')
+        except ValueError as exc:
+            errors.append({'error': str(exc), 'hard_stop': True})
+            return write_report(run, roots, rows, channels, distributions, errors, blockers, warnings, {}, [], {})
+    original = Path(config['sleep_edfx_original_root']).expanduser().resolve()
+    checks, check_errors = public_checks(original, files, hashes)
+    errors.extend(check_errors)
+    for name in ['RECORDS', 'SHA256SUMS.txt', 'SC-subjects.xls', 'ST-subjects.xls']:
+        if not (original/name).is_file():
+            blockers.append('External provenance input missing: '+name)
+    try:
+        treatments, issue = treatment_metadata(original)
+        if issue:
+            blockers.append(issue)
+        sc_keys, issue = sc_metadata(original)
+        if issue:
+            blockers.append(issue)
+        raw = pair_raw(config)
+        for study in ['SC', 'ST']:
+            if not any(r['study'] == study for r in raw.values()):
+                blockers.append(study+': no raw PSG/hypnogram pairs found')
+    except (ValueError,OSError) as exc:
+        errors.append({'error': str(exc), 'hard_stop': True})
+        return write_report(run, roots, rows, channels, distributions, errors, blockers, warnings, checks, [], {})
+    npzs = {}
+    for key, dataset in [('sleep_edf_20_npz','edf20_npz'),('sleep_edf_78_npz','edf78_npz')]:
+        root = Path(config[key]).expanduser().resolve()
+        seen = set()
+        for path in sorted(root.glob('*.npz')):
+            try:
+                ident = identity(path.name)
+                if ident['recording_id'] in seen:
+                    raise ValueError('duplicate NPZ canonical identity')
+                seen.add(ident['recording_id'])
+                npzs.setdefault(ident['recording_id'],[]).append((dataset,path,ident))
+            except ValueError as exc:
+                errors.append({'file': path.name, 'error': str(exc)})
+        if not seen:
+            blockers.append(dataset+': no NPZ recordings found')
+        manifest = root/'MANIFEST.TXT'
+        if manifest.is_file():
+            listed = {}
+            for line in manifest.read_text().splitlines():
+                match = __import__('re').fullmatch(r'([^ ]+\.npz) \(application/octet-stream\) (\d+) bytes\.',line)
+                if not match:
+                    errors.append({'file': str(manifest),'error': 'unrecognized NPZ manifest line'})
+                    continue
+                name,size = match.groups()
+                if name in listed:
+                    errors.append({'file': name, 'error': 'duplicate NPZ manifest entry'})
+                listed[name]=int(size)
+            actual = {p.name: p.stat().st_size for p in root.glob('*.npz')}
+            missing_listed = sorted(set(listed)-set(actual))
+            unlisted = sorted(set(actual)-set(listed))
+            size_conflicts = [{'file':name,'manifest_bytes':listed[name],'actual_bytes':actual[name]}
+                             for name in sorted(set(listed)&set(actual)) if listed[name] != actual[name]]
+            if missing_listed or size_conflicts:
+                errors.append({'file': str(manifest), 'error': 'NPZ manifest listed files/sizes disagree',
+                               'missing_listed_files':missing_listed,'size_conflicts':size_conflicts})
+            if unlisted:
+                blockers.append(f'{dataset}: incomplete optional MANIFEST.TXT ({len(listed)}/{len(actual)} files listed; {len(unlisted)} unlisted); provenance review required')
+            checks[dataset+'_manifest'] = {'entries':len(listed), 'actual_files':len(actual),
+                                          'matches_filenames_and_sizes':actual==listed,
+                                          'missing_listed_files':missing_listed, 'unlisted_files':unlisted,
+                                          'size_conflicts':size_conflicts, 'sha256':hashes[str(manifest)]}
+    # Stop data interpretation on proven identity/checksum/manifest failure.
+    if errors:
+        return write_report(run, roots, rows, channels, distributions, errors, blockers, warnings, checks, [], {})
+    shape_owners, signal_owners = {}, {}
+    for rid in sorted(set(raw)|set(npzs)):
+        entry = raw.get(rid)
+        labels, raw_wave, raw_channel = None, None, None
+        source = {}
+        if entry:
+            source = {k:v for k,v in entry.items() if k not in {'psg','hyp'}}
+            source.update(dataset='raw_'+entry['study'].lower(),path=str(entry['psg']),
+                          source_sha256=hashes[str(entry['psg'])],annotation_source=str(entry['hyp']),
+                          annotation_sha256=hashes[str(entry['hyp'])], treatment=treatments.get((entry['subject_id'],entry['night'])))
+            try:
+                if entry['study']=='SC' and sc_keys and (entry['subject_id'],entry['night']) not in sc_keys:
+                    raise ValueError('SC participant/night absent from source spreadsheet')
+                if entry['study']=='ST' and treatments and source['treatment'] is None:
+                    raise ValueError('ST participant/night absent from treatment spreadsheet')
+                with pyedflib.EdfReader(str(entry['psg'])) as psg, pyedflib.EdfReader(str(entry['hyp'])) as hyp:
+                    if psg.getStartdatetime() != hyp.getStartdatetime():
+                        raise ValueError('PSG/hypnogram start-time disagreement')
+                    onsets,durations,texts = hyp.readAnnotations()
+                    labels, ann = annotation_grid(onsets,durations,texts,psg.file_duration)
+                    source.update(ann, n_epochs=len(labels),duration_seconds=float(psg.file_duration),
+                                  start_datetime=psg.getStartdatetime().isoformat(),indices_status='original_raw_grid')
+                    headers = psg.getSignalHeaders()
+                    eeg_headers = [h for h in headers if h['label'].startswith('EEG')]
+                    if not eeg_headers:
+                        raise ValueError('no calibrated EEG channel')
+                    for h in eeg_headers:
+                        calibration(h)
+                    for h in headers:
+                        channels.append({'dataset':source['dataset'],'recording_id':rid,'channel':h['label'],
+                                         'fs':h['sample_frequency'],'units':h['dimension'],
+                                         'physical_min':h['physical_min'],'physical_max':h['physical_max'],
+                                         'digital_min':h['digital_min'],'digital_max':h['digital_max'],
+                                         'prefilter':h['prefilter'],'transducer':h['transducer']})
+                    source['channels'] = headers
+                    source['mapped_stage_counts'] = {name:int(np.sum(labels==i)) for i,name in enumerate(STAGES)}
+                    source['excluded_epochs'] = int(np.sum(labels<0))
+                    if rid in npzs:
+                        # Read exactly the NPZ-declared EEG; no assumed montage.
+                        requested = []
+                        for _,path,_ in npzs[rid]:
+                            with np.load(path,allow_pickle=False) as z:
+                                requested.append(str(z['ch_label'].item()))
+                        if len(set(requested)) != 1:
+                            raise ValueError('preprocessed sets disagree in channel')
+                        names = [h['label'] for h in headers]
+                        if names.count(requested[0]) != 1:
+                            raise ValueError('NPZ montage unavailable or ambiguous in raw EDF')
+                        c = names.index(requested[0]); raw_channel = headers[c]
+                        if raw_channel['sample_frequency'] != 100:
+                            raise ValueError('NPZ/native sample-rate mismatch; preprocessing transform unverified')
+                        raw_signal = psg.readSignal(c)
+                        if len(raw_signal) < len(labels)*3000:
+                            raise ValueError('raw EEG length disagrees with annotation grid')
+                        raw_wave = raw_signal[:len(labels)*3000].reshape(-1,3000)
+                        source['signal_sha256'] = hashlib.sha256(np.ascontiguousarray(raw_wave,dtype='<f4').tobytes()).hexdigest()
+                        source['shape_sha256'] = hashlib.sha256(''.join(shape_key(f) for f in shape_features(raw_wave)).encode()).hexdigest()
+            except (ValueError,OSError,KeyError) as exc:
+                errors.append({'recording_id':rid,'error':str(exc),'hard_stop':True})
+                # Inventory remaining records is read-only; downstream gates stay closed.
+                source['indices_status']='invalid'
+                labels,raw_wave = None,None
+            rows.append(source)
+ST incomplete annotation records: ['ST7021J0', 'ST7071J0', 'ST7092J0', 'ST7131J0', 'ST7132J0', 'ST7141J0', 'ST7142J0']
+SC NPZ max verification residual: 9.516496607969274e-08
+ST treatment counts: {'placebo': 22, 'temazepam': 22}

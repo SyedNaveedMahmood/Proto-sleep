@@ -1,0 +1,12 @@
+Hashing 594 inventory inputs (read-only)
+MIST-Transfer v3 P1 DATA AUDIT ONLY
+Git input SHA: 97c9bddf814b0d86f85ef231710e297647f332ae
+Gate: FAIL
+P2 can begin: False
+No preprocessing, model training, target metrics or SHHS access.
+Errors: 1; blockers: 0; warnings: 0
+EDF20 vs EDF78 is same SC cohort, never independent cross-dataset transfer.
+Unknown upstream NPZ selection policy: rebuild from raw; do not trim target evaluation using labels.
+Test results: see session test logs; no test-stage performance measured.
+ERROR: {"error": "ambiguous subject/night identity: SC4261F0-PSG.edf", "hard_stop": true}
+NEXT SINGLE SAFE COMMAND: git status --short --branch (STOP after P0/P1 for review).

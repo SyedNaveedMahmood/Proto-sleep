@@ -1,0 +1,8 @@
+sleep-cassette PSG acquisition characters Counter({'E': 102, 'F': 31, 'G': 20})
+F recordings ['SC4261F0-PSG.edf', 'SC4262F0-PSG.edf', 'SC4271F0-PSG.edf', 'SC4272F0-PSG.edf', 'SC4331F0-PSG.edf', 'SC4332F0-PSG.edf', 'SC4341F0-PSG.edf', 'SC4342F0-PSG.edf', 'SC4351F0-PSG.edf', 'SC4352F0-PSG.edf', 'SC4362F0-PSG.edf', 'SC4371F0-PSG.edf', 'SC4372F0-PSG.edf', 'SC4381F0-PSG.edf', 'SC4382F0-PSG.edf', 'SC4451F0-PSG.edf', 'SC4452F0-PSG.edf', 'SC4461F0-PSG.edf', 'SC4462F0-PSG.edf', 'SC4471F0-PSG.edf', 'SC4472F0-PSG.edf', 'SC4481F0-PSG.edf', 'SC4482F0-PSG.edf', 'SC4541F0-PSG.edf', 'SC4542F0-PSG.edf', 'SC4551F0-PSG.edf', 'SC4552F0-PSG.edf', 'SC4561F0-PSG.edf', 'SC4562F0-PSG.edf', 'SC4571F0-PSG.edf', 'SC4572F0-PSG.edf']
+sleep-telemetry PSG acquisition characters Counter({'J': 44})
+F recordings []
+SC participant26  subject  night  age  sex (F=1) LightsOff
+      26      1   51          1  23:39:00
+      26      2   51          1  00:20:00
+External checks {'checksum_inputs_present': True, 'n_verified_file_checksums': 397, 'checksum_entries': 398, 'raw_files_without_published_checksum': [], 'records_entries': 197, 'n_psg_in_RECORDS': 197}
