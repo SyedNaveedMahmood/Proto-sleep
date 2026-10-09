@@ -47,7 +47,8 @@ an explicit diagnostic overhang. Do not create an inference/scoring epoch from
 it. Longer scored overhangs remain invalid. This geometric policy does not
 consult stage labels when selecting inference inputs.
 
-SC pair demographic conflicts quarantine the affected night and every other
+SC pair demographic conflicts or scored annotation overhangs longer than the
+single incomplete physical tail quarantine the affected night and every other
 night of its person from the smallest proposed scope. Preserve both header
 values and spreadsheet evidence; do not automatically overwrite or adjudicate
 identity from age/sex/stage labels. Equipment/program fields of a derived
@@ -66,3 +67,10 @@ BLOCKED as zero-shot inference/evaluation inputs. Define new raw evaluation
 input epochs from complete signal duration before consulting annotations;
 attach labels/scoring masks afterwards. Keep unscored positions, gaps, clocks,
 record boundaries, units, montage and source/annotation hashes explicit.
+
+The P1.5 conservative SC scope excludes people 06, 23, 36 and 74 (all nights):
+three PSG/hypnogram demographic conflicts and SC4362's scored Wake ending at
+83,100 seconds despite a 67,980-second PSG. Causes remain UNKNOWN. The eligible
+raw scope contains 74 people/146 recordings; the subject-disjoint EDF-78
+extension contains 55 people/109 recordings. The original 20-person/39-recording
+EDF-20/78 overlap is unchanged. Full-cohort acceptance remains BLOCKED.

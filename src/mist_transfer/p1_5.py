@@ -151,6 +151,27 @@ INFERENCE_POLICY = {
     'p2_acceptance_required':'synthetic fixtures, differential checks and ten participant-night audits before any model training'}
 
 
+def quarantine_evidence(hyp_header, psg_header, grid, duration_seconds, spreadsheet):
+    """Describe actual conflicts without substituting metadata or repairing timing."""
+    evidence = {}
+    if hyp_header[8:88] != psg_header[8:88]:
+        evidence['demographic_conflict'] = {
+            'hypnogram_patient_field':hyp_header[8:88].decode().strip(),
+            'psg_patient_field':psg_header[8:88].decode().strip(),
+            'spreadsheet':spreadsheet,
+            'cause':'UNKNOWN; no header repair or automatic identity adjudication'}
+    scored_tails = [t for t in grid['annotation_tails']
+                    if t['description'] not in {'Sleep stage ?','Movement time','Sleep stage M'}]
+    if scored_tails:
+        evidence['annotation_extent_conflict'] = {
+            'physical_signal_duration_seconds':duration_seconds,
+            'scored_annotation_tails':scored_tails,
+            'scored_signal_overhang_seconds':max(t['stop_seconds'] for t in scored_tails)-duration_seconds,
+            'cause':'UNKNOWN; annotations exceed physically available signal; no signal or annotation extension'}
+    evidence['proposed_policy'] = 'quarantine all nights of this SC subject pending source metadata/extent review'
+    return evidence
+
+
 def scope_gates(prior, resolutions, reuse_verified=True):
     raw = {study:[r for r in resolutions if r['study']==study] for study in ['SC','ST']}
     # A questionable night excludes every night of that person from the proposed
@@ -178,7 +199,7 @@ def scope_gates(prior, resolutions, reuse_verified=True):
           'conditions':['apply prespecified full-recording label-independent inference policy',
                         'EDF20/78 is same cohort; remove all shared subjects/nights from extension',
                         'new subject-grouped split guards and P2 acceptance tests before experiments',
-                        'quarantine every night of SC people with unresolved pair demographic disagreement; no demographic adjudication from labels'],
+                        'quarantine every night of SC people with unresolved pair demographics or scored annotation extent; no automatic repair'],
           'existing_npz_zero_shot_eligibility':'BLOCKED',
           'eligible_extension_subjects':sorted(extension)},
       'sc_to_st_proxy':{'data_status':'VERIFIED' if st else 'CONDITIONAL' if any(r['status']=='VERIFIED' for r in raw['ST']) else 'BLOCKED',
@@ -241,7 +262,7 @@ def resolve(prior_path, output, archive_path=None, seed=123, resume=False, refer
             labels_by_record[row['recording_id']]=labels
         except (ValueError,OSError,UnicodeError) as exc:
             result.update(status='BLOCKED',resolution='QUARANTINE',error=str(exc))
-            # Characterize SC metadata conflicts without assigning the decoded
+            # Characterize SC metadata/extent conflicts without assigning decoded
             # stages to an experimentally eligible person/night. This permits
             # diagnostic retention analysis of all cached NPZ masks.
             if row['study']=='SC':
@@ -255,11 +276,8 @@ def resolve(prior_path, output, archive_path=None, seed=123, resume=False, refer
                         raise ValueError('quarantine diagnostic reader/clock disagreement')
                     labels,grid=annotation_grid(*arrays,row['duration_seconds'])
                     result['payload_status']='VERIFIED_DIAGNOSTIC_ONLY'
-                    result['demographic_conflict']={'hypnogram_sex':h[8:88].decode().split()[1],
-                        'psg_sex':p[8:88].decode().split()[1],
-                        'spreadsheet':sc_demo[(row['subject_id'],row['night'])],
-                        'cause':'UNKNOWN; no header repair or automatic identity adjudication',
-                        'proposed_policy':'quarantine all nights of this SC subject'}
+                    result.update(quarantine_evidence(h,p,grid,row['duration_seconds'],
+                                                       sc_demo[(row['subject_id'],row['night'])]))
                     result['validation']={**detail,**grid}
                     labels_by_record[row['recording_id']]=labels
                 except (ValueError,OSError,UnicodeError) as diagnostic:
@@ -288,9 +306,10 @@ def resolve(prior_path, output, archive_path=None, seed=123, resume=False, refer
              'historical_audit_sha256':sha256_file(prior_path),'reuse_validation':reuse,
              'annotation_resolutions':resolutions,'manifest_resolution':manifest,
              'selection_analysis':selections,'candidate_reference_evidence':references,'scope_gates':gates,'inference_policy':INFERENCE_POLICY,
-             'quarantine_policy':'every night of an SC person with unresolved pair metadata disagreement; no automated correction',
+             'quarantine_policy':'every night of an SC person with unresolved pair metadata or scored annotation extent; no automated correction',
              'errors':errors,'scientific_unknowns':['exact Fpz-Cz NPZ preprocessing execution lineage',
                  'optional manifest author/generation intent','causal use of stage labels by the unknown original program',
+                 'cause of three SC pair demographic conflicts and SC4362 scored annotation overhang',
                  'SC/ST person-level linkage','SHHS authorization and usable data'],
              'provenance':run.identity,'signature':run.signature}
     atomic_json(outcome,run.output/'revised_audit.json')

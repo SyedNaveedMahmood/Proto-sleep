@@ -9,8 +9,9 @@ from unittest.mock import patch
 import numpy as np
 import pytest
 from mist_transfer.annotation_compat import (parse_tals, read_annotation_profile, paired_annotations)
-from mist_transfer.p1_5 import (selection_analysis, recovered_indices, manifest_analysis, scope_gates, verify_reuse)
-from mist_transfer.integrity import index_runs
+from mist_transfer.p1_5 import (selection_analysis, recovered_indices, manifest_analysis, scope_gates, verify_reuse, quarantine_evidence)
+from mist_transfer.integrity import index_runs, annotation_grid
+from mist_transfer.annotation_compat import fixed_header
 
 
 def pad(value,n):
@@ -202,3 +203,17 @@ def test_derived_equipment_field_difference_is_recorded_without_changing_identit
     _,meta=paired_annotations(hyp,psg,120)
     assert meta['recording_equipment_field_difference']
     assert meta['pyedflib_comparison']['status']=='VERIFIED'
+
+
+def test_long_scored_overhang_is_quarantined_without_inventing_demographic_conflict(tmp_path):
+    payload=b'+0\x14\x14\x00+0\x15180\x14Sleep stage W\x14\x00+180\x1560\x14Sleep stage ?\x14\x00'
+    hyp,psg=fixture(tmp_path,study='SC',payload=payload)
+    with pytest.raises(ValueError,match='beyond full physical signal'):paired_annotations(hyp,psg,120)
+    h,_,arrays,_=read_annotation_profile(hyp)
+    p,_=fixed_header(psg)
+    _,grid=annotation_grid(*arrays,120)
+    detail=quarantine_evidence(h,p,grid,120,{'age':31,'sex':'F'})
+    assert 'demographic_conflict' not in detail
+    assert detail['annotation_extent_conflict']['scored_signal_overhang_seconds']==60
+    assert detail['annotation_extent_conflict']['scored_annotation_tails'][0]['stop_seconds']==180
+    assert detail['proposed_policy'].startswith('quarantine all nights')

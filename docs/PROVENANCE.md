@@ -59,7 +59,9 @@ Annotation validation independently compares a bounded full-byte TAL decoder,
 MNE 1.10.2 and pyEDFlib 0.1.42 controls. No reader writes original data. The EDF+
 Recordingfield/fixed-clock exception is documented alongside the original
 headers and decoded timing evidence. Header demographic disagreements are
-quarantined conservatively at person level. No epoch duration, stage or date is
+quarantined conservatively at person level, as is the 15,120-second scored Wake
+overhang in SC4362. This is a source annotation/signal extent conflict with
+UNKNOWN cause, distinct from a demographic disagreement. No epoch duration, stage or date is
 repaired to obtain a passing result.
 
 Adjacent archive evidence uses its central directory and CRC-checked tiny

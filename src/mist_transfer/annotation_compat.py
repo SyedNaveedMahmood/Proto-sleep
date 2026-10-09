@@ -141,6 +141,11 @@ def paired_annotations(hyp_path, psg_path, duration_seconds):
         raise ValueError('canonical PSG/hypnogram pairing disagreement')
     h, start, arrays, meta = read_annotation_profile(hyp_path)
     p, pstart = fixed_header(psg_path)
+    meta['original_header_evidence'] = {
+        kind:{'patient_field':header[8:88].decode().strip(),
+              'recording_field':header[88:168].decode().strip(),
+              'fixed_date':header[168:176].decode(),'fixed_time':header[176:184].decode()}
+        for kind,header in [('hypnogram',h),('psg',p)]}
     if start != pstart or h[8:88] != p[8:88]:
         raise ValueError('paired fixed clock or patient/recording fields disagree')
     hrec,prec = h[88:168].decode().strip().split(),p[88:168].decode().strip().split()
