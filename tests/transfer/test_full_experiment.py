@@ -12,7 +12,7 @@ from mist_evidence.runtime import (EpochPaused,TrainConfig,train,seed_all,load_t
 from mist_transfer.baselines import make_baseline
 from mist_transfer.experiment import evaluate_source
 from mist_transfer.full_experiment import (validate_configuration,training_config,verify_grid,
-    verify_boundary,EpochObserver,aggregate_results,VARIANTS,SEEDS,run_full)
+    verify_boundary,EpochObserver,aggregate_results,VARIANTS,SEEDS,run_full,configure_precision)
 
 
 @pytest.fixture(autouse=True)
@@ -48,6 +48,7 @@ def test_smoke_or_wrong_grid_cannot_enter_full_experiment():
 
 
 def resume_fixture(tmp_path,variant,device):
+    configure_precision()
     records,bank=array_data();cfg=TrainConfig(epochs=2,patience=12,core_epochs=4,encode_batch=4,seed=123)
     def fresh():seed_all(123,True);return make_baseline(variant,bank,{'mean_uV':0.,'std_uV':1.})
     args=([records[0]],[records[1]],cfg)

@@ -26,7 +26,7 @@ DEFAULT_OUTPUT=Path('mist_transfer_runs/p3b/v1')
 def validate_configuration(config):
     expected={'purpose':'P3B_AUTHORIZED_FULL_SC_TRAIN_VAL_V1','version':VERSION,
         'split_fingerprint':SPLIT,'variants':VARIANTS,'seeds':SEEDS,'threads':2,
-        'amp':False,'deterministic':True,'optimizer':'AdamW','max_epochs':60,'patience':12,
+        'amp':False,'tf32':False,'deterministic':True,'optimizer':'AdamW','max_epochs':60,'patience':12,
         'lr':.0003,'weight_decay':.0001,'core_epochs':16,'encode_batch':16,'grad_clip':5.,
         'temporal_radius':0,'crf':False,'smoke':False,'reserved_access':False,
         'st_access':False,'shhs_access':False,'optional_augmentation':False,
@@ -66,6 +66,12 @@ def cuda_identity():
         'cuda':torch.version.cuda,'cudnn':torch.backends.cudnn.version(),
         'cublas_workspace_config':os.environ.get('CUBLAS_WORKSPACE_CONFIG'),
         'matmul_allow_tf32':torch.backends.cuda.matmul.allow_tf32,'cudnn_allow_tf32':torch.backends.cudnn.allow_tf32}
+
+
+def configure_precision():
+    torch.backends.cuda.matmul.allow_tf32=False
+    torch.backends.cudnn.allow_tf32=False
+    torch.set_float32_matmul_precision('highest')
 
 
 def check_implementation(identity):
@@ -162,12 +168,14 @@ def prepare_sources(output,identity,frozen):
     train_rows=load_development(frozen,'train');val_rows=load_development(frozen,'val')
     proof=source_input_proof(train_rows+val_rows);p3a=Path('mist_transfer_runs/p3a/cuda_smoke')
     prior=json.loads((p3a/'COMPLETE.json').read_text());norm_path=output/'normalization.json'
+    if sha256_file(p3a/'normalization.json')!=prior['outputs']['normalization.json']:raise ValueError('verified P3A normalization changed')
     if not norm_path.exists():
         if sha256_file(p3a/'normalization.json')!=prior['outputs']['normalization.json']:raise ValueError('verified P3A normalization changed')
         saved=json.loads((p3a/'normalization.json').read_text())
         if saved['input_proof']!=proof:raise ValueError('normalization input proofs differ')
         atomic_json(saved,norm_path)
     saved=json.loads(norm_path.read_text());normalization=saved['statistics']
+    if sha256_file(norm_path)!=prior['outputs']['normalization.json']:raise ValueError('copied P3A normalization digest changed')
     if saved['input_proof']!=proof or normalization['physical_epoch_count']!=79984 or normalization['fit_role']!='train' or normalization['label_access'] or normalization['fit_subjects']!=sorted({r['subject_id'] for r in train_rows}) or normalization['source_hashes']!={r['recording_id']:r['source_sha256'] for r in train_rows}:
         raise ValueError('normalization TRAIN-only provenance violated')
     fitted=output/'fit_artifacts.receipt.json'
@@ -214,6 +222,7 @@ def run_full(split_path,config_path,output=DEFAULT_OUTPUT,mode='gate-a',resume=F
              authorize_full=False,correctness=None,dry_run=False):
     if not authorize_full and not dry_run:raise ValueError('explicit --authorize-full-sc-train-val required')
     output=Path(output);config=json.loads(Path(config_path).read_text());validate_configuration(config)
+    configure_precision()
     frozen=read_frozen_split(split_path)
     if frozen['split_fingerprint']!=SPLIT or frozen['p2_completion_sha256']!=P2_COMPLETION:raise ValueError('reviewed split/P2 fingerprint differs')
     identity={'phase':'P3B','version':VERSION,'config':config,'split_fingerprint':SPLIT,

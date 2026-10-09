@@ -6,6 +6,7 @@
   "seeds": [123, 456, 789],
   "threads": 2,
   "amp": false,
+  "tf32": false,
   "deterministic": true,
   "optimizer": "AdamW",
   "max_epochs": 60,

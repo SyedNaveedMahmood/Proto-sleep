@@ -10,7 +10,8 @@ unchanged. No reserved SC, ST, SHHS, MCR or augmentation access is supported.
 `configs/p3b_sc_matched_v1.json` implements the previously proposed and now
 authorized four-model/three-seed policy. Each run uses maximum 60 epochs,
 patience 12, AdamW lr 0.0003, weight decay 0.0001, core/encoding batches of 16,
-gradient clipping 5 and deterministic FP32. The same stopping policy and
+gradient clipping 5 and deterministic FP32 (both AMP and TF32 disabled before
+correctness checks or full scores). The same stopping policy and
 participant-average fixed-five source-VAL Macro-F1 selection applies to every
 model. Improvement must exceed 1e-8, preserving the earliest best on ties.
 Record actual epochs/updates; identical maximum budgets do not imply identical
