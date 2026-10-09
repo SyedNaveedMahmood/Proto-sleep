@@ -77,7 +77,11 @@ def test_lazy_waveforms_exact_units_times_indices_chunks_and_masks(tmp_path):
     assert not batches[-1]['scoring_mask'][0] and batches[-1]['original_annotation_code'][0] is None
     assert batches[0]['recording']['source_sha256']==sha256_file(Path(row['path']))
     with patch('mist_transfer.preprocessing.epoch_targets',side_effect=AssertionError('inference consulted labels')):
-        assert sum(len(b['x']) for b in iter_recording(record))==9
+        inference=list(iter_recording(record))
+        assert sum(len(b['x']) for b in inference)==9
+        assert 'y' not in inference[0] and 'scoring_mask' not in inference[0]
+        assert 'annotation_segments' not in inference[0]['recording']
+        assert 'annotation_validation' not in inference[0]['recording']
 
 
 def test_stage_changes_do_not_change_inference_selection_or_signal(tmp_path):

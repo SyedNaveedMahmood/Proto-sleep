@@ -109,6 +109,10 @@ metrics MUST use scoring_mask; never compress unscored time into contiguous
 context. No default Pz-Oz input, added filter, resampling, waveform export or
 fitted normalization exists in P2.
 
+The default batch provenance join excludes annotation intervals, stage counts
+and scoring metadata. Include_labels=True is the explicit path to target fields;
+annotations cannot arrive inadvertently through inference batch metadata.
+
 `assign_subject_roles` accepts an explicit complete person-to-role map and
 reuses the audit split guards, adding duplicate identities/nights/paths/source
 checks. All nights stay together. `iter_development_split` opens train/val only

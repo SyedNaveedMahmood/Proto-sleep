@@ -224,6 +224,11 @@ def iter_recording(record, chunk_epochs=16, include_labels=False):
         proof.checked[str(Path(record['annotation_source']).resolve())]=record['annotation_stat_proof']
         proof.verify(record['annotation_source'],record['annotation_sha256'])
     targets=epoch_targets(record) if include_labels else None
+    # Provenance joins expose acquisition/identity only. Do not accidentally
+    # deliver annotation segments or stage counts through inference metadata.
+    provenance={k:record[k] for k in ['schema_version','study','subject_id','night',
+        'recording_id','recording_variant','path','source_sha256','annotation_source',
+        'annotation_sha256','signal_contract','epoch_grid']}
     with pyedflib.EdfReader(record['path']) as reader:
         for lo in range(0,grid['n_epochs'],int(chunk_epochs)):
             hi=min(grid['n_epochs'],lo+int(chunk_epochs)); count=(hi-lo)*3000
@@ -236,7 +241,7 @@ def iter_recording(record, chunk_epochs=16, include_labels=False):
             batch={'x':x,
                 'original_epoch_index':indices,'start_seconds':indices*30,'start_sample':indices*3000,
                 'physical_start_time':[ (dt.datetime.fromisoformat(contract['start_datetime'])+dt.timedelta(seconds=int(i)*30)).isoformat() for i in indices],
-                'recording':record}
+                'recording':provenance}
             if targets:
                 batch.update(zip(['y','scoring_mask','original_annotation_code','original_annotation_description','unscored_reason'],[v[lo:hi] for v in targets]))
             yield batch
