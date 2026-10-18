@@ -1,0 +1,94 @@
+{
+  "version": "mist-cove-phase2-synthetic-v2",
+  "scope": "SYNTHETIC_ONLY",
+  "seeds": [
+    123,
+    456,
+    789
+  ],
+  "tasks": [
+    "substitutable",
+    "complementary"
+  ],
+  "methods": [
+    "q1",
+    "availability",
+    "background",
+    "fixed_patch",
+    "rounded_q1"
+  ],
+  "train_size": 150,
+  "evaluation_size": 50,
+  "optimizer_steps": 180,
+  "learning_rate": 0.03,
+  "weight_decay": 0.0001,
+  "threads": 2,
+  "model": {
+    "samples": 3000,
+    "fs": 100,
+    "window": 200,
+    "stride": 100,
+    "event_budget": 4,
+    "concentration_floor": 0.35,
+    "noise_scale_uV": 5.0,
+    "min_rms_uV": 1e-05,
+    "event_scale": 8.0
+  },
+  "generator": {
+    "version": "known-components-phase2-v2",
+    "noise_std_uV": 1.0,
+    "amplitude_uV": [
+      20.0,
+      40.0
+    ],
+    "correlated_copies": 6,
+    "artifact_frequency_hz": 35.0,
+    "artifact_amplitude_multiplier": 2.0,
+    "single_factor_rule": "symmetric_random_surviving_factor"
+  },
+  "cases": [
+    "single",
+    "dual",
+    "redundant",
+    "correlated",
+    "distractor",
+    "competition",
+    "overlap"
+  ],
+  "audit_examples_per_case": 5,
+  "donors": [
+    "bridge",
+    "background",
+    "noise"
+  ],
+  "negative_control_donor": "phase_scramble",
+  "blend_samples": 20,
+  "rank_bin_uV": 0.5,
+  "stability": {
+    "noise_std_uV": 0.01,
+    "shift_samples": 5,
+    "physical_gain": 1.01,
+    "rank_jitter_uV": 0.01,
+    "calibration_gain": 1.7,
+    "calibration_offset_uV": 4.0,
+    "tie_copies": 8
+  },
+  "budgets": [
+    2,
+    4,
+    8
+  ],
+  "budget_probe_per_event_scale": 2.0,
+  "criteria": {
+    "reconciliation_max_abs": 1e-05,
+    "W1_reselection_effect_min": 0.05,
+    "W2_joint_minus_individual_min": 0.25,
+    "W3_jaccard_distance_reduction_min": 0.05,
+    "W3_clean_accuracy_loss_max": 0.02,
+    "W4_eraser_donor_spread_max": 0.25,
+    "known_calibration_logit_difference_max": 1e-05
+  },
+  "real_data_access": false,
+  "reserved_access": false,
+  "external_access": false
+}
