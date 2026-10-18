@@ -13,13 +13,15 @@ from mist_cove.phase2.provenance import implementation_snapshot, verify_preregis
 
 def main():
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument("--output", type=Path, default=ROOT / "mist_transfer_runs/mist_cove/phase2_v1/results.json")
+    p.add_argument("--protocol-version", type=int, choices=(1, 2), default=1)
+    p.add_argument("--output", type=Path)
     args = p.parse_args()
+    args.output = args.output or ROOT / f"mist_transfer_runs/mist_cove/phase2_v{args.protocol_version}/results.json"
     if args.output.exists():
         raise FileExistsError("refusing to overwrite a research receipt")
-    preregistration = verify_preregistration()
+    preregistration = verify_preregistration(args.protocol_version)
     code = implementation_snapshot()
-    config_path = ROOT / "configs/mist_cove_phase2_synthetic_v1.json"
+    config_path = ROOT / f"configs/mist_cove_phase2_synthetic_v{args.protocol_version}.json"
     config = json.loads(config_path.read_text())
     report = run(config, progress=lambda line: print(line, flush=True))
     if implementation_snapshot() != code:

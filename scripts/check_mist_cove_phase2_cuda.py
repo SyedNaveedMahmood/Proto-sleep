@@ -30,7 +30,7 @@ def main():
         raise ValueError("allocator cap is too small for the declared batch-16 checks")
     free, total = torch.cuda.mem_get_info()
     if free < (a.allocator_cap_mib + 256) * 1024 * 1024:
-        raise RuntimeError("CUDA BLOCKED: insufficient free memory alongside existing processes; no CPU fallback")
+        raise RuntimeError(f"CUDA BLOCKED: {free / 1024**2:.1f} MiB free after context initialization; requires {a.allocator_cap_mib + 256} MiB; no CPU fallback")
     torch.cuda.set_per_process_memory_fraction(min(a.allocator_cap_mib * 1024 * 1024 / total, 1.))
     torch.set_num_threads(2)
     initial_code = implementation_snapshot()

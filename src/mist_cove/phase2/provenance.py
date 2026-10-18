@@ -52,8 +52,10 @@ def git_head():
     return subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
 
 
-def verify_preregistration():
-    path = ROOT / "experiments/mist_cove/phase2_preregistration_v1.json"
+def verify_preregistration(version=1):
+    if version not in {1, 2}:
+        raise ValueError("unknown preregistration version")
+    path = ROOT / f"experiments/mist_cove/phase2_preregistration_v{version}.json"
     proof = json.loads(path.read_text())
     for name, expected in proof["sha256"].items():
         if file_sha(ROOT / name) != expected:

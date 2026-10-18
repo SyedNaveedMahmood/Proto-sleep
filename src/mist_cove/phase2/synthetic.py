@@ -34,6 +34,12 @@ def make_fixtures(n, seed, task, case, generator):
         phase_b = 2 * torch.pi * torch.rand((), generator=g)
         a = amplitude * envelope * torch.sin(2 * torch.pi * fa * t + phase_a)
         b = amplitude * envelope * torch.sin(2 * torch.pi * fb * t + phase_b)
+        if (generator["version"] == "known-components-phase2-v2" and task == "complementary"
+                and case in {"single", "redundant", "correlated", "distractor", "ties"}):
+            # The surviving role is unobserved and randomized independently of
+            # label. v1's fixed-A removal policy did not enforce this ambiguity.
+            if bool(torch.randint(2, (), generator=g)):
+                a = b
         if case in {"single", "distractor"}:
             waves = [a]
         elif case == "redundant":

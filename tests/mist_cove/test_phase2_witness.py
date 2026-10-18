@@ -163,3 +163,21 @@ def test_preregistration_and_config_validation_are_metadata_only(config):
         validate_config(config)
         config["real_data_access"] = True
         with pytest.raises(ValueError, match="prohibited"): validate_config(config)
+
+
+def test_corrected_complementary_single_factor_is_symmetric_and_versions_match():
+    from mist_cove.model import spectral_features
+    c = json.loads((ROOT / "configs/mist_cove_phase2_synthetic_v2.json").read_text())
+    validate_config(c); verify_preregistration(2)
+    rows = make_fixtures(100, 51, "complementary", "single", c["generator"])
+    retained_a, retained_b = 0, 0
+    for row in rows:
+        lo, hi = row.diagnostic_intervals[0]
+        bands, _, _ = spectral_features(row.x[0, 0, lo:hi][None])
+        band = int(bands.argmax())
+        assert band in {row.label, (row.label + 1) % 5}
+        retained_a += band == row.label
+        retained_b += band == (row.label + 1) % 5
+    assert retained_a > 20 and retained_b > 20
+    c["generator"]["version"] = "known-components-phase2-v1"
+    with pytest.raises(ValueError, match="versions disagree"): validate_config(c)

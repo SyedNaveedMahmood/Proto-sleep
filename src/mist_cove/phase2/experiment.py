@@ -15,8 +15,11 @@ from .synthetic import make_fixtures, training_batch, transformed
 
 
 def validate_config(c):
-    if c.get("version") != "mist-cove-phase2-synthetic-v1" or c.get("scope") != "SYNTHETIC_ONLY":
+    if c.get("version") not in {"mist-cove-phase2-synthetic-v1", "mist-cove-phase2-synthetic-v2"} or c.get("scope") != "SYNTHETIC_ONLY":
         raise ValueError("Phase II synthetic configuration required")
+    expected_generator = "known-components-phase2-v2" if c["version"].endswith("v2") else "known-components-phase2-v1"
+    if c["generator"]["version"] != expected_generator:
+        raise ValueError("generator and protocol versions disagree")
     if any(c.get(key) is not False for key in ("real_data_access", "reserved_access", "external_access")):
         raise ValueError("real data access is prohibited")
     if c["seeds"] != [123, 456, 789] or c["methods"] != list(METHODS) or c["tasks"] != ["substitutable", "complementary"]:
