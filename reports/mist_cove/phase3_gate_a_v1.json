@@ -1,0 +1,698 @@
+{
+  "phase": "MIST-COVE-PHASE-III-GATE-A-V1",
+  "status": "ALL_SIX_PAUSED_GATE_B_NOT_AUTHORIZED",
+  "authorization": "ACTUAL_USER_APPROVE_GATE_A_ONLY",
+  "proposal_sha256": "8282be8a6d7124a0fd6e83a4ae8b8e273919fc0b7976a756389e8088d3ec38b0",
+  "actual_user_review_sha256": "d2c38ce22d1f6460eab84504a764173c8c754b3fa1617c8897a3381b34bead62",
+  "authorization_message_sha256": "ca6f162c5cee85fe79ed9e806f6c41dcda78a3f62c972ef478296360a57043f3",
+  "implementation_sha256": "d08254fade1b8ba91715143c44c7043f88956eba937984557a011609f0a6bda9",
+  "git_head_at_audit": "58a12895bc8ea363041a1e6e91f0b7c065346267",
+  "config_canonical_sha256": "af81748149c1bfb3c18dcf5c009c0a9f95bcabdc5a623ecc1e2b7d0b7420df46",
+  "config_file_sha256": "525fc8152e78219a9bee51ad84a4d067761b22c873d10199d25e426ff012883d",
+  "split_fingerprint": "3e7a7260aae50ca522752f1cede41246daf1b2f6a8fd482800cfda97b4564e84",
+  "split_file_sha256": "1162a41098bb8a724a0b8bf8bb320469c2b1c02bb802d9b5cf7f2e49d2da54e5",
+  "grid": {
+    "smoke": false,
+    "train_subjects": 15,
+    "train_recordings": 29,
+    "train_physical_epochs": 79984,
+    "train_scored_epochs": 79025,
+    "val_subjects": 4,
+    "val_recordings": 8,
+    "val_physical_epochs": 21796,
+    "val_scored_epochs": 21789,
+    "optimizer_steps_per_epoch": 4978,
+    "reserved_access": false
+  },
+  "source_normalization_bank_hashes_reverified": true,
+  "environment_unchanged": true,
+  "all_checkpoint_seals_reverified": true,
+  "all_six_at_epoch_one": true,
+  "all_training_configs_unchanged": true,
+  "cuda_exact_resume_evidence": "Reviewed synthetic six-method receipt remains valid; real runs were not advanced to test resume",
+  "environment": {
+    "python": "3.12.9",
+    "torch": "2.5.1",
+    "numpy": "1.26.4",
+    "cuda_build": "12.1",
+    "gpu_name": "NVIDIA GeForce RTX 4080 SUPER",
+    "gpu_total_memory_bytes": 16718168064,
+    "gpu_capability": [
+      8,
+      9
+    ],
+    "cudnn": 90100,
+    "threads": 2,
+    "deterministic": true,
+    "tf32_matmul": false,
+    "tf32_cudnn": false,
+    "cublas_workspace_config": ":4096:8"
+  },
+  "total_optimizer_updates": 29868,
+  "total_measured_epoch_seconds": 280.15569068398327,
+  "maximum_budget_estimated_gpu_hours": 14.007784534199164,
+  "maximum_budget_ceiling_gpu_hours": 24,
+  "budget_gate_status": "PASS",
+  "gate_b_authorized": false,
+  "gate_b_started": false,
+  "rows": [
+    {
+      "variant": "q1",
+      "seed": 123,
+      "epoch": 1,
+      "status": "PAUSED_NOT_COMPLETE",
+      "parameters": 75,
+      "trainable_parameters": 75,
+      "optimizer_updates": 4978,
+      "train_scored_epochs": 79025,
+      "val_physical_epochs": 21796,
+      "val_scored_epochs": 21789,
+      "train_seconds": 27.767492945989943,
+      "validation_seconds": 6.626667265009019,
+      "epoch_seconds": 34.400921613996616,
+      "checkpoint_write_seconds": 0.0019924689986510202,
+      "train_io_seconds": 6.148307807321544,
+      "val_io_seconds": 1.6670744090224616,
+      "train_scored_epochs_per_second": 2845.9537255923724,
+      "val_physical_epochs_per_second": 3289.1345118669296,
+      "peak_gpu_allocated_bytes": 69195776,
+      "peak_gpu_reserved_bytes": 71303168,
+      "peak_process_rss_KiB": 1453696,
+      "maximum_grad_norm": 23.453590393066406,
+      "finite_loss_logits_gradients_model_optimizer": true,
+      "rng_state_present": true,
+      "seal_identity_matches_current": true,
+      "first_epoch_val_metrics": {
+        "mean_subject_macro_f1": 0.15996934189194667,
+        "macro_f1": 0.1602508733804638,
+        "accuracy": 0.6684106659323512,
+        "kappa": 0.0,
+        "balanced_accuracy": 0.2,
+        "nll": 1.0618698753102294,
+        "brier_score": 0.5181529045532316,
+        "ece_15_equal_width_bins": 0.19110124259797334,
+        "per_stage_f1": [
+          0.8012543669023189,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "per_stage_recall": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "confusion_matrix": [
+          [
+            14564,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            606,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            3703,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1256,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1660,
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      "prediction_counts": [
+        21789,
+        0,
+        0,
+        0,
+        0
+      ],
+      "largest_prediction_class_fraction": 1.0,
+      "artifact_sha256": {
+        "last.pt": "46b6510e9a73b84bf672d20f020daf848d4f92448531c04d29a6bec3090ddd93",
+        "best.pt": "b316f8dd3b637de9f1bd0bcc29869003e5f93f4e207ce55b5f01abdc956d2ab7",
+        "history.csv": "03e6e75139d52b845f7dd0df91c2b78ac85862de0fd54070a842c44ea925260b",
+        "provenance.json": "299ae1d6f8907132e556d6b90bbc59436951c2277aabe773b866447807a4d11a",
+        "EPOCH_SEAL.json": "c58ec2582cc8ee9c6a29988731576d926ae8a213d1bbde423b616fb407aa8d29",
+        "PAUSED.json": "8ba80b5ab2d5bf0c4242882ad32e1aa7dde5b4a6bfc48cba2b2d46079b38e4e6",
+        "gate_a_boundary.json": "c58ec2582cc8ee9c6a29988731576d926ae8a213d1bbde423b616fb407aa8d29"
+      }
+    },
+    {
+      "variant": "availability",
+      "seed": 123,
+      "epoch": 1,
+      "status": "PAUSED_NOT_COMPLETE",
+      "parameters": 75,
+      "trainable_parameters": 75,
+      "optimizer_updates": 4978,
+      "train_scored_epochs": 79025,
+      "val_physical_epochs": 21796,
+      "val_scored_epochs": 21789,
+      "train_seconds": 27.686165932987933,
+      "validation_seconds": 6.654989105998538,
+      "epoch_seconds": 34.36411752899585,
+      "checkpoint_write_seconds": 0.0022640569950453937,
+      "train_io_seconds": 6.1503199522412615,
+      "val_io_seconds": 1.662975873114192,
+      "train_scored_epochs_per_second": 2854.3136016476046,
+      "val_physical_epochs_per_second": 3275.1368413742352,
+      "peak_gpu_allocated_bytes": 69195776,
+      "peak_gpu_reserved_bytes": 71303168,
+      "peak_process_rss_KiB": 1453920,
+      "maximum_grad_norm": 20.298032760620117,
+      "finite_loss_logits_gradients_model_optimizer": true,
+      "rng_state_present": true,
+      "seal_identity_matches_current": true,
+      "first_epoch_val_metrics": {
+        "mean_subject_macro_f1": 0.15996934189194667,
+        "macro_f1": 0.1602508733804638,
+        "accuracy": 0.6684106659323512,
+        "kappa": 0.0,
+        "balanced_accuracy": 0.2,
+        "nll": 1.0246196738745392,
+        "brier_score": 0.4851773491969803,
+        "ece_15_equal_width_bins": 0.11440705543589891,
+        "per_stage_f1": [
+          0.8012543669023189,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "per_stage_recall": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "confusion_matrix": [
+          [
+            14564,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            606,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            3703,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1256,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1660,
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      "prediction_counts": [
+        21789,
+        0,
+        0,
+        0,
+        0
+      ],
+      "largest_prediction_class_fraction": 1.0,
+      "artifact_sha256": {
+        "last.pt": "47935542ae5899e076c9fe2357920b4837fd212a7d8e4bc1003bfbae72ad47c4",
+        "best.pt": "898da154ac616c6c88cd04f548c4a19f0f357136d61c7c58d5eef5e799bc6cb3",
+        "history.csv": "7729d83406cb855949cd7c18921c56ade347f3c696a463679ff81f2b2bb07c60",
+        "provenance.json": "3443430cc37880225c44102c53a9627235faef1cca28a1fc12d6970ec27bcbb9",
+        "EPOCH_SEAL.json": "df4bc58e17ba333902c0b8af908e3a27b6146f64c787f4956f7581d95cb67b62",
+        "PAUSED.json": "71d9831d2c01fcd838d8795a090e28599fe81f5c4a2e021f203a7767e010e9e7",
+        "gate_a_boundary.json": "df4bc58e17ba333902c0b8af908e3a27b6146f64c787f4956f7581d95cb67b62"
+      }
+    },
+    {
+      "variant": "background",
+      "seed": 123,
+      "epoch": 1,
+      "status": "PAUSED_NOT_COMPLETE",
+      "parameters": 75,
+      "trainable_parameters": 75,
+      "optimizer_updates": 4978,
+      "train_scored_epochs": 79025,
+      "val_physical_epochs": 21796,
+      "val_scored_epochs": 21789,
+      "train_seconds": 27.14748009199684,
+      "validation_seconds": 6.727353227004642,
+      "epoch_seconds": 33.88127508400066,
+      "checkpoint_write_seconds": 0.00185458900523372,
+      "train_io_seconds": 6.141601373630692,
+      "val_io_seconds": 1.6663899500563275,
+      "train_scored_epochs_per_second": 2910.9515775387495,
+      "val_physical_epochs_per_second": 3239.9071766452616,
+      "peak_gpu_allocated_bytes": 69192704,
+      "peak_gpu_reserved_bytes": 71303168,
+      "peak_process_rss_KiB": 1461536,
+      "maximum_grad_norm": 2.6516613960266113,
+      "finite_loss_logits_gradients_model_optimizer": true,
+      "rng_state_present": true,
+      "seal_identity_matches_current": true,
+      "first_epoch_val_metrics": {
+        "mean_subject_macro_f1": 0.15996934189194667,
+        "macro_f1": 0.1602508733804638,
+        "accuracy": 0.6684106659323512,
+        "kappa": 0.0,
+        "balanced_accuracy": 0.2,
+        "nll": 0.9853724777613715,
+        "brier_score": 0.48903903886466954,
+        "ece_15_equal_width_bins": 0.11351621200346923,
+        "per_stage_f1": [
+          0.8012543669023189,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "per_stage_recall": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "confusion_matrix": [
+          [
+            14564,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            606,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            3703,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1256,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1660,
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      "prediction_counts": [
+        21789,
+        0,
+        0,
+        0,
+        0
+      ],
+      "largest_prediction_class_fraction": 1.0,
+      "artifact_sha256": {
+        "last.pt": "472ecbfd5951b189576f157dfceb5901f8fcb9c3dcbfd88c9ba47ae25e0781d5",
+        "best.pt": "f1831515920da23c0fc8233318aac8a8a4972b4a005151785ee32d70d65efa00",
+        "history.csv": "b9bed75c721029ab4430d9424b1bc81a11e82f3a37de6e2de1bb4f2b929c3e58",
+        "provenance.json": "b45693710c86947cb72302e1fd4e6d7bef169bf39d6f76b3e69949e773ca06e1",
+        "EPOCH_SEAL.json": "e884e5aebb763fcaa35b8ea3f47fd3881cd6f9a406d5627a1688a61c813db1e3",
+        "PAUSED.json": "a931b95e2d3df940874e812eb81d855aae1e47343f190aaf0b6a5a2077f9763a",
+        "gate_a_boundary.json": "e884e5aebb763fcaa35b8ea3f47fd3881cd6f9a406d5627a1688a61c813db1e3"
+      }
+    },
+    {
+      "variant": "rounded_q1",
+      "seed": 123,
+      "epoch": 1,
+      "status": "PAUSED_NOT_COMPLETE",
+      "parameters": 75,
+      "trainable_parameters": 75,
+      "optimizer_updates": 4978,
+      "train_scored_epochs": 79025,
+      "val_physical_epochs": 21796,
+      "val_scored_epochs": 21789,
+      "train_seconds": 27.650733141999808,
+      "validation_seconds": 6.625058501987951,
+      "epoch_seconds": 34.29854359400633,
+      "checkpoint_write_seconds": 0.0019806900090770796,
+      "train_io_seconds": 6.174554301891476,
+      "val_io_seconds": 1.6639786511514103,
+      "train_scored_epochs_per_second": 2857.9712369349713,
+      "val_physical_epochs_per_second": 3289.9332124327316,
+      "peak_gpu_allocated_bytes": 69195776,
+      "peak_gpu_reserved_bytes": 71303168,
+      "peak_process_rss_KiB": 1461536,
+      "maximum_grad_norm": 23.45479965209961,
+      "finite_loss_logits_gradients_model_optimizer": true,
+      "rng_state_present": true,
+      "seal_identity_matches_current": true,
+      "first_epoch_val_metrics": {
+        "mean_subject_macro_f1": 0.160135217766853,
+        "macro_f1": 0.160496100474006,
+        "accuracy": 0.6684565606498692,
+        "kappa": 0.00022035916021509238,
+        "balanced_accuracy": 0.20012048192771084,
+        "nll": 1.0617154805295135,
+        "brier_score": 0.5182009318629602,
+        "ece_15_equal_width_bins": 0.191046322741774,
+        "per_stage_f1": [
+          0.8012764084507042,
+          0.0,
+          0.0,
+          0.0,
+          0.0012040939193257074
+        ],
+        "per_stage_recall": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0006024096385542169
+        ],
+        "confusion_matrix": [
+          [
+            14564,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            606,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            3703,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1256,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1659,
+            0,
+            0,
+            0,
+            1
+          ]
+        ]
+      },
+      "prediction_counts": [
+        21788,
+        0,
+        0,
+        0,
+        1
+      ],
+      "largest_prediction_class_fraction": 0.999954105282482,
+      "artifact_sha256": {
+        "last.pt": "90ab5f42c6f90d91d89934e17951d510222a74ba0a9027a4d7ce2335e9f8e434",
+        "best.pt": "4b2769d42fc324d6a68725cc3241354251cb5686636830eda8161c4bc88b3c40",
+        "history.csv": "65f7281513569de54c2ee9795c0ffe7fdeb432d49218e7a96f5a900bbd039fb6",
+        "provenance.json": "887c61a2a93e2c0cfeb5c4ab331baa780bc48573cf8540fca5141e19df6d82b4",
+        "EPOCH_SEAL.json": "99db2320dedad33aef4952a2b61c30cb2ac823560d463a960fe8a866f317a5ff",
+        "PAUSED.json": "2b3f59bf8fdc7744815a2e9e0bd79ff57b7a185480bc1fca7f6aea07b169de82",
+        "gate_a_boundary.json": "99db2320dedad33aef4952a2b61c30cb2ac823560d463a960fe8a866f317a5ff"
+      }
+    },
+    {
+      "variant": "raw_context",
+      "seed": 123,
+      "epoch": 1,
+      "status": "PAUSED_NOT_COMPLETE",
+      "parameters": 34197,
+      "trainable_parameters": 33957,
+      "optimizer_updates": 4978,
+      "train_scored_epochs": 79025,
+      "val_physical_epochs": 21796,
+      "val_scored_epochs": 21789,
+      "train_seconds": 49.29470357399259,
+      "validation_seconds": 4.993626219002181,
+      "epoch_seconds": 54.30275440499827,
+      "checkpoint_write_seconds": 0.005393940999056213,
+      "train_io_seconds": 6.52670449326979,
+      "val_io_seconds": 1.6612469631945714,
+      "train_scored_epochs_per_second": 1603.1134030734454,
+      "val_physical_epochs_per_second": 4364.764009981357,
+      "peak_gpu_allocated_bytes": 194019840,
+      "peak_gpu_reserved_bytes": 243269632,
+      "peak_process_rss_KiB": 1733084,
+      "maximum_grad_norm": 116.13584899902344,
+      "finite_loss_logits_gradients_model_optimizer": true,
+      "rng_state_present": true,
+      "seal_identity_matches_current": true,
+      "first_epoch_val_metrics": {
+        "mean_subject_macro_f1": 0.5180510585973684,
+        "macro_f1": 0.5586188407716303,
+        "accuracy": 0.8602505851576484,
+        "kappa": 0.7084580245785148,
+        "balanced_accuracy": 0.5458070147190626,
+        "nll": 0.5632578094571596,
+        "brier_score": 0.22092732519609237,
+        "ece_15_equal_width_bins": 0.08584696142269399,
+        "per_stage_f1": [
+          0.9549120719291286,
+          0.0,
+          0.753362122146823,
+          0.7306176084099869,
+          0.3542024013722127
+        ],
+        "per_stage_recall": [
+          0.9917605053556715,
+          0.0,
+          0.824466648663246,
+          0.6640127388535032,
+          0.24879518072289156
+        ],
+        "confusion_matrix": [
+          [
+            14444,
+            0,
+            52,
+            22,
+            46
+          ],
+          [
+            173,
+            0,
+            246,
+            17,
+            170
+          ],
+          [
+            466,
+            0,
+            3053,
+            141,
+            43
+          ],
+          [
+            123,
+            0,
+            299,
+            834,
+            0
+          ],
+          [
+            482,
+            0,
+            752,
+            13,
+            413
+          ]
+        ]
+      },
+      "prediction_counts": [
+        15688,
+        0,
+        4402,
+        1027,
+        672
+      ],
+      "largest_prediction_class_fraction": 0.7199963284225985,
+      "artifact_sha256": {
+        "last.pt": "da21958ef8836ab9732a724fef5bd041efdc7496e9ce6a874ecf0e6668f0f1f2",
+        "best.pt": "eb12e1d9ed7e7abcf0afeaa61c5d731f3517f1498b77767347065bda0bb31b48",
+        "history.csv": "b79b870a7f0339cb27dceda7fbe42ef820e90c77f90e6357d61924d46ccfb12a",
+        "provenance.json": "520bf9d33ef1d5814c16251c0cc94ff36a46d6f62eef79751a8d342355bd8312",
+        "EPOCH_SEAL.json": "b1c2899e0beb02d8b34483062ff944f7403297eb373eaa9bb816d00c55f7674b",
+        "PAUSED.json": "443eaa0a004276365c012e66cfee930c96aabaa8ebde9f24283729db5eb1551b",
+        "gate_a_boundary.json": "b1c2899e0beb02d8b34483062ff944f7403297eb373eaa9bb816d00c55f7674b"
+      }
+    },
+    {
+      "variant": "evidence",
+      "seed": 123,
+      "epoch": 1,
+      "status": "PAUSED_NOT_COMPLETE",
+      "parameters": 13556,
+      "trainable_parameters": 13556,
+      "optimizer_updates": 4978,
+      "train_scored_epochs": 79025,
+      "val_physical_epochs": 21796,
+      "val_scored_epochs": 21789,
+      "train_seconds": 78.2193229659897,
+      "validation_seconds": 10.66201694800111,
+      "epoch_seconds": 88.90807845798554,
+      "checkpoint_write_seconds": 0.005053458997281268,
+      "train_io_seconds": 6.687897938521928,
+      "val_io_seconds": 1.6967782572755823,
+      "train_scored_epochs_per_second": 1010.3002302175462,
+      "val_physical_epochs_per_second": 2044.2661183432338,
+      "peak_gpu_allocated_bytes": 195537408,
+      "peak_gpu_reserved_bytes": 257949696,
+      "peak_process_rss_KiB": 1782840,
+      "maximum_grad_norm": 45.21136474609375,
+      "finite_loss_logits_gradients_model_optimizer": true,
+      "rng_state_present": true,
+      "seal_identity_matches_current": true,
+      "first_epoch_val_metrics": {
+        "mean_subject_macro_f1": 0.42599140587434975,
+        "macro_f1": 0.4715802764409827,
+        "accuracy": 0.835605121850475,
+        "kappa": 0.6441103946801058,
+        "balanced_accuracy": 0.46866972250878264,
+        "nll": 0.5064502847610679,
+        "brier_score": 0.24009989949387775,
+        "ece_15_equal_width_bins": 0.03724066877771063,
+        "per_stage_f1": [
+          0.9386696072389972,
+          0.0,
+          0.7301247771836007,
+          0.6398348813209495,
+          0.04927211646136618
+        ],
+        "per_stage_recall": [
+          0.9936143916506455,
+          0.0,
+          0.8295976235484742,
+          0.49363057324840764,
+          0.02650602409638554
+        ],
+        "confusion_matrix": [
+          [
+            14471,
+            0,
+            62,
+            0,
+            31
+          ],
+          [
+            309,
+            0,
+            244,
+            9,
+            44
+          ],
+          [
+            572,
+            0,
+            3072,
+            52,
+            7
+          ],
+          [
+            164,
+            0,
+            472,
+            620,
+            0
+          ],
+          [
+            753,
+            0,
+            862,
+            1,
+            44
+          ]
+        ]
+      },
+      "prediction_counts": [
+        16269,
+        0,
+        4712,
+        682,
+        126
+      ],
+      "largest_prediction_class_fraction": 0.7466611593005645,
+      "artifact_sha256": {
+        "last.pt": "98777889ba36bf433a34590d2a5d0840605686af653e4220ac1010ae6b720049",
+        "best.pt": "e3cdf09c4eada0ab25ccda95f8a50658e7d10a9ddc4e192ce0029aa474b101ab",
+        "history.csv": "cd85be46017ba01496415a3027b544a3e4e905f65e5a03ccef87c9bcb5ea8e8d",
+        "provenance.json": "6e477d733233fe17e9260c8901b66ae7b8736769c4200c05fe883ef4e1dbca3a",
+        "EPOCH_SEAL.json": "c7273464b497dfa18ebdd12bc2a2e8dd2d4f8ca0d289b56e23de1b85f7047fa1",
+        "PAUSED.json": "b4fb8702d275a30a8a1236876c02db8064ee10995b0c819b893422b086b4b406",
+        "gate_a_boundary.json": "c7273464b497dfa18ebdd12bc2a2e8dd2d4f8ca0d289b56e23de1b85f7047fa1"
+      }
+    }
+  ],
+  "audit_wall_seconds": 1.4945090090041049,
+  "reserved_access": false,
+  "st_access": false,
+  "shhs_access": false,
+  "scope_note": "First-epoch resource benchmark, not completed experiments or independent validation",
+  "gate_a_console_sha256": "0dc80ccb24ad51b672f840052062ac1638936c0cc3c6301382192f7dab9a2d34",
+  "gate_a_receipt_sha256": "406cd4963b58e78359f6c31a702046dfd91372a219f4ecaf332db541e4d2d6f2",
+  "audit_script_sha256": "fcc3e61e952857f28d1298e3a2a513b71941b0a1aba9f1e2df955fd11dbe069d"
+}
