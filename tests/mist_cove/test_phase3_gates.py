@@ -136,3 +136,44 @@ def test_recorded_original_path_not_silently_replaced(tmp_path):
     with patch.object(Path, 'open', side_effect=AssertionError('reserved file opened')):
         with pytest.raises(ValueError, match='unauthorized role'):
             s.verify_source_files(record)
+
+
+@pytest.mark.parametrize('epoch_seconds,passes', [(10., True), (1000., False)])
+def test_mock_reviewed_gate_a_and_budget_enforced_before_gate_b_source_access(tmp_path, monkeypatch, config, epoch_seconds, passes):
+    import torch
+    p, proposal, review = tmp_path / 'config.json', tmp_path / 'proposal.json', tmp_path / 'review.json'
+    p.write_text(json.dumps(config)); proposal.write_text('{}'); review.write_text('{}')
+    monkeypatch.setattr(s, 'PRIVATE', tmp_path)
+    monkeypatch.setattr(s, 'configure_precision', lambda *a: None)
+    monkeypatch.setattr(s, 'require_idle_gpu', lambda: {})
+    monkeypatch.setattr(s, 'validate_review', lambda *a: {'config_sha256': s.digest(config)})
+    loader = Mock(return_value=([], [], {}, {123: {}, 456: {}, 789: {}}, {}, {}))
+    monkeypatch.setattr(s, 'load_sources', loader)
+    monkeypatch.setattr(s, 'build_adapter', lambda *a: torch.nn.Linear(1, 1))
+    calls = []
+    def trainer(model, train, val, cfg, run, **kwargs):
+        calls.append((cfg, kwargs, run))
+        if kwargs['pause_after_epoch'] == 1:
+            run.mkdir(parents=True)
+            (run / 'EPOCH_SEAL.json').write_text(json.dumps({'resources': {'seconds': epoch_seconds}, 'checkpoint_write_seconds': 0}))
+            raise s.EpochPaused('mock pause')
+        return None, {'mock': True}, []
+    monkeypatch.setattr(s, 'sealed_train', trainer)
+    monkeypatch.setattr(s, 'run_result', lambda run, seed, name, model, metrics: {'seed': seed, 'variant': name})
+    output = tmp_path / 'runs'
+    a = s.run_reviewed(p, proposal, review, output, gate='a', authorized=True)
+    assert len(calls) == 6
+    assert a['maximum_gpu_hours'] == 180 * 6 * epoch_seconds / 3600
+    assert (a['status'] == 'PASS') is passes
+    loader.reset_mock(); calls.clear()
+    if not passes:
+        with pytest.raises(ValueError, match='Gate A budget'):
+            s.run_reviewed(p, proposal, review, output, gate='b', authorized=True)
+        loader.assert_not_called()
+        assert calls == []
+    else:
+        b = s.run_reviewed(p, proposal, review, output, gate='b', authorized=True)
+        assert len(b['runs']) == len(calls) == 18
+        assert all(cfg.epochs == 60 and cfg.patience == 12 and cfg.core_epochs == cfg.encode_batch == 16 for cfg, kw, run in calls)
+        assert all(kw['resume'] for cfg, kw, run in calls[:6])
+        assert all(not kw['resume'] for cfg, kw, run in calls[6:])

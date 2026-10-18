@@ -309,6 +309,36 @@ def launch_proposal(preflight_path, cpu_path, cuda_path, output):
     return proposal
 
 
+def run_result(run, seed, name, model, metrics):
+    """Read only our just-completed, digest-sealed trusted checkpoint."""
+    seal = json.loads((run / 'COMPLETE_SEAL.json').read_text())
+    if file_sha(run / 'last.pt') != seal['outputs']['last.pt']:
+        raise ValueError('completed checkpoint digest changed before resource extraction')
+    from mist_evidence.runtime import load_trusted
+    checkpoint = load_trusted(run / 'last.pt')
+    history = checkpoint['history']
+    counts = np.asarray(metrics['confusion_matrix']).sum(0)
+    participants = list(metrics['subject_macro_f1'].values())
+    return {'seed': seed, 'variant': name, 'metrics': metrics,
+            'parameters': sum(p.numel() for p in model.parameters()),
+            'trainable_parameters': sum(p.numel() for p in model.parameters() if p.requires_grad),
+            'best_epoch': checkpoint['best_epoch'], 'actual_epochs': checkpoint['epoch'],
+            'optimizer_steps': sum(h['optimizer_steps'] for h in history),
+            'epoch_wall_seconds_excluding_checkpoint_writes': sum(h['seconds'] for h in history),
+            'train_seconds': sum(h['train_seconds'] for h in history),
+            'validation_seconds': sum(h['validation_seconds'] for h in history),
+            'train_io_seconds': sum(h['train_io_seconds'] for h in history),
+            'val_io_seconds': sum(h['val_io_seconds'] for h in history),
+            'peak_gpu_allocated_bytes': max(h['peak_gpu_allocated_bytes'] for h in history),
+            'peak_gpu_reserved_bytes': max(h['peak_gpu_reserved_bytes'] for h in history),
+            'peak_process_rss_KiB': max(h['peak_process_rss_KiB'] for h in history),
+            'prediction_counts': counts.tolist(), 'one_class_prediction': bool((counts > 0).sum() == 1),
+            'largest_class_fraction': float(counts.max() / counts.sum()),
+            'participant_variation': {'n': len(participants), 'sd': float(np.std(participants, ddof=1)),
+                                      'minimum': min(participants), 'maximum': max(participants)},
+            'complete_seal': file_proof(run / 'COMPLETE_SEAL.json')}
+
+
 def run_reviewed(config_path, proposal_path, review_path, output, *, gate, authorized=False):
     if not authorized:
         raise ValueError('explicit source authorization required before any file access')
@@ -324,15 +354,15 @@ def run_reviewed(config_path, proposal_path, review_path, output, *, gate, autho
     output.mkdir(parents=True, exist_ok=True)
     with (PRIVATE / 'gpu.writer.lock').open('a') as lock:
         fcntl.flock(lock.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
-        train, val, norm, banks, grid, proofs = load_sources(c)
-        provenance = {'scope': 'SC_TRAIN_VAL_ONLY', 'config': c, 'reviewed_proposal_sha256': file_sha(proposal_path),
-                      'grid': grid, 'proofs': proofs}
         if gate == 'b':
             marker = json.loads((output / 'gate_a.json').read_text())
             if marker['proposal_sha256'] != file_sha(proposal_path) or marker['status'] != 'PASS' or marker['maximum_gpu_hours'] > 24:
                 raise ValueError('Gate A budget/identity did not pass')
             for proof in marker['boundaries'].values():
                 check_proof(proof)
+        train, val, norm, banks, grid, proofs = load_sources(c)
+        provenance = {'scope': 'SC_TRAIN_VAL_ONLY', 'config': c, 'reviewed_proposal_sha256': file_sha(proposal_path),
+                      'grid': grid, 'proofs': proofs}
         results, durations, boundaries = [], [], {}
         for seed in ([123] if gate == 'a' else c['seeds']):
             for name in VARIANTS:
@@ -346,8 +376,7 @@ def run_reviewed(config_path, proposal_path, review_path, output, *, gate, autho
                     _, metrics, _ = sealed_train(model, train, val, training_config(original, seed), run,
                         provenance=provenance, device='cuda', bank=banks[seed], resume=(run / 'EPOCH_SEAL.json').exists(),
                         pause_after_epoch=1 if gate == 'a' else None)
-                    results.append({'seed': seed, 'variant': name, 'metrics': metrics,
-                                    'parameters': sum(p.numel() for p in model.parameters())})
+                    results.append(run_result(run, seed, name, model, metrics))
                 except EpochPaused:
                     if gate != 'a':
                         raise
