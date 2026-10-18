@@ -1,0 +1,9 @@
+# Overlay in a NEW --system-site-packages venv; never modify the historical prefix.
+# Shared Python 3.12.9, torch 2.5.1/CUDA 12.1, scipy 1.15.2, sklearn 1.7.2.
+# All actual imports/metadata are checked and recorded before source preflight.
+numpy==1.26.4
+pytest==8.4.2
+pyEDFlib==0.1.42
+mne==1.10.2
+matplotlib==3.10.7
+contourpy==1.3.3
