@@ -1,0 +1,27 @@
+# Future experiment decision receipt (copy as new version; do not overwrite)
+
+- Decision ID:
+- Date/UTC:
+- Requester and explicit phase authorization:
+- Allowed cohort/role:
+- Prohibited cohort/role:
+- Base branch and exact implementation commit:
+- Frozen source split fingerprint:
+- Config and SHA256:
+- Data-source identity hashes (local secure report, no raw private paths published):
+- Precommitted hypotheses (H1/H2/H3/H4):
+- Alternatives/controls and capacity-compute parity:
+- Synthetic correctness tests (pass/fail/skip):
+- Correctness gate and exact CUDA resume status:
+- Clean baseline primary metric and uncertainty:
+- Preregistered primary endpoint:
+- Prespecified practical/statistical superiority criterion:
+- Risk–coverage levels and uncertainty:
+- Counterfactual donor controls:
+- Negative outcomes/class collapse:
+- Data leakage checks; whether any RESERVED/ST/SHHS file was opened:
+- Measurement units/montage/scoring protocol compatibility:
+- Actual parameter counts, epochs, optimizer steps and wall clock:
+- Result: PASS/FAIL/BLOCKED/NOT_TESTED:
+- Falsification assessment, not merely nominal improvement:
+- Next requested gate (requires new explicit authorization):

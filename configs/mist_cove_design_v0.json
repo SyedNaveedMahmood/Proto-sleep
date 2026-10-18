@@ -1,0 +1,113 @@
+{
+  "schema_version": "mist-cove-design-v0",
+  "status": "DESIGN_ONLY_NOT_AUTHORIZED_FOR_DATA_ACCESS_OR_TRAINING",
+  "base_branch": "research/mist-transfer-v3-edf-shhs",
+  "baseline_report_sha": "15995b31821ee8db717f3d6edfa41166de65d4a3",
+  "frozen_p3b_implementation_sha": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+  "split": {
+    "fingerprint": "3e7a7260aae50ca522752f1cede41246daf1b2f6a8fd482800cfda97b4564e84",
+    "file_sha256": "1162a41098bb8a724a0b8bf8bb320469c2b1c02bb802d9b5cf7f2e49d2da54e5",
+    "train_subjects": 15,
+    "val_subjects": 4,
+    "reserved_subjects": 55,
+    "train_recordings": 29,
+    "val_recordings": 8,
+    "reserved_recordings": 109
+  },
+  "input": {
+    "channel": "EEG Fpz-Cz",
+    "units": "uV",
+    "sample_rate_hz": 100,
+    "epoch_seconds": 30,
+    "samples": 3000,
+    "stages": [
+      "Wake",
+      "N1",
+      "N2",
+      "N3",
+      "REM"
+    ],
+    "unscored_label": -1,
+    "full_grid_inference": true
+  },
+  "authorized_access": {
+    "design_metadata_only": true,
+    "source_train_eeg": false,
+    "source_val_eeg": false,
+    "reserved_sc": false,
+    "sleep_telemetry": false,
+    "shhs": false,
+    "training": false
+  },
+  "candidate": {
+    "name": "MIST-COVE",
+    "event_budget_candidate": [
+      4,
+      8
+    ],
+    "background_plus_signed_events": true,
+    "reliability_range": [
+      0,
+      1
+    ],
+    "train_only_exemplar_retrieval": true,
+    "epoch_only_first": true,
+    "moe": false,
+    "temporal_radius": 0
+  },
+  "future_source_budget_proposal": {
+    "seeds": [
+      123,
+      456,
+      789
+    ],
+    "max_epochs": 60,
+    "patience": 12,
+    "optimizer": "AdamW",
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "batch_core": 16,
+    "batch_encode": 16,
+    "grad_clip": 5,
+    "fp32": true,
+    "amp": false,
+    "tf32": false
+  },
+  "gates": [
+    {
+      "id": "D0",
+      "status": "DESIGN_ONLY",
+      "data_access": false
+    },
+    {
+      "id": "I1",
+      "status": "NEEDS_SEPARATE_AUTHORIZATION",
+      "data_access": false
+    },
+    {
+      "id": "S0",
+      "status": "NEEDS_SEPARATE_AUTHORIZATION",
+      "data_access": true
+    },
+    {
+      "id": "R0",
+      "status": "NEEDS_SEPARATE_AUTHORIZATION",
+      "data_access": true
+    },
+    {
+      "id": "T0",
+      "status": "NEEDS_SEPARATE_AUTHORIZATION",
+      "data_access": true
+    },
+    {
+      "id": "T1",
+      "status": "NEEDS_SEPARATE_AUTHORIZATION",
+      "data_access": true
+    },
+    {
+      "id": "F0",
+      "status": "NEEDS_SEPARATE_AUTHORIZATION",
+      "data_access": true
+    }
+  ]
+}
