@@ -1,0 +1,48 @@
+{
+  "version": "mist-cove-phase2-matrix-v2",
+  "primary_reference": "q1",
+  "predictive_refinement": "rounded_q1",
+  "reporting_refinement": "separate_additive_fixed_path_reselection_and_group_effects",
+  "comparisons": [
+    "q1",
+    "availability",
+    "background",
+    "fixed_patch",
+    "rounded_q1"
+  ],
+  "W1": {
+    "estimand": "full_delta = background_delta + fixed_witness_event_delta + reselection_delta",
+    "prediction": "reselection can make additive claims disagree with full waveform effects",
+    "falsifier": "mean absolute reselection term below 0.05 on correlated/competition fixtures",
+    "numerical_contract": "maximum absolute reconciliation error <= 1e-5"
+  },
+  "W2": {
+    "estimand": "joint removal of every predeclared diagnostic component versus mean individual removal",
+    "prediction": "redundant groups can matter more than any single member",
+    "falsifier": "mean absolute joint effect minus individual effect <= 0.25 on redundant/correlated fixtures",
+    "limitation": "groups are generator-declared; no real-data grouping is validated"
+  },
+  "W3": {
+    "estimand": "Jaccard distance of selected identities under 0.01-uV noise/ranking jitter on eight tied copies",
+    "prediction": "0.5-uV rounded ranking lowers mean instability by >=0.05 at K=4",
+    "falsifier": "instability reduction <0.05 or clean dual accuracy drops >0.02",
+    "capacity": "identical 75 parameters, K=4, training examples/updates; no learned attention"
+  },
+  "W4": {
+    "estimand": "spread of full true-stage effects across bridge/background/noise erasers",
+    "prediction": "mean across-example donor spread <=0.25",
+    "falsifier": "larger spread demonstrates donor dependence",
+    "negative_control": "phase-scramble donor retains spectral information and is not an eraser",
+    "diagnostics": [
+      "boundary jumps",
+      "energy mismatch",
+      "spectral L1 distortion",
+      "background change",
+      "elementary guard acceptance is not physiological validity"
+    ]
+  },
+  "confirmatory": "locked config and matrix committed before new Phase II experiments",
+  "exploratory": "any later generator, thresholds, selectors or analyses must be separately labeled; never replace confirmatory outputs",
+  "generator_correction": "Complementary one-factor cases uniformly retain A or B, independent of label; original v1 always retained A.",
+  "thresholds_changed": false
+}

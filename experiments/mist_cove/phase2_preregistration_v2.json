@@ -1,0 +1,11 @@
+{
+  "version": "mist-cove-phase2-preregistration-v2",
+  "before_v2_experiments": true,
+  "supersedes_generator_not_original_results": true,
+  "real_data_authorized": false,
+  "sha256": {
+    "configs/mist_cove_phase2_synthetic_v2.json": "ed3536190f348fb14aa894fd367fd2e2d8e5ffe6a081d3e9cccf951f4daf47d7",
+    "experiments/mist_cove/phase2_comparison_matrix_v2.json": "df4928bde013410fbd74217921b234dd25054fdee489b8f6cd07add3c4a91ab8",
+    "docs/mist_cove/PHASE_II_GENERATOR_AMENDMENT_V2.md": "e02452b7ead44d3588c6bf8f16209d09614df7419ce494b701e0528ac0067cc9"
+  }
+}
