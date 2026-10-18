@@ -75,6 +75,23 @@ def require_idle_gpu():
     return {'free_bytes': free, 'total_bytes': total}
 
 
+def verify_source_files(record):
+    # Frozen descriptor identity was validated by load_development. Do not infer
+    # identity or silently redirect to a similarly named file in another directory.
+    if record.get('split') not in {'train', 'val'}:
+        raise ValueError('unauthorized role before waveform access')
+    paths = [Path(record[k]).resolve() for k in ('path', 'annotation_source')]
+    if paths[0].parent != paths[1].parent or paths[0].parent.name != 'sleep-cassette':
+        raise ValueError('frozen sources are not paired original Sleep-Cassette EDF')
+    proofs = []
+    for path, sha in zip(paths, ('source_sha256', 'annotation_sha256')):
+        actual = file_sha(path)
+        if actual != record[sha]:
+            raise ValueError('frozen original EDF hash mismatch')
+        proofs.append({'path': str(path), 'sha256': actual})
+    return proofs
+
+
 def load_sources(c):
     """Explicit authorized preflight caller only; guards precede source access."""
     prepared(c)
@@ -101,13 +118,7 @@ def load_sources(c):
     from mist_transfer.full_experiment import verify_grid
     source_proofs = []
     for r in train_rows + val_rows:
-        if r['split'] not in {'train', 'val'}:
-            raise ValueError('unauthorized role before waveform access')
-        for key, sha in [('path', 'source_sha256'), ('annotation_source', 'annotation_sha256')]:
-            path = Path(r[key]).resolve()
-            if path.parent != canonical or file_sha(path) != r[sha]:
-                raise ValueError('canonical original EDF path/hash mismatch')
-            source_proofs.append(file_proof(path))
+        source_proofs.extend(verify_source_files(r))
     norm = validate_normalization(json.loads(norm_path.read_text()), train_rows, val_rows)
     train = [SourceRecording(r, norm, smoke=False) for r in train_rows]
     val = [SourceRecording(r, norm, smoke=False) for r in val_rows]
@@ -125,7 +136,11 @@ def load_sources(c):
         validate_bank(bank, train_rows, norm, verify_waveforms=True)
         banks[seed], bank_proofs[str(seed)] = bank, file_proof(p)
     proofs = {'normalization': file_proof(norm_path), 'normalization_completion': file_proof(p3a / 'COMPLETE.json'),
-              'bank_receipt': file_proof(p3b / 'fit_artifacts.receipt.json'), 'banks': bank_proofs, 'sources': source_proofs}
+              'bank_receipt': file_proof(p3b / 'fit_artifacts.receipt.json'), 'banks': bank_proofs, 'sources': source_proofs,
+              'source_location': {'configured_directory': str(canonical), 'configured_directory_exists': canonical.exists(),
+                  'recorded_directories': sorted({str(Path(p['path']).parent) for p in source_proofs}),
+                  'configured_directory_matches_frozen': all(Path(p['path']).parent == canonical for p in source_proofs),
+                  'policy': 'Use exact frozen original EDF paths and hashes; never substitute or regenerate'}}
     return train, val, norm, banks, grid, proofs
 
 

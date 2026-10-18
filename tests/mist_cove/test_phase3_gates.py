@@ -104,3 +104,20 @@ def test_failed_correctness_cannot_form_launch_receipt(tmp_path):
     g = tmp_path / 'cuda.json'; g.write_text('{}')
     with pytest.raises(ValueError, match='CPU correctness'):
         s.validate_correctness({'cpu': s.file_proof(p), 'cuda': s.file_proof(g)}, {})
+
+
+def test_recorded_original_path_not_silently_replaced(tmp_path):
+    directory = tmp_path / 'SLeep_edf_fulldataset/sleep-cassette'; directory.mkdir(parents=True)
+    wave, annotation = directory / 'generated-PSG.edf', directory / 'generated-Hypnogram.edf'
+    wave.write_bytes(b'generated waveform fixture'); annotation.write_bytes(b'generated annotation fixture')
+    record = {'split': 'train', 'path': str(wave), 'annotation_source': str(annotation),
+              'source_sha256': s.file_sha(wave), 'annotation_sha256': s.file_sha(annotation)}
+    proofs = s.verify_source_files(record)
+    assert proofs[0]['path'] == str(wave)
+    wave.write_bytes(b'changed waveform')
+    with pytest.raises(ValueError, match='hash mismatch'):
+        s.verify_source_files(record)
+    record['split'] = 'test'
+    with patch.object(Path, 'open', side_effect=AssertionError('reserved file opened')):
+        with pytest.raises(ValueError, match='unauthorized role'):
+            s.verify_source_files(record)
