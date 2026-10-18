@@ -1,0 +1,11 @@
+{
+  "version": "mist-cove-phase2-preregistration-v1",
+  "phase1_commit": "1a95a54f95edc6f694836a97091336e1e745e4f4",
+  "before_phase2_experiments": true,
+  "real_data_authorized": false,
+  "sha256": {
+    "configs/mist_cove_phase2_synthetic_v1.json": "e6b6a2392735a1898bdb7f37b257e99da5efa900c2110c494ccb645fe1637910",
+    "experiments/mist_cove/phase2_comparison_matrix_v1.json": "db65ce5b28ebca8696a86d14ac5629e6bef0e391b2af6ea61476b5c7d9e10db2",
+    "docs/mist_cove/PHASE_II_DECISION_V1.md": "98646b3e1f1223ca492c4e9c2e34fd23ad8b73b7794ca7273c5db742e127679e"
+  }
+}
