@@ -26,3 +26,11 @@ Start H1 conditional observability and H2 counterfactual witness faithfulness se
 
 ## Documentation responsibilities
 Update this roadmap with what actually passed, list negative outcomes, attach exact config/commit fingerprints, and mark gates BLOCKED rather than retroactively claiming earlier authorization. Never overwrite P3B results.
+
+## 2026-10-18 Phase I execution receipt
+
+The user's subsequent Phase I coding task authorized only implementation and synthetic experiments. Tested implementation commit: `533df355dc07715b042de92896b2d9c21cd6f653`. Config file SHA256: `66a6d51ebd121ffdd36ce3b72a1550c91a0282bd6df57fd463e7582f1a85cee8`.
+
+I1 correctness: **PASS**, 53 new synthetic tests; full CPU regression **253 passed / 0 failed / 5 CUDA skipped**, one existing warning. I2 falsification infrastructure is implemented and executed: **H1 superiority FAIL in all three seeds**, constructed H2 direction/donor checks and H3 substitution checks pass, while counterfactual magnitude agreement and redundant-witness necessity remain limited. q=1 also solves the artificial discrimination fixtures. This is not an all-hypotheses success or evidence of transfer.
+
+S0/R0/T0/T1 remain **BLOCKED pending separate phase authorization and protocol proofs**. No real TRAIN/VAL, RESERVED, ST, or SHHS data were accessed. No frozen P3B implementation, split, configuration, checkpoint, or metric was changed. See [the implementation note](PHASE_I_IMPLEMENTATION_V1.md) and [complete results and next-gate requirements](PHASE_I_RESULTS_V1.md).
