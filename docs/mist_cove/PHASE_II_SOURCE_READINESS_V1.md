@@ -25,6 +25,8 @@ This package prepares software; it grants **no real-data authorization**. Phase 
 
 The launch receipt is an integrity/operational gate, not a cryptographic substitute for human authorization. Its trusted digests and approval provenance must be independently reviewed. Mock integration replaces the loaders, full-grid verifier and TRAIN-bank provenance checker; it validates wiring and fail-closed behavior, not the correctness of any unseen real artifact. Existing regression tests independently exercise the unchanged proof and grid implementations on generated fixtures.
 
+Environment audit found that loaded NumPy is 1.26.4 while installed distribution metadata reports 2.0.1 in the same prefix. Both values are preserved in the receipts; deterministic CPU/CUDA tests passed with the loaded module. Reconcile the environment and record actual imported versions before a source freeze, then regenerate environment-bound correctness proofs. Do not repair an existing frozen historical environment in place or silently reinterpret its version metadata.
+
 ## Reproducible software checks
 
 ```bash
