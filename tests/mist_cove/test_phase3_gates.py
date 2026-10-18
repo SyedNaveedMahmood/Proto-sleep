@@ -74,6 +74,7 @@ def test_preflight_scans_unscored_and_all_positions_without_training(tmp_path, m
     monkeypatch.setattr(s, 'require_idle_gpu', lambda: {'mock': True})
     monkeypatch.setattr(s, 'reconciled_environment', lambda: {'scope': 'MOCK_ONLY'})
     monkeypatch.setattr(s, 'load_sources', lambda c: ([train], [val], {}, {}, {'mock': True}, {}))
+    monkeypatch.setattr(s, 'numerical_probe', lambda *a: {'status': 'MOCK_ONLY'})
     trainer = Mock(side_effect=AssertionError('preflight trained'))
     monkeypatch.setattr(s, 'sealed_train', trainer)
     result = s.preflight(p, tmp_path / 'preflight', authorized=True)
@@ -104,6 +105,20 @@ def test_failed_correctness_cannot_form_launch_receipt(tmp_path):
     g = tmp_path / 'cuda.json'; g.write_text('{}')
     with pytest.raises(ValueError, match='CPU correctness'):
         s.validate_correctness({'cpu': s.file_proof(p), 'cuda': s.file_proof(g)}, {})
+
+
+def test_numerical_probe_zero_updates_no_validation_label_access():
+    from mist_cove.phase2.synthetic_runtime import synthetic_bank
+    import numpy as np
+    train, val = mock_recordings()
+    # Extend generated arrays to the mandated batch size, preserving explicit masks.
+    for row in (train, val):
+        row.x = np.concatenate([row.x, row.x[:6]])
+        row.y = np.concatenate([row.y, row.y[:6]])
+    val.y = None  # a numerical inference probe must not consult validation labels
+    result = s.numerical_probe([train], [val], {'mean_uV': 0., 'std_uV': 1.}, {123: synthetic_bank()}, device='cpu')
+    assert result['optimizer_updates'] == 0 and result['validation_labels_used'] is False
+    assert len(result['runs']) == 6
 
 
 def test_recorded_original_path_not_silently_replaced(tmp_path):

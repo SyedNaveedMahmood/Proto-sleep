@@ -14,7 +14,7 @@ import torch
 from mist_cove.phase2.provenance import ROOT, digest, file_sha, implementation_snapshot, environment, git_head
 from mist_cove.phase2.source import SPLIT, SPLIT_SHA, VARIANTS, validate_source_config, validate_normalization, training_config, load_role
 from mist_cove.phase2.training import configure_precision, sealed_train, validate_views
-from mist_cove.phase2.adapter import build_adapter
+from mist_cove.phase2.adapter import build_adapter, adapter_logits
 from mist_evidence.runtime import atomic_json, seed_all, EpochPaused
 
 PRIVATE = ROOT / 'mist_transfer_runs/mist_cove/phase3_source_v1'
@@ -144,6 +144,66 @@ def load_sources(c):
     return train, val, norm, banks, grid, proofs
 
 
+def numerical_probe(train, val, norm, banks, device='cuda'):
+    """Bounded true-source feasibility; gradients only, zero optimizer updates.
+
+    Validation labels are never used. This is not an epoch throughput estimate
+    and supplies no accuracy, checkpoint selection or trained model.
+    """
+    configure_precision(device)
+    x = torch.from_numpy(train[0].x[:16]).to(device)
+    vx = torch.from_numpy(val[0].x[:16]).to(device)
+    labels = torch.from_numpy(train[0].y[:16]).to(device)[None]
+    valid = labels >= 0
+    results = []
+    for name in VARIANTS:
+        seed_all(123, True)
+        model = build_adapter(name, norm, banks[123]).to(device)
+        initial = {k: p.detach().clone() for k, p in model.named_parameters()}
+        if torch.device(device).type == 'cuda':
+            torch.cuda.reset_peak_memory_stats()
+        logits = adapter_logits(model, x)
+        loss = model.loss(logits[None], labels, valid)
+        if not torch.isfinite(loss):
+            raise ValueError('real TRAIN smoke loss nonfinite')
+        loss.backward()
+        if any(p.grad is not None and not torch.isfinite(p.grad).all() for p in model.parameters()):
+            raise ValueError('real TRAIN smoke gradient nonfinite')
+        model.eval()
+        with torch.no_grad():
+            v_logits = adapter_logits(model, vx)
+            for z in (logits, v_logits):
+                if z.shape != (16, 5) or not torch.isfinite(z).all():
+                    raise ValueError('real five-stage logits nonfinite or wrong shape')
+                torch.testing.assert_close(z.softmax(-1).sum(-1), torch.ones(16, device=device), rtol=0, atol=1e-6)
+            residual = None
+            if name not in {'raw_context', 'evidence'}:
+                ev = model.network(vx, return_evidence=True)
+                residual = float((ev.logits - ev.background_logits - ev.contributions.sum(1)).abs().max())
+                if residual > 1e-5:
+                    raise ValueError('real waveform additive reconciliation failed')
+                intervals = ev.event_intervals[ev.valid]
+                if ((intervals[:, 0] < 0) | (intervals[:, 1] > 3000) | (intervals[:, 1] - intervals[:, 0] != 200)).any():
+                    raise ValueError('real waveform original interval invalid')
+            for k, p in model.named_parameters():
+                if not torch.equal(initial[k], p):
+                    raise ValueError('preflight unexpectedly changed a model parameter')
+        if torch.device(device).type == 'cuda':
+            torch.cuda.synchronize()
+        results.append({'variant': name, 'batch': 16, 'finite_logits_loss_gradients': True, 'optimizer_updates': 0,
+                        'parameters': sum(p.numel() for p in model.parameters()),
+                        'trainable_parameters': sum(p.numel() for p in model.parameters() if p.requires_grad),
+                        'additive_max_abs_residual': residual,
+                        'peak_gpu_allocated_bytes': torch.cuda.max_memory_allocated() if torch.device(device).type == 'cuda' else 0})
+        del model, initial, logits, loss, v_logits
+        if name not in {'raw_context', 'evidence'}:
+            del ev
+        if torch.device(device).type == 'cuda':
+            torch.cuda.empty_cache()
+    return {'status': 'PASS', 'optimizer_updates': 0, 'validation_labels_used': False,
+            'scope': 'UNTRAINED_BATCH16_NUMERICAL_FEASIBILITY_NOT_EPOCH_THROUGHPUT', 'runs': results}
+
+
 def preflight(config_path, output, *, authorized=False):
     if not authorized:
         raise ValueError('explicit source TRAIN/VAL authorization required before any file access')
@@ -172,6 +232,7 @@ def preflight(config_path, output, *, authorized=False):
                 count += len(x)
         scan[role] = {'physical_epochs': count, 'seconds': time.perf_counter() - began,
                       'read_batches': sum(r.x.read_batches for r in rows), 'peak_batch_bytes': max(r.x.peak_bytes for r in rows)}
+    numerical = numerical_probe(train, val, norm, banks)
     if code != implementation_snapshot():
         raise ValueError('implementation changed during preflight')
     output.mkdir(parents=True)
@@ -180,6 +241,7 @@ def preflight(config_path, output, *, authorized=False):
                'implementation': code, 'implementation_commit': git_head(), 'environment': env, 'hardware': hardware,
                'split_fingerprint': SPLIT, 'split_file_sha256': SPLIT_SHA, 'grid': grid, 'proofs': proofs,
                'source_scan': scan, 'normalization_refitted': False, 'bank_source_crops_exact': True,
+               'real_source_numerical_probe': numerical,
                'training_executed': False, 'reserved_access': False, 'st_access': False, 'shhs_access': False,
                'wall_seconds': time.perf_counter() - start}
     atomic_json(receipt, output / 'preflight.json')
@@ -205,6 +267,8 @@ def validate_review(proposal_path, review_path):
         raise ValueError('reviewed preflight mismatch')
     if pre['environment'] != reconciled_environment():
         raise ValueError('reviewed environment changed')
+    if pre.get('real_source_numerical_probe', {}).get('status') != 'PASS':
+        raise ValueError('real source numerical feasibility missing')
     validate_correctness(proposal['artifacts'], pre['environment'])
     return proposal
 
