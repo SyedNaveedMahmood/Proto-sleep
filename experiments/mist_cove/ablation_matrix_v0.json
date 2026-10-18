@@ -1,0 +1,103 @@
+{
+  "schema_version": "mist-cove-ablation-v0",
+  "status": "DESIGN_ONLY",
+  "hypotheses": {
+    "H1": {
+      "primary": "pairwise selective reliability under matched benign/evidence-erasing transformations",
+      "falsifier": "no improvement over entropy/quality or unconditional invariance at equal coverage"
+    },
+    "H2": {
+      "primary": "witness logit effect versus matched controls over donor strategies",
+      "falsifier": "selected witnesses not distinguishable from matched random or donor artifacts dominate"
+    },
+    "H3": {
+      "primary": "evidence switching with one available witness and lower certainty with neither",
+      "falsifier": "pathway does not switch or retains unsupported certainty"
+    },
+    "H4": {
+      "primary": "boundary stability under shifted synthetic epochs",
+      "falsifier": "equal-context fixed window as stable as continuous-time event extraction"
+    }
+  },
+  "experiments": [
+    {
+      "id": "A0",
+      "mechanism": "raw-context historical baseline",
+      "hypothesis": "control",
+      "role": "frozen_control"
+    },
+    {
+      "id": "A1",
+      "mechanism": "waveform-evidence historical baseline",
+      "hypothesis": "control",
+      "role": "frozen_control"
+    },
+    {
+      "id": "A2",
+      "mechanism": "new background-only backbone",
+      "hypothesis": "control",
+      "role": "capacity_control"
+    },
+    {
+      "id": "A3",
+      "mechanism": "signed local event scores, q=1",
+      "hypothesis": "H2",
+      "role": "event_ablation"
+    },
+    {
+      "id": "A4",
+      "mechanism": "signed local events plus conditional availability",
+      "hypothesis": "H1",
+      "role": "candidate"
+    },
+    {
+      "id": "A5",
+      "mechanism": "A4 plus read-only source-TRAIN exemplar index",
+      "hypothesis": "H2",
+      "role": "explanation_only"
+    },
+    {
+      "id": "A6",
+      "mechanism": "conditional versus unconditional consistency, capacity matched",
+      "hypothesis": "H1",
+      "role": "secondary_comparison"
+    },
+    {
+      "id": "A7",
+      "mechanism": "alternative witness substitution, synthetic first",
+      "hypothesis": "H3",
+      "role": "secondary_comparison"
+    },
+    {
+      "id": "A8",
+      "mechanism": "epoch-phase sensitivity, synthetic labels only",
+      "hypothesis": "H4",
+      "role": "optional"
+    }
+  ],
+  "perturbations": [
+    "calibrated-reversible-gain",
+    "preidentified-component-attenuation",
+    "matched-power-non-erasing-control",
+    "randomized-synthetic-nuisance"
+  ],
+  "metrics": [
+    "mean_subject_macro_f1",
+    "fixed_five_macro_f1",
+    "per_stage_f1",
+    "balanced_accuracy",
+    "kappa",
+    "nll",
+    "brier",
+    "ece15",
+    "risk_coverage",
+    "class_specific_coverage",
+    "counterfactual_witness_delta"
+  ],
+  "cohorts": {
+    "SC_VAL": "SOURCE_SELECTION_ONLY",
+    "SC_RESERVED": "SEALED_WITHIN_STUDY",
+    "ST": "CONDITIONAL_EXPLORATORY",
+    "INDEPENDENT_EXTERNAL": "NOT_VERIFIED"
+  }
+}
