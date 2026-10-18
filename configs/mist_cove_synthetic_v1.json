@@ -1,0 +1,26 @@
+{
+  "version": "mist-cove-synthetic-v1",
+  "scope": "SYNTHETIC_ONLY",
+  "seeds": [123, 456, 789],
+  "train_size": 150,
+  "evaluation_size": 150,
+  "optimizer_steps": 180,
+  "learning_rate": 0.03,
+  "threads": 2,
+  "model": {"samples": 3000, "fs": 100, "window": 200, "stride": 100, "event_budget": 4, "concentration_floor": 0.35, "noise_scale_uV": 5.0, "min_rms_uV": 0.00001, "event_scale": 8.0},
+  "modes": ["full", "background_only", "q_one", "q_only", "fixed_event_score", "fixed_patch"],
+  "coverage_grid": [1.0, 0.95, 0.9, 0.8],
+  "audit_examples": 15,
+  "criteria": {
+    "clean_accuracy_min": 0.9,
+    "calibrated_gain_max_logit_difference": 0.0001,
+    "erased_confidence_max": 0.5,
+    "witness_vs_control_delta_min": 0.05,
+    "single_loss_accuracy_min": 0.9,
+    "q_selective_risk_improvement_min": 0.01,
+    "donor_delta_disagreement_max": 0.2
+  },
+  "real_data_access": false,
+  "reserved_access": false,
+  "external_access": false
+}
