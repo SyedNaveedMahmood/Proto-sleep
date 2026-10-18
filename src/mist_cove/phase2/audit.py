@@ -140,6 +140,8 @@ def audit_group(model, x, intervals, **replacement_kwargs):
                       score_deletion, full - (background + event_path + reselection), old_set, new_set,
                       {"donor_strategy": replacement_kwargs.get("strategy", "bridge"),
                        "group_size_after_union": len(intervals), "selection_changed": old_set != new_set,
+                       "selection_membership_changed": {tuple(v) for v in old_set} != {tuple(v) for v in new_set},
+                       "selection_order_changed": old_set != new_set,
                        "probabilities_before": before.logits[0].softmax(-1).tolist(),
                        "probabilities_after": after.logits[0].softmax(-1).tolist(),
                        "replacements": diagnostics, "internal_paths_are_physiological_counterfactuals": False,

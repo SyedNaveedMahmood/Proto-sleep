@@ -102,6 +102,7 @@ def audit_case(model, fixtures, c, seed):
                    "additive_vs_full_MAE": mean([float((r["group"].additive_contribution - r["group"].full_effect).abs().mean()) for r in records]),
                    "fixed_path_vs_full_MAE": mean([float((r["group"].fixed_event_path_effect - r["group"].full_effect).abs().mean()) for r in records]),
                    "selection_change_fraction": mean([float(r["group"].diagnostics["selection_changed"]) for r in records]),
+                   "selection_membership_change_fraction": mean([float(r["group"].diagnostics["selection_membership_changed"]) for r in records]),
                    "joint_replacement_confidence_mean": mean([max(r["group"].diagnostics["probabilities_after"]) for r in records]),
                    "joint_replacement_latent_class_accuracy": mean([float(max(range(5), key=lambda s: r["group"].diagnostics["probabilities_after"][s]) == r["stage"]) for r in records]),
                    "eraser_donor_spread_mean": mean(donor_spreads),

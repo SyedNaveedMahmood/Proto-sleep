@@ -12,7 +12,7 @@ import torch
 from mist_evidence.data import blocks
 from mist_evidence.runtime import TrainConfig, atomic_torch_save, seed_all, load_trusted
 from mist_transfer.experiment import evaluate_source
-from mist_cove.phase2.adapter import SourceAdapter, build_adapter
+from mist_cove.phase2.adapter import SourceAdapter, build_adapter, adapter_logits
 from mist_cove.phase2.provenance import ROOT, file_sha, digest, implementation_snapshot
 from mist_cove.phase2.source import validate_source_config, training_config, load_role, run_source, validate_normalization, validate_launch_receipt
 from mist_cove.phase2.synthetic_runtime import mock_recordings, synthetic_bank, exact_resume_probe
@@ -34,6 +34,7 @@ def test_adapter_full_physical_validation_masks_and_finite_gradients(method):
     seed_all(123); model = build_adapter(method, {"mean_uV": 2., "std_uV": 10.}, bank)
     x = torch.from_numpy(train.x[:5]); labels = torch.from_numpy(train.y[:5])[None]; mask = labels >= 0
     logits = model.emissions(model.encode(x)[None]); loss = model.loss(logits, labels, mask)
+    torch.testing.assert_close(adapter_logits(model, x), logits[0], rtol=0, atol=0)
     assert logits.shape == (1, 5, 5) and torch.isfinite(loss)
     loss.backward(); assert all(p.grad is None or torch.isfinite(p.grad).all() for p in model.parameters())
     metrics, rows = evaluate_source(model, [val], torch.device("cpu"), 3)

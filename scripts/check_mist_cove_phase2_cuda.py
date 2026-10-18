@@ -11,7 +11,7 @@ import time
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 import torch
-from mist_cove.phase2.adapter import build_adapter
+from mist_cove.phase2.adapter import build_adapter, adapter_logits
 from mist_cove.phase2.provenance import implementation_snapshot, git_head, environment
 from mist_cove.phase2.synthetic_runtime import exact_resume_probe, synthetic_bank
 from mist_cove.phase2.training import configure_precision
@@ -42,7 +42,7 @@ def main():
         model = build_adapter(method, {"mean_uV": 0., "std_uV": 1.}, bank).cuda()
         torch.cuda.reset_peak_memory_stats()
         x = torch.randn(16, 1, 3000, device="cuda")
-        logits = model.encode(x)
+        logits = adapter_logits(model, x)
         if logits.shape != (16, 5) or not torch.isfinite(logits).all():
             raise AssertionError("CUDA finite five-stage smoke failed")
         logits.square().mean().backward()

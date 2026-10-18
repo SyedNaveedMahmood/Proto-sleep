@@ -55,3 +55,8 @@ def build_adapter(name, normalization, bank=None):
         from mist_transfer.baselines import make_baseline
         return make_baseline(name, bank, normalization)
     return SourceAdapter(name, mean_uV=normalization["mean_uV"], std_uV=normalization["std_uV"])
+
+
+def adapter_logits(model, x):
+    """Honor both historical feature encoders and the q=1 logit encoder."""
+    return model.emissions(model.encode(x)[None])[0]

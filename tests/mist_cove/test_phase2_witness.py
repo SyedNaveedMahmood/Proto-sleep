@@ -13,6 +13,7 @@ from mist_cove.phase2.experiment import fit, audit_case, stability, validate_con
 from mist_cove.phase2.synthetic import make_fixtures, transformed
 from mist_cove.phase2.provenance import ROOT, verify_preregistration
 from mist_cove.phase2.traces import EpochIdentity, source_ledger
+from mist_cove.phase2.report import local_evidence_report
 
 
 @pytest.fixture(autouse=True)
@@ -181,3 +182,23 @@ def test_corrected_complementary_single_factor_is_symmetric_and_versions_match()
     assert retained_a > 20 and retained_b > 20
     c["generator"]["version"] = "known-components-phase2-v1"
     with pytest.raises(ValueError, match="versions disagree"): validate_config(c)
+
+
+def test_local_report_exposes_redundancy_and_separates_all_four_claims():
+    m = make_model("q1").eval()
+    with torch.no_grad():
+        m.background_head.weight.zero_(); m.background_head.bias.zero_()
+        m.event_head.weight.zero_(); m.event_head.bias.zero_()
+        m.event_head.weight[0, 2] = 1.; m.event_head.weight[1, 2] = -1.
+    x = torch.zeros(1, 1, 3000)
+    waveform = 30 * torch.hann_window(200, periodic=False) * torch.sin(2 * torch.pi * 10 * torch.arange(200) / 100)
+    intervals = [(start, start + 200) for start in (200, 600, 1000, 1400, 1800, 2200)]
+    for lo, hi in intervals: x[0, 0, lo:hi] = waveform
+    report = local_evidence_report(m, x, {"known_redundant_group": intervals}, donor_specs=[{"strategy": "bridge"}],
+                                   transformations={"identical_reordering": x.clone()})
+    group = report["groups"]["known_redundant_group"]["donors"][0]
+    assert len(group["A_additive_contribution"]) == 5
+    assert len(group["B_individual_counterfactual_effects"]) == 6
+    assert group["C_group_counterfactual_effect"][0] > max(v[0] for v in group["B_individual_counterfactual_effects"]) + 1
+    assert group["flags"]["individual_necessity_not_established"]
+    assert report["D_attribution_stability"]["identical_reordering"]["witness_set_jaccard_distance"] == 0
