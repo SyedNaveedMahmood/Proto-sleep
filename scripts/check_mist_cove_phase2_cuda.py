@@ -49,10 +49,12 @@ def main():
         torch.cuda.synchronize()
         peak = torch.cuda.max_memory_allocated()
         smoke_parameters = sum(p.numel() for p in model.parameters())
+        trainable_parameters = sum(p.numel() for p in model.parameters() if p.requires_grad)
         del model, x, logits
         torch.cuda.empty_cache()
         row = exact_resume_probe(a.output_dir / method, method, "cuda")
-        row.update(batch16_smoke_peak_allocated_bytes=peak, trainable_parameters=smoke_parameters)
+        row.update(batch16_smoke_peak_allocated_bytes=peak, parameters=smoke_parameters,
+                   trainable_parameters=trainable_parameters)
         results.append(row)
     if implementation_snapshot() != initial_code:
         raise RuntimeError("code changed during CUDA checks")
