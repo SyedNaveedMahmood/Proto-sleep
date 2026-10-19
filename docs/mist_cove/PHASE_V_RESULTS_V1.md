@@ -10,6 +10,8 @@ All inputs were generated tensors, reconstructed historical synthetic signals or
 
 Three seeds, two historical tasks and one newly versioned harmonic task yielded **114 completed fits / 34,200 optimizer updates / 547,200 example exposures**. These are new audit fits, not reruns or revisions of the 54 Phase IV fits. Historical controls get 1,000 balanced generated TRAIN examples and 2,000 independent evaluation examples per condition, with 300 batch 16 updates. Conventional controls retain the exact 3,593-parameter encoder/head. Restricted probes get the identical minibatch exposure, TRAIN-only feature standardization and a fixed 32-unit hidden layer; they have different, explicitly reported capacities. No evaluation-based selection or post-result threshold/generator/model change occurred.
 
+Naming clarification: the frozen control matrix's `V2` entry names the phase-transformation consistency question, which fails for independent patches. Execution **Gate V2** names new-generator correctness under the sequential protocol, which passes. These are separate tests; a generator-correctness PASS does not assert consistency of the historical patch transformation.
+
 ## Gates V0/V1: historical reconstruction and leakage
 
 **PASS V0:** original hashes and exact source replay verified. **FAIL historical phase isolation:** isolated-template magnitudes match to 2.17e-7 relative range, but zero-padding to 3,000 exposes 0.7363 relative class range. Diagnostic-only magnitude accuracy is 1.0000/0.999333 across historical tasks. This alone rejects the exclusive-phase interpretation without needing nuisance interference. See the [generator audit](PHASE_V_GENERATOR_AUDIT_V1.md) for source-level RNG, cross-term, cropping, boundary and transformation measurements.
