@@ -1,0 +1,20 @@
+{
+  "version": "phase7-robustness-freeze-v1",
+  "status": "FROZEN_BEFORE_LOCKED_EVALUATION",
+  "files": {
+    "configs/mist_cove_phase7_robustness_v1.json": "39f52ff47362c72bcd32654bcc8a54451545f758c1cae80cbf6aefde86042366",
+    "docs/mist_cove/PHASE_VII_ROBUSTNESS_PREREGISTRATION_V2.md": "d1720df38fe63fc68e75ff89bf2cb1d32ffbacb450fc90c348b78ae1cb066948",
+    "src/mist_cove/phase7/robustness.py": "c5557851b1ac80f8198d49f132a63849cff2b9ebaea80f686fa472d8b7fb67f7",
+    "scripts/run_mist_cove_phase7_robustness.py": "be432fada6ebfde65a0f29cf27802998c2c05a78f1cfa2c943d8063fb7c50307",
+    "tests/mist_cove/test_phase7_robustness.py": "3e8fdeac99c7354b6640a7421c1b82a9c2ca6a6c1a0e460d46a9c8b857b8611b",
+    "reports/mist_cove/phase7_v1/prospective_diagnostics_v2.json": "1ac2ae46dd75079ff136282cd40ad98cfa36ee0ab163cbe693ee7aee34c0cf1b",
+    "src/mist_cove/phase7/prospective.py": "d9c5fc5724d44ae6b70229918af6972649f2840097f102948e830c9356095cd7",
+    "experiments/mist_cove/phase7_prospective_freeze_v2.json": "278787bf7cbbbb1c3632106f6ace14c4fb4121aa0ab6fea1add14bd861046d49",
+    "src/mist_cove/phase4/audit.py": "b3d792e9869861fb02ff18e113b364ec8264c44314a5cb6c6ce082553b947050",
+    "src/mist_cove/phase4/model.py": "bf99b78ca9d5534f3dced329a84529642ee02adff8412e0ae699c603ab503ad0",
+    "src/mist_cove/phase6/evaluation.py": "2804cb4fb1fcefb9ea0efa6e0aff7502fc0a25776751ddb1d66785acb9f40545"
+  },
+  "primary": "R1",
+  "maximum_new_fits": 36,
+  "maximum_new_updates": 10800
+}
