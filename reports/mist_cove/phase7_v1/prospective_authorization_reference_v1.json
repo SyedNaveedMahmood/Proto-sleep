@@ -1,0 +1,8 @@
+{
+  "kind": "actual_user_message_transcription_not_agent_approval",
+  "message_sha256": "341918b42c03c1255b7c27c75bd2b83ffcea65ec04d3e55b73f4e9538beb2969",
+  "scope": "new prospective synthetic reproduction and gated diagnostics only",
+  "historical_checkpoint_verification": "BLOCKED",
+  "historical_checkpoint_loading_authorized": false,
+  "real_data_authorized": false
+}

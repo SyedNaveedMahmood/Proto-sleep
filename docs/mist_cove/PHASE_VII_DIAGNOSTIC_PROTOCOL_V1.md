@@ -1,0 +1,15 @@
+# Phase VII diagnostic protocol v1 — blocked draft
+
+**BLOCKED at VII-0; VII-1 and VII-2 NOT TESTED.** Only read-only prerequisite inspection is executable. No generated evaluation set has been drawn or scored in this phase.
+
+The inspector anchors the completed Phase VI preregistration, source manifest and publication manifest to the specified Git commit; verifies their file digests and unchanged repaired CI; authenticates the private aggregate receipt before parsing it; then inventories only the six named historical full M1 checkpoints. It never deserializes weights or writes historical seals. Missing/incompatible private artifacts remain blockers. Gate success cannot be supplied by editing a PASS dictionary.
+
+After recovery, a new committed executable preregistration must freeze counts, seed namespaces, strength levels, endpoints, probe capacities, exposure and resource limits **before** diagnostic execution. It must use new TRAIN, diagnostic-development and locked evaluation namespaces rather than replay Phase VI examples. No such preregistration is represented as complete here.
+
+Required construction: clean = stored diagnostic + original class-independent baseline; competitive = that exact clean tensor plus an independently generated distractor. The original Phase VI competitive renderer changes nuisance count/strength and artifact strength and therefore must not be casually reused as an additive matched pair. Preserve diagnostic arrays, original background/noise, half-open intervals and exact class-free nuisance latents. Check recomposition. Diagnostic-only, removed, nuisance substitution, geometry-preserving shift and a fixed strength sweep receive separate identities. Oracle labels/locations enter auditors only.
+
+Extract the original fourteen 400-sample, stride-200 candidate representations (18 features), conventional mean/max pooled vector (36 features), and signed linear-head contributions. Compare candidate norms/drifts, diagnostic/nuisance norm ratio and pooled drift. Fit linear and fixed small nonlinear probes only on appropriate generated TRAIN features; label oracle-containing candidate selection as privileged. Preserve overlapping-window membership rather than treating windows as independent events.
+
+Record full five-stage logits/probabilities, margins, loss, entropy/confidence, calibration, localization and false-nuisance selection. Separate correct→wrong, wrong→correct, confidence-increase, localized-but-wrong and lost-localization/wrong paired outcomes. Controlled diagnostic/non-diagnostic feature substitution must retain exact complementary sets; reconcile logit changes where linear decomposition permits it. Mark oracle pooling and feature-space interventions model-internal and potentially off-manifold.
+
+Oracle component deletion, internal feature deletion and donor replacement have different estimands. A future matched diagnostic/non-diagnostic control must use the **same component-intervention construction**, preserving the baseline in both. The old Phase VI whole-window-zero versus diagnostic-component-deletion mismatch stays unchanged and cannot be reused as a controlled causal contrast.

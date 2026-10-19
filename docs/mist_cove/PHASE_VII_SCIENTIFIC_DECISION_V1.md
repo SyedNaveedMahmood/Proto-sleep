@@ -1,0 +1,13 @@
+# Phase VII decision v1 — stop at historical checkpoint provenance
+
+**BLOCKED at VII-0. No frozen model was loaded, no new scientific fit ran, and no mechanism was selected.** The six required historical full M1 files exist, but the completed Phase VI manifests do not bind their bytes to the original experiment. Newly calculating their SHA256 values does not establish that they are the original trained states.
+
+The starting commit is `8ec83fed182f4ca69889db17272eec84d05e9771`, on `research/mist-cove-phase6-local-evidence-v1`. Phase VII uses a new branch, `research/mist-cove-phase7-distractor-robustness-v1`. Historical source, configuration, generator, publication and private aggregate-result hashes verify. Phase VI's 72 fits, 21,600 updates, 345,600 exposures and failed collective robustness gate remain unchanged.
+
+The user's Phase VII prompt, §4, requires: “Verify checkpoint seals before trusted loading.” Its final directive requires investigating the frozen encoder before robustness training. The coding master prompt also says: “Stop on unknown source provenance” and “missing reproducibility proof.” Those requirements prevent loading unsealed historical weights, substituting the sealed tiny CUDA correctness model, or retraining a replacement and calling it the original model.
+
+`src/mist_cove/phase6/experiment.py` saves scientific weights using `atomic_torch_save(model.state_dict(), ...)`. Atomic writing protects a single write; it does not create a historical digest seal. The sealed private `results.json` contains metrics and code/config identities, but no weight digests. The existing sealed CUDA correctness checkpoints are different models and cannot repair this gap. Absence of a seal is not evidence that a file was corrupted; historical byte identity is unverified.
+
+This package adds an inspection-only runner, tamper/role/output tests and an honest blocked receipt. It does not change scientific generator/model code, original checkpoints, historical metrics, split files or CI. No real EEG, data-bearing source descriptors/annotations, fitted real artifacts, RESERVED, ST, SHHS or legacy NPZ was opened. No GPU process was interrupted and no credential was requested or used.
+
+Recovery requires existing independent historical checkpoint evidence, followed by explicit verification of its provenance and all six identities. A manifest created now cannot retrospectively become an execution-boundary seal. If historical evidence cannot be recovered, a replacement experiment needs an explicitly revised identity/protocol; it cannot silently fulfill the requested frozen-model audit. Robustness-method selection and confirmatory preregistration remain deferred until the diagnostic study is actually documented.

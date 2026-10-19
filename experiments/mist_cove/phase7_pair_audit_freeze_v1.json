@@ -1,0 +1,15 @@
+{
+  "version": "phase7-pair-audit-completion-v1",
+  "status": "FROZEN_BEFORE_DESCRIPTIVE_COMPLETION",
+  "files": {
+    "docs/mist_cove/PHASE_VII_PAIR_AUDIT_COMPLETION_V1.md": "ac21dbb197917d44306ee535dafa7613f6584f302cd76f0bebc7b21063de1488",
+    "analysis/mist_cove_phase7_v1/complete_pair_audits.py": "bd269b191fe77651248a89fda9531d8eb7d8f4456a83b5fe5fcabd815f693506",
+    "tests/mist_cove/test_phase7_pair_export.py": "250fa67e5a7b9aae9da2c7662ed5008bdb6f2b027b91f71b8bcfc5b8004c050d",
+    "reports/mist_cove/phase7_v1/robustness_runs_v1.jsonl": "670e3f1a65654be6ebad5fbdb482799bc8db6b40ab19235ee4beafd8c98773e1",
+    "reports/mist_cove/phase7_v1/prospective_diagnostics_v2.json": "1ac2ae46dd75079ff136282cd40ad98cfa36ee0ab163cbe693ee7aee34c0cf1b",
+    "experiments/mist_cove/phase7_robustness_freeze_v1.json": "8adb80598f5c2d29345fafd0fdc348067e198a29d00bd7946c7af44f029f7942"
+  },
+  "maximum_new_fits": 0,
+  "maximum_added_seconds": 180,
+  "primary_gate_must_remain": "FAIL"
+}

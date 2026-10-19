@@ -1,0 +1,14 @@
+{
+  "version": "phase7-blocked-plan-v1",
+  "status": "BLOCKED_AT_VII_0_NOT_A_CONFIRMATORY_PREREGISTRATION",
+  "scientific_fits_permitted": 0,
+  "comparisons": [
+    {"method": "R0", "meaning": "six original Phase VI full M1 checkpoints", "status": "BLOCKED_MISSING_HISTORICAL_SEALS"},
+    {"method": "fresh_conventional", "meaning": "matched clean-training control", "status": "NOT_TESTED"},
+    {"method": "R1", "meaning": "same architecture, matched nuisance-exposure training", "status": "NOT_TESTED"},
+    {"method": "R2", "meaning": "one blind robust pooling alternative, selected only after diagnostics", "status": "NOT_YET_SELECTED"},
+    {"method": "R3", "meaning": "privileged diagnostic-region pooling", "status": "NOT_TESTED"},
+    {"method": "R4", "meaning": "privileged exact nuisance removal", "status": "NOT_TESTED"},
+    {"method": "M1/M2/M3/M2_rms", "meaning": "matched common-encoder heads conditional on collective VII-4 PASS", "status": "NOT_TESTED"}
+  ]
+}

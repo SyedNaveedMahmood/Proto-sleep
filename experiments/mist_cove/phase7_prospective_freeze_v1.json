@@ -1,0 +1,21 @@
+{
+  "version": "phase7-prospective-freeze-v1",
+  "status": "FROZEN_BEFORE_PROSPECTIVE_FITS",
+  "files": {
+    "configs/mist_cove_phase7_prospective_v1.json": "0fc67daf6a717da29d151c7b2b3eb132bf2599efea97146be5f4cd45e839e0c7",
+    "docs/mist_cove/PHASE_VII_PROSPECTIVE_PROTOCOL_V1.md": "892fbb1a10cb0bbd3185ff4139a387e88b0f507c91fcb932f134a330f0387928",
+    "scripts/run_mist_cove_phase7_prospective.py": "f26abdf226b79310ffc14aad85071cd8c2eeac9aeae9462835f415c507dbed51",
+    "src/mist_cove/phase7/prospective.py": "225c6a195d7bbfa8f55901b96c5b29802038e97c29347013f8ccff16b57e6ed2",
+    "tests/mist_cove/test_phase7_prospective.py": "0c5222ac284d39c5412acb68d822b4f3b902174f61d21eebe5b34ac6210f933e",
+    "reports/mist_cove/phase7_v1/prospective_authorization_reference_v1.json": "3ebbcac8f8510a9e2f5be27ceaa64a0c14c1b77c1bbf95cc17c68738e730ed1d",
+    "src/mist_cove/phase4/model.py": "bf99b78ca9d5534f3dced329a84529642ee02adff8412e0ae699c603ab503ad0",
+    "src/mist_cove/phase5/runtime.py": "96833bcdf7b1e1335f9e548e08c216e0d9aa3d6828bd5c8bc486f89a48dd47fa",
+    "src/mist_cove/phase5/models.py": "3cf95b2c5d0b16d57344bf5374ca83b8161283571b80f68e185fa2e02b9b2304",
+    "src/mist_cove/phase6/generator.py": "94aa0d5a0a0eb88870b77778f7fae68c5c8ea0494fb781f1f4bb0a99c42f0d13",
+    "src/mist_cove/phase6/evaluation.py": "2804cb4fb1fcefb9ea0efa6e0aff7502fc0a25776751ddb1d66785acb9f40545",
+    "src/mist_cove/phase7/integrity.py": "6e40974815bad1b60efd79fd84d0354e8a715242b53d4b79a23fa79852901fcf",
+    "src/mist_evidence/runtime.py": "15d56ab58aad5a830946be540c69c22b9fec067b7f42e077a10f41e3ceb6bd61"
+  },
+  "maximum_fits": 30,
+  "maximum_updates": 9000
+}

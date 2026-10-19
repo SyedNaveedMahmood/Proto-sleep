@@ -1,0 +1,14 @@
+{
+  "version": "mist-cove-phase7-integrity-v1",
+  "scope": "SYNTHETIC_ONLY",
+  "mode": "integrity_only",
+  "base_commit": "8ec83fed182f4ca69889db17272eec84d05e9771",
+  "allowed_fits": 0,
+  "allowed_optimizer_updates": 0,
+  "real_data_authorized": false,
+  "diagnostic_protocol_status": "DRAFT_NOT_EXECUTABLE",
+  "robustness_protocol_status": "DEFERRED_UNTIL_DOCUMENTED_DIAGNOSTICS",
+  "maximum_future_cpu_seconds": 1800,
+  "future_reference_seeds": [123, 456, 789],
+  "future_reference_tasks": ["single", "multiple"]
+}

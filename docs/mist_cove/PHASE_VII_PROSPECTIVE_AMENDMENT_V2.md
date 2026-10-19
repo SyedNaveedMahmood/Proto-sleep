@@ -1,0 +1,7 @@
+# Prospective diagnostic implementation correction v2
+
+The first execution at `48c36f6` created and sealed single/123 P0 after300updates, then failed on the localization reporting interface. The helper takes one selected set/truth pair; the caller supplied the whole batch. The preserved STOPPED receipt records one fit and3.080431seconds. No robustness fit or method selection occurred. The original output, checkpoint/creation/seal and private audit tensors are preserved.
+
+v2 maps localization per example and averages the declared fields. A generated end-to-end audit test covers this interface. No hypothesis, threshold, seed, event construction, optimization exposure, architecture or training computation changes. Corrected diagnostic execution has a new source freeze and unused output directory.
+
+Reuse the newly created, authorized prospective single/123 checkpoint after checking the pinned creation receipt and its original source/config/environment/TRAIN identities, checkpoint bytes, seal and payload. This is a checkpoint created in the controlled prospective run, never an unsealed Phase VI file. The other five baseline fits run once. Total prospective exposure remains30fits/9000updates/144000examples including that reused fit; the corrected invocation performs29newfits/8700updates. Report original failed-attempt wall separately and include it in the combined1800s resource accounting. No completed optimization is discarded or replayed.

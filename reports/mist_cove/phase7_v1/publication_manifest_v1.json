@@ -1,0 +1,29 @@
+{
+  "version": "phase7-publication-v1",
+  "status": "BLOCKED_AT_VII_0",
+  "files": {
+    "configs/mist_cove_phase7_synthetic_v1.json": "8964788c9d92816df72e084334d9e4c15da937209c17dd6f77d2b330047b92a7",
+    "experiments/mist_cove/phase7_ablation_matrix_v1.json": "7ee3b29985d2c90817c2caa346b1a7dd3a8069e1ebbffb8dc6bf16a643a6c351",
+    "scripts/run_mist_cove_phase7.py": "285269e6786de77f1c6589f04090929fc833a59b0af9935185015cb5346bd0b1",
+    "tests/mist_cove/test_phase7_integrity.py": "4cf18836dcc558cd925c8f718db2b6669b857f7ee1f2c133053a67d97fdd7587",
+    "docs/mist_cove/PHASE_VII_DIAGNOSTIC_PROTOCOL_V1.md": "3716df3283bff003497088144ffc3cf42f8fe7ab21e045d9bcbd0e88a969a964",
+    "docs/mist_cove/PHASE_VII_INTERFERENCE_HYPOTHESES_V1.md": "8a3b0b8e61a0c21fc2f8a0ab494a4606c73f2e810cb9a12bff9349ad597ea9a9",
+    "docs/mist_cove/PHASE_VII_MODEL_COMPARISONS_V1.md": "9d1c51f76b806ba46cd2e58c111c2d2d48c1662b1b5d4eebedcbc92ac051310d",
+    "docs/mist_cove/PHASE_VII_RESULTS_V1.md": "11583d73fb9a9c4069b5b62cd11f7009df1d7ea1bdf7d39b91afffe0816b4353",
+    "docs/mist_cove/PHASE_VII_ROBUSTNESS_PROTOCOL_V1.md": "db8cc979c1dfacc1ac31fa0aecbfdee87237d270945bc53b4df5bed0082dd7e1",
+    "docs/mist_cove/PHASE_VII_SCIENTIFIC_DECISION_V1.md": "d9afa22b860657f9c8fcfb34354d28b1c93df93eae20f099a4da208ffb7206f8",
+    "src/mist_cove/phase7/__init__.py": "6088f5eaaef2659b66311cdbf0d9dccb7bc41f310b0fb7f04e1c76b1b41a6cbe",
+    "src/mist_cove/phase7/integrity.py": "6e40974815bad1b60efd79fd84d0354e8a715242b53d4b79a23fa79852901fcf",
+    "reports/mist_cove/phase7_v1/correctness_receipt_v1.json": "99dd5de3ef39352fdc58ebeb4963d147d8a4626df78be2c9a08cae9659c552a3",
+    "reports/mist_cove/phase7_v1/integrity_receipt_v1.json": "38f4d791b2890e6d2ed31a4d6348533571dd5680ab4f84020946dd84f538b0cf"
+  },
+  "scientific_fits": 0,
+  "optimizer_updates": 0,
+  "checkpoint_deserializations": 0,
+  "public_weights_or_waveforms": 0,
+  "historical_files_modified": false,
+  "real_data_accessed": false,
+  "reserved_access": false,
+  "st_access": false,
+  "shhs_access": false
+}
