@@ -21,7 +21,7 @@ from mist_evidence.runtime import atomic_json, atomic_torch_save, tensor_digest,
 from .integrity import ROOT, BASE, snapshot, require_scope, git
 
 CONFIG = ROOT/'configs/mist_cove_phase7_prospective_v1.json'
-MANIFEST = ROOT/'experiments/mist_cove/phase7_prospective_freeze_v1.json'
+MANIFEST = ROOT/'experiments/mist_cove/phase7_prospective_freeze_v2.json'
 
 
 def proof():
@@ -147,6 +147,12 @@ def score(logits,y):
     return r
 
 
+def location_batch(selected,draw):
+    records=[location(v,t,n) for v,t,n in zip(selected,draw.intervals,draw.nuisance_intervals)]
+    return {k:sum(v[k] for v in records if v[k] is not None)/sum(v[k] is not None for v in records)
+            if any(v[k] is not None for v in records) else None for k in records[0]}
+
+
 def feature_paths(model,a,b,mask):
     pa,pb=pooled(a),pooled(b);la,lb=head(model,pa),head(model,pb)
     diag=torch.where(mask[:,:,None],b,a);other=torch.where(mask[:,:,None],a,b)
@@ -185,8 +191,8 @@ def analyze(model,clean,comp,train_features,c,budget,private):
         'correct_to_wrong':float((correct_a&~correct_b).float().mean()),'wrong_to_correct':float((~correct_a&correct_b).float().mean()),
         'confidence_increased':float((lb.softmax(-1).max(-1).values>la.softmax(-1).max(-1).values).float().mean()),
         'localized_but_wrong':float((hb&~correct_b).float().mean()),'lost_localization_and_wrong':float((ha&~hb&~correct_b).float().mean())},
-        'localization_clean':location(iva,clean.intervals,clean.nuisance_intervals),
-        'localization_competitive':location(ivb,comp.intervals,comp.nuisance_intervals),
+        'localization_clean':location_batch(iva,clean),
+        'localization_competitive':location_batch(ivb,comp),
         'features_clean':summaries(a),'features_competitive':summaries(b),
         'diagnostic_candidate_drift':float((a-b).norm(dim=-1)[mask].mean()),'nondiagnostic_candidate_drift':float((a-b).norm(dim=-1)[~mask].mean()),
         'pooled_drift':float((pooled(a)-pooled(b)).norm(dim=-1).mean()),'paths':feature_paths(model,a,b,mask),
@@ -213,7 +219,22 @@ def run_diagnostics(path):
                 train=generate(c['train_examples'],seed+c['train_offset'],task,'train')
                 identity={'experiment':c['version'],'task':task,'seed':seed,'config_sha256':file_sha(CONFIG),'implementation':frozen,
                     'environment':environment('cpu'),'train_digest':tensor_digest({'x':train.x,'y':train.y})}
-                model,training=train_checkpoint(train.x,train.y,c,seed,output/f'{task}_{seed}_P0.pt',identity,budget);fits+=1
+                reuse=json.loads(MANIFEST.read_text())['reuse_baseline']
+                if (task,seed)==('single',123):
+                    creation_path=ROOT/reuse['creation_path']
+                    if file_sha(creation_path)!=reuse['creation_sha256']:raise ValueError('reused prospective creation proof changed')
+                    creation=json.loads(creation_path.read_text());prior=creation['identity']
+                    for key in ('experiment','task','seed','config_sha256','environment','train_digest'):
+                        if prior[key]!=identity[key]:raise ValueError('reused prospective identity mismatch')
+                    if prior['implementation']!=reuse['original_implementation']:raise ValueError('reused implementation mismatch')
+                    model=make_model('M1');opt=optimizer(model,c);g=torch.Generator()
+                    checkpoint=creation_path.with_name(creation_path.name.removesuffix('.creation.json')+'.pt')
+                    assert restore(checkpoint,creation,prior,model,opt,g)==c['updates']
+                    training={'updates':c['updates'],'exposures':c['updates']*c['batch_size'],'seconds':None,'parameters':3593,
+                              'creation':creation,'reused_completed_fit_from_preserved_failed_audit':True}
+                else:
+                    model,training=train_checkpoint(train.x,train.y,c,seed,output/f'{task}_{seed}_P0.pt',identity,budget)
+                fits+=1
                 tf,_=encode(model,train.x)
                 clean,comp=matched(c['diagnostic_examples'],seed+c['diagnostic_development_offset'],task,c)
                 analysis,eval_features=analyze(model,clean,comp,tf,c,budget,output/f'{task}_{seed}_details.pt')

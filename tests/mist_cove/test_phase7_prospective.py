@@ -8,7 +8,7 @@ import torch
 from mist_cove.phase4.model import make_model
 from mist_cove.phase5.runtime import Budget
 from mist_cove.phase7.prospective import (CONFIG, matched, pooled, oracle_mask, head, feature_paths,
-    encode, steps, optimizer, seal, restore, output_directory)
+    encode, steps, optimizer, seal, restore, output_directory, analyze)
 from mist_evidence.runtime import tensor_digest, rng_state
 
 C=json.loads(CONFIG.read_text())
@@ -102,3 +102,13 @@ def test_output_cannot_reuse_historical_run_or_existing_output(tmp_path):
     class ForbiddenPath:
         def __fspath__(self):pytest.fail('unauthorized path accessed')
     with pytest.raises(ValueError):output_directory(ForbiddenPath(),'reserved')
+
+
+def test_complete_audit_batches_localization_per_example(tmp_path):
+    torch.manual_seed(9250);model=make_model('M1');a,b=matched(10,9250,'multiple',C)
+    f,_=encode(model,a.x)
+    result,features=analyze(model,a,b,f,C,Budget(60),tmp_path/'generated-details.pt')
+    assert 0<=result['localization_clean']['topk_hit']<=1
+    assert result['paths']['max_reconciliation_error']<1e-5
+    assert features['local'][0].shape==(10,18)
+    assert len(result['oracle_group_effects'])==5
