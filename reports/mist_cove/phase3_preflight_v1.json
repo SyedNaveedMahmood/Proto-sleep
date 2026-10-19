@@ -1,0 +1,225 @@
+{
+  "phase": "MIST-COVE-PHASE-III-SOURCE-V1",
+  "status": "PREFLIGHT_COMPLETE_TRAINING_BLOCKED_PENDING_INDEPENDENT_REVIEW",
+  "authorization_reference": "User 2026-10-18 MASTER PROMPT \u2014 MIST-COVE PHASE III: REAL EEG TRAINING AND SCIENTIFIC VALIDATION, sections 3, 8 and final instruction",
+  "review_recorded": false,
+  "training_executed": false,
+  "optimizer_updates": 0,
+  "implementation_commit": "a601e8e004b9e0c2942e83d4517fb8a47856de72",
+  "implementation_sha256": "d08254fade1b8ba91715143c44c7043f88956eba937984557a011609f0a6bda9",
+  "config_file_sha256": "525fc8152e78219a9bee51ad84a4d067761b22c873d10199d25e426ff012883d",
+  "config_canonical_sha256": "af81748149c1bfb3c18dcf5c009c0a9f95bcabdc5a623ecc1e2b7d0b7420df46",
+  "split_fingerprint": "3e7a7260aae50ca522752f1cede41246daf1b2f6a8fd482800cfda97b4564e84",
+  "split_file_sha256": "1162a41098bb8a724a0b8bf8bb320469c2b1c02bb802d9b5cf7f2e49d2da54e5",
+  "grid": {
+    "smoke": false,
+    "train_subjects": 15,
+    "train_recordings": 29,
+    "train_physical_epochs": 79984,
+    "train_scored_epochs": 79025,
+    "val_subjects": 4,
+    "val_recordings": 8,
+    "val_physical_epochs": 21796,
+    "val_scored_epochs": 21789,
+    "optimizer_steps_per_epoch": 4978,
+    "reserved_access": false
+  },
+  "source_files_verified": 74,
+  "source_hashes_verified": true,
+  "bank_source_crops_exact": true,
+  "normalization_refitted": false,
+  "source_directory_case_discrepancy_verified": true,
+  "normalization_sha256": "0679b44c76e8c6667c4daba0b1915420eb04b02310be68536130f807899c5742",
+  "bank_sha256": {
+    "123": "5e1336a4079e1def4c94794a04cb9e9c0e1806f0ed0a0604a8f446907d206e42",
+    "456": "18adc09fb265016958bc7de6e4ce5ba911f3177c8202b37a4148b5b9ba88c632",
+    "789": "4865d856e0c3526dbb5ca67557e3700933e557cbd5d79d1029bdd5f23cddf3fd"
+  },
+  "preflight_wall_seconds": 9.006245349999517,
+  "source_scan": {
+    "train": {
+      "physical_epochs": 79984,
+      "seconds": 5.6457011150050675,
+      "read_batches": 5013,
+      "peak_batch_bytes": 192000
+    },
+    "val": {
+      "physical_epochs": 21796,
+      "seconds": 1.5366883590031648,
+      "read_batches": 1367,
+      "peak_batch_bytes": 192000
+    }
+  },
+  "real_source_numerical_probe": {
+    "status": "PASS",
+    "optimizer_updates": 0,
+    "validation_labels_used": false,
+    "scope": "UNTRAINED_BATCH16_NUMERICAL_FEASIBILITY_NOT_EPOCH_THROUGHPUT",
+    "runs": [
+      {
+        "variant": "q1",
+        "batch": 16,
+        "finite_logits_loss_gradients": true,
+        "optimizer_updates": 0,
+        "parameters": 75,
+        "trainable_parameters": 75,
+        "additive_max_abs_residual": 1.1920928955078125e-07,
+        "peak_gpu_allocated_bytes": 69190656
+      },
+      {
+        "variant": "availability",
+        "batch": 16,
+        "finite_logits_loss_gradients": true,
+        "optimizer_updates": 0,
+        "parameters": 75,
+        "trainable_parameters": 75,
+        "additive_max_abs_residual": 2.384185791015625e-07,
+        "peak_gpu_allocated_bytes": 69192704
+      },
+      {
+        "variant": "background",
+        "batch": 16,
+        "finite_logits_loss_gradients": true,
+        "optimizer_updates": 0,
+        "parameters": 75,
+        "trainable_parameters": 75,
+        "additive_max_abs_residual": 0.0,
+        "peak_gpu_allocated_bytes": 69191680
+      },
+      {
+        "variant": "rounded_q1",
+        "batch": 16,
+        "finite_logits_loss_gradients": true,
+        "optimizer_updates": 0,
+        "parameters": 75,
+        "trainable_parameters": 75,
+        "additive_max_abs_residual": 1.1920928955078125e-07,
+        "peak_gpu_allocated_bytes": 69192192
+      },
+      {
+        "variant": "raw_context",
+        "batch": 16,
+        "finite_logits_loss_gradients": true,
+        "optimizer_updates": 0,
+        "parameters": 34197,
+        "trainable_parameters": 33957,
+        "additive_max_abs_residual": null,
+        "peak_gpu_allocated_bytes": 191397888
+      },
+      {
+        "variant": "evidence",
+        "batch": 16,
+        "finite_logits_loss_gradients": true,
+        "optimizer_updates": 0,
+        "parameters": 13556,
+        "trainable_parameters": 13556,
+        "additive_max_abs_residual": null,
+        "peak_gpu_allocated_bytes": 193368576
+      }
+    ]
+  },
+  "cpu": {
+    "passed": 381,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 11
+  },
+  "cuda_pytest": {
+    "tests": 11,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 11
+  },
+  "cuda_exact_resume": {
+    "q1": true,
+    "availability": true,
+    "background": true,
+    "rounded_q1": true,
+    "raw_context": true,
+    "evidence": true
+  },
+  "environment": {
+    "python": "3.12.9",
+    "torch": "2.5.1",
+    "numpy": "1.26.4",
+    "cuda_build": "12.1",
+    "gpu_name": "NVIDIA GeForce RTX 4080 SUPER",
+    "gpu_total_memory_bytes": 16718168064,
+    "gpu_capability": [
+      8,
+      9
+    ],
+    "cudnn": 90100,
+    "threads": 2,
+    "deterministic": true,
+    "tf32_matmul": false,
+    "tf32_cudnn": false,
+    "cublas_workspace_config": ":4096:8"
+  },
+  "import_versions": {
+    "numpy": {
+      "imported": "1.26.4",
+      "metadata": "1.26.4"
+    },
+    "torch": {
+      "imported": "2.5.1",
+      "metadata": "2.5.1"
+    },
+    "pyEDFlib": {
+      "imported": "0.1.42",
+      "metadata": "0.1.42"
+    },
+    "scikit-learn": {
+      "imported": "1.7.2",
+      "metadata": "1.7.2"
+    },
+    "scipy": {
+      "imported": "1.15.2",
+      "metadata": "1.15.2"
+    },
+    "pytest": {
+      "imported": "8.4.2",
+      "metadata": "8.4.2"
+    },
+    "mne": {
+      "imported": "1.10.2",
+      "metadata": "1.10.2"
+    }
+  },
+  "gpu_free_memory_at_preflight_start_bytes": 16383082496,
+  "private_artifact_sha256": {
+    "preflight": "907decd409a9e5fb6d4ae20687861454d8ab37c6f02aef30d83cfda0ade59df0",
+    "cpu_correctness": "905a99a420d031b39da970246f285ac71595bf59d5fa836102b6ee2132101153",
+    "cuda_correctness": "c251db0f1c539d58a4d97b62f3ed59646db69b7ffcdb6d50a518535128634141",
+    "launch_proposal": "8282be8a6d7124a0fd6e83a4ae8b8e273919fc0b7976a756389e8088d3ec38b0",
+    "environment_freeze": "064b71e4981644508179c64ba3a6167297c14a6b56a69e032dbf61e3c254607c"
+  },
+  "outcomes": {
+    "PASS": [
+      "frozen split and original TRAIN/VAL EDF hashes",
+      "full physical input/mask counts and finite input scan",
+      "TRAIN-only normalization reuse and exact bank crops",
+      "CPU/CUDA regression and exact synthetic CUDA resume",
+      "real-input batch16 finite logits, probabilities and masked gradients without updates"
+    ],
+    "FAIL": [],
+    "NOT_TESTED": [
+      "real EEG training and source-VAL classification performance",
+      "initial-epoch throughput and 24-hour maximum-budget feasibility",
+      "real waveform counterfactual/physiological utility",
+      "reserved and external generalization"
+    ],
+    "BLOCKED": [
+      "Gate A and Gate B await independent launch review"
+    ]
+  },
+  "reserved_access": false,
+  "st_access": false,
+  "shhs_access": false,
+  "historical_findings_preserved": {
+    "H1": "FAILED",
+    "H2": "partial support; individual contribution is not causal necessity",
+    "W4": "q1 donor agreement failed in five of six synthetic task/seed runs"
+  }
+}

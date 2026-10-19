@@ -1,0 +1,22 @@
+{
+  "version": "mist-cove-phase3-waveform-analysis-detail-v1",
+  "scope": "POSTFIT_SC_VAL_ONLY_NO_FITTING",
+  "parent_protocol": "docs/mist_cove/PHASE_III_PROTOCOL_V1.md",
+  "status": "FROZEN_BEFORE_COMPLETED_GATE_B_RESULTS",
+  "selection": "Earliest up to five scored original physical epochs per stage per VAL recording; identical examples for every model/seed",
+  "methods": ["q1", "availability", "background", "rounded_q1"],
+  "seeds": [123, 456, 789],
+  "donors": ["bridge", "same_epoch_background"],
+  "background_donor_rule": "Among 200-sample windows on stride 100 disjoint from ALL original selected witnesses, choose minimum centered physical RMS, earliest tie. Preserve Phase II fixed 3-uV compatibility cap. Report unsupported if unavailable or above cap; do not relax.",
+  "boundary_blend_samples": 20,
+  "groups": ["union of all originally selected intervals", "same-dominant-spectral-band selected groups with >=2 members; declare before effects"],
+  "dominant_band_rule": "argmax of unchanged analytic five-band spectral fractions; descriptive spectral grouping, not verified clinical redundancy",
+  "estimands": ["original signed additive score", "individual full waveform effect", "joint group full waveform effect", "fixed-witness internal event-path effect", "background change", "reselection change", "exact reconciliation residual"],
+  "stability_transformations": {"tiny_noise_uV_sd": 0.01, "seed": 20261018, "physical_gain": 1.01, "shift_samples": 10},
+  "stability_interpretation": "Analysis only; no claim that physical gain or shifted epochs retain clinical labels. No training augmentation or VAL fitting.",
+  "reconciliation_absolute_tolerance": 0.00001,
+  "donor_sensitivity_descriptive_threshold": 0.25,
+  "plots": "Local only: first selected example per stage per recording for q1 seed123; physical waveform, 2s/1s-stride time-frequency view, selected intervals and signed five-stage evidence",
+  "privacy": "No raw waveform, source path, subject identity, participant prediction, fitted artifact or plot in public Git",
+  "interpretation": "Donor-conditional model dependence, not physiological causality or confirmed spindle/K-complex/slow-wave clinical event detection. Early label-stratified examples are not representative full-grid performance. Preserve failures."
+}

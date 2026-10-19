@@ -1,0 +1,207 @@
+{
+  "status": "PASS_ALL_18_COMPLETE_AUDITED_SOURCE_ONLY",
+  "actual_authorization_reference": "Actual user message: Decision APPROVE_GATE_B \u2014 MIST-COVE Phase III; following Gate A commit ed963a828ea92a551a554f2e332cd097b25cb013",
+  "decision": "APPROVE_GATE_B",
+  "authorization_message_sha256": "697c0f5fa140f62240bc97e4968cd2ef6edeca53914f8dd759974e2e6d0c8439",
+  "authorization_record_sha256": "7790df9061ed300c71d3bcf805fba0a9d4b4d59099a3f4b4830456b0921ceb6e",
+  "approval_is_actual_user_message_not_agent_generated": true,
+  "reviewed_gate_a_commit": "ed963a828ea92a551a554f2e332cd097b25cb013",
+  "proposal_sha256": "8282be8a6d7124a0fd6e83a4ae8b8e273919fc0b7976a756389e8088d3ec38b0",
+  "pre_resume_receipt_sha256": "d597065c83e937f7e8da9e3446eef87b09519a45f318ea82ee8f39f745d76ddb",
+  "execution_receipt_sha256": "fb7785a4d655277bf7d7ad6f91bdd2c20632ae500ee3ce2ca248f583107bb7ab",
+  "execution": {
+    "status": "CHILD_EXITED_OK",
+    "returncode": 0,
+    "problem": null,
+    "gate_b_elapsed_wall_seconds": 37984.38602918999,
+    "gate_a_epoch_seconds": 280.15569068398327
+  },
+  "source_grid": {
+    "smoke": false,
+    "train_subjects": 15,
+    "train_recordings": 29,
+    "train_physical_epochs": 79984,
+    "train_scored_epochs": 79025,
+    "val_subjects": 4,
+    "val_recordings": 8,
+    "val_physical_epochs": 21796,
+    "val_scored_epochs": 21789,
+    "optimizer_steps_per_epoch": 4978,
+    "reserved_access": false
+  },
+  "environment": {
+    "python": "3.12.9",
+    "torch": "2.5.1",
+    "numpy": "1.26.4",
+    "device": "cuda",
+    "cuda_build": "12.1",
+    "threads": 2,
+    "deterministic": true,
+    "tf32_matmul": false,
+    "tf32_cudnn": false,
+    "cublas_workspace_config": ":4096:8",
+    "packages": {
+      "numpy": "1.26.4",
+      "torch": "2.5.1",
+      "scikit-learn": "1.7.2",
+      "pyEDFlib": "0.1.42"
+    },
+    "gpu_name": "NVIDIA GeForce RTX 4080 SUPER",
+    "gpu_total_memory_bytes": 16718168064,
+    "gpu_capability": [
+      8,
+      9
+    ],
+    "cudnn": 90100,
+    "imports": {
+      "numpy": {
+        "imported": "1.26.4",
+        "metadata": "1.26.4"
+      },
+      "torch": {
+        "imported": "2.5.1",
+        "metadata": "2.5.1"
+      },
+      "pyEDFlib": {
+        "imported": "0.1.42",
+        "metadata": "0.1.42"
+      },
+      "scikit-learn": {
+        "imported": "1.7.2",
+        "metadata": "1.7.2"
+      },
+      "scipy": {
+        "imported": "1.15.2",
+        "metadata": "1.15.2"
+      },
+      "pytest": {
+        "imported": "8.4.2",
+        "metadata": "8.4.2"
+      },
+      "mne": {
+        "imported": "1.10.2",
+        "metadata": "1.10.2"
+      }
+    }
+  },
+  "frozen_implementation_sha256": "d08254fade1b8ba91715143c44c7043f88956eba937984557a011609f0a6bda9",
+  "config_canonical_sha256": "af81748149c1bfb3c18dcf5c009c0a9f95bcabdc5a623ecc1e2b7d0b7420df46",
+  "split_fingerprint": "3e7a7260aae50ca522752f1cede41246daf1b2f6a8fd482800cfda97b4564e84",
+  "split_file_sha256": "1162a41098bb8a724a0b8bf8bb320469c2b1c02bb802d9b5cf7f2e49d2da54e5",
+  "all_18_cartesian_runs_and_complete_seals_verified": true,
+  "all_six_seed123_original_epoch_one_boundaries_retained": true,
+  "full_val_grid_predictions_before_metric_mask_reverified": true,
+  "sources_normalization_banks_environment_reverified_after_analysis": true,
+  "maximum_budget_gate_gpu_hours": 14.007784534199164,
+  "approved_ceiling_gpu_hours": 24,
+  "known_measured_gate_b_wall_plus_gate_a_epoch_hours": 10.629039366631659,
+  "runtime_caveat": "Gate B wall includes its operational setup/checkpoints/observers. Gate A value is summed six initial epochs/checkpoint writes; its surrounding setup wall was not separately timed. GPU kernel time was not profiled. Postfit analysis is separately timed.",
+  "checks": {
+    "cpu": {
+      "tests": 409,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 11,
+      "passed": 398,
+      "artifact_sha256": "4844e3dbb2922357aefdd5a9a66afdff85ee3613ba7e1f471ed70d888f039081"
+    },
+    "prelaunch_cuda": {
+      "tests": 11,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 11,
+      "artifact_sha256": "3f53515c04e1b6e0405bb971caa3ea573233ba915c7da16e287e91c8dcc38197"
+    },
+    "six_method_exact_resume": true,
+    "frozen_training_implementation_sha256": "d08254fade1b8ba91715143c44c7043f88956eba937984557a011609f0a6bda9",
+    "analysis_tests_added": 17,
+    "original_cpu_suite_passed": 381,
+    "unchanged_historical_warning_count": 1
+  },
+  "postfit_analysis_sha256": {
+    "collect_phase3_results_v1.py": "e7227f88cf2a389899f547371b3ddac5f0255eff3a43f927bb0e2c597bb9cedb",
+    "individual_attribution_summary_v1.py": "2d127b8414f0179e1d4c09166a44e457335869db3d31b08b323537a2e5c6b41e",
+    "launch_gate_b_v1.py": "c7bb8510b85be5a7732d03416efd92f7ce039bab7d8e633acdb41548c6998117",
+    "monitor_best_predictions_v1.py": "d2d9fbfa86ccc066b25b95ea047abaafb9d5c463d52b76d97c7d5d34f8386b8a",
+    "monitor_gate_b_v1.py": "ae33925a897bde2376a5d03475016bc56440159027b7ec24fbd7c44f52486a45",
+    "post_pipeline_v1.py": "6e9b138fdb05bc3a7e8bbdb5f1e44b9c66add7ffb8b53fcb519d166f212817a7",
+    "render_aggregate_figures_v1.py": "bb993f9a2c0ee7f623cd47e376ccf0990024358ad719679f3e52760419c8e0d9",
+    "supplemental_audit_summary_v1.py": "bd36c00e9ef7ed463dd209caec1a001bcf3c6e4da747ae45e36fab503aed98ca",
+    "waveform_analysis_v1.py": "daa33cef4c7dda03867231e15773122042fe1f2be8c180367bc467b2ffd72814"
+  },
+  "archival_execution_sources_match_private_executed_bytes": true,
+  "new_run_vs_historical_baseline_comparison": [
+    {
+      "variant": "raw_context",
+      "seed": 123,
+      "new_participant_macro_f1": 0.7215141151347595,
+      "historical_participant_macro_f1": 0.7215141151347595,
+      "F1_exact_equal": true,
+      "pooled_F1_exact_equal": true,
+      "realized_epochs_equal": true,
+      "best_epoch_equal": true
+    },
+    {
+      "variant": "evidence",
+      "seed": 123,
+      "new_participant_macro_f1": 0.7355947539138789,
+      "historical_participant_macro_f1": 0.7355947539138789,
+      "F1_exact_equal": true,
+      "pooled_F1_exact_equal": true,
+      "realized_epochs_equal": true,
+      "best_epoch_equal": true
+    },
+    {
+      "variant": "raw_context",
+      "seed": 456,
+      "new_participant_macro_f1": 0.7196135748119601,
+      "historical_participant_macro_f1": 0.7196135748119601,
+      "F1_exact_equal": true,
+      "pooled_F1_exact_equal": true,
+      "realized_epochs_equal": true,
+      "best_epoch_equal": true
+    },
+    {
+      "variant": "evidence",
+      "seed": 456,
+      "new_participant_macro_f1": 0.7037100739542521,
+      "historical_participant_macro_f1": 0.7037100739542521,
+      "F1_exact_equal": true,
+      "pooled_F1_exact_equal": true,
+      "realized_epochs_equal": true,
+      "best_epoch_equal": true
+    },
+    {
+      "variant": "raw_context",
+      "seed": 789,
+      "new_participant_macro_f1": 0.7294050653710085,
+      "historical_participant_macro_f1": 0.7294050653710085,
+      "F1_exact_equal": true,
+      "pooled_F1_exact_equal": true,
+      "realized_epochs_equal": true,
+      "best_epoch_equal": true
+    },
+    {
+      "variant": "evidence",
+      "seed": 789,
+      "new_participant_macro_f1": 0.7147894126346563,
+      "historical_participant_macro_f1": 0.7147894126346563,
+      "F1_exact_equal": true,
+      "pooled_F1_exact_equal": true,
+      "realized_epochs_equal": true,
+      "best_epoch_equal": true
+    }
+  ],
+  "historical_comparison_source_sha256": "866cc042c50f73bc97eda8ac9389761737f82c4339907affe7fcf42d456f51cb",
+  "private_waveform_plots_count": 40,
+  "published_waveform_plots_count": 0,
+  "reserved_access": false,
+  "st_access": false,
+  "shhs_access": false,
+  "legacy_npz_used": false,
+  "validation_fitting": false,
+  "external_validation_authorized": false,
+  "environment_path_redaction": "Interpreter and imported module paths retained only in private environment receipt; imported/metadata versions preserved.",
+  "public_csv_newlines": "CSV writer CRLF normalized to LF for repository whitespace policy; every parsed field verified unchanged."
+}
