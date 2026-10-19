@@ -1,0 +1,11 @@
+{
+  "version": "mist-cove-phase4-preregistration-v1",
+  "status": "FROZEN_BEFORE_CONFIRMATORY_EXECUTION",
+  "sha256": {
+    "docs/mist_cove/PHASE_IV_HYPOTHESES_V1.md": "8193e8686c91c201431dd9b08b38114f7c069ff34d8ca88ee11647718ac3c5fd",
+    "docs/mist_cove/PHASE_IV_MODEL_SPEC_V1.md": "84512a130531041467839dbe6b63c3f43390936d1faffc9fbdce0eea801a4237",
+    "docs/mist_cove/PHASE_IV_PROTOCOL_V1.md": "0b095495f5c590ebe710274ae1f65cbd44ebd01637cb75e0de72f0ebf0eeb005",
+    "configs/mist_cove_phase4_synthetic_v1.json": "515218ab23e9d4072a13d244a2c268f0a561600907fcd748048bf44b9cc57f4b",
+    "experiments/mist_cove/phase4_ablation_matrix_v1.json": "47794167a802db82ee89103042a7195b796cf578bcbfe5533eaba1ef54b0a114"
+  }
+}

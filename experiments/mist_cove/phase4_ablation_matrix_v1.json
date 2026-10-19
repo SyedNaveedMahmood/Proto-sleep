@@ -1,0 +1,13 @@
+{
+  "version": "mist-cove-phase4-matrix-v1",
+  "M0": "Unchanged historical q1 spectral/RMS reference, 75 parameters.",
+  "M1": "Learned multiscale encoder; ordinary mean/max pooled linear classifier.",
+  "M2": "Same encoder; mean background plus sparse signed additive evidence, learned stage-contrast top-K.",
+  "M3": "Same encoder and background; local event decision path disabled.",
+  "M2_rms": "Exactly M2 capacity and budget; rank by physical RMS instead of learned contrast.",
+  "M1_phase": "Exactly M1 capacity; remove patch Fourier phase before encoding, retain full magnitude/mean/RMS.",
+  "fixed_encoder": "M1/M2/M3 reuse byte-identical final M1 encoder weights, freeze them and reset heads; same 150-update head exposure.",
+  "M4": "Omitted: no conditional availability mechanism is assumed necessary after previous negative results.",
+  "source_future": ["M0", "M1", "M2", "M3", "M2_rms", "raw_context", "evidence"],
+  "source_authorized": false
+}
