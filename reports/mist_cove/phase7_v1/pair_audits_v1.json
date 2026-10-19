@@ -1,0 +1,1277 @@
+{
+  "status": "COMPLETE_DESCRIPTIVE_POST_LOCK_EXPORT",
+  "freeze_sha256": "28950d071c5b86785f8cb6a56c15fda85becd503def7c3de9f0aad10a66a1b92",
+  "rows": [
+    {
+      "task": "single",
+      "seed": 123,
+      "method": "P0",
+      "conditions": {
+        "clean": {
+          "examples": 500,
+          "signed_joint_mean": [
+            1.328550100326538,
+            -2.7930867671966553,
+            3.7300527095794678,
+            -8.734681129455566,
+            -3.395380973815918
+          ],
+          "signed_individual_mean": [
+            [
+              1.328550100326538,
+              -2.7930867671966553,
+              3.7300527095794678,
+              -8.734681129455566,
+              -3.395380973815918
+            ]
+          ],
+          "absolute_joint_mean": 6.000105381011963,
+          "true_class_absolute_joint_mean": 8.172584533691406,
+          "true_class_max_individual_mean": 8.172584533691406,
+          "joint_exceeds_largest_individual_fraction": 0.0,
+          "native_scores_are_zero": true,
+          "physiological_validity": "NOT ESTABLISHED",
+          "donor_robustness": "NOT TESTED"
+        },
+        "competitive": {
+          "examples": 500,
+          "signed_joint_mean": [
+            0.819743275642395,
+            -1.5112802982330322,
+            2.783926248550415,
+            -6.384779453277588,
+            -1.3336029052734375
+          ],
+          "signed_individual_mean": [
+            [
+              0.819743275642395,
+              -1.5112802982330322,
+              2.783926248550415,
+              -6.384779453277588,
+              -1.3336029052734375
+            ]
+          ],
+          "absolute_joint_mean": 4.041006565093994,
+          "true_class_absolute_joint_mean": 6.094006538391113,
+          "true_class_max_individual_mean": 6.094006538391113,
+          "joint_exceeds_largest_individual_fraction": 0.0,
+          "native_scores_are_zero": true,
+          "physiological_validity": "NOT ESTABLISHED",
+          "donor_robustness": "NOT TESTED"
+        }
+      },
+      "candidate_drift_l2_mean": 4.915809631347656,
+      "pooled_drift_l2_mean": 10.149181365966797,
+      "private_artifact_sha256": "be9db0a4930bfd617920f800755411d6ee6a8221a092957d819c6763ae527e45",
+      "private_seal_sha256": "4f814b56837e99a958b5912ca01cb7e9e584515f4e6f8f28c749cd56e68af4ae"
+    },
+    {
+      "task": "single",
+      "seed": 123,
+      "method": "R1",
+      "conditions": {
+        "clean": {
+          "examples": 500,
+          "signed_joint_mean": [
+            -0.5422952175140381,
+            -3.985565662384033,
+            2.7693896293640137,
+            -0.6888589859008789,
+            -4.577298641204834
+          ],
+          "signed_individual_mean": [
+            [
+              -0.5422952175140381,
+              -3.985565662384033,
+              2.7693896293640137,
+              -0.6888589859008789,
+              -4.577298641204834
+            ]
+          ],
+          "absolute_joint_mean": 4.412219524383545,
+          "true_class_absolute_joint_mean": 6.428706169128418,
+          "true_class_max_individual_mean": 6.428706169128418,
+          "joint_exceeds_largest_individual_fraction": 0.0,
+          "native_scores_are_zero": true,
+          "physiological_validity": "NOT ESTABLISHED",
+          "donor_robustness": "NOT TESTED"
+        },
+        "competitive": {
+          "examples": 500,
+          "signed_joint_mean": [
+            -0.3386531174182892,
+            -2.927030324935913,
+            1.9968940019607544,
+            -0.5452964901924133,
+            -3.3125076293945312
+          ],
+          "signed_individual_mean": [
+            [
+              -0.3386531174182892,
+              -2.927030324935913,
+              1.9968940019607544,
+              -0.5452964901924133,
+              -3.3125076293945312
+            ]
+          ],
+          "absolute_joint_mean": 3.231452465057373,
+          "true_class_absolute_joint_mean": 4.814938068389893,
+          "true_class_max_individual_mean": 4.814938068389893,
+          "joint_exceeds_largest_individual_fraction": 0.0,
+          "native_scores_are_zero": true,
+          "physiological_validity": "NOT ESTABLISHED",
+          "donor_robustness": "NOT TESTED"
+        }
+      },
+      "candidate_drift_l2_mean": 2.6005475521087646,
+      "pooled_drift_l2_mean": 5.954678535461426,
+      "private_artifact_sha256": "6035cdfa7b8eeb6d8bb69e21b18a77d990ee41c47159e66eac955cf43e864a04",
+      "private_seal_sha256": "3c3afaef0051cf67ce827c132fa706a7aed3215cee435cae50e4f727d6400e82"
+    },
+    {
+      "task": "single",
+      "seed": 123,
+      "method": "R2",
+      "conditions": {
+        "clean": {
+          "examples": 500,
+          "signed_joint_mean": [
+            0.4466477036476135,
+            -2.5735151767730713,
+            2.61977481842041,
+            -2.972378730773926,
+            -0.23847651481628418
+          ],
+          "signed_individual_mean": [
+            [
+              0.4466477036476135,
+              -2.5735151767730713,
+              2.61977481842041,
+              -2.972378730773926,
+              -0.23847651481628418
+            ]
+          ],
+          "absolute_joint_mean": 2.983837604522705,
+          "true_class_absolute_joint_mean": 4.803760051727295,
+          "true_class_max_individual_mean": 4.803760051727295,
+          "joint_exceeds_largest_individual_fraction": 0.0,
+          "native_scores_are_zero": true,
+          "physiological_validity": "NOT ESTABLISHED",
+          "donor_robustness": "NOT TESTED"
+        },
+        "competitive": {
+          "examples": 500,
+          "signed_joint_mean": [
+            0.4625408947467804,
+            -2.1026976108551025,
+            1.9702515602111816,
+            -2.3376576900482178,
+            -0.21981871128082275
+          ],
+          "signed_individual_mean": [
+            [
+              0.4625408947467804,
+              -2.1026976108551025,
+              1.9702515602111816,
+              -2.3376576900482178,
+              -0.21981871128082275
+            ]
+          ],
+          "absolute_joint_mean": 2.3816769123077393,
+          "true_class_absolute_joint_mean": 3.919719934463501,
+          "true_class_max_individual_mean": 3.919719934463501,
+          "joint_exceeds_largest_individual_fraction": 0.0,
+          "native_scores_are_zero": true,
+          "physiological_validity": "NOT ESTABLISHED",
+          "donor_robustness": "NOT TESTED"
+        }
+      },
+      "candidate_drift_l2_mean": 2.258544683456421,
+      "pooled_drift_l2_mean": 4.4821062088012695,
+      "private_artifact_sha256": "09517e77e872f059fe5a04990b39d6e7b5548e8a6b1ce15895df59fca404da69",
+      "private_seal_sha256": "e14bf60b0471bcd518b425ff79143daf5f418c0a7c55f59d117f9edebbb76548"
+    },
+    {
+      "task": "single",
+      "seed": 456,
+      "method": "P0",
+      "conditions": {
+        "clean": {
+          "examples": 500,
+          "signed_joint_mean": [
+            -3.703800678253174,
+            3.4853579998016357,
+            5.892245292663574,
+            2.5312340259552,
+            -6.923270225524902
+          ],
+          "signed_individual_mean": [
+            [
+              -3.703800678253174,
+              3.4853579998016357,
+              5.892245292663574,
+              2.5312340259552,
+              -6.923270225524902
+            ]
+          ],
+          "absolute_joint_mean": 5.193801403045654,
+          "true_class_absolute_joint_mean": 9.755868911743164,
+          "true_class_max_individual_mean": 9.755868911743164,
+          "joint_exceeds_largest_individual_fraction": 0.0,
+          "native_scores_are_zero": true,
+          "physiological_validity": "NOT ESTABLISHED",
+          "donor_robustness": "NOT TESTED"
+        },
+        "competitive": {
+          "examples": 500,
+          "signed_joint_mean": [
+            -2.5355985164642334,
+            1.7569928169250488,
+            3.8756749629974365,
+            0.30321550369262695,
+            -4.710058689117432
+          ],
+          "signed_individual_mean": [
+            [
+              -2.5355985164642334,
+              1.7569928169250488,
+              3.8756749629974365,
+              0.30321550369262695,
+              -4.710058689117432
+            ]
+          ],
+          "absolute_joint_mean": 3.334151268005371,
+          "true_class_absolute_joint_mean": 5.4803242683410645,
+          "true_class_max_individual_mean": 5.4803242683410645,
+          "joint_exceeds_largest_individual_fraction": 0.0,
+          "native_scores_are_zero": true,
+          "physiological_validity": "NOT ESTABLISHED",
+          "donor_robustness": "NOT TESTED"
+        }
+      },
+      "candidate_drift_l2_mean": 6.743958473205566,
+      "pooled_drift_l2_mean": 13.587475776672363,
+      "private_artifact_sha256": "4b41e4398f5943101e011cf15b124f4fba535becc4d480fa0252270ab2f9786f",
+      "private_seal_sha256": "5b29b9d71db35ea2c3052b88b184e6e5ec8902c42de94a7cf2761a2d8d65baf5"
+    },
+    {
+      "task": "single",
+      "seed": 456,
+      "method": "R1",
+      "conditions": {
+        "clean": {
+          "examples": 500,
+          "signed_joint_mean": [
+            -3.4719533920288086,
+            3.876086473464966,
+            3.54937744140625,
+            -3.560001850128174,
+            -4.875349521636963
+          ],
+          "signed_individual_mean": [
+            [
+              -3.4719533920288086,
+              3.876086473464966,
+              3.54937744140625,
+              -3.560001850128174,
+              -4.875349521636963
+            ]
+          ],
+          "absolute_joint_mean": 4.083168983459473,
+          "true_class_absolute_joint_mean": 5.70162296295166,
+          "true_class_max_individual_mean": 5.70162296295166,
+          "joint_exceeds_largest_individual_fraction": 0.0,
+          "native_scores_are_zero": true,
+          "physiological_validity": "NOT ESTABLISHED",
+          "donor_robustness": "NOT TESTED"
+        },
+        "competitive": {
+          "examples": 500,
+          "signed_joint_mean": [
+            -2.4250805377960205,
+            2.7117562294006348,
+            2.5426013469696045,
+            -2.598005771636963,
+            -3.430056571960449
+          ],
+          "signed_individual_mean": [
+            [
+              -2.4250805377960205,
+              2.7117562294006348,
+              2.5426013469696045,
+              -2.598005771636963,
+              -3.430056571960449
+            ]
+          ],
+          "absolute_joint_mean": 2.7994961738586426,
+          "true_class_absolute_joint_mean": 3.8806636333465576,
+          "true_class_max_individual_mean": 3.8806636333465576,
+          "joint_exceeds_largest_individual_fraction": 0.0,
+          "native_scores_are_zero": true,
+          "physiological_validity": "NOT ESTABLISHED",
+          "donor_robustness": "NOT TESTED"
+        }
+      },
+      "candidate_drift_l2_mean": 2.390650987625122,
+      "pooled_drift_l2_mean": 5.920683860778809,
+      "private_artifact_sha256": "9f777ebf441fe8ccc5d8cb0f465eb6052cfa726f17760ed8a4760800e4edb752",
+      "private_seal_sha256": "8dc31810b887bac406c1e57fe009a4012a0e7ad95eb33be7d710505d434896fe"
+    },
+    {
+      "task": "single",
+      "seed": 456,
+      "method": "R2",
+      "conditions": {
+        "clean": {
+          "examples": 500,
+          "signed_joint_mean": [
+            -1.7804981470108032,
+            2.5848915576934814,
+            2.273958206176758,
+            -1.2782143354415894,
+            -3.256324529647827
+          ],
+          "signed_individual_mean": [
+            [
+              -1.7804981470108032,
+              2.5848915576934814,
+              2.273958206176758,
+              -1.2782143354415894,
+              -3.256324529647827
+            ]
+          ],
+          "absolute_joint_mean": 3.2670881748199463,
+          "true_class_absolute_joint_mean": 5.310040473937988,
+          "true_class_max_individual_mean": 5.310040473937988,
+          "joint_exceeds_largest_individual_fraction": 0.0,
+          "native_scores_are_zero": true,
+          "physiological_validity": "NOT ESTABLISHED",
+          "donor_robustness": "NOT TESTED"
+        },
+        "competitive": {
+          "examples": 500,
+          "signed_joint_mean": [
+            -1.439643144607544,
+            1.9834673404693604,
+            1.8025301694869995,
+            -1.22958505153656,
+            -2.6756834983825684
+          ],
+          "signed_individual_mean": [
+            [
+              -1.439643144607544,
+              1.9834673404693604,
+              1.8025301694869995,
+              -1.22958505153656,
+              -2.6756834983825684
+            ]
+          ],
+          "absolute_joint_mean": 2.3999171257019043,
+          "true_class_absolute_joint_mean": 3.930337905883789,
+          "true_class_max_individual_mean": 3.930337905883789,
+          "joint_exceeds_largest_individual_fraction": 0.0,
+          "native_scores_are_zero": true,
+          "physiological_validity": "NOT ESTABLISHED",
+          "donor_robustness": "NOT TESTED"
+        }
+      },
+      "candidate_drift_l2_mean": 1.7066819667816162,
+      "pooled_drift_l2_mean": 4.600589275360107,
+      "private_artifact_sha256": "7f68b1f3726bc212b38e310352bb58e66cd505750cbcac2ec2d25e8d9e1affb4",
+      "private_seal_sha256": "f0ac469fce8b63725cbdba6bd49b792cbf6b46fabdcc553ad79ea013e636fe02"
+    },
+    {
+      "task": "single",
+      "seed": 789,
+      "method": "P0",
+      "conditions": {
+        "clean": {
+          "examples": 500,
+          "signed_joint_mean": [
+            -4.053588390350342,
+            -0.11332736164331436,
+            -1.1085400581359863,
+            -1.2578495740890503,
+            -3.6900508403778076
+          ],
+          "signed_individual_mean": [
+            [
+              -4.053588390350342,
+              -0.11332736164331436,
+              -1.1085400581359863,
+              -1.2578495740890503,
+              -3.6900508403778076
+            ]
+          ],
+          "absolute_joint_mean": 6.072778701782227,
+          "true_class_absolute_joint_mean": 9.188246726989746,
+          "true_class_max_individual_mean": 9.188246726989746,
+          "joint_exceeds_largest_individual_fraction": 0.0,
+          "native_scores_are_zero": true,
+          "physiological_validity": "NOT ESTABLISHED",
+          "donor_robustness": "NOT TESTED"
+        },
+        "competitive": {
+          "examples": 500,
+          "signed_joint_mean": [
+            -1.2503224611282349,
+            -0.43554720282554626,
+            -1.3467170000076294,
+            -1.2538533210754395,
+            -2.1154425144195557
+          ],
+          "signed_individual_mean": [
+            [
+              -1.2503224611282349,
+              -0.43554720282554626,
+              -1.3467170000076294,
+              -1.2538533210754395,
+              -2.1154425144195557
+            ]
+          ],
+          "absolute_joint_mean": 4.41867733001709,
+          "true_class_absolute_joint_mean": 6.995867729187012,
+          "true_class_max_individual_mean": 6.995867729187012,
+          "joint_exceeds_largest_individual_fraction": 0.0,
+          "native_scores_are_zero": true,
+          "physiological_validity": "NOT ESTABLISHED",
+          "donor_robustness": "NOT TESTED"
+        }
+      },
+      "candidate_drift_l2_mean": 3.6107723712921143,
+      "pooled_drift_l2_mean": 9.630149841308594,
+      "private_artifact_sha256": "44378affc9a6fc29f3a589e74dd92a42e037c9469d04d75bd773c4b64f554e43",
+      "private_seal_sha256": "b40f6f275b4c88befaef27aaf0a7d93a065710b62d1df087b20737ed2ce77c38"
+    },
+    {
+      "task": "single",
+      "seed": 789,
+      "method": "R1",
+      "conditions": {
+        "clean": {
+          "examples": 500,
+          "signed_joint_mean": [
+            -2.1816587448120117,
+            -0.3432324230670929,
+            -2.711777925491333,
+            1.1063214540481567,
+            -1.7550849914550781
+          ],
+          "signed_individual_mean": [
+            [
+              -2.1816587448120117,
+              -0.3432324230670929,
+              -2.711777925491333,
+              1.1063214540481567,
+              -1.7550849914550781
+            ]
+          ],
+          "absolute_joint_mean": 6.192928791046143,
+          "true_class_absolute_joint_mean": 11.45921516418457,
+          "true_class_max_individual_mean": 11.45921516418457,
+          "joint_exceeds_largest_individual_fraction": 0.0,
+          "native_scores_are_zero": true,
+          "physiological_validity": "NOT ESTABLISHED",
+          "donor_robustness": "NOT TESTED"
+        },
+        "competitive": {
+          "examples": 500,
+          "signed_joint_mean": [
+            -1.463017225265503,
+            -0.3815467655658722,
+            -2.0205111503601074,
+            0.6240978837013245,
+            -1.3280891180038452
+          ],
+          "signed_individual_mean": [
+            [
+              -1.463017225265503,
+              -0.3815467655658722,
+              -2.0205111503601074,
+              0.6240978837013245,
+              -1.3280891180038452
+            ]
+          ],
+          "absolute_joint_mean": 4.6434502601623535,
+          "true_class_absolute_joint_mean": 8.526065826416016,
+          "true_class_max_individual_mean": 8.526065826416016,
+          "joint_exceeds_largest_individual_fraction": 0.0,
+          "native_scores_are_zero": true,
+          "physiological_validity": "NOT ESTABLISHED",
+          "donor_robustness": "NOT TESTED"
+        }
+      },
+      "candidate_drift_l2_mean": 2.479332685470581,
+      "pooled_drift_l2_mean": 8.691779136657715,
+      "private_artifact_sha256": "3a8db5865b25376180d6b5b06ae34321da0ae9032cf51b0ab9e5bdcd5a7a7b87",
+      "private_seal_sha256": "8400736a60f4a0b18304eb9003ded94f25ce4987a0e5b4fdc14f3cd03a72a365"
+    },
+    {
+      "task": "single",
+      "seed": 789,
+      "method": "R2",
+      "conditions": {
+        "clean": {
+          "examples": 500,
+          "signed_joint_mean": [
+            -2.640866756439209,
+            -0.7678655982017517,
+            -1.0836330652236938,
+            0.3243197202682495,
+            -1.0804557800292969
+          ],
+          "signed_individual_mean": [
+            [
+              -2.640866756439209,
+              -0.7678655982017517,
+              -1.0836330652236938,
+              0.3243197202682495,
+              -1.0804557800292969
+            ]
+          ],
+          "absolute_joint_mean": 4.421873092651367,
+          "true_class_absolute_joint_mean": 7.797665596008301,
+          "true_class_max_individual_mean": 7.797665596008301,
+          "joint_exceeds_largest_individual_fraction": 0.0,
+          "native_scores_are_zero": true,
+          "physiological_validity": "NOT ESTABLISHED",
+          "donor_robustness": "NOT TESTED"
+        },
+        "competitive": {
+          "examples": 500,
+          "signed_joint_mean": [
+            -1.8009074926376343,
+            -0.6185927391052246,
+            -1.1026525497436523,
+            0.1525266021490097,
+            -0.9434376955032349
+          ],
+          "signed_individual_mean": [
+            [
+              -1.8009074926376343,
+              -0.6185927391052246,
+              -1.1026525497436523,
+              0.1525266021490097,
+              -0.9434376955032349
+            ]
+          ],
+          "absolute_joint_mean": 3.647923469543457,
+          "true_class_absolute_joint_mean": 6.465859889984131,
+          "true_class_max_individual_mean": 6.465859889984131,
+          "joint_exceeds_largest_individual_fraction": 0.0,
+          "native_scores_are_zero": true,
+          "physiological_validity": "NOT ESTABLISHED",
+          "donor_robustness": "NOT TESTED"
+        }
+      },
+      "candidate_drift_l2_mean": 1.9842647314071655,
+      "pooled_drift_l2_mean": 6.030572891235352,
+      "private_artifact_sha256": "310d6561ced707fc17a98cff2287e25876575f2505bd0fd5fefd948d3a27a1a2",
+      "private_seal_sha256": "ef09e752b2d8ae263a2f0457471293b241f70213b3fc2a3ce861daeaaed9c916"
+    },
+    {
+      "task": "multiple",
+      "seed": 123,
+      "method": "P0",
+      "conditions": {
+        "clean": {
+          "examples": 500,
+          "signed_joint_mean": [
+            1.7457683086395264,
+            3.3724234104156494,
+            5.248837947845459,
+            -5.378669738769531,
+            -4.887722969055176
+          ],
+          "signed_individual_mean": [
+            [
+              0.40263885259628296,
+              0.7971179485321045,
+              0.2529718279838562,
+              -1.054640293121338,
+              -0.7047128677368164
+            ],
+            [
+              0.4386342167854309,
+              1.0272899866104126,
+              0.6391881108283997,
+              -1.24820876121521,
+              -1.046946406364441
+            ]
+          ],
+          "absolute_joint_mean": 5.250254154205322,
+          "true_class_absolute_joint_mean": 7.087186336517334,
+          "true_class_max_individual_mean": 3.536806106567383,
+          "joint_exceeds_largest_individual_fraction": 0.8339999914169312,
+          "native_scores_are_zero": true,
+          "physiological_validity": "NOT ESTABLISHED",
+          "donor_robustness": "NOT TESTED"
+        },
+        "competitive": {
+          "examples": 500,
+          "signed_joint_mean": [
+            1.3302943706512451,
+            2.1588661670684814,
+            3.877349615097046,
+            -3.7899599075317383,
+            -3.6955161094665527
+          ],
+          "signed_individual_mean": [
+            [
+              0.3987000584602356,
+              0.6348808407783508,
+              0.6018973588943481,
+              -0.9710176587104797,
+              -0.8323858976364136
+            ],
+            [
+              0.443175345659256,
+              0.8370716571807861,
+              1.0311039686203003,
+              -1.2586256265640259,
+              -1.1593199968338013
+            ]
+          ],
+          "absolute_joint_mean": 3.9731593132019043,
+          "true_class_absolute_joint_mean": 5.421763896942139,
+          "true_class_max_individual_mean": 3.254202365875244,
+          "joint_exceeds_largest_individual_fraction": 0.7540000081062317,
+          "native_scores_are_zero": true,
+          "physiological_validity": "NOT ESTABLISHED",
+          "donor_robustness": "NOT TESTED"
+        }
+      },
+      "candidate_drift_l2_mean": 3.440251111984253,
+      "pooled_drift_l2_mean": 7.1424031257629395,
+      "private_artifact_sha256": "6a73a51d88893c32b9b8a10cdca0127a78a3cf429800826096eb71712db02430",
+      "private_seal_sha256": "864ede741693c417ea34c790f92110563907fe129c55b939522daf353fe2d0b7"
+    },
+    {
+      "task": "multiple",
+      "seed": 123,
+      "method": "R1",
+      "conditions": {
+        "clean": {
+          "examples": 500,
+          "signed_joint_mean": [
+            1.257961630821228,
+            1.0840153694152832,
+            2.716042995452881,
+            -6.271935939788818,
+            0.2901763319969177
+          ],
+          "signed_individual_mean": [
+            [
+              0.4953884184360504,
+              0.173639178276062,
+              0.4926822781562805,
+              -2.0218305587768555,
+              0.37780386209487915
+            ],
+            [
+              0.5118348002433777,
+              0.23285694420337677,
+              0.597477912902832,
+              -2.2122421264648438,
+              0.3672107458114624
+            ]
+          ],
+          "absolute_joint_mean": 3.0136821269989014,
+          "true_class_absolute_joint_mean": 4.03701114654541,
+          "true_class_max_individual_mean": 2.2005913257598877,
+          "joint_exceeds_largest_individual_fraction": 0.7139999866485596,
+          "native_scores_are_zero": true,
+          "physiological_validity": "NOT ESTABLISHED",
+          "donor_robustness": "NOT TESTED"
+        },
+        "competitive": {
+          "examples": 500,
+          "signed_joint_mean": [
+            0.9815446734428406,
+            0.8972029089927673,
+            2.2058920860290527,
+            -4.760703086853027,
+            0.08581047505140305
+          ],
+          "signed_individual_mean": [
+            [
+              0.41444581747055054,
+              0.21299001574516296,
+              0.5495142936706543,
+              -1.6713939905166626,
+              0.17767739295959473
+            ],
+            [
+              0.4512922465801239,
+              0.2801486849784851,
+              0.7197745442390442,
+              -1.964256763458252,
+              0.16955070197582245
+            ]
+          ],
+          "absolute_joint_mean": 2.3184874057769775,
+          "true_class_absolute_joint_mean": 3.16798734664917,
+          "true_class_max_individual_mean": 2.1023640632629395,
+          "joint_exceeds_largest_individual_fraction": 0.6579999923706055,
+          "native_scores_are_zero": true,
+          "physiological_validity": "NOT ESTABLISHED",
+          "donor_robustness": "NOT TESTED"
+        }
+      },
+      "candidate_drift_l2_mean": 1.6788336038589478,
+      "pooled_drift_l2_mean": 4.200911998748779,
+      "private_artifact_sha256": "8ac442f71a767539edcdbf5c41babc39da52f3959fda6cdd5121b0f9c9810e5c",
+      "private_seal_sha256": "6cb5888d2f066710ce46716e3dccf4d6e76041bd4cea69566d76b4142292c94c"
+    },
+    {
+      "task": "multiple",
+      "seed": 123,
+      "method": "R2",
+      "conditions": {
+        "clean": {
+          "examples": 500,
+          "signed_joint_mean": [
+            1.7487430572509766,
+            1.3892055749893188,
+            2.9024672508239746,
+            -6.282057762145996,
+            0.27997809648513794
+          ],
+          "signed_individual_mean": [
+            [
+              0.6516392827033997,
+              0.2668549120426178,
+              0.5544850826263428,
+              -2.0320119857788086,
+              0.349082887172699
+            ],
+            [
+              0.652101457118988,
+              0.35241687297821045,
+              0.6893365383148193,
+              -2.178183078765869,
+              0.33356785774230957
+            ]
+          ],
+          "absolute_joint_mean": 3.006592273712158,
+          "true_class_absolute_joint_mean": 4.109973907470703,
+          "true_class_max_individual_mean": 2.2208547592163086,
+          "joint_exceeds_largest_individual_fraction": 0.7200000286102295,
+          "native_scores_are_zero": true,
+          "physiological_validity": "NOT ESTABLISHED",
+          "donor_robustness": "NOT TESTED"
+        },
+        "competitive": {
+          "examples": 500,
+          "signed_joint_mean": [
+            1.4391899108886719,
+            1.0971847772598267,
+            2.3186962604522705,
+            -4.960020542144775,
+            0.10600768029689789
+          ],
+          "signed_individual_mean": [
+            [
+              0.5849167108535767,
+              0.26944154500961304,
+              0.5784104466438293,
+              -1.769396185874939,
+              0.17400692403316498
+            ],
+            [
+              0.6301330327987671,
+              0.3652944266796112,
+              0.766989529132843,
+              -2.01871657371521,
+              0.15385575592517853
+            ]
+          ],
+          "absolute_joint_mean": 2.3857738971710205,
+          "true_class_absolute_joint_mean": 3.3022971153259277,
+          "true_class_max_individual_mean": 2.1862952709198,
+          "joint_exceeds_largest_individual_fraction": 0.7020000219345093,
+          "native_scores_are_zero": true,
+          "physiological_validity": "NOT ESTABLISHED",
+          "donor_robustness": "NOT TESTED"
+        }
+      },
+      "candidate_drift_l2_mean": 1.758262038230896,
+      "pooled_drift_l2_mean": 4.034241199493408,
+      "private_artifact_sha256": "aef746d85b56fe7bbd5e8234e72248993d417d2bd9a5579251e152898fab7d6a",
+      "private_seal_sha256": "794e6533f3fc0829fb6315072dbe68cc942ea3c11cc65b106a34a437c30de7f6"
+    },
+    {
+      "task": "multiple",
+      "seed": 456,
+      "method": "P0",
+      "conditions": {
+        "clean": {
+          "examples": 500,
+          "signed_joint_mean": [
+            -4.457833290100098,
+            6.390810489654541,
+            6.489023208618164,
+            0.22603677213191986,
+            -14.860552787780762
+          ],
+          "signed_individual_mean": [
+            [
+              -1.4436354637145996,
+              1.635115623474121,
+              1.808812141418457,
+              0.12159755080938339,
+              -3.8430335521698
+            ],
+            [
+              -1.641200065612793,
+              1.8832190036773682,
+              2.0965375900268555,
+              -0.01646765135228634,
+              -4.5348405838012695
+            ]
+          ],
+          "absolute_joint_mean": 8.364891052246094,
+          "true_class_absolute_joint_mean": 9.878786087036133,
+          "true_class_max_individual_mean": 5.381453990936279,
+          "joint_exceeds_largest_individual_fraction": 0.828000009059906,
+          "native_scores_are_zero": true,
+          "physiological_validity": "NOT ESTABLISHED",
+          "donor_robustness": "NOT TESTED"
+        },
+        "competitive": {
+          "examples": 500,
+          "signed_joint_mean": [
+            -3.083467721939087,
+            4.010737895965576,
+            4.322747230529785,
+            -0.9645106196403503,
+            -9.723963737487793
+          ],
+          "signed_individual_mean": [
+            [
+              -1.183393120765686,
+              1.38533353805542,
+              1.5617296695709229,
+              -0.2816026508808136,
+              -3.4286704063415527
+            ],
+            [
+              -1.1856011152267456,
+              1.4497108459472656,
+              1.6102358102798462,
+              -0.40764471888542175,
+              -3.5957143306732178
+            ]
+          ],
+          "absolute_joint_mean": 5.442093849182129,
+          "true_class_absolute_joint_mean": 5.984482288360596,
+          "true_class_max_individual_mean": 4.1359639167785645,
+          "joint_exceeds_largest_individual_fraction": 0.7919999957084656,
+          "native_scores_are_zero": true,
+          "physiological_validity": "NOT ESTABLISHED",
+          "donor_robustness": "NOT TESTED"
+        }
+      },
+      "candidate_drift_l2_mean": 7.000020980834961,
+      "pooled_drift_l2_mean": 13.15739917755127,
+      "private_artifact_sha256": "4551f0e435d4bc793189dd43a895e179d9203da36b918ebbf4678b9b1df754d2",
+      "private_seal_sha256": "87aa17448aebb687ded10dd0d7d22777ab2742c4aa3bd26db2b0f06b3823441a"
+    },
+    {
+      "task": "multiple",
+      "seed": 456,
+      "method": "R1",
+      "conditions": {
+        "clean": {
+          "examples": 500,
+          "signed_joint_mean": [
+            -1.6740069389343262,
+            4.471656799316406,
+            3.997706413269043,
+            -2.553544521331787,
+            -9.63650894165039
+          ],
+          "signed_individual_mean": [
+            [
+              -0.718976616859436,
+              1.4765172004699707,
+              1.357161045074463,
+              -0.984039306640625,
+              -3.1295902729034424
+            ],
+            [
+              -0.7557887434959412,
+              1.6099895238876343,
+              1.4213413000106812,
+              -1.1219693422317505,
+              -3.3818228244781494
+            ]
+          ],
+          "absolute_joint_mean": 5.588436126708984,
+          "true_class_absolute_joint_mean": 6.642151355743408,
+          "true_class_max_individual_mean": 4.138012886047363,
+          "joint_exceeds_largest_individual_fraction": 0.8479999899864197,
+          "native_scores_are_zero": true,
+          "physiological_validity": "NOT ESTABLISHED",
+          "donor_robustness": "NOT TESTED"
+        },
+        "competitive": {
+          "examples": 500,
+          "signed_joint_mean": [
+            -1.2623860836029053,
+            3.3085484504699707,
+            3.0447285175323486,
+            -1.9642499685287476,
+            -7.187978744506836
+          ],
+          "signed_individual_mean": [
+            [
+              -0.5830023884773254,
+              1.2851228713989258,
+              1.1806577444076538,
+              -0.8276759386062622,
+              -2.7402710914611816
+            ],
+            [
+              -0.5417060256004333,
+              1.2978242635726929,
+              1.136532187461853,
+              -0.8976965546607971,
+              -2.7317612171173096
+            ]
+          ],
+          "absolute_joint_mean": 4.099143028259277,
+          "true_class_absolute_joint_mean": 4.784833908081055,
+          "true_class_max_individual_mean": 3.481900691986084,
+          "joint_exceeds_largest_individual_fraction": 0.8100000023841858,
+          "native_scores_are_zero": true,
+          "physiological_validity": "NOT ESTABLISHED",
+          "donor_robustness": "NOT TESTED"
+        }
+      },
+      "candidate_drift_l2_mean": 2.3517017364501953,
+      "pooled_drift_l2_mean": 6.3984198570251465,
+      "private_artifact_sha256": "d8987ea352a31ccceeb3320defb0b47cbf3eda4bfb31bbc9e44dd253492a7faa",
+      "private_seal_sha256": "0983aad3019a40d9a03476e2a866969268fed11ce84665a678881dc8601aebfb"
+    },
+    {
+      "task": "multiple",
+      "seed": 456,
+      "method": "R2",
+      "conditions": {
+        "clean": {
+          "examples": 500,
+          "signed_joint_mean": [
+            -1.6617188453674316,
+            3.6666200160980225,
+            3.673762798309326,
+            -1.3311216831207275,
+            -7.917630672454834
+          ],
+          "signed_individual_mean": [
+            [
+              -0.7596431970596313,
+              1.1263298988342285,
+              1.1473928689956665,
+              -0.4221666753292084,
+              -2.3808882236480713
+            ],
+            [
+              -0.7769936323165894,
+              1.284860610961914,
+              1.228692889213562,
+              -0.6193583607673645,
+              -2.687809467315674
+            ]
+          ],
+          "absolute_joint_mean": 4.731666564941406,
+          "true_class_absolute_joint_mean": 6.037286281585693,
+          "true_class_max_individual_mean": 3.644383430480957,
+          "joint_exceeds_largest_individual_fraction": 0.871999979019165,
+          "native_scores_are_zero": true,
+          "physiological_validity": "NOT ESTABLISHED",
+          "donor_robustness": "NOT TESTED"
+        },
+        "competitive": {
+          "examples": 500,
+          "signed_joint_mean": [
+            -1.1539456844329834,
+            2.8003745079040527,
+            2.7748706340789795,
+            -1.1005326509475708,
+            -6.001255989074707
+          ],
+          "signed_individual_mean": [
+            [
+              -0.5588526129722595,
+              1.0555098056793213,
+              1.0405988693237305,
+              -0.4490334987640381,
+              -2.1912662982940674
+            ],
+            [
+              -0.5075629949569702,
+              1.0798457860946655,
+              0.9749447703361511,
+              -0.5436441898345947,
+              -2.184731960296631
+            ]
+          ],
+          "absolute_joint_mean": 3.598524570465088,
+          "true_class_absolute_joint_mean": 4.537017345428467,
+          "true_class_max_individual_mean": 3.2189979553222656,
+          "joint_exceeds_largest_individual_fraction": 0.878000020980835,
+          "native_scores_are_zero": true,
+          "physiological_validity": "NOT ESTABLISHED",
+          "donor_robustness": "NOT TESTED"
+        }
+      },
+      "candidate_drift_l2_mean": 2.1603808403015137,
+      "pooled_drift_l2_mean": 5.838487148284912,
+      "private_artifact_sha256": "024bc49a86076e426947efe915de2df17bb3a2e8ea8970ac50119f7ca2f87b93",
+      "private_seal_sha256": "02595f8205091061ce3d49cb6ac6862658c3d8b735ca6072266106fdee554c88"
+    },
+    {
+      "task": "multiple",
+      "seed": 789,
+      "method": "P0",
+      "conditions": {
+        "clean": {
+          "examples": 500,
+          "signed_joint_mean": [
+            0.399129182100296,
+            -4.896907329559326,
+            -4.197171688079834,
+            2.61493182182312,
+            -0.14498589932918549
+          ],
+          "signed_individual_mean": [
+            [
+              0.1781577169895172,
+              -1.1340457201004028,
+              -1.6001075506210327,
+              0.7222772240638733,
+              0.2667868137359619
+            ],
+            [
+              0.018961016088724136,
+              -1.01347017288208,
+              -1.3796135187149048,
+              0.7344589829444885,
+              0.06267933547496796
+            ]
+          ],
+          "absolute_joint_mean": 6.799927234649658,
+          "true_class_absolute_joint_mean": 9.464008331298828,
+          "true_class_max_individual_mean": 4.618618011474609,
+          "joint_exceeds_largest_individual_fraction": 0.8199999928474426,
+          "native_scores_are_zero": true,
+          "physiological_validity": "NOT ESTABLISHED",
+          "donor_robustness": "NOT TESTED"
+        },
+        "competitive": {
+          "examples": 500,
+          "signed_joint_mean": [
+            0.8910167217254639,
+            -3.671156644821167,
+            -3.377131700515747,
+            1.5820293426513672,
+            0.5582411885261536
+          ],
+          "signed_individual_mean": [
+            [
+              0.27623531222343445,
+              -1.2655420303344727,
+              -1.2412854433059692,
+              0.5087097883224487,
+              0.15019795298576355
+            ],
+            [
+              0.27051112055778503,
+              -0.9547968506813049,
+              -1.178255319595337,
+              0.444504976272583,
+              0.15613768994808197
+            ]
+          ],
+          "absolute_joint_mean": 5.117724418640137,
+          "true_class_absolute_joint_mean": 6.811380863189697,
+          "true_class_max_individual_mean": 4.210015296936035,
+          "joint_exceeds_largest_individual_fraction": 0.8320000171661377,
+          "native_scores_are_zero": true,
+          "physiological_validity": "NOT ESTABLISHED",
+          "donor_robustness": "NOT TESTED"
+        }
+      },
+      "candidate_drift_l2_mean": 3.9273250102996826,
+      "pooled_drift_l2_mean": 8.96716022491455,
+      "private_artifact_sha256": "3678661c93f89122b1a4d054d1eb87fe45457a63711faed18957bb7fcf831444",
+      "private_seal_sha256": "3482489aa3cd08dc8725463e11948f04988137e8be5e3017c7937b9c38aea212"
+    },
+    {
+      "task": "multiple",
+      "seed": 789,
+      "method": "R1",
+      "conditions": {
+        "clean": {
+          "examples": 500,
+          "signed_joint_mean": [
+            1.2618452310562134,
+            -3.638827085494995,
+            -4.920289516448975,
+            2.501866340637207,
+            1.3861721754074097
+          ],
+          "signed_individual_mean": [
+            [
+              0.5703108906745911,
+              -0.9310116171836853,
+              -1.8220776319503784,
+              0.587770938873291,
+              0.5898972153663635
+            ],
+            [
+              0.3832262456417084,
+              -0.7297500967979431,
+              -1.5367624759674072,
+              0.5024501085281372,
+              0.318033903837204
+            ]
+          ],
+          "absolute_joint_mean": 5.9061126708984375,
+          "true_class_absolute_joint_mean": 8.460460662841797,
+          "true_class_max_individual_mean": 4.407455921173096,
+          "joint_exceeds_largest_individual_fraction": 0.8220000267028809,
+          "native_scores_are_zero": true,
+          "physiological_validity": "NOT ESTABLISHED",
+          "donor_robustness": "NOT TESTED"
+        },
+        "competitive": {
+          "examples": 500,
+          "signed_joint_mean": [
+            1.3502992391586304,
+            -2.8037455081939697,
+            -3.7517359256744385,
+            1.6457738876342773,
+            1.1160211563110352
+          ],
+          "signed_individual_mean": [
+            [
+              0.5855635404586792,
+              -1.0609536170959473,
+              -1.4536417722702026,
+              0.47846370935440063,
+              0.42203155159950256
+            ],
+            [
+              0.44206640124320984,
+              -0.7126701474189758,
+              -1.2633881568908691,
+              0.41827723383903503,
+              0.28495314717292786
+            ]
+          ],
+          "absolute_joint_mean": 4.534108638763428,
+          "true_class_absolute_joint_mean": 6.284475803375244,
+          "true_class_max_individual_mean": 4.0414605140686035,
+          "joint_exceeds_largest_individual_fraction": 0.8299999833106995,
+          "native_scores_are_zero": true,
+          "physiological_validity": "NOT ESTABLISHED",
+          "donor_robustness": "NOT TESTED"
+        }
+      },
+      "candidate_drift_l2_mean": 2.87900972366333,
+      "pooled_drift_l2_mean": 7.595337390899658,
+      "private_artifact_sha256": "d97ecd09171a2a115996c2da31cc6520622fb341bb885cf937772df90d5400d2",
+      "private_seal_sha256": "2bc81829cda9d676d68b4921e659ca6f61b06dfe7301062f05487687c7cf13e1"
+    },
+    {
+      "task": "multiple",
+      "seed": 789,
+      "method": "R2",
+      "conditions": {
+        "clean": {
+          "examples": 500,
+          "signed_joint_mean": [
+            0.09719819575548172,
+            -3.3890902996063232,
+            -3.3169004917144775,
+            2.329558849334717,
+            0.22594581544399261
+          ],
+          "signed_individual_mean": [
+            [
+              0.12527744472026825,
+              -0.8605777621269226,
+              -1.2585927248001099,
+              0.5854843854904175,
+              0.24136538803577423
+            ],
+            [
+              -0.015867410227656364,
+              -0.6977159380912781,
+              -1.045236587524414,
+              0.5207178592681885,
+              0.0045738983899354935
+            ]
+          ],
+          "absolute_joint_mean": 5.203392028808594,
+          "true_class_absolute_joint_mean": 7.303251266479492,
+          "true_class_max_individual_mean": 3.635390043258667,
+          "joint_exceeds_largest_individual_fraction": 0.8100000023841858,
+          "native_scores_are_zero": true,
+          "physiological_validity": "NOT ESTABLISHED",
+          "donor_robustness": "NOT TESTED"
+        },
+        "competitive": {
+          "examples": 500,
+          "signed_joint_mean": [
+            0.5100319385528564,
+            -2.520216226577759,
+            -2.5775210857391357,
+            1.5064871311187744,
+            0.0934687927365303
+          ],
+          "signed_individual_mean": [
+            [
+              0.2555061876773834,
+              -0.9149454236030579,
+              -0.9886601567268372,
+              0.41161829233169556,
+              -0.01805327646434307
+            ],
+            [
+              0.14981819689273834,
+              -0.637539803981781,
+              -0.8638547658920288,
+              0.39494091272354126,
+              -0.022084595635533333
+            ]
+          ],
+          "absolute_joint_mean": 4.044346809387207,
+          "true_class_absolute_joint_mean": 5.581620216369629,
+          "true_class_max_individual_mean": 3.498030424118042,
+          "joint_exceeds_largest_individual_fraction": 0.8119999766349792,
+          "native_scores_are_zero": true,
+          "physiological_validity": "NOT ESTABLISHED",
+          "donor_robustness": "NOT TESTED"
+        }
+      },
+      "candidate_drift_l2_mean": 2.763263463973999,
+      "pooled_drift_l2_mean": 6.737497329711914,
+      "private_artifact_sha256": "e17d78f41ed8b9e1b467f08181c85ac02007f1dbc37329d456ce19f4cb2fded6",
+      "private_seal_sha256": "a4bfc17cdf3d2290f01a4bbe13d0f871f613f9e83e4c32b1cf17fb644709d0ab"
+    }
+  ],
+  "model_draw_pairs": 9000,
+  "condition_specific_examples": 18000,
+  "new_fits": 0,
+  "new_optimizer_updates": 0,
+  "wall_seconds": 15.861930029001087,
+  "peak_rss_KiB": 694824,
+  "primary_gate_remains": "FAIL",
+  "additive_head_fits": 0,
+  "historical_weight_deserializations": 0,
+  "real_data_accessed": false,
+  "private_result_sha256": "bed5ec0e4110b31cad7a382b2c98940a710285f36cb53cdcece4acf5843e946e"
+}
