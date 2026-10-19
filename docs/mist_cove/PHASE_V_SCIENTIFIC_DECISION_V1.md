@@ -1,0 +1,11 @@
+# Phase V scientific decision v1 — audit before architecture
+
+Start from completed Phase IV 7fd29d3bb6d36c4b7c27f09273ad155922aa4de1. Its 54 fits and scientific reports remain immutable. H4.1, H4.2 and robust H4.3 failed; donor robustness passed 0/6. The phase-removed conventional control's clean F1 was 0.9503/0.6938, versus original conventional 0.4794/0.2781. Phase III's analytic source results remained far below raw_context/evidence. CUDA correctness does not rescue either scientific conclusion.
+
+This synthetic-only study investigates what information the benchmark contains. It does not introduce a stronger encoder, rerun the historical 54 fits, access real source descriptors/EEG/artifacts, or authorize another EEG campaign. Use the unchanged Phase IV local encoder and heads only after specifying the information controls. CI dependencies/triggers remain unchanged. No other GPU job may be interrupted in this phase; the latest Phase V restriction takes precedence over earlier process-management permission.
+
+Gate V0 verifies the historical source/config/publication hashes and explains plausible mechanisms without attributing the unusual optimization outcome to a single cause. V1 audits spectral, amplitude, position, nuisance and transform controls on new independent generated draws with matched optimization exposure. Expected historical invalidity is a scientific finding, not an engineering error: it triggers the separately specified V2 benchmark, rather than modifying Phase IV.
+
+The new harmonic relative-phase task is fixed before any audit score is inspected. It tests a global temporal relationship, not sparse clinical events. V2 must pass deterministic pairing/geometry/continuity/oracle checks. V3 requires conventional learnability AND restricted-decoder equivalence across all seeds under the frozen criteria. Any V2/V3 failure stops confirmatory progression; no longer training or new architecture is substituted. V4 compares fixed-encoder heads only after V3 passes. Localization can be uninformative when every window contains the diagnostic code, and cannot then support an explanatory advantage.
+
+All results, including failed gates, are retained. New real TRAIN/VAL experiments, RESERVED, ST/SHHS, target adaptation and clinical-event or transfer claims remain outside authorization.
