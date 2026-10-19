@@ -49,6 +49,7 @@ def generate(n,seed,task='substitutable',condition='clean',cfg=None):
         parts=[]
         for j,code in enumerate(factors):
             lo=int(sites.pop()+rng.integers(-30,31))
+            if condition=='overlap' and j==0:lo=min(lo,2700)
             if condition=='overlap' and j==1:lo=parts[0]['interval'][0]+100
             low,high=cfg.get('diagnostic_rms_uV',[4.,8.]);scale=float(rng.uniform(low,high))
             if condition=='partial':scale*=.3

@@ -119,3 +119,12 @@ def test_generated_evaluation_and_audit_plumbing(method):
     value={'evaluation':evaluate(m,data),'audit':audit_examples(m,data,99)}
     assert value['audit']['n_examples']==5
     json.dumps(value,allow_nan=False)
+
+@pytest.mark.parametrize('task',['substitutable','complementary'])
+@pytest.mark.parametrize('seed',[123,456,789])
+@pytest.mark.parametrize('condition',['clean','single','redundant','correlated','competitive','abrupt_artifact','overlap','partial','erased','eventless'])
+def test_all_declared_generator_geometries(task,seed,condition):
+    # Geometry only, no model evaluation or threshold selection.
+    data=generate(100,seed+100000,task,condition)
+    assert data.x.shape==(100,1,3000) and torch.isfinite(data.x).all()
+    assert all(0<=p['interval'][0]<p['interval'][1]<=3000 and len(p['wave'])==p['interval'][1]-p['interval'][0] for parts in data.components for p in parts)

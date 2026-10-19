@@ -1,0 +1,7 @@
+# Phase IV overlap geometry correction v2
+
+The first confirmatory v1 launch at implementation `f3519ffa7db406bff34e19a50229a66228ad8a49` failed while constructing evaluation fixtures, before any model training, optimizer update or held-out model score. In the overlap condition, a first event near the right epoch boundary followed by an event offset +100 samples could extend beyond sample 3000. The resulting tensor-length mismatch stopped execution. This is an implementation error, not a negative classification result.
+
+The v1 config, matrix, preregistration, implementation commit and private failed log/output directory are preserved. v2 bounds the first overlap-event start at 2700 before placing the second at +100, so both complete 200-sample components remain inside the physical epoch. It adds geometry-only regression checks across all three seeds, both tasks and ten conditions. No waveform is truncated or silently resampled.
+
+No model, optimizer, exposure budget, seed, comparison, donor, outcome or acceptance threshold changes. The overlap rule's bounded geometry is the sole generator correction. A fresh v2 config/matrix/preregistration is committed before the corrected confirmatory run. This is not tuning after a scientific score: no v1 scores exist. The current CLI refuses historical v1; reproduction of that failed launch uses its original frozen checkout. v2 results receive a distinct output directory and preserve all failures.

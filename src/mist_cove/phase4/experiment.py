@@ -19,7 +19,7 @@ from .audit import group_report
 
 
 def verify_preregistration():
-    p=Path('experiments/mist_cove/phase4_preregistration_v1.json')
+    p=Path('experiments/mist_cove/phase4_preregistration_v2.json')
     r=json.loads(p.read_text())
     for name,h in r['sha256'].items():
         if file_sha(name)!=h:raise ValueError('preregistration changed: '+name)
@@ -147,7 +147,7 @@ def decisions(rows,c):
 
 def run(c,output):
     proof=verify_preregistration()
-    if c!=json.loads(Path('configs/mist_cove_phase4_synthetic_v1.json').read_text()):raise ValueError('confirmatory config override prohibited')
+    if c!=json.loads(Path('configs/mist_cove_phase4_synthetic_v2.json').read_text()):raise ValueError('confirmatory config override prohibited; historical v1 requires its original checkout')
     output=Path(output)
     if output.exists():raise FileExistsError('preserve existing results')
     output.mkdir(parents=True);configure_precision('cpu');torch.set_num_threads(2)
