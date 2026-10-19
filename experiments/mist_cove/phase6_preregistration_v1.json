@@ -1,0 +1,13 @@
+{
+  "version": "phase6-preregistration-v1",
+  "status": "FROZEN_BEFORE_CONFIRMATORY_FITS",
+  "files": {
+    "configs/mist_cove_phase6_synthetic_v1.json": "c9006a1697c417c4bb0663c68bc572b0b7597b7908b454836b2a6ce40a48d75a",
+    "docs/mist_cove/PHASE_VI_CONSTRUCT_VALIDITY_V1.md": "da15724664d851c6b3421eac524d748fa9b9d5cc4b556df887a56c9f0861b98b",
+    "docs/mist_cove/PHASE_VI_GENERATOR_SPEC_V1.md": "1fb416f2e0c13434646d7e91908cd531e0633e4f26cb118c180f9852f72ecdce",
+    "docs/mist_cove/PHASE_VI_HYPOTHESES_V1.md": "ab82afb80e607b1a240e4ad7cf254cc108993600023c6c690ce6532ae9e896ab",
+    "docs/mist_cove/PHASE_VI_PROTOCOL_V1.md": "278ad22cde038c779b94fa8fb55c3ef8a875cd57d59f792de0a912790508bc2c",
+    "docs/mist_cove/PHASE_VI_SCIENTIFIC_DECISION_V1.md": "7c5d16d43ebc6ae238add78f2554cfe8ac85ed59650606392d598679b7de837c",
+    "experiments/mist_cove/phase6_ablation_matrix_v1.json": "8b5c70c7896ff99134a7e955072b1cc6d8e62a91320c688851fa6fa5412988b1"
+  }
+}

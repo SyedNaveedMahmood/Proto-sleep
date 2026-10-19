@@ -1,0 +1,9 @@
+# Phase VI decision v1 — local information before evidence organization
+
+Base is completed Phase V a7c32bfff85a6f991404443ad216adab04f4df4c. Historical Phase III–V failures, source partitions/artifacts and repaired CI remain immutable. Phase V legitimately failed its *frozen* amplitude-exclusion rule. A new construct does not retroactively relabel it successful. Its harmonic code was global: every candidate contained the signal, making sparse localization advantage non-identifiable.
+
+This synthetic-only study asks whether deliberately local information can be learned and localized. Frequency/envelope/amplitude consequences of a designed burst are allowed diagnostic proxies, not automatically unrelated leakage. There is no exclusive-phase, clinical-event, physiological-causality or transfer claim. Two tasks test complete single witnesses and typed redundant/complementary groups, using the unchanged 3,408-parameter encoder / 3,593-parameter M1.
+
+Gate VI-0 is the written construct and verified historical hashes. Generated correctness tests precede a committed VI-2 protocol/source freeze; VI-1 numerical leakage probes execute only after that freeze. Failure or inconclusive equivalence blocks downstream fitting. All prespecified conventional seeds/tasks finish before the collective VI-3 decision; any failed criterion prevents every VI-4 head fit. No extra epochs, capacity, thresholds or selected seeds rescue a failure. VI-5 donor acceptance is separate from valid synthetic oracle effects.
+
+Only generated waveforms and mock interfaces are authorized. No real TRAIN/VAL EEG, descriptors/annotations, fitted source artifacts, RESERVED, ST/SHHS, legacy NPZ or target adaptation. No other GPU job may be interrupted; no credentials are requested or saved. A synthetic PASS cannot launch real training.
