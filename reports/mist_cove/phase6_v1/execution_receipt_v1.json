@@ -1,0 +1,491 @@
+{
+  "status": "COMPLETE_SYNTHETIC_STUDY",
+  "git_head": "438cffc7807bff3881f74a9a0a3e187cf88ac158",
+  "config": {
+    "version": "mist-cove-phase6-local-v1",
+    "scope": "SYNTHETIC_ONLY",
+    "base_commit": "a7c32bfff85a6f991404443ad216adab04f4df4c",
+    "seeds": [
+      123,
+      456,
+      789
+    ],
+    "tasks": [
+      "single",
+      "multiple"
+    ],
+    "train_examples": 1000,
+    "eval_examples": 2000,
+    "stress_examples": 500,
+    "pair_examples": 100,
+    "audit_examples": 5,
+    "updates": 300,
+    "head_updates": 150,
+    "batch_size": 16,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "gradient_clip": 5.0,
+    "cpu_threads": 2,
+    "cpu_wall_ceiling_seconds": 1800,
+    "probe_hidden": 32,
+    "feature_std_floor": 0.01,
+    "train_offset": 10000,
+    "eval_offset": 100000,
+    "pair_offset": 200000,
+    "bootstrap_replicates": 500,
+    "generator": {
+      "samples": 3000,
+      "sample_rate": 100,
+      "event_samples": 200,
+      "complete_hz": [
+        2,
+        5,
+        8,
+        11,
+        14
+      ],
+      "factor_hz": [
+        3.5,
+        6.5,
+        9.5,
+        12.5,
+        15.5
+      ],
+      "diagnostic_rms_uV": [
+        8,
+        12
+      ],
+      "noise_uV": 0.5,
+      "nuisance_hz": [
+        24,
+        30,
+        36
+      ],
+      "nuisance_rms_uV": [
+        12,
+        24
+      ],
+      "competitive_rms_uV": [
+        36,
+        48
+      ],
+      "background_amplitude_uV": [
+        0,
+        2
+      ],
+      "clean_artifact_peak_uV": [
+        8,
+        16
+      ],
+      "competitive_artifact_peak_uV": [
+        80,
+        100
+      ],
+      "stream_ids": {
+        "class": 1,
+        "position": 2,
+        "diagnostic": 3,
+        "background": 4,
+        "noise": 5,
+        "nuisance": 6,
+        "artifact": 7,
+        "mode": 8
+      }
+    },
+    "conditions": [
+      "clean",
+      "competitive",
+      "removed",
+      "nuisance_swap",
+      "position_shift",
+      "partial",
+      "eventless",
+      "redundant",
+      "complementary",
+      "repeated",
+      "correlated",
+      "adjacent",
+      "overlap",
+      "weak",
+      "artifact"
+    ],
+    "leakage_probes": [
+      "background",
+      "nuisance",
+      "position",
+      "artifact"
+    ],
+    "proxy_probes": [
+      "diagnostic_amplitude",
+      "diagnostic_spectrum",
+      "full_magnitude"
+    ],
+    "conventional_controls": [
+      "full",
+      "oracle",
+      "removed",
+      "background",
+      "nuisance"
+    ],
+    "heads": [
+      "M1",
+      "M2",
+      "M3",
+      "M2_rms"
+    ],
+    "criteria": {
+      "wilson_z": 2.576,
+      "restricted_equivalence_low": 0.15,
+      "restricted_equivalence_high": 0.25,
+      "clean_f1": 0.8,
+      "competitive_f1": 0.7,
+      "diagnostic_pair_appropriate": 0.8,
+      "nuisance_pair_agreement": 0.8,
+      "f1_penalty": 0.03,
+      "topk_hit": 0.75,
+      "rms_localization_gain": 0.1,
+      "oracle_control_effect_margin": 0.05,
+      "iou_hit": 0.25,
+      "reconciliation": 1e-05
+    },
+    "donor_guard": {
+      "relative_energy_max": 0.5,
+      "relative_magnitude_l1_max": 0.5,
+      "boundary_change_uV_max": 5.0,
+      "spread_logit_max": 0.25
+    },
+    "real_data_authorized": false
+  },
+  "config_sha256": "d93cf4daa3d768315af768a7f63ed33f8059344ffbab208a7ae904419fe53520",
+  "historical": {
+    "phase4": {
+      "files": {
+        "experiments/mist_cove/phase4_preregistration_v2.json": "f47a5844a57e811145b2eb408845c93d8b6f0ed1b706780bb540e617f4f000b4",
+        "reports/mist_cove/phase4_v1/publication_manifest.json": "106946c588e17504656b8dd3399960feab7c1886a7951604eb57cb74dd87f1df",
+        "reports/mist_cove/phase4_v1/cuda_publication_manifest_v1.json": "85f281b96a2976a5dfaf9019b9a4b321b207d46f03f14476a25442c4bedfce82"
+      },
+      "historical_implementation_sha256": "e8f84002bd71a57259e596a547b101b5733e2d7a755b45bed706a830ff59142d"
+    },
+    "phase5_publication_sha256": "c7cd3a3ee2e0616ec49d20d95f836ed052f9bdf3b761e7735fb9dd8cf5ba42ca"
+  },
+  "frozen": {
+    "preregistration": {
+      "sha256": "bb6b95fc50571c9ce1b9654defdeca19cb30d508aac87d4bbebcc505bfc64eda",
+      "files": {
+        "configs/mist_cove_phase6_synthetic_v1.json": "c9006a1697c417c4bb0663c68bc572b0b7597b7908b454836b2a6ce40a48d75a",
+        "docs/mist_cove/PHASE_VI_CONSTRUCT_VALIDITY_V1.md": "da15724664d851c6b3421eac524d748fa9b9d5cc4b556df887a56c9f0861b98b",
+        "docs/mist_cove/PHASE_VI_GENERATOR_SPEC_V1.md": "1fb416f2e0c13434646d7e91908cd531e0633e4f26cb118c180f9852f72ecdce",
+        "docs/mist_cove/PHASE_VI_HYPOTHESES_V1.md": "ab82afb80e607b1a240e4ad7cf254cc108993600023c6c690ce6532ae9e896ab",
+        "docs/mist_cove/PHASE_VI_PROTOCOL_V1.md": "278ad22cde038c779b94fa8fb55c3ef8a875cd57d59f792de0a912790508bc2c",
+        "docs/mist_cove/PHASE_VI_SCIENTIFIC_DECISION_V1.md": "7c5d16d43ebc6ae238add78f2554cfe8ac85ed59650606392d598679b7de837c",
+        "experiments/mist_cove/phase6_ablation_matrix_v1.json": "8b5c70c7896ff99134a7e955072b1cc6d8e62a91320c688851fa6fa5412988b1"
+      },
+      "inventory_sha256": "41c11f683f7ad854ca20710103a9c3f4bfae6728a36c96d81a30d5add016fb01"
+    },
+    "execution_manifest": {
+      "sha256": "7a14f49e0098ba413572cb69d1240c2212b9c38498a310fcce039029e7fa1e1d",
+      "files": {
+        "scripts/check_mist_cove_phase6_cuda.py": "5d111432ecfa8c9e08ec7f8fad2a178aab76b14cf69675331a421dc307e8d11c",
+        "scripts/run_mist_cove_phase6.py": "df189c7e949cbdc1f615f16ac90d51514967c683950a2d7df5dbc86f84dab2a1",
+        "src/mist_cove/phase6/__init__.py": "cc191ade92f8ea8a0139bcb6f6d019537b2acb0e6ef52a5fa2e1eeb862f95887",
+        "src/mist_cove/phase6/audit.py": "565b982702ed4da5a21c0277bebd53eb5e45419dd37a470c54608b99ba33190f",
+        "src/mist_cove/phase6/correctness.py": "c0da4713e88e9dca5f4fbf1fa7ab51856de59dd993dfbc89e4022856280dc8a0",
+        "src/mist_cove/phase6/evaluation.py": "2804cb4fb1fcefb9ea0efa6e0aff7502fc0a25776751ddb1d66785acb9f40545",
+        "src/mist_cove/phase6/experiment.py": "431768a1632581de1e997103846e308f95a9a52f8a0a806fb707937a188ade6e",
+        "src/mist_cove/phase6/features.py": "75a78116a4f02c832f68e3e176dfd19b88f26a507f8d8a9857fb26aa614d69f0",
+        "src/mist_cove/phase6/generator.py": "94aa0d5a0a0eb88870b77778f7fae68c5c8ea0494fb781f1f4bb0a99c42f0d13",
+        "src/mist_cove/phase6/runtime.py": "1c10ee3517b15b97cc8aab86aea623c7e450c08adfd846c43b1e7eab5099c8ba",
+        "tests/mist_cove/test_phase6_engineering.py": "ef113ee0c706b23c55f044d52c0816216425ff02d517a6c07d7738056f3dfe8d",
+        "tests/mist_cove/test_phase6_generator.py": "2e98bb61fc57b333d15b72ee79c0706b2955f6fce1b70b337ce440bc0d0f8969"
+      },
+      "inventory_sha256": "9bca5bc8b1a372c75ff8472ae7e06882bbd181b57a968f7ba18b69b3492c4e09"
+    }
+  },
+  "environment": {
+    "python": "3.12.9",
+    "torch": "2.5.1+cpu",
+    "numpy": "1.26.4",
+    "device": "cpu",
+    "cuda_build": null,
+    "threads": 2,
+    "deterministic": true,
+    "tf32_matmul": false,
+    "tf32_cudnn": false,
+    "cublas_workspace_config": null,
+    "packages": {
+      "numpy": "1.26.4",
+      "torch": "2.5.1+cpu",
+      "scikit-learn": "1.7.2",
+      "pyEDFlib": "0.1.42"
+    }
+  },
+  "gates": {
+    "VI-0": "PASS",
+    "VI-1": {
+      "status": "PASS",
+      "checks": [
+        {
+          "task": "single",
+          "seed": 123,
+          "probe": "background",
+          "pass": true,
+          "reliable_leakage": false
+        },
+        {
+          "task": "single",
+          "seed": 123,
+          "probe": "nuisance",
+          "pass": true,
+          "reliable_leakage": false
+        },
+        {
+          "task": "single",
+          "seed": 123,
+          "probe": "position",
+          "pass": true,
+          "reliable_leakage": false
+        },
+        {
+          "task": "single",
+          "seed": 123,
+          "probe": "artifact",
+          "pass": true,
+          "reliable_leakage": false
+        },
+        {
+          "task": "single",
+          "seed": 456,
+          "probe": "background",
+          "pass": true,
+          "reliable_leakage": false
+        },
+        {
+          "task": "single",
+          "seed": 456,
+          "probe": "nuisance",
+          "pass": true,
+          "reliable_leakage": false
+        },
+        {
+          "task": "single",
+          "seed": 456,
+          "probe": "position",
+          "pass": true,
+          "reliable_leakage": false
+        },
+        {
+          "task": "single",
+          "seed": 456,
+          "probe": "artifact",
+          "pass": true,
+          "reliable_leakage": false
+        },
+        {
+          "task": "single",
+          "seed": 789,
+          "probe": "background",
+          "pass": true,
+          "reliable_leakage": false
+        },
+        {
+          "task": "single",
+          "seed": 789,
+          "probe": "nuisance",
+          "pass": true,
+          "reliable_leakage": false
+        },
+        {
+          "task": "single",
+          "seed": 789,
+          "probe": "position",
+          "pass": true,
+          "reliable_leakage": false
+        },
+        {
+          "task": "single",
+          "seed": 789,
+          "probe": "artifact",
+          "pass": true,
+          "reliable_leakage": false
+        },
+        {
+          "task": "multiple",
+          "seed": 123,
+          "probe": "background",
+          "pass": true,
+          "reliable_leakage": false
+        },
+        {
+          "task": "multiple",
+          "seed": 123,
+          "probe": "nuisance",
+          "pass": true,
+          "reliable_leakage": false
+        },
+        {
+          "task": "multiple",
+          "seed": 123,
+          "probe": "position",
+          "pass": true,
+          "reliable_leakage": false
+        },
+        {
+          "task": "multiple",
+          "seed": 123,
+          "probe": "artifact",
+          "pass": true,
+          "reliable_leakage": false
+        },
+        {
+          "task": "multiple",
+          "seed": 456,
+          "probe": "background",
+          "pass": true,
+          "reliable_leakage": false
+        },
+        {
+          "task": "multiple",
+          "seed": 456,
+          "probe": "nuisance",
+          "pass": true,
+          "reliable_leakage": false
+        },
+        {
+          "task": "multiple",
+          "seed": 456,
+          "probe": "position",
+          "pass": true,
+          "reliable_leakage": false
+        },
+        {
+          "task": "multiple",
+          "seed": 456,
+          "probe": "artifact",
+          "pass": true,
+          "reliable_leakage": false
+        },
+        {
+          "task": "multiple",
+          "seed": 789,
+          "probe": "background",
+          "pass": true,
+          "reliable_leakage": false
+        },
+        {
+          "task": "multiple",
+          "seed": 789,
+          "probe": "nuisance",
+          "pass": true,
+          "reliable_leakage": false
+        },
+        {
+          "task": "multiple",
+          "seed": 789,
+          "probe": "position",
+          "pass": true,
+          "reliable_leakage": false
+        },
+        {
+          "task": "multiple",
+          "seed": 789,
+          "probe": "artifact",
+          "pass": true,
+          "reliable_leakage": false
+        }
+      ]
+    },
+    "VI-2": "COMMITTED_PRE_FIT_FREEZE",
+    "VI-3": {
+      "status": "FAIL",
+      "checks": [
+        {
+          "task": "single",
+          "seed": 123,
+          "criteria": {
+            "clean_f1": true,
+            "competitive_f1": false,
+            "appropriate_diagnostic_pair": true,
+            "nuisance_pair_agreement": true,
+            "nondiagnostic_learned_controls": true
+          },
+          "pass": false
+        },
+        {
+          "task": "single",
+          "seed": 456,
+          "criteria": {
+            "clean_f1": true,
+            "competitive_f1": true,
+            "appropriate_diagnostic_pair": true,
+            "nuisance_pair_agreement": true,
+            "nondiagnostic_learned_controls": true
+          },
+          "pass": true
+        },
+        {
+          "task": "single",
+          "seed": 789,
+          "criteria": {
+            "clean_f1": true,
+            "competitive_f1": false,
+            "appropriate_diagnostic_pair": true,
+            "nuisance_pair_agreement": true,
+            "nondiagnostic_learned_controls": true
+          },
+          "pass": false
+        },
+        {
+          "task": "multiple",
+          "seed": 123,
+          "criteria": {
+            "clean_f1": true,
+            "competitive_f1": false,
+            "appropriate_diagnostic_pair": true,
+            "nuisance_pair_agreement": true,
+            "nondiagnostic_learned_controls": true
+          },
+          "pass": false
+        },
+        {
+          "task": "multiple",
+          "seed": 456,
+          "criteria": {
+            "clean_f1": true,
+            "competitive_f1": false,
+            "appropriate_diagnostic_pair": true,
+            "nuisance_pair_agreement": true,
+            "nondiagnostic_learned_controls": true
+          },
+          "pass": false
+        },
+        {
+          "task": "multiple",
+          "seed": 789,
+          "criteria": {
+            "clean_f1": true,
+            "competitive_f1": false,
+            "appropriate_diagnostic_pair": true,
+            "nuisance_pair_agreement": true,
+            "nondiagnostic_learned_controls": true
+          },
+          "pass": false
+        }
+      ]
+    },
+    "VI-4": {
+      "status": "NOT_TESTED_VI3_FAILED",
+      "optimizer_updates": 0
+    }
+  },
+  "wall_seconds": 124.55708988799961,
+  "peak_rss_KiB": 3261728,
+  "fits": 72,
+  "optimizer_updates": 21600,
+  "example_exposures": 345600,
+  "real_data_accessed": false,
+  "reserved_access": false,
+  "st_access": false,
+  "shhs_access": false,
+  "real_training_authorized": false,
+  "private_receipt_sha256": "d0bc73eecc21a5e2aa613c1aa3310ed82d32814281038e761c6fd6b3eaf1fe4c"
+}

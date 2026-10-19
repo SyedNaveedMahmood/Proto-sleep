@@ -1,0 +1,31 @@
+{
+  "status": "SAFE_SYNTHETIC_AGGREGATES_PASS",
+  "files": {
+    "analysis/mist_cove_phase6_v1/collect.py": "98d685c108dc424c81ccb06a789414043cc7a0f3efa20e68b3fbd05a0aac94ee",
+    "configs/mist_cove_phase6_synthetic_v1.json": "c9006a1697c417c4bb0663c68bc572b0b7597b7908b454836b2a6ce40a48d75a",
+    "docs/mist_cove/PHASE_VI_CONSTRUCT_VALIDITY_V1.md": "da15724664d851c6b3421eac524d748fa9b9d5cc4b556df887a56c9f0861b98b",
+    "docs/mist_cove/PHASE_VI_GENERATOR_SPEC_V1.md": "1fb416f2e0c13434646d7e91908cd531e0633e4f26cb118c180f9852f72ecdce",
+    "docs/mist_cove/PHASE_VI_HYPOTHESES_V1.md": "ab82afb80e607b1a240e4ad7cf254cc108993600023c6c690ce6532ae9e896ab",
+    "docs/mist_cove/PHASE_VI_PROTOCOL_V1.md": "278ad22cde038c779b94fa8fb55c3ef8a875cd57d59f792de0a912790508bc2c",
+    "docs/mist_cove/PHASE_VI_RESULTS_V1.md": "9a131f7f022ca19123041b751ca47f5d5cd0026b84f57c0d229bc9055a64fef6",
+    "docs/mist_cove/PHASE_VI_SCIENTIFIC_DECISION_V1.md": "7c5d16d43ebc6ae238add78f2554cfe8ac85ed59650606392d598679b7de837c",
+    "experiments/mist_cove/phase6_ablation_matrix_v1.json": "8b5c70c7896ff99134a7e955072b1cc6d8e62a91320c688851fa6fa5412988b1",
+    "experiments/mist_cove/phase6_execution_manifest_v1.json": "7a14f49e0098ba413572cb69d1240c2212b9c38498a310fcce039029e7fa1e1d",
+    "experiments/mist_cove/phase6_preregistration_v1.json": "bb6b95fc50571c9ce1b9654defdeca19cb30d508aac87d4bbebcc505bfc64eda",
+    "reports/mist_cove/phase6_v1/correctness_receipt_v1.json": "ba6ab01503708e48f4dfd83884fb2bee7b18511330dc973961765e826895b901",
+    "reports/mist_cove/phase6_v1/cuda_receipt_v1.json": "c3f117dba26fae619aaf2d4c6c3d367ecf26e4582041e99915fe8d085fceb6b1",
+    "reports/mist_cove/phase6_v1/execution_receipt_v1.json": "5dbbf7ae0e839e1e7506b433999220cd6c20a65062496ae3c5f276d64d4412c4",
+    "reports/mist_cove/phase6_v1/metrics_v1.csv": "4abb4c81797586456f6a8c3529ae0cb67c7e0340a7be8dc680086997f31ded43",
+    "reports/mist_cove/phase6_v1/per_run_v1.jsonl": "ac1064c61c37680de06f86417939f891ffc730a0d3d4cbc06dade23f88e59296",
+    "reports/mist_cove/phase6_v1/summary_v1.json": "2f9980999a039e0565edf4651dd9200d1d354a5c4b51f3714936c7a04139eed7"
+  },
+  "lossless_fits": 72,
+  "no_confirmatory_matched_head_fits": true,
+  "historical_files_modified": false,
+  "public_weights_or_waveforms": 0,
+  "real_data_accessed": false,
+  "reserved_access": false,
+  "st_access": false,
+  "shhs_access": false,
+  "real_training_authorized": false
+}

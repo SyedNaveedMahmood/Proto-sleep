@@ -1,0 +1,8 @@
+{
+ "version":"mist-cove-phase6-ablations-v1",
+ "H6.1":{"controls":["background","nuisance","position","artifact"],"proxy_not_invalidity":["diagnostic_amplitude","diagnostic_spectrum","full_magnitude"],"stop":"any failed/inconclusive Class C equivalence or generator correctness"},
+ "H6.2":{"models":["full","oracle","removed","background","nuisance"],"pairs":["class_swap","nuisance_swap","oracle_deletion","position_shift","individual_group"],"stop":"any primary full M1 or removed-M1 criterion failure"},
+ "H6.3":{"conditional_on":"collective VI-1 and VI-3 PASS","models":["M1","M2","M3","M2_rms"],"frozen_identical_encoder":true,"selection_controls":["random","rms","conventional_internal_deletion"]},
+ "VI-5":{"oracle":"exact synthetic composition","internal":"fixed witness and score deletion","donors":["bridge","independent_baseline"],"rejected_donors":"retained but excluded from accepted agreement"},
+ "real_data_authorized":false
+}
