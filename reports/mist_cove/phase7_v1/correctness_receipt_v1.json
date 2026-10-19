@@ -1,0 +1,76 @@
+{
+  "status": "CPU_PASS_CUDA_BLOCKED",
+  "implementation_commit": "9522a6771f0f91087b1d39b0736fd6e81ed81ac3",
+  "integrity_implementation": {
+    "files": {
+      "src/mist_cove/phase7/__init__.py": "6088f5eaaef2659b66311cdbf0d9dccb7bc41f310b0fb7f04e1c76b1b41a6cbe",
+      "src/mist_cove/phase7/integrity.py": "6e40974815bad1b60efd79fd84d0354e8a715242b53d4b79a23fa79852901fcf",
+      "scripts/run_mist_cove_phase7.py": "285269e6786de77f1c6589f04090929fc833a59b0af9935185015cb5346bd0b1",
+      "tests/mist_cove/test_phase7_integrity.py": "4cf18836dcc558cd925c8f718db2b6669b857f7ee1f2c133053a67d97fdd7587",
+      "configs/mist_cove_phase7_synthetic_v1.json": "8964788c9d92816df72e084334d9e4c15da937209c17dd6f77d2b330047b92a7",
+      "experiments/mist_cove/phase7_ablation_matrix_v1.json": "7ee3b29985d2c90817c2caa346b1a7dd3a8069e1ebbffb8dc6bf16a643a6c351"
+    },
+    "inventory_sha256": "79fcc61b7f46c652c1c4237d41db19046eabba0cc094500e1db1672589f5944d"
+  },
+  "cpu": {
+    "tests": 720,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 11,
+    "passed": 709,
+    "new_cases": 36,
+    "seconds": 12.384,
+    "console_seconds": 12.39,
+    "warnings": 1,
+    "junit_sha256": "59603cf1b7e42fa8010b762ba115652ce82b4e0ca22486192b8d33e72e511150",
+    "log_sha256": "1432276e7722f7bdcdafb1b1c117d6ac318b10d70a7c6593b3811b7a313d5ea7"
+  },
+  "environment": {
+    "python": "3.12.9",
+    "torch": "2.5.1+cpu",
+    "numpy": "1.26.4",
+    "device": "cpu",
+    "cuda_build": null,
+    "threads": 2,
+    "deterministic": true,
+    "tf32_matmul": false,
+    "tf32_cudnn": false,
+    "cublas_workspace_config": null,
+    "packages": {
+      "numpy": "1.26.4",
+      "torch": "2.5.1+cpu",
+      "scikit-learn": "1.7.2",
+      "pyEDFlib": "0.1.42"
+    },
+    "numpy_import": "1.26.4",
+    "numpy_metadata": "1.26.4"
+  },
+  "gpu": {
+    "status": "BLOCKED",
+    "reason": "another compute process occupies GPU; left untouched",
+    "name": "NVIDIA GeForce RTX 4080 SUPER",
+    "driver": "580.95.05",
+    "total_MiB": 16376,
+    "used_MiB": 14334,
+    "free_MiB": 1611,
+    "other_compute_processes": 1,
+    "compute_process_memory_MiB": 14260,
+    "new_cuda_tests": 0,
+    "new_cuda_smoke_probes": 0,
+    "new_cuda_resume_probes": 0,
+    "allocated_peak_bytes": null,
+    "reserved_peak_bytes": null,
+    "cuda_elapsed_seconds": null
+  },
+  "historical_weights_unchanged_since_phase7_inventory": true,
+  "historical_weight_identity_verified": false,
+  "scientific_fits": 0,
+  "optimizer_updates": 0,
+  "example_exposures": 0,
+  "real_data_accessed": false,
+  "reserved_access": false,
+  "st_access": false,
+  "shhs_access": false,
+  "administrative_credentials_used_or_stored": false,
+  "engineering_launch_issue": "initial full-suite shell redirection failed before pytest because the new private log directory did not yet exist; rerun after directory creation passed"
+}
