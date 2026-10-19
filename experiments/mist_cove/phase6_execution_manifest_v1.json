@@ -1,0 +1,18 @@
+{
+  "version": "phase6-execution-v1",
+  "status": "FROZEN_BEFORE_CONFIRMATORY_FITS",
+  "files": {
+    "scripts/check_mist_cove_phase6_cuda.py": "5d111432ecfa8c9e08ec7f8fad2a178aab76b14cf69675331a421dc307e8d11c",
+    "scripts/run_mist_cove_phase6.py": "df189c7e949cbdc1f615f16ac90d51514967c683950a2d7df5dbc86f84dab2a1",
+    "src/mist_cove/phase6/__init__.py": "cc191ade92f8ea8a0139bcb6f6d019537b2acb0e6ef52a5fa2e1eeb862f95887",
+    "src/mist_cove/phase6/audit.py": "565b982702ed4da5a21c0277bebd53eb5e45419dd37a470c54608b99ba33190f",
+    "src/mist_cove/phase6/correctness.py": "c0da4713e88e9dca5f4fbf1fa7ab51856de59dd993dfbc89e4022856280dc8a0",
+    "src/mist_cove/phase6/evaluation.py": "2804cb4fb1fcefb9ea0efa6e0aff7502fc0a25776751ddb1d66785acb9f40545",
+    "src/mist_cove/phase6/experiment.py": "431768a1632581de1e997103846e308f95a9a52f8a0a806fb707937a188ade6e",
+    "src/mist_cove/phase6/features.py": "75a78116a4f02c832f68e3e176dfd19b88f26a507f8d8a9857fb26aa614d69f0",
+    "src/mist_cove/phase6/generator.py": "94aa0d5a0a0eb88870b77778f7fae68c5c8ea0494fb781f1f4bb0a99c42f0d13",
+    "src/mist_cove/phase6/runtime.py": "1c10ee3517b15b97cc8aab86aea623c7e450c08adfd846c43b1e7eab5099c8ba",
+    "tests/mist_cove/test_phase6_engineering.py": "ef113ee0c706b23c55f044d52c0816216425ff02d517a6c07d7738056f3dfe8d",
+    "tests/mist_cove/test_phase6_generator.py": "2e98bb61fc57b333d15b72ee79c0706b2955f6fce1b70b337ce440bc0d0f8969"
+  }
+}
