@@ -1,0 +1,18 @@
+{
+  "version": "mist-cove-phase4-source-prepared-v1",
+  "scope": "PREPARED_SC_TRAIN_VAL_NOT_AUTHORIZED",
+  "seeds": [123, 456, 789],
+  "variants": ["M0", "M1", "M2", "M3", "M2_rms", "raw_context", "evidence"],
+  "split_file_sha256": "1162a41098bb8a724a0b8bf8bb320469c2b1c02bb802d9b5cf7f2e49d2da54e5",
+  "split_fingerprint": "3e7a7260aae50ca522752f1cede41246daf1b2f6a8fd482800cfda97b4564e84",
+  "training": {"learning_rate": 0.0003, "weight_decay": 0.0001, "epochs": 60, "patience": 12, "core_epochs": 16, "encode_batch": 16, "grad_clip": 5.0, "radius": 0, "use_crf": false, "amp": false, "tf32": false},
+  "input": {"channel": "EEG Fpz-Cz", "units": "uV", "sample_rate": 100, "samples": 3000, "physical_grid": "COMPLETE_ORIGINAL", "mask_unscored_only_in_loss_metrics": true},
+  "selection": "earliest best participant-average fixed-five VAL Macro-F1, improvement >1e-8",
+  "normalization": "Reuse existing verified TRAIN-only artifact, never fit VAL",
+  "donor_fit": "NOT_AUTHORIZED; fresh separately versioned TRAIN fit/calibration protocol required",
+  "maximum_gpu_hours": 24,
+  "real_data_authorized": false,
+  "reserved_access": false,
+  "st_access": false,
+  "shhs_access": false
+}
