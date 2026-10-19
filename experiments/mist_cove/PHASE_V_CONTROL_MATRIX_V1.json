@@ -1,0 +1,8 @@
+{
+  "version":"mist-cove-phase5-controls-v1",
+  "V1":{"claim":"historical phase isolation","controls":["isolated_magnitude","scaled_magnitude","diagnostic_epoch_magnitude","epoch_magnitude","patch_magnitude","nuisance_magnitude","position","amplitude","envelope_boundary","nuisance_latent","permuted_patch"],"falsifier":"restricted magnitude decoding exceeds frozen .30 lower-bound rule"},
+  "V2":{"claim":"patch transform is one physical waveform","controls":["original","patch_zero","coherent_zero","magnitude_without_reconstruction"],"falsifier":"overlap disagreement above numerical tolerance","mechanism_controls":["oracle_class_swap_fixed_nuisance","oracle_nuisance_swap_fixed_diagnostic","diagnostic_removed","zero_padding_only","power_cross_terms"]},
+  "V3":{"claim":"new global harmonic code learnability and restricted equivalence","controls":["original","patch_zero","coherent_zero","epoch_magnitude","patch_magnitude","amplitude","position","nuisance_magnitude","nuisance_latent","permuted_patch","analytic_relative_phase_oracle"],"stop":"any V2 or compound V3 failure prevents V4"},
+  "V4":{"conditional_on":"V3_PASS","models":["M1","M2","M3"],"shared_frozen_encoder":true,"caveat":"all windows contain diagnostic code; localization superiority may be non-identifiable"},
+  "real_data_authorized":false
+}

@@ -1,0 +1,519 @@
+{
+  "status": "COMPLETE_SYNTHETIC_SEQUENTIAL_STUDY",
+  "git_head": "03687bc2df981edeb9a8fe669321273c203ca512",
+  "config": {
+    "version": "mist-cove-phase5-identifiability-v1",
+    "scope": "SYNTHETIC_ONLY",
+    "base_commit": "7fd29d3bb6d36c4b7c27f09273ad155922aa4de1",
+    "seeds": [
+      123,
+      456,
+      789
+    ],
+    "historical_tasks": [
+      "substitutable",
+      "complementary"
+    ],
+    "train_examples": 1000,
+    "eval_examples": 2000,
+    "pair_examples": 100,
+    "train_seed_offset": 10000,
+    "eval_seed_offset": 100000,
+    "pair_seed_offset": 200000,
+    "updates": 300,
+    "head_updates": 150,
+    "batch_size": 16,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "gradient_clip": 5.0,
+    "probe_hidden": 32,
+    "feature_std_floor": 0.01,
+    "waveform_controls": [
+      "original",
+      "patch_zero",
+      "coherent_zero"
+    ],
+    "historical_probes": [
+      "isolated_magnitude",
+      "scaled_magnitude",
+      "diagnostic_epoch_magnitude",
+      "epoch_magnitude",
+      "patch_magnitude",
+      "amplitude",
+      "envelope_boundary",
+      "position",
+      "nuisance_magnitude",
+      "nuisance_latent",
+      "permuted_patch"
+    ],
+    "new_probes": [
+      "epoch_magnitude",
+      "patch_magnitude",
+      "amplitude",
+      "position",
+      "nuisance_magnitude",
+      "nuisance_latent",
+      "permuted_patch"
+    ],
+    "new_generator": {
+      "version": "harmonic-relative-phase-v1",
+      "samples": 3000,
+      "sample_rate": 100,
+      "fundamental_hz": 2,
+      "second_harmonic_ratio": 0.7,
+      "diagnostic_amplitude_uV": [
+        8.0,
+        12.0
+      ],
+      "noise_uV": 0.5,
+      "nuisance_hz": 13,
+      "nuisance_amplitude_uV": [
+        4.0,
+        8.0
+      ],
+      "competitive_amplitude_uV": 40.0,
+      "phase_codes": 5
+    },
+    "new_conditions": [
+      "clean",
+      "competitive",
+      "erased",
+      "artifact"
+    ],
+    "criteria": {
+      "chance_accuracy": 0.2,
+      "restricted_equivalence_low": 0.15,
+      "restricted_equivalence_high": 0.25,
+      "wilson_z": 2.576,
+      "historical_leakage_accuracy_lower_bound": 0.3,
+      "transform_advantage_f1": 0.1,
+      "new_clean_f1_minimum": 0.8,
+      "new_competitive_f1_minimum": 0.7,
+      "new_erased_confidence_maximum": 0.35,
+      "new_oracle_accuracy_minimum": 0.99,
+      "diagnostic_pair_prediction_change_minimum": 0.8,
+      "nuisance_pair_prediction_agreement_minimum": 0.8,
+      "organization_f1_penalty": 0.03,
+      "organization_localization_advantage": 0.1,
+      "donor_spread_maximum": 0.25,
+      "reconciliation_tolerance": 1e-05
+    },
+    "cpu_threads": 2,
+    "cpu_wall_ceiling_seconds": 1800,
+    "cuda_smoke_seconds_ceiling": 120,
+    "cuda_memory_fraction": 0.1,
+    "bootstrap_replicates": 500,
+    "real_data_authorized": false
+  },
+  "config_sha256": "357476aa7532e16f398a5eb5a5134396ea7c76b47288a4168cf9baf358b3d3fd",
+  "historical": {
+    "files": {
+      "experiments/mist_cove/phase4_preregistration_v2.json": "f47a5844a57e811145b2eb408845c93d8b6f0ed1b706780bb540e617f4f000b4",
+      "reports/mist_cove/phase4_v1/publication_manifest.json": "106946c588e17504656b8dd3399960feab7c1886a7951604eb57cb74dd87f1df",
+      "reports/mist_cove/phase4_v1/cuda_publication_manifest_v1.json": "85f281b96a2976a5dfaf9019b9a4b321b207d46f03f14476a25442c4bedfce82"
+    },
+    "historical_implementation_sha256": "e8f84002bd71a57259e596a547b101b5733e2d7a755b45bed706a830ff59142d"
+  },
+  "preregistration": {
+    "sha256": "9902531167aac5a588078692164f1bdd9599a67dac8310ed5876b428a58f75c1",
+    "files": {
+      "docs/mist_cove/PHASE_V_SCIENTIFIC_DECISION_V1.md": "2223ebcf98122f60dd6ffeea80f9ef16c8b6aade3ee1b230b6bf1db5ea368040",
+      "docs/mist_cove/PHASE_V_IDENTIFIABILITY_THEORY_V1.md": "820e155c41593f2592a34a7bf70fc3999f67dead2bd51057f37ff3ed63114103",
+      "docs/mist_cove/PHASE_V_PROTOCOL_V1.md": "602cddd453ca8bdb85ff4534ea7e09131bf9bd0f337fdce862646c77f0eaa9db",
+      "configs/mist_cove_phase5_identifiability_v1.json": "54b0f02ce37ecf99373521af0910c55aea175fa4fa5fa5963ee267f62336173f",
+      "experiments/mist_cove/PHASE_V_CONTROL_MATRIX_V1.json": "a9f622f72aa7580d46115b48e85301f75e863821527400090e347e7901d3c6e4"
+    }
+  },
+  "execution": {
+    "manifest_sha256": "0ade5dabaac270271e082cc1f9fa7c14be4bdd3be0921b5bf8b3c702818a3205",
+    "implementation_sha256": "6fad5b7fa80642a58fec10ded070008f33762c38088cd620e6cb8cac974d2d45",
+    "files": {
+      "scripts/check_mist_cove_phase5_cuda.py": "ba19de03d9a7157230d97a7fea6bce2860d3dc4d37c507f5ec5516181e1a1e89",
+      "scripts/run_mist_cove_phase5.py": "1d1e7a59f8dfc6619cf4631931829e60183c9c3397e378b09d2b13f0e4f1502d",
+      "src/mist_cove/phase5/__init__.py": "28858fbb3e27991c787f1d1ab29aff907c906ed6ac085bfcbb211944507a0722",
+      "src/mist_cove/phase5/audits.py": "bfb4637784e9bbadfbcd4da1acf6f2cc22f9630b724bb66f2f17262658df9ebf",
+      "src/mist_cove/phase5/correctness.py": "706b2efa69a16172c04e75c54167bbfb006bae3ec639b85addff15a4cb930efb",
+      "src/mist_cove/phase5/experiment.py": "c943d3e8bdb6753c6d92ea6a00a0eb31c60f06421f73f0abd6468e84a58e78ad",
+      "src/mist_cove/phase5/features.py": "9dd09cb65ecbfedd19cfcc14e344b1f507c0e1c61dd6f2a952ec548f657f01af",
+      "src/mist_cove/phase5/models.py": "3cf95b2c5d0b16d57344bf5374ca83b8161283571b80f68e185fa2e02b9b2304",
+      "src/mist_cove/phase5/runtime.py": "96833bcdf7b1e1335f9e548e08c216e0d9aa3d6828bd5c8bc486f89a48dd47fa",
+      "src/mist_cove/phase5/signals.py": "de41bdd2573ca29daca34eb1e1d147a37da94a0a48d6417dc0f63bf82df44373",
+      "tests/mist_cove/test_phase5_identifiability.py": "d9927118b7e6dfb526382a0bef4103785419eda5ca7526418a668627ea3af1fa"
+    }
+  },
+  "environment": {
+    "python": "3.12.9",
+    "torch": "2.5.1+cpu",
+    "numpy": "1.26.4",
+    "device": "cpu",
+    "cuda_build": null,
+    "threads": 2,
+    "deterministic": true,
+    "tf32_matmul": false,
+    "tf32_cudnn": false,
+    "cublas_workspace_config": null,
+    "packages": {
+      "numpy": "1.26.4",
+      "torch": "2.5.1+cpu",
+      "scikit-learn": "1.7.2",
+      "pyEDFlib": "0.1.42"
+    }
+  },
+  "template_diagnostics": {
+    "isolated_200_magnitude_relative_class_range": 2.168803793974109e-07,
+    "zero_padded_400_magnitude_relative_class_range": 0.7114106459951429,
+    "zero_padded_3000_magnitude_relative_class_range": 0.7363366056068332,
+    "cropped_100_padded_400_magnitude_relative_class_range": 0.7605949211105877,
+    "complete_event_shift_relative_magnitude_error": 3.515783341169273e-16,
+    "shared_rms_max_difference": 2.0137050582569316e-08
+  },
+  "gates": {
+    "V0": "PASS",
+    "V1": {
+      "historical_phase_isolation": "FAIL",
+      "probes": [
+        {
+          "family": "substitutable",
+          "probe": "isolated_magnitude",
+          "leakage_supported_all_seeds": false,
+          "equivalent_all_seeds": true
+        },
+        {
+          "family": "substitutable",
+          "probe": "scaled_magnitude",
+          "leakage_supported_all_seeds": false,
+          "equivalent_all_seeds": true
+        },
+        {
+          "family": "substitutable",
+          "probe": "diagnostic_epoch_magnitude",
+          "leakage_supported_all_seeds": true,
+          "equivalent_all_seeds": false
+        },
+        {
+          "family": "substitutable",
+          "probe": "epoch_magnitude",
+          "leakage_supported_all_seeds": true,
+          "equivalent_all_seeds": false
+        },
+        {
+          "family": "substitutable",
+          "probe": "patch_magnitude",
+          "leakage_supported_all_seeds": true,
+          "equivalent_all_seeds": false
+        },
+        {
+          "family": "substitutable",
+          "probe": "amplitude",
+          "leakage_supported_all_seeds": false,
+          "equivalent_all_seeds": true
+        },
+        {
+          "family": "substitutable",
+          "probe": "envelope_boundary",
+          "leakage_supported_all_seeds": false,
+          "equivalent_all_seeds": true
+        },
+        {
+          "family": "substitutable",
+          "probe": "position",
+          "leakage_supported_all_seeds": false,
+          "equivalent_all_seeds": true
+        },
+        {
+          "family": "substitutable",
+          "probe": "nuisance_magnitude",
+          "leakage_supported_all_seeds": false,
+          "equivalent_all_seeds": true
+        },
+        {
+          "family": "substitutable",
+          "probe": "nuisance_latent",
+          "leakage_supported_all_seeds": false,
+          "equivalent_all_seeds": true
+        },
+        {
+          "family": "substitutable",
+          "probe": "permuted_patch",
+          "leakage_supported_all_seeds": false,
+          "equivalent_all_seeds": true
+        },
+        {
+          "family": "complementary",
+          "probe": "isolated_magnitude",
+          "leakage_supported_all_seeds": false,
+          "equivalent_all_seeds": true
+        },
+        {
+          "family": "complementary",
+          "probe": "scaled_magnitude",
+          "leakage_supported_all_seeds": false,
+          "equivalent_all_seeds": true
+        },
+        {
+          "family": "complementary",
+          "probe": "diagnostic_epoch_magnitude",
+          "leakage_supported_all_seeds": true,
+          "equivalent_all_seeds": false
+        },
+        {
+          "family": "complementary",
+          "probe": "epoch_magnitude",
+          "leakage_supported_all_seeds": false,
+          "equivalent_all_seeds": false
+        },
+        {
+          "family": "complementary",
+          "probe": "patch_magnitude",
+          "leakage_supported_all_seeds": false,
+          "equivalent_all_seeds": false
+        },
+        {
+          "family": "complementary",
+          "probe": "amplitude",
+          "leakage_supported_all_seeds": false,
+          "equivalent_all_seeds": true
+        },
+        {
+          "family": "complementary",
+          "probe": "envelope_boundary",
+          "leakage_supported_all_seeds": false,
+          "equivalent_all_seeds": true
+        },
+        {
+          "family": "complementary",
+          "probe": "position",
+          "leakage_supported_all_seeds": false,
+          "equivalent_all_seeds": true
+        },
+        {
+          "family": "complementary",
+          "probe": "nuisance_magnitude",
+          "leakage_supported_all_seeds": false,
+          "equivalent_all_seeds": true
+        },
+        {
+          "family": "complementary",
+          "probe": "nuisance_latent",
+          "leakage_supported_all_seeds": false,
+          "equivalent_all_seeds": true
+        },
+        {
+          "family": "complementary",
+          "probe": "permuted_patch",
+          "leakage_supported_all_seeds": false,
+          "equivalent_all_seeds": true
+        }
+      ],
+      "transform_comparison": [
+        {
+          "family": "substitutable",
+          "seed_margins": [
+            {
+              "seed": 123,
+              "patch_minus_original": 0.2888964854182847,
+              "patch_minus_coherent": 0.8614322580904982
+            },
+            {
+              "seed": 456,
+              "patch_minus_original": 0.2985220421435324,
+              "patch_minus_coherent": 0.8272655148774701
+            },
+            {
+              "seed": 789,
+              "patch_minus_original": 0.32245049544619686,
+              "patch_minus_coherent": 0.8546634487347263
+            }
+          ],
+          "patch_advantage_all_seeds": true
+        },
+        {
+          "family": "complementary",
+          "seed_margins": [
+            {
+              "seed": 123,
+              "patch_minus_original": 0.4838975633725956,
+              "patch_minus_coherent": 0.6805118165049457
+            },
+            {
+              "seed": 456,
+              "patch_minus_original": 0.38379535856357194,
+              "patch_minus_coherent": 0.5543487706033866
+            },
+            {
+              "seed": 789,
+              "patch_minus_original": 0.3611220524715621,
+              "patch_minus_coherent": 0.6909502763421622
+            }
+          ],
+          "patch_advantage_all_seeds": true
+        }
+      ],
+      "interpretation": "successful restricted decoding shows available information, not the unique cause of historical optimization differences"
+    },
+    "V2": {
+      "status": "PASS",
+      "noiseless_magnitude": {
+        "epoch_relative_range": 1.9376446053925536e-08,
+        "patch_relative_range": 1.9376446061504658e-08
+      },
+      "oracle_rows": [
+        {
+          "seed": 123,
+          "condition": "clean",
+          "oracle_accuracy": 1.0,
+          "geometry": [
+            2000,
+            1,
+            3000
+          ],
+          "all_finite": true,
+          "paired_nuisance_exact": true
+        },
+        {
+          "seed": 123,
+          "condition": "competitive",
+          "oracle_accuracy": 1.0,
+          "geometry": [
+            2000,
+            1,
+            3000
+          ],
+          "all_finite": true,
+          "paired_nuisance_exact": true
+        },
+        {
+          "seed": 456,
+          "condition": "clean",
+          "oracle_accuracy": 1.0,
+          "geometry": [
+            2000,
+            1,
+            3000
+          ],
+          "all_finite": true,
+          "paired_nuisance_exact": true
+        },
+        {
+          "seed": 456,
+          "condition": "competitive",
+          "oracle_accuracy": 1.0,
+          "geometry": [
+            2000,
+            1,
+            3000
+          ],
+          "all_finite": true,
+          "paired_nuisance_exact": true
+        },
+        {
+          "seed": 789,
+          "condition": "clean",
+          "oracle_accuracy": 1.0,
+          "geometry": [
+            2000,
+            1,
+            3000
+          ],
+          "all_finite": true,
+          "paired_nuisance_exact": true
+        },
+        {
+          "seed": 789,
+          "condition": "competitive",
+          "oracle_accuracy": 1.0,
+          "geometry": [
+            2000,
+            1,
+            3000
+          ],
+          "all_finite": true,
+          "paired_nuisance_exact": true
+        }
+      ]
+    },
+    "V3": {
+      "status": "FAIL",
+      "checks": [
+        {
+          "seed": 123,
+          "clauses": {
+            "clean_learnability": true,
+            "competitive_learnability": true,
+            "restricted_equivalence": false,
+            "erased_confidence": true,
+            "coherent_erasure_gap": true,
+            "diagnostic_pair_sensitivity": true,
+            "nuisance_pair_agreement": true
+          },
+          "restricted_equivalence_by_probe": {
+            "epoch_magnitude": true,
+            "patch_magnitude": true,
+            "amplitude": false,
+            "position": true,
+            "nuisance_magnitude": true,
+            "nuisance_latent": true
+          },
+          "pass": false
+        },
+        {
+          "seed": 456,
+          "clauses": {
+            "clean_learnability": true,
+            "competitive_learnability": true,
+            "restricted_equivalence": false,
+            "erased_confidence": true,
+            "coherent_erasure_gap": true,
+            "diagnostic_pair_sensitivity": true,
+            "nuisance_pair_agreement": true
+          },
+          "restricted_equivalence_by_probe": {
+            "epoch_magnitude": true,
+            "patch_magnitude": true,
+            "amplitude": false,
+            "position": true,
+            "nuisance_magnitude": true,
+            "nuisance_latent": true
+          },
+          "pass": false
+        },
+        {
+          "seed": 789,
+          "clauses": {
+            "clean_learnability": true,
+            "competitive_learnability": true,
+            "restricted_equivalence": false,
+            "erased_confidence": true,
+            "coherent_erasure_gap": true,
+            "diagnostic_pair_sensitivity": true,
+            "nuisance_pair_agreement": true
+          },
+          "restricted_equivalence_by_probe": {
+            "epoch_magnitude": true,
+            "patch_magnitude": true,
+            "amplitude": false,
+            "position": true,
+            "nuisance_magnitude": true,
+            "nuisance_latent": true
+          },
+          "pass": false
+        }
+      ]
+    },
+    "V4": {
+      "status": "NOT_TESTED_V3_FAILED",
+      "optimizer_updates": 0
+    }
+  },
+  "wall_seconds": 113.13226478799879,
+  "peak_process_rss_KiB": 1751016,
+  "optimizer_updates": 34200,
+  "example_exposures": 547200,
+  "real_data_accessed": false,
+  "reserved_access": false,
+  "st_access": false,
+  "shhs_access": false,
+  "clinical_or_transfer_claim": false,
+  "private_results_sha256": "f70ddeb9cec2e885f158415458a7b263c9a944efa97e7e5a0cd774f047b8b34a",
+  "completed_fits": 114
+}

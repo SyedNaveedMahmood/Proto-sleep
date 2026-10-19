@@ -1,0 +1,32 @@
+{
+  "status": "SAFE_SYNTHETIC_AGGREGATES_PASS",
+  "files": {
+    "reports/mist_cove/phase5_v1/correctness_receipt_v1.json": "07108d9c63427aeacd0d2f339350ae7eacb6c31ffe09a207f3ddbfdef2978ade",
+    "reports/mist_cove/phase5_v1/cuda_receipt_v1.json": "42b0cf27de8ab124c6389ac0de75625919d0de77f39bde2e7d6c12b9cf83a3ec",
+    "reports/mist_cove/phase5_v1/execution_receipt_v1.json": "d72e5d6789a42255b7e46f8a03609c2c17c5787298df6b15d45f4e7f939e3d6e",
+    "reports/mist_cove/phase5_v1/metrics_v1.csv": "d76e180f6264e7a2821f966244d1eb88dd0ee1534f9e88d19624dd2339d9c976",
+    "reports/mist_cove/phase5_v1/per_run_v1.jsonl": "0bcb8d7daa8461fddec5e6ca7d082e25731e955d569784d791c44bec42cc4d7b",
+    "reports/mist_cove/phase5_v1/signal_audits_v1.json": "1d39977fbb9b68bfc1b703bb1953283bf7d14a90d98682552db46354b5766867",
+    "reports/mist_cove/phase5_v1/summary_v1.json": "ded549b1d0f0880615c1747eac0475bd32e3e86a81511baa36e4708e0a35e471",
+    "docs/mist_cove/PHASE_V_GENERATOR_AUDIT_V1.md": "93ca7ebe1c07740428961bd31e51c6718cf4dfeabef00894ce5a507a5f209cb1",
+    "docs/mist_cove/PHASE_V_IDENTIFIABILITY_THEORY_V1.md": "820e155c41593f2592a34a7bf70fc3999f67dead2bd51057f37ff3ed63114103",
+    "docs/mist_cove/PHASE_V_PROTOCOL_V1.md": "602cddd453ca8bdb85ff4534ea7e09131bf9bd0f337fdce862646c77f0eaa9db",
+    "docs/mist_cove/PHASE_V_RESULTS_V1.md": "4effe517ec916f4ef06e2eb6daeddd2fd0379ef01952cf22ff78b410ce8d17aa",
+    "docs/mist_cove/PHASE_V_SCIENTIFIC_DECISION_V1.md": "2223ebcf98122f60dd6ffeea80f9ef16c8b6aade3ee1b230b6bf1db5ea368040",
+    "analysis/mist_cove_phase5_v1/collect.py": "a33844d238997aa0bea7f0324429d36d05572b13fc8018566797fa621a3c2dd9",
+    "configs/mist_cove_phase5_identifiability_v1.json": "54b0f02ce37ecf99373521af0910c55aea175fa4fa5fa5963ee267f62336173f",
+    "experiments/mist_cove/PHASE_V_CONTROL_MATRIX_V1.json": "a9f622f72aa7580d46115b48e85301f75e863821527400090e347e7901d3c6e4",
+    "experiments/mist_cove/phase5_preregistration_v1.json": "9902531167aac5a588078692164f1bdd9599a67dac8310ed5876b428a58f75c1",
+    "experiments/mist_cove/phase5_execution_manifest_v1.json": "0ade5dabaac270271e082cc1f9fa7c14be4bdd3be0921b5bf8b3c702818a3205"
+  },
+  "lossless_fits": 114,
+  "confirmatory_v4_updates": 0,
+  "historical_branch_commit": "7fd29d3bb6d36c4b7c27f09273ad155922aa4de1",
+  "historical_files_modified": false,
+  "public_weights_or_waveforms": 0,
+  "real_data_accessed": false,
+  "reserved_access": false,
+  "st_access": false,
+  "shhs_access": false,
+  "real_training_authorized": false
+}

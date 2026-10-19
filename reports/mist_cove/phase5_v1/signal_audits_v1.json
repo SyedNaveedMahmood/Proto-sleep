@@ -1,0 +1,1757 @@
+[
+  {
+    "family": "substitutable",
+    "seed": 123,
+    "signal": {
+      "transform": {
+        "original_overlap_rms": 0.0,
+        "patch_zero_overlap_rms": 10.292888641357422,
+        "coherent_zero_overlap_rms": 0.0,
+        "patch_magnitude_relative_max_error": 1.0708841813311665e-07,
+        "patch_zero_circular_even_rms": 9.038014354700863e-07,
+        "original_wrap_jump_rms": 0.7002567052841187,
+        "coherent_wrap_jump_rms": 64.11289978027344
+      },
+      "signal_reconstruction_max_abs": 6.4373016357421875e-06,
+      "event_patch_intersections": 11413,
+      "boundary_truncated_event_patch_intersections": 7413,
+      "power_identity_relative_max_residual": 7.130760194776793e-09,
+      "interference_absolute_power_fraction": 0.28972689033095667,
+      "band_power": {
+        "feature_dimensions": 5,
+        "max_class_mean_range": 3878052.703374088,
+        "rms_class_mean_range": 1992417.3686574176,
+        "global_mean": 45939974.834627695,
+        "global_std": 36182330.051963866
+      },
+      "class_conditioned": {
+        "epoch_magnitude": {
+          "feature_dimensions": 1501,
+          "max_class_mean_range": 0.3438331865519286,
+          "rms_class_mean_range": 0.08197185116043615,
+          "global_mean": 1.7063707377583373,
+          "global_std": 1.1673150717251364
+        },
+        "patch_magnitude": {
+          "feature_dimensions": 2814,
+          "max_class_mean_range": 0.4075998419807001,
+          "rms_class_mean_range": 0.10224403771151992,
+          "global_mean": 0.865549066772692,
+          "global_std": 0.8673810631488795
+        },
+        "amplitude": {
+          "feature_dimensions": 90,
+          "max_class_mean_range": 3.655464860498906,
+          "rms_class_mean_range": 1.7624295229812257,
+          "global_mean": 5.609966304866115,
+          "global_std": 21.76055823627581
+        },
+        "envelope_boundary": {
+          "feature_dimensions": 156,
+          "max_class_mean_range": 3.655464860498906,
+          "rms_class_mean_range": 1.4475461811255748,
+          "global_mean": 4.6855186149489985,
+          "global_std": 16.02913324456897
+        },
+        "position": {
+          "feature_dimensions": 21,
+          "max_class_mean_range": 98.12750000000005,
+          "rms_class_mean_range": 51.053696143120206,
+          "global_mean": 571.8084642857144,
+          "global_std": 885.3777701307511
+        },
+        "nuisance_latent": {
+          "feature_dimensions": 16,
+          "max_class_mean_range": 0.3527390813827509,
+          "rms_class_mean_range": 0.1518345258196934,
+          "global_mean": 4.072697637146591,
+          "global_std": 6.056921699907757
+        }
+      }
+    },
+    "chance": {
+      "accuracy": 0.1765,
+      "macro_f1": 0.1765,
+      "per_stage_f1": [
+        0.17,
+        0.185,
+        0.1875,
+        0.1725,
+        0.1675
+      ],
+      "balanced_accuracy": 0.1765,
+      "five_class_balanced_accuracy_zero_absent": 0.1765,
+      "per_stage_recall": [
+        0.17,
+        0.185,
+        0.1875,
+        0.1725,
+        0.1675
+      ],
+      "support": [
+        400,
+        400,
+        400,
+        400,
+        400
+      ],
+      "absent_truth_classes": [],
+      "kappa": -0.029375000000000026,
+      "confusion_matrix": [
+        [
+          68,
+          91,
+          68,
+          81,
+          92
+        ],
+        [
+          92,
+          74,
+          72,
+          86,
+          76
+        ],
+        [
+          66,
+          82,
+          75,
+          89,
+          88
+        ],
+        [
+          86,
+          68,
+          100,
+          69,
+          77
+        ],
+        [
+          88,
+          85,
+          85,
+          75,
+          67
+        ]
+      ],
+      "n_epochs": 2000,
+      "absent_class_policy": "fixed-five Macro-F1: undefined F1=0; balanced accuracy averages observed truth classes; undefined kappa/recall=null",
+      "nll": 1.6094378232955933,
+      "brier": 0.8000000715255737,
+      "confidence": 0.2,
+      "prediction_counts": [
+        400,
+        400,
+        400,
+        400,
+        400
+      ],
+      "collapsed": false,
+      "ece15": 0.02350000000000002,
+      "true_vs_other_stage_margins": {
+        "0": [
+          null,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "1": [
+          0.0,
+          null,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "2": [
+          0.0,
+          0.0,
+          null,
+          0.0,
+          0.0
+        ],
+        "3": [
+          0.0,
+          0.0,
+          0.0,
+          null,
+          0.0
+        ],
+        "4": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          null
+        ]
+      },
+      "expected_balanced_accuracy": 0.2,
+      "asymptotic_expected_macro_f1": 0.2,
+      "tie_policy": "independent balanced random tie break; uniform probabilities",
+      "accuracy_ci99": [
+        0.15561990696196376,
+        0.19951966770492385
+      ]
+    }
+  },
+  {
+    "family": "substitutable",
+    "seed": 456,
+    "signal": {
+      "transform": {
+        "original_overlap_rms": 0.0,
+        "patch_zero_overlap_rms": 10.307485580444336,
+        "coherent_zero_overlap_rms": 0.0,
+        "patch_magnitude_relative_max_error": 1.088478995825426e-07,
+        "patch_zero_circular_even_rms": 9.027153282659128e-07,
+        "original_wrap_jump_rms": 0.7042036056518555,
+        "coherent_wrap_jump_rms": 64.1509780883789
+      },
+      "signal_reconstruction_max_abs": 5.7220458984375e-06,
+      "event_patch_intersections": 11418,
+      "boundary_truncated_event_patch_intersections": 7418,
+      "power_identity_relative_max_residual": 6.2404395183232105e-09,
+      "interference_absolute_power_fraction": 0.2919627402283678,
+      "band_power": {
+        "feature_dimensions": 5,
+        "max_class_mean_range": 2754354.557119146,
+        "rms_class_mean_range": 1722684.0063385104,
+        "global_mean": 45876268.73097565,
+        "global_std": 36029189.57638991
+      },
+      "class_conditioned": {
+        "epoch_magnitude": {
+          "feature_dimensions": 1501,
+          "max_class_mean_range": 0.3258177871257071,
+          "rms_class_mean_range": 0.0808001098245703,
+          "global_mean": 1.7071295843334438,
+          "global_std": 1.1667848758271728
+        },
+        "patch_magnitude": {
+          "feature_dimensions": 2814,
+          "max_class_mean_range": 0.38647809303365643,
+          "rms_class_mean_range": 0.09911752515367861,
+          "global_mean": 0.8661043611556629,
+          "global_std": 0.868127663024385
+        },
+        "amplitude": {
+          "feature_dimensions": 90,
+          "max_class_mean_range": 3.749436433613301,
+          "rms_class_mean_range": 1.6038622838908696,
+          "global_mean": 5.611925658587813,
+          "global_std": 21.71089947733112
+        },
+        "envelope_boundary": {
+          "feature_dimensions": 156,
+          "max_class_mean_range": 3.749436433613301,
+          "rms_class_mean_range": 1.3325547328787664,
+          "global_mean": 4.6875437800544635,
+          "global_std": 16.01424874195519
+        },
+        "position": {
+          "feature_dimensions": 21,
+          "max_class_mean_range": 148.67000000000007,
+          "rms_class_mean_range": 58.828681928797124,
+          "global_mean": 572.2099404761907,
+          "global_std": 884.0447594387078
+        },
+        "nuisance_latent": {
+          "feature_dimensions": 16,
+          "max_class_mean_range": 0.3685652899742138,
+          "rms_class_mean_range": 0.14959622536434472,
+          "global_mean": 4.081881860310381,
+          "global_std": 6.049879797509422
+        }
+      }
+    },
+    "chance": {
+      "accuracy": 0.1855,
+      "macro_f1": 0.1855,
+      "per_stage_f1": [
+        0.22,
+        0.2025,
+        0.165,
+        0.165,
+        0.175
+      ],
+      "balanced_accuracy": 0.1855,
+      "five_class_balanced_accuracy_zero_absent": 0.1855,
+      "per_stage_recall": [
+        0.22,
+        0.2025,
+        0.165,
+        0.165,
+        0.175
+      ],
+      "support": [
+        400,
+        400,
+        400,
+        400,
+        400
+      ],
+      "absent_truth_classes": [],
+      "kappa": -0.018125000000000016,
+      "confusion_matrix": [
+        [
+          88,
+          79,
+          79,
+          78,
+          76
+        ],
+        [
+          71,
+          81,
+          77,
+          78,
+          93
+        ],
+        [
+          80,
+          79,
+          66,
+          93,
+          82
+        ],
+        [
+          84,
+          74,
+          97,
+          66,
+          79
+        ],
+        [
+          77,
+          87,
+          81,
+          85,
+          70
+        ]
+      ],
+      "n_epochs": 2000,
+      "absent_class_policy": "fixed-five Macro-F1: undefined F1=0; balanced accuracy averages observed truth classes; undefined kappa/recall=null",
+      "nll": 1.6094378232955933,
+      "brier": 0.8000000715255737,
+      "confidence": 0.2,
+      "prediction_counts": [
+        400,
+        400,
+        400,
+        400,
+        400
+      ],
+      "collapsed": false,
+      "ece15": 0.014500000000000013,
+      "true_vs_other_stage_margins": {
+        "0": [
+          null,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "1": [
+          0.0,
+          null,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "2": [
+          0.0,
+          0.0,
+          null,
+          0.0,
+          0.0
+        ],
+        "3": [
+          0.0,
+          0.0,
+          0.0,
+          null,
+          0.0
+        ],
+        "4": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          null
+        ]
+      },
+      "expected_balanced_accuracy": 0.2,
+      "asymptotic_expected_macro_f1": 0.2,
+      "tie_policy": "independent balanced random tie break; uniform probabilities",
+      "accuracy_ci99": [
+        0.1641631895807504,
+        0.20891686059772305
+      ]
+    }
+  },
+  {
+    "family": "substitutable",
+    "seed": 789,
+    "signal": {
+      "transform": {
+        "original_overlap_rms": 0.0,
+        "patch_zero_overlap_rms": 10.236257553100586,
+        "coherent_zero_overlap_rms": 0.0,
+        "patch_magnitude_relative_max_error": 1.1224145879396019e-07,
+        "patch_zero_circular_even_rms": 8.986168609226297e-07,
+        "original_wrap_jump_rms": 0.7234100103378296,
+        "coherent_wrap_jump_rms": 63.85663986206055
+      },
+      "signal_reconstruction_max_abs": 7.3909759521484375e-06,
+      "event_patch_intersections": 11422,
+      "boundary_truncated_event_patch_intersections": 7422,
+      "power_identity_relative_max_residual": 7.368997524107171e-09,
+      "interference_absolute_power_fraction": 0.29322329051965496,
+      "band_power": {
+        "feature_dimensions": 5,
+        "max_class_mean_range": 5553044.641189605,
+        "rms_class_mean_range": 2811618.395054412,
+        "global_mean": 45429006.83717927,
+        "global_std": 35682696.4360846
+      },
+      "class_conditioned": {
+        "epoch_magnitude": {
+          "feature_dimensions": 1501,
+          "max_class_mean_range": 0.317886662632227,
+          "rms_class_mean_range": 0.08359761394562126,
+          "global_mean": 1.7038200187475234,
+          "global_std": 1.1658690350286889
+        },
+        "patch_magnitude": {
+          "feature_dimensions": 2814,
+          "max_class_mean_range": 0.44311725389794465,
+          "rms_class_mean_range": 0.10604091222848196,
+          "global_mean": 0.8659800249706993,
+          "global_std": 0.8666172220511609
+        },
+        "amplitude": {
+          "feature_dimensions": 90,
+          "max_class_mean_range": 4.199365015923977,
+          "rms_class_mean_range": 1.7757079977417138,
+          "global_mean": 5.565992862251831,
+          "global_std": 21.49043696735873
+        },
+        "envelope_boundary": {
+          "feature_dimensions": 156,
+          "max_class_mean_range": 4.199365015923977,
+          "rms_class_mean_range": 1.4648359094713934,
+          "global_mean": 4.657258226276423,
+          "global_std": 15.856180066258778
+        },
+        "position": {
+          "feature_dimensions": 21,
+          "max_class_mean_range": 134.5374999999999,
+          "rms_class_mean_range": 59.795297850421335,
+          "global_mean": 572.9914642857144,
+          "global_std": 885.3228759704691
+        },
+        "nuisance_latent": {
+          "feature_dimensions": 16,
+          "max_class_mean_range": 0.5355463218688961,
+          "rms_class_mean_range": 0.19553561375897902,
+          "global_mean": 4.065328016869964,
+          "global_std": 6.021700852344806
+        }
+      }
+    },
+    "chance": {
+      "accuracy": 0.2,
+      "macro_f1": 0.2,
+      "per_stage_f1": [
+        0.2025,
+        0.1925,
+        0.2,
+        0.195,
+        0.21
+      ],
+      "balanced_accuracy": 0.2,
+      "five_class_balanced_accuracy_zero_absent": 0.2,
+      "per_stage_recall": [
+        0.2025,
+        0.1925,
+        0.2,
+        0.195,
+        0.21
+      ],
+      "support": [
+        400,
+        400,
+        400,
+        400,
+        400
+      ],
+      "absent_truth_classes": [],
+      "kappa": 0.0,
+      "confusion_matrix": [
+        [
+          81,
+          89,
+          72,
+          77,
+          81
+        ],
+        [
+          77,
+          77,
+          84,
+          75,
+          87
+        ],
+        [
+          80,
+          76,
+          80,
+          89,
+          75
+        ],
+        [
+          73,
+          94,
+          82,
+          78,
+          73
+        ],
+        [
+          89,
+          64,
+          82,
+          81,
+          84
+        ]
+      ],
+      "n_epochs": 2000,
+      "absent_class_policy": "fixed-five Macro-F1: undefined F1=0; balanced accuracy averages observed truth classes; undefined kappa/recall=null",
+      "nll": 1.6094378232955933,
+      "brier": 0.8000000715255737,
+      "confidence": 0.2,
+      "prediction_counts": [
+        400,
+        400,
+        400,
+        400,
+        400
+      ],
+      "collapsed": false,
+      "ece15": 0.0,
+      "true_vs_other_stage_margins": {
+        "0": [
+          null,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "1": [
+          0.0,
+          null,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "2": [
+          0.0,
+          0.0,
+          null,
+          0.0,
+          0.0
+        ],
+        "3": [
+          0.0,
+          0.0,
+          0.0,
+          null,
+          0.0
+        ],
+        "4": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          null
+        ]
+      },
+      "expected_balanced_accuracy": 0.2,
+      "asymptotic_expected_macro_f1": 0.2,
+      "tie_policy": "independent balanced random tie break; uniform probabilities",
+      "accuracy_ci99": [
+        0.17796837449387498,
+        0.2240157751199312
+      ]
+    }
+  },
+  {
+    "family": "complementary",
+    "seed": 123,
+    "signal": {
+      "transform": {
+        "original_overlap_rms": 0.0,
+        "patch_zero_overlap_rms": 10.296170234680176,
+        "coherent_zero_overlap_rms": 0.0,
+        "patch_magnitude_relative_max_error": 1.0708841813311665e-07,
+        "patch_zero_circular_even_rms": 9.035899779519241e-07,
+        "original_wrap_jump_rms": 0.7002567052841187,
+        "coherent_wrap_jump_rms": 64.12677764892578
+      },
+      "signal_reconstruction_max_abs": 6.67572021484375e-06,
+      "event_patch_intersections": 11413,
+      "boundary_truncated_event_patch_intersections": 7413,
+      "power_identity_relative_max_residual": 6.856024223838736e-09,
+      "interference_absolute_power_fraction": 0.30036965083235767,
+      "band_power": {
+        "feature_dimensions": 5,
+        "max_class_mean_range": 2922959.837009728,
+        "rms_class_mean_range": 1748636.2090474712,
+        "global_mean": 45946446.73116218,
+        "global_std": 36187879.00488292
+      },
+      "class_conditioned": {
+        "epoch_magnitude": {
+          "feature_dimensions": 1501,
+          "max_class_mean_range": 0.22261587947607042,
+          "rms_class_mean_range": 0.06704047718908397,
+          "global_mean": 1.7067596308467778,
+          "global_std": 1.1673109859111785
+        },
+        "patch_magnitude": {
+          "feature_dimensions": 2814,
+          "max_class_mean_range": 0.3132633177330719,
+          "rms_class_mean_range": 0.08459889698871537,
+          "global_mean": 0.8654964657151478,
+          "global_std": 0.8673477168531335
+        },
+        "amplitude": {
+          "feature_dimensions": 90,
+          "max_class_mean_range": 3.5605814912915257,
+          "rms_class_mean_range": 1.6746804246829092,
+          "global_mean": 5.614052065184063,
+          "global_std": 21.766293662582665
+        },
+        "envelope_boundary": {
+          "feature_dimensions": 156,
+          "max_class_mean_range": 3.5605814912915257,
+          "rms_class_mean_range": 1.378757065466172,
+          "global_mean": 4.688936685105834,
+          "global_std": 16.033929081421824
+        },
+        "position": {
+          "feature_dimensions": 21,
+          "max_class_mean_range": 98.12750000000005,
+          "rms_class_mean_range": 51.053696143120206,
+          "global_mean": 571.8084642857144,
+          "global_std": 885.3777701307511
+        },
+        "nuisance_latent": {
+          "feature_dimensions": 16,
+          "max_class_mean_range": 0.3527390813827509,
+          "rms_class_mean_range": 0.1518345258196934,
+          "global_mean": 4.072697637146591,
+          "global_std": 6.056921699907757
+        }
+      }
+    },
+    "chance": {
+      "accuracy": 0.1765,
+      "macro_f1": 0.1765,
+      "per_stage_f1": [
+        0.17,
+        0.185,
+        0.1875,
+        0.1725,
+        0.1675
+      ],
+      "balanced_accuracy": 0.1765,
+      "five_class_balanced_accuracy_zero_absent": 0.1765,
+      "per_stage_recall": [
+        0.17,
+        0.185,
+        0.1875,
+        0.1725,
+        0.1675
+      ],
+      "support": [
+        400,
+        400,
+        400,
+        400,
+        400
+      ],
+      "absent_truth_classes": [],
+      "kappa": -0.029375000000000026,
+      "confusion_matrix": [
+        [
+          68,
+          91,
+          68,
+          81,
+          92
+        ],
+        [
+          92,
+          74,
+          72,
+          86,
+          76
+        ],
+        [
+          66,
+          82,
+          75,
+          89,
+          88
+        ],
+        [
+          86,
+          68,
+          100,
+          69,
+          77
+        ],
+        [
+          88,
+          85,
+          85,
+          75,
+          67
+        ]
+      ],
+      "n_epochs": 2000,
+      "absent_class_policy": "fixed-five Macro-F1: undefined F1=0; balanced accuracy averages observed truth classes; undefined kappa/recall=null",
+      "nll": 1.6094378232955933,
+      "brier": 0.8000000715255737,
+      "confidence": 0.2,
+      "prediction_counts": [
+        400,
+        400,
+        400,
+        400,
+        400
+      ],
+      "collapsed": false,
+      "ece15": 0.02350000000000002,
+      "true_vs_other_stage_margins": {
+        "0": [
+          null,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "1": [
+          0.0,
+          null,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "2": [
+          0.0,
+          0.0,
+          null,
+          0.0,
+          0.0
+        ],
+        "3": [
+          0.0,
+          0.0,
+          0.0,
+          null,
+          0.0
+        ],
+        "4": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          null
+        ]
+      },
+      "expected_balanced_accuracy": 0.2,
+      "asymptotic_expected_macro_f1": 0.2,
+      "tie_policy": "independent balanced random tie break; uniform probabilities",
+      "accuracy_ci99": [
+        0.15561990696196376,
+        0.19951966770492385
+      ]
+    }
+  },
+  {
+    "family": "complementary",
+    "seed": 456,
+    "signal": {
+      "transform": {
+        "original_overlap_rms": 0.0,
+        "patch_zero_overlap_rms": 10.30699348449707,
+        "coherent_zero_overlap_rms": 0.0,
+        "patch_magnitude_relative_max_error": 1.1445408887311714e-07,
+        "patch_zero_circular_even_rms": 9.02856129414431e-07,
+        "original_wrap_jump_rms": 0.7042036056518555,
+        "coherent_wrap_jump_rms": 64.16565704345703
+      },
+      "signal_reconstruction_max_abs": 6.556510925292969e-06,
+      "event_patch_intersections": 11418,
+      "boundary_truncated_event_patch_intersections": 7418,
+      "power_identity_relative_max_residual": 8.434707902332577e-09,
+      "interference_absolute_power_fraction": 0.30301212522476,
+      "band_power": {
+        "feature_dimensions": 5,
+        "max_class_mean_range": 2628626.4891462773,
+        "rms_class_mean_range": 1643183.4886003598,
+        "global_mean": 45876475.98412335,
+        "global_std": 36035865.73418122
+      },
+      "class_conditioned": {
+        "epoch_magnitude": {
+          "feature_dimensions": 1501,
+          "max_class_mean_range": 0.2278366448730229,
+          "rms_class_mean_range": 0.06425356630448459,
+          "global_mean": 1.707722839591329,
+          "global_std": 1.1668002283383312
+        },
+        "patch_magnitude": {
+          "feature_dimensions": 2814,
+          "max_class_mean_range": 0.35959756267257026,
+          "rms_class_mean_range": 0.08166159981930242,
+          "global_mean": 0.8661210575726538,
+          "global_std": 0.8679496891893491
+        },
+        "amplitude": {
+          "feature_dimensions": 90,
+          "max_class_mean_range": 3.327699434757232,
+          "rms_class_mean_range": 1.402368192631494,
+          "global_mean": 5.610312337704094,
+          "global_std": 21.710734064484928
+        },
+        "envelope_boundary": {
+          "feature_dimensions": 156,
+          "max_class_mean_range": 3.327699434757232,
+          "rms_class_mean_range": 1.1872619991180433,
+          "global_mean": 4.682355444840286,
+          "global_std": 16.016162903662117
+        },
+        "position": {
+          "feature_dimensions": 21,
+          "max_class_mean_range": 148.67000000000007,
+          "rms_class_mean_range": 58.828681928797124,
+          "global_mean": 572.2099404761907,
+          "global_std": 884.0447594387078
+        },
+        "nuisance_latent": {
+          "feature_dimensions": 16,
+          "max_class_mean_range": 0.3685652899742138,
+          "rms_class_mean_range": 0.14959622536434472,
+          "global_mean": 4.081881860310381,
+          "global_std": 6.049879797509422
+        }
+      }
+    },
+    "chance": {
+      "accuracy": 0.1855,
+      "macro_f1": 0.1855,
+      "per_stage_f1": [
+        0.22,
+        0.2025,
+        0.165,
+        0.165,
+        0.175
+      ],
+      "balanced_accuracy": 0.1855,
+      "five_class_balanced_accuracy_zero_absent": 0.1855,
+      "per_stage_recall": [
+        0.22,
+        0.2025,
+        0.165,
+        0.165,
+        0.175
+      ],
+      "support": [
+        400,
+        400,
+        400,
+        400,
+        400
+      ],
+      "absent_truth_classes": [],
+      "kappa": -0.018125000000000016,
+      "confusion_matrix": [
+        [
+          88,
+          79,
+          79,
+          78,
+          76
+        ],
+        [
+          71,
+          81,
+          77,
+          78,
+          93
+        ],
+        [
+          80,
+          79,
+          66,
+          93,
+          82
+        ],
+        [
+          84,
+          74,
+          97,
+          66,
+          79
+        ],
+        [
+          77,
+          87,
+          81,
+          85,
+          70
+        ]
+      ],
+      "n_epochs": 2000,
+      "absent_class_policy": "fixed-five Macro-F1: undefined F1=0; balanced accuracy averages observed truth classes; undefined kappa/recall=null",
+      "nll": 1.6094378232955933,
+      "brier": 0.8000000715255737,
+      "confidence": 0.2,
+      "prediction_counts": [
+        400,
+        400,
+        400,
+        400,
+        400
+      ],
+      "collapsed": false,
+      "ece15": 0.014500000000000013,
+      "true_vs_other_stage_margins": {
+        "0": [
+          null,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "1": [
+          0.0,
+          null,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "2": [
+          0.0,
+          0.0,
+          null,
+          0.0,
+          0.0
+        ],
+        "3": [
+          0.0,
+          0.0,
+          0.0,
+          null,
+          0.0
+        ],
+        "4": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          null
+        ]
+      },
+      "expected_balanced_accuracy": 0.2,
+      "asymptotic_expected_macro_f1": 0.2,
+      "tie_policy": "independent balanced random tie break; uniform probabilities",
+      "accuracy_ci99": [
+        0.1641631895807504,
+        0.20891686059772305
+      ]
+    }
+  },
+  {
+    "family": "complementary",
+    "seed": 789,
+    "signal": {
+      "transform": {
+        "original_overlap_rms": 0.0,
+        "patch_zero_overlap_rms": 10.233847618103027,
+        "coherent_zero_overlap_rms": 0.0,
+        "patch_magnitude_relative_max_error": 1.1224145879396019e-07,
+        "patch_zero_circular_even_rms": 8.986191346593841e-07,
+        "original_wrap_jump_rms": 0.7234100103378296,
+        "coherent_wrap_jump_rms": 63.88121795654297
+      },
+      "signal_reconstruction_max_abs": 6.67572021484375e-06,
+      "event_patch_intersections": 11422,
+      "boundary_truncated_event_patch_intersections": 7422,
+      "power_identity_relative_max_residual": 6.64681022088042e-09,
+      "interference_absolute_power_fraction": 0.30380520838776237,
+      "band_power": {
+        "feature_dimensions": 5,
+        "max_class_mean_range": 4801704.830413401,
+        "rms_class_mean_range": 2506525.4621898467,
+        "global_mean": 45428239.15832777,
+        "global_std": 35689603.34841821
+      },
+      "class_conditioned": {
+        "epoch_magnitude": {
+          "feature_dimensions": 1501,
+          "max_class_mean_range": 0.2222869041562081,
+          "rms_class_mean_range": 0.06631893219545625,
+          "global_mean": 1.7046412142112073,
+          "global_std": 1.1656675020412568
+        },
+        "patch_magnitude": {
+          "feature_dimensions": 2814,
+          "max_class_mean_range": 0.33333401184994726,
+          "rms_class_mean_range": 0.08851667437943202,
+          "global_mean": 0.8659494841397251,
+          "global_std": 0.8664626596514581
+        },
+        "amplitude": {
+          "feature_dimensions": 90,
+          "max_class_mean_range": 3.9798456579446793,
+          "rms_class_mean_range": 1.5992398801600527,
+          "global_mean": 5.566767474126524,
+          "global_std": 21.49123877144803
+        },
+        "envelope_boundary": {
+          "feature_dimensions": 156,
+          "max_class_mean_range": 3.9798456579446793,
+          "rms_class_mean_range": 1.3385403446443094,
+          "global_mean": 4.658408809511383,
+          "global_std": 15.856316025754086
+        },
+        "position": {
+          "feature_dimensions": 21,
+          "max_class_mean_range": 134.5374999999999,
+          "rms_class_mean_range": 59.795297850421335,
+          "global_mean": 572.9914642857144,
+          "global_std": 885.3228759704691
+        },
+        "nuisance_latent": {
+          "feature_dimensions": 16,
+          "max_class_mean_range": 0.5355463218688961,
+          "rms_class_mean_range": 0.19553561375897902,
+          "global_mean": 4.065328016869964,
+          "global_std": 6.021700852344806
+        }
+      }
+    },
+    "chance": {
+      "accuracy": 0.2,
+      "macro_f1": 0.2,
+      "per_stage_f1": [
+        0.2025,
+        0.1925,
+        0.2,
+        0.195,
+        0.21
+      ],
+      "balanced_accuracy": 0.2,
+      "five_class_balanced_accuracy_zero_absent": 0.2,
+      "per_stage_recall": [
+        0.2025,
+        0.1925,
+        0.2,
+        0.195,
+        0.21
+      ],
+      "support": [
+        400,
+        400,
+        400,
+        400,
+        400
+      ],
+      "absent_truth_classes": [],
+      "kappa": 0.0,
+      "confusion_matrix": [
+        [
+          81,
+          89,
+          72,
+          77,
+          81
+        ],
+        [
+          77,
+          77,
+          84,
+          75,
+          87
+        ],
+        [
+          80,
+          76,
+          80,
+          89,
+          75
+        ],
+        [
+          73,
+          94,
+          82,
+          78,
+          73
+        ],
+        [
+          89,
+          64,
+          82,
+          81,
+          84
+        ]
+      ],
+      "n_epochs": 2000,
+      "absent_class_policy": "fixed-five Macro-F1: undefined F1=0; balanced accuracy averages observed truth classes; undefined kappa/recall=null",
+      "nll": 1.6094378232955933,
+      "brier": 0.8000000715255737,
+      "confidence": 0.2,
+      "prediction_counts": [
+        400,
+        400,
+        400,
+        400,
+        400
+      ],
+      "collapsed": false,
+      "ece15": 0.0,
+      "true_vs_other_stage_margins": {
+        "0": [
+          null,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "1": [
+          0.0,
+          null,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "2": [
+          0.0,
+          0.0,
+          null,
+          0.0,
+          0.0
+        ],
+        "3": [
+          0.0,
+          0.0,
+          0.0,
+          null,
+          0.0
+        ],
+        "4": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          null
+        ]
+      },
+      "expected_balanced_accuracy": 0.2,
+      "asymptotic_expected_macro_f1": 0.2,
+      "tie_policy": "independent balanced random tie break; uniform probabilities",
+      "accuracy_ci99": [
+        0.17796837449387498,
+        0.2240157751199312
+      ]
+    }
+  },
+  {
+    "family": "harmonic",
+    "seed": 123,
+    "signal": {
+      "transform": {
+        "original_overlap_rms": 0.0,
+        "patch_zero_overlap_rms": 0.707801878452301,
+        "coherent_zero_overlap_rms": 0.0,
+        "patch_magnitude_relative_max_error": 2.0196596040022996e-07,
+        "patch_zero_circular_even_rms": 1.442984626010002e-06,
+        "original_wrap_jump_rms": 3.8813281059265137,
+        "coherent_wrap_jump_rms": 26.46262550354004
+      },
+      "signal_reconstruction_max_abs": 9.5367431640625e-07,
+      "event_patch_intersections": 28000,
+      "boundary_truncated_event_patch_intersections": 28000,
+      "power_identity_relative_max_residual": 4.850576013612799e-09,
+      "interference_absolute_power_fraction": 0.0018709216523424346,
+      "band_power": {
+        "feature_dimensions": 5,
+        "max_class_mean_range": 6777406.7952901125,
+        "rms_class_mean_range": 3686636.33943783,
+        "global_mean": 84711634.19753982,
+        "global_std": 88991195.60642552
+      },
+      "class_conditioned": {
+        "epoch_magnitude": {
+          "feature_dimensions": 1501,
+          "max_class_mean_range": 0.08146746178623288,
+          "rms_class_mean_range": 0.03592757043636231,
+          "global_mean": 0.7651130533740921,
+          "global_std": 0.37879829746772564
+        },
+        "patch_magnitude": {
+          "feature_dimensions": 2814,
+          "max_class_mean_range": 0.04669234560104091,
+          "rms_class_mean_range": 0.019443493017488125,
+          "global_mean": 0.41308384260174913,
+          "global_std": 0.5064376047002831
+        },
+        "amplitude": {
+          "feature_dimensions": 90,
+          "max_class_mean_range": 7.643562047481538,
+          "rms_class_mean_range": 3.8364134892553885,
+          "global_mean": 6.9786034664730785,
+          "global_std": 14.372188253559525
+        },
+        "envelope_boundary": {
+          "feature_dimensions": 156,
+          "max_class_mean_range": 7.639907519817353,
+          "rms_class_mean_range": 2.8286094272083884,
+          "global_mean": 6.02583758131882,
+          "global_std": 11.690668048081257
+        },
+        "position": {
+          "feature_dimensions": 21,
+          "max_class_mean_range": 0.028981249942589826,
+          "rms_class_mean_range": 0.006324227218873928,
+          "global_mean": 285.7380833333336,
+          "global_std": 880.6228595359639
+        },
+        "nuisance_latent": {
+          "feature_dimensions": 16,
+          "max_class_mean_range": 0.15042400372214626,
+          "rms_class_mean_range": 0.067637180255436,
+          "global_mean": 2.386887273431523,
+          "global_std": 4.084426802420476
+        }
+      }
+    },
+    "chance": {
+      "accuracy": 0.2045,
+      "macro_f1": 0.2045,
+      "per_stage_f1": [
+        0.1925,
+        0.2375,
+        0.185,
+        0.2,
+        0.2075
+      ],
+      "balanced_accuracy": 0.2045,
+      "five_class_balanced_accuracy_zero_absent": 0.2045,
+      "per_stage_recall": [
+        0.1925,
+        0.2375,
+        0.185,
+        0.2,
+        0.2075
+      ],
+      "support": [
+        400,
+        400,
+        400,
+        400,
+        400
+      ],
+      "absent_truth_classes": [],
+      "kappa": 0.00562499999999997,
+      "confusion_matrix": [
+        [
+          77,
+          78,
+          87,
+          74,
+          84
+        ],
+        [
+          90,
+          95,
+          61,
+          78,
+          76
+        ],
+        [
+          90,
+          79,
+          74,
+          86,
+          71
+        ],
+        [
+          70,
+          70,
+          94,
+          80,
+          86
+        ],
+        [
+          73,
+          78,
+          84,
+          82,
+          83
+        ]
+      ],
+      "n_epochs": 2000,
+      "absent_class_policy": "fixed-five Macro-F1: undefined F1=0; balanced accuracy averages observed truth classes; undefined kappa/recall=null",
+      "nll": 1.6094378232955933,
+      "brier": 0.8000000715255737,
+      "confidence": 0.2,
+      "prediction_counts": [
+        400,
+        400,
+        400,
+        400,
+        400
+      ],
+      "collapsed": false,
+      "ece15": 0.004499999999999976,
+      "true_vs_other_stage_margins": {
+        "0": [
+          null,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "1": [
+          0.0,
+          null,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "2": [
+          0.0,
+          0.0,
+          null,
+          0.0,
+          0.0
+        ],
+        "3": [
+          0.0,
+          0.0,
+          0.0,
+          null,
+          0.0
+        ],
+        "4": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          null
+        ]
+      },
+      "expected_balanced_accuracy": 0.2,
+      "asymptotic_expected_macro_f1": 0.2,
+      "tie_policy": "independent balanced random tie break; uniform probabilities",
+      "accuracy_ci99": [
+        0.18226247466018256,
+        0.2286919127094165
+      ]
+    }
+  },
+  {
+    "family": "harmonic",
+    "seed": 456,
+    "signal": {
+      "transform": {
+        "original_overlap_rms": 0.0,
+        "patch_zero_overlap_rms": 0.707669198513031,
+        "coherent_zero_overlap_rms": 0.0,
+        "patch_magnitude_relative_max_error": 2.0208979378821823e-07,
+        "patch_zero_circular_even_rms": 1.4542354165314464e-06,
+        "original_wrap_jump_rms": 3.8241050243377686,
+        "coherent_wrap_jump_rms": 26.454185485839844
+      },
+      "signal_reconstruction_max_abs": 9.5367431640625e-07,
+      "event_patch_intersections": 28000,
+      "boundary_truncated_event_patch_intersections": 28000,
+      "power_identity_relative_max_residual": 6.7650981445934205e-09,
+      "interference_absolute_power_fraction": 0.001804662969707437,
+      "band_power": {
+        "feature_dimensions": 5,
+        "max_class_mean_range": 7056721.593179911,
+        "rms_class_mean_range": 3751149.4533780194,
+        "global_mean": 85677464.7449308,
+        "global_std": 90173493.84561872
+      },
+      "class_conditioned": {
+        "epoch_magnitude": {
+          "feature_dimensions": 1501,
+          "max_class_mean_range": 0.07599840661510826,
+          "rms_class_mean_range": 0.03529456813391554,
+          "global_mean": 0.7648678012026091,
+          "global_std": 0.37919266650796124
+        },
+        "patch_magnitude": {
+          "feature_dimensions": 2814,
+          "max_class_mean_range": 0.05536819738917981,
+          "rms_class_mean_range": 0.0195532077934764,
+          "global_mean": 0.4131186453596632,
+          "global_std": 0.5069616309576833
+        },
+        "amplitude": {
+          "feature_dimensions": 90,
+          "max_class_mean_range": 7.626246070861818,
+          "rms_class_mean_range": 3.8696876289870805,
+          "global_mean": 7.023974973232602,
+          "global_std": 14.432965556923314
+        },
+        "envelope_boundary": {
+          "feature_dimensions": 156,
+          "max_class_mean_range": 7.592200930118562,
+          "rms_class_mean_range": 2.8830782446958483,
+          "global_mean": 6.102358178826093,
+          "global_std": 11.680238001401964
+        },
+        "position": {
+          "feature_dimensions": 21,
+          "max_class_mean_range": 0.03259249927927155,
+          "rms_class_mean_range": 0.007112266430240739,
+          "global_mean": 285.7380833333336,
+          "global_std": 880.6228595359639
+        },
+        "nuisance_latent": {
+          "feature_dimensions": 16,
+          "max_class_mean_range": 0.15575607061386165,
+          "rms_class_mean_range": 0.059167908722717155,
+          "global_mean": 2.3832656884806274,
+          "global_std": 4.0911273006632864
+        }
+      }
+    },
+    "chance": {
+      "accuracy": 0.19,
+      "macro_f1": 0.19,
+      "per_stage_f1": [
+        0.1625,
+        0.1875,
+        0.205,
+        0.2175,
+        0.1775
+      ],
+      "balanced_accuracy": 0.19,
+      "five_class_balanced_accuracy_zero_absent": 0.19,
+      "per_stage_recall": [
+        0.1625,
+        0.1875,
+        0.205,
+        0.2175,
+        0.1775
+      ],
+      "support": [
+        400,
+        400,
+        400,
+        400,
+        400
+      ],
+      "absent_truth_classes": [],
+      "kappa": -0.012500000000000011,
+      "confusion_matrix": [
+        [
+          65,
+          83,
+          78,
+          90,
+          84
+        ],
+        [
+          82,
+          75,
+          82,
+          77,
+          84
+        ],
+        [
+          90,
+          78,
+          82,
+          68,
+          82
+        ],
+        [
+          81,
+          73,
+          80,
+          87,
+          79
+        ],
+        [
+          82,
+          91,
+          78,
+          78,
+          71
+        ]
+      ],
+      "n_epochs": 2000,
+      "absent_class_policy": "fixed-five Macro-F1: undefined F1=0; balanced accuracy averages observed truth classes; undefined kappa/recall=null",
+      "nll": 1.6094378232955933,
+      "brier": 0.8000000715255737,
+      "confidence": 0.2,
+      "prediction_counts": [
+        400,
+        400,
+        400,
+        400,
+        400
+      ],
+      "collapsed": false,
+      "ece15": 0.010000000000000009,
+      "true_vs_other_stage_margins": {
+        "0": [
+          null,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "1": [
+          0.0,
+          null,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "2": [
+          0.0,
+          0.0,
+          null,
+          0.0,
+          0.0
+        ],
+        "3": [
+          0.0,
+          0.0,
+          0.0,
+          null,
+          0.0
+        ],
+        "4": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          null
+        ]
+      },
+      "expected_balanced_accuracy": 0.2,
+      "asymptotic_expected_macro_f1": 0.2,
+      "tie_policy": "independent balanced random tie break; uniform probabilities",
+      "accuracy_ci99": [
+        0.16844228993814414,
+        0.21360799799612223
+      ]
+    }
+  },
+  {
+    "family": "harmonic",
+    "seed": 789,
+    "signal": {
+      "transform": {
+        "original_overlap_rms": 0.0,
+        "patch_zero_overlap_rms": 0.7081069946289062,
+        "coherent_zero_overlap_rms": 0.0,
+        "patch_magnitude_relative_max_error": 2.023296303832467e-07,
+        "patch_zero_circular_even_rms": 1.442073198631988e-06,
+        "original_wrap_jump_rms": 3.852816104888916,
+        "coherent_wrap_jump_rms": 26.461200714111328
+      },
+      "signal_reconstruction_max_abs": 9.5367431640625e-07,
+      "event_patch_intersections": 28000,
+      "boundary_truncated_event_patch_intersections": 28000,
+      "power_identity_relative_max_residual": 4.615638154075539e-09,
+      "interference_absolute_power_fraction": 0.0018533258676899844,
+      "band_power": {
+        "feature_dimensions": 5,
+        "max_class_mean_range": 8034084.459137887,
+        "rms_class_mean_range": 4244341.182411425,
+        "global_mean": 84510375.78403096,
+        "global_std": 88912505.71673758
+      },
+      "class_conditioned": {
+        "epoch_magnitude": {
+          "feature_dimensions": 1501,
+          "max_class_mean_range": 0.08128309061750771,
+          "rms_class_mean_range": 0.03569549866488584,
+          "global_mean": 0.7651527487963538,
+          "global_std": 0.3789286734670862
+        },
+        "patch_magnitude": {
+          "feature_dimensions": 2814,
+          "max_class_mean_range": 0.05554381792055213,
+          "rms_class_mean_range": 0.019765502293490066,
+          "global_mean": 0.4131549451870227,
+          "global_std": 0.5062573755748342
+        },
+        "amplitude": {
+          "feature_dimensions": 90,
+          "max_class_mean_range": 7.804878416061401,
+          "rms_class_mean_range": 3.852243237720143,
+          "global_mean": 6.970270965872229,
+          "global_std": 14.360157484264137
+        },
+        "envelope_boundary": {
+          "feature_dimensions": 156,
+          "max_class_mean_range": 7.77508728981018,
+          "rms_class_mean_range": 2.9067007059190417,
+          "global_mean": 5.965933596506303,
+          "global_std": 11.720671867230163
+        },
+        "position": {
+          "feature_dimensions": 21,
+          "max_class_mean_range": 0.042587500017252755,
+          "rms_class_mean_range": 0.009293354404190185,
+          "global_mean": 285.7380833333336,
+          "global_std": 880.6228595359639
+        },
+        "nuisance_latent": {
+          "feature_dimensions": 16,
+          "max_class_mean_range": 0.230354054022464,
+          "rms_class_mean_range": 0.08505684645085794,
+          "global_mean": 2.3805771845763886,
+          "global_std": 4.082327202224224
+        }
+      }
+    },
+    "chance": {
+      "accuracy": 0.1965,
+      "macro_f1": 0.19649999999999998,
+      "per_stage_f1": [
+        0.2125,
+        0.205,
+        0.215,
+        0.16,
+        0.19
+      ],
+      "balanced_accuracy": 0.19649999999999998,
+      "five_class_balanced_accuracy_zero_absent": 0.19649999999999998,
+      "per_stage_recall": [
+        0.2125,
+        0.205,
+        0.215,
+        0.16,
+        0.19
+      ],
+      "support": [
+        400,
+        400,
+        400,
+        400,
+        400
+      ],
+      "absent_truth_classes": [],
+      "kappa": -0.004375000000000004,
+      "confusion_matrix": [
+        [
+          85,
+          83,
+          73,
+          79,
+          80
+        ],
+        [
+          78,
+          82,
+          83,
+          78,
+          79
+        ],
+        [
+          65,
+          66,
+          86,
+          96,
+          87
+        ],
+        [
+          93,
+          86,
+          79,
+          64,
+          78
+        ],
+        [
+          79,
+          83,
+          79,
+          83,
+          76
+        ]
+      ],
+      "n_epochs": 2000,
+      "absent_class_policy": "fixed-five Macro-F1: undefined F1=0; balanced accuracy averages observed truth classes; undefined kappa/recall=null",
+      "nll": 1.6094378232955933,
+      "brier": 0.8000000715255737,
+      "confidence": 0.2,
+      "prediction_counts": [
+        400,
+        400,
+        400,
+        400,
+        400
+      ],
+      "collapsed": false,
+      "ece15": 0.003500000000000003,
+      "true_vs_other_stage_margins": {
+        "0": [
+          null,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "1": [
+          0.0,
+          null,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "2": [
+          0.0,
+          0.0,
+          null,
+          0.0,
+          0.0
+        ],
+        "3": [
+          0.0,
+          0.0,
+          0.0,
+          null,
+          0.0
+        ],
+        "4": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          null
+        ]
+      },
+      "expected_balanced_accuracy": 0.2,
+      "asymptotic_expected_macro_f1": 0.2,
+      "tie_policy": "independent balanced random tie break; uniform probabilities",
+      "accuracy_ci99": [
+        0.17463163900832293,
+        0.2203756590176443
+      ]
+    }
+  }
+]

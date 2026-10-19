@@ -1,0 +1,11 @@
+{
+  "version": "mist-cove-phase5-preregistration-v1",
+  "status": "FROZEN_BEFORE_CONFIRMATORY_EVALUATION",
+  "sha256": {
+    "docs/mist_cove/PHASE_V_SCIENTIFIC_DECISION_V1.md": "2223ebcf98122f60dd6ffeea80f9ef16c8b6aade3ee1b230b6bf1db5ea368040",
+    "docs/mist_cove/PHASE_V_IDENTIFIABILITY_THEORY_V1.md": "820e155c41593f2592a34a7bf70fc3999f67dead2bd51057f37ff3ed63114103",
+    "docs/mist_cove/PHASE_V_PROTOCOL_V1.md": "602cddd453ca8bdb85ff4534ea7e09131bf9bd0f337fdce862646c77f0eaa9db",
+    "configs/mist_cove_phase5_identifiability_v1.json": "54b0f02ce37ecf99373521af0910c55aea175fa4fa5fa5963ee267f62336173f",
+    "experiments/mist_cove/PHASE_V_CONTROL_MATRIX_V1.json": "a9f622f72aa7580d46115b48e85301f75e863821527400090e347e7901d3c6e4"
+  }
+}
