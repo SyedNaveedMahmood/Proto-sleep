@@ -1,0 +1,20 @@
+{
+  "status": "SAFE_SYNTHETIC_AGGREGATE_PUBLICATION_PASS",
+  "files": {
+    "analysis/mist_cove_phase4_v1/report.py": "e0a633b8ad4b0a80405037965ed12154cb3d1d7187d0f111813358a2aa2a3470",
+    "docs/mist_cove/PHASE_IV_RESULTS_V2.md": "a09427af58f1b83e42da74750f9dc68c45d9a25826016b4e2b30ac38891915ae",
+    "reports/mist_cove/phase4_v1/aggregate_v2.json": "62920c1761f40721ac7e44ab8f8eacd9eb088fa9a3cef9d58fd17a41dc14e212",
+    "reports/mist_cove/phase4_v1/correctness_and_ci_v2.json": "e06a319546da62f023aed475e82b64c42dc82070316b9ee76707c60a32ef78a1",
+    "reports/mist_cove/phase4_v1/per_run_metrics.csv": "038babcb49494dd5f7859c58749dde2ae1a1c74fecba0743df86aef2782a3e64",
+    "reports/mist_cove/phase4_v1/per_run_v2.jsonl": "81e6bf25e93e082041e2a7a5b43f90277f7ede8587cc38f5d88ba8db1ed6158a",
+    "reports/mist_cove/phase4_v1/synthetic_comparison.png": "e18c34e321134a780b44bbdeacea5d032bfeea95e167db45cb03064918430d56",
+    "reports/mist_cove/phase4_v1/synthetic_receipt_v2.json": "9245a9dece8ca194cd94e291b0b78a52db370e932e482b5c43cb0a44bdda6929"
+  },
+  "all_54_rows_losslessly_preserved": true,
+  "historical_scientific_files_unchanged": true,
+  "public_weights_or_waveforms": 0,
+  "real_data_accessed": false,
+  "reserved_access": false,
+  "st_access": false,
+  "shhs_access": false
+}

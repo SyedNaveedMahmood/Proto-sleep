@@ -1,0 +1,71 @@
+{
+  "status": "CPU_CORRECTNESS_AND_REMOTE_CI_PASS_GPU_BLOCKED",
+  "implementation_commit": "fdc4c5ab8a95107397de286a4f5093c844d7e979",
+  "implementation_sha256": "e8f84002bd71a57259e596a547b101b5733e2d7a755b45bed706a830ff59142d",
+  "cpu": {
+    "passed": 504,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 11,
+    "seconds": 9.345,
+    "existing_warning_count": 1,
+    "junit_sha256": "edf651e4923e8115f8eb39d0e9a50b52b0bb1847c80e3d8f51ba1948e318c88b",
+    "new_phase4_passes": 106
+  },
+  "exact_resume": {
+    "methods": [
+      "M0",
+      "M1",
+      "M2",
+      "M3",
+      "M2_rms",
+      "M1_phase"
+    ],
+    "cpu_model_optimizer_python_numpy_torch_rng_history_exact": true,
+    "cuda": "BLOCKED_GPU_IN_USE"
+  },
+  "ci_repair": {
+    "commit": "165507b9ccdc0b4d8c6797bb14c6e924be3c0a7f",
+    "run_id": 39256405101,
+    "conclusion": "success",
+    "url": "https://github.com/SyedNaveedMahmood/Proto-sleep/actions/runs/39256405101",
+    "root_cause": "Full generated-EDF tests import mne/pyedflib absent from .[dev].",
+    "cpu_only_torch": "2.5.1+cpu",
+    "pip_check": "PASS",
+    "feature_push_duplicate_checks": false
+  },
+  "corrected_model_ci": {
+    "commit": "fdc4c5ab8a95107397de286a4f5093c844d7e979",
+    "run_id": 39259389692,
+    "conclusion": "success",
+    "url": "https://github.com/SyedNaveedMahmood/Proto-sleep/actions/runs/39259389692",
+    "remote_log_sha256": "afe0636364e6037ede584c95882328bbaac3c5ae0273bf544f535d38df63b914",
+    "passed": 504,
+    "skipped": 11,
+    "warnings": 1,
+    "seconds": 25.92
+  },
+  "gpu": {
+    "status": "BLOCKED_GPU_IN_USE",
+    "hardware_query": "NVIDIA GeForce RTX 4080 SUPER, 16376, 1611, 580.95.05",
+    "other_compute_process_count": 1,
+    "gpu_allocation_attempted": false,
+    "real_data_accessed": false
+  },
+  "source_inspection": {
+    "status": "PREPARED_NOT_AUTHORIZED",
+    "real_data_accessed": false,
+    "source_config_sha256": "baac9960cef274cbd661606b893b4a3121c82e22d5f84806eacffcffcb7538e0"
+  },
+  "engineering_failure_preserved": {
+    "v1": "Overlap generator exceeded original epoch at right boundary before any optimizer updates or model scores. Corrected and preregistered v2.",
+    "failed_log_sha256": "232a556ad9666f42fcf33dbf070c07d6e70a51d7e918e639a55f1612c93c1a6b",
+    "failed_commit": "f3519ffa7db406bff34e19a50229a66228ad8a49",
+    "development": "A conventional diagnostic argsort invocation was corrected and covered by generated plumbing tests before the first confirmatory launch."
+  },
+  "real_data_accessed": false,
+  "reserved_access": false,
+  "st_access": false,
+  "shhs_access": false,
+  "real_training_authorized": false
+}
