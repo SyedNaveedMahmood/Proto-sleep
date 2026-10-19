@@ -18,7 +18,15 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = ["pytest>=8.0"]
+edf = ["mne>=1.10,<1.11", "pyEDFlib>=0.1.42,<0.2", "xlrd>=2,<3"]
+# The full generated-EDF test suite imports the optional EDF readers too.
+# Keep these out of the base model/runtime installation.
+dev = [
+  "pytest>=8,<9",
+  "mne>=1.10,<1.11",
+  "pyEDFlib>=0.1.42,<0.2",
+  "xlrd>=2,<3",
+]
 
 [tool.setuptools.packages.find]
 where = ["src"]

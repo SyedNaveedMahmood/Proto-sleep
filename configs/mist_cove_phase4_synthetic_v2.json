@@ -1,0 +1,95 @@
+{
+  "version": "mist-cove-phase4-synthetic-v2",
+  "scope": "SYNTHETIC_ONLY",
+  "seeds": [
+    123,
+    456,
+    789
+  ],
+  "tasks": [
+    "substitutable",
+    "complementary"
+  ],
+  "methods": [
+    "M0",
+    "M1",
+    "M2",
+    "M3",
+    "M2_rms",
+    "M1_phase"
+  ],
+  "frozen_encoder_heads": [
+    "M1",
+    "M2",
+    "M3"
+  ],
+  "train_examples": 300,
+  "eval_examples": 100,
+  "updates": 300,
+  "frozen_head_updates": 150,
+  "batch_size": 16,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "gradient_clip": 5.0,
+  "window": 400,
+  "stride": 200,
+  "event_budget": 4,
+  "event_scale": 8.0,
+  "template_seed": 4177,
+  "template_samples": 200,
+  "noise_uV": 0.5,
+  "diagnostic_rms_uV": [
+    4.0,
+    8.0
+  ],
+  "nuisance_rms_uV": [
+    12.0,
+    24.0
+  ],
+  "competitive_rms_uV": [
+    28.0,
+    40.0
+  ],
+  "conditions": [
+    "clean",
+    "single",
+    "redundant",
+    "correlated",
+    "competitive",
+    "abrupt_artifact",
+    "overlap",
+    "partial",
+    "erased",
+    "eventless"
+  ],
+  "audit_conditions": [
+    "clean",
+    "redundant",
+    "correlated",
+    "competitive",
+    "overlap",
+    "erased"
+  ],
+  "audit_examples_per_condition": 5,
+  "donors": [
+    "oracle",
+    "bridge",
+    "background"
+  ],
+  "numerical_tolerance": 1e-05,
+  "criteria": {
+    "representation_margin": 0.1,
+    "organization_f1_penalty": 0.03,
+    "localization_advantage": 0.1,
+    "top1_hit_minimum": 0.8,
+    "selected_control_effect_margin": 0.05,
+    "donor_spread_maximum": 0.25,
+    "joint_individual_margin": 0.25,
+    "tiny_noise_jaccard_maximum": 0.1,
+    "erased_confidence_maximum": 0.5,
+    "distractor_advantage": 0.1
+  },
+  "cpu_wall_ceiling_seconds": 7200,
+  "real_data_authorized": false,
+  "generator_amendment": "overlap first start <=2700, second start +100; complete components within 3000"
+}

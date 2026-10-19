@@ -1,0 +1,13 @@
+{
+  "status": "SAFE_SYNTHETIC_CUDA_ADDENDUM_PASS",
+  "original_publication_manifest_sha256": "106946c588e17504656b8dd3399960feab7c1886a7951604eb57cb74dd87f1df",
+  "files": {
+    "docs/mist_cove/PHASE_IV_CUDA_ADDENDUM_V1.md": "b7926604a03b757fb69151d94fa80d9f7891de11e241243ada1c2afba223844b",
+    "reports/mist_cove/phase4_v1/cuda_measurements_v1.json": "d72df15959aab74f72f9adbfc5d59c17af75ee5259cd7dd014dd573cc74b130b"
+  },
+  "original_scientific_results_unchanged": true,
+  "source_implementation_unchanged": true,
+  "public_weights_or_waveforms": 0,
+  "real_data_accessed": false,
+  "credential_used_or_saved": false
+}
