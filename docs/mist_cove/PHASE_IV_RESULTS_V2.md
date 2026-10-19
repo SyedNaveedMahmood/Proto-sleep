@@ -57,6 +57,8 @@ Each fit evaluated ten fixed conditions with 100 fresh examples (20 per syntheti
 
 F1 is fixed-five. Seed SD describes optimization/generator repeats, not participants or a clinical confidence interval. Conventional localization is an internal leave-one-candidate feature-deletion ranking, explicitly distinct from native additive scores or full waveform effects.
 
+In the per-run metrics, per-stage accuracy is accuracy conditional on the true generated class, so it equals that class's recall. It is not one-versus-rest accuracy. Synthetic class indices share the five-output API but are not clinically annotated Wake/N1/N2/N3/REM observations.
+
 **FAIL H4.1 (0/3 primary seed comparisons):** M1 does not exceed the same-capacity phase-removed control by the frozen 0.10 margin. The latter is stronger in every seed. Whole template spectra are matched, but overlapping/cropped candidate spectra can retain class information, and deterministic phase removal can change learning difficulty. Original temporal phase is unnecessary for this task’s best observed classification. The result does not prove that temporal morphology is useless on clinical EEG; it invalidates a unique morphology-necessity reading of these constructed fixtures. M1 outperforming the tiny five-band q1 alone is insufficient.
 
 | Task | Fixed encoder head | Clean F1 | Competitive F1 | Competitive localization |
