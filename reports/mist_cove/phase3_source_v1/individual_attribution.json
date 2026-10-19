@@ -1,0 +1,289 @@
+{
+  "status": "DESCRIPTIVE_INDIVIDUAL_ATTRIBUTION_SUMMARY_COMPLETE",
+  "models": {
+    "123_q1": {
+      "true_stage": {
+        "n": 800,
+        "mean_absolute_difference": 0.48271661654143827,
+        "pearson_correlation": 0.32387809955006075,
+        "nonzero_sign_agreement": 0.535,
+        "n_both_nonzero": 800
+      },
+      "predicted_stage": {
+        "n": 800,
+        "mean_absolute_difference": 0.4306795938870346,
+        "pearson_correlation": 0.4826338525764135,
+        "nonzero_sign_agreement": 0.6245306633291614,
+        "n_both_nonzero": 799
+      },
+      "all_five_stages": {
+        "n": 4000,
+        "mean_absolute_difference": 0.5516861113845807,
+        "pearson_correlation": 0.251157208024084,
+        "nonzero_sign_agreement": 0.5836459114778695,
+        "n_both_nonzero": 3999
+      }
+    },
+    "123_availability": {
+      "true_stage": {
+        "n": 800,
+        "mean_absolute_difference": 0.2550684962673404,
+        "pearson_correlation": 0.6096147614666746,
+        "nonzero_sign_agreement": 0.7057324840764331,
+        "n_both_nonzero": 785
+      },
+      "predicted_stage": {
+        "n": 800,
+        "mean_absolute_difference": 0.2692996601145569,
+        "pearson_correlation": 0.5014631157523908,
+        "nonzero_sign_agreement": 0.6789808917197452,
+        "n_both_nonzero": 785
+      },
+      "all_five_stages": {
+        "n": 4000,
+        "mean_absolute_difference": 0.3470810065049154,
+        "pearson_correlation": 0.5555616304446384,
+        "nonzero_sign_agreement": 0.692484076433121,
+        "n_both_nonzero": 3925
+      }
+    },
+    "123_background": {
+      "true_stage": {
+        "n": 800,
+        "mean_absolute_difference": 0.14139838017523287,
+        "pearson_correlation": null,
+        "nonzero_sign_agreement": null,
+        "n_both_nonzero": 0
+      },
+      "predicted_stage": {
+        "n": 800,
+        "mean_absolute_difference": 0.1513735246658325,
+        "pearson_correlation": null,
+        "nonzero_sign_agreement": null,
+        "n_both_nonzero": 0
+      },
+      "all_five_stages": {
+        "n": 4000,
+        "mean_absolute_difference": 0.16515027827769518,
+        "pearson_correlation": null,
+        "nonzero_sign_agreement": null,
+        "n_both_nonzero": 0
+      }
+    },
+    "123_rounded_q1": {
+      "true_stage": {
+        "n": 800,
+        "mean_absolute_difference": 0.48136499713597003,
+        "pearson_correlation": 0.3346718877807721,
+        "nonzero_sign_agreement": 0.5475,
+        "n_both_nonzero": 800
+      },
+      "predicted_stage": {
+        "n": 800,
+        "mean_absolute_difference": 0.43884883959734,
+        "pearson_correlation": 0.46651406146601176,
+        "nonzero_sign_agreement": 0.62625,
+        "n_both_nonzero": 800
+      },
+      "all_five_stages": {
+        "n": 4000,
+        "mean_absolute_difference": 0.5452443893878808,
+        "pearson_correlation": 0.27128807488163875,
+        "nonzero_sign_agreement": 0.58975,
+        "n_both_nonzero": 4000
+      }
+    },
+    "456_q1": {
+      "true_stage": {
+        "n": 800,
+        "mean_absolute_difference": 0.4715073219887563,
+        "pearson_correlation": 0.3374079799197707,
+        "nonzero_sign_agreement": 0.5325,
+        "n_both_nonzero": 800
+      },
+      "predicted_stage": {
+        "n": 800,
+        "mean_absolute_difference": 0.42993818315284443,
+        "pearson_correlation": 0.48190969317360544,
+        "nonzero_sign_agreement": 0.62125,
+        "n_both_nonzero": 800
+      },
+      "all_five_stages": {
+        "n": 4000,
+        "mean_absolute_difference": 0.5570453536319546,
+        "pearson_correlation": 0.2770132678219865,
+        "nonzero_sign_agreement": 0.604,
+        "n_both_nonzero": 4000
+      }
+    },
+    "456_availability": {
+      "true_stage": {
+        "n": 800,
+        "mean_absolute_difference": 0.2693059941239699,
+        "pearson_correlation": 0.5778076680822407,
+        "nonzero_sign_agreement": 0.6764331210191082,
+        "n_both_nonzero": 785
+      },
+      "predicted_stage": {
+        "n": 800,
+        "mean_absolute_difference": 0.27192136310337445,
+        "pearson_correlation": 0.48174025635641365,
+        "nonzero_sign_agreement": 0.6700636942675159,
+        "n_both_nonzero": 785
+      },
+      "all_five_stages": {
+        "n": 4000,
+        "mean_absolute_difference": 0.35812834458967335,
+        "pearson_correlation": 0.5439611840618094,
+        "nonzero_sign_agreement": 0.6904458598726114,
+        "n_both_nonzero": 3925
+      }
+    },
+    "456_background": {
+      "true_stage": {
+        "n": 800,
+        "mean_absolute_difference": 0.14189799346029758,
+        "pearson_correlation": null,
+        "nonzero_sign_agreement": null,
+        "n_both_nonzero": 0
+      },
+      "predicted_stage": {
+        "n": 800,
+        "mean_absolute_difference": 0.1509899744950235,
+        "pearson_correlation": null,
+        "nonzero_sign_agreement": null,
+        "n_both_nonzero": 0
+      },
+      "all_five_stages": {
+        "n": 4000,
+        "mean_absolute_difference": 0.16418078000098466,
+        "pearson_correlation": null,
+        "nonzero_sign_agreement": null,
+        "n_both_nonzero": 0
+      }
+    },
+    "456_rounded_q1": {
+      "true_stage": {
+        "n": 800,
+        "mean_absolute_difference": 0.4729854914409225,
+        "pearson_correlation": 0.34488769564363,
+        "nonzero_sign_agreement": 0.5425,
+        "n_both_nonzero": 800
+      },
+      "predicted_stage": {
+        "n": 800,
+        "mean_absolute_difference": 0.43310853481329104,
+        "pearson_correlation": 0.45618385331529276,
+        "nonzero_sign_agreement": 0.615,
+        "n_both_nonzero": 800
+      },
+      "all_five_stages": {
+        "n": 4000,
+        "mean_absolute_difference": 0.550447055580109,
+        "pearson_correlation": 0.2932761050456904,
+        "nonzero_sign_agreement": 0.60825,
+        "n_both_nonzero": 4000
+      }
+    },
+    "789_q1": {
+      "true_stage": {
+        "n": 800,
+        "mean_absolute_difference": 0.48874457979749425,
+        "pearson_correlation": 0.3333130900720579,
+        "nonzero_sign_agreement": 0.54875,
+        "n_both_nonzero": 800
+      },
+      "predicted_stage": {
+        "n": 800,
+        "mean_absolute_difference": 0.46788923426807744,
+        "pearson_correlation": 0.4816898174167984,
+        "nonzero_sign_agreement": 0.60375,
+        "n_both_nonzero": 800
+      },
+      "all_five_stages": {
+        "n": 4000,
+        "mean_absolute_difference": 0.5591782386318374,
+        "pearson_correlation": 0.25576641541780226,
+        "nonzero_sign_agreement": 0.5915,
+        "n_both_nonzero": 4000
+      }
+    },
+    "789_availability": {
+      "true_stage": {
+        "n": 800,
+        "mean_absolute_difference": 0.2489652785430235,
+        "pearson_correlation": 0.6248078103579824,
+        "nonzero_sign_agreement": 0.7171974522292993,
+        "n_both_nonzero": 785
+      },
+      "predicted_stage": {
+        "n": 800,
+        "mean_absolute_difference": 0.2718713675509389,
+        "pearson_correlation": 0.5029097086061188,
+        "nonzero_sign_agreement": 0.6751592356687898,
+        "n_both_nonzero": 785
+      },
+      "all_five_stages": {
+        "n": 4000,
+        "mean_absolute_difference": 0.3498403078752899,
+        "pearson_correlation": 0.566005368608119,
+        "nonzero_sign_agreement": 0.6940127388535032,
+        "n_both_nonzero": 3925
+      }
+    },
+    "789_background": {
+      "true_stage": {
+        "n": 800,
+        "mean_absolute_difference": 0.14176519183441996,
+        "pearson_correlation": null,
+        "nonzero_sign_agreement": null,
+        "n_both_nonzero": 0
+      },
+      "predicted_stage": {
+        "n": 800,
+        "mean_absolute_difference": 0.15025779899209737,
+        "pearson_correlation": null,
+        "nonzero_sign_agreement": null,
+        "n_both_nonzero": 0
+      },
+      "all_five_stages": {
+        "n": 4000,
+        "mean_absolute_difference": 0.1641612134501338,
+        "pearson_correlation": null,
+        "nonzero_sign_agreement": null,
+        "n_both_nonzero": 0
+      }
+    },
+    "789_rounded_q1": {
+      "true_stage": {
+        "n": 800,
+        "mean_absolute_difference": 0.48763410485946224,
+        "pearson_correlation": 0.3458187878547794,
+        "nonzero_sign_agreement": 0.55625,
+        "n_both_nonzero": 800
+      },
+      "predicted_stage": {
+        "n": 800,
+        "mean_absolute_difference": 0.47797136927430983,
+        "pearson_correlation": 0.4341029127069817,
+        "nonzero_sign_agreement": 0.60375,
+        "n_both_nonzero": 800
+      },
+      "all_five_stages": {
+        "n": 4000,
+        "mean_absolute_difference": 0.5530327348806604,
+        "pearson_correlation": 0.27777377434901074,
+        "nonzero_sign_agreement": 0.595,
+        "n_both_nonzero": 4000
+      }
+    }
+  },
+  "waveform_aggregate_sha256": "b8788f6ab7c38bbaf1023d6a2622ed5aa12625faa584f5af20420e07c19129d9",
+  "analysis_code_sha256": "2d127b8414f0179e1d4c09166a44e457335869db3d31b08b323537a2e5c6b41e",
+  "donor": "bridge",
+  "interpretation": "Original additive event score versus full-model individual waveform effect; distinct estimands, not causal necessity. Correlation treats repeated witnesses descriptively, not as independent participants.",
+  "training_executed": false,
+  "reserved_access": false,
+  "st_access": false,
+  "shhs_access": false
+}
