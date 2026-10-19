@@ -1,0 +1,41 @@
+{
+  "status": "CPU_AND_CUDA_PASS",
+  "scientific_implementation_commit": "438cffc7807bff3881f74a9a0a3e187cf88ac158",
+  "suites": {
+    "cpu": {
+      "tests": 684,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 11,
+      "passed": 673,
+      "junit_sha256": "14e4460afcc318f372f1014f257918d12f847d174a66b4554c3db7b6dce09aac",
+      "seconds": 12.2
+    },
+    "cuda": {
+      "tests": 11,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 11,
+      "junit_sha256": "ebd2e09d1ac528baa9772018fe245f6c644cbe4aa6770a7e6b8a9d546394299f",
+      "seconds": 4.2
+    }
+  },
+  "new_cpu_cases": 91,
+  "cuda_standalone_smoke_checks": 4,
+  "cuda_exact_resume_probes": 4,
+  "confirmatory_head_fits": 0,
+  "pre_freeze_debug_failures": {
+    "failed_cases": 5,
+    "issues": [
+      "Phase V preregistration uses sha256 rather than files key",
+      "stable argsort requires dim keyword in installed PyTorch"
+    ],
+    "corrected_before_confirmatory_execution": true
+  },
+  "real_data_accessed": false,
+  "historical_files_changed": false,
+  "ci_workflow_changed": false,
+  "credentials_used_or_stored": false,
+  "existing_warning_count": 1
+}

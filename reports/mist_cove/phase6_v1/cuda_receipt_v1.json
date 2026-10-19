@@ -1,0 +1,123 @@
+{
+  "status": "PASS",
+  "hardware_query": "NVIDIA GeForce RTX 4080 SUPER, 16376, 15881, 580.95.05",
+  "environment": {
+    "python": "3.12.9",
+    "torch": "2.5.1",
+    "numpy": "1.26.4",
+    "device": "cuda",
+    "cuda_build": "12.1",
+    "threads": 2,
+    "deterministic": true,
+    "tf32_matmul": false,
+    "tf32_cudnn": false,
+    "cublas_workspace_config": ":4096:8",
+    "packages": {
+      "numpy": "1.26.4",
+      "torch": "2.5.1",
+      "scikit-learn": "1.7.2",
+      "pyEDFlib": "0.1.42"
+    },
+    "gpu_name": "NVIDIA GeForce RTX 4080 SUPER",
+    "gpu_total_memory_bytes": 16718168064,
+    "gpu_capability": [
+      8,
+      9
+    ],
+    "cudnn": 90100
+  },
+  "frozen": {
+    "preregistration": {
+      "sha256": "bb6b95fc50571c9ce1b9654defdeca19cb30d508aac87d4bbebcc505bfc64eda",
+      "files": {
+        "configs/mist_cove_phase6_synthetic_v1.json": "c9006a1697c417c4bb0663c68bc572b0b7597b7908b454836b2a6ce40a48d75a",
+        "docs/mist_cove/PHASE_VI_CONSTRUCT_VALIDITY_V1.md": "da15724664d851c6b3421eac524d748fa9b9d5cc4b556df887a56c9f0861b98b",
+        "docs/mist_cove/PHASE_VI_GENERATOR_SPEC_V1.md": "1fb416f2e0c13434646d7e91908cd531e0633e4f26cb118c180f9852f72ecdce",
+        "docs/mist_cove/PHASE_VI_HYPOTHESES_V1.md": "ab82afb80e607b1a240e4ad7cf254cc108993600023c6c690ce6532ae9e896ab",
+        "docs/mist_cove/PHASE_VI_PROTOCOL_V1.md": "278ad22cde038c779b94fa8fb55c3ef8a875cd57d59f792de0a912790508bc2c",
+        "docs/mist_cove/PHASE_VI_SCIENTIFIC_DECISION_V1.md": "7c5d16d43ebc6ae238add78f2554cfe8ac85ed59650606392d598679b7de837c",
+        "experiments/mist_cove/phase6_ablation_matrix_v1.json": "8b5c70c7896ff99134a7e955072b1cc6d8e62a91320c688851fa6fa5412988b1"
+      },
+      "inventory_sha256": "41c11f683f7ad854ca20710103a9c3f4bfae6728a36c96d81a30d5add016fb01"
+    },
+    "execution_manifest": {
+      "sha256": "7a14f49e0098ba413572cb69d1240c2212b9c38498a310fcce039029e7fa1e1d",
+      "files": {
+        "scripts/check_mist_cove_phase6_cuda.py": "5d111432ecfa8c9e08ec7f8fad2a178aab76b14cf69675331a421dc307e8d11c",
+        "scripts/run_mist_cove_phase6.py": "df189c7e949cbdc1f615f16ac90d51514967c683950a2d7df5dbc86f84dab2a1",
+        "src/mist_cove/phase6/__init__.py": "cc191ade92f8ea8a0139bcb6f6d019537b2acb0e6ef52a5fa2e1eeb862f95887",
+        "src/mist_cove/phase6/audit.py": "565b982702ed4da5a21c0277bebd53eb5e45419dd37a470c54608b99ba33190f",
+        "src/mist_cove/phase6/correctness.py": "c0da4713e88e9dca5f4fbf1fa7ab51856de59dd993dfbc89e4022856280dc8a0",
+        "src/mist_cove/phase6/evaluation.py": "2804cb4fb1fcefb9ea0efa6e0aff7502fc0a25776751ddb1d66785acb9f40545",
+        "src/mist_cove/phase6/experiment.py": "431768a1632581de1e997103846e308f95a9a52f8a0a806fb707937a188ade6e",
+        "src/mist_cove/phase6/features.py": "75a78116a4f02c832f68e3e176dfd19b88f26a507f8d8a9857fb26aa614d69f0",
+        "src/mist_cove/phase6/generator.py": "94aa0d5a0a0eb88870b77778f7fae68c5c8ea0494fb781f1f4bb0a99c42f0d13",
+        "src/mist_cove/phase6/runtime.py": "1c10ee3517b15b97cc8aab86aea623c7e450c08adfd846c43b1e7eab5099c8ba",
+        "tests/mist_cove/test_phase6_engineering.py": "ef113ee0c706b23c55f044d52c0816216425ff02d517a6c07d7738056f3dfe8d",
+        "tests/mist_cove/test_phase6_generator.py": "2e98bb61fc57b333d15b72ee79c0706b2955f6fce1b70b337ce440bc0d0f8969"
+      },
+      "inventory_sha256": "9bca5bc8b1a372c75ff8472ae7e06882bbd181b57a968f7ba18b69b3492c4e09"
+    }
+  },
+  "rows": [
+    {
+      "method": "M1",
+      "batch_size": 16,
+      "five_forward_backward_seconds": 0.23100630699991598,
+      "peak_allocated_bytes": 72417792,
+      "peak_reserved_bytes": 94371840,
+      "max_additive_residual": 0.0,
+      "exact_resume": {
+        "method": "M1",
+        "device": "cuda",
+        "model_optimizer_python_numpy_cpu_cuda_rng_exact": true,
+        "logical_updates": 2
+      }
+    },
+    {
+      "method": "M2",
+      "batch_size": 16,
+      "five_forward_backward_seconds": 0.013678639003046555,
+      "peak_allocated_bytes": 72417792,
+      "peak_reserved_bytes": 94371840,
+      "max_additive_residual": 1.1920928955078125e-07,
+      "exact_resume": {
+        "method": "M2",
+        "device": "cuda",
+        "model_optimizer_python_numpy_cpu_cuda_rng_exact": true,
+        "logical_updates": 2
+      }
+    },
+    {
+      "method": "M3",
+      "batch_size": 16,
+      "five_forward_backward_seconds": 0.013269882001623046,
+      "peak_allocated_bytes": 72418304,
+      "peak_reserved_bytes": 94371840,
+      "max_additive_residual": 0.0,
+      "exact_resume": {
+        "method": "M3",
+        "device": "cuda",
+        "model_optimizer_python_numpy_cpu_cuda_rng_exact": true,
+        "logical_updates": 2
+      }
+    },
+    {
+      "method": "M2_rms",
+      "batch_size": 16,
+      "five_forward_backward_seconds": 0.01332439099860494,
+      "peak_allocated_bytes": 72418816,
+      "peak_reserved_bytes": 94371840,
+      "max_additive_residual": 1.1920928955078125e-07,
+      "exact_resume": {
+        "method": "M2_rms",
+        "device": "cuda",
+        "model_optimizer_python_numpy_cpu_cuda_rng_exact": true,
+        "logical_updates": 2
+      }
+    }
+  ],
+  "wall_seconds": 1.1070581780004431,
+  "real_data_accessed": false,
+  "private_receipt_sha256": "bb69f4f5c6dae7793d017a2e6e0b85d636ac9fdcd51c4a241e47f358630d9b00"
+}
