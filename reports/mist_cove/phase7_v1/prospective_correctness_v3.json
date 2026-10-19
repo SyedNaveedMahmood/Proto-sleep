@@ -1,0 +1,62 @@
+{
+  "version": "phase7-prospective-correctness-v3",
+  "status": "CPU_PASS_CUDA_BLOCKED",
+  "cpu": {
+    "tests": 749,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 11,
+    "passed": 738,
+    "new_cases_since_phase6": 65,
+    "seconds": 12.546,
+    "console_seconds": 12.55,
+    "warnings": 1,
+    "junit_sha256": "74ded64ef3280cb445a34df2840b8b7ad7e8b0abb416236265d5181733bb862f",
+    "log_sha256": "02beaa2bb0bb767867af0fbc11f7b81080b8f78dca28da0be06e40f334f2abc8"
+  },
+  "source_test_files": {
+    "src/mist_cove/phase7/__init__.py": "6088f5eaaef2659b66311cdbf0d9dccb7bc41f310b0fb7f04e1c76b1b41a6cbe",
+    "src/mist_cove/phase7/integrity.py": "6e40974815bad1b60efd79fd84d0354e8a715242b53d4b79a23fa79852901fcf",
+    "src/mist_cove/phase7/prospective.py": "d9c5fc5724d44ae6b70229918af6972649f2840097f102948e830c9356095cd7",
+    "src/mist_cove/phase7/robustness.py": "c5557851b1ac80f8198d49f132a63849cff2b9ebaea80f686fa472d8b7fb67f7",
+    "tests/mist_cove/test_phase7_integrity.py": "4cf18836dcc558cd925c8f718db2b6669b857f7ee1f2c133053a67d97fdd7587",
+    "tests/mist_cove/test_phase7_prospective.py": "75564f437fdfc06fb008f16910bac784a0a9a0df85339804950d30720ef99ec3",
+    "tests/mist_cove/test_phase7_readiness.py": "b7508a2f41c663952d976e577ab3ee1289b6d66d04565065325974ca2e964dfa",
+    "tests/mist_cove/test_phase7_robustness.py": "3e8fdeac99c7354b6640a7421c1b82a9c2ca6a6c1a0e460d46a9c8b857b8611b",
+    "scripts/run_mist_cove_phase7.py": "285269e6786de77f1c6589f04090929fc833a59b0af9935185015cb5346bd0b1",
+    "scripts/run_mist_cove_phase7_prospective.py": "f26abdf226b79310ffc14aad85071cd8c2eeac9aeae9462835f415c507dbed51",
+    "scripts/run_mist_cove_phase7_robustness.py": "be432fada6ebfde65a0f29cf27802998c2c05a78f1cfa2c943d8063fb7c50307",
+    "analysis/mist_cove_phase7_v1/collect.py": "c2955ec27f4ee6fefb30db9f7551b6bb1bae56f231807be6adbc7f815349df1c"
+  },
+  "inventory_sha256": "dba6a572e42e8f957ec31a99c9d60251835f58d2d60cae30eacc51f714eac9d7",
+  "historical_files_unchanged_since_initial_inventory": true,
+  "historical_original_authentication": "BLOCKED",
+  "prospective_sealed_baselines": 6,
+  "prospective_sealed_robustness_models": 12,
+  "prospective_exact_resume_models": [
+    "M1",
+    "R2_clipped"
+  ],
+  "existing_resume_tests_retained": true,
+  "cuda": {
+    "status": "BLOCKED",
+    "reason": "another compute process; not interrupted",
+    "gpu": "NVIDIA GeForce RTX 4080 SUPER",
+    "driver": "580.95.05",
+    "total_MiB": 16376,
+    "used_MiB": 14334,
+    "free_MiB": 1611,
+    "other_compute_memory_MiB": 14260,
+    "new_cuda_tests": 0,
+    "new_cuda_smokes": 0,
+    "new_cuda_resume_tests": 0,
+    "allocated_peak_bytes": null,
+    "reserved_peak_bytes": null,
+    "execution_seconds": null
+  },
+  "real_data_accessed": false,
+  "reserved_access": false,
+  "st_access": false,
+  "shhs_access": false,
+  "administrative_credentials_used_or_stored": false
+}
