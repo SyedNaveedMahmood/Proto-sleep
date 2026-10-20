@@ -180,18 +180,22 @@
       "dependencies": [
         "WP07"
       ],
-      "status": "BLOCKED",
+      "status": "COMPLETE",
       "code_configuration_identity": {
-        "commit": "702e90802e1ebbaa1b39940ad6de25ebd20dacd1",
+        "commit": "31c4a191ccd8384888a057107f382618dfe5beba",
         "config_sha256": "32d947fc6b2858ad5c9a1a2e0a7b0782d6f96373520391839906265ec422bac2"
       },
       "tests_performed": [],
-      "produced_artifacts": [],
-      "scientific_findings": [],
+      "produced_artifacts": [
+        "mist_transfer_runs/mist_cove/phase9_v1/core_v1/wp08_receipt.json"
+      ],
+      "scientific_findings": [
+        "Clean matched-head study executed independently of Track B"
+      ],
       "unresolved_limitations": [
         "synthetic-only scope; no real EEG authorization"
       ],
-      "block_reason": "ValueError('Out of range float values are not JSON compliant: nan')",
+      "block_reason": null,
       "operational_history": [
         {
           "status": "BLOCKED",
@@ -207,14 +211,18 @@
       "dependencies": [
         "WP08"
       ],
-      "status": "PENDING",
+      "status": "COMPLETE",
       "code_configuration_identity": {
-        "commit": "99ee93d4343970a948b6b29a064728b6c82d0ae0",
-        "plan_sha256": "5297b790fb2a6610755516ba1f182527255fd0f007266561aa2b3deda04b3a3d"
+        "commit": "31c4a191ccd8384888a057107f382618dfe5beba",
+        "config_sha256": "32d947fc6b2858ad5c9a1a2e0a7b0782d6f96373520391839906265ec422bac2"
       },
       "tests_performed": [],
-      "produced_artifacts": [],
-      "scientific_findings": [],
+      "produced_artifacts": [
+        "mist_transfer_runs/mist_cove/phase9_v1/core_v1/wp09_receipt.json"
+      ],
+      "scientific_findings": [
+        "C2 primary retained regardless of scores; clean/robust/query benefits assessed separately"
+      ],
       "unresolved_limitations": [
         "synthetic-only scope; no real EEG authorization"
       ],
@@ -226,14 +234,18 @@
       "dependencies": [
         "WP09"
       ],
-      "status": "PENDING",
+      "status": "COMPLETE",
       "code_configuration_identity": {
-        "commit": "99ee93d4343970a948b6b29a064728b6c82d0ae0",
-        "plan_sha256": "5297b790fb2a6610755516ba1f182527255fd0f007266561aa2b3deda04b3a3d"
+        "commit": "31c4a191ccd8384888a057107f382618dfe5beba",
+        "config_sha256": "32d947fc6b2858ad5c9a1a2e0a7b0782d6f96373520391839906265ec422bac2"
       },
       "tests_performed": [],
-      "produced_artifacts": [],
-      "scientific_findings": [],
+      "produced_artifacts": [
+        "mist_transfer_runs/mist_cove/phase9_v1/core_v1/wp10_receipt.json"
+      ],
+      "scientific_findings": [
+        "Unchanged discovered clauses evaluated; full-input stability kept separate from favorable masks"
+      ],
       "unresolved_limitations": [
         "synthetic-only scope; no real EEG authorization"
       ],
@@ -245,14 +257,18 @@
       "dependencies": [
         "WP10"
       ],
-      "status": "PENDING",
+      "status": "COMPLETE",
       "code_configuration_identity": {
-        "commit": "99ee93d4343970a948b6b29a064728b6c82d0ae0",
-        "plan_sha256": "5297b790fb2a6610755516ba1f182527255fd0f007266561aa2b3deda04b3a3d"
+        "commit": "31c4a191ccd8384888a057107f382618dfe5beba",
+        "config_sha256": "32d947fc6b2858ad5c9a1a2e0a7b0782d6f96373520391839906265ec422bac2"
       },
       "tests_performed": [],
-      "produced_artifacts": [],
-      "scientific_findings": [],
+      "produced_artifacts": [
+        "mist_transfer_runs/mist_cove/phase9_v1/core_v1/wp11_receipt.json"
+      ],
+      "scientific_findings": [
+        "Target removal, nontarget preservation, compatibility and response reported separately; five waveform controls plus internal operator"
+      ],
       "unresolved_limitations": [
         "synthetic-only scope; no real EEG authorization"
       ],
@@ -264,14 +280,18 @@
       "dependencies": [
         "WP11"
       ],
-      "status": "PENDING",
+      "status": "COMPLETE",
       "code_configuration_identity": {
-        "commit": "99ee93d4343970a948b6b29a064728b6c82d0ae0",
-        "plan_sha256": "5297b790fb2a6610755516ba1f182527255fd0f007266561aa2b3deda04b3a3d"
+        "commit": "31c4a191ccd8384888a057107f382618dfe5beba",
+        "config_sha256": "32d947fc6b2858ad5c9a1a2e0a7b0782d6f96373520391839906265ec422bac2"
       },
       "tests_performed": [],
-      "produced_artifacts": [],
-      "scientific_findings": [],
+      "produced_artifacts": [
+        "mist_transfer_runs/mist_cove/phase9_v1/core_v1/wp12_receipt.json"
+      ],
+      "scientific_findings": [
+        "Wrong predictions retain their own predicted-class explanations; calibrated/null/removed/error metrics retained"
+      ],
       "unresolved_limitations": [
         "synthetic-only scope; no real EEG authorization"
       ],
@@ -283,14 +303,21 @@
       "dependencies": [
         "WP12"
       ],
-      "status": "PENDING",
+      "status": "COMPLETE",
       "code_configuration_identity": {
-        "commit": "99ee93d4343970a948b6b29a064728b6c82d0ae0",
-        "plan_sha256": "5297b790fb2a6610755516ba1f182527255fd0f007266561aa2b3deda04b3a3d"
+        "commit": "31c4a191ccd8384888a057107f382618dfe5beba",
+        "config_sha256": "32d947fc6b2858ad5c9a1a2e0a7b0782d6f96373520391839906265ec422bac2"
       },
-      "tests_performed": [],
-      "produced_artifacts": [],
-      "scientific_findings": [],
+      "tests_performed": [
+        "full CPU: 871 passed/11 skipped",
+        "42 sealed new states and exact circuit archives match"
+      ],
+      "produced_artifacts": [
+        "mist_transfer_runs/mist_cove/phase9_v1/core_v1/wp13_receipt.json"
+      ],
+      "scientific_findings": [
+        "CUDA BLOCKED by another compute process; no new device allocation"
+      ],
       "unresolved_limitations": [
         "synthetic-only scope; no real EEG authorization"
       ],
