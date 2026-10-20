@@ -81,14 +81,19 @@
       "dependencies": [
         "WP03"
       ],
-      "status": "PENDING",
+      "status": "COMPLETE",
       "code_configuration_identity": {
-        "commit": "99ee93d4343970a948b6b29a064728b6c82d0ae0",
-        "plan_sha256": "5297b790fb2a6610755516ba1f182527255fd0f007266561aa2b3deda04b3a3d"
+        "source_sha256": "0f3b99cd374227c46b7a6e6f640efc52a64e507a4ba25076dc23ef7238405edf"
       },
-      "tests_performed": [],
-      "produced_artifacts": [],
-      "scientific_findings": [],
+      "tests_performed": [
+        "Full/native identity, atom closure, arbitrary withheld samples, RMS and zero-mask paths:23 cases"
+      ],
+      "produced_artifacts": [
+        "src/mist_cove/phase9/operators.py"
+      ],
+      "scientific_findings": [
+        "Engineering correctness only; clinical validity NOT TESTED"
+      ],
       "unresolved_limitations": [
         "synthetic-only scope; no real EEG authorization"
       ],
@@ -100,14 +105,19 @@
       "dependencies": [
         "WP04"
       ],
-      "status": "PENDING",
+      "status": "COMPLETE",
       "code_configuration_identity": {
-        "commit": "99ee93d4343970a948b6b29a064728b6c82d0ae0",
-        "plan_sha256": "5297b790fb2a6610755516ba1f182527255fd0f007266561aa2b3deda04b3a3d"
+        "source_sha256": "90002ed99e8209b7157257cee70087128c04facfeaf6e9145286a11cd6711faf"
       },
-      "tests_performed": [],
-      "produced_artifacts": [],
-      "scientific_findings": [],
+      "tests_performed": [
+        "32,768-row OR/AND/XOR/blocker/mixed/constants, minimal clauses and nonmonotone greedy counterexample:9 cases"
+      ],
+      "produced_artifacts": [
+        "src/mist_cove/phase9/circuits.py"
+      ],
+      "scientific_findings": [
+        "Engineering correctness only; clinical validity NOT TESTED"
+      ],
       "unresolved_limitations": [
         "synthetic-only scope; no real EEG authorization"
       ],
@@ -119,7 +129,7 @@
       "dependencies": [
         "WP05"
       ],
-      "status": "PENDING",
+      "status": "IN_PROGRESS",
       "code_configuration_identity": {
         "commit": "99ee93d4343970a948b6b29a064728b6c82d0ae0",
         "plan_sha256": "5297b790fb2a6610755516ba1f182527255fd0f007266561aa2b3deda04b3a3d"
