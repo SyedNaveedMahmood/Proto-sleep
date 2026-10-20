@@ -1,0 +1,382 @@
+{
+  "version": "mist-cove-phase11a-progress-v1",
+  "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8",
+  "base_tree": "2e1f172907840aa4b941e3fcf3e3a1f3919f1ecb",
+  "scope": "TRACKED_METADATA_AND_NEW_SYNTHETIC_FIXTURES_ONLY",
+  "work_packages": [
+    {
+      "id": "XI-A01",
+      "title": "Historical checkpoint lifecycle",
+      "dependencies": [],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8",
+        "code_configuration_manifest_sha256": "450e66d0116eab5e6e4aabdff5cf9466fafcfce198fccca3bf6d1ec27c17d20c",
+        "configuration_sha256": "731c63d7fd761a1ad318da5be7c8c42689e8c822c92bfe2a00d310ea0bef0762"
+      },
+      "tests_performed": [
+        "Frozen661dbb3 runtime/full runner/constructor/source/trainer inspected through Git objects; publication15995b3 reviewed"
+      ],
+      "produced_artifacts": [
+        "docs/mist_cove/PHASE_XIA_CHECKPOINT_LIFECYCLE_V1.md"
+      ],
+      "scientific_findings": [
+        "Published original P3B root completion-marker SHA provides a possible transitive original byte-reference chain",
+        "Original loader uses unrestricted pickle; model-state digest differs from serialized checkpoint digest",
+        "3e7a fingerprint is split identity, not independently established normalization identity"
+      ],
+      "unresolved_limitations": [
+        "Private root/child markers and actual artifacts remain unopened; original candidate not authenticated"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "XI-A02",
+      "title": "Provenance evidence graph",
+      "dependencies": [
+        "XI-A01"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8",
+        "code_configuration_manifest_sha256": "450e66d0116eab5e6e4aabdff5cf9466fafcfce198fccca3bf6d1ec27c17d20c",
+        "configuration_sha256": "731c63d7fd761a1ad318da5be7c8c42689e8c822c92bfe2a00d310ea0bef0762"
+      },
+      "tests_performed": [
+        "14 distinct graph nodes and13 explicit edge records; required evidence/identity/trust/falsifier/missing-link fields populated"
+      ],
+      "produced_artifacts": [
+        "reports/mist_cove/phase11a_v1/provenance_graph.json",
+        "docs/mist_cove/PHASE_XIA_EVIDENCE_GRAPH_V1.md"
+      ],
+      "scientific_findings": [
+        "Level2 publication/root-marker reference is distinct from uninspected root/child/checkpoint bytes",
+        "No current Level3 artifact edge; bank/normalization/run linkage remains partly inferred"
+      ],
+      "unresolved_limitations": [
+        "Graph validates structurally; actual historical Level3 links remain untested"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "XI-A03",
+      "title": "Safe historical reference search",
+      "dependencies": [
+        "XI-A02"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8",
+        "code_configuration_manifest_sha256": "450e66d0116eab5e6e4aabdff5cf9466fafcfce198fccca3bf6d1ec27c17d20c",
+        "configuration_sha256": "731c63d7fd761a1ad318da5be7c8c42689e8c822c92bfe2a00d310ea0bef0762"
+      },
+      "tests_performed": [
+        "Git object SHA1 framing verified;78 historical blobs across64 explicit source/report paths searched",
+        "42-file original implementation SHA and9-file reused-source SHA reconstructed exactly from Git; match published values",
+        "Historical commits verified ancestors of pinned base; GitHub publication tree matches local; unsigned status retained"
+      ],
+      "produced_artifacts": [
+        "reports/mist_cove/phase11a_v1/evidence_inventory.json",
+        "docs/mist_cove/PHASE_XIA_HISTORICAL_RECORD_AUDIT_V1.md"
+      ],
+      "scientific_findings": [
+        "Original P3B root COMPLETE905ba78c SHA is an independently preserved reference under user-pinned Git history",
+        "No direct selected checkpoint-byte value materialized in approved published corpus; root/nested marker contents remain uninspected",
+        "Two copies of root hash share one publication; no third-party signature or time attestation"
+      ],
+      "unresolved_limitations": [
+        "Scoped search only, not proof no reference exists elsewhere; no ignored private historical directory opened"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "XI-A04",
+      "title": "P3B versus Phase III lineage",
+      "dependencies": [
+        "XI-A03"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8",
+        "code_configuration_manifest_sha256": "450e66d0116eab5e6e4aabdff5cf9466fafcfce198fccca3bf6d1ec27c17d20c",
+        "configuration_sha256": "731c63d7fd761a1ad318da5be7c8c42689e8c822c92bfe2a00d310ea0bef0762"
+      },
+      "tests_performed": [
+        "Original15995b3 P3B and4095c805 Phase III raw_context123 rows compared; source/wrapper/marker contracts traced"
+      ],
+      "produced_artifacts": [
+        "docs/mist_cove/PHASE_XIA_HISTORICAL_RECORD_AUDIT_V1.md"
+      ],
+      "scientific_findings": [
+        "P3B original root and Phase III selected seal are separate historically anchored references",
+        "Matching seed/architecture/metrics/epochs does not establish identical weights or serialized bytes"
+      ],
+      "unresolved_limitations": [
+        "Neither actual marker nor candidate bytes inspected; no cross-experiment identity proof"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "XI-A05",
+      "title": "Serialization/security threat model",
+      "dependencies": [
+        "XI-A04"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8",
+        "code_configuration_manifest_sha256": "450e66d0116eab5e6e4aabdff5cf9466fafcfce198fccca3bf6d1ec27c17d20c",
+        "configuration_sha256": "731c63d7fd761a1ad318da5be7c8c42689e8c822c92bfe2a00d310ea0bef0762"
+      },
+      "tests_performed": [
+        "Original torch.save/load and seal/atomic/write/resume contracts inspected; no real deserialization attempted"
+      ],
+      "produced_artifacts": [
+        "docs/mist_cove/PHASE_XIA_SECURITY_REVIEW_V1.md"
+      ],
+      "scientific_findings": [
+        "Original loader explicitly uses weights_only=False; verification after load cannot protect against unsafe pickle parsing",
+        "Strong future design needs independently anchored bytes, strict schema/identity and immutable snapshots"
+      ],
+      "unresolved_limitations": [
+        "Actual weights_only compatibility untested; provenance root authenticity is an explicit trust assumption"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "XI-A06",
+      "title": "Safe verification library",
+      "dependencies": [
+        "XI-A05"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8",
+        "code_configuration_manifest_sha256": "450e66d0116eab5e6e4aabdff5cf9466fafcfce198fccca3bf6d1ec27c17d20c",
+        "configuration_sha256": "731c63d7fd761a1ad318da5be7c8c42689e8c822c92bfe2a00d310ea0bef0762"
+      },
+      "tests_performed": [
+        "10 strict schema/typed hash/Git object/path tests pass;2 basic fixture chain/tamper tests pass",
+        "61 historical records reverified through approved Git paths; original source manifests reconstruct published hashes",
+        "14-node13-edge historical graph validates with zero Level3 claims"
+      ],
+      "produced_artifacts": [
+        "src/mist_cove/phase11a/provenance.py",
+        "src/mist_cove/phase11a/evidence_graph.py",
+        "src/mist_cove/phase11a/fixtures.py",
+        "src/mist_cove/phase11a/verification.py"
+      ],
+      "scientific_findings": [
+        "Generated-only capability verifier has no caller artifact path; independent retained anchor precedes receipt/candidate parsing",
+        "Metadata, bytes, model-state and safe parsing decisions remain separate"
+      ],
+      "unresolved_limitations": [
+        "Fixture trust root is synthetic and not evidence of actual P3B authentication",
+        "Supported-interface safety is not an OS sandbox against arbitrary malicious Python"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "XI-A07",
+      "title": "Adversarial synthetic authentication tests",
+      "dependencies": [
+        "XI-A06"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "verifier_commit": "04df6d0",
+        "code_configuration_manifest_sha256": "450e66d0116eab5e6e4aabdff5cf9466fafcfce198fccca3bf6d1ec27c17d20c",
+        "configuration_sha256": "731c63d7fd761a1ad318da5be7c8c42689e8c822c92bfe2a00d310ea0bef0762"
+      },
+      "tests_performed": [
+        "25 fixture security tests pass",
+        "All20 required scenarios return exact expected meaningful statuses; duplicate and contradictory receipt controls both rejected",
+        "Unsafe pickle bytes can authenticate as generated fixture bytes but parsing is BLOCKED; execution tripwire absent"
+      ],
+      "produced_artifacts": [
+        "reports/mist_cove/phase11a_v1/correctness_receipt.json",
+        "tests/mist_cove/test_phase11a_security.py"
+      ],
+      "scientific_findings": [
+        "One fully linked generated chain safely loads;14 required negative cases FAIL and5 BLOCKED as expected",
+        "Local sidecars never establish trust; source paths never accepted; TOCTOU prevents changed bytes from loading"
+      ],
+      "unresolved_limitations": [
+        "Successful synthetic Level3 verification is not actual historical authentication"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "XI-A08",
+      "title": "Restricted future artifact procedure",
+      "dependencies": [
+        "XI-A07"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8",
+        "code_configuration_manifest_sha256": "450e66d0116eab5e6e4aabdff5cf9466fafcfce198fccca3bf6d1ec27c17d20c",
+        "configuration_sha256": "731c63d7fd761a1ad318da5be7c8c42689e8c822c92bfe2a00d310ea0bef0762"
+      },
+      "tests_performed": [
+        "Procedure reviewed against independently published905ba root and actual frozen output-map contracts; no private existence check"
+      ],
+      "produced_artifacts": [
+        "docs/mist_cove/PHASE_XIA_RESTRICTED_ARTIFACT_PLAN_V1.md"
+      ],
+      "scientific_findings": [
+        "Smallest next permission is two bounded hash-pinned selected receipt JSONs, without checkpoint/bank/normalization/EEG access",
+        "Later byte hashing, restricted loading, generated tests and actual EEG pilot are separate approvals"
+      ],
+      "unresolved_limitations": [
+        "Receipt contents and actual candidate remain uninspected; byte/state digest cannot be manufactured or substituted"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "XI-A09",
+      "title": "Machine-readable independent gates",
+      "dependencies": [
+        "XI-A08"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8",
+        "code_configuration_manifest_sha256": "450e66d0116eab5e6e4aabdff5cf9466fafcfce198fccca3bf6d1ec27c17d20c",
+        "configuration_sha256": "731c63d7fd761a1ad318da5be7c8c42689e8c822c92bfe2a00d310ea0bef0762"
+      },
+      "tests_performed": [
+        "9 gate/graph/CLI/privacy/atomicity/tamper tests passed",
+        "Actual metadata gate produced PASS/PASS/PASS/INCONCLUSIVE/INCONCLUSIVE/BLOCKED/NOT TESTED/NOT TESTED; overall BLOCKED"
+      ],
+      "produced_artifacts": [
+        "reports/mist_cove/phase11a_v1/gate_status.json",
+        "src/mist_cove/phase11a/gates.py",
+        "scripts/check_mist_cove_phase11a.py"
+      ],
+      "scientific_findings": [
+        "No manual override or fixture success can promote historical artifact authentication",
+        "Original root reference useful but selected-byte value and actual bytes remain untested"
+      ],
+      "unresolved_limitations": [
+        "Future actual artifact reader/loader is intentionally absent"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "XI-A10",
+      "title": "Phase XI-B readiness proposal",
+      "dependencies": [
+        "XI-A09"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8",
+        "code_configuration_manifest_sha256": "450e66d0116eab5e6e4aabdff5cf9466fafcfce198fccca3bf6d1ec27c17d20c",
+        "configuration_sha256": "731c63d7fd761a1ad318da5be7c8c42689e8c822c92bfe2a00d310ea0bef0762"
+      },
+      "tests_performed": [
+        "Reviewed against XI-A authorization boundaries, original lineage findings and independent gate statuses"
+      ],
+      "produced_artifacts": [
+        "docs/mist_cove/PHASE_XIA_PHASE_XIB_PROPOSAL_V1.md"
+      ],
+      "scientific_findings": [
+        "Future generated-input trained-weight tests require authenticated original bytes and separate authorization"
+      ],
+      "unresolved_limitations": [
+        "Actual trained-state loading, source fitting lineage and real EEG tests remain outside authorization"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "XI-A11",
+      "title": "Scientific interpretation/failure analysis",
+      "dependencies": [
+        "XI-A10"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8",
+        "code_configuration_manifest_sha256": "450e66d0116eab5e6e4aabdff5cf9466fafcfce198fccca3bf6d1ec27c17d20c",
+        "configuration_sha256": "731c63d7fd761a1ad318da5be7c8c42689e8c822c92bfe2a00d310ea0bef0762"
+      },
+      "tests_performed": [
+        "Reviewed against XI-A authorization boundaries, original lineage findings and independent gate statuses"
+      ],
+      "produced_artifacts": [
+        "docs/mist_cove/PHASE_XIA_RESULTS_V1.md"
+      ],
+      "scientific_findings": [
+        "Q1-Q8 answered explicitly; original root anchor useful while actual historical authentication remains BLOCKED"
+      ],
+      "unresolved_limitations": [
+        "Actual trained-state loading, source fitting lineage and real EEG tests remain outside authorization"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "XI-A12",
+      "title": "CPU regression and GitHub publication",
+      "dependencies": [
+        "XI-A11"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8",
+        "code_configuration_manifest_sha256": "450e66d0116eab5e6e4aabdff5cf9466fafcfce198fccca3bf6d1ec27c17d20c",
+        "configuration_sha256": "731c63d7fd761a1ad318da5be7c8c42689e8c822c92bfe2a00d310ea0bef0762"
+      },
+      "tests_performed": [
+        "Final full CPU regression:1022 passed,11 CUDA skips,0 failures;49 new Phase XI-A tests",
+        "Initial full regression:1017 passed,11 skips; final run includes5 added reference-drift tests",
+        "git diff --check passed; historical files remain additions-only relative to Phase X base",
+        "GitHub Actions run39448706371 PASS on33624493a9cb053179f7d6867e76733b58980ba5;1022 passed,11 skipped;unchanged historical workflow",
+        "Final publication-manifest verification PASS; final push CI result recorded in PR closeout after the self-identifying commit exists"
+      ],
+      "produced_artifacts": [
+        "reports/mist_cove/phase11a_v1/correctness_receipt.json",
+        "reports/mist_cove/phase11a_v1/publication_manifest.json",
+        "https://github.com/SyedNaveedMahmood/Proto-sleep/pull/13"
+      ],
+      "scientific_findings": [
+        "All generated attacks produced expected outcomes; original candidate remains blocked independently of regression success"
+      ],
+      "unresolved_limitations": [
+        "Actual historical artifact authentication remains BLOCKED; no real file reader or trained adapter test authorized"
+      ],
+      "block_reason": null
+    }
+  ],
+  "final_code_configuration_sha256": {
+    "src/mist_cove/phase11a/__init__.py": "974e90a8fdf577677da6fca17657fc8c0e4ff9e7f8ccb49d17e5e48fc6da5c2f",
+    "src/mist_cove/phase11a/evidence_graph.py": "7b4aa324ddcdd80daad8cac65a43cc485af97ca87cc3842fbebefd3a164547ea",
+    "src/mist_cove/phase11a/fixtures.py": "0f085519bb6b038fa965959efa5cb44347e3a6c50779dda51dba32ccbf0143b3",
+    "src/mist_cove/phase11a/gates.py": "188a29cfa9c9dfb64d9529e430a1bae2b9cfea5fb2818ce5dcd1b7ecadcab076",
+    "src/mist_cove/phase11a/provenance.py": "b569b8058808a83ecac066ab0af35e822f096ff6ec0bafd7d4b47c80ff6f050b",
+    "src/mist_cove/phase11a/publication.py": "faa2e62c1df04ac7aee5b8f8293e70eda7bbf0b0520bea1499e945448a2e0ad0",
+    "src/mist_cove/phase11a/verification.py": "aa3bc9f7382c77168ac4fe110741358387769c04c181b8d7b4122c585e68731b",
+    "configs/mist_cove_phase11a_v1.json": "731c63d7fd761a1ad318da5be7c8c42689e8c822c92bfe2a00d310ea0bef0762",
+    "scripts/check_mist_cove_phase11a.py": "6e9f942e23885cceeb5158098cc6dc13816bd3d06db913e51f5c0e3db302d3ca"
+  },
+  "publication_closeout": {
+    "draft_PR": "https://github.com/SyedNaveedMahmood/Proto-sleep/pull/13",
+    "target": "research/mist-cove-phase10-source-feasibility-v1",
+    "pre_closeout_CI": {
+      "status": "PASS",
+      "head_sha": "33624493a9cb053179f7d6867e76733b58980ba5",
+      "run_id": 39448706371,
+      "url": "https://github.com/SyedNaveedMahmood/Proto-sleep/actions/runs/39448706371",
+      "job_wall_seconds_including_setup": 83,
+      "log_sha256": "2def2fa5030c1603a8b4f436249d9bca3dc817699c40fb7a3140227ee682efc8",
+      "tests_passed": 1022,
+      "CUDA_skipped": 11,
+      "failures": 0,
+      "workflow_changed": false
+    },
+    "final_commit_and_CI_location": "Draft PR closeout; final exact-head run verified after push",
+    "all_12_authorized_work_packages_complete": true,
+    "historical_artifact_authentication": "BLOCKED",
+    "next_stage_launched": false
+  }
+}
