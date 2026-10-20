@@ -48,3 +48,38 @@ def test_actual_generated_git_commit_blob_and_symlink_identity(tmp_path,monkeypa
     with pytest.raises(p.InvalidEvidence):p.historical_blob(commit,'reports/p3b/results.json',expected_blob='0'*40)
     path.unlink();path.symlink_to('outside_generated');git('add','.');git('commit','-m','generated symlink');second=git('rev-parse','HEAD').decode().strip();monkeypatch.setattr(p,'COMMITS',{second})
     with pytest.raises(p.InvalidEvidence,match='symlink'):p.historical_blob(second,'reports/p3b/results.json')
+
+
+@pytest.mark.parametrize('attack',['split_value','split_kind','phase3_seal','phase3_as_p3b','invented_checkpoint_hash'])
+def test_typed_inventory_references_cannot_drift_from_publication(monkeypatch,attack):
+    # Generated publication bytes isolate reference binding from the Git transport,
+    # which is exercised with real generated Git objects above.
+    import copy
+    a='a'*64;b='b'*64;c='c'*64;empty=p.sha256(p.canonical({}))
+    summary={'run_fingerprint':a,'implementation_commit':p.P3B_IMPL,'split_fingerprint':b,'root_completion_sha256':c,
+             'implementation_hash':empty,'reused_implementation_hash':empty}
+    result={'run_fingerprint':a,'implementation_commit':p.P3B_IMPL,'split_fingerprint':b,
+            'per_seed':[{'variant':'raw_context','seed':123,'best_state_digest':a}]}
+    phase3={'split_fingerprint':b,'split_file_sha256':a,'rows':[{'variant':'raw_context','seed':s,'complete_seal_sha256':c} for s in (123,456,789)]}
+    objects={(p.P3B_PUBLICATION,'reports/p3b/validation_summary.json'):summary,
+             (p.P3B_PUBLICATION,'reports/p3b/results.json'):result,
+             (p.P3B_IMPL,'configs/p3b_sc_matched_v1.json'):{'split_fingerprint':b},
+             (p.PHASE3_PUBLICATION,'reports/mist_cove/phase3_source_v1/source_results.json'):phase3,
+             (p.PHASE3_PUBLICATION,'reports/mist_cove/phase3_source_v1/execution_receipt.json'):{'split_fingerprint':b,'split_file_sha256':a}}
+    raw={key:p.canonical(value) for key,value in objects.items()}
+    monkeypatch.setattr(p,'historical_blob',lambda commit,path,**kw:(raw[(commit,path)],{}))
+    monkeypatch.setattr(p,'git',lambda *args:b'')
+    inventory={'base_commit':p.BASE,'historical_private_artifacts_opened':0,'real_checkpoint_bytes_hashed':0,
+               'records':[{'commit':key[0],'path':key[1],'blob_oid':'0'*40,'blob_sha256':p.sha256(value)} for key,value in raw.items()],
+               'candidate':{'experiment':'P3B','variant':'raw_context','seed':123,'implementation_commit':p.P3B_IMPL,'run_fingerprint':a,'model_state_digest':a,'original_serialized_checkpoint_sha256':None},
+               'source_manifests':{k:{'files':{},'canonical_SHA256':empty} for k in ('implementation','reused')},
+               'typed_references':[{'kind':kind,'experiment':'P3B','value':value} for kind,value in [('MODEL_STATE_DIGEST',a),('COMPLETION_MARKER_BYTES_SHA256',c),('SPLIT_FINGERPRINT',b),('SPLIT_FILE_SHA256',a)]],
+               'phase3_seal_references':[{'experiment':'MIST_COVE_PHASE_III','variant':'raw_context','seed':s,'source_commit':p.PHASE3_PUBLICATION,'checkpoint_byte_sha256':None,'complete_seal_sha256':c} for s in (123,456,789)]}
+    assert p.verify_inventory(inventory)['status']=='PASS'
+    wrong=copy.deepcopy(inventory)
+    if attack=='split_value':wrong['typed_references'][2]['value']=a
+    elif attack=='split_kind':wrong['typed_references'][2]['kind']='MODEL_STATE_DIGEST'
+    elif attack=='phase3_seal':wrong['phase3_seal_references'][0]['complete_seal_sha256']=a
+    elif attack=='phase3_as_p3b':wrong['phase3_seal_references'][0]['experiment']='P3B'
+    else:wrong['candidate']['original_serialized_checkpoint_sha256']=a
+    with pytest.raises(p.InvalidEvidence):p.verify_inventory(wrong)

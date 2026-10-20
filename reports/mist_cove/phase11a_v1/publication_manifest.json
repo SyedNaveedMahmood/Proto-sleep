@@ -1,0 +1,33 @@
+{
+  "version": "phase11a-safe-publication-v1",
+  "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8",
+  "self_excluded": true,
+  "scope": "Owned source/configuration/docs/aggregate reports only; no private artifact exports",
+  "files": {
+    "configs/mist_cove_phase11a_v1.json": "731c63d7fd761a1ad318da5be7c8c42689e8c822c92bfe2a00d310ea0bef0762",
+    "docs/mist_cove/PHASE_XIA_CHECKPOINT_LIFECYCLE_V1.md": "db96875fa52efc6f6e2d65a24191fe80ea8dfe7edb168c36548ad562c5ede005",
+    "docs/mist_cove/PHASE_XIA_EVIDENCE_GRAPH_V1.md": "4c5680f5e4f82348ad3c7eacd525dbcac92a89ef1a1ce3e35890daa191f127f2",
+    "docs/mist_cove/PHASE_XIA_HISTORICAL_RECORD_AUDIT_V1.md": "ff2a833ec0152a14ff09bd76e42a070cc6efc2a5e3afb6a386794531cbc4f7c5",
+    "docs/mist_cove/PHASE_XIA_PHASE_XIB_PROPOSAL_V1.md": "9b984079f43c769101c1068783a103f72733b07ba4bb9f1cc99ac224490fd921",
+    "docs/mist_cove/PHASE_XIA_RESTRICTED_ARTIFACT_PLAN_V1.md": "5c9841f79eef960c0756f664ddba3aae24ebab15a11fb8f34607c7973bedf90e",
+    "docs/mist_cove/PHASE_XIA_RESULTS_V1.md": "704b41c32749e0c41f298b96e3b6d0d67f073c7aadc9a4603a4caca44413585d",
+    "docs/mist_cove/PHASE_XIA_SCIENTIFIC_DECISION_V1.md": "d018c46d5680171d9b6274c525797f377fc91bca4d2f2dc2b3152b19d6fc9d36",
+    "docs/mist_cove/PHASE_XIA_SECURITY_REVIEW_V1.md": "32149a6bd4ed7a59f776edeeb290ea55b80324856ea5c3f6a3cea65dac42a9ba",
+    "reports/mist_cove/phase11a_v1/correctness_receipt.json": "5af65d49ae2b17ae4ec2110ee2b69fa53b9b7b74c4b217cf247ef1fc675f972a",
+    "reports/mist_cove/phase11a_v1/evidence_inventory.json": "42d574471576cfcd4a6374ecb1bba8959ae8dcae866c51d33066afc2fad9efb8",
+    "reports/mist_cove/phase11a_v1/gate_status.json": "250b271593ed5425bc0cd2a70af99c0de2803d904f054969b469739c525394e8",
+    "reports/mist_cove/phase11a_v1/progress.json": "2e2f4ace89ca51af3ebc330d1b7f5393d3e6db4336b78578d3907aa6fc1ddc19",
+    "reports/mist_cove/phase11a_v1/provenance_graph.json": "0d66f417c8d2e74a33afefba8e13d0f3cff5557391f39e58d495eee2c36a7055",
+    "scripts/check_mist_cove_phase11a.py": "6e9f942e23885cceeb5158098cc6dc13816bd3d06db913e51f5c0e3db302d3ca",
+    "src/mist_cove/phase11a/__init__.py": "974e90a8fdf577677da6fca17657fc8c0e4ff9e7f8ccb49d17e5e48fc6da5c2f",
+    "src/mist_cove/phase11a/evidence_graph.py": "7b4aa324ddcdd80daad8cac65a43cc485af97ca87cc3842fbebefd3a164547ea",
+    "src/mist_cove/phase11a/fixtures.py": "0f085519bb6b038fa965959efa5cb44347e3a6c50779dda51dba32ccbf0143b3",
+    "src/mist_cove/phase11a/gates.py": "188a29cfa9c9dfb64d9529e430a1bae2b9cfea5fb2818ce5dcd1b7ecadcab076",
+    "src/mist_cove/phase11a/provenance.py": "b569b8058808a83ecac066ab0af35e822f096ff6ec0bafd7d4b47c80ff6f050b",
+    "src/mist_cove/phase11a/publication.py": "faa2e62c1df04ac7aee5b8f8293e70eda7bbf0b0520bea1499e945448a2e0ad0",
+    "src/mist_cove/phase11a/verification.py": "aa3bc9f7382c77168ac4fe110741358387769c04c181b8d7b4122c585e68731b",
+    "tests/mist_cove/test_phase11a_gates.py": "f683bd28220087779ddbb62062c7fd5d26715e19e5ff4059153c3aeb54daaeee",
+    "tests/mist_cove/test_phase11a_provenance.py": "f9d7f6399fd6d1966c1f4d46eb5c7dd9a45074965f28f7151d114a16b565f145",
+    "tests/mist_cove/test_phase11a_security.py": "e0c8a17866520b6bfffa85f0538c00ff6cdcd763eaad5ca8ae143dabd7988f13"
+  }
+}

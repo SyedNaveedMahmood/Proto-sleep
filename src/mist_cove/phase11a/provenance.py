@@ -156,6 +156,37 @@ def verify_inventory(inventory):
     c=inventory['candidate']
     if (c['experiment'],c['variant'],c['seed'],c['implementation_commit'])!=('P3B','raw_context',123,P3B_IMPL) or c['run_fingerprint']!=result['run_fingerprint'] or c['model_state_digest']!=selected[0]['best_state_digest']:
         raise InvalidEvidence('selected run/variant/seed/state mismatch')
+    if c['original_serialized_checkpoint_sha256'] is not None:
+        raise InvalidEvidence('unestablished original checkpoint byte reference')
+    config=strict_json(raw[(P3B_IMPL,'configs/p3b_sc_matched_v1.json')])
+    phase3=strict_json(raw[(PHASE3_PUBLICATION,'reports/mist_cove/phase3_source_v1/source_results.json')])
+    receipt=strict_json(raw[(PHASE3_PUBLICATION,'reports/mist_cove/phase3_source_v1/execution_receipt.json')])
+    expected_refs={
+        'MODEL_STATE_DIGEST':selected[0]['best_state_digest'],
+        'COMPLETION_MARKER_BYTES_SHA256':summary['root_completion_sha256'],
+        'SPLIT_FINGERPRINT':summary['split_fingerprint'],
+        'SPLIT_FILE_SHA256':phase3['split_file_sha256'],
+    }
+    refs=inventory['typed_references']
+    if len(refs)!=len(expected_refs) or {r['kind'] for r in refs}!=set(expected_refs):
+        raise InvalidEvidence('duplicate or missing typed historical reference')
+    for ref in refs:
+        if not digest_matches(ref['value'],expected_refs[ref['kind']]):
+            raise InvalidEvidence('typed historical reference mismatch')
+    if not (summary['run_fingerprint']==result['run_fingerprint'] and
+            summary['implementation_commit']==result['implementation_commit']==P3B_IMPL and
+            summary['split_fingerprint']==result['split_fingerprint']==config['split_fingerprint']==phase3['split_fingerprint']==receipt['split_fingerprint'] and
+            phase3['split_file_sha256']==receipt['split_file_sha256']):
+        raise InvalidEvidence('published source/run/split references disagree')
+    seals=inventory['phase3_seal_references']
+    if len(seals)!=3 or {r['seed'] for r in seals}!={123,456,789}:
+        raise InvalidEvidence('ambiguous Phase III seal reference set')
+    for ref in seals:
+        rows=[r for r in phase3['rows'] if r['variant']=='raw_context' and r['seed']==ref['seed']]
+        if (ref['experiment']!='MIST_COVE_PHASE_III' or ref['variant']!='raw_context' or
+                ref['source_commit']!=PHASE3_PUBLICATION or ref['checkpoint_byte_sha256'] is not None or
+                len(rows)!=1 or not digest_matches(ref['complete_seal_sha256'],rows[0]['complete_seal_sha256'])):
+            raise InvalidEvidence('Phase III seal identity/reference mismatch')
     for name,reference_field in [('implementation','implementation_hash'),('reused','reused_implementation_hash')]:
         manifest=inventory['source_manifests'][name]
         for path,expected in manifest['files'].items():

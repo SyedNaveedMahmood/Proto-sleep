@@ -33,12 +33,24 @@
     {
       "kind": "SPLIT_FINGERPRINT",
       "value": "3e7a7260aae50ca522752f1cede41246daf1b2f6a8fd482800cfda97b4564e84",
-      "normalization_digest": false
+      "normalization_digest": false,
+      "source_commit": "15995b31821ee8db717f3d6edfa41166de65d4a3",
+      "source_paths": [
+        "reports/p3b/results.json",
+        "reports/p3b/validation_summary.json"
+      ]
     },
     {
       "kind": "SPLIT_FILE_SHA256",
       "value": "1162a41098bb8a724a0b8bf8bb320469c2b1c02bb802d9b5cf7f2e49d2da54e5",
-      "actual_file_opened": false
+      "actual_file_opened": false,
+      "experiment": "SHARED_FROZEN_SPLIT_REFERENCE",
+      "source_commit": "4095c805cfd48fbb1e9ef938dbc46da28ed1dfb1",
+      "source_paths": [
+        "reports/mist_cove/phase3_source_v1/source_results.json",
+        "reports/mist_cove/phase3_source_v1/execution_receipt.json"
+      ],
+      "scope_note": "Phase III publication directly preserves this file hash; shared split fingerprint agrees with original P3B; actual split file not opened"
     }
   ],
   "source_manifests": {

@@ -303,5 +303,72 @@
   "real_checkpoint_bytes_hashed": 0,
   "real_checkpoints_deserialized": 0,
   "real_EEG_accessed": false,
-  "GPU_queries": 0
+  "GPU_queries": 0,
+  "cpu_regression": {
+    "status": "PASS",
+    "runs": [
+      {
+        "exit_code": 0,
+        "wall_seconds": 20.0940092880046,
+        "children_peak_rss_KiB": 889192,
+        "python": "3.12.9",
+        "packages": {
+          "torch": "2.5.1",
+          "numpy": "2.0.1",
+          "pytest": "8.4.2",
+          "mne": "1.10.2",
+          "pyEDFlib": "0.1.42"
+        },
+        "CUDA_VISIBLE_DEVICES": "",
+        "GPU_queries": 0,
+        "purpose": "INITIAL_REGRESSION",
+        "tests": 1028,
+        "passed": 1017,
+        "skipped": 11,
+        "failures": 0,
+        "errors": 0,
+        "junit_sha256": "c4f98eafd97b5b47e95976970ecc1b3d6575ef20a0dc4998f15fd22d7a8fdbda",
+        "log_sha256": "aa853f47e1759590333ab97e097f395d237d64ef1e8d54aa67cbc2bfa2f836d6"
+      },
+      {
+        "exit_code": 0,
+        "wall_seconds": 19.73150334499951,
+        "children_peak_rss_KiB": 896720,
+        "python": "3.12.9",
+        "packages": {
+          "torch": "2.5.1",
+          "numpy": "2.0.1",
+          "pytest": "8.4.2",
+          "mne": "1.10.2",
+          "pyEDFlib": "0.1.42"
+        },
+        "CUDA_VISIBLE_DEVICES": "",
+        "GPU_queries": 0,
+        "purpose": "FINAL_CODE_REGRESSION",
+        "tests": 1033,
+        "passed": 1022,
+        "skipped": 11,
+        "failures": 0,
+        "errors": 0,
+        "junit_sha256": "35de325db486f44c7e5fb4cd7f4a9c63c619fa6a110c92d08ba936b17dbeb24a",
+        "log_sha256": "7be98c4e3bc594e51d34b4b3d21c997a16d8b7d90705f1d607b71ea5d3135f85"
+      }
+    ],
+    "total_wall_seconds": 39.82551263300411,
+    "new_phase11a_tests": 49,
+    "CUDA_tests": "NOT RUN; 11 established CUDA cases skipped with devices hidden",
+    "regression_generated_fixtures_only": true
+  },
+  "research_compute": {
+    "new_scientific_neural_fits": 0,
+    "new_scientific_optimizer_updates": 0,
+    "GPU_queries_or_jobs": 0,
+    "full_regression_separate_from_scientific_budget": true,
+    "metadata_audit_wall_seconds": 1.066441875998862,
+    "fixture_wall_seconds": 0.004288673997507431
+  },
+  "exact_final_commit_CI": {
+    "status": "PENDING",
+    "verification_location": "Draft PR checks on exact final pushed commit; recorded in PR closeout"
+  }
 }

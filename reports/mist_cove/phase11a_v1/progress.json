@@ -10,7 +10,9 @@
       "dependencies": [],
       "status": "COMPLETE",
       "code_configuration_identity": {
-        "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8"
+        "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8",
+        "code_configuration_manifest_sha256": "450e66d0116eab5e6e4aabdff5cf9466fafcfce198fccca3bf6d1ec27c17d20c",
+        "configuration_sha256": "731c63d7fd761a1ad318da5be7c8c42689e8c822c92bfe2a00d310ea0bef0762"
       },
       "tests_performed": [
         "Frozen661dbb3 runtime/full runner/constructor/source/trainer inspected through Git objects; publication15995b3 reviewed"
@@ -36,7 +38,9 @@
       ],
       "status": "COMPLETE",
       "code_configuration_identity": {
-        "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8"
+        "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8",
+        "code_configuration_manifest_sha256": "450e66d0116eab5e6e4aabdff5cf9466fafcfce198fccca3bf6d1ec27c17d20c",
+        "configuration_sha256": "731c63d7fd761a1ad318da5be7c8c42689e8c822c92bfe2a00d310ea0bef0762"
       },
       "tests_performed": [
         "14 distinct graph nodes and13 explicit edge records; required evidence/identity/trust/falsifier/missing-link fields populated"
@@ -50,7 +54,7 @@
         "No current Level3 artifact edge; bank/normalization/run linkage remains partly inferred"
       ],
       "unresolved_limitations": [
-        "Graph contents validated structurally by the XI-A06 library later; cryptographic Git object audit follows XI-A03"
+        "Graph validates structurally; actual historical Level3 links remain untested"
       ],
       "block_reason": null
     },
@@ -62,7 +66,9 @@
       ],
       "status": "COMPLETE",
       "code_configuration_identity": {
-        "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8"
+        "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8",
+        "code_configuration_manifest_sha256": "450e66d0116eab5e6e4aabdff5cf9466fafcfce198fccca3bf6d1ec27c17d20c",
+        "configuration_sha256": "731c63d7fd761a1ad318da5be7c8c42689e8c822c92bfe2a00d310ea0bef0762"
       },
       "tests_performed": [
         "Git object SHA1 framing verified;78 historical blobs across64 explicit source/report paths searched",
@@ -91,7 +97,9 @@
       ],
       "status": "COMPLETE",
       "code_configuration_identity": {
-        "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8"
+        "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8",
+        "code_configuration_manifest_sha256": "450e66d0116eab5e6e4aabdff5cf9466fafcfce198fccca3bf6d1ec27c17d20c",
+        "configuration_sha256": "731c63d7fd761a1ad318da5be7c8c42689e8c822c92bfe2a00d310ea0bef0762"
       },
       "tests_performed": [
         "Original15995b3 P3B and4095c805 Phase III raw_context123 rows compared; source/wrapper/marker contracts traced"
@@ -116,7 +124,9 @@
       ],
       "status": "COMPLETE",
       "code_configuration_identity": {
-        "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8"
+        "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8",
+        "code_configuration_manifest_sha256": "450e66d0116eab5e6e4aabdff5cf9466fafcfce198fccca3bf6d1ec27c17d20c",
+        "configuration_sha256": "731c63d7fd761a1ad318da5be7c8c42689e8c822c92bfe2a00d310ea0bef0762"
       },
       "tests_performed": [
         "Original torch.save/load and seal/atomic/write/resume contracts inspected; no real deserialization attempted"
@@ -141,7 +151,9 @@
       ],
       "status": "COMPLETE",
       "code_configuration_identity": {
-        "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8"
+        "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8",
+        "code_configuration_manifest_sha256": "450e66d0116eab5e6e4aabdff5cf9466fafcfce198fccca3bf6d1ec27c17d20c",
+        "configuration_sha256": "731c63d7fd761a1ad318da5be7c8c42689e8c822c92bfe2a00d310ea0bef0762"
       },
       "tests_performed": [
         "10 strict schema/typed hash/Git object/path tests pass;2 basic fixture chain/tamper tests pass",
@@ -172,7 +184,9 @@
       ],
       "status": "COMPLETE",
       "code_configuration_identity": {
-        "verifier_commit": "04df6d0"
+        "verifier_commit": "04df6d0",
+        "code_configuration_manifest_sha256": "450e66d0116eab5e6e4aabdff5cf9466fafcfce198fccca3bf6d1ec27c17d20c",
+        "configuration_sha256": "731c63d7fd761a1ad318da5be7c8c42689e8c822c92bfe2a00d310ea0bef0762"
       },
       "tests_performed": [
         "25 fixture security tests pass",
@@ -200,7 +214,9 @@
       ],
       "status": "COMPLETE",
       "code_configuration_identity": {
-        "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8"
+        "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8",
+        "code_configuration_manifest_sha256": "450e66d0116eab5e6e4aabdff5cf9466fafcfce198fccca3bf6d1ec27c17d20c",
+        "configuration_sha256": "731c63d7fd761a1ad318da5be7c8c42689e8c822c92bfe2a00d310ea0bef0762"
       },
       "tests_performed": [
         "Procedure reviewed against independently published905ba root and actual frozen output-map contracts; no private existence check"
@@ -225,7 +241,9 @@
       ],
       "status": "COMPLETE",
       "code_configuration_identity": {
-        "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8"
+        "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8",
+        "code_configuration_manifest_sha256": "450e66d0116eab5e6e4aabdff5cf9466fafcfce198fccca3bf6d1ec27c17d20c",
+        "configuration_sha256": "731c63d7fd761a1ad318da5be7c8c42689e8c822c92bfe2a00d310ea0bef0762"
       },
       "tests_performed": [
         "9 gate/graph/CLI/privacy/atomicity/tamper tests passed",
@@ -253,7 +271,9 @@
       ],
       "status": "COMPLETE",
       "code_configuration_identity": {
-        "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8"
+        "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8",
+        "code_configuration_manifest_sha256": "450e66d0116eab5e6e4aabdff5cf9466fafcfce198fccca3bf6d1ec27c17d20c",
+        "configuration_sha256": "731c63d7fd761a1ad318da5be7c8c42689e8c822c92bfe2a00d310ea0bef0762"
       },
       "tests_performed": [
         "Reviewed against XI-A authorization boundaries, original lineage findings and independent gate statuses"
@@ -277,7 +297,9 @@
       ],
       "status": "COMPLETE",
       "code_configuration_identity": {
-        "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8"
+        "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8",
+        "code_configuration_manifest_sha256": "450e66d0116eab5e6e4aabdff5cf9466fafcfce198fccca3bf6d1ec27c17d20c",
+        "configuration_sha256": "731c63d7fd761a1ad318da5be7c8c42689e8c822c92bfe2a00d310ea0bef0762"
       },
       "tests_performed": [
         "Reviewed against XI-A authorization boundaries, original lineage findings and independent gate statuses"
@@ -301,13 +323,37 @@
       ],
       "status": "IN PROGRESS",
       "code_configuration_identity": {
-        "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8"
+        "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8",
+        "code_configuration_manifest_sha256": "450e66d0116eab5e6e4aabdff5cf9466fafcfce198fccca3bf6d1ec27c17d20c",
+        "configuration_sha256": "731c63d7fd761a1ad318da5be7c8c42689e8c822c92bfe2a00d310ea0bef0762"
       },
-      "tests_performed": [],
-      "produced_artifacts": [],
-      "scientific_findings": [],
-      "unresolved_limitations": [],
+      "tests_performed": [
+        "Final full CPU regression:1022 passed,11 CUDA skips,0 failures;49 new Phase XI-A tests",
+        "Initial full regression:1017 passed,11 skips; final run includes5 added reference-drift tests",
+        "git diff --check passed; historical files remain additions-only relative to Phase X base"
+      ],
+      "produced_artifacts": [
+        "reports/mist_cove/phase11a_v1/correctness_receipt.json",
+        "reports/mist_cove/phase11a_v1/publication_manifest.json"
+      ],
+      "scientific_findings": [
+        "All generated attacks produced expected outcomes; original candidate remains blocked independently of regression success"
+      ],
+      "unresolved_limitations": [
+        "Draft PR publication and exact-final-commit GitHub Actions verification pending"
+      ],
       "block_reason": null
     }
-  ]
+  ],
+  "final_code_configuration_sha256": {
+    "src/mist_cove/phase11a/__init__.py": "974e90a8fdf577677da6fca17657fc8c0e4ff9e7f8ccb49d17e5e48fc6da5c2f",
+    "src/mist_cove/phase11a/evidence_graph.py": "7b4aa324ddcdd80daad8cac65a43cc485af97ca87cc3842fbebefd3a164547ea",
+    "src/mist_cove/phase11a/fixtures.py": "0f085519bb6b038fa965959efa5cb44347e3a6c50779dda51dba32ccbf0143b3",
+    "src/mist_cove/phase11a/gates.py": "188a29cfa9c9dfb64d9529e430a1bae2b9cfea5fb2818ce5dcd1b7ecadcab076",
+    "src/mist_cove/phase11a/provenance.py": "b569b8058808a83ecac066ab0af35e822f096ff6ec0bafd7d4b47c80ff6f050b",
+    "src/mist_cove/phase11a/publication.py": "faa2e62c1df04ac7aee5b8f8293e70eda7bbf0b0520bea1499e945448a2e0ad0",
+    "src/mist_cove/phase11a/verification.py": "aa3bc9f7382c77168ac4fe110741358387769c04c181b8d7b4122c585e68731b",
+    "configs/mist_cove_phase11a_v1.json": "731c63d7fd761a1ad318da5be7c8c42689e8c822c92bfe2a00d310ea0bef0762",
+    "scripts/check_mist_cove_phase11a.py": "6e9f942e23885cceeb5158098cc6dc13816bd3d06db913e51f5c0e3db302d3ca"
+  }
 }

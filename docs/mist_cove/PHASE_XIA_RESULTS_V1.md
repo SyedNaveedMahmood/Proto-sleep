@@ -17,7 +17,7 @@ The audit verified 61 pinned historical record observations and searched 78 hist
 | Original source | `661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23` | Recoverable Git content; not trained weights |
 | P3B run | `a9146071f32c148e30ed84a6763d77cc82c3de83bf6f90719be0f774c114754b` | Published selected run only |
 | Selected named model state | `1b308f3fc38af22609d2043b0988998b1a193c6d4ace73ac84382bb17e1a4c6d` | Not a checkpoint-byte hash |
-| Split-file reference | `1162a41098bb8a724a0b8bf8bb320469c2b1c02bb802d9b5cf7f2e49d2da54e5` | Actual split file not opened |
+| Split-file reference (directly preserved in Phase III publication; shared split fingerprint matches P3B) | `1162a41098bb8a724a0b8bf8bb320469c2b1c02bb802d9b5cf7f2e49d2da54e5` | Actual split file not opened |
 | Split fingerprint | `3e7a7260aae50ca522752f1cede41246daf1b2f6a8fd482800cfda97b4564e84` | Original field is split identity, not a verified normalization artifact |
 | Original root COMPLETE bytes | `905ba78cf8326594a431ce7a71ce9624c35814d2e76c94f57abda8afbe7c7e7d` | Root/child JSON contents uninspected |
 | 42-file implementation manifest | `2e306bf630547b66d8c273d1999d9fe2772766a404316691b65db7d23c6046b3` | Reconstructed exactly from original Git objects |
@@ -69,7 +69,7 @@ All twenty required generated scenarios returned expected decisions: one valid c
 
 ## Resources and regression validation
 
-The scoped metadata audit took 1.066441875998862 seconds, below its 60-second ceiling. The twenty-case generated verification run took 0.004288673997507431 seconds, below its 10-second ceiling. Its interpreter process high-water RSS was 378,364 KiB; this is not incremental verifier memory. Forty-four added tests cover strict provenance, generated security cases, Git identities, gate enforcement and safe publication. Full CPU regression and exact-final-commit CI receipts are recorded below and in `correctness_receipt.json` after execution. No GPU was queried or used. There were zero new scientific neural fits or optimizer updates; any established generated training/resume unit tests are regression work, not a research campaign.
+The scoped metadata audit took 1.066441875998862 seconds, below its 60-second ceiling. The twenty-case generated verification run took 0.004288673997507431 seconds, below its 10-second ceiling. Its interpreter process high-water RSS was 378,364 KiB; this is not incremental verifier memory. Forty-nine added tests cover strict provenance, generated security cases, Git identities, gate enforcement and safe publication. The final complete CPU suite passed 1,022 tests with 11 CUDA skips and zero failures in 19.73150334499951 seconds (pytest: 18.83 seconds). An initial full run before five additional reference-drift tests passed 1,017 tests in 20.0940092880046 seconds; total measured full-suite wall time was 39.82551263300411 seconds. Final child-process high-water RSS was 896,720 KiB. Python 3.12.9, torch 2.5.1, NumPy 2.0.1, pytest 8.4.2, MNE 1.10.2 and pyEDFlib 0.1.42 were used locally. Exact pinned CI dependencies are checked independently by the unchanged workflow. Log/JUnit digests and measurements are in `correctness_receipt.json`; final commit and CI links are recorded in the draft PR closeout. No GPU was queried or used. There were zero new scientific neural fits or optimizer updates; any established generated training/resume unit tests are regression work, not a research campaign.
 
 ## Decision and remaining uncertainty
 
