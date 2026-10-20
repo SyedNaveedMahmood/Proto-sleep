@@ -21,7 +21,8 @@
       ],
       "scientific_findings": [],
       "unresolved_limitations": [
-        "synthetic-only scope; no real EEG authorization"
+        "No historical tracked file modified; original plan remains authoritative",
+        "Synthetic only; zero real EEG access and no real EEG authorization"
       ],
       "block_reason": null
     },
@@ -46,7 +47,8 @@
         "No novelty priority or clinical validity established"
       ],
       "unresolved_limitations": [
-        "synthetic-only scope; no real EEG authorization"
+        "Focused literature review is not exhaustive novelty clearance; external explainer implementations were not benchmarked",
+        "Synthetic only; zero real EEG access and no real EEG authorization"
       ],
       "block_reason": null
     },
@@ -71,7 +73,8 @@
         "All six authenticated references available; no reproduction needed"
       ],
       "unresolved_limitations": [
-        "synthetic-only scope; no real EEG authorization"
+        "Authenticated private synthetic artifacts required for direct replay; no optional reproduction was needed",
+        "Synthetic only; zero real EEG access and no real EEG authorization"
       ],
       "block_reason": null
     },
@@ -95,7 +98,9 @@
         "Engineering correctness only; clinical validity NOT TESTED"
       ],
       "unresolved_limitations": [
-        "synthetic-only scope; no real EEG authorization"
+        "Neutral withholding is an internal feature operator, not physiologically plausible waveform deletion",
+        "Overlapping receptive-field closure can remove neighboring nontarget features",
+        "Synthetic only; zero real EEG access and no real EEG authorization"
       ],
       "block_reason": null
     },
@@ -119,7 +124,9 @@
         "Engineering correctness only; clinical validity NOT TESTED"
       ],
       "unresolved_limitations": [
-        "synthetic-only scope; no real EEG authorization"
+        "Exactness is bounded to fifteen atoms and fixed feature operator",
+        "Four displayed subset-minimal clauses are incomplete and not globally minimum; arbitrary circuits need not be compact",
+        "Synthetic only; zero real EEG access and no real EEG authorization"
       ],
       "block_reason": null
     },
@@ -147,7 +154,9 @@
         "All60 audit cases retained; up to42 fits/9000 updates; corrected conservative budget projection below3600s"
       ],
       "unresolved_limitations": [
-        "synthetic-only scope; no real EEG authorization"
+        "Resource projections are pilot estimates; actual campaign time and queries measured separately",
+        "Synthetic streams and criteria frozen; reporting-only operational continuation documented without scientific changes",
+        "Synthetic only; zero real EEG access and no real EEG authorization"
       ],
       "block_reason": null
     },
@@ -167,10 +176,14 @@
         "mist_transfer_runs/mist_cove/phase9_v1/core_v1/wp07_receipt.json"
       ],
       "scientific_findings": [
-        "Exact same-model response tables and bounded summaries complete; no clinical inference"
+        "All 32768 masks verified per discovery table; 540 discovery ROBDDs across P0/E0/E1 are exact",
+        "P0 compact active clean clauses found for 59/60 correct cases; bounded summaries do not imply complete explanation coverage"
       ],
       "unresolved_limitations": [
-        "synthetic-only scope; no real EEG authorization"
+        "Only 60 underlying generated inputs; three discovery views; no population or clinical validity",
+        "All 60 P0 predictions happened to be correct; E0/E1 wrong cases retained in their later circuits",
+        "Bounded clause discovery gives lower bounds on compactness and summary coverage",
+        "Synthetic only; zero real EEG access and no real EEG authorization"
       ],
       "block_reason": null
     },
@@ -190,10 +203,14 @@
         "mist_transfer_runs/mist_cove/phase9_v1/core_v1/wp08_receipt.json"
       ],
       "scientific_findings": [
-        "Clean matched-head study executed independently of Track B"
+        "All six authenticated shared encoders eligible; zero ineligible; 24 heads and 3600 updates completed",
+        "Complete clean additive utility FAIL: clean retention fails single/123, single/789 and multiple/456",
+        "E1 improves single-witness precision by at least .10 versus E3 RMS in all three seeds, without establishing superiority over conventional E0"
       ],
       "unresolved_limitations": [
-        "synthetic-only scope; no real EEG authorization"
+        "Clean retention fails 3/6 cells; good RMS comparison does not establish superiority to E0",
+        "One generator family and three optimization seeds; head-only cached fits are not encoder-training exposures",
+        "Synthetic only; zero real EEG access and no real EEG authorization"
       ],
       "block_reason": null,
       "operational_history": [
@@ -221,10 +238,14 @@
         "mist_transfer_runs/mist_cove/phase9_v1/core_v1/wp09_receipt.json"
       ],
       "scientific_findings": [
-        "C2 primary retained regardless of scores; clean/robust/query benefits assessed separately"
+        "18 fits and 5400 updates completed; C2 remained primary",
+        "All C2 absolute clean/competitive thresholds pass, but paired diagnostic/nuisance gates fail single/456 and multiple/123",
+        "Incremental C2 versus C1 FAIL: competitive mean F1 delta -0.004447326771605771; positive in 2/6 cells; no additional seed or loss search"
       ],
       "unresolved_limitations": [
-        "synthetic-only scope; no real EEG authorization"
+        "No demonstrated incremental C2-over-C1 benefit; full C2 gate fails two cells",
+        "Three-seed cluster bootstrap is descriptive; additional masked-head compute has no established utility",
+        "Synthetic only; zero real EEG access and no real EEG authorization"
       ],
       "block_reason": null
     },
@@ -244,10 +265,14 @@
         "mist_transfer_runs/mist_cove/phase9_v1/core_v1/wp10_receipt.json"
       ],
       "scientific_findings": [
-        "Unchanged discovered clauses evaluated; full-input stability kept separate from favorable masks"
+        "Full-input predictions stable: P0 34/60, E0 34/60, E1 36/60",
+        "Fixed active-clause conditional survival P0 .735294, E0 .647059, E1 .444444; all fail .80",
+        "Substitution conditional survival .764706/.676471/.444444 applies only to the frozen bounded clause family"
       ],
       "unresolved_limitations": [
-        "synthetic-only scope; no real EEG authorization"
+        "Finite independent nuisance views and frozen bounded displayed clause family",
+        "Prediction stability and explanation stability both insufficient; unrestricted full-mask explanation would be trivial",
+        "Synthetic only; zero real EEG access and no real EEG authorization"
       ],
       "block_reason": null
     },
@@ -267,10 +292,14 @@
         "mist_transfer_runs/mist_cove/phase9_v1/core_v1/wp11_receipt.json"
       ],
       "scientific_findings": [
-        "Target removal, nontarget preservation, compatibility and response reported separately; five waveform controls plus internal operator"
+        "Oracle generated-component correctness PASS; target removal, preservation, compatibility and prediction effects separated",
+        "Historical guards unchanged; 0/120 replacement donors accepted; accepted-donor conditional spread null/untested",
+        "Internal withholding does not make a waveform; exact diagnostic removal preserves nontarget components but only 15/60 pass waveform guards"
       ],
       "unresolved_limitations": [
-        "synthetic-only scope; no real EEG authorization"
+        "0/120 donors meet unchanged guards; conditional donor invariance is untested",
+        "Component deletion, internal withholding and waveform replacement answer different questions; no physiological validity",
+        "Synthetic only; zero real EEG access and no real EEG authorization"
       ],
       "block_reason": null
     },
@@ -290,10 +319,14 @@
         "mist_transfer_runs/mist_cove/phase9_v1/core_v1/wp12_receipt.json"
       ],
       "scientific_findings": [
-        "Wrong predictions retain their own predicted-class explanations; calibrated/null/removed/error metrics retained"
+        "Correct and wrong predictions retain their own predicted-class explanation target",
+        "All calibration/error/localization strata and random-label/model-randomization controls completed",
+        "Diagnostic-removed accuracy remains near .20 with mean confidence near .75; reliable absence-of-information recognition unsupported"
       ],
       "unresolved_limitations": [
-        "synthetic-only scope; no real EEG authorization"
+        "Full-view temperature calibration does not calibrate all masked states",
+        "High-confidence null/removed errors persist; no clinical event validation or real distribution calibration",
+        "Synthetic only; zero real EEG access and no real EEG authorization"
       ],
       "block_reason": null
     },
@@ -319,9 +352,15 @@
         "CUDA BLOCKED by another compute process; no new device allocation"
       ],
       "unresolved_limitations": [
-        "synthetic-only scope; no real EEG authorization"
+        "Optional CUDA correctness/exact-resume not executed because device occupied",
+        "CPU suite passed; historical CUDA success is not substituted",
+        "Synthetic only; zero real EEG access and no real EEG authorization"
       ],
-      "block_reason": null
+      "block_reason": null,
+      "optional_cuda": {
+        "status": "BLOCKED",
+        "exact_reason": "Another compute process (PID 290360, python, 14460 MiB) occupied the RTX 4080 SUPER; observed total usage 14532 MiB and free 1413 MiB; zero new CUDA model operations and no interruption"
+      }
     },
     {
       "id": "WP14",
@@ -350,7 +389,9 @@
         "Exhaustive finite fidelity and bounded clean compactness supported"
       ],
       "unresolved_limitations": [
-        "synthetic-only scope; no real EEG authorization"
+        "Safe aggregate publication excludes private full tables, weights, waveforms and logs",
+        "Exactly six principal figures; scientific failures retained and no clinical claims",
+        "Synthetic only; zero real EEG access and no real EEG authorization"
       ],
       "block_reason": null
     },
@@ -376,7 +417,9 @@
         "No real EEG loader or fitted source artifact opened"
       ],
       "unresolved_limitations": [
-        "synthetic-only scope; no real EEG authorization"
+        "Proposal only; separate real-source authorization and receptive-field/global-pathway review required",
+        "Repeated development VAL use precludes independent-test claims",
+        "Synthetic only; zero real EEG access and no real EEG authorization"
       ],
       "block_reason": null
     },
@@ -386,26 +429,48 @@
       "dependencies": [
         "WP15"
       ],
-      "status": "IN_PROGRESS",
+      "status": "COMPLETE",
       "code_configuration_identity": {
-        "commit": "fdc2266a4c84ae04db168b3c3b16e4e048cc2271",
+        "commit": "694a83e2acab4b756aaf636a31c9aca2f1189f41",
         "config_sha256": "32d947fc6b2858ad5c9a1a2e0a7b0782d6f96373520391839906265ec422bac2"
       },
       "tests_performed": [
-        "880 passed / 11 CUDA skips / 0 failures / 0 errors",
-        "authoritative plan and frozen source hashes verify",
-        "all differences from Phase VIII are additions"
+        "Complete local CPU regression: 880 passed / 11 CUDA skips / 0 failures/errors",
+        "GitHub Actions publication CI success on 694a83e2acab4b756aaf636a31c9aca2f1189f41: 880 passed / 11 skipped",
+        "All checkpoint seals, circuit digests, publication hashes and unchanged plan/historical files verified",
+        "Final closeout commit and its independent exact-head Actions verification recorded in PR body and final response"
       ],
       "produced_artifacts": [
+        "https://github.com/SyedNaveedMahmood/Proto-sleep/pull/11",
+        "https://github.com/SyedNaveedMahmood/Proto-sleep/actions/runs/39423595644",
         "reports/mist_cove/phase9_v1/publication_manifest.json"
       ],
       "scientific_findings": [
-        "Scientific campaign and safe aggregate publication complete; GitHub push, draft PR and exact-final-commit CI pending"
+        "Safe source/aggregate outputs committed and pushed on existing Phase IX branch; draft PR #11 targets Phase VIII",
+        "Required scientific tasks complete; optional CUDA blocked by occupied GPU",
+        "Scientific failures preserved; stop for scientific review; no Phase X initiated"
       ],
       "unresolved_limitations": [
-        "synthetic-only scope; no real EEG authorization"
+        "Draft PR remains for scientific review; no automatic Phase X or real-data authorization",
+        "Synthetic only; zero real EEG access and no real EEG authorization"
       ],
-      "block_reason": null
+      "block_reason": null,
+      "github": {
+        "pull_request": "https://github.com/SyedNaveedMahmood/Proto-sleep/pull/11",
+        "base_branch": "research/mist-cove-phase8-robust-evidence-v1",
+        "draft": true,
+        "final_commit_and_exact_head_ci_location": "PR body and final response; kept external to avoid self-referential file hashes"
+      },
+      "publication_ci": {
+        "conclusion": "success",
+        "headSha": "694a83e2acab4b756aaf636a31c9aca2f1189f41",
+        "status": "completed",
+        "url": "https://github.com/SyedNaveedMahmood/Proto-sleep/actions/runs/39423595644",
+        "passed": 880,
+        "skipped": 11,
+        "seconds": 42.58,
+        "scope": "Published code/results commit; closeout changes ledger and its manifest only. Exact final-head verification is recorded externally in the PR."
+      }
     }
   ]
 }
