@@ -228,12 +228,29 @@
       "dependencies": [
         "X08"
       ],
-      "status": "PENDING",
-      "code_configuration_identity": {},
-      "tests_performed": [],
-      "produced_artifacts": [],
-      "scientific_findings": [],
-      "unresolved_limitations": [],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "scientific_probe_commit": "9f9c84d",
+        "constant_head_export_correction": "phase10_reporting_freeze_v2.json"
+      },
+      "tests_performed": [
+        "4 behavior/constant-gradient tests pass",
+        "17 comparator rows complete; all existing table archive digests verified before reuse; no additional response-table generation"
+      ],
+      "produced_artifacts": [
+        "reports/mist_cove/phase10_v1/comparator_receipt.json",
+        "experiments/mist_cove/phase10_reporting_freeze_v2.json"
+      ],
+      "scientific_findings": [
+        "Native-head gradient attribution, greedy canonical selection, positive-only and signed clauses, and fixed random subsets compared on shared tables",
+        "Constant-bias head attribution is exactly zero; undefined autograd graph explicitly handled",
+        "Oracle interval scoring limited to privileged constructed controls; no oracle labels for random historical architecture"
+      ],
+      "unresolved_limitations": [
+        "Hand-engineered controls are not independent EEG experiments",
+        "Native gradient attribution is approximate and does not reconcile nonlinear logits",
+        "First comparator export stopped; preserved tables reused unchanged, isolated failed timing/backward count unavailable"
+      ],
       "block_reason": null
     },
     {
@@ -242,13 +259,27 @@
       "dependencies": [
         "X09"
       ],
-      "status": "PENDING",
-      "code_configuration_identity": {},
-      "tests_performed": [],
-      "produced_artifacts": [],
-      "scientific_findings": [],
-      "unresolved_limitations": [],
-      "block_reason": null
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "base_commit": "ac611572c2efea1acfed48465fd482e6715ec57e"
+      },
+      "tests_performed": [
+        "2 metadata provenance tests pass; allowlist rejects unknown paths before any subprocess/IO",
+        "Only pinned committed aggregate Git blobs inspected; original state digest and separate Phase III seal references extracted"
+      ],
+      "produced_artifacts": [
+        "docs/mist_cove/PHASE_X_SOURCE_PROVENANCE_REVIEW_V1.md",
+        "reports/mist_cove/phase10_v1/provenance_review.json"
+      ],
+      "scientific_findings": [
+        "Metadata review complete; original P3B123 selected prospectively",
+        "Original serialized checkpoint byte-digest chain, environment, creation and TRAIN normalization/bank identity remain unverified",
+        "Separate Phase III published seal digests may support a different explicitly reviewed artifact lineage"
+      ],
+      "unresolved_limitations": [
+        "Actual historical checkpoint authentication BLOCKED; no artifact opened"
+      ],
+      "block_reason": "Actual authentication requires separately authorized artifact access and independent historical original checkpoint byte-digest/creation/TRAIN-fit lineage evidence"
     },
     {
       "id": "X11",
@@ -256,13 +287,30 @@
       "dependencies": [
         "X10"
       ],
-      "status": "PENDING",
-      "code_configuration_identity": {},
-      "tests_performed": [],
-      "produced_artifacts": [],
-      "scientific_findings": [],
-      "unresolved_limitations": [],
-      "block_reason": null
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "benchmark_source_sha256": "f6d5b0d8472c0dbe03fead3df76471be280bb5558c9e12d2d52fff1d49e5e290",
+        "frozen_core": "phase10_reporting_freeze_v2.json"
+      },
+      "tests_performed": [
+        "3 seeds x3 bounded CPU timing repetitions plus3 .01-neutral tables and3 random-Boolean compiler stress repetitions",
+        "CUDA availability queried once at X11; occupied device blocked before allocation"
+      ],
+      "produced_artifacts": [
+        "reports/mist_cove/phase10_v1/resource_estimates.json",
+        "reports/mist_cove/phase10_v1/cuda_receipt.json",
+        "docs/mist_cove/PHASE_X_RESOURCE_FEASIBILITY_V1.md"
+      ],
+      "scientific_findings": [
+        "CPU mock complete-table median .303184s;150-example pipeline scenarios46.895/47.406/115.886s; no actual150-input run",
+        "Cache21700bytes/example; peak benchmark process RSS662532KiB",
+        "Actual source and one-GPU-hour feasibility NOT_ESTABLISHED"
+      ],
+      "unresolved_limitations": [
+        "Random weights produce unusually simple circuits; stress scenario is not a worst-case guarantee",
+        "Actual checkpoint/EEG IO and GPU throughput unmeasured"
+      ],
+      "block_reason": "Optional CUDA smoke blocked by another GPU compute process; zero new CUDA operations"
     },
     {
       "id": "X12",
