@@ -1,0 +1,496 @@
+{
+  "version": "mist-cove-phase10-progress-v1",
+  "base_commit": "ac611572c2efea1acfed48465fd482e6715ec57e",
+  "scope": "CODE_AND_SYNTHETIC_MOCK_ONLY",
+  "real_artifacts_opened": 0,
+  "work_packages": [
+    {
+      "id": "X01",
+      "title": "Source architecture dependency audit",
+      "dependencies": [],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "base_commit": "ac611572c2efea1acfed48465fd482e6715ec57e",
+        "config_sha256": "2cda20130e80fd90e2460fb55262042abec2f5ac38aeaa429f85113c4eb55820",
+        "support_identity": "23b453421bce8089ccd506e726b41482e126a37ab2e2532f24a23dcc733a4233"
+      },
+      "tests_performed": [
+        "6 dependency tests pass; all 169 window supports independently checked against sample intersections"
+      ],
+      "produced_artifacts": [
+        "reports/mist_cove/phase10_v1/dependency_summary.json",
+        "docs/mist_cove/PHASE_X_DEPENDENCY_AUDIT_V1.md"
+      ],
+      "scientific_findings": [
+        "59/57/53 windows at scales100/200/400 with stride50; 209 native features including17 whole-epoch features",
+        "GroupNorm and local RMS see the full individual window; no cross-window normalization",
+        "raw_context uses bank waveform dimensions but not bank waveform values or similarity metric"
+      ],
+      "unresolved_limitations": [
+        "Static frozen-code audit only; actual source checkpoint configuration remains unauthenticated"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "X02",
+      "title": "Physical availability support maps",
+      "dependencies": [
+        "X01"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "base_commit": "ac611572c2efea1acfed48465fd482e6715ec57e",
+        "config_sha256": "2cda20130e80fd90e2460fb55262042abec2f5ac38aeaa429f85113c4eb55820",
+        "support_identity": "23b453421bce8089ccd506e726b41482e126a37ab2e2532f24a23dcc733a4233"
+      },
+      "tests_performed": [
+        "6 dependency tests pass; all 169 window supports independently checked against sample intersections"
+      ],
+      "produced_artifacts": [
+        "reports/mist_cove/phase10_v1/dependency_summary.json",
+        "docs/mist_cove/PHASE_X_DEPENDENCY_AUDIT_V1.md"
+      ],
+      "scientific_findings": [
+        "59/57/53 windows at scales100/200/400 with stride50; 209 native features including17 whole-epoch features",
+        "GroupNorm and local RMS see the full individual window; no cross-window normalization",
+        "raw_context uses bank waveform dimensions but not bank waveform values or similarity metric"
+      ],
+      "unresolved_limitations": [
+        "Static frozen-code audit only; actual source checkpoint configuration remains unauthenticated"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "X03",
+      "title": "Global feature and aggregation policy",
+      "dependencies": [
+        "X02"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "commit": "7c270373529227632bcad21a8a5d482a0c006d80",
+        "config_sha256": "2cda20130e80fd90e2460fb55262042abec2f5ac38aeaa429f85113c4eb55820"
+      },
+      "tests_performed": [
+        "2 focused aggregation/interface tests passed; negative-coordinate max, empty state, fixed denominator, global suppression, unchanged parameters"
+      ],
+      "produced_artifacts": [
+        "src/mist_cove/phase10/source_availability.py",
+        "src/mist_cove/phase10/source_adapter.py",
+        "src/mist_cove/phase10/mock_models.py",
+        "docs/mist_cove/PHASE_X_OPERATOR_SPEC_V1.md"
+      ],
+      "scientific_findings": [
+        "Explicit fixed-P mean, valid-only max, empty neutral and global all-or-neutral semantics"
+      ],
+      "unresolved_limitations": [
+        "Mandatory full identity and noninterference gates run next; no real artifact inspected"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "X04",
+      "title": "Source-compatible mock adapter",
+      "dependencies": [
+        "X03"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "commit": "7c270373529227632bcad21a8a5d482a0c006d80",
+        "config_sha256": "2cda20130e80fd90e2460fb55262042abec2f5ac38aeaa429f85113c4eb55820",
+        "final_architecture_guard_commit": "6499fe9"
+      },
+      "tests_performed": [
+        "2 focused aggregation/interface tests passed; negative-coordinate max, empty state, fixed denominator, global suppression, unchanged parameters"
+      ],
+      "produced_artifacts": [
+        "src/mist_cove/phase10/source_availability.py",
+        "src/mist_cove/phase10/source_adapter.py",
+        "src/mist_cove/phase10/mock_models.py",
+        "docs/mist_cove/PHASE_X_OPERATOR_SPEC_V1.md"
+      ],
+      "scientific_findings": [
+        "In-memory historical architecture adapter with batched masks, five logits, trace and tamper-bound caches"
+      ],
+      "unresolved_limitations": [
+        "Mandatory full identity and noninterference gates run next; no real artifact inspected"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "X05",
+      "title": "Full-visibility identity",
+      "dependencies": [
+        "X04"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "operator_commit": "3bb3ba0abb7ee0169b038f147cadc602ef84c686",
+        "config_sha256": "2cda20130e80fd90e2460fb55262042abec2f5ac38aeaa429f85113c4eb55820",
+        "final_architecture_guard_commit": "6499fe9"
+      },
+      "tests_performed": [
+        "13 identity/interface tests passed",
+        "9 configurations x4 inputs; features and logits bitwise equal; max absolute and relative errors0",
+        "Final identity module18 tests; four altered normalization/topology/hook cases and one late-hook/RNG case rejected; final probes remain bitwise equal"
+      ],
+      "produced_artifacts": [
+        "reports/mist_cove/phase10_v1/correctness_receipt.json"
+      ],
+      "scientific_findings": [
+        "Full-input identity PASS for all3 seeds and full/no-amplitude/no-summary configs; original five-stage head retained"
+      ],
+      "unresolved_limitations": [
+        "Random synthetic weights and buffers only; actual source checkpoint identity not tested"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "X06",
+      "title": "Hidden-sample noninterference",
+      "dependencies": [
+        "X05"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "operator_commit": "3bb3ba0",
+        "config_sha256": "2cda20130e80fd90e2460fb55262042abec2f5ac38aeaa429f85113c4eb55820",
+        "final_architecture_guard_commit": "6499fe9"
+      },
+      "tests_performed": [
+        "37 noninterference/tamper/input-validation tests passed",
+        "252 retained-path/logit comparisons across3 seeds,6 masks,7 perturbations,2 neutrals; max errors0; all bitwise equal",
+        "15 deliberately broken global-path controls detect nonzero hidden dependence"
+      ],
+      "produced_artifacts": [
+        "reports/mist_cove/phase10_v1/correctness_receipt.json"
+      ],
+      "scientific_findings": [
+        "Hidden-sample noninterference PASS under declared operator; all available embeddings and head inputs verified"
+      ],
+      "unresolved_limitations": [
+        "Finite synthetic numerical probes supplement static support proof; do not establish physiological validity"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "X07",
+      "title": "Nonlocal and degenerate behavior",
+      "dependencies": [
+        "X06"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_probe_commit": "9f9c84dafb3362136be3d3e3dcadfb8807be9c37",
+        "config_sha256": "2cda20130e80fd90e2460fb55262042abec2f5ac38aeaa429f85113c4eb55820"
+      },
+      "tests_performed": [
+        "3 meaningful constructed behavior controls passed",
+        "17 fixed mocks probed on20 prespecified masks plus isolated feature/denominator diagnostics"
+      ],
+      "produced_artifacts": [
+        "reports/mist_cove/phase10_v1/behavior_receipt.json",
+        "docs/mist_cove/PHASE_X_OPERATOR_LIMITATIONS_V1.md"
+      ],
+      "scientific_findings": [
+        "Whole-epoch and neutral-bias controls distinguished; alternative valid-count denominator can change predictions",
+        "Random historical architectures recorded independently of privileged analytic controls"
+      ],
+      "unresolved_limitations": [
+        "Analytic detectors use generated knowledge and do not demonstrate learned waveform localization",
+        "Partial-input aggregation is a declared new operator, not native input semantics"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "X08",
+      "title": "Exact response circuits",
+      "dependencies": [
+        "X07"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_probe_commit": "9f9c84d",
+        "config_sha256": "2cda20130e80fd90e2460fb55262042abec2f5ac38aeaa429f85113c4eb55820"
+      },
+      "tests_performed": [
+        "6 circuit tests passed including all32768 native-geometry OR/AND/blocker/global/constant rows, XOR and no-support control",
+        "17 complete response tables and ROBDDs verified; every displayed clause checked over all completions and literal deletions"
+      ],
+      "produced_artifacts": [
+        "reports/mist_cove/phase10_v1/circuit_receipt.json"
+      ],
+      "scientific_findings": [
+        "17 exact circuits; 557056 availability queries; complete per-mask arrays remain private",
+        "Whole-epoch and prior-only behavior retained, not promoted to sparse diagnostic explanations"
+      ],
+      "unresolved_limitations": [
+        "Exactness only within fifteen-atom internal-availability domain",
+        "Four displayed subset-minimal clauses are incomplete, not minimum-cardinality"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "X09",
+      "title": "Scientific mock controls",
+      "dependencies": [
+        "X08"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "scientific_probe_commit": "9f9c84d",
+        "constant_head_export_correction": "phase10_reporting_freeze_v2.json",
+        "config_sha256": "2cda20130e80fd90e2460fb55262042abec2f5ac38aeaa429f85113c4eb55820",
+        "backward_counter_correction": "phase10_accounting_freeze_v3.json"
+      },
+      "tests_performed": [
+        "4 behavior/constant-gradient tests pass",
+        "17 comparator rows complete; all existing table archive digests verified before reuse; no additional response-table generation"
+      ],
+      "produced_artifacts": [
+        "reports/mist_cove/phase10_v1/comparator_receipt.json",
+        "experiments/mist_cove/phase10_reporting_freeze_v2.json"
+      ],
+      "scientific_findings": [
+        "Native-head gradient attribution, greedy canonical selection, positive-only and signed clauses, and fixed random subsets compared on shared tables",
+        "Constant-bias head attribution is exactly zero; undefined autograd graph explicitly handled",
+        "Oracle interval scoring limited to privileged constructed controls; no oracle labels for random historical architecture",
+        "16 actual successful backward operations across17 rows; constant-bias row counter corrected to0 without recomputing results"
+      ],
+      "unresolved_limitations": [
+        "Hand-engineered controls are not independent EEG experiments",
+        "Native gradient attribution is approximate and does not reconcile nonlinear logits",
+        "First comparator export stopped; preserved tables reused unchanged, isolated failed timing/backward count unavailable"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "X10",
+      "title": "Metadata-only historical provenance",
+      "dependencies": [
+        "X09"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "base_commit": "ac611572c2efea1acfed48465fd482e6715ec57e",
+        "config_sha256": "2cda20130e80fd90e2460fb55262042abec2f5ac38aeaa429f85113c4eb55820"
+      },
+      "tests_performed": [
+        "2 metadata provenance tests pass; allowlist rejects unknown paths before any subprocess/IO",
+        "Only pinned committed aggregate Git blobs inspected; original state digest and separate Phase III seal references extracted"
+      ],
+      "produced_artifacts": [
+        "docs/mist_cove/PHASE_X_SOURCE_PROVENANCE_REVIEW_V1.md",
+        "reports/mist_cove/phase10_v1/provenance_review.json"
+      ],
+      "scientific_findings": [
+        "Metadata review complete; original P3B123 selected prospectively",
+        "Original serialized checkpoint byte-digest chain, environment, creation and TRAIN normalization/bank identity remain unverified",
+        "Separate Phase III published seal digests may support a different explicitly reviewed artifact lineage"
+      ],
+      "unresolved_limitations": [
+        "Actual historical checkpoint authentication BLOCKED; no artifact opened"
+      ],
+      "block_reason": "Actual authentication requires separately authorized artifact access and independent historical original checkpoint byte-digest/creation/TRAIN-fit lineage evidence"
+    },
+    {
+      "id": "X11",
+      "title": "Mock computational feasibility",
+      "dependencies": [
+        "X10"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "benchmark_source_sha256": "f6d5b0d8472c0dbe03fead3df76471be280bb5558c9e12d2d52fff1d49e5e290",
+        "frozen_core": "phase10_reporting_freeze_v2.json",
+        "config_sha256": "2cda20130e80fd90e2460fb55262042abec2f5ac38aeaa429f85113c4eb55820"
+      },
+      "tests_performed": [
+        "3 seeds x3 bounded CPU timing repetitions plus3 .01-neutral tables and3 random-Boolean compiler stress repetitions",
+        "CUDA availability queried once at X11; occupied device blocked before allocation"
+      ],
+      "produced_artifacts": [
+        "reports/mist_cove/phase10_v1/resource_estimates.json",
+        "reports/mist_cove/phase10_v1/cuda_receipt.json",
+        "docs/mist_cove/PHASE_X_RESOURCE_FEASIBILITY_V1.md",
+        "reports/mist_cove/phase10_v1/resource_estimates_guard_v4.json"
+      ],
+      "scientific_findings": [
+        "Final guarded complete-table median .304813s;150-example CPU scenarios46.879/47.320/119.386s; no actual150-input run",
+        "Both benchmark versions preserved and counted:393216 table queries each; complete study total1343488",
+        "Actual source and one-GPU-hour feasibility NOT_ESTABLISHED; CUDA blocked"
+      ],
+      "unresolved_limitations": [
+        "Random weights produce unusually simple circuits; stress scenario is not a worst-case guarantee",
+        "Actual checkpoint/EEG IO and GPU throughput unmeasured"
+      ],
+      "block_reason": "Optional CUDA smoke blocked by another GPU compute process; zero new CUDA operations"
+    },
+    {
+      "id": "X12",
+      "title": "Fail-closed authorization",
+      "dependencies": [
+        "X11"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "safety_source_sha256": "bb6303ec291fb956f25d5139acce89c37ef3625d10bb8e5ce452b0f15f674218",
+        "config_sha256": "2cda20130e80fd90e2460fb55262042abec2f5ac38aeaa429f85113c4eb55820"
+      },
+      "tests_performed": [
+        "20 authorization/gate/privacy/atomicity/tamper/CUDA-contention tests passed",
+        "Default CLI ran metadata-only and reported SOURCE_NOT_AUTHORIZED; zero artifact opens",
+        "Factory/adapter exercised with real readers, torch.load and numpy.load patched to fail"
+      ],
+      "produced_artifacts": [
+        "scripts/check_mist_cove_phase10.py",
+        "src/mist_cove/phase10/safety.py",
+        "src/mist_cove/phase10/review.py",
+        "tests/mist_cove/test_phase10_authorization.py"
+      ],
+      "scientific_findings": [
+        "Every source role rejected before path stringification/stat/resolve/open; absolute/symlink paths cannot unlock a reader",
+        "No source/checkpoint/bank CLI flags, fallback or authorization switch exist"
+      ],
+      "unresolved_limitations": [
+        "Supported-entrypoint fail-closed boundary, not an OS sandbox against arbitrary malicious Python",
+        "Any future actual-source runner requires separately reviewed implementation and explicit release authorization"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "X13",
+      "title": "Future TRAIN-only protocol",
+      "dependencies": [
+        "X12"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_core": "phase10_reporting_freeze_v2.json",
+        "config_sha256": "2cda20130e80fd90e2460fb55262042abec2f5ac38aeaa429f85113c4eb55820"
+      },
+      "tests_performed": [
+        "Protocol reviewed against supplied Phase X11-gate contract, original split/preprocessing and measured/mock limitations"
+      ],
+      "produced_artifacts": [
+        "docs/mist_cove/PHASE_X_TRAIN_ONLY_PROTOCOL_V1.md",
+        "docs/mist_cove/PHASE_X_OPERATOR_LIMITATIONS_V1.md"
+      ],
+      "scientific_findings": [
+        "At most150 original TRAIN epochs: first2 scored per stage/person in frozen recording/index order; missing strata not replaced",
+        "All11 prelaunch gates explicit; no real runner or launch authorization"
+      ],
+      "unresolved_limitations": [
+        "Ready for human protocol review only; actual checkpoint authentication, actual resource pilot and real launch remain blocked/unexecuted"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "X14",
+      "title": "Scientific interpretation rules",
+      "dependencies": [
+        "X13"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_core": "phase10_reporting_freeze_v2.json",
+        "config_sha256": "2cda20130e80fd90e2460fb55262042abec2f5ac38aeaa429f85113c4eb55820",
+        "final_architecture_guard_commit": "6499fe9"
+      },
+      "tests_performed": [
+        "Protocol reviewed against supplied Phase X11-gate contract, original split/preprocessing and measured/mock limitations"
+      ],
+      "produced_artifacts": [
+        "docs/mist_cove/PHASE_X_TRAIN_ONLY_PROTOCOL_V1.md",
+        "docs/mist_cove/PHASE_X_OPERATOR_LIMITATIONS_V1.md"
+      ],
+      "scientific_findings": [
+        "Correct/wrong original predictions separated from masked repairs",
+        "Model-support terminology only; no automatic clinical event or causal labels; prior/whole-epoch/operator-sensitive cases retained"
+      ],
+      "unresolved_limitations": [
+        "Ready for human protocol review only; actual checkpoint authentication, actual resource pilot and real launch remain blocked/unexecuted"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "X15",
+      "title": "Testing and reproducibility",
+      "dependencies": [
+        "X14"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "tested_commit": "6499fe9",
+        "frozen_core": "phase10_reporting_freeze_v2.json",
+        "config_sha256": "2cda20130e80fd90e2460fb55262042abec2f5ac38aeaa429f85113c4eb55820",
+        "active_freeze": "phase10_architecture_guard_v4.json"
+      },
+      "tests_performed": [
+        "Final complete CPU regression: 973 passed /11 CUDA skips /0 failures/errors",
+        "Final JUnit wall 17.305s; earlier runs and their logs retained",
+        "93 new tests plus880 historical CPU tests; final architecture guard and repeat identity/noninterference probes PASS"
+      ],
+      "produced_artifacts": [
+        "reports/mist_cove/phase10_v1/correctness_receipt.json",
+        "tests/mist_cove/test_phase10_dependency.py",
+        "tests/mist_cove/test_phase10_identity.py",
+        "tests/mist_cove/test_phase10_noninterference.py",
+        "tests/mist_cove/test_phase10_circuits.py",
+        "tests/mist_cove/test_phase10_controls.py",
+        "tests/mist_cove/test_phase10_provenance.py",
+        "tests/mist_cove/test_phase10_authorization.py"
+      ],
+      "scientific_findings": [
+        "Final973 CPU tests pass; zero source loads; optional CUDA blocked; historical results not substituted"
+      ],
+      "unresolved_limitations": [
+        "Mock-only correctness; actual trained source model and GPU correctness untested"
+      ],
+      "block_reason": "Optional CUDA blocked by another compute process; CPU required work complete"
+    },
+    {
+      "id": "X16",
+      "title": "Final review and GitHub publication",
+      "dependencies": [
+        "X15"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "final_engineering_commit": "6499fe9",
+        "active_freeze": "phase10_architecture_guard_v4.json",
+        "config_sha256": "2cda20130e80fd90e2460fb55262042abec2f5ac38aeaa429f85113c4eb55820"
+      },
+      "tests_performed": [
+        "Final local full regression973 passed /11 CUDA skips /0 failures/errors",
+        "Initial publication GitHub Actions PASS on d9b2529505351ba7017f5ec9afe7e11c86d7a350; final guard commit independently verified after push in PR/final response",
+        "All publication hashes, frozen core, authoritative historical plan and historical immutability verified"
+      ],
+      "produced_artifacts": [
+        "docs/mist_cove/PHASE_X_RESULTS_V1.md",
+        "reports/mist_cove/phase10_v1/publication_manifest.json",
+        "https://github.com/SyedNaveedMahmood/Proto-sleep/pull/12"
+      ],
+      "scientific_findings": [
+        "All16 required work packages complete; draft PR targets Phase IX; exact final commit/CI verification recorded externally to avoid self-reference",
+        "Interface verified on mocks and source protocol ready for human review; source authentication and real launch remain blocked",
+        "Zero real EEG or fitted source artifacts opened; no Phase XI started"
+      ],
+      "unresolved_limitations": [
+        "Actual source checkpoint authentication, TRAIN-fit lineage and actual-source resource pilot remain unresolved; CUDA blocked"
+      ],
+      "block_reason": null,
+      "github": {
+        "draft_pr": "https://github.com/SyedNaveedMahmood/Proto-sleep/pull/12",
+        "base_branch": "research/mist-cove-phase9-witness-circuits-v1",
+        "final_exact_commit_and_ci_location": "Draft PR body and final response to avoid self-reference"
+      },
+      "initial_publication_ci": {
+        "conclusion": "success",
+        "headSha": "d9b2529505351ba7017f5ec9afe7e11c86d7a350",
+        "status": "completed",
+        "url": "https://github.com/SyedNaveedMahmood/Proto-sleep/actions/runs/39430682479"
+      }
+    }
+  ]
+}

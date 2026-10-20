@@ -1,0 +1,1641 @@
+{
+  "version": "phase10-circuits-v1",
+  "status": "COMPLETE",
+  "rows": [
+    {
+      "name": "localized",
+      "kind": "privileged_analytic_control",
+      "target_class": 0,
+      "true_masks": 16384,
+      "masks": 32768,
+      "full_response": true,
+      "zero_response": false,
+      "exact_all_rows": true,
+      "BDD_nonterminal_nodes": 1,
+      "BDD_identity": "2df767fea6e824526a945aeba38758ee7e3985074954194ad819a56f77e506bf",
+      "nonmonotone_edges": {
+        "response_lost_when_adding_atom": 0,
+        "examined_edges": 245760,
+        "fraction": 0.0
+      },
+      "signed": {
+        "clauses": [
+          {
+            "positive": [
+              2
+            ],
+            "negative": [],
+            "positive_bits": 4,
+            "negative_bits": 0,
+            "retained_seconds": 2,
+            "signed_literals": 1,
+            "minimum_margin": 0.9999998807907104,
+            "subset_minimal": true,
+            "minimum_cardinality": false,
+            "active_at_original_full_mask": true,
+            "counterfactual_state_only": false,
+            "waveform_support_claim": true
+          }
+        ],
+        "coverage": 1.0,
+        "status": "COVERED",
+        "prior_only": false,
+        "complete_prime_enumeration": false,
+        "anchor_policy": "full then first128 true by popcount/index; at most4 clauses"
+      },
+      "positive_only": {
+        "clauses": [
+          {
+            "positive": [
+              2
+            ],
+            "negative": [],
+            "positive_bits": 4,
+            "negative_bits": 0,
+            "retained_seconds": 2,
+            "signed_literals": 1,
+            "minimum_margin": 0.9999998807907104,
+            "subset_minimal": true,
+            "minimum_cardinality": false,
+            "active_at_original_full_mask": true,
+            "counterfactual_state_only": false,
+            "waveform_support_claim": true
+          }
+        ],
+        "coverage": 1.0,
+        "status": "COVERED",
+        "prior_only": false,
+        "complete_prime_enumeration": false,
+        "anchor_policy": "full then first128 true by popcount/index; at most4 clauses"
+      },
+      "greedy": {
+        "mask": 4,
+        "supported": true,
+        "local_queries": 16,
+        "retained_seconds": 2,
+        "universal_positive_valid": true,
+        "global_minimum": false
+      },
+      "truth_archive_sha256": "751ac2383f0e56ab4c9dc42673d256eada3b5c76c7ada0298c328515431c19e2",
+      "wall_seconds": 0.1611668879922945,
+      "dependency_identity": "5ee5fcd13e55f38a1d4f3056e1a02aed1fc63313282730811f69d6164b0a7125",
+      "cache_bytes": 2772,
+      "availability_queries": 32768,
+      "full_target_queries": 1,
+      "truth_label": 0
+    },
+    {
+      "name": "distributed",
+      "kind": "privileged_analytic_control",
+      "target_class": 0,
+      "true_masks": 4096,
+      "masks": 32768,
+      "full_response": true,
+      "zero_response": false,
+      "exact_all_rows": true,
+      "BDD_nonterminal_nodes": 3,
+      "BDD_identity": "a209f6caca247a5458394ac2ff851c47d2d572882cebe2b705aca53bb687f68f",
+      "nonmonotone_edges": {
+        "response_lost_when_adding_atom": 0,
+        "examined_edges": 245760,
+        "fraction": 0.0
+      },
+      "signed": {
+        "clauses": [
+          {
+            "positive": [
+              2,
+              10,
+              13
+            ],
+            "negative": [],
+            "positive_bits": 9220,
+            "negative_bits": 0,
+            "retained_seconds": 6,
+            "signed_literals": 3,
+            "minimum_margin": 0.9999995231628418,
+            "subset_minimal": true,
+            "minimum_cardinality": false,
+            "active_at_original_full_mask": true,
+            "counterfactual_state_only": false,
+            "waveform_support_claim": true
+          }
+        ],
+        "coverage": 1.0,
+        "status": "COVERED",
+        "prior_only": false,
+        "complete_prime_enumeration": false,
+        "anchor_policy": "full then first128 true by popcount/index; at most4 clauses"
+      },
+      "positive_only": {
+        "clauses": [
+          {
+            "positive": [
+              2,
+              10,
+              13
+            ],
+            "negative": [],
+            "positive_bits": 9220,
+            "negative_bits": 0,
+            "retained_seconds": 6,
+            "signed_literals": 3,
+            "minimum_margin": 0.9999995231628418,
+            "subset_minimal": true,
+            "minimum_cardinality": false,
+            "active_at_original_full_mask": true,
+            "counterfactual_state_only": false,
+            "waveform_support_claim": true
+          }
+        ],
+        "coverage": 1.0,
+        "status": "COVERED",
+        "prior_only": false,
+        "complete_prime_enumeration": false,
+        "anchor_policy": "full then first128 true by popcount/index; at most4 clauses"
+      },
+      "greedy": {
+        "mask": 9220,
+        "supported": true,
+        "local_queries": 18,
+        "retained_seconds": 6,
+        "universal_positive_valid": true,
+        "global_minimum": false
+      },
+      "truth_archive_sha256": "22f64b26da821c6b8b30551083e65e34bf229f5d868f6ea897fc9ad935fe2c30",
+      "wall_seconds": 0.16505983199749608,
+      "dependency_identity": "5ee5fcd13e55f38a1d4f3056e1a02aed1fc63313282730811f69d6164b0a7125",
+      "cache_bytes": 2772,
+      "availability_queries": 32768,
+      "full_target_queries": 1,
+      "truth_label": 0
+    },
+    {
+      "name": "global_amplitude",
+      "kind": "privileged_analytic_control",
+      "target_class": 0,
+      "true_masks": 1,
+      "masks": 32768,
+      "full_response": true,
+      "zero_response": false,
+      "exact_all_rows": true,
+      "BDD_nonterminal_nodes": 15,
+      "BDD_identity": "4cae4c497e133c78c2d7d93960da57f2dd35116fcfc6142625c3489ce887897e",
+      "nonmonotone_edges": {
+        "response_lost_when_adding_atom": 0,
+        "examined_edges": 245760,
+        "fraction": 0.0
+      },
+      "signed": {
+        "clauses": [
+          {
+            "positive": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14
+            ],
+            "negative": [],
+            "positive_bits": 32767,
+            "negative_bits": 0,
+            "retained_seconds": 30,
+            "signed_literals": 15,
+            "minimum_margin": 1.0304629802703857,
+            "subset_minimal": true,
+            "minimum_cardinality": false,
+            "active_at_original_full_mask": true,
+            "counterfactual_state_only": false,
+            "waveform_support_claim": true
+          }
+        ],
+        "coverage": 1.0,
+        "status": "COVERED",
+        "prior_only": false,
+        "complete_prime_enumeration": false,
+        "anchor_policy": "full then first128 true by popcount/index; at most4 clauses"
+      },
+      "positive_only": {
+        "clauses": [
+          {
+            "positive": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14
+            ],
+            "negative": [],
+            "positive_bits": 32767,
+            "negative_bits": 0,
+            "retained_seconds": 30,
+            "signed_literals": 15,
+            "minimum_margin": 1.0304629802703857,
+            "subset_minimal": true,
+            "minimum_cardinality": false,
+            "active_at_original_full_mask": true,
+            "counterfactual_state_only": false,
+            "waveform_support_claim": true
+          }
+        ],
+        "coverage": 1.0,
+        "status": "COVERED",
+        "prior_only": false,
+        "complete_prime_enumeration": false,
+        "anchor_policy": "full then first128 true by popcount/index; at most4 clauses"
+      },
+      "greedy": {
+        "mask": 32767,
+        "supported": true,
+        "local_queries": 15,
+        "retained_seconds": 30,
+        "universal_positive_valid": true,
+        "global_minimum": false
+      },
+      "truth_archive_sha256": "4c0669827fad545d6a858c582c92d796145137d33da5c020556c9beab504d42c",
+      "wall_seconds": 0.15036992200475652,
+      "dependency_identity": "5ee5fcd13e55f38a1d4f3056e1a02aed1fc63313282730811f69d6164b0a7125",
+      "cache_bytes": 2772,
+      "availability_queries": 32768,
+      "full_target_queries": 1,
+      "truth_label": 0
+    },
+    {
+      "name": "high_frequency_nuisance",
+      "kind": "privileged_analytic_control",
+      "target_class": 0,
+      "true_masks": 16384,
+      "masks": 32768,
+      "full_response": true,
+      "zero_response": false,
+      "exact_all_rows": true,
+      "BDD_nonterminal_nodes": 1,
+      "BDD_identity": "2df767fea6e824526a945aeba38758ee7e3985074954194ad819a56f77e506bf",
+      "nonmonotone_edges": {
+        "response_lost_when_adding_atom": 0,
+        "examined_edges": 245760,
+        "fraction": 0.0
+      },
+      "signed": {
+        "clauses": [
+          {
+            "positive": [
+              2
+            ],
+            "negative": [],
+            "positive_bits": 4,
+            "negative_bits": 0,
+            "retained_seconds": 2,
+            "signed_literals": 1,
+            "minimum_margin": 0.9999998807907104,
+            "subset_minimal": true,
+            "minimum_cardinality": false,
+            "active_at_original_full_mask": true,
+            "counterfactual_state_only": false,
+            "waveform_support_claim": true
+          }
+        ],
+        "coverage": 1.0,
+        "status": "COVERED",
+        "prior_only": false,
+        "complete_prime_enumeration": false,
+        "anchor_policy": "full then first128 true by popcount/index; at most4 clauses"
+      },
+      "positive_only": {
+        "clauses": [
+          {
+            "positive": [
+              2
+            ],
+            "negative": [],
+            "positive_bits": 4,
+            "negative_bits": 0,
+            "retained_seconds": 2,
+            "signed_literals": 1,
+            "minimum_margin": 0.9999998807907104,
+            "subset_minimal": true,
+            "minimum_cardinality": false,
+            "active_at_original_full_mask": true,
+            "counterfactual_state_only": false,
+            "waveform_support_claim": true
+          }
+        ],
+        "coverage": 1.0,
+        "status": "COVERED",
+        "prior_only": false,
+        "complete_prime_enumeration": false,
+        "anchor_policy": "full then first128 true by popcount/index; at most4 clauses"
+      },
+      "greedy": {
+        "mask": 4,
+        "supported": true,
+        "local_queries": 16,
+        "retained_seconds": 2,
+        "universal_positive_valid": true,
+        "global_minimum": false
+      },
+      "truth_archive_sha256": "751ac2383f0e56ab4c9dc42673d256eada3b5c76c7ada0298c328515431c19e2",
+      "wall_seconds": 0.15201864099071827,
+      "dependency_identity": "5ee5fcd13e55f38a1d4f3056e1a02aed1fc63313282730811f69d6164b0a7125",
+      "cache_bytes": 2772,
+      "availability_queries": 32768,
+      "full_target_queries": 1,
+      "truth_label": 0
+    },
+    {
+      "name": "broadband_interference",
+      "kind": "privileged_analytic_control",
+      "target_class": 0,
+      "true_masks": 16384,
+      "masks": 32768,
+      "full_response": true,
+      "zero_response": false,
+      "exact_all_rows": true,
+      "BDD_nonterminal_nodes": 1,
+      "BDD_identity": "2df767fea6e824526a945aeba38758ee7e3985074954194ad819a56f77e506bf",
+      "nonmonotone_edges": {
+        "response_lost_when_adding_atom": 0,
+        "examined_edges": 245760,
+        "fraction": 0.0
+      },
+      "signed": {
+        "clauses": [
+          {
+            "positive": [
+              2
+            ],
+            "negative": [],
+            "positive_bits": 4,
+            "negative_bits": 0,
+            "retained_seconds": 2,
+            "signed_literals": 1,
+            "minimum_margin": 1.04011869430542,
+            "subset_minimal": true,
+            "minimum_cardinality": false,
+            "active_at_original_full_mask": true,
+            "counterfactual_state_only": false,
+            "waveform_support_claim": true
+          }
+        ],
+        "coverage": 1.0,
+        "status": "COVERED",
+        "prior_only": false,
+        "complete_prime_enumeration": false,
+        "anchor_policy": "full then first128 true by popcount/index; at most4 clauses"
+      },
+      "positive_only": {
+        "clauses": [
+          {
+            "positive": [
+              2
+            ],
+            "negative": [],
+            "positive_bits": 4,
+            "negative_bits": 0,
+            "retained_seconds": 2,
+            "signed_literals": 1,
+            "minimum_margin": 1.04011869430542,
+            "subset_minimal": true,
+            "minimum_cardinality": false,
+            "active_at_original_full_mask": true,
+            "counterfactual_state_only": false,
+            "waveform_support_claim": true
+          }
+        ],
+        "coverage": 1.0,
+        "status": "COVERED",
+        "prior_only": false,
+        "complete_prime_enumeration": false,
+        "anchor_policy": "full then first128 true by popcount/index; at most4 clauses"
+      },
+      "greedy": {
+        "mask": 4,
+        "supported": true,
+        "local_queries": 16,
+        "retained_seconds": 2,
+        "universal_positive_valid": true,
+        "global_minimum": false
+      },
+      "truth_archive_sha256": "2a2c8dbfe6125b059a617a21bd0e16c688417aba83b1861811480837b71847b0",
+      "wall_seconds": 0.15383776799717452,
+      "dependency_identity": "5ee5fcd13e55f38a1d4f3056e1a02aed1fc63313282730811f69d6164b0a7125",
+      "cache_bytes": 2772,
+      "availability_queries": 32768,
+      "full_target_queries": 1,
+      "truth_label": 0
+    },
+    {
+      "name": "redundant",
+      "kind": "privileged_analytic_control",
+      "target_class": 0,
+      "true_masks": 24576,
+      "masks": 32768,
+      "full_response": true,
+      "zero_response": false,
+      "exact_all_rows": true,
+      "BDD_nonterminal_nodes": 2,
+      "BDD_identity": "d97f173baf4587b3710eda24fdc95ed19310358cb3330127d23bfdf37112a8ec",
+      "nonmonotone_edges": {
+        "response_lost_when_adding_atom": 0,
+        "examined_edges": 245760,
+        "fraction": 0.0
+      },
+      "signed": {
+        "clauses": [
+          {
+            "positive": [
+              10
+            ],
+            "negative": [],
+            "positive_bits": 1024,
+            "negative_bits": 0,
+            "retained_seconds": 2,
+            "signed_literals": 1,
+            "minimum_margin": 1.0,
+            "subset_minimal": true,
+            "minimum_cardinality": false,
+            "active_at_original_full_mask": true,
+            "counterfactual_state_only": false,
+            "waveform_support_claim": true
+          },
+          {
+            "positive": [
+              2
+            ],
+            "negative": [],
+            "positive_bits": 4,
+            "negative_bits": 0,
+            "retained_seconds": 2,
+            "signed_literals": 1,
+            "minimum_margin": 0.9999998807907104,
+            "subset_minimal": true,
+            "minimum_cardinality": false,
+            "active_at_original_full_mask": true,
+            "counterfactual_state_only": false,
+            "waveform_support_claim": true
+          }
+        ],
+        "coverage": 1.0,
+        "status": "COVERED",
+        "prior_only": false,
+        "complete_prime_enumeration": false,
+        "anchor_policy": "full then first128 true by popcount/index; at most4 clauses"
+      },
+      "positive_only": {
+        "clauses": [
+          {
+            "positive": [
+              10
+            ],
+            "negative": [],
+            "positive_bits": 1024,
+            "negative_bits": 0,
+            "retained_seconds": 2,
+            "signed_literals": 1,
+            "minimum_margin": 1.0,
+            "subset_minimal": true,
+            "minimum_cardinality": false,
+            "active_at_original_full_mask": true,
+            "counterfactual_state_only": false,
+            "waveform_support_claim": true
+          },
+          {
+            "positive": [
+              2
+            ],
+            "negative": [],
+            "positive_bits": 4,
+            "negative_bits": 0,
+            "retained_seconds": 2,
+            "signed_literals": 1,
+            "minimum_margin": 0.9999998807907104,
+            "subset_minimal": true,
+            "minimum_cardinality": false,
+            "active_at_original_full_mask": true,
+            "counterfactual_state_only": false,
+            "waveform_support_claim": true
+          }
+        ],
+        "coverage": 1.0,
+        "status": "COVERED",
+        "prior_only": false,
+        "complete_prime_enumeration": false,
+        "anchor_policy": "full then first128 true by popcount/index; at most4 clauses"
+      },
+      "greedy": {
+        "mask": 1024,
+        "supported": true,
+        "local_queries": 16,
+        "retained_seconds": 2,
+        "universal_positive_valid": true,
+        "global_minimum": false
+      },
+      "truth_archive_sha256": "eb342c01ee7dad8055913ce8c50204f7b5524af1a09cc65b041757938fb4c775",
+      "wall_seconds": 0.15880452700366732,
+      "dependency_identity": "5ee5fcd13e55f38a1d4f3056e1a02aed1fc63313282730811f69d6164b0a7125",
+      "cache_bytes": 2772,
+      "availability_queries": 32768,
+      "full_target_queries": 1,
+      "truth_label": 0
+    },
+    {
+      "name": "complementary",
+      "kind": "privileged_analytic_control",
+      "target_class": 0,
+      "true_masks": 8192,
+      "masks": 32768,
+      "full_response": true,
+      "zero_response": false,
+      "exact_all_rows": true,
+      "BDD_nonterminal_nodes": 2,
+      "BDD_identity": "92d70208dc3abbdee57b577a49df2199b9870d681008c64f13af15ed8e742e91",
+      "nonmonotone_edges": {
+        "response_lost_when_adding_atom": 0,
+        "examined_edges": 245760,
+        "fraction": 0.0
+      },
+      "signed": {
+        "clauses": [
+          {
+            "positive": [
+              2,
+              10
+            ],
+            "negative": [],
+            "positive_bits": 1028,
+            "negative_bits": 0,
+            "retained_seconds": 4,
+            "signed_literals": 2,
+            "minimum_margin": 1.0,
+            "subset_minimal": true,
+            "minimum_cardinality": false,
+            "active_at_original_full_mask": true,
+            "counterfactual_state_only": false,
+            "waveform_support_claim": true
+          }
+        ],
+        "coverage": 1.0,
+        "status": "COVERED",
+        "prior_only": false,
+        "complete_prime_enumeration": false,
+        "anchor_policy": "full then first128 true by popcount/index; at most4 clauses"
+      },
+      "positive_only": {
+        "clauses": [
+          {
+            "positive": [
+              2,
+              10
+            ],
+            "negative": [],
+            "positive_bits": 1028,
+            "negative_bits": 0,
+            "retained_seconds": 4,
+            "signed_literals": 2,
+            "minimum_margin": 1.0,
+            "subset_minimal": true,
+            "minimum_cardinality": false,
+            "active_at_original_full_mask": true,
+            "counterfactual_state_only": false,
+            "waveform_support_claim": true
+          }
+        ],
+        "coverage": 1.0,
+        "status": "COVERED",
+        "prior_only": false,
+        "complete_prime_enumeration": false,
+        "anchor_policy": "full then first128 true by popcount/index; at most4 clauses"
+      },
+      "greedy": {
+        "mask": 1028,
+        "supported": true,
+        "local_queries": 17,
+        "retained_seconds": 4,
+        "universal_positive_valid": true,
+        "global_minimum": false
+      },
+      "truth_archive_sha256": "5a969002786efc0e690d9c812a77e3598b2b4675b8c4cb242f41c0a61460b40c",
+      "wall_seconds": 0.15442426300433,
+      "dependency_identity": "5ee5fcd13e55f38a1d4f3056e1a02aed1fc63313282730811f69d6164b0a7125",
+      "cache_bytes": 2772,
+      "availability_queries": 32768,
+      "full_target_queries": 1,
+      "truth_label": 0
+    },
+    {
+      "name": "disruptor",
+      "kind": "privileged_analytic_control",
+      "target_class": 0,
+      "true_masks": 16384,
+      "masks": 32768,
+      "full_response": true,
+      "zero_response": false,
+      "exact_all_rows": true,
+      "BDD_nonterminal_nodes": 4,
+      "BDD_identity": "dda013cb549f905b900a7ee4c59da06767e69ff9dd6d0701a32dee1bf31310d2",
+      "nonmonotone_edges": {
+        "response_lost_when_adding_atom": 8192,
+        "examined_edges": 245760,
+        "fraction": 0.03333333333333333
+      },
+      "signed": {
+        "clauses": [
+          {
+            "positive": [
+              2,
+              10
+            ],
+            "negative": [],
+            "positive_bits": 1028,
+            "negative_bits": 0,
+            "retained_seconds": 4,
+            "signed_literals": 2,
+            "minimum_margin": 2.0000009536743164,
+            "subset_minimal": true,
+            "minimum_cardinality": false,
+            "active_at_original_full_mask": true,
+            "counterfactual_state_only": false,
+            "waveform_support_claim": true
+          },
+          {
+            "positive": [
+              2
+            ],
+            "negative": [
+              6
+            ],
+            "positive_bits": 4,
+            "negative_bits": 64,
+            "retained_seconds": 2,
+            "signed_literals": 2,
+            "minimum_margin": 2.999999761581421,
+            "subset_minimal": true,
+            "minimum_cardinality": false,
+            "active_at_original_full_mask": false,
+            "counterfactual_state_only": true,
+            "waveform_support_claim": true
+          },
+          {
+            "positive": [
+              10
+            ],
+            "negative": [
+              6
+            ],
+            "positive_bits": 1024,
+            "negative_bits": 64,
+            "retained_seconds": 2,
+            "signed_literals": 2,
+            "minimum_margin": 3.0,
+            "subset_minimal": true,
+            "minimum_cardinality": false,
+            "active_at_original_full_mask": false,
+            "counterfactual_state_only": true,
+            "waveform_support_claim": true
+          }
+        ],
+        "coverage": 1.0,
+        "status": "COVERED",
+        "prior_only": false,
+        "complete_prime_enumeration": false,
+        "anchor_policy": "full then first128 true by popcount/index; at most4 clauses"
+      },
+      "positive_only": {
+        "clauses": [
+          {
+            "positive": [
+              2,
+              10
+            ],
+            "negative": [],
+            "positive_bits": 1028,
+            "negative_bits": 0,
+            "retained_seconds": 4,
+            "signed_literals": 2,
+            "minimum_margin": 2.0000009536743164,
+            "subset_minimal": true,
+            "minimum_cardinality": false,
+            "active_at_original_full_mask": true,
+            "counterfactual_state_only": false,
+            "waveform_support_claim": true
+          }
+        ],
+        "coverage": 0.5,
+        "status": "PARTIAL_SUMMARY",
+        "prior_only": false,
+        "complete_prime_enumeration": false,
+        "anchor_policy": "full then first128 true by popcount/index; at most4 clauses"
+      },
+      "greedy": {
+        "mask": 4,
+        "supported": true,
+        "local_queries": 16,
+        "retained_seconds": 2,
+        "universal_positive_valid": false,
+        "global_minimum": false
+      },
+      "truth_archive_sha256": "09f90b60b4738036afc22bb4c5d2acd0678f0c623d5a2f1608469cd4bf0969de",
+      "wall_seconds": 0.1629813350009499,
+      "dependency_identity": "5ee5fcd13e55f38a1d4f3056e1a02aed1fc63313282730811f69d6164b0a7125",
+      "cache_bytes": 2772,
+      "availability_queries": 32768,
+      "full_target_queries": 1,
+      "truth_label": 0
+    },
+    {
+      "name": "eventless",
+      "kind": "privileged_analytic_control",
+      "target_class": 1,
+      "true_masks": 32768,
+      "masks": 32768,
+      "full_response": true,
+      "zero_response": true,
+      "exact_all_rows": true,
+      "BDD_nonterminal_nodes": 0,
+      "BDD_identity": "d5ce09596c7a02046631b306a5592682fa40767a0bb6c4ab6a8461b65d701682",
+      "nonmonotone_edges": {
+        "response_lost_when_adding_atom": 0,
+        "examined_edges": 245760,
+        "fraction": 0.0
+      },
+      "signed": {
+        "clauses": [
+          {
+            "positive": [],
+            "negative": [],
+            "positive_bits": 0,
+            "negative_bits": 0,
+            "retained_seconds": 0,
+            "signed_literals": 0,
+            "minimum_margin": 1.0,
+            "subset_minimal": true,
+            "minimum_cardinality": false,
+            "active_at_original_full_mask": true,
+            "counterfactual_state_only": false,
+            "waveform_support_claim": false
+          }
+        ],
+        "coverage": 1.0,
+        "status": "PRIOR_ONLY",
+        "prior_only": true,
+        "complete_prime_enumeration": false,
+        "anchor_policy": "full then first128 true by popcount/index; at most4 clauses"
+      },
+      "positive_only": {
+        "clauses": [
+          {
+            "positive": [],
+            "negative": [],
+            "positive_bits": 0,
+            "negative_bits": 0,
+            "retained_seconds": 0,
+            "signed_literals": 0,
+            "minimum_margin": 1.0,
+            "subset_minimal": true,
+            "minimum_cardinality": false,
+            "active_at_original_full_mask": true,
+            "counterfactual_state_only": false,
+            "waveform_support_claim": false
+          }
+        ],
+        "coverage": 1.0,
+        "status": "PRIOR_ONLY",
+        "prior_only": true,
+        "complete_prime_enumeration": false,
+        "anchor_policy": "full then first128 true by popcount/index; at most4 clauses"
+      },
+      "greedy": {
+        "mask": 0,
+        "supported": true,
+        "local_queries": 15,
+        "retained_seconds": 0,
+        "universal_positive_valid": true,
+        "global_minimum": false
+      },
+      "truth_archive_sha256": "aaaa5555af6b9ff62e87bef8c0026d395dd95d8d71661efd42a0800704b400d2",
+      "wall_seconds": 0.15630337300535757,
+      "dependency_identity": "5ee5fcd13e55f38a1d4f3056e1a02aed1fc63313282730811f69d6164b0a7125",
+      "cache_bytes": 2772,
+      "availability_queries": 32768,
+      "full_target_queries": 1,
+      "truth_label": 0
+    },
+    {
+      "name": "whole_epoch",
+      "kind": "privileged_analytic_control",
+      "target_class": 0,
+      "true_masks": 1,
+      "masks": 32768,
+      "full_response": true,
+      "zero_response": false,
+      "exact_all_rows": true,
+      "BDD_nonterminal_nodes": 15,
+      "BDD_identity": "4cae4c497e133c78c2d7d93960da57f2dd35116fcfc6142625c3489ce887897e",
+      "nonmonotone_edges": {
+        "response_lost_when_adding_atom": 0,
+        "examined_edges": 245760,
+        "fraction": 0.0
+      },
+      "signed": {
+        "clauses": [
+          {
+            "positive": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14
+            ],
+            "negative": [],
+            "positive_bits": 32767,
+            "negative_bits": 0,
+            "retained_seconds": 30,
+            "signed_literals": 15,
+            "minimum_margin": 1.0304629802703857,
+            "subset_minimal": true,
+            "minimum_cardinality": false,
+            "active_at_original_full_mask": true,
+            "counterfactual_state_only": false,
+            "waveform_support_claim": true
+          }
+        ],
+        "coverage": 1.0,
+        "status": "COVERED",
+        "prior_only": false,
+        "complete_prime_enumeration": false,
+        "anchor_policy": "full then first128 true by popcount/index; at most4 clauses"
+      },
+      "positive_only": {
+        "clauses": [
+          {
+            "positive": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14
+            ],
+            "negative": [],
+            "positive_bits": 32767,
+            "negative_bits": 0,
+            "retained_seconds": 30,
+            "signed_literals": 15,
+            "minimum_margin": 1.0304629802703857,
+            "subset_minimal": true,
+            "minimum_cardinality": false,
+            "active_at_original_full_mask": true,
+            "counterfactual_state_only": false,
+            "waveform_support_claim": true
+          }
+        ],
+        "coverage": 1.0,
+        "status": "COVERED",
+        "prior_only": false,
+        "complete_prime_enumeration": false,
+        "anchor_policy": "full then first128 true by popcount/index; at most4 clauses"
+      },
+      "greedy": {
+        "mask": 32767,
+        "supported": true,
+        "local_queries": 15,
+        "retained_seconds": 30,
+        "universal_positive_valid": true,
+        "global_minimum": false
+      },
+      "truth_archive_sha256": "4c0669827fad545d6a858c582c92d796145137d33da5c020556c9beab504d42c",
+      "wall_seconds": 0.1600572550087236,
+      "dependency_identity": "5ee5fcd13e55f38a1d4f3056e1a02aed1fc63313282730811f69d6164b0a7125",
+      "cache_bytes": 2772,
+      "availability_queries": 32768,
+      "full_target_queries": 1,
+      "truth_label": 0
+    },
+    {
+      "name": "mixed_global_local",
+      "kind": "privileged_analytic_control",
+      "target_class": 0,
+      "true_masks": 1,
+      "masks": 32768,
+      "full_response": true,
+      "zero_response": false,
+      "exact_all_rows": true,
+      "BDD_nonterminal_nodes": 15,
+      "BDD_identity": "4cae4c497e133c78c2d7d93960da57f2dd35116fcfc6142625c3489ce887897e",
+      "nonmonotone_edges": {
+        "response_lost_when_adding_atom": 0,
+        "examined_edges": 245760,
+        "fraction": 0.0
+      },
+      "signed": {
+        "clauses": [
+          {
+            "positive": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14
+            ],
+            "negative": [],
+            "positive_bits": 32767,
+            "negative_bits": 0,
+            "retained_seconds": 30,
+            "signed_literals": 15,
+            "minimum_margin": 1.0962848663330078,
+            "subset_minimal": true,
+            "minimum_cardinality": false,
+            "active_at_original_full_mask": true,
+            "counterfactual_state_only": false,
+            "waveform_support_claim": true
+          }
+        ],
+        "coverage": 1.0,
+        "status": "COVERED",
+        "prior_only": false,
+        "complete_prime_enumeration": false,
+        "anchor_policy": "full then first128 true by popcount/index; at most4 clauses"
+      },
+      "positive_only": {
+        "clauses": [
+          {
+            "positive": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14
+            ],
+            "negative": [],
+            "positive_bits": 32767,
+            "negative_bits": 0,
+            "retained_seconds": 30,
+            "signed_literals": 15,
+            "minimum_margin": 1.0962848663330078,
+            "subset_minimal": true,
+            "minimum_cardinality": false,
+            "active_at_original_full_mask": true,
+            "counterfactual_state_only": false,
+            "waveform_support_claim": true
+          }
+        ],
+        "coverage": 1.0,
+        "status": "COVERED",
+        "prior_only": false,
+        "complete_prime_enumeration": false,
+        "anchor_policy": "full then first128 true by popcount/index; at most4 clauses"
+      },
+      "greedy": {
+        "mask": 32767,
+        "supported": true,
+        "local_queries": 15,
+        "retained_seconds": 30,
+        "universal_positive_valid": true,
+        "global_minimum": false
+      },
+      "truth_archive_sha256": "3019e9d7289edcac164cc74f5a5770454b4e6350a78b2e6da0881411d80853a3",
+      "wall_seconds": 0.15174973900138866,
+      "dependency_identity": "5ee5fcd13e55f38a1d4f3056e1a02aed1fc63313282730811f69d6164b0a7125",
+      "cache_bytes": 2772,
+      "availability_queries": 32768,
+      "full_target_queries": 1,
+      "truth_label": 0
+    },
+    {
+      "name": "neutral_bias",
+      "kind": "privileged_analytic_control",
+      "target_class": 0,
+      "true_masks": 32768,
+      "masks": 32768,
+      "full_response": true,
+      "zero_response": true,
+      "exact_all_rows": true,
+      "BDD_nonterminal_nodes": 0,
+      "BDD_identity": "d5ce09596c7a02046631b306a5592682fa40767a0bb6c4ab6a8461b65d701682",
+      "nonmonotone_edges": {
+        "response_lost_when_adding_atom": 0,
+        "examined_edges": 245760,
+        "fraction": 0.0
+      },
+      "signed": {
+        "clauses": [
+          {
+            "positive": [],
+            "negative": [],
+            "positive_bits": 0,
+            "negative_bits": 0,
+            "retained_seconds": 0,
+            "signed_literals": 0,
+            "minimum_margin": 2.0,
+            "subset_minimal": true,
+            "minimum_cardinality": false,
+            "active_at_original_full_mask": true,
+            "counterfactual_state_only": false,
+            "waveform_support_claim": false
+          }
+        ],
+        "coverage": 1.0,
+        "status": "PRIOR_ONLY",
+        "prior_only": true,
+        "complete_prime_enumeration": false,
+        "anchor_policy": "full then first128 true by popcount/index; at most4 clauses"
+      },
+      "positive_only": {
+        "clauses": [
+          {
+            "positive": [],
+            "negative": [],
+            "positive_bits": 0,
+            "negative_bits": 0,
+            "retained_seconds": 0,
+            "signed_literals": 0,
+            "minimum_margin": 2.0,
+            "subset_minimal": true,
+            "minimum_cardinality": false,
+            "active_at_original_full_mask": true,
+            "counterfactual_state_only": false,
+            "waveform_support_claim": false
+          }
+        ],
+        "coverage": 1.0,
+        "status": "PRIOR_ONLY",
+        "prior_only": true,
+        "complete_prime_enumeration": false,
+        "anchor_policy": "full then first128 true by popcount/index; at most4 clauses"
+      },
+      "greedy": {
+        "mask": 0,
+        "supported": true,
+        "local_queries": 15,
+        "retained_seconds": 0,
+        "universal_positive_valid": true,
+        "global_minimum": false
+      },
+      "truth_archive_sha256": "cc8096deb088873ece9ecf67d1c2f28657b8c9caccb41c350710ca3fa5fb938f",
+      "wall_seconds": 0.15690982599335257,
+      "dependency_identity": "5ee5fcd13e55f38a1d4f3056e1a02aed1fc63313282730811f69d6164b0a7125",
+      "cache_bytes": 2772,
+      "availability_queries": 32768,
+      "full_target_queries": 1,
+      "truth_label": 0
+    },
+    {
+      "name": "aggregation_sensitivity",
+      "kind": "privileged_analytic_control",
+      "target_class": 1,
+      "true_masks": 32768,
+      "masks": 32768,
+      "full_response": true,
+      "zero_response": true,
+      "exact_all_rows": true,
+      "BDD_nonterminal_nodes": 0,
+      "BDD_identity": "d5ce09596c7a02046631b306a5592682fa40767a0bb6c4ab6a8461b65d701682",
+      "nonmonotone_edges": {
+        "response_lost_when_adding_atom": 0,
+        "examined_edges": 245760,
+        "fraction": 0.0
+      },
+      "signed": {
+        "clauses": [
+          {
+            "positive": [],
+            "negative": [],
+            "positive_bits": 0,
+            "negative_bits": 0,
+            "retained_seconds": 0,
+            "signed_literals": 0,
+            "minimum_margin": 0.006101697683334351,
+            "subset_minimal": true,
+            "minimum_cardinality": false,
+            "active_at_original_full_mask": true,
+            "counterfactual_state_only": false,
+            "waveform_support_claim": false
+          }
+        ],
+        "coverage": 1.0,
+        "status": "PRIOR_ONLY",
+        "prior_only": true,
+        "complete_prime_enumeration": false,
+        "anchor_policy": "full then first128 true by popcount/index; at most4 clauses"
+      },
+      "positive_only": {
+        "clauses": [
+          {
+            "positive": [],
+            "negative": [],
+            "positive_bits": 0,
+            "negative_bits": 0,
+            "retained_seconds": 0,
+            "signed_literals": 0,
+            "minimum_margin": 0.006101697683334351,
+            "subset_minimal": true,
+            "minimum_cardinality": false,
+            "active_at_original_full_mask": true,
+            "counterfactual_state_only": false,
+            "waveform_support_claim": false
+          }
+        ],
+        "coverage": 1.0,
+        "status": "PRIOR_ONLY",
+        "prior_only": true,
+        "complete_prime_enumeration": false,
+        "anchor_policy": "full then first128 true by popcount/index; at most4 clauses"
+      },
+      "greedy": {
+        "mask": 0,
+        "supported": true,
+        "local_queries": 15,
+        "retained_seconds": 0,
+        "universal_positive_valid": true,
+        "global_minimum": false
+      },
+      "truth_archive_sha256": "4958be66c877ffffe9cd32ee49cfaeb4a0b0c79d9900d8f4a75b1f73a5f598c1",
+      "wall_seconds": 0.15932496800087392,
+      "dependency_identity": "5ee5fcd13e55f38a1d4f3056e1a02aed1fc63313282730811f69d6164b0a7125",
+      "cache_bytes": 2772,
+      "availability_queries": 32768,
+      "full_target_queries": 1,
+      "truth_label": 0
+    },
+    {
+      "name": "incorrect_explainable",
+      "kind": "privileged_analytic_control",
+      "target_class": 0,
+      "true_masks": 16384,
+      "masks": 32768,
+      "full_response": true,
+      "zero_response": false,
+      "exact_all_rows": true,
+      "BDD_nonterminal_nodes": 1,
+      "BDD_identity": "2df767fea6e824526a945aeba38758ee7e3985074954194ad819a56f77e506bf",
+      "nonmonotone_edges": {
+        "response_lost_when_adding_atom": 0,
+        "examined_edges": 245760,
+        "fraction": 0.0
+      },
+      "signed": {
+        "clauses": [
+          {
+            "positive": [
+              2
+            ],
+            "negative": [],
+            "positive_bits": 4,
+            "negative_bits": 0,
+            "retained_seconds": 2,
+            "signed_literals": 1,
+            "minimum_margin": 0.9999998807907104,
+            "subset_minimal": true,
+            "minimum_cardinality": false,
+            "active_at_original_full_mask": true,
+            "counterfactual_state_only": false,
+            "waveform_support_claim": true
+          }
+        ],
+        "coverage": 1.0,
+        "status": "COVERED",
+        "prior_only": false,
+        "complete_prime_enumeration": false,
+        "anchor_policy": "full then first128 true by popcount/index; at most4 clauses"
+      },
+      "positive_only": {
+        "clauses": [
+          {
+            "positive": [
+              2
+            ],
+            "negative": [],
+            "positive_bits": 4,
+            "negative_bits": 0,
+            "retained_seconds": 2,
+            "signed_literals": 1,
+            "minimum_margin": 0.9999998807907104,
+            "subset_minimal": true,
+            "minimum_cardinality": false,
+            "active_at_original_full_mask": true,
+            "counterfactual_state_only": false,
+            "waveform_support_claim": true
+          }
+        ],
+        "coverage": 1.0,
+        "status": "COVERED",
+        "prior_only": false,
+        "complete_prime_enumeration": false,
+        "anchor_policy": "full then first128 true by popcount/index; at most4 clauses"
+      },
+      "greedy": {
+        "mask": 4,
+        "supported": true,
+        "local_queries": 16,
+        "retained_seconds": 2,
+        "universal_positive_valid": true,
+        "global_minimum": false
+      },
+      "truth_archive_sha256": "751ac2383f0e56ab4c9dc42673d256eada3b5c76c7ada0298c328515431c19e2",
+      "wall_seconds": 0.15512142700026743,
+      "dependency_identity": "5ee5fcd13e55f38a1d4f3056e1a02aed1fc63313282730811f69d6164b0a7125",
+      "cache_bytes": 2772,
+      "availability_queries": 32768,
+      "full_target_queries": 1,
+      "truth_label": 4
+    },
+    {
+      "name": "native_123",
+      "kind": "random_historical_architecture",
+      "target_class": 2,
+      "true_masks": 32768,
+      "masks": 32768,
+      "full_response": true,
+      "zero_response": true,
+      "exact_all_rows": true,
+      "BDD_nonterminal_nodes": 0,
+      "BDD_identity": "d5ce09596c7a02046631b306a5592682fa40767a0bb6c4ab6a8461b65d701682",
+      "nonmonotone_edges": {
+        "response_lost_when_adding_atom": 0,
+        "examined_edges": 245760,
+        "fraction": 0.0
+      },
+      "signed": {
+        "clauses": [
+          {
+            "positive": [],
+            "negative": [],
+            "positive_bits": 0,
+            "negative_bits": 0,
+            "retained_seconds": 0,
+            "signed_literals": 0,
+            "minimum_margin": 0.017320170998573303,
+            "subset_minimal": true,
+            "minimum_cardinality": false,
+            "active_at_original_full_mask": true,
+            "counterfactual_state_only": false,
+            "waveform_support_claim": false
+          }
+        ],
+        "coverage": 1.0,
+        "status": "PRIOR_ONLY",
+        "prior_only": true,
+        "complete_prime_enumeration": false,
+        "anchor_policy": "full then first128 true by popcount/index; at most4 clauses"
+      },
+      "positive_only": {
+        "clauses": [
+          {
+            "positive": [],
+            "negative": [],
+            "positive_bits": 0,
+            "negative_bits": 0,
+            "retained_seconds": 0,
+            "signed_literals": 0,
+            "minimum_margin": 0.017320170998573303,
+            "subset_minimal": true,
+            "minimum_cardinality": false,
+            "active_at_original_full_mask": true,
+            "counterfactual_state_only": false,
+            "waveform_support_claim": false
+          }
+        ],
+        "coverage": 1.0,
+        "status": "PRIOR_ONLY",
+        "prior_only": true,
+        "complete_prime_enumeration": false,
+        "anchor_policy": "full then first128 true by popcount/index; at most4 clauses"
+      },
+      "greedy": {
+        "mask": 0,
+        "supported": true,
+        "local_queries": 15,
+        "retained_seconds": 0,
+        "universal_positive_valid": true,
+        "global_minimum": false
+      },
+      "truth_archive_sha256": "74d66a55e5a85c6e5c03bb8d74b72291bc730f6d67fcc9dd9cd1828beba9ae55",
+      "wall_seconds": 0.3172654829977546,
+      "dependency_identity": "23b453421bce8089ccd506e726b41482e126a37ab2e2532f24a23dcc733a4233",
+      "cache_bytes": 21700,
+      "availability_queries": 32768,
+      "full_target_queries": 1,
+      "truth_label": null
+    },
+    {
+      "name": "native_456",
+      "kind": "random_historical_architecture",
+      "target_class": 4,
+      "true_masks": 32767,
+      "masks": 32768,
+      "full_response": true,
+      "zero_response": false,
+      "exact_all_rows": true,
+      "BDD_nonterminal_nodes": 15,
+      "BDD_identity": "9b798a38ac7b46c7fca010fc9c54dd2732f69a3996830737fd6119ce3c7f8048",
+      "nonmonotone_edges": {
+        "response_lost_when_adding_atom": 0,
+        "examined_edges": 245760,
+        "fraction": 0.0
+      },
+      "signed": {
+        "clauses": [
+          {
+            "positive": [
+              14
+            ],
+            "negative": [],
+            "positive_bits": 16384,
+            "negative_bits": 0,
+            "retained_seconds": 2,
+            "signed_literals": 1,
+            "minimum_margin": 0.0940866470336914,
+            "subset_minimal": true,
+            "minimum_cardinality": false,
+            "active_at_original_full_mask": true,
+            "counterfactual_state_only": false,
+            "waveform_support_claim": true
+          },
+          {
+            "positive": [
+              0
+            ],
+            "negative": [],
+            "positive_bits": 1,
+            "negative_bits": 0,
+            "retained_seconds": 2,
+            "signed_literals": 1,
+            "minimum_margin": 0.07769641280174255,
+            "subset_minimal": true,
+            "minimum_cardinality": false,
+            "active_at_original_full_mask": true,
+            "counterfactual_state_only": false,
+            "waveform_support_claim": true
+          },
+          {
+            "positive": [
+              1
+            ],
+            "negative": [],
+            "positive_bits": 2,
+            "negative_bits": 0,
+            "retained_seconds": 2,
+            "signed_literals": 1,
+            "minimum_margin": 0.07470029592514038,
+            "subset_minimal": true,
+            "minimum_cardinality": false,
+            "active_at_original_full_mask": true,
+            "counterfactual_state_only": false,
+            "waveform_support_claim": true
+          },
+          {
+            "positive": [
+              2
+            ],
+            "negative": [],
+            "positive_bits": 4,
+            "negative_bits": 0,
+            "retained_seconds": 2,
+            "signed_literals": 1,
+            "minimum_margin": 0.10464097559452057,
+            "subset_minimal": true,
+            "minimum_cardinality": false,
+            "active_at_original_full_mask": true,
+            "counterfactual_state_only": false,
+            "waveform_support_claim": true
+          }
+        ],
+        "coverage": 0.9375286111026337,
+        "status": "PARTIAL_SUMMARY",
+        "prior_only": false,
+        "complete_prime_enumeration": false,
+        "anchor_policy": "full then first128 true by popcount/index; at most4 clauses"
+      },
+      "positive_only": {
+        "clauses": [
+          {
+            "positive": [
+              14
+            ],
+            "negative": [],
+            "positive_bits": 16384,
+            "negative_bits": 0,
+            "retained_seconds": 2,
+            "signed_literals": 1,
+            "minimum_margin": 0.0940866470336914,
+            "subset_minimal": true,
+            "minimum_cardinality": false,
+            "active_at_original_full_mask": true,
+            "counterfactual_state_only": false,
+            "waveform_support_claim": true
+          },
+          {
+            "positive": [
+              0
+            ],
+            "negative": [],
+            "positive_bits": 1,
+            "negative_bits": 0,
+            "retained_seconds": 2,
+            "signed_literals": 1,
+            "minimum_margin": 0.07769641280174255,
+            "subset_minimal": true,
+            "minimum_cardinality": false,
+            "active_at_original_full_mask": true,
+            "counterfactual_state_only": false,
+            "waveform_support_claim": true
+          },
+          {
+            "positive": [
+              1
+            ],
+            "negative": [],
+            "positive_bits": 2,
+            "negative_bits": 0,
+            "retained_seconds": 2,
+            "signed_literals": 1,
+            "minimum_margin": 0.07470029592514038,
+            "subset_minimal": true,
+            "minimum_cardinality": false,
+            "active_at_original_full_mask": true,
+            "counterfactual_state_only": false,
+            "waveform_support_claim": true
+          },
+          {
+            "positive": [
+              2
+            ],
+            "negative": [],
+            "positive_bits": 4,
+            "negative_bits": 0,
+            "retained_seconds": 2,
+            "signed_literals": 1,
+            "minimum_margin": 0.10464097559452057,
+            "subset_minimal": true,
+            "minimum_cardinality": false,
+            "active_at_original_full_mask": true,
+            "counterfactual_state_only": false,
+            "waveform_support_claim": true
+          }
+        ],
+        "coverage": 0.9375286111026337,
+        "status": "PARTIAL_SUMMARY",
+        "prior_only": false,
+        "complete_prime_enumeration": false,
+        "anchor_policy": "full then first128 true by popcount/index; at most4 clauses"
+      },
+      "greedy": {
+        "mask": 16384,
+        "supported": true,
+        "local_queries": 16,
+        "retained_seconds": 2,
+        "universal_positive_valid": true,
+        "global_minimum": false
+      },
+      "truth_archive_sha256": "85df70d6d158bda537ece8bf9a71ad8be087bef90c78cd7f27cf6f1ac7343444",
+      "wall_seconds": 0.32516472598945256,
+      "dependency_identity": "23b453421bce8089ccd506e726b41482e126a37ab2e2532f24a23dcc733a4233",
+      "cache_bytes": 21700,
+      "availability_queries": 32768,
+      "full_target_queries": 1,
+      "truth_label": null
+    },
+    {
+      "name": "native_789",
+      "kind": "random_historical_architecture",
+      "target_class": 4,
+      "true_masks": 32768,
+      "masks": 32768,
+      "full_response": true,
+      "zero_response": true,
+      "exact_all_rows": true,
+      "BDD_nonterminal_nodes": 0,
+      "BDD_identity": "d5ce09596c7a02046631b306a5592682fa40767a0bb6c4ab6a8461b65d701682",
+      "nonmonotone_edges": {
+        "response_lost_when_adding_atom": 0,
+        "examined_edges": 245760,
+        "fraction": 0.0
+      },
+      "signed": {
+        "clauses": [
+          {
+            "positive": [],
+            "negative": [],
+            "positive_bits": 0,
+            "negative_bits": 0,
+            "retained_seconds": 0,
+            "signed_literals": 0,
+            "minimum_margin": 0.6151715517044067,
+            "subset_minimal": true,
+            "minimum_cardinality": false,
+            "active_at_original_full_mask": true,
+            "counterfactual_state_only": false,
+            "waveform_support_claim": false
+          }
+        ],
+        "coverage": 1.0,
+        "status": "PRIOR_ONLY",
+        "prior_only": true,
+        "complete_prime_enumeration": false,
+        "anchor_policy": "full then first128 true by popcount/index; at most4 clauses"
+      },
+      "positive_only": {
+        "clauses": [
+          {
+            "positive": [],
+            "negative": [],
+            "positive_bits": 0,
+            "negative_bits": 0,
+            "retained_seconds": 0,
+            "signed_literals": 0,
+            "minimum_margin": 0.6151715517044067,
+            "subset_minimal": true,
+            "minimum_cardinality": false,
+            "active_at_original_full_mask": true,
+            "counterfactual_state_only": false,
+            "waveform_support_claim": false
+          }
+        ],
+        "coverage": 1.0,
+        "status": "PRIOR_ONLY",
+        "prior_only": true,
+        "complete_prime_enumeration": false,
+        "anchor_policy": "full then first128 true by popcount/index; at most4 clauses"
+      },
+      "greedy": {
+        "mask": 0,
+        "supported": true,
+        "local_queries": 15,
+        "retained_seconds": 0,
+        "universal_positive_valid": true,
+        "global_minimum": false
+      },
+      "truth_archive_sha256": "e96c8d42af18e6557e55f2f289849ff995d4488b1815c14f9722b0e7eff4f5e6",
+      "wall_seconds": 0.3153998180059716,
+      "dependency_identity": "23b453421bce8089ccd506e726b41482e126a37ab2e2532f24a23dcc733a4233",
+      "cache_bytes": 21700,
+      "availability_queries": 32768,
+      "full_target_queries": 1,
+      "truth_label": null
+    }
+  ],
+  "wall_seconds": 3.181158528997912,
+  "response_margin_strictly_greater_than": 1e-06,
+  "mask_batch_size": 512,
+  "complete_per_mask_tables_public": false,
+  "real_artifacts_opened": 0
+}

@@ -1,0 +1,47 @@
+{
+  "version": "mist-cove-phase10-mock-v1",
+  "base_commit": "ac611572c2efea1acfed48465fd482e6715ec57e",
+  "scope": "SYNTHETIC_MOCK_ONLY",
+  "fs": 100,
+  "samples": 3000,
+  "atom_samples": 200,
+  "atoms": 15,
+  "scales": [
+    100,
+    200,
+    400
+  ],
+  "stride": 50,
+  "embedding_dim": 32,
+  "prototypes_per_scale": 16,
+  "radius": 0,
+  "use_crf": false,
+  "raw_control": true,
+  "use_summary": true,
+  "use_amplitude": true,
+  "neutrals": [
+    0.0,
+    0.01
+  ],
+  "mean_denominator": "native_window_count",
+  "max_invalid": "exclude_using_negative_infinity",
+  "max_empty": "fixed_neutral",
+  "global_policy": "all_atoms_or_fixed_neutral",
+  "identity_atol": 1e-06,
+  "identity_rtol": 1e-06,
+  "noninterference_atol": 1e-06,
+  "noninterference_rtol": 1e-06,
+  "response_margin": 1e-06,
+  "mask_batch": 512,
+  "mock_seeds": [
+    123,
+    456,
+    789
+  ],
+  "benchmark_repetitions": 3,
+  "scientific_cpu_wall_ceiling_seconds": 600,
+  "cuda_wall_ceiling_seconds": 60,
+  "cuda_memory_fraction": 0.1,
+  "trainable_updates": 0,
+  "real_access_enabled": false
+}

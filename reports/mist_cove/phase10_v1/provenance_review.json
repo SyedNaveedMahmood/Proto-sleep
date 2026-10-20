@@ -1,0 +1,70 @@
+{
+  "version": "phase10-source-provenance-v1",
+  "status": "REVIEW_COMPLETE_AUTHENTICATION_BLOCKED",
+  "selected_future_candidate": {
+    "variant": "raw_context",
+    "seed": 123,
+    "split_fingerprint": "3e7a7260aae50ca522752f1cede41246daf1b2f6a8fd482800cfda97b4564e84",
+    "implementation_commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+    "training_config_identity": "configs/p3b_sc_matched_v1.json at pinned base; original run signature must still be checked",
+    "environment_identity": null,
+    "normalization_identity": null,
+    "bank_identity": null,
+    "creation_record_identity": null,
+    "original_checkpoint_byte_digest": null,
+    "model_state_identity": "1b308f3fc38af22609d2043b0988998b1a193c6d4ace73ac84382bb17e1a4c6d",
+    "independent_historical_reference": "committed original P3B aggregate state digest; not a checkpoint byte digest"
+  },
+  "assessment": {
+    "metadata_status": "INCOMPLETE",
+    "authentication_status": "BLOCKED",
+    "missing_independent_evidence": [
+      "environment_identity",
+      "normalization_identity",
+      "bank_identity",
+      "creation_record_identity",
+      "original_checkpoint_byte_digest"
+    ],
+    "reason": "Phase X does not open or independently authenticate actual source artifacts; separate artifact-access review required"
+  },
+  "original_p3b_run_fingerprint": "a9146071f32c148e30ed84a6763d77cc82c3de83bf6f90719be0f774c114754b",
+  "separately_identified_phase3_seal_references": [
+    {
+      "variant": "raw_context",
+      "seed": 123,
+      "historical_complete_seal_sha256": "a7747559ecc838307c342e09f226e536356ce6231f1b64ca58128fbd344b169b",
+      "identity": "separate Phase III raw_context fit; not assumed identical to original P3B weights"
+    },
+    {
+      "variant": "raw_context",
+      "seed": 456,
+      "historical_complete_seal_sha256": "c8c8f3c55d1e30987d58a52c324b0a6aa983b243d3d439489625afe62d7216f6",
+      "identity": "separate Phase III raw_context fit; not assumed identical to original P3B weights"
+    },
+    {
+      "variant": "raw_context",
+      "seed": 789,
+      "historical_complete_seal_sha256": "a626efa2ed5c1b8df42ffb9d6051671a9a30a0e6fef18ff356107729a7bb5151",
+      "identity": "separate Phase III raw_context fit; not assumed identical to original P3B weights"
+    }
+  ],
+  "published_phase3_environment": {
+    "python": "3.12.9",
+    "torch": "2.5.1",
+    "numpy": "1.26.4",
+    "cuda_build": "12.1",
+    "deterministic": true,
+    "tf32_matmul": false,
+    "tf32_cudnn": false
+  },
+  "published_split_file_sha256": "1162a41098bb8a724a0b8bf8bb320469c2b1c02bb802d9b5cf7f2e49d2da54e5",
+  "artifact_paths_resolved": 0,
+  "new_source_artifact_checksums_calculated": 0,
+  "source_artifacts_deserialized": 0,
+  "real_artifacts_opened": 0,
+  "safe_records": [
+    "reports/p3b/results.json",
+    "reports/mist_cove/phase3_source_v1/execution_receipt.json",
+    "reports/mist_cove/phase3_source_v1/source_results.json"
+  ]
+}

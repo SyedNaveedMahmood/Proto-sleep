@@ -1,0 +1,827 @@
+{
+  "version": "phase10-comparators-v1",
+  "status": "COMPLETE",
+  "rows": [
+    {
+      "name": "localized",
+      "native_ranking": {
+        "method": "native-head gradient-times-feature distributed through mean/max to physical atoms; approximate, not additive reconciliation",
+        "uses_model_internals": true,
+        "uses_oracle_to_select": false,
+        "head_backward_queries": 1,
+        "global_attribution_absolute_sum": 0.0,
+        "atom_attribution_absolute_sum": 1.9999998807907104,
+        "global_attribution_not_falsely_localized": true
+      },
+      "ranking": {
+        "mask_id": 4,
+        "retained_atoms": 1,
+        "retained_seconds": 2,
+        "canonical_response": true,
+        "universal_positive_valid": true,
+        "privileged_oracle_precision": 1.0,
+        "privileged_oracle_coverage": 1.0,
+        "canonical_queries": 2
+      },
+      "random_matched_size": {
+        "mask_id": 1,
+        "retained_atoms": 1,
+        "retained_seconds": 2,
+        "canonical_response": false,
+        "universal_positive_valid": false,
+        "privileged_oracle_precision": 0.0,
+        "privileged_oracle_coverage": 0.0
+      },
+      "random_selection_seed": 123,
+      "oracle_used_to_select": false,
+      "query_accounting": "lookups share exhaustive table; standalone ranking would need up to15 masked-head queries",
+      "greedy": {
+        "mask": 4,
+        "supported": true,
+        "local_queries": 16,
+        "retained_seconds": 2,
+        "universal_positive_valid": true,
+        "global_minimum": false
+      },
+      "positive_summary_coverage": 1.0,
+      "signed_summary_coverage": 1.0,
+      "signed_prior_only": false,
+      "original_prediction_correct_for_constructed_label": true,
+      "fidelity_domain": "canonical mask for ranking/greedy/random; universal completions for clauses; full truth table for ROBDD",
+      "oracle_role": "privileged fixture interval scoring only; no oracle for random historical architectures"
+    },
+    {
+      "name": "distributed",
+      "native_ranking": {
+        "method": "native-head gradient-times-feature distributed through mean/max to physical atoms; approximate, not additive reconciliation",
+        "uses_model_internals": true,
+        "uses_oracle_to_select": false,
+        "head_backward_queries": 1,
+        "global_attribution_absolute_sum": 0.0,
+        "atom_attribution_absolute_sum": 5.999999523162842,
+        "global_attribution_not_falsely_localized": true
+      },
+      "ranking": {
+        "mask_id": 9220,
+        "retained_atoms": 3,
+        "retained_seconds": 6,
+        "canonical_response": true,
+        "universal_positive_valid": true,
+        "privileged_oracle_precision": 1.0,
+        "privileged_oracle_coverage": 1.0,
+        "canonical_queries": 4
+      },
+      "random_matched_size": {
+        "mask_id": 769,
+        "retained_atoms": 3,
+        "retained_seconds": 6,
+        "canonical_response": false,
+        "universal_positive_valid": false,
+        "privileged_oracle_precision": 0.0,
+        "privileged_oracle_coverage": 0.0
+      },
+      "random_selection_seed": 123,
+      "oracle_used_to_select": false,
+      "query_accounting": "lookups share exhaustive table; standalone ranking would need up to15 masked-head queries",
+      "greedy": {
+        "mask": 9220,
+        "supported": true,
+        "local_queries": 18,
+        "retained_seconds": 6,
+        "universal_positive_valid": true,
+        "global_minimum": false
+      },
+      "positive_summary_coverage": 1.0,
+      "signed_summary_coverage": 1.0,
+      "signed_prior_only": false,
+      "original_prediction_correct_for_constructed_label": true,
+      "fidelity_domain": "canonical mask for ranking/greedy/random; universal completions for clauses; full truth table for ROBDD",
+      "oracle_role": "privileged fixture interval scoring only; no oracle for random historical architectures"
+    },
+    {
+      "name": "global_amplitude",
+      "native_ranking": {
+        "method": "native-head gradient-times-feature distributed through mean/max to physical atoms; approximate, not additive reconciliation",
+        "uses_model_internals": true,
+        "uses_oracle_to_select": false,
+        "head_backward_queries": 1,
+        "global_attribution_absolute_sum": 2.0304629802703857,
+        "atom_attribution_absolute_sum": 0.0,
+        "global_attribution_not_falsely_localized": true
+      },
+      "ranking": {
+        "mask_id": 32767,
+        "retained_atoms": 15,
+        "retained_seconds": 30,
+        "canonical_response": true,
+        "universal_positive_valid": true,
+        "privileged_oracle_precision": 1.0,
+        "privileged_oracle_coverage": 1.0,
+        "canonical_queries": 16
+      },
+      "random_matched_size": {
+        "mask_id": 32767,
+        "retained_atoms": 15,
+        "retained_seconds": 30,
+        "canonical_response": true,
+        "universal_positive_valid": true,
+        "privileged_oracle_precision": 1.0,
+        "privileged_oracle_coverage": 1.0
+      },
+      "random_selection_seed": 123,
+      "oracle_used_to_select": false,
+      "query_accounting": "lookups share exhaustive table; standalone ranking would need up to15 masked-head queries",
+      "greedy": {
+        "mask": 32767,
+        "supported": true,
+        "local_queries": 15,
+        "retained_seconds": 30,
+        "universal_positive_valid": true,
+        "global_minimum": false
+      },
+      "positive_summary_coverage": 1.0,
+      "signed_summary_coverage": 1.0,
+      "signed_prior_only": false,
+      "original_prediction_correct_for_constructed_label": true,
+      "fidelity_domain": "canonical mask for ranking/greedy/random; universal completions for clauses; full truth table for ROBDD",
+      "oracle_role": "privileged fixture interval scoring only; no oracle for random historical architectures"
+    },
+    {
+      "name": "high_frequency_nuisance",
+      "native_ranking": {
+        "method": "native-head gradient-times-feature distributed through mean/max to physical atoms; approximate, not additive reconciliation",
+        "uses_model_internals": true,
+        "uses_oracle_to_select": false,
+        "head_backward_queries": 1,
+        "global_attribution_absolute_sum": 0.0,
+        "atom_attribution_absolute_sum": 1.9999998807907104,
+        "global_attribution_not_falsely_localized": true
+      },
+      "ranking": {
+        "mask_id": 4,
+        "retained_atoms": 1,
+        "retained_seconds": 2,
+        "canonical_response": true,
+        "universal_positive_valid": true,
+        "privileged_oracle_precision": 1.0,
+        "privileged_oracle_coverage": 1.0,
+        "canonical_queries": 2
+      },
+      "random_matched_size": {
+        "mask_id": 1,
+        "retained_atoms": 1,
+        "retained_seconds": 2,
+        "canonical_response": false,
+        "universal_positive_valid": false,
+        "privileged_oracle_precision": 0.0,
+        "privileged_oracle_coverage": 0.0
+      },
+      "random_selection_seed": 123,
+      "oracle_used_to_select": false,
+      "query_accounting": "lookups share exhaustive table; standalone ranking would need up to15 masked-head queries",
+      "greedy": {
+        "mask": 4,
+        "supported": true,
+        "local_queries": 16,
+        "retained_seconds": 2,
+        "universal_positive_valid": true,
+        "global_minimum": false
+      },
+      "positive_summary_coverage": 1.0,
+      "signed_summary_coverage": 1.0,
+      "signed_prior_only": false,
+      "original_prediction_correct_for_constructed_label": true,
+      "fidelity_domain": "canonical mask for ranking/greedy/random; universal completions for clauses; full truth table for ROBDD",
+      "oracle_role": "privileged fixture interval scoring only; no oracle for random historical architectures"
+    },
+    {
+      "name": "broadband_interference",
+      "native_ranking": {
+        "method": "native-head gradient-times-feature distributed through mean/max to physical atoms; approximate, not additive reconciliation",
+        "uses_model_internals": true,
+        "uses_oracle_to_select": false,
+        "head_backward_queries": 1,
+        "global_attribution_absolute_sum": 0.0,
+        "atom_attribution_absolute_sum": 2.04011869430542,
+        "global_attribution_not_falsely_localized": true
+      },
+      "ranking": {
+        "mask_id": 4,
+        "retained_atoms": 1,
+        "retained_seconds": 2,
+        "canonical_response": true,
+        "universal_positive_valid": true,
+        "privileged_oracle_precision": 1.0,
+        "privileged_oracle_coverage": 1.0,
+        "canonical_queries": 2
+      },
+      "random_matched_size": {
+        "mask_id": 1,
+        "retained_atoms": 1,
+        "retained_seconds": 2,
+        "canonical_response": false,
+        "universal_positive_valid": false,
+        "privileged_oracle_precision": 0.0,
+        "privileged_oracle_coverage": 0.0
+      },
+      "random_selection_seed": 123,
+      "oracle_used_to_select": false,
+      "query_accounting": "lookups share exhaustive table; standalone ranking would need up to15 masked-head queries",
+      "greedy": {
+        "mask": 4,
+        "supported": true,
+        "local_queries": 16,
+        "retained_seconds": 2,
+        "universal_positive_valid": true,
+        "global_minimum": false
+      },
+      "positive_summary_coverage": 1.0,
+      "signed_summary_coverage": 1.0,
+      "signed_prior_only": false,
+      "original_prediction_correct_for_constructed_label": true,
+      "fidelity_domain": "canonical mask for ranking/greedy/random; universal completions for clauses; full truth table for ROBDD",
+      "oracle_role": "privileged fixture interval scoring only; no oracle for random historical architectures"
+    },
+    {
+      "name": "redundant",
+      "native_ranking": {
+        "method": "native-head gradient-times-feature distributed through mean/max to physical atoms; approximate, not additive reconciliation",
+        "uses_model_internals": true,
+        "uses_oracle_to_select": false,
+        "head_backward_queries": 1,
+        "global_attribution_absolute_sum": 0.0,
+        "atom_attribution_absolute_sum": 4.0,
+        "global_attribution_not_falsely_localized": true
+      },
+      "ranking": {
+        "mask_id": 1024,
+        "retained_atoms": 1,
+        "retained_seconds": 2,
+        "canonical_response": true,
+        "universal_positive_valid": true,
+        "privileged_oracle_precision": 1.0,
+        "privileged_oracle_coverage": 0.5,
+        "canonical_queries": 2
+      },
+      "random_matched_size": {
+        "mask_id": 1,
+        "retained_atoms": 1,
+        "retained_seconds": 2,
+        "canonical_response": false,
+        "universal_positive_valid": false,
+        "privileged_oracle_precision": 0.0,
+        "privileged_oracle_coverage": 0.0
+      },
+      "random_selection_seed": 123,
+      "oracle_used_to_select": false,
+      "query_accounting": "lookups share exhaustive table; standalone ranking would need up to15 masked-head queries",
+      "greedy": {
+        "mask": 1024,
+        "supported": true,
+        "local_queries": 16,
+        "retained_seconds": 2,
+        "universal_positive_valid": true,
+        "global_minimum": false
+      },
+      "positive_summary_coverage": 1.0,
+      "signed_summary_coverage": 1.0,
+      "signed_prior_only": false,
+      "original_prediction_correct_for_constructed_label": true,
+      "fidelity_domain": "canonical mask for ranking/greedy/random; universal completions for clauses; full truth table for ROBDD",
+      "oracle_role": "privileged fixture interval scoring only; no oracle for random historical architectures"
+    },
+    {
+      "name": "complementary",
+      "native_ranking": {
+        "method": "native-head gradient-times-feature distributed through mean/max to physical atoms; approximate, not additive reconciliation",
+        "uses_model_internals": true,
+        "uses_oracle_to_select": false,
+        "head_backward_queries": 1,
+        "global_attribution_absolute_sum": 0.0,
+        "atom_attribution_absolute_sum": 4.0,
+        "global_attribution_not_falsely_localized": true
+      },
+      "ranking": {
+        "mask_id": 1028,
+        "retained_atoms": 2,
+        "retained_seconds": 4,
+        "canonical_response": true,
+        "universal_positive_valid": true,
+        "privileged_oracle_precision": 1.0,
+        "privileged_oracle_coverage": 1.0,
+        "canonical_queries": 3
+      },
+      "random_matched_size": {
+        "mask_id": 1025,
+        "retained_atoms": 2,
+        "retained_seconds": 4,
+        "canonical_response": false,
+        "universal_positive_valid": false,
+        "privileged_oracle_precision": 0.5,
+        "privileged_oracle_coverage": 0.5
+      },
+      "random_selection_seed": 123,
+      "oracle_used_to_select": false,
+      "query_accounting": "lookups share exhaustive table; standalone ranking would need up to15 masked-head queries",
+      "greedy": {
+        "mask": 1028,
+        "supported": true,
+        "local_queries": 17,
+        "retained_seconds": 4,
+        "universal_positive_valid": true,
+        "global_minimum": false
+      },
+      "positive_summary_coverage": 1.0,
+      "signed_summary_coverage": 1.0,
+      "signed_prior_only": false,
+      "original_prediction_correct_for_constructed_label": true,
+      "fidelity_domain": "canonical mask for ranking/greedy/random; universal completions for clauses; full truth table for ROBDD",
+      "oracle_role": "privileged fixture interval scoring only; no oracle for random historical architectures"
+    },
+    {
+      "name": "disruptor",
+      "native_ranking": {
+        "method": "native-head gradient-times-feature distributed through mean/max to physical atoms; approximate, not additive reconciliation",
+        "uses_model_internals": true,
+        "uses_oracle_to_select": false,
+        "head_backward_queries": 1,
+        "global_attribution_absolute_sum": 0.0,
+        "atom_attribution_absolute_sum": 12.999999046325684,
+        "global_attribution_not_falsely_localized": true
+      },
+      "ranking": {
+        "mask_id": 1092,
+        "retained_atoms": 3,
+        "retained_seconds": 6,
+        "canonical_response": true,
+        "universal_positive_valid": true,
+        "privileged_oracle_precision": 0.6666666666666666,
+        "privileged_oracle_coverage": 1.0,
+        "canonical_queries": 4
+      },
+      "random_matched_size": {
+        "mask_id": 769,
+        "retained_atoms": 3,
+        "retained_seconds": 6,
+        "canonical_response": false,
+        "universal_positive_valid": false,
+        "privileged_oracle_precision": 0.0,
+        "privileged_oracle_coverage": 0.0
+      },
+      "random_selection_seed": 123,
+      "oracle_used_to_select": false,
+      "query_accounting": "lookups share exhaustive table; standalone ranking would need up to15 masked-head queries",
+      "greedy": {
+        "mask": 4,
+        "supported": true,
+        "local_queries": 16,
+        "retained_seconds": 2,
+        "universal_positive_valid": false,
+        "global_minimum": false
+      },
+      "positive_summary_coverage": 0.5,
+      "signed_summary_coverage": 1.0,
+      "signed_prior_only": false,
+      "original_prediction_correct_for_constructed_label": true,
+      "fidelity_domain": "canonical mask for ranking/greedy/random; universal completions for clauses; full truth table for ROBDD",
+      "oracle_role": "privileged fixture interval scoring only; no oracle for random historical architectures"
+    },
+    {
+      "name": "eventless",
+      "native_ranking": {
+        "method": "native-head gradient-times-feature distributed through mean/max to physical atoms; approximate, not additive reconciliation",
+        "uses_model_internals": true,
+        "uses_oracle_to_select": false,
+        "head_backward_queries": 1,
+        "global_attribution_absolute_sum": 0.0,
+        "atom_attribution_absolute_sum": 0.0,
+        "global_attribution_not_falsely_localized": true
+      },
+      "ranking": {
+        "mask_id": 0,
+        "retained_atoms": 0,
+        "retained_seconds": 0,
+        "canonical_response": true,
+        "universal_positive_valid": true,
+        "privileged_oracle_precision": null,
+        "privileged_oracle_coverage": null,
+        "canonical_queries": 1
+      },
+      "random_matched_size": {
+        "mask_id": 0,
+        "retained_atoms": 0,
+        "retained_seconds": 0,
+        "canonical_response": true,
+        "universal_positive_valid": true,
+        "privileged_oracle_precision": null,
+        "privileged_oracle_coverage": null
+      },
+      "random_selection_seed": 123,
+      "oracle_used_to_select": false,
+      "query_accounting": "lookups share exhaustive table; standalone ranking would need up to15 masked-head queries",
+      "greedy": {
+        "mask": 0,
+        "supported": true,
+        "local_queries": 15,
+        "retained_seconds": 0,
+        "universal_positive_valid": true,
+        "global_minimum": false
+      },
+      "positive_summary_coverage": 1.0,
+      "signed_summary_coverage": 1.0,
+      "signed_prior_only": true,
+      "original_prediction_correct_for_constructed_label": false,
+      "fidelity_domain": "canonical mask for ranking/greedy/random; universal completions for clauses; full truth table for ROBDD",
+      "oracle_role": "privileged fixture interval scoring only; no oracle for random historical architectures"
+    },
+    {
+      "name": "whole_epoch",
+      "native_ranking": {
+        "method": "native-head gradient-times-feature distributed through mean/max to physical atoms; approximate, not additive reconciliation",
+        "uses_model_internals": true,
+        "uses_oracle_to_select": false,
+        "head_backward_queries": 1,
+        "global_attribution_absolute_sum": 2.0304629802703857,
+        "atom_attribution_absolute_sum": 0.0,
+        "global_attribution_not_falsely_localized": true
+      },
+      "ranking": {
+        "mask_id": 32767,
+        "retained_atoms": 15,
+        "retained_seconds": 30,
+        "canonical_response": true,
+        "universal_positive_valid": true,
+        "privileged_oracle_precision": 1.0,
+        "privileged_oracle_coverage": 1.0,
+        "canonical_queries": 16
+      },
+      "random_matched_size": {
+        "mask_id": 32767,
+        "retained_atoms": 15,
+        "retained_seconds": 30,
+        "canonical_response": true,
+        "universal_positive_valid": true,
+        "privileged_oracle_precision": 1.0,
+        "privileged_oracle_coverage": 1.0
+      },
+      "random_selection_seed": 123,
+      "oracle_used_to_select": false,
+      "query_accounting": "lookups share exhaustive table; standalone ranking would need up to15 masked-head queries",
+      "greedy": {
+        "mask": 32767,
+        "supported": true,
+        "local_queries": 15,
+        "retained_seconds": 30,
+        "universal_positive_valid": true,
+        "global_minimum": false
+      },
+      "positive_summary_coverage": 1.0,
+      "signed_summary_coverage": 1.0,
+      "signed_prior_only": false,
+      "original_prediction_correct_for_constructed_label": true,
+      "fidelity_domain": "canonical mask for ranking/greedy/random; universal completions for clauses; full truth table for ROBDD",
+      "oracle_role": "privileged fixture interval scoring only; no oracle for random historical architectures"
+    },
+    {
+      "name": "mixed_global_local",
+      "native_ranking": {
+        "method": "native-head gradient-times-feature distributed through mean/max to physical atoms; approximate, not additive reconciliation",
+        "uses_model_internals": true,
+        "uses_oracle_to_select": false,
+        "head_backward_queries": 1,
+        "global_attribution_absolute_sum": 2.0304629802703857,
+        "atom_attribution_absolute_sum": 2.065821886062622,
+        "global_attribution_not_falsely_localized": true
+      },
+      "ranking": {
+        "mask_id": 32767,
+        "retained_atoms": 15,
+        "retained_seconds": 30,
+        "canonical_response": true,
+        "universal_positive_valid": true,
+        "privileged_oracle_precision": 1.0,
+        "privileged_oracle_coverage": 1.0,
+        "canonical_queries": 16
+      },
+      "random_matched_size": {
+        "mask_id": 32767,
+        "retained_atoms": 15,
+        "retained_seconds": 30,
+        "canonical_response": true,
+        "universal_positive_valid": true,
+        "privileged_oracle_precision": 1.0,
+        "privileged_oracle_coverage": 1.0
+      },
+      "random_selection_seed": 123,
+      "oracle_used_to_select": false,
+      "query_accounting": "lookups share exhaustive table; standalone ranking would need up to15 masked-head queries",
+      "greedy": {
+        "mask": 32767,
+        "supported": true,
+        "local_queries": 15,
+        "retained_seconds": 30,
+        "universal_positive_valid": true,
+        "global_minimum": false
+      },
+      "positive_summary_coverage": 1.0,
+      "signed_summary_coverage": 1.0,
+      "signed_prior_only": false,
+      "original_prediction_correct_for_constructed_label": true,
+      "fidelity_domain": "canonical mask for ranking/greedy/random; universal completions for clauses; full truth table for ROBDD",
+      "oracle_role": "privileged fixture interval scoring only; no oracle for random historical architectures"
+    },
+    {
+      "name": "neutral_bias",
+      "native_ranking": {
+        "method": "native-head gradient-times-feature distributed through mean/max to physical atoms; approximate, not additive reconciliation",
+        "uses_model_internals": true,
+        "uses_oracle_to_select": false,
+        "head_backward_queries": 0,
+        "global_attribution_absolute_sum": 0.0,
+        "atom_attribution_absolute_sum": 0.0,
+        "global_attribution_not_falsely_localized": true
+      },
+      "ranking": {
+        "mask_id": 0,
+        "retained_atoms": 0,
+        "retained_seconds": 0,
+        "canonical_response": true,
+        "universal_positive_valid": true,
+        "privileged_oracle_precision": null,
+        "privileged_oracle_coverage": null,
+        "canonical_queries": 1
+      },
+      "random_matched_size": {
+        "mask_id": 0,
+        "retained_atoms": 0,
+        "retained_seconds": 0,
+        "canonical_response": true,
+        "universal_positive_valid": true,
+        "privileged_oracle_precision": null,
+        "privileged_oracle_coverage": null
+      },
+      "random_selection_seed": 123,
+      "oracle_used_to_select": false,
+      "query_accounting": "lookups share exhaustive table; standalone ranking would need up to15 masked-head queries",
+      "greedy": {
+        "mask": 0,
+        "supported": true,
+        "local_queries": 15,
+        "retained_seconds": 0,
+        "universal_positive_valid": true,
+        "global_minimum": false
+      },
+      "positive_summary_coverage": 1.0,
+      "signed_summary_coverage": 1.0,
+      "signed_prior_only": true,
+      "original_prediction_correct_for_constructed_label": true,
+      "fidelity_domain": "canonical mask for ranking/greedy/random; universal completions for clauses; full truth table for ROBDD",
+      "oracle_role": "privileged fixture interval scoring only; no oracle for random historical architectures"
+    },
+    {
+      "name": "aggregation_sensitivity",
+      "native_ranking": {
+        "method": "native-head gradient-times-feature distributed through mean/max to physical atoms; approximate, not additive reconciliation",
+        "uses_model_internals": true,
+        "uses_oracle_to_select": false,
+        "head_backward_queries": 1,
+        "global_attribution_absolute_sum": 0.0,
+        "atom_attribution_absolute_sum": 0.03389830142259598,
+        "global_attribution_not_falsely_localized": true
+      },
+      "ranking": {
+        "mask_id": 0,
+        "retained_atoms": 0,
+        "retained_seconds": 0,
+        "canonical_response": true,
+        "universal_positive_valid": true,
+        "privileged_oracle_precision": null,
+        "privileged_oracle_coverage": 0.0,
+        "canonical_queries": 1
+      },
+      "random_matched_size": {
+        "mask_id": 0,
+        "retained_atoms": 0,
+        "retained_seconds": 0,
+        "canonical_response": true,
+        "universal_positive_valid": true,
+        "privileged_oracle_precision": null,
+        "privileged_oracle_coverage": 0.0
+      },
+      "random_selection_seed": 123,
+      "oracle_used_to_select": false,
+      "query_accounting": "lookups share exhaustive table; standalone ranking would need up to15 masked-head queries",
+      "greedy": {
+        "mask": 0,
+        "supported": true,
+        "local_queries": 15,
+        "retained_seconds": 0,
+        "universal_positive_valid": true,
+        "global_minimum": false
+      },
+      "positive_summary_coverage": 1.0,
+      "signed_summary_coverage": 1.0,
+      "signed_prior_only": true,
+      "original_prediction_correct_for_constructed_label": false,
+      "fidelity_domain": "canonical mask for ranking/greedy/random; universal completions for clauses; full truth table for ROBDD",
+      "oracle_role": "privileged fixture interval scoring only; no oracle for random historical architectures"
+    },
+    {
+      "name": "incorrect_explainable",
+      "native_ranking": {
+        "method": "native-head gradient-times-feature distributed through mean/max to physical atoms; approximate, not additive reconciliation",
+        "uses_model_internals": true,
+        "uses_oracle_to_select": false,
+        "head_backward_queries": 1,
+        "global_attribution_absolute_sum": 0.0,
+        "atom_attribution_absolute_sum": 1.9999998807907104,
+        "global_attribution_not_falsely_localized": true
+      },
+      "ranking": {
+        "mask_id": 4,
+        "retained_atoms": 1,
+        "retained_seconds": 2,
+        "canonical_response": true,
+        "universal_positive_valid": true,
+        "privileged_oracle_precision": 1.0,
+        "privileged_oracle_coverage": 1.0,
+        "canonical_queries": 2
+      },
+      "random_matched_size": {
+        "mask_id": 1,
+        "retained_atoms": 1,
+        "retained_seconds": 2,
+        "canonical_response": false,
+        "universal_positive_valid": false,
+        "privileged_oracle_precision": 0.0,
+        "privileged_oracle_coverage": 0.0
+      },
+      "random_selection_seed": 123,
+      "oracle_used_to_select": false,
+      "query_accounting": "lookups share exhaustive table; standalone ranking would need up to15 masked-head queries",
+      "greedy": {
+        "mask": 4,
+        "supported": true,
+        "local_queries": 16,
+        "retained_seconds": 2,
+        "universal_positive_valid": true,
+        "global_minimum": false
+      },
+      "positive_summary_coverage": 1.0,
+      "signed_summary_coverage": 1.0,
+      "signed_prior_only": false,
+      "original_prediction_correct_for_constructed_label": false,
+      "fidelity_domain": "canonical mask for ranking/greedy/random; universal completions for clauses; full truth table for ROBDD",
+      "oracle_role": "privileged fixture interval scoring only; no oracle for random historical architectures"
+    },
+    {
+      "name": "native_123",
+      "native_ranking": {
+        "method": "native-head gradient-times-feature distributed through mean/max to physical atoms; approximate, not additive reconciliation",
+        "uses_model_internals": true,
+        "uses_oracle_to_select": false,
+        "head_backward_queries": 1,
+        "global_attribution_absolute_sum": 0.4645959734916687,
+        "atom_attribution_absolute_sum": 0.26180073618888855,
+        "global_attribution_not_falsely_localized": true
+      },
+      "ranking": {
+        "mask_id": 0,
+        "retained_atoms": 0,
+        "retained_seconds": 0,
+        "canonical_response": true,
+        "universal_positive_valid": true,
+        "privileged_oracle_precision": null,
+        "privileged_oracle_coverage": null,
+        "canonical_queries": 1
+      },
+      "random_matched_size": {
+        "mask_id": 0,
+        "retained_atoms": 0,
+        "retained_seconds": 0,
+        "canonical_response": true,
+        "universal_positive_valid": true,
+        "privileged_oracle_precision": null,
+        "privileged_oracle_coverage": null
+      },
+      "random_selection_seed": 123,
+      "oracle_used_to_select": false,
+      "query_accounting": "lookups share exhaustive table; standalone ranking would need up to15 masked-head queries",
+      "greedy": {
+        "mask": 0,
+        "supported": true,
+        "local_queries": 15,
+        "retained_seconds": 0,
+        "universal_positive_valid": true,
+        "global_minimum": false
+      },
+      "positive_summary_coverage": 1.0,
+      "signed_summary_coverage": 1.0,
+      "signed_prior_only": true,
+      "original_prediction_correct_for_constructed_label": null,
+      "fidelity_domain": "canonical mask for ranking/greedy/random; universal completions for clauses; full truth table for ROBDD",
+      "oracle_role": "privileged fixture interval scoring only; no oracle for random historical architectures"
+    },
+    {
+      "name": "native_456",
+      "native_ranking": {
+        "method": "native-head gradient-times-feature distributed through mean/max to physical atoms; approximate, not additive reconciliation",
+        "uses_model_internals": true,
+        "uses_oracle_to_select": false,
+        "head_backward_queries": 1,
+        "global_attribution_absolute_sum": 0.3921932280063629,
+        "atom_attribution_absolute_sum": 0.8201021552085876,
+        "global_attribution_not_falsely_localized": true
+      },
+      "ranking": {
+        "mask_id": 8,
+        "retained_atoms": 1,
+        "retained_seconds": 2,
+        "canonical_response": true,
+        "universal_positive_valid": true,
+        "privileged_oracle_precision": null,
+        "privileged_oracle_coverage": null,
+        "canonical_queries": 2
+      },
+      "random_matched_size": {
+        "mask_id": 1,
+        "retained_atoms": 1,
+        "retained_seconds": 2,
+        "canonical_response": true,
+        "universal_positive_valid": true,
+        "privileged_oracle_precision": null,
+        "privileged_oracle_coverage": null
+      },
+      "random_selection_seed": 123,
+      "oracle_used_to_select": false,
+      "query_accounting": "lookups share exhaustive table; standalone ranking would need up to15 masked-head queries",
+      "greedy": {
+        "mask": 16384,
+        "supported": true,
+        "local_queries": 16,
+        "retained_seconds": 2,
+        "universal_positive_valid": true,
+        "global_minimum": false
+      },
+      "positive_summary_coverage": 0.9375286111026337,
+      "signed_summary_coverage": 0.9375286111026337,
+      "signed_prior_only": false,
+      "original_prediction_correct_for_constructed_label": null,
+      "fidelity_domain": "canonical mask for ranking/greedy/random; universal completions for clauses; full truth table for ROBDD",
+      "oracle_role": "privileged fixture interval scoring only; no oracle for random historical architectures"
+    },
+    {
+      "name": "native_789",
+      "native_ranking": {
+        "method": "native-head gradient-times-feature distributed through mean/max to physical atoms; approximate, not additive reconciliation",
+        "uses_model_internals": true,
+        "uses_oracle_to_select": false,
+        "head_backward_queries": 1,
+        "global_attribution_absolute_sum": 0.36230286955833435,
+        "atom_attribution_absolute_sum": 1.2443586587905884,
+        "global_attribution_not_falsely_localized": true
+      },
+      "ranking": {
+        "mask_id": 0,
+        "retained_atoms": 0,
+        "retained_seconds": 0,
+        "canonical_response": true,
+        "universal_positive_valid": true,
+        "privileged_oracle_precision": null,
+        "privileged_oracle_coverage": null,
+        "canonical_queries": 1
+      },
+      "random_matched_size": {
+        "mask_id": 0,
+        "retained_atoms": 0,
+        "retained_seconds": 0,
+        "canonical_response": true,
+        "universal_positive_valid": true,
+        "privileged_oracle_precision": null,
+        "privileged_oracle_coverage": null
+      },
+      "random_selection_seed": 123,
+      "oracle_used_to_select": false,
+      "query_accounting": "lookups share exhaustive table; standalone ranking would need up to15 masked-head queries",
+      "greedy": {
+        "mask": 0,
+        "supported": true,
+        "local_queries": 15,
+        "retained_seconds": 0,
+        "universal_positive_valid": true,
+        "global_minimum": false
+      },
+      "positive_summary_coverage": 1.0,
+      "signed_summary_coverage": 1.0,
+      "signed_prior_only": true,
+      "original_prediction_correct_for_constructed_label": null,
+      "fidelity_domain": "canonical mask for ranking/greedy/random; universal completions for clauses; full truth table for ROBDD",
+      "oracle_role": "privileged fixture interval scoring only; no oracle for random historical architectures"
+    }
+  ],
+  "wall_seconds": 0.0788123060046928,
+  "external_explainer_implementations_run": false,
+  "real_artifacts_opened": 0,
+  "successful_actual_head_backpropagations": 16,
+  "accounting_correction": "v3: constant-bias derivative has no backward query; all17 result values/tables unchanged"
+}
