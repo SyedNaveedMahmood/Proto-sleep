@@ -124,7 +124,8 @@
       ],
       "status": "COMPLETE",
       "code_configuration_identity": {
-        "operator_commit": "3bb3ba0abb7ee0169b038f147cadc602ef84c686"
+        "operator_commit": "3bb3ba0abb7ee0169b038f147cadc602ef84c686",
+        "config_sha256": "2cda20130e80fd90e2460fb55262042abec2f5ac38aeaa429f85113c4eb55820"
       },
       "tests_performed": [
         "13 identity/interface tests passed",
@@ -149,7 +150,8 @@
       ],
       "status": "COMPLETE",
       "code_configuration_identity": {
-        "operator_commit": "3bb3ba0"
+        "operator_commit": "3bb3ba0",
+        "config_sha256": "2cda20130e80fd90e2460fb55262042abec2f5ac38aeaa429f85113c4eb55820"
       },
       "tests_performed": [
         "37 noninterference/tamper/input-validation tests passed",
@@ -175,7 +177,8 @@
       ],
       "status": "COMPLETE",
       "code_configuration_identity": {
-        "frozen_probe_commit": "9f9c84dafb3362136be3d3e3dcadfb8807be9c37"
+        "frozen_probe_commit": "9f9c84dafb3362136be3d3e3dcadfb8807be9c37",
+        "config_sha256": "2cda20130e80fd90e2460fb55262042abec2f5ac38aeaa429f85113c4eb55820"
       },
       "tests_performed": [
         "3 meaningful constructed behavior controls passed",
@@ -203,7 +206,8 @@
       ],
       "status": "COMPLETE",
       "code_configuration_identity": {
-        "frozen_probe_commit": "9f9c84d"
+        "frozen_probe_commit": "9f9c84d",
+        "config_sha256": "2cda20130e80fd90e2460fb55262042abec2f5ac38aeaa429f85113c4eb55820"
       },
       "tests_performed": [
         "6 circuit tests passed including all32768 native-geometry OR/AND/blocker/global/constant rows, XOR and no-support control",
@@ -231,7 +235,8 @@
       "status": "COMPLETE",
       "code_configuration_identity": {
         "scientific_probe_commit": "9f9c84d",
-        "constant_head_export_correction": "phase10_reporting_freeze_v2.json"
+        "constant_head_export_correction": "phase10_reporting_freeze_v2.json",
+        "config_sha256": "2cda20130e80fd90e2460fb55262042abec2f5ac38aeaa429f85113c4eb55820"
       },
       "tests_performed": [
         "4 behavior/constant-gradient tests pass",
@@ -261,7 +266,8 @@
       ],
       "status": "COMPLETE",
       "code_configuration_identity": {
-        "base_commit": "ac611572c2efea1acfed48465fd482e6715ec57e"
+        "base_commit": "ac611572c2efea1acfed48465fd482e6715ec57e",
+        "config_sha256": "2cda20130e80fd90e2460fb55262042abec2f5ac38aeaa429f85113c4eb55820"
       },
       "tests_performed": [
         "2 metadata provenance tests pass; allowlist rejects unknown paths before any subprocess/IO",
@@ -290,7 +296,8 @@
       "status": "COMPLETE",
       "code_configuration_identity": {
         "benchmark_source_sha256": "f6d5b0d8472c0dbe03fead3df76471be280bb5558c9e12d2d52fff1d49e5e290",
-        "frozen_core": "phase10_reporting_freeze_v2.json"
+        "frozen_core": "phase10_reporting_freeze_v2.json",
+        "config_sha256": "2cda20130e80fd90e2460fb55262042abec2f5ac38aeaa429f85113c4eb55820"
       },
       "tests_performed": [
         "3 seeds x3 bounded CPU timing repetitions plus3 .01-neutral tables and3 random-Boolean compiler stress repetitions",
@@ -320,7 +327,8 @@
       ],
       "status": "COMPLETE",
       "code_configuration_identity": {
-        "safety_source_sha256": "bb6303ec291fb956f25d5139acce89c37ef3625d10bb8e5ce452b0f15f674218"
+        "safety_source_sha256": "bb6303ec291fb956f25d5139acce89c37ef3625d10bb8e5ce452b0f15f674218",
+        "config_sha256": "2cda20130e80fd90e2460fb55262042abec2f5ac38aeaa429f85113c4eb55820"
       },
       "tests_performed": [
         "20 authorization/gate/privacy/atomicity/tamper/CUDA-contention tests passed",
@@ -351,7 +359,8 @@
       ],
       "status": "COMPLETE",
       "code_configuration_identity": {
-        "frozen_core": "phase10_reporting_freeze_v2.json"
+        "frozen_core": "phase10_reporting_freeze_v2.json",
+        "config_sha256": "2cda20130e80fd90e2460fb55262042abec2f5ac38aeaa429f85113c4eb55820"
       },
       "tests_performed": [
         "Protocol reviewed against supplied Phase X11-gate contract, original split/preprocessing and measured/mock limitations"
@@ -377,7 +386,8 @@
       ],
       "status": "COMPLETE",
       "code_configuration_identity": {
-        "frozen_core": "phase10_reporting_freeze_v2.json"
+        "frozen_core": "phase10_reporting_freeze_v2.json",
+        "config_sha256": "2cda20130e80fd90e2460fb55262042abec2f5ac38aeaa429f85113c4eb55820"
       },
       "tests_performed": [
         "Protocol reviewed against supplied Phase X11-gate contract, original split/preprocessing and measured/mock limitations"
@@ -401,13 +411,36 @@
       "dependencies": [
         "X14"
       ],
-      "status": "PENDING",
-      "code_configuration_identity": {},
-      "tests_performed": [],
-      "produced_artifacts": [],
-      "scientific_findings": [],
-      "unresolved_limitations": [],
-      "block_reason": null
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "tested_commit": "cdb5672b8233829d8c688d28effec82c6fe505e9",
+        "frozen_core": "phase10_reporting_freeze_v2.json",
+        "config_sha256": "2cda20130e80fd90e2460fb55262042abec2f5ac38aeaa429f85113c4eb55820"
+      },
+      "tests_performed": [
+        "Complete CPU regression: 968 passed / 11 CUDA skips / 0 failures/errors",
+        "JUnit wall 17.293s; log/JUnit digests retained",
+        "Native full-input bitwise equality;252 noninterference comparisons;17 full32768-row circuits; source-access/tamper/atomicity/gate tests pass",
+        "Default metadata verification does not open source artifacts; all baseline tracked files unchanged"
+      ],
+      "produced_artifacts": [
+        "reports/mist_cove/phase10_v1/correctness_receipt.json",
+        "tests/mist_cove/test_phase10_dependency.py",
+        "tests/mist_cove/test_phase10_identity.py",
+        "tests/mist_cove/test_phase10_noninterference.py",
+        "tests/mist_cove/test_phase10_circuits.py",
+        "tests/mist_cove/test_phase10_controls.py",
+        "tests/mist_cove/test_phase10_provenance.py",
+        "tests/mist_cove/test_phase10_authorization.py"
+      ],
+      "scientific_findings": [
+        "880 historical CPU tests preserved and88 new Phase X tests passed",
+        "Zero source artifact loads; optional new CUDA checks blocked, historical CUDA results not substituted"
+      ],
+      "unresolved_limitations": [
+        "Mock-only correctness; actual trained source model and GPU correctness untested"
+      ],
+      "block_reason": "Optional CUDA blocked by another compute process; CPU required work complete"
     },
     {
       "id": "X16",
@@ -415,12 +448,26 @@
       "dependencies": [
         "X15"
       ],
-      "status": "PENDING",
-      "code_configuration_identity": {},
-      "tests_performed": [],
-      "produced_artifacts": [],
-      "scientific_findings": [],
-      "unresolved_limitations": [],
+      "status": "IN_PROGRESS",
+      "code_configuration_identity": {
+        "frozen_core": "phase10_reporting_freeze_v2.json",
+        "config_sha256": "2cda20130e80fd90e2460fb55262042abec2f5ac38aeaa429f85113c4eb55820"
+      },
+      "tests_performed": [
+        "968 passed /11 CUDA skips /0 failures; all independent tasks complete",
+        "Safe aggregate schema and historical immutability checks; publication manifest/push/draft PR/final-head CI next"
+      ],
+      "produced_artifacts": [
+        "docs/mist_cove/PHASE_X_RESULTS_V1.md",
+        "reports/mist_cove/phase10_v1/publication_manifest.json"
+      ],
+      "scientific_findings": [
+        "Engineering interface verified on mocks; source authentication/actual GPU feasibility remain blocked or untested",
+        "Human-review protocol ready; no real pilot or Phase XI authorized"
+      ],
+      "unresolved_limitations": [
+        "GitHub publication and final exact-head CI pending"
+      ],
       "block_reason": null
     }
   ]

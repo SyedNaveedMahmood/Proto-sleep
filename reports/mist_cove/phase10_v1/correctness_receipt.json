@@ -4322,5 +4322,33 @@
       }
     ],
     "real_artifacts_opened": 0
+  },
+  "full_cpu": {
+    "tests": 979,
+    "passed": 968,
+    "skipped": 11,
+    "failures": 0,
+    "errors": 0,
+    "seconds": 17.293,
+    "junit_sha256": "124947ef6a0278a1f9cba323eff59470e8bac9cf5dec2cde335ecfcdf76de45a",
+    "log_sha256": "adfbb80b68d636f0c6e7b382f52774e3ec5cff46ef4744d1f7dd2d1ce5d85fae"
+  },
+  "cuda": {
+    "status": "BLOCKED",
+    "reason": "Another compute process occupies a GPU; do not allocate or interrupt",
+    "compute_process_count": 1,
+    "device_memory_snapshot": "NVIDIA GeForce RTX 4080 SUPER, 16376, 14532, 1413",
+    "new_cuda_model_operations": 0
+  },
+  "frozen_core_verification": {
+    "status": "PASS",
+    "frozen_files": 13
+  },
+  "historical_files_unchanged": true,
+  "environment": {
+    "python": "3.12.9",
+    "device": "CPU",
+    "inference_dtype": "float32",
+    "optimizer_updates": 0
   }
 }

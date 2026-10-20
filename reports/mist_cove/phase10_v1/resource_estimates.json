@@ -245,5 +245,6 @@
     "full_target_queries": 12,
     "gradient_backwards": 0
   },
-  "real_artifacts_opened": 0
+  "real_artifacts_opened": 0,
+  "CPU_hardware": "Intel Core i7-14700K;28 logical CPUs; benchmark uses2 threads"
 }
