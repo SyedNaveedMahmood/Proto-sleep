@@ -121,3 +121,9 @@ def test_complete_circuit_audit_fixture_archive_and_target_schema(tmp_path,monke
         assert row['mask_search_size']==32768 and row['exact']
         assert all(circuit['exact_equality'] for circuit in row['circuits'])
         assert all(clause['minimum_margin']>1e-6 for clause in row['signed_summary']['clauses'])
+
+def test_constant_confidence_correlation_null_and_json_safe():
+    logits=torch.tensor([1.,2.,0.,-1.,.2]).repeat(1000,1)
+    result=ex.reliability(logits,torch.arange(1000)%5)
+    assert result['error_confidence_correlation'] is None
+    json.dumps(result,allow_nan=False)

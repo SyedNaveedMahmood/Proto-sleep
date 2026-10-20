@@ -157,14 +157,18 @@
       "dependencies": [
         "WP06"
       ],
-      "status": "PENDING",
+      "status": "COMPLETE",
       "code_configuration_identity": {
-        "commit": "99ee93d4343970a948b6b29a064728b6c82d0ae0",
-        "plan_sha256": "5297b790fb2a6610755516ba1f182527255fd0f007266561aa2b3deda04b3a3d"
+        "commit": "702e90802e1ebbaa1b39940ad6de25ebd20dacd1",
+        "config_sha256": "32d947fc6b2858ad5c9a1a2e0a7b0782d6f96373520391839906265ec422bac2"
       },
       "tests_performed": [],
-      "produced_artifacts": [],
-      "scientific_findings": [],
+      "produced_artifacts": [
+        "mist_transfer_runs/mist_cove/phase9_v1/core_v1/wp07_receipt.json"
+      ],
+      "scientific_findings": [
+        "Exact same-model response tables and bounded summaries complete; no clinical inference"
+      ],
       "unresolved_limitations": [
         "synthetic-only scope; no real EEG authorization"
       ],
@@ -176,10 +180,10 @@
       "dependencies": [
         "WP07"
       ],
-      "status": "PENDING",
+      "status": "BLOCKED",
       "code_configuration_identity": {
-        "commit": "99ee93d4343970a948b6b29a064728b6c82d0ae0",
-        "plan_sha256": "5297b790fb2a6610755516ba1f182527255fd0f007266561aa2b3deda04b3a3d"
+        "commit": "702e90802e1ebbaa1b39940ad6de25ebd20dacd1",
+        "config_sha256": "32d947fc6b2858ad5c9a1a2e0a7b0782d6f96373520391839906265ec422bac2"
       },
       "tests_performed": [],
       "produced_artifacts": [],
@@ -187,7 +191,15 @@
       "unresolved_limitations": [
         "synthetic-only scope; no real EEG authorization"
       ],
-      "block_reason": null
+      "block_reason": "ValueError('Out of range float values are not JSON compliant: nan')",
+      "operational_history": [
+        {
+          "status": "BLOCKED",
+          "reason": "Strict JSON refused undefined constant-confidence correlation after first sealed head; no scientific criterion changed",
+          "preserved_updates": 150,
+          "reporting_amendment": "experiments/mist_cove/phase9_reporting_freeze_v2.json"
+        }
+      ]
     },
     {
       "id": "WP09",
