@@ -1,0 +1,13 @@
+# Phase VIII conditional evidence and independent donor protocol v1
+
+E0/M1, E1/M2, E2/M3 and E3/M2_rms use the same B1 task/seed encoder state, frozen during all head fits, deterministic seed+402 head initialization, 300 batch-16 updates, common TRAIN feature cache, fourteen original candidates and K4. Effective head parameters: 185/185/95/185. E2's 90 disabled parameters remain declared but disconnected. The encoder has 3,408 parameters; total declared model size is 3,593. Fixed encoders receive no oracle metadata. Sparse heads still encode every candidate.
+
+Confirmatory fits require collective primary B1 PASS over all six cases. A generated-fixture-only route checks all heads, selection/reselection, five logits, exact signed accounting and shared encoder hashes. It does not provide scientific scores. If the primary fails, Task 18 remains NOT TESTED and zero confirmatory head updates may run.
+
+If authorized by the gate, use separate head TRAIN/evaluation offsets 9,300,000/9,400,000. Preserve native signed score, internal fixed-witness pathways, full waveform component deletion, background changes and reselection as separate estimands. Report original-interval localization, RMS ranking controls, per-class metrics, individual and joint component effects. Synthetic component subtraction has a known generative interpretation; donor replacement and physiology do not follow from arithmetic equality.
+
+## Independent synthetic donor study
+
+Run on primary B1 independently of the additive gate. Per task/seed, 100 generated TRAIN and 100 disjoint calibration baseline segments fit the existing separate compatibility-envelope method: robust center/MAD, calibrated 95th-percentile cutoff. Fixed offsets: 8,900,000/9,000,000; evaluation 9,100,000, 50 examples. The target is the first 200-sample diagnostic interval. Candidate populations: three TRAIN baseline segments nearest target energy, endpoint bridge, and privileged exact original class-free baseline. TRAIN/oracle baselines contain no diagnostic component by construction; bridge neutrality is unverified.
+
+All require envelope acceptance, relative target-energy mismatch <=.5, normalized spectral L1 <=.5 and endpoint discrepancy <=30 uV. These new guards are fixed before results; Phase VI's failed guards and historical 0/210 remain unchanged. Record every attempted/accepted count, overlapping rejection reasons, mean distortions, per-example coverage and conditional disagreement/effect spread only with >=2 accepted donors. Single-interval geometry avoids union confounds; multi-interval donor geometry remains untested. A physiologically acceptable donor is NOT established by these synthetic envelopes.
