@@ -16,3 +16,10 @@ def test_temperature_fitted_on_separate_role_and_metrics():
     assert sum(x['count'] for x in result['raw']['reliability_bins'])==100
     assert len(result['raw']['per_stage_recall'])==5
     assert paired_accuracy_interval(logits,logits,y,123)['bootstrap_ci95']==[0.,0.]
+
+def test_reporting_accepts_logits_with_gradient_without_retaining_graph():
+    from mist_cove.phase8.evaluation import reliability
+    logits=torch.randn(10,5,requires_grad=True)
+    result=reliability(logits,torch.arange(10)%5)
+    assert result['error_confidence_correlation'] is not None
+    assert logits.grad is None

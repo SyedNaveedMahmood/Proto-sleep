@@ -34,7 +34,8 @@ def output_directory(path,scope='SYNTHETIC_ONLY'):
 
 def freeze_proof(stage):
     if stage not in {'diagnostic','confirmatory'}:raise ValueError('unknown protocol stage')
-    p=ROOT/f'experiments/mist_cove/phase8_{stage}_freeze_v1.json'
+    version=2 if stage=='diagnostic' else 1
+    p=ROOT/f'experiments/mist_cove/phase8_{stage}_freeze_v{version}.json'
     # A present-day JSON cannot replace a committed preregistration.
     committed=subprocess.check_output(['git','show',f'HEAD:{p.relative_to(ROOT)}'],cwd=ROOT)
     if committed!=p.read_bytes():raise ValueError('freeze must be committed before execution')

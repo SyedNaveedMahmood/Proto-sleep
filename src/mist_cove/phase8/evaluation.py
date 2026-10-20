@@ -5,6 +5,7 @@ from mist_cove.phase7.prospective import score
 from mist_cove.phase5.runtime import paired_summary
 
 
+@torch.no_grad()
 def reliability(logits,y,temperature=1.):
     logits=logits/temperature;result=score(logits,y)
     p=logits.softmax(-1);confidence,pred=p.max(-1);correct=pred==y
