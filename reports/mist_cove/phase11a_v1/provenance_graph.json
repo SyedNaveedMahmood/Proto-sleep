@@ -1,0 +1,348 @@
+{
+  "version": "phase11a-evidence-graph-v1",
+  "domain": "HISTORICAL_METADATA_ONLY",
+  "levels": {
+    "1": "self-consistent only",
+    "2": "historical content/reference anchored independently of current candidate",
+    "3": "actual artifact bytes authenticated under separate authorization"
+  },
+  "nodes": [
+    {
+      "id": "source",
+      "label": "Historical source661dbb3",
+      "status": "LEVEL_2"
+    },
+    {
+      "id": "protocol",
+      "label": "Frozen P3B config",
+      "status": "LEVEL_2"
+    },
+    {
+      "id": "split",
+      "label": "Frozen split references",
+      "status": "LEVEL_2"
+    },
+    {
+      "id": "normalization",
+      "label": "TRAIN normalization lineage",
+      "status": "UNINSPECTED"
+    },
+    {
+      "id": "bank",
+      "label": "TRAIN bank lineage",
+      "status": "UNINSPECTED"
+    },
+    {
+      "id": "run",
+      "label": "Original P3B/raw_context/123",
+      "status": "LEVEL_2_REFERENCE"
+    },
+    {
+      "id": "creation",
+      "label": "Original run creation/provenance",
+      "status": "UNINSPECTED"
+    },
+    {
+      "id": "publication",
+      "label": "Original publication15995b3",
+      "status": "LEVEL_2"
+    },
+    {
+      "id": "root_marker",
+      "label": "Root COMPLETE905ba78c reference",
+      "status": "LEVEL_2_REFERENCE"
+    },
+    {
+      "id": "validated_marker",
+      "label": "Selected per-run VALIDATED_COMPLETE",
+      "status": "UNINSPECTED"
+    },
+    {
+      "id": "byte_reference",
+      "label": "Original selected checkpoint byte SHA",
+      "status": "NOT_MATERIALIZED"
+    },
+    {
+      "id": "candidate",
+      "label": "Actual selected candidate bytes",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "loading",
+      "label": "Restricted trained-state loading",
+      "status": "NOT_TESTED"
+    },
+    {
+      "id": "adapter",
+      "label": "Trained-weight adapter tests",
+      "status": "NOT_TESTED"
+    }
+  ],
+  "edges": [
+    {
+      "id": "E01",
+      "from": "source",
+      "to": "protocol",
+      "required_evidence": "Pinned original source/config Git objects",
+      "available_evidence": [
+        "661dbb3 config and source recovered"
+      ],
+      "evidence_source": "historical Git",
+      "independent_of_current_candidate": true,
+      "link_identifiers": {
+        "source_commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23"
+      },
+      "linkage": "direct Git content",
+      "cryptographically_verified_link": true,
+      "original_record_authentication": "unsigned Git content under user-pinned ancestry",
+      "missing_dependency": [],
+      "falsifier": "Git object/hash/ancestry mismatch",
+      "evidence_level": 2
+    },
+    {
+      "id": "E02",
+      "from": "protocol",
+      "to": "split",
+      "required_evidence": "Original config split identifiers",
+      "available_evidence": [
+        "P3B config split fingerprint; published split-file SHA"
+      ],
+      "evidence_source": "committed source and Phase III report",
+      "independent_of_current_candidate": true,
+      "link_identifiers": {
+        "split_fingerprint": "3e7a7260aae50ca522752f1cede41246daf1b2f6a8fd482800cfda97b4564e84",
+        "split_file_sha256": "1162a41098bb8a724a0b8bf8bb320469c2b1c02bb802d9b5cf7f2e49d2da54e5"
+      },
+      "linkage": "direct reference values; actual split file not opened",
+      "cryptographically_verified_link": true,
+      "original_record_authentication": "published references only",
+      "missing_dependency": [
+        "actual split-byte comparison outside scope"
+      ],
+      "falsifier": "different experiment/split or mismatched authorized split bytes",
+      "evidence_level": 2
+    },
+    {
+      "id": "E03",
+      "from": "split",
+      "to": "normalization",
+      "required_evidence": "Original TRAIN role/source proofs and independently pinned normalization identity",
+      "available_evidence": [
+        "frozen code requires all-physical TRAIN stats and original P3A completion binding"
+      ],
+      "evidence_source": "prepare_sources source",
+      "independent_of_current_candidate": true,
+      "link_identifiers": {},
+      "linkage": "code contract only",
+      "cryptographically_verified_link": false,
+      "original_record_authentication": "actual record not inspected",
+      "missing_dependency": [
+        "root/fit/provenance JSON chain"
+      ],
+      "falsifier": "VAL fit, altered source proof or normalization digest",
+      "evidence_level": null
+    },
+    {
+      "id": "E04",
+      "from": "normalization",
+      "to": "bank",
+      "required_evidence": "TRAIN bank digest/config and normalization lineage",
+      "available_evidence": [
+        "code requires seed123 reused P3A TRAIN bank and normalization fingerprint"
+      ],
+      "evidence_source": "prepare_sources/training_bank source",
+      "independent_of_current_candidate": true,
+      "link_identifiers": {},
+      "linkage": "code contract only",
+      "cryptographically_verified_link": false,
+      "original_record_authentication": "actual record not inspected",
+      "missing_dependency": [
+        "authenticated fitted-artifact metadata"
+      ],
+      "falsifier": "wrong role, seed, normalization or bank digest",
+      "evidence_level": null
+    },
+    {
+      "id": "E05",
+      "from": "bank",
+      "to": "run",
+      "required_evidence": "Original bank tensor/metadata and run signature",
+      "available_evidence": [
+        "published original run fingerprint and model123 row"
+      ],
+      "evidence_source": "P3B results15995b3",
+      "independent_of_current_candidate": true,
+      "link_identifiers": {
+        "run_fingerprint": "a9146071f32c148e30ed84a6763d77cc82c3de83bf6f90719be0f774c114754b",
+        "variant": "raw_context",
+        "seed": 123
+      },
+      "linkage": "direct published identity; bank linkage uninspected",
+      "cryptographically_verified_link": false,
+      "original_record_authentication": "publication anchored; run inputs not inspected",
+      "missing_dependency": [
+        "full original run provenance and fit receipts"
+      ],
+      "falsifier": "different run signature or TRAIN bank lineage",
+      "evidence_level": 1
+    },
+    {
+      "id": "E06",
+      "from": "run",
+      "to": "creation",
+      "required_evidence": "Original pretraining provenance/creation and boundary evidence",
+      "available_evidence": [
+        "frozen writer creates provenance then epoch JSON seals"
+      ],
+      "evidence_source": "runtime/full runner source",
+      "independent_of_current_candidate": true,
+      "link_identifiers": {},
+      "linkage": "code contract only",
+      "cryptographically_verified_link": false,
+      "original_record_authentication": "actual record not inspected",
+      "missing_dependency": [
+        "authenticated original provenance/epoch marker"
+      ],
+      "falsifier": "newly forged present-day creation claim or wrong run",
+      "evidence_level": null
+    },
+    {
+      "id": "E07",
+      "from": "publication",
+      "to": "root_marker",
+      "required_evidence": "Original published completion-marker-byte SHA",
+      "available_evidence": [
+        "same root SHA in original FINAL_COPY_PASTE and validation_summary"
+      ],
+      "evidence_source": "P3B publication15995b3",
+      "independent_of_current_candidate": true,
+      "link_identifiers": {
+        "completion_marker_sha256": "905ba78cf8326594a431ce7a71ce9624c35814d2e76c94f57abda8afbe7c7e7d"
+      },
+      "linkage": "direct historical reference; not marker content",
+      "cryptographically_verified_link": true,
+      "original_record_authentication": "Git publication anchored, unsigned",
+      "missing_dependency": [
+        "authorized root marker-byte check"
+      ],
+      "falsifier": "root marker does not match pinned historical SHA",
+      "evidence_level": 2
+    },
+    {
+      "id": "E08",
+      "from": "root_marker",
+      "to": "validated_marker",
+      "required_evidence": "Authenticated root outputs map to selected marker",
+      "available_evidence": [
+        "original code includes every per-run marker in root map"
+      ],
+      "evidence_source": "full_experiment.run_full",
+      "independent_of_current_candidate": true,
+      "link_identifiers": {},
+      "linkage": "inferred from code, contents uninspected",
+      "cryptographically_verified_link": false,
+      "original_record_authentication": "record not inspected",
+      "missing_dependency": [
+        "root JSON and exact selected child JSON"
+      ],
+      "falsifier": "missing child, different model/run or incorrect child digest",
+      "evidence_level": null
+    },
+    {
+      "id": "E09",
+      "from": "validated_marker",
+      "to": "byte_reference",
+      "required_evidence": "Authenticated selected original best checkpoint-byte digest",
+      "available_evidence": [
+        "per-run writer seals best checkpoint; root also covers outputs"
+      ],
+      "evidence_source": "full_experiment.seal_result/run_full",
+      "independent_of_current_candidate": true,
+      "link_identifiers": {},
+      "linkage": "inferred from code, original digest not materialized",
+      "cryptographically_verified_link": false,
+      "original_record_authentication": "record not inspected",
+      "missing_dependency": [
+        "root/selected marker contents"
+      ],
+      "falsifier": "no selected best entry, contradictory digests, state digest misused as byte digest",
+      "evidence_level": null
+    },
+    {
+      "id": "E10",
+      "from": "byte_reference",
+      "to": "candidate",
+      "required_evidence": "Authorized actual serialized byte comparison",
+      "available_evidence": [],
+      "evidence_source": "future reviewed artifact tool",
+      "independent_of_current_candidate": false,
+      "link_identifiers": {},
+      "linkage": "not performed",
+      "cryptographically_verified_link": false,
+      "original_record_authentication": "no actual artifact access",
+      "missing_dependency": [
+        "independent selected byte reference and separate read authorization"
+      ],
+      "falsifier": "digest mismatch, symlink, incomplete write or TOCTOU",
+      "evidence_level": null
+    },
+    {
+      "id": "E11",
+      "from": "creation",
+      "to": "candidate",
+      "required_evidence": "Exact seed/variant/source/config/environment/TRAIN lineage",
+      "available_evidence": [],
+      "evidence_source": "future authenticated original provenance",
+      "independent_of_current_candidate": false,
+      "link_identifiers": {},
+      "linkage": "not performed",
+      "cryptographically_verified_link": false,
+      "original_record_authentication": "no actual artifact access",
+      "missing_dependency": [
+        "all exact original chain identities"
+      ],
+      "falsifier": "same metrics/shape but different run or buffer lineage",
+      "evidence_level": null
+    },
+    {
+      "id": "E12",
+      "from": "candidate",
+      "to": "loading",
+      "required_evidence": "Verified immutable snapshot plus reviewed restricted loader",
+      "available_evidence": [],
+      "evidence_source": "future XI-B",
+      "independent_of_current_candidate": false,
+      "link_identifiers": {},
+      "linkage": "not performed",
+      "cryptographically_verified_link": false,
+      "original_record_authentication": "not authorized",
+      "missing_dependency": [
+        "artifact authentication and explicit loading release"
+      ],
+      "falsifier": "unsafe format, incomplete schema or reopened changed bytes",
+      "evidence_level": null
+    },
+    {
+      "id": "E13",
+      "from": "loading",
+      "to": "adapter",
+      "required_evidence": "Exact trained architecture/buffer feature ordering, generated-input identity/noninterference",
+      "available_evidence": [],
+      "evidence_source": "future XI-B",
+      "independent_of_current_candidate": false,
+      "link_identifiers": {},
+      "linkage": "not performed",
+      "cryptographically_verified_link": false,
+      "original_record_authentication": "not authorized",
+      "missing_dependency": [
+        "trained state authenticated/restricted loading completed"
+      ],
+      "falsifier": "native mismatch, hidden dependence or unreviewed internal paths",
+      "evidence_level": null
+    }
+  ],
+  "current_artifact_authenticated": false,
+  "current_level3_edges": 0,
+  "trust_assumption": "User-pinned Phase X Git content/ancestry binds unsigned historical publication; not third-party signer or trusted timestamp",
+  "private_artifacts_opened": 0
+}

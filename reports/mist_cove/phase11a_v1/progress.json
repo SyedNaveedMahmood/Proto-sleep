@@ -1,0 +1,249 @@
+{
+  "version": "mist-cove-phase11a-progress-v1",
+  "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8",
+  "base_tree": "2e1f172907840aa4b941e3fcf3e3a1f3919f1ecb",
+  "scope": "TRACKED_METADATA_AND_NEW_SYNTHETIC_FIXTURES_ONLY",
+  "work_packages": [
+    {
+      "id": "XI-A01",
+      "title": "Historical checkpoint lifecycle",
+      "dependencies": [],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8"
+      },
+      "tests_performed": [
+        "Frozen661dbb3 runtime/full runner/constructor/source/trainer inspected through Git objects; publication15995b3 reviewed"
+      ],
+      "produced_artifacts": [
+        "docs/mist_cove/PHASE_XIA_CHECKPOINT_LIFECYCLE_V1.md"
+      ],
+      "scientific_findings": [
+        "Published original P3B root completion-marker SHA provides a possible transitive original byte-reference chain",
+        "Original loader uses unrestricted pickle; model-state digest differs from serialized checkpoint digest",
+        "3e7a fingerprint is split identity, not independently established normalization identity"
+      ],
+      "unresolved_limitations": [
+        "Private root/child markers and actual artifacts remain unopened; original candidate not authenticated"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "XI-A02",
+      "title": "Provenance evidence graph",
+      "dependencies": [
+        "XI-A01"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8"
+      },
+      "tests_performed": [
+        "14 distinct graph nodes and13 explicit edge records; required evidence/identity/trust/falsifier/missing-link fields populated"
+      ],
+      "produced_artifacts": [
+        "reports/mist_cove/phase11a_v1/provenance_graph.json",
+        "docs/mist_cove/PHASE_XIA_EVIDENCE_GRAPH_V1.md"
+      ],
+      "scientific_findings": [
+        "Level2 publication/root-marker reference is distinct from uninspected root/child/checkpoint bytes",
+        "No current Level3 artifact edge; bank/normalization/run linkage remains partly inferred"
+      ],
+      "unresolved_limitations": [
+        "Graph contents validated structurally by the XI-A06 library later; cryptographic Git object audit follows XI-A03"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "XI-A03",
+      "title": "Safe historical reference search",
+      "dependencies": [
+        "XI-A02"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8"
+      },
+      "tests_performed": [
+        "Git object SHA1 framing verified;78 historical blobs across64 explicit source/report paths searched",
+        "42-file original implementation SHA and9-file reused-source SHA reconstructed exactly from Git; match published values",
+        "Historical commits verified ancestors of pinned base; GitHub publication tree matches local; unsigned status retained"
+      ],
+      "produced_artifacts": [
+        "reports/mist_cove/phase11a_v1/evidence_inventory.json",
+        "docs/mist_cove/PHASE_XIA_HISTORICAL_RECORD_AUDIT_V1.md"
+      ],
+      "scientific_findings": [
+        "Original P3B root COMPLETE905ba78c SHA is an independently preserved reference under user-pinned Git history",
+        "No direct selected checkpoint-byte value materialized in approved published corpus; root/nested marker contents remain uninspected",
+        "Two copies of root hash share one publication; no third-party signature or time attestation"
+      ],
+      "unresolved_limitations": [
+        "Scoped search only, not proof no reference exists elsewhere; no ignored private historical directory opened"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "XI-A04",
+      "title": "P3B versus Phase III lineage",
+      "dependencies": [
+        "XI-A03"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8"
+      },
+      "tests_performed": [
+        "Original15995b3 P3B and4095c805 Phase III raw_context123 rows compared; source/wrapper/marker contracts traced"
+      ],
+      "produced_artifacts": [
+        "docs/mist_cove/PHASE_XIA_HISTORICAL_RECORD_AUDIT_V1.md"
+      ],
+      "scientific_findings": [
+        "P3B original root and Phase III selected seal are separate historically anchored references",
+        "Matching seed/architecture/metrics/epochs does not establish identical weights or serialized bytes"
+      ],
+      "unresolved_limitations": [
+        "Neither actual marker nor candidate bytes inspected; no cross-experiment identity proof"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "XI-A05",
+      "title": "Serialization/security threat model",
+      "dependencies": [
+        "XI-A04"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8"
+      },
+      "tests_performed": [
+        "Original torch.save/load and seal/atomic/write/resume contracts inspected; no real deserialization attempted"
+      ],
+      "produced_artifacts": [
+        "docs/mist_cove/PHASE_XIA_SECURITY_REVIEW_V1.md"
+      ],
+      "scientific_findings": [
+        "Original loader explicitly uses weights_only=False; verification after load cannot protect against unsafe pickle parsing",
+        "Strong future design needs independently anchored bytes, strict schema/identity and immutable snapshots"
+      ],
+      "unresolved_limitations": [
+        "Actual weights_only compatibility untested; provenance root authenticity is an explicit trust assumption"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "XI-A06",
+      "title": "Safe verification library",
+      "dependencies": [
+        "XI-A05"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8"
+      },
+      "tests_performed": [],
+      "produced_artifacts": [],
+      "scientific_findings": [],
+      "unresolved_limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "XI-A07",
+      "title": "Adversarial synthetic authentication tests",
+      "dependencies": [
+        "XI-A06"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8"
+      },
+      "tests_performed": [],
+      "produced_artifacts": [],
+      "scientific_findings": [],
+      "unresolved_limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "XI-A08",
+      "title": "Restricted future artifact procedure",
+      "dependencies": [
+        "XI-A07"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8"
+      },
+      "tests_performed": [],
+      "produced_artifacts": [],
+      "scientific_findings": [],
+      "unresolved_limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "XI-A09",
+      "title": "Machine-readable independent gates",
+      "dependencies": [
+        "XI-A08"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8"
+      },
+      "tests_performed": [],
+      "produced_artifacts": [],
+      "scientific_findings": [],
+      "unresolved_limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "XI-A10",
+      "title": "Phase XI-B readiness proposal",
+      "dependencies": [
+        "XI-A09"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8"
+      },
+      "tests_performed": [],
+      "produced_artifacts": [],
+      "scientific_findings": [],
+      "unresolved_limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "XI-A11",
+      "title": "Scientific interpretation/failure analysis",
+      "dependencies": [
+        "XI-A10"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8"
+      },
+      "tests_performed": [],
+      "produced_artifacts": [],
+      "scientific_findings": [],
+      "unresolved_limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "XI-A12",
+      "title": "CPU regression and GitHub publication",
+      "dependencies": [
+        "XI-A11"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8"
+      },
+      "tests_performed": [],
+      "produced_artifacts": [],
+      "scientific_findings": [],
+      "unresolved_limitations": [],
+      "block_reason": null
+    }
+  ]
+}

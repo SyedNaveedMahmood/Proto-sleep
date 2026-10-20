@@ -1,0 +1,22 @@
+{
+  "version": "phase11a-metadata-fixture-v1",
+  "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8",
+  "base_tree": "2e1f172907840aa4b941e3fcf3e3a1f3919f1ecb",
+  "candidate": {
+    "experiment": "P3B",
+    "variant": "raw_context",
+    "seed": 123
+  },
+  "scope": "NO_REAL_ARTIFACT_ACCESS",
+  "metadata_wall_ceiling_seconds": 60,
+  "fixture_wall_ceiling_seconds": 10,
+  "maximum_fixture_bytes": 1048576,
+  "maximum_receipt_bytes": 65536,
+  "fixture_cases": 20,
+  "neural_fits": 0,
+  "optimizer_updates": 0,
+  "GPU_queries": 0,
+  "real_artifact_reader_enabled": false,
+  "real_deserializer_enabled": false,
+  "Phase_X_experiment_rerun": false
+}

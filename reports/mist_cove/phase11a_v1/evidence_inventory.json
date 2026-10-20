@@ -1,0 +1,1405 @@
+{
+  "version": "phase11a-evidence-inventory-v1",
+  "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8",
+  "base_tree": "2e1f172907840aa4b941e3fcf3e3a1f3919f1ecb",
+  "candidate": {
+    "experiment": "P3B",
+    "variant": "raw_context",
+    "seed": 123,
+    "run_fingerprint": "a9146071f32c148e30ed84a6763d77cc82c3de83bf6f90719be0f774c114754b",
+    "implementation_commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+    "model_state_digest": "1b308f3fc38af22609d2043b0988998b1a193c6d4ace73ac84382bb17e1a4c6d",
+    "original_serialized_checkpoint_sha256": null
+  },
+  "typed_references": [
+    {
+      "kind": "COMPLETION_MARKER_BYTES_SHA256",
+      "value": "905ba78cf8326594a431ce7a71ce9624c35814d2e76c94f57abda8afbe7c7e7d",
+      "experiment": "P3B",
+      "source_commit": "15995b31821ee8db717f3d6edfa41166de65d4a3",
+      "source_paths": [
+        "reports/p3b/validation_summary.json",
+        "reports/p3b/FINAL_COPY_PASTE.txt"
+      ],
+      "actual_marker_opened": false
+    },
+    {
+      "kind": "MODEL_STATE_DIGEST",
+      "value": "1b308f3fc38af22609d2043b0988998b1a193c6d4ace73ac84382bb17e1a4c6d",
+      "algorithm": "sorted_named_tensor_raw_bytes_original_runtime",
+      "experiment": "P3B",
+      "source_commit": "15995b31821ee8db717f3d6edfa41166de65d4a3"
+    },
+    {
+      "kind": "SPLIT_FINGERPRINT",
+      "value": "3e7a7260aae50ca522752f1cede41246daf1b2f6a8fd482800cfda97b4564e84",
+      "normalization_digest": false
+    },
+    {
+      "kind": "SPLIT_FILE_SHA256",
+      "value": "1162a41098bb8a724a0b8bf8bb320469c2b1c02bb802d9b5cf7f2e49d2da54e5",
+      "actual_file_opened": false
+    }
+  ],
+  "source_manifests": {
+    "implementation": {
+      "files": {
+        "scripts/audit_edf_transfer_data.py": "6ac655b0ef139643f42c6f97dc02785375bef11ed7201bb2b592c9c1e0b39d4b",
+        "scripts/audit_legacy_morphmae.py": "6e511e3313983ece1bd1f4bbb2469fbe650343a97d36d1a9591c246416ece6bc",
+        "scripts/audit_legacy_prototype.py": "2e80650b016bdab29ee56c2958260a96aeb947ad6de1571b2acdfe29ef2ae2c6",
+        "scripts/build_transfer_manifest.py": "0d53f074045439ed7ff94abc70c51afbc1de8cdb275d6babfd646cdd6151a97d",
+        "scripts/check_transfer_p3b.py": "e7eae500f9df48594c2669e6f4aaa54a2db4378598c1b2194c19f31c77432c3d",
+        "scripts/freeze_transfer_protocol.py": "470ea9eca33563b107e2ae9e45d5f13910c0638c8d7e08ceb660d86430161c73",
+        "scripts/inspect_morphmae_checkpoint.py": "986061194e7d2c67f60dc9adb260f39607757df3cef40c4a6e58e44aa0364c7e",
+        "scripts/resolve_transfer_audit.py": "128fd35644e1e704925d03e1fbf5b8c53463e939c722223d4901563a4518c1ee",
+        "scripts/run_fold.py": "80a9144f87e4801121b1dfa27c878bb7e78a5cdffe8398e2d777edf86ba41750",
+        "scripts/run_fold_morphmae_pretrain.py": "9e4715f16a079293a956a73a746b14bce31602752d4fe6a1934aaaf2f632436c",
+        "scripts/run_legacy_mist_stability.py": "4eb25de01eb2b9e4d902cfdb638e8c48aacf3097b1b67c51ca07aeaa620b75b5",
+        "scripts/run_mist_evidence.py": "8c914bbfe4497c02bde77c1fe78aca40abefeb71eb309bdfe15e515d111a11b3",
+        "scripts/run_mist_mae_baseline_stability.py": "97814012eb30c1bb5894ecc8384679f587bae6ccd16d83aef8b22634d7ee0fb1",
+        "scripts/run_mist_multifold.py": "6c5035cd108323286a0863da4782b2d57c92208de7d6d534199da581cda25546",
+        "scripts/run_mist_stability.py": "b11662afdb4f5b7938442d073e29247be21daeee897c473eb09837c7ec8173d9",
+        "scripts/run_morphmae_refined_probe.py": "7f04bbf144f0c5366de43a0ca5c1b46dca24752faadf3bdb22c1730508e20ea7",
+        "scripts/run_morphmae_representation_refine.py": "8cf21b5cf29913f029a6e17a7bad9f3a44c089e41dffc60cb4be297a281f81b3",
+        "scripts/run_morphmae_transfer_recovery.py": "a23ea5b04fe33c7f79cdd7277d822e59e426c7b10343632029f885ba12ca676f",
+        "scripts/run_morphspec_confirmatory_probe.py": "b0ed90d8ebf52d9864581483e506cc4896317a88c04130a074290379a0006422",
+        "scripts/run_morphspec_downstream_confirm.py": "54d44d5263aa48ea2a0b71382197c44d87b95a7e470658f729772575945bc1a2",
+        "scripts/run_morphspec_frozen_transfer_confirm.py": "5af40387f2c45cca504acb4b65976ca42e2d164aee52ed8b6ee9cb9ca534fa6e",
+        "scripts/run_prototype_matched_20fold.py": "8d0d6b3caf2dc75286a70d1e6f1fc6f03f81f60158d18473e25e1a330cf012e9",
+        "scripts/run_transfer_experiment.py": "8952aa8763d824a5c8b5730208fcc8c29d03361ff208e68d9f41b024bab860ad",
+        "scripts/run_transfer_p3b.py": "bd89e40c0198f28cfbf30bd4ff2582491b8311eaba380c8cbea29c6aa00e4e88",
+        "scripts/smoke_legacy_wavesleepnet.py": "c965f4320bbaf7d261df22b79b275a3c0b8bf20746eb6c3f9fd30e017341d394",
+        "scripts/smoke_legacy_wavesleepnet_objective.py": "24567a2d7ce6e6ed0b0f8fee588896042a6f4426802d37643e6be2a99dfa4bf2",
+        "scripts/speed_audit.py": "879f553e1bef75913f110ff1186616e880e178b7b75ac4873893d77521aea6cf",
+        "scripts/transfer_repro_smoke.py": "7c13113cff681712f375cc47d7622a03fa2892bed216e547ad3f92cc2b2b423f",
+        "src/mist_transfer/__init__.py": "901fa70f54b8263935145b98d5deb3a69fc635421fdc94ac5e49a7f4a263d773",
+        "src/mist_transfer/annotation_compat.py": "2686aff5ae6dabf5aed38bbf7d0f67905645873e2876fbe0cb873a79245af6de",
+        "src/mist_transfer/audit.py": "3864483ed71c1f7068ba20b2c16f581c878227f260ed5820e272ac8bb46c9ac6",
+        "src/mist_transfer/baselines.py": "77e0c409f6b886137b80b9cecb0a4fa9c2f0e36d022d9484e36920715f0b8854",
+        "src/mist_transfer/experiment.py": "92265c6d45bd8bfeb89f76e4775dedfba28ccc9ea42ad81e26bdaacfea24f6ec",
+        "src/mist_transfer/full_experiment.py": "62246a5f1ce8d13711c041eb0523e864fad06cb72bd7077bd44f97d50251cfb5",
+        "src/mist_transfer/integrity.py": "86e95c3c45044134bf516801751e71c69bda92f3d7a6476da034cb6cb63955a1",
+        "src/mist_transfer/manifest.py": "34ca2e4257149759ecd3b68f8fa5d4bbe49a8bf5eb04f7d47cd6506f26bd0b08",
+        "src/mist_transfer/metrics.py": "4402981df60283ceea7ed0f103367e3a2f366b63eb3bfc8e095f3c674828f695",
+        "src/mist_transfer/p1_5.py": "159417ecd2e110d0b571fbd259c701e1ca69fbdc3834fdd0021e122793f61208",
+        "src/mist_transfer/preprocessing.py": "ac4e763ca767ebb149e967207a82fd31413445d36cb3d8d3c3a81f684ce76a3b",
+        "src/mist_transfer/protocol.py": "d3f30fb29121c5402b947a63d956dcaf221a2828aa173218cdc72c028b5e9a7a",
+        "src/mist_transfer/provenance.py": "a03c048465df5bfd90dfd4845a7686a912a026ef47a426256a054892c008bcde",
+        "src/mist_transfer/source_data.py": "689d4275c0399601fdef6bc0d3f426d0d47f37fef7414de803cb63f0928e4ef8"
+      },
+      "canonical_SHA256": "2e306bf630547b66d8c273d1999d9fe2772766a404316691b65db7d23c6046b3",
+      "matches_original_publication": true
+    },
+    "reused": {
+      "files": {
+        "src/mist_evidence/__init__.py": "675250de72c2cae34c7669755b3864b558d605103c87d44f5af354a598345466",
+        "src/mist_evidence/cli.py": "16938fccb99f35b0a0cbb8ad1e67f357da253511c9e8ddd315c658ff276b3c09",
+        "src/mist_evidence/data.py": "73a03c882c1ce9ecc0e278d317d3bbfc0165f84b1300438a85ab9d0054792c1f",
+        "src/mist_evidence/explain.py": "17539f919da9411495d99e677486736f00c821aa67620fdba27a0e1c8e1c0cc6",
+        "src/mist_evidence/model.py": "366ea206ed01f1579466ead362ecf3d2e5cf7f43ff5446b419cf879a60be1058",
+        "src/mist_evidence/runtime.py": "15d56ab58aad5a830946be540c69c22b9fec067b7f42e077a10f41e3ceb6bd61",
+        "src/protosleep/attnsleep.py": "732cadab7adc70a9a43320c7798124451d0d0a8dcd679964c73dc44192f98c3f",
+        "src/protosleep/config.py": "c6b147f8bba25ecf2f421adafd2d43b797cfe05bf879c32a9f123c21361f9900",
+        "src/protosleep/utils.py": "1e193a5d46de37df84cfdae6be59c9ac09a19078e8c22fffc0c25273f463e6de"
+      },
+      "canonical_SHA256": "9d7e52495bc985d64436957f16c5cc0705c9b25a7560f543ed9d252ef21a038e",
+      "matches_original_publication": true
+    }
+  },
+  "records": [
+    {
+      "commit": "15995b31821ee8db717f3d6edfa41166de65d4a3",
+      "path": "reports/p3b/results.json",
+      "blob_oid": "ebfabea0af6fd7f6ece6a787dda46b8c53895b03",
+      "blob_sha256": "37abdb4cdcc454592fe379cec84afa285e33b3b3edaf8af63dbcbde47891f2df",
+      "Git_object_content_verified": true,
+      "record_kind": "published_safe_metadata",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "15995b31821ee8db717f3d6edfa41166de65d4a3",
+      "path": "reports/p3b/validation_summary.json",
+      "blob_oid": "22843bf5d63fd0091e45d630d01d7e45984d1699",
+      "blob_sha256": "377a8ae953e01023f7877a1296e43a6a4f10db488f330753b103d0f3c09394c8",
+      "Git_object_content_verified": true,
+      "record_kind": "published_safe_metadata",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "15995b31821ee8db717f3d6edfa41166de65d4a3",
+      "path": "reports/p3b/FINAL_COPY_PASTE.txt",
+      "blob_oid": "2d4c021eaef827d31f6128b7bcbef238de3c0093",
+      "blob_sha256": "0fd89eb170704cee18e92d3c0e76bf3b1d0b157f136b5899df9e0217cf190f4b",
+      "Git_object_content_verified": true,
+      "record_kind": "published_safe_metadata",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "15995b31821ee8db717f3d6edfa41166de65d4a3",
+      "path": "reports/p3b/gate_a_summary.json",
+      "blob_oid": "9b3c809d4c8408c4101bd90d492ee1d84cc29552",
+      "blob_sha256": "705d9d27053c9a7482bf396e3d3cfc9575e8efa4e5e5e96eb826a670969e8e17",
+      "Git_object_content_verified": true,
+      "record_kind": "published_safe_metadata",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "4095c805cfd48fbb1e9ef938dbc46da28ed1dfb1",
+      "path": "reports/mist_cove/phase3_source_v1/source_results.json",
+      "blob_oid": "a82c3b56883fedff0f30c3adad5af1e70c0ee4a5",
+      "blob_sha256": "6715ef28274c9876d11dd1321555394552df5d3feea87d47b14661b34ea39562",
+      "Git_object_content_verified": true,
+      "record_kind": "published_safe_metadata",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "4095c805cfd48fbb1e9ef938dbc46da28ed1dfb1",
+      "path": "reports/mist_cove/phase3_source_v1/execution_receipt.json",
+      "blob_oid": "5f81e3ac3a71fd7ae39190f6d3895e1ccc3b527c",
+      "blob_sha256": "82e7e9ddfcbaad19a3152948e7385788763061140b513bba97ed6afd84c35639",
+      "Git_object_content_verified": true,
+      "record_kind": "published_safe_metadata",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "scripts/audit_edf_transfer_data.py",
+      "blob_oid": "6fbc778085c1247a9a02ab1bc24e9036250aba0b",
+      "blob_sha256": "6ac655b0ef139643f42c6f97dc02785375bef11ed7201bb2b592c9c1e0b39d4b",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "scripts/audit_legacy_morphmae.py",
+      "blob_oid": "b8d7120ca3f6f437ac9272e3e4a5dec442a0f737",
+      "blob_sha256": "6e511e3313983ece1bd1f4bbb2469fbe650343a97d36d1a9591c246416ece6bc",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "scripts/audit_legacy_prototype.py",
+      "blob_oid": "cb7f45023a2f0a38487e8c8b456fb72f5bf784b6",
+      "blob_sha256": "2e80650b016bdab29ee56c2958260a96aeb947ad6de1571b2acdfe29ef2ae2c6",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "scripts/build_transfer_manifest.py",
+      "blob_oid": "3f250e6c1f249e926e7aa71fd803e25497f00296",
+      "blob_sha256": "0d53f074045439ed7ff94abc70c51afbc1de8cdb275d6babfd646cdd6151a97d",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "scripts/check_transfer_p3b.py",
+      "blob_oid": "91c1de6dd89ae60c0c2779a06f9472c46a1d94ec",
+      "blob_sha256": "e7eae500f9df48594c2669e6f4aaa54a2db4378598c1b2194c19f31c77432c3d",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "scripts/freeze_transfer_protocol.py",
+      "blob_oid": "b6c89e38c0bda2bb12ff386b30fdfef5c6a6efbe",
+      "blob_sha256": "470ea9eca33563b107e2ae9e45d5f13910c0638c8d7e08ceb660d86430161c73",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "scripts/inspect_morphmae_checkpoint.py",
+      "blob_oid": "f7a57854d40261e4ac0df8741815525bfdf9687e",
+      "blob_sha256": "986061194e7d2c67f60dc9adb260f39607757df3cef40c4a6e58e44aa0364c7e",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "scripts/resolve_transfer_audit.py",
+      "blob_oid": "5f0db73fc016d3f8837091c27b7a3491fefc9c7e",
+      "blob_sha256": "128fd35644e1e704925d03e1fbf5b8c53463e939c722223d4901563a4518c1ee",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "scripts/run_fold.py",
+      "blob_oid": "a2dc737a7430e8e5a7d3412977378e68d2fc9b3a",
+      "blob_sha256": "80a9144f87e4801121b1dfa27c878bb7e78a5cdffe8398e2d777edf86ba41750",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "scripts/run_fold_morphmae_pretrain.py",
+      "blob_oid": "d35249d9082aeb5ab06d74a13440cbbf00ca85b0",
+      "blob_sha256": "9e4715f16a079293a956a73a746b14bce31602752d4fe6a1934aaaf2f632436c",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "scripts/run_legacy_mist_stability.py",
+      "blob_oid": "fa50a39276b8a94fdb1471780b269cc7c55026f0",
+      "blob_sha256": "4eb25de01eb2b9e4d902cfdb638e8c48aacf3097b1b67c51ca07aeaa620b75b5",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "scripts/run_mist_evidence.py",
+      "blob_oid": "32cb47174e025cfdb97968542c0050ad346d1ef5",
+      "blob_sha256": "8c914bbfe4497c02bde77c1fe78aca40abefeb71eb309bdfe15e515d111a11b3",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "scripts/run_mist_mae_baseline_stability.py",
+      "blob_oid": "1366b712ba05a9391bea4a7b71625df497ed9374",
+      "blob_sha256": "97814012eb30c1bb5894ecc8384679f587bae6ccd16d83aef8b22634d7ee0fb1",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "scripts/run_mist_multifold.py",
+      "blob_oid": "94eb95793d0be07b9a4daa70071c66e15d61a86f",
+      "blob_sha256": "6c5035cd108323286a0863da4782b2d57c92208de7d6d534199da581cda25546",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "scripts/run_mist_stability.py",
+      "blob_oid": "67212b7acd386c93daca1e8909d4dc1473ab1184",
+      "blob_sha256": "b11662afdb4f5b7938442d073e29247be21daeee897c473eb09837c7ec8173d9",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "scripts/run_morphmae_refined_probe.py",
+      "blob_oid": "03ad11fb27b4258ea8fab6fc01d77e9afbb7960f",
+      "blob_sha256": "7f04bbf144f0c5366de43a0ca5c1b46dca24752faadf3bdb22c1730508e20ea7",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "scripts/run_morphmae_representation_refine.py",
+      "blob_oid": "4714e9e922a2661a72918e9ed58248c2f86d8a99",
+      "blob_sha256": "8cf21b5cf29913f029a6e17a7bad9f3a44c089e41dffc60cb4be297a281f81b3",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "scripts/run_morphmae_transfer_recovery.py",
+      "blob_oid": "ad9f399675d2d4e4a26317f6761c681a494410e8",
+      "blob_sha256": "a23ea5b04fe33c7f79cdd7277d822e59e426c7b10343632029f885ba12ca676f",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "scripts/run_morphspec_confirmatory_probe.py",
+      "blob_oid": "e0972698f326200630ccfccec9b63efb0abf4436",
+      "blob_sha256": "b0ed90d8ebf52d9864581483e506cc4896317a88c04130a074290379a0006422",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "scripts/run_morphspec_downstream_confirm.py",
+      "blob_oid": "3e80ec86756a4cbd3aa1a030c773a650c39a9451",
+      "blob_sha256": "54d44d5263aa48ea2a0b71382197c44d87b95a7e470658f729772575945bc1a2",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "scripts/run_morphspec_frozen_transfer_confirm.py",
+      "blob_oid": "27ee1ccb196ea9610d95325fab0e12df13c75e20",
+      "blob_sha256": "5af40387f2c45cca504acb4b65976ca42e2d164aee52ed8b6ee9cb9ca534fa6e",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "scripts/run_prototype_matched_20fold.py",
+      "blob_oid": "a05b8cda950efac4b9f2534ac5abcb85ce938662",
+      "blob_sha256": "8d0d6b3caf2dc75286a70d1e6f1fc6f03f81f60158d18473e25e1a330cf012e9",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "scripts/run_transfer_experiment.py",
+      "blob_oid": "5e4a67bdf721599dfe4b8dd89bc52435a8bd2889",
+      "blob_sha256": "8952aa8763d824a5c8b5730208fcc8c29d03361ff208e68d9f41b024bab860ad",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "scripts/run_transfer_p3b.py",
+      "blob_oid": "54e209b99e4c04862df2d5baf844cca186593054",
+      "blob_sha256": "bd89e40c0198f28cfbf30bd4ff2582491b8311eaba380c8cbea29c6aa00e4e88",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "scripts/smoke_legacy_wavesleepnet.py",
+      "blob_oid": "54f67470bac4414064e123711b08da897511beb9",
+      "blob_sha256": "c965f4320bbaf7d261df22b79b275a3c0b8bf20746eb6c3f9fd30e017341d394",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "scripts/smoke_legacy_wavesleepnet_objective.py",
+      "blob_oid": "4bcc39c67aa615c697cce6956c6670df617e371c",
+      "blob_sha256": "24567a2d7ce6e6ed0b0f8fee588896042a6f4426802d37643e6be2a99dfa4bf2",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "scripts/speed_audit.py",
+      "blob_oid": "c294606265a275521bbe25fb4a8d99d15f3c4a98",
+      "blob_sha256": "879f553e1bef75913f110ff1186616e880e178b7b75ac4873893d77521aea6cf",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "scripts/transfer_repro_smoke.py",
+      "blob_oid": "125c9e233c5bae26eddd51e138756e73c3765eb2",
+      "blob_sha256": "7c13113cff681712f375cc47d7622a03fa2892bed216e547ad3f92cc2b2b423f",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "src/mist_transfer/__init__.py",
+      "blob_oid": "b1ec8512be333cc3ec0fbeb0ea76dce3681d4bcd",
+      "blob_sha256": "901fa70f54b8263935145b98d5deb3a69fc635421fdc94ac5e49a7f4a263d773",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "src/mist_transfer/annotation_compat.py",
+      "blob_oid": "b7c80140a6de72119a06fc02b49ff1812789c594",
+      "blob_sha256": "2686aff5ae6dabf5aed38bbf7d0f67905645873e2876fbe0cb873a79245af6de",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "src/mist_transfer/audit.py",
+      "blob_oid": "8172501236e781f7c8fcadcdc4f46f573326b3d6",
+      "blob_sha256": "3864483ed71c1f7068ba20b2c16f581c878227f260ed5820e272ac8bb46c9ac6",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "src/mist_transfer/baselines.py",
+      "blob_oid": "77d10210e5bd7e022fe9e961d344f8cb2bd7884b",
+      "blob_sha256": "77e0c409f6b886137b80b9cecb0a4fa9c2f0e36d022d9484e36920715f0b8854",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "src/mist_transfer/experiment.py",
+      "blob_oid": "4b2a8ec5efae2c4c03f26c26124178f42ffafbb5",
+      "blob_sha256": "92265c6d45bd8bfeb89f76e4775dedfba28ccc9ea42ad81e26bdaacfea24f6ec",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "src/mist_transfer/full_experiment.py",
+      "blob_oid": "e630a964db72c5ac26bc8c014ea102cf3b5f28dc",
+      "blob_sha256": "62246a5f1ce8d13711c041eb0523e864fad06cb72bd7077bd44f97d50251cfb5",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "src/mist_transfer/integrity.py",
+      "blob_oid": "16d66e5ec40d197df8779a1098fe9f05dae4c03c",
+      "blob_sha256": "86e95c3c45044134bf516801751e71c69bda92f3d7a6476da034cb6cb63955a1",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "src/mist_transfer/manifest.py",
+      "blob_oid": "f8c25f50665e972763cb1e7b84c1766427e91de9",
+      "blob_sha256": "34ca2e4257149759ecd3b68f8fa5d4bbe49a8bf5eb04f7d47cd6506f26bd0b08",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "src/mist_transfer/metrics.py",
+      "blob_oid": "891563e8f90fe94501efbaee01b828c17aaf5234",
+      "blob_sha256": "4402981df60283ceea7ed0f103367e3a2f366b63eb3bfc8e095f3c674828f695",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "src/mist_transfer/p1_5.py",
+      "blob_oid": "132e25adfcc4ff5430acb069c74adf96bfeccc86",
+      "blob_sha256": "159417ecd2e110d0b571fbd259c701e1ca69fbdc3834fdd0021e122793f61208",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "src/mist_transfer/preprocessing.py",
+      "blob_oid": "fc41978479b9a65de0deab1540735995f2b22ab5",
+      "blob_sha256": "ac4e763ca767ebb149e967207a82fd31413445d36cb3d8d3c3a81f684ce76a3b",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "src/mist_transfer/protocol.py",
+      "blob_oid": "c9c715d7994b84fb2f2ba9ec160de2cd6c8377ef",
+      "blob_sha256": "d3f30fb29121c5402b947a63d956dcaf221a2828aa173218cdc72c028b5e9a7a",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "src/mist_transfer/provenance.py",
+      "blob_oid": "9bd890307db65ee017f211dfba2604cb0029fdfa",
+      "blob_sha256": "a03c048465df5bfd90dfd4845a7686a912a026ef47a426256a054892c008bcde",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "src/mist_transfer/source_data.py",
+      "blob_oid": "199c89ae058f2f915c8746904db4a0425f41ad65",
+      "blob_sha256": "689d4275c0399601fdef6bc0d3f426d0d47f37fef7414de803cb63f0928e4ef8",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "src/mist_evidence/__init__.py",
+      "blob_oid": "d43a0eddfeb4eb2094a7d830ebfeb444ea32ad73",
+      "blob_sha256": "675250de72c2cae34c7669755b3864b558d605103c87d44f5af354a598345466",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "src/mist_evidence/cli.py",
+      "blob_oid": "8df485507a668be53c80728a19ce237d47eaa438",
+      "blob_sha256": "16938fccb99f35b0a0cbb8ad1e67f357da253511c9e8ddd315c658ff276b3c09",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "src/mist_evidence/data.py",
+      "blob_oid": "5b842dd93d21fcb1fec94bdebcc0826a59d85b51",
+      "blob_sha256": "73a03c882c1ce9ecc0e278d317d3bbfc0165f84b1300438a85ab9d0054792c1f",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "src/mist_evidence/explain.py",
+      "blob_oid": "9bc40c9e220c4502a4d9da98130587365bf6d25f",
+      "blob_sha256": "17539f919da9411495d99e677486736f00c821aa67620fdba27a0e1c8e1c0cc6",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "src/mist_evidence/model.py",
+      "blob_oid": "60ccbfcd2603f5b34002ab2932c8e72e7e0e13f3",
+      "blob_sha256": "366ea206ed01f1579466ead362ecf3d2e5cf7f43ff5446b419cf879a60be1058",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "src/mist_evidence/runtime.py",
+      "blob_oid": "63ef69b7c382009cab6e7aeb0e874ae39cf78b3c",
+      "blob_sha256": "15d56ab58aad5a830946be540c69c22b9fec067b7f42e077a10f41e3ceb6bd61",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "src/protosleep/attnsleep.py",
+      "blob_oid": "630c2039b84168b044706c0861631c1d87d5ed34",
+      "blob_sha256": "732cadab7adc70a9a43320c7798124451d0d0a8dcd679964c73dc44192f98c3f",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "src/protosleep/config.py",
+      "blob_oid": "d39da17d9451292bbcb1a99ca6d7f472880ef532",
+      "blob_sha256": "c6b147f8bba25ecf2f421adafd2d43b797cfe05bf879c32a9f123c21361f9900",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "src/protosleep/utils.py",
+      "blob_oid": "82cb4826b1fc40095e606fc59f4f9c3416ec9a44",
+      "blob_sha256": "1e193a5d46de37df84cfdae6be59c9ac09a19078e8c22fffc0c25273f463e6de",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "path": "configs/p3b_sc_matched_v1.json",
+      "blob_oid": "046af25169dc6eff8a1278f4bd1059b14ad9a069",
+      "blob_sha256": "299715a9424ffebbd319b584a6b20e5ab8fdf04e54a8d78aaa083855d0882a30",
+      "Git_object_content_verified": true,
+      "record_kind": "published_safe_metadata",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "a601e8e004b9e0c2942e83d4517fb8a47856de72",
+      "path": "configs/mist_cove_phase3_source_v1.json",
+      "blob_oid": "5a9b64031757c07208e02d808b2f50f902b5fd28",
+      "blob_sha256": "525fc8152e78219a9bee51ad84a4d067761b22c873d10199d25e426ff012883d",
+      "Git_object_content_verified": true,
+      "record_kind": "published_safe_metadata",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "a601e8e004b9e0c2942e83d4517fb8a47856de72",
+      "path": "src/mist_cove/phase2/training.py",
+      "blob_oid": "cfb45dc6c0786149f13da201a430e903674152a2",
+      "blob_sha256": "114d0687bccc7b00d95d9880c391c72cbae82321fcfc9d1caabc2e9b7bea18ae",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    },
+    {
+      "commit": "4095c805cfd48fbb1e9ef938dbc46da28ed1dfb1",
+      "path": "analysis/mist_cove_phase3_v1/collect_phase3_results_v1.py",
+      "blob_oid": "b3786b4c72b90d9158c2c4e2a485ef3eafbdfce4",
+      "blob_sha256": "e7227f88cf2a389899f547371b3ddac5f0255eff3a43f927bb0e2c597bb9cedb",
+      "Git_object_content_verified": true,
+      "record_kind": "tracked_code",
+      "candidate_file_independent": true
+    }
+  ],
+  "historical_commits": [
+    {
+      "commit": "0ce6d4235661c6bda57392040954abb506abb7b8",
+      "tree_oid": "2e1f172907840aa4b941e3fcf3e3a1f3919f1ecb",
+      "object_verified": true,
+      "ancestor_of_base": true,
+      "signature_status": "N"
+    },
+    {
+      "commit": "661dbb3dd7b2584d91b2c52f42547e1cd9c3dc23",
+      "tree_oid": "f98b31dc44cc867292e2ac5a79a4c05a96e7cf6e",
+      "object_verified": true,
+      "ancestor_of_base": true,
+      "signature_status": "N"
+    },
+    {
+      "commit": "15995b31821ee8db717f3d6edfa41166de65d4a3",
+      "tree_oid": "328f2848ab3ca169b90b006a6100226332774f40",
+      "object_verified": true,
+      "ancestor_of_base": true,
+      "signature_status": "N"
+    },
+    {
+      "commit": "a601e8e004b9e0c2942e83d4517fb8a47856de72",
+      "tree_oid": "874685d1fb5ad0c732d207fb21e922bd491491cf",
+      "object_verified": true,
+      "ancestor_of_base": true,
+      "signature_status": "N"
+    },
+    {
+      "commit": "4095c805cfd48fbb1e9ef938dbc46da28ed1dfb1",
+      "tree_oid": "9c9561dcb0ccd66c5946fc8ff1d0557f0b978f3f",
+      "object_verified": true,
+      "ancestor_of_base": true,
+      "signature_status": "N"
+    }
+  ],
+  "search": {
+    "approved_paths": [
+      "analysis/mist_cove_phase3_v1/collect_phase3_results_v1.py",
+      "configs/mist_cove_phase3_source_v1.json",
+      "configs/p3b_sc_matched_v1.json",
+      "docs/P3B_RUNNER.md",
+      "docs/mist_cove/PHASE_III_SOURCE_RESULTS_V1.md",
+      "docs/mist_cove/PHASE_X_SOURCE_PROVENANCE_REVIEW_V1.md",
+      "reports/mist_cove/phase3_source_v1/execution_receipt.json",
+      "reports/mist_cove/phase3_source_v1/source_results.json",
+      "reports/p3b/FINAL_COPY_PASTE.txt",
+      "reports/p3b/gate_a_summary.json",
+      "reports/p3b/results.json",
+      "reports/p3b/validation_summary.json",
+      "scripts/audit_edf_transfer_data.py",
+      "scripts/audit_legacy_morphmae.py",
+      "scripts/audit_legacy_prototype.py",
+      "scripts/build_transfer_manifest.py",
+      "scripts/check_transfer_p3b.py",
+      "scripts/freeze_transfer_protocol.py",
+      "scripts/inspect_morphmae_checkpoint.py",
+      "scripts/resolve_transfer_audit.py",
+      "scripts/run_fold.py",
+      "scripts/run_fold_morphmae_pretrain.py",
+      "scripts/run_legacy_mist_stability.py",
+      "scripts/run_mist_evidence.py",
+      "scripts/run_mist_mae_baseline_stability.py",
+      "scripts/run_mist_multifold.py",
+      "scripts/run_mist_stability.py",
+      "scripts/run_morphmae_refined_probe.py",
+      "scripts/run_morphmae_representation_refine.py",
+      "scripts/run_morphmae_transfer_recovery.py",
+      "scripts/run_morphspec_confirmatory_probe.py",
+      "scripts/run_morphspec_downstream_confirm.py",
+      "scripts/run_morphspec_frozen_transfer_confirm.py",
+      "scripts/run_prototype_matched_20fold.py",
+      "scripts/run_transfer_experiment.py",
+      "scripts/run_transfer_p3b.py",
+      "scripts/smoke_legacy_wavesleepnet.py",
+      "scripts/smoke_legacy_wavesleepnet_objective.py",
+      "scripts/speed_audit.py",
+      "scripts/transfer_repro_smoke.py",
+      "src/mist_cove/phase2/training.py",
+      "src/mist_evidence/__init__.py",
+      "src/mist_evidence/cli.py",
+      "src/mist_evidence/data.py",
+      "src/mist_evidence/explain.py",
+      "src/mist_evidence/model.py",
+      "src/mist_evidence/runtime.py",
+      "src/mist_transfer/__init__.py",
+      "src/mist_transfer/annotation_compat.py",
+      "src/mist_transfer/audit.py",
+      "src/mist_transfer/baselines.py",
+      "src/mist_transfer/experiment.py",
+      "src/mist_transfer/full_experiment.py",
+      "src/mist_transfer/integrity.py",
+      "src/mist_transfer/manifest.py",
+      "src/mist_transfer/metrics.py",
+      "src/mist_transfer/p1_5.py",
+      "src/mist_transfer/preprocessing.py",
+      "src/mist_transfer/protocol.py",
+      "src/mist_transfer/provenance.py",
+      "src/mist_transfer/source_data.py",
+      "src/protosleep/attnsleep.py",
+      "src/protosleep/config.py",
+      "src/protosleep/utils.py"
+    ],
+    "historical_blob_count": 78,
+    "blobs": [
+      {
+        "path": "analysis/mist_cove_phase3_v1/collect_phase3_results_v1.py",
+        "blob_oid": "b3786b4c72b90d9158c2c4e2a485ef3eafbdfce4",
+        "sha256": "e7227f88cf2a389899f547371b3ddac5f0255eff3a43f927bb0e2c597bb9cedb",
+        "matched_concepts": [
+          "COMPLETE_SEAL",
+          "best.pt",
+          "best_state_digest",
+          "implementation_snapshot",
+          "raw_context",
+          "state_dict"
+        ]
+      },
+      {
+        "path": "configs/mist_cove_phase3_source_v1.json",
+        "blob_oid": "5a9b64031757c07208e02d808b2f50f902b5fd28",
+        "sha256": "525fc8152e78219a9bee51ad84a4d067761b22c873d10199d25e426ff012883d",
+        "matched_concepts": [
+          "raw_context"
+        ]
+      },
+      {
+        "path": "configs/p3b_sc_matched_v1.json",
+        "blob_oid": "046af25169dc6eff8a1278f4bd1059b14ad9a069",
+        "sha256": "299715a9424ffebbd319b584a6b20e5ab8fdf04e54a8d78aaa083855d0882a30",
+        "matched_concepts": [
+          "raw_context"
+        ]
+      },
+      {
+        "path": "docs/P3B_RUNNER.md",
+        "blob_oid": "49759f6c968413d3839dcfa1f33e4e88f3c440ca",
+        "sha256": "ba5bf42814d3f5e455d2ac5a64c3b0ba3d957077bd5b3d7d52ae8d39414bb277",
+        "matched_concepts": []
+      },
+      {
+        "path": "docs/mist_cove/PHASE_III_SOURCE_RESULTS_V1.md",
+        "blob_oid": "4dbfda6e0be3312d71288a293771839e947c14db",
+        "sha256": "a231a1e43dfd9bf0aa5eb97fe9e90ed9d813ad5241f11f82d0fb5046a9e010a6",
+        "matched_concepts": [
+          "raw_context"
+        ]
+      },
+      {
+        "path": "docs/mist_cove/PHASE_X_SOURCE_PROVENANCE_REVIEW_V1.md",
+        "blob_oid": "2c59c56aeeb2b07dc8b9ce50955852b160b68b9a",
+        "sha256": "602fd2c629afdec99ec879565a343b72b357eafdec733250b1b692ef71245281",
+        "matched_concepts": [
+          "COMPLETE_SEAL",
+          "best.pt",
+          "best_state_digest",
+          "raw_context"
+        ]
+      },
+      {
+        "path": "reports/mist_cove/phase3_source_v1/execution_receipt.json",
+        "blob_oid": "5f81e3ac3a71fd7ae39190f6d3895e1ccc3b527c",
+        "sha256": "82e7e9ddfcbaad19a3152948e7385788763061140b513bba97ed6afd84c35639",
+        "matched_concepts": [
+          "raw_context"
+        ]
+      },
+      {
+        "path": "reports/mist_cove/phase3_source_v1/source_results.json",
+        "blob_oid": "a82c3b56883fedff0f30c3adad5af1e70c0ee4a5",
+        "sha256": "6715ef28274c9876d11dd1321555394552df5d3feea87d47b14661b34ea39562",
+        "matched_concepts": [
+          "raw_context"
+        ]
+      },
+      {
+        "path": "reports/p3b/FINAL_COPY_PASTE.txt",
+        "blob_oid": "2d4c021eaef827d31f6128b7bcbef238de3c0093",
+        "sha256": "0fd89eb170704cee18e92d3c0e76bf3b1d0b157f136b5899df9e0217cf190f4b",
+        "matched_concepts": [
+          "Root COMPLETE SHA256",
+          "raw_context"
+        ]
+      },
+      {
+        "path": "reports/p3b/gate_a_summary.json",
+        "blob_oid": "9b3c809d4c8408c4101bd90d492ee1d84cc29552",
+        "sha256": "705d9d27053c9a7482bf396e3d3cfc9575e8efa4e5e5e96eb826a670969e8e17",
+        "matched_concepts": [
+          "raw_context"
+        ]
+      },
+      {
+        "path": "reports/p3b/results.json",
+        "blob_oid": "ebfabea0af6fd7f6ece6a787dda46b8c53895b03",
+        "sha256": "37abdb4cdcc454592fe379cec84afa285e33b3b3edaf8af63dbcbde47891f2df",
+        "matched_concepts": [
+          "best_state_digest",
+          "raw_context"
+        ]
+      },
+      {
+        "path": "reports/p3b/validation_summary.json",
+        "blob_oid": "22843bf5d63fd0091e45d630d01d7e45984d1699",
+        "sha256": "377a8ae953e01023f7877a1296e43a6a4f10db488f330753b103d0f3c09394c8",
+        "matched_concepts": [
+          "raw_context",
+          "root_completion_sha256"
+        ]
+      },
+      {
+        "path": "scripts/audit_edf_transfer_data.py",
+        "blob_oid": "6fbc778085c1247a9a02ab1bc24e9036250aba0b",
+        "sha256": "6ac655b0ef139643f42c6f97dc02785375bef11ed7201bb2b592c9c1e0b39d4b",
+        "matched_concepts": []
+      },
+      {
+        "path": "scripts/audit_legacy_morphmae.py",
+        "blob_oid": "b8d7120ca3f6f437ac9272e3e4a5dec442a0f737",
+        "sha256": "6e511e3313983ece1bd1f4bbb2469fbe650343a97d36d1a9591c246416ece6bc",
+        "matched_concepts": [
+          "state_dict"
+        ]
+      },
+      {
+        "path": "scripts/audit_legacy_prototype.py",
+        "blob_oid": "cb7f45023a2f0a38487e8c8b456fb72f5bf784b6",
+        "sha256": "2e80650b016bdab29ee56c2958260a96aeb947ad6de1571b2acdfe29ef2ae2c6",
+        "matched_concepts": [
+          "state_dict"
+        ]
+      },
+      {
+        "path": "scripts/build_transfer_manifest.py",
+        "blob_oid": "3f250e6c1f249e926e7aa71fd803e25497f00296",
+        "sha256": "0d53f074045439ed7ff94abc70c51afbc1de8cdb275d6babfd646cdd6151a97d",
+        "matched_concepts": []
+      },
+      {
+        "path": "scripts/check_transfer_p3b.py",
+        "blob_oid": "91c1de6dd89ae60c0c2779a06f9472c46a1d94ec",
+        "sha256": "e7eae500f9df48594c2669e6f4aaa54a2db4378598c1b2194c19f31c77432c3d",
+        "matched_concepts": []
+      },
+      {
+        "path": "scripts/freeze_transfer_protocol.py",
+        "blob_oid": "b6c89e38c0bda2bb12ff386b30fdfef5c6a6efbe",
+        "sha256": "470ea9eca33563b107e2ae9e45d5f13910c0638c8d7e08ceb660d86430161c73",
+        "matched_concepts": []
+      },
+      {
+        "path": "scripts/inspect_morphmae_checkpoint.py",
+        "blob_oid": "f7a57854d40261e4ac0df8741815525bfdf9687e",
+        "sha256": "986061194e7d2c67f60dc9adb260f39607757df3cef40c4a6e58e44aa0364c7e",
+        "matched_concepts": [
+          "state_dict"
+        ]
+      },
+      {
+        "path": "scripts/resolve_transfer_audit.py",
+        "blob_oid": "5f0db73fc016d3f8837091c27b7a3491fefc9c7e",
+        "sha256": "128fd35644e1e704925d03e1fbf5b8c53463e939c722223d4901563a4518c1ee",
+        "matched_concepts": []
+      },
+      {
+        "path": "scripts/run_fold.py",
+        "blob_oid": "a2dc737a7430e8e5a7d3412977378e68d2fc9b3a",
+        "sha256": "80a9144f87e4801121b1dfa27c878bb7e78a5cdffe8398e2d777edf86ba41750",
+        "matched_concepts": []
+      },
+      {
+        "path": "scripts/run_fold_morphmae_pretrain.py",
+        "blob_oid": "d35249d9082aeb5ab06d74a13440cbbf00ca85b0",
+        "sha256": "9e4715f16a079293a956a73a746b14bce31602752d4fe6a1934aaaf2f632436c",
+        "matched_concepts": [
+          "checkpoint_sha256",
+          "state_dict"
+        ]
+      },
+      {
+        "path": "scripts/run_legacy_mist_stability.py",
+        "blob_oid": "fa50a39276b8a94fdb1471780b269cc7c55026f0",
+        "sha256": "4eb25de01eb2b9e4d902cfdb638e8c48aacf3097b1b67c51ca07aeaa620b75b5",
+        "matched_concepts": [
+          "checkpoint_sha256"
+        ]
+      },
+      {
+        "path": "scripts/run_mist_evidence.py",
+        "blob_oid": "32cb47174e025cfdb97968542c0050ad346d1ef5",
+        "sha256": "8c914bbfe4497c02bde77c1fe78aca40abefeb71eb309bdfe15e515d111a11b3",
+        "matched_concepts": []
+      },
+      {
+        "path": "scripts/run_mist_mae_baseline_stability.py",
+        "blob_oid": "1366b712ba05a9391bea4a7b71625df497ed9374",
+        "sha256": "97814012eb30c1bb5894ecc8384679f587bae6ccd16d83aef8b22634d7ee0fb1",
+        "matched_concepts": [
+          "checkpoint_sha256"
+        ]
+      },
+      {
+        "path": "scripts/run_mist_multifold.py",
+        "blob_oid": "94eb95793d0be07b9a4daa70071c66e15d61a86f",
+        "sha256": "6c5035cd108323286a0863da4782b2d57c92208de7d6d534199da581cda25546",
+        "matched_concepts": []
+      },
+      {
+        "path": "scripts/run_mist_stability.py",
+        "blob_oid": "67212b7acd386c93daca1e8909d4dc1473ab1184",
+        "sha256": "b11662afdb4f5b7938442d073e29247be21daeee897c473eb09837c7ec8173d9",
+        "matched_concepts": [
+          "checkpoint_sha256",
+          "state_dict"
+        ]
+      },
+      {
+        "path": "scripts/run_morphmae_refined_probe.py",
+        "blob_oid": "03ad11fb27b4258ea8fab6fc01d77e9afbb7960f",
+        "sha256": "7f04bbf144f0c5366de43a0ca5c1b46dca24752faadf3bdb22c1730508e20ea7",
+        "matched_concepts": [
+          "checkpoint_sha256",
+          "state_dict"
+        ]
+      },
+      {
+        "path": "scripts/run_morphmae_representation_refine.py",
+        "blob_oid": "4714e9e922a2661a72918e9ed58248c2f86d8a99",
+        "sha256": "8cf21b5cf29913f029a6e17a7bad9f3a44c089e41dffc60cb4be297a281f81b3",
+        "matched_concepts": [
+          "state_dict"
+        ]
+      },
+      {
+        "path": "scripts/run_morphmae_transfer_recovery.py",
+        "blob_oid": "ad9f399675d2d4e4a26317f6761c681a494410e8",
+        "sha256": "a23ea5b04fe33c7f79cdd7277d822e59e426c7b10343632029f885ba12ca676f",
+        "matched_concepts": [
+          "checkpoint_sha256",
+          "state_dict"
+        ]
+      },
+      {
+        "path": "scripts/run_morphspec_confirmatory_probe.py",
+        "blob_oid": "e0972698f326200630ccfccec9b63efb0abf4436",
+        "sha256": "b0ed90d8ebf52d9864581483e506cc4896317a88c04130a074290379a0006422",
+        "matched_concepts": [
+          "checkpoint_sha256",
+          "state_dict"
+        ]
+      },
+      {
+        "path": "scripts/run_morphspec_downstream_confirm.py",
+        "blob_oid": "3e80ec86756a4cbd3aa1a030c773a650c39a9451",
+        "sha256": "54d44d5263aa48ea2a0b71382197c44d87b95a7e470658f729772575945bc1a2",
+        "matched_concepts": [
+          "checkpoint_sha256",
+          "state_dict"
+        ]
+      },
+      {
+        "path": "scripts/run_morphspec_frozen_transfer_confirm.py",
+        "blob_oid": "27ee1ccb196ea9610d95325fab0e12df13c75e20",
+        "sha256": "5af40387f2c45cca504acb4b65976ca42e2d164aee52ed8b6ee9cb9ca534fa6e",
+        "matched_concepts": [
+          "checkpoint_sha256",
+          "state_dict"
+        ]
+      },
+      {
+        "path": "scripts/run_prototype_matched_20fold.py",
+        "blob_oid": "a05b8cda950efac4b9f2534ac5abcb85ce938662",
+        "sha256": "8d0d6b3caf2dc75286a70d1e6f1fc6f03f81f60158d18473e25e1a330cf012e9",
+        "matched_concepts": []
+      },
+      {
+        "path": "scripts/run_transfer_experiment.py",
+        "blob_oid": "5e4a67bdf721599dfe4b8dd89bc52435a8bd2889",
+        "sha256": "8952aa8763d824a5c8b5730208fcc8c29d03361ff208e68d9f41b024bab860ad",
+        "matched_concepts": []
+      },
+      {
+        "path": "scripts/run_transfer_p3b.py",
+        "blob_oid": "54e209b99e4c04862df2d5baf844cca186593054",
+        "sha256": "bd89e40c0198f28cfbf30bd4ff2582491b8311eaba380c8cbea29c6aa00e4e88",
+        "matched_concepts": []
+      },
+      {
+        "path": "scripts/smoke_legacy_wavesleepnet.py",
+        "blob_oid": "54f67470bac4414064e123711b08da897511beb9",
+        "sha256": "c965f4320bbaf7d261df22b79b275a3c0b8bf20746eb6c3f9fd30e017341d394",
+        "matched_concepts": []
+      },
+      {
+        "path": "scripts/smoke_legacy_wavesleepnet_objective.py",
+        "blob_oid": "4bcc39c67aa615c697cce6956c6670df617e371c",
+        "sha256": "24567a2d7ce6e6ed0b0f8fee588896042a6f4426802d37643e6be2a99dfa4bf2",
+        "matched_concepts": [
+          "state_dict"
+        ]
+      },
+      {
+        "path": "scripts/speed_audit.py",
+        "blob_oid": "c294606265a275521bbe25fb4a8d99d15f3c4a98",
+        "sha256": "879f553e1bef75913f110ff1186616e880e178b7b75ac4873893d77521aea6cf",
+        "matched_concepts": []
+      },
+      {
+        "path": "scripts/transfer_repro_smoke.py",
+        "blob_oid": "125c9e233c5bae26eddd51e138756e73c3765eb2",
+        "sha256": "7c13113cff681712f375cc47d7622a03fa2892bed216e547ad3f92cc2b2b423f",
+        "matched_concepts": []
+      },
+      {
+        "path": "src/mist_cove/phase2/training.py",
+        "blob_oid": "cfb45dc6c0786149f13da201a430e903674152a2",
+        "sha256": "114d0687bccc7b00d95d9880c391c72cbae82321fcfc9d1caabc2e9b7bea18ae",
+        "matched_concepts": [
+          "COMPLETE_SEAL",
+          "EPOCH_SEAL",
+          "best.pt",
+          "implementation_snapshot"
+        ]
+      },
+      {
+        "path": "src/mist_evidence/__init__.py",
+        "blob_oid": "d43a0eddfeb4eb2094a7d830ebfeb444ea32ad73",
+        "sha256": "675250de72c2cae34c7669755b3864b558d605103c87d44f5af354a598345466",
+        "matched_concepts": []
+      },
+      {
+        "path": "src/mist_evidence/cli.py",
+        "blob_oid": "8df485507a668be53c80728a19ce237d47eaa438",
+        "sha256": "16938fccb99f35b0a0cbb8ad1e67f357da253511c9e8ddd315c658ff276b3c09",
+        "matched_concepts": [
+          "raw_context"
+        ]
+      },
+      {
+        "path": "src/mist_evidence/data.py",
+        "blob_oid": "5b842dd93d21fcb1fec94bdebcc0826a59d85b51",
+        "sha256": "73a03c882c1ce9ecc0e278d317d3bbfc0165f84b1300438a85ab9d0054792c1f",
+        "matched_concepts": []
+      },
+      {
+        "path": "src/mist_evidence/explain.py",
+        "blob_oid": "9bc40c9e220c4502a4d9da98130587365bf6d25f",
+        "sha256": "17539f919da9411495d99e677486736f00c821aa67620fdba27a0e1c8e1c0cc6",
+        "matched_concepts": []
+      },
+      {
+        "path": "src/mist_evidence/model.py",
+        "blob_oid": "60ccbfcd2603f5b34002ab2932c8e72e7e0e13f3",
+        "sha256": "366ea206ed01f1579466ead362ecf3d2e5cf7f43ff5446b419cf879a60be1058",
+        "matched_concepts": []
+      },
+      {
+        "path": "src/mist_evidence/runtime.py",
+        "blob_oid": "63ef69b7c382009cab6e7aeb0e874ae39cf78b3c",
+        "sha256": "15d56ab58aad5a830946be540c69c22b9fec067b7f42e077a10f41e3ceb6bd61",
+        "matched_concepts": [
+          "best.pt",
+          "best_state_digest",
+          "state_dict"
+        ]
+      },
+      {
+        "path": "src/mist_transfer/__init__.py",
+        "blob_oid": "b1ec8512be333cc3ec0fbeb0ea76dce3681d4bcd",
+        "sha256": "901fa70f54b8263935145b98d5deb3a69fc635421fdc94ac5e49a7f4a263d773",
+        "matched_concepts": []
+      },
+      {
+        "path": "src/mist_transfer/annotation_compat.py",
+        "blob_oid": "b7c80140a6de72119a06fc02b49ff1812789c594",
+        "sha256": "2686aff5ae6dabf5aed38bbf7d0f67905645873e2876fbe0cb873a79245af6de",
+        "matched_concepts": []
+      },
+      {
+        "path": "src/mist_transfer/audit.py",
+        "blob_oid": "8172501236e781f7c8fcadcdc4f46f573326b3d6",
+        "sha256": "3864483ed71c1f7068ba20b2c16f581c878227f260ed5820e272ac8bb46c9ac6",
+        "matched_concepts": []
+      },
+      {
+        "path": "src/mist_transfer/baselines.py",
+        "blob_oid": "77d10210e5bd7e022fe9e961d344f8cb2bd7884b",
+        "sha256": "77e0c409f6b886137b80b9cecb0a4fa9c2f0e36d022d9484e36920715f0b8854",
+        "matched_concepts": [
+          "raw_context"
+        ]
+      },
+      {
+        "path": "src/mist_transfer/experiment.py",
+        "blob_oid": "4b2a8ec5efae2c4c03f26c26124178f42ffafbb5",
+        "sha256": "92265c6d45bd8bfeb89f76e4775dedfba28ccc9ea42ad81e26bdaacfea24f6ec",
+        "matched_concepts": [
+          "best.pt",
+          "fit_artifacts",
+          "raw_context",
+          "source_input_proof",
+          "state_dict",
+          "training_waveform_bank"
+        ]
+      },
+      {
+        "path": "src/mist_transfer/full_experiment.py",
+        "blob_oid": "e630a964db72c5ac26bc8c014ea102cf3b5f28dc",
+        "sha256": "62246a5f1ce8d13711c041eb0523e864fad06cb72bd7077bd44f97d50251cfb5",
+        "matched_concepts": [
+          "best.pt",
+          "best_state_digest",
+          "fit_artifacts",
+          "raw_context",
+          "source_input_proof",
+          "state_dict",
+          "training_waveform_bank"
+        ]
+      },
+      {
+        "path": "src/mist_transfer/integrity.py",
+        "blob_oid": "16d66e5ec40d197df8779a1098fe9f05dae4c03c",
+        "sha256": "86e95c3c45044134bf516801751e71c69bda92f3d7a6476da034cb6cb63955a1",
+        "matched_concepts": []
+      },
+      {
+        "path": "src/mist_transfer/manifest.py",
+        "blob_oid": "f8c25f50665e972763cb1e7b84c1766427e91de9",
+        "sha256": "34ca2e4257149759ecd3b68f8fa5d4bbe49a8bf5eb04f7d47cd6506f26bd0b08",
+        "matched_concepts": []
+      },
+      {
+        "path": "src/mist_transfer/metrics.py",
+        "blob_oid": "891563e8f90fe94501efbaee01b828c17aaf5234",
+        "sha256": "4402981df60283ceea7ed0f103367e3a2f366b63eb3bfc8e095f3c674828f695",
+        "matched_concepts": []
+      },
+      {
+        "path": "src/mist_transfer/p1_5.py",
+        "blob_oid": "132e25adfcc4ff5430acb069c74adf96bfeccc86",
+        "sha256": "159417ecd2e110d0b571fbd259c701e1ca69fbdc3834fdd0021e122793f61208",
+        "matched_concepts": []
+      },
+      {
+        "path": "src/mist_transfer/preprocessing.py",
+        "blob_oid": "fc41978479b9a65de0deab1540735995f2b22ab5",
+        "sha256": "ac4e763ca767ebb149e967207a82fd31413445d36cb3d8d3c3a81f684ce76a3b",
+        "matched_concepts": []
+      },
+      {
+        "path": "src/mist_transfer/protocol.py",
+        "blob_oid": "c9c715d7994b84fb2f2ba9ec160de2cd6c8377ef",
+        "sha256": "d3f30fb29121c5402b947a63d956dcaf221a2828aa173218cdc72c028b5e9a7a",
+        "matched_concepts": []
+      },
+      {
+        "path": "src/mist_transfer/provenance.py",
+        "blob_oid": "9bd890307db65ee017f211dfba2604cb0029fdfa",
+        "sha256": "a03c048465df5bfd90dfd4845a7686a912a026ef47a426256a054892c008bcde",
+        "matched_concepts": []
+      },
+      {
+        "path": "src/mist_transfer/source_data.py",
+        "blob_oid": "199c89ae058f2f915c8746904db4a0425f41ad65",
+        "sha256": "689d4275c0399601fdef6bc0d3f426d0d47f37fef7414de803cb63f0928e4ef8",
+        "matched_concepts": []
+      },
+      {
+        "path": "src/protosleep/attnsleep.py",
+        "blob_oid": "630c2039b84168b044706c0861631c1d87d5ed34",
+        "sha256": "732cadab7adc70a9a43320c7798124451d0d0a8dcd679964c73dc44192f98c3f",
+        "matched_concepts": []
+      },
+      {
+        "path": "src/protosleep/config.py",
+        "blob_oid": "d39da17d9451292bbcb1a99ca6d7f472880ef532",
+        "sha256": "c6b147f8bba25ecf2f421adafd2d43b797cfe05bf879c32a9f123c21361f9900",
+        "matched_concepts": []
+      },
+      {
+        "path": "src/protosleep/utils.py",
+        "blob_oid": "82cb4826b1fc40095e606fc59f4f9c3416ec9a44",
+        "sha256": "1e193a5d46de37df84cfdae6be59c9ac09a19078e8c22fffc0c25273f463e6de",
+        "matched_concepts": [
+          "state_dict"
+        ]
+      },
+      {
+        "path": "docs/P3B_RUNNER.md",
+        "blob_oid": "0ecfaee090e4d9c5bc2138d36f551bfae86d994d",
+        "sha256": "d0fdd3e9a9c9fe1ad84bfd04f0f6f45346e969a44df6e87d5a76f21185f7c9aa",
+        "matched_concepts": []
+      },
+      {
+        "path": "configs/p3b_sc_matched_v1.json",
+        "blob_oid": "9d7a1f3a7572fa0951337700a02373e7d767e196",
+        "sha256": "09c51325bc87e5c5d6725a2fdbcf95c5d990b556bb4027dcfce9d949fd894d5d",
+        "matched_concepts": [
+          "raw_context"
+        ]
+      },
+      {
+        "path": "docs/P3B_RUNNER.md",
+        "blob_oid": "5b905b3a0a339dcf426d145abdc1a8f8ac1c52d4",
+        "sha256": "9fa6a20b0b4b958e703d2e1e7ca4810a045143938cf1962a44528c454c64036c",
+        "matched_concepts": []
+      },
+      {
+        "path": "src/mist_transfer/full_experiment.py",
+        "blob_oid": "b07b9c5a055bd9a17095a629851228411cfa13b7",
+        "sha256": "900fb1d3a21741b38a33912a8d3cc1d053e9830a36e0b8d5db80759e9b0487e2",
+        "matched_concepts": [
+          "best.pt",
+          "best_state_digest",
+          "fit_artifacts",
+          "raw_context",
+          "source_input_proof",
+          "state_dict",
+          "training_waveform_bank"
+        ]
+      },
+      {
+        "path": "src/mist_evidence/runtime.py",
+        "blob_oid": "998eaf1e8ebea0f2e88bf8bbcded646a1981fe28",
+        "sha256": "de132da7d39f321cc5ae108109a5e887378f06a9d7e10e02f7de88ee1478356a",
+        "matched_concepts": [
+          "best.pt",
+          "best_state_digest",
+          "state_dict"
+        ]
+      },
+      {
+        "path": "src/mist_transfer/source_data.py",
+        "blob_oid": "8fabb2ad77327e0d82f496c9745fee9c3c8e59e1",
+        "sha256": "9b973fc5aa3fd7be5d9ac0a1c498f18a8909c5a24eacdff5f81a05128f6e16cf",
+        "matched_concepts": []
+      },
+      {
+        "path": "src/mist_evidence/runtime.py",
+        "blob_oid": "7f4dd8870dd693559a092d43e8cb8bcc40b57d7b",
+        "sha256": "b6d386ae11d5c6ec179cfff5285db77e8a9e95f84f8148de1db1bc0b1dcdc694",
+        "matched_concepts": [
+          "best.pt",
+          "best_state_digest",
+          "state_dict"
+        ]
+      },
+      {
+        "path": "src/mist_transfer/preprocessing.py",
+        "blob_oid": "0f3a1f4b21b5e6ccd0a26bab725f61a1323078b4",
+        "sha256": "2c4272add836c5a0615a9726de48ecbbc22fa53e478586dd863b6bcf0c3fcd4c",
+        "matched_concepts": []
+      },
+      {
+        "path": "src/mist_transfer/annotation_compat.py",
+        "blob_oid": "9581040e2f23dec09cf89c135dfbb5e4c4826bf6",
+        "sha256": "31b507814055b58faeb644bb86a9e45491564ad45477981dcf5ad232d50a95dc",
+        "matched_concepts": []
+      },
+      {
+        "path": "src/mist_transfer/p1_5.py",
+        "blob_oid": "7a099b1912893566eac5f0f98bde6463bfd55fa5",
+        "sha256": "a424ddbad6d814f6a76cdc93f5484798fd7bcfc0a18d78842bfb0376e322678e",
+        "matched_concepts": []
+      },
+      {
+        "path": "src/mist_evidence/cli.py",
+        "blob_oid": "14f4a164cd6bd2378006ae32519fceb65cb968d1",
+        "sha256": "fa0a9a64ab2fdbb1faf9486cf459520f88ad5b373c826fb819b21199f06fc331",
+        "matched_concepts": [
+          "raw_context"
+        ]
+      },
+      {
+        "path": "src/mist_evidence/cli.py",
+        "blob_oid": "882594536122a197870e5ea7382169e425186100",
+        "sha256": "d55ed974a08fab2243959ca06835c9f961fc8933eb65b52d43bf4c9d4a705125",
+        "matched_concepts": [
+          "raw_context"
+        ]
+      },
+      {
+        "path": "src/mist_evidence/explain.py",
+        "blob_oid": "3c25644972c990ecf2d11a6eaa43a92cd9500f84",
+        "sha256": "aca358bc04b5c754dc514c895857d75d2812681f0df82e5ef745fdc4d104693e",
+        "matched_concepts": []
+      },
+      {
+        "path": "scripts/run_mist_evidence.py",
+        "blob_oid": "39de6272b1d53e2616415ba7ebdfa8e23f5e499f",
+        "sha256": "d8bd43a223b9a51a85a4d090c6cdfb9b0b9d3e1fc96b1db67609f4bafbedd5ed",
+        "matched_concepts": []
+      }
+    ],
+    "scope": "all reachable Git versions of explicit approved source/publication paths; no private filesystem or arbitrary data roots",
+    "direct_selected_checkpoint_byte_reference_found": false,
+    "root_marker_reference_found": true,
+    "negative_search_is_exhaustive_globally": false
+  },
+  "phase3_seal_references": [
+    {
+      "experiment": "MIST_COVE_PHASE_III",
+      "variant": "raw_context",
+      "seed": 123,
+      "complete_seal_sha256": "a7747559ecc838307c342e09f226e536356ce6231f1b64ca58128fbd344b169b",
+      "checkpoint_byte_sha256": null,
+      "source_commit": "4095c805cfd48fbb1e9ef938dbc46da28ed1dfb1"
+    },
+    {
+      "experiment": "MIST_COVE_PHASE_III",
+      "variant": "raw_context",
+      "seed": 456,
+      "complete_seal_sha256": "c8c8f3c55d1e30987d58a52c324b0a6aa983b243d3d439489625afe62d7216f6",
+      "checkpoint_byte_sha256": null,
+      "source_commit": "4095c805cfd48fbb1e9ef938dbc46da28ed1dfb1"
+    },
+    {
+      "experiment": "MIST_COVE_PHASE_III",
+      "variant": "raw_context",
+      "seed": 789,
+      "complete_seal_sha256": "a626efa2ed5c1b8df42ffb9d6051671a9a30a0e6fef18ff356107729a7bb5151",
+      "checkpoint_byte_sha256": null,
+      "source_commit": "4095c805cfd48fbb1e9ef938dbc46da28ed1dfb1"
+    }
+  ],
+  "remote_publication_crosscheck": {
+    "commit": "15995b31821ee8db717f3d6edfa41166de65d4a3",
+    "tree": "328f2848ab3ca169b90b006a6100226332774f40",
+    "matches_local": true,
+    "signature_verified": false,
+    "signature_reason": "unsigned",
+    "independent_third_party_attestation": false
+  },
+  "environment": {
+    "python": "3.12.9",
+    "GPU_queries": 0,
+    "neural_fits": 0,
+    "optimizer_updates": 0
+  },
+  "metadata_audit_wall_seconds": 1.066441875998862,
+  "historical_private_artifacts_opened": 0,
+  "real_checkpoint_bytes_hashed": 0,
+  "real_checkpoints_deserialized": 0,
+  "real_EEG_accessed": false
+}
