@@ -21,6 +21,28 @@ def model_identity(model):
                    'state': tensor_digest(model.state_dict().values())})
 
 
+def verify_architecture(model):
+    """Reject altered normalization, topology or hooks before support claims.
+
+    A temporary CPU skeleton uses generated ramp buffers only. It is never
+    attached to the classifier, fitted or used for inference. fork_rng keeps
+    model validation from changing the caller's CPU random stream.
+    """
+    cfg=model.cfg
+    anchors=[torch.arange(length,dtype=torch.float32).repeat(cfg.prototypes_per_scale,1) for length in cfg.scales]
+    with torch.random.fork_rng(devices=[]):
+        reference=EvidenceModel(cfg,anchors,(0.,1.)).eval()
+    actual=list(model.named_modules());expected=list(reference.named_modules())
+    if len(actual)!=len(expected):raise ValueError('unreviewed architecture topology')
+    for (name,item),(wanted,standard) in zip(actual,expected):
+        if name!=wanted or type(item) is not type(standard) or repr(item)!=repr(standard):
+            raise ValueError('unreviewed architecture or normalization: '+name)
+        if item._forward_hooks or item._forward_pre_hooks or 'forward' in item.__dict__:
+            raise ValueError('unreviewed forward hooks or overrides')
+    if 'encode' in model.__dict__ or 'emissions' in model.__dict__ or model.feature_names!=reference.feature_names:
+        raise ValueError('unreviewed encoding/head override or feature ordering')
+
+
 @dataclass(frozen=True)
 class SourceCache:
     local_embeddings: tuple
@@ -54,6 +76,7 @@ class SourceAdapter:
         for b, scale in zip(model.banks, model.cfg.scales):
             if tuple(b.waveforms.shape) != (model.cfg.prototypes_per_scale, scale):
                 raise ValueError('actual unfold geometry differs from audited config')
+        verify_architecture(model)
         if any(p.dtype != torch.float32 for p in model.parameters()):
             raise ValueError('frozen FP32 operator required')
         self.model = model
@@ -63,6 +86,11 @@ class SourceAdapter:
         self._graph_digest = digest(self.graph)
 
     def check(self, cache=None):
+        for module in self.model.modules():
+            if module._forward_hooks or module._forward_pre_hooks or module._backward_hooks or 'forward' in module.__dict__:
+                raise ValueError('unreviewed hooks or forward override added after construction')
+        if 'encode' in self.model.__dict__ or 'emissions' in self.model.__dict__:
+            raise ValueError('unreviewed encoding/head override added after construction')
         if self.model.training or model_identity(self.model) != self.identity or digest(self.graph) != self._graph_digest:
             raise ValueError('frozen model/dependency identity changed')
         if cache is not None:

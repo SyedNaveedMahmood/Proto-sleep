@@ -52,11 +52,12 @@ def timed(call):
 
 
 @torch.no_grad()
-def cpu_benchmark():
+def cpu_benchmark(*,post_guard=False):
     mock_request();verify_frozen_mock_core()
     require_gates(json.loads((PUBLIC/'correctness_receipt.json').read_text()),['identity','noninterference'])
     if not (PUBLIC/'provenance_review.json').exists():raise ValueError('X10 metadata review required first')
-    started=time.perf_counter();deadline=started+600;out=PRIVATE/'benchmark_v1';out.mkdir(exist_ok=False)
+    started=time.perf_counter();deadline=started+600
+    out=PRIVATE/('benchmark_guard_v4' if post_guard else 'benchmark_v1');out.mkdir(exist_ok=False)
     rows=[];sensitivity=[]
     for seed in (123,456,789):
         adapter=SourceAdapter(make_mock(seed).network);x=mock_input(n=1);cache=adapter.cache(x)
@@ -110,4 +111,7 @@ def cpu_benchmark():
             'additional_queries':{'native_warmups':3,'native_timed_predictions':9,'single_masked_queries':9,'batched_masked_queries':9*512,
                                   'full_target_queries':12,'gradient_backwards':0},
             'real_artifacts_opened':0}
-    no_sensitive_exports(result);write_json(PUBLIC/'resource_estimates.json',result);return result
+    result['implementation_scope']='architecture guard v4' if post_guard else 'initial v1 benchmark'
+    no_sensitive_exports(result)
+    write_json(PUBLIC/('resource_estimates_guard_v4.json' if post_guard else 'resource_estimates.json'),result)
+    return result

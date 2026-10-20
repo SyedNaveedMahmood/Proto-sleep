@@ -61,3 +61,20 @@ def test_unreviewed_model_geometry_and_modes_rejected():
     with pytest.raises(ValueError):SourceAdapter(model)
     model.eval();model.banks[0].waveforms=torch.randn(16,200)
     with pytest.raises(ValueError,match='geometry'):SourceAdapter(model)
+
+
+@pytest.mark.parametrize('change',['cross_window_norm','stride','head_norm','hook'])
+def test_altered_internal_architecture_cannot_inherit_locality_proof(change):
+    model=make_mock().network
+    if change=='cross_window_norm':model.banks[0].encoder.net[1]=torch.nn.BatchNorm1d(16).eval()
+    elif change=='stride':model.banks[0].encoder.net[0].stride=(3,)
+    elif change=='head_norm':model.temporal.norm1.eps=.01
+    elif change=='hook':model.banks[0].encoder.register_forward_hook(lambda module,args,out:out)
+    with pytest.raises(ValueError,match='unreviewed'):SourceAdapter(model)
+
+
+def test_late_hook_and_cpu_random_stream_are_guarded():
+    model=make_mock().network;before=torch.get_rng_state().clone();adapter=SourceAdapter(model)
+    assert torch.equal(before,torch.get_rng_state())
+    cache=adapter.cache(mock_input(n=1));model.banks[0].encoder.register_forward_hook(lambda module,args,out:out)
+    with pytest.raises(ValueError,match='unreviewed'):adapter.logits(cache,torch.ones(1,15,dtype=torch.bool))
