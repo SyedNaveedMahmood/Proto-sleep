@@ -318,12 +318,29 @@
       "dependencies": [
         "X11"
       ],
-      "status": "PENDING",
-      "code_configuration_identity": {},
-      "tests_performed": [],
-      "produced_artifacts": [],
-      "scientific_findings": [],
-      "unresolved_limitations": [],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "safety_source_sha256": "bb6303ec291fb956f25d5139acce89c37ef3625d10bb8e5ce452b0f15f674218"
+      },
+      "tests_performed": [
+        "20 authorization/gate/privacy/atomicity/tamper/CUDA-contention tests passed",
+        "Default CLI ran metadata-only and reported SOURCE_NOT_AUTHORIZED; zero artifact opens",
+        "Factory/adapter exercised with real readers, torch.load and numpy.load patched to fail"
+      ],
+      "produced_artifacts": [
+        "scripts/check_mist_cove_phase10.py",
+        "src/mist_cove/phase10/safety.py",
+        "src/mist_cove/phase10/review.py",
+        "tests/mist_cove/test_phase10_authorization.py"
+      ],
+      "scientific_findings": [
+        "Every source role rejected before path stringification/stat/resolve/open; absolute/symlink paths cannot unlock a reader",
+        "No source/checkpoint/bank CLI flags, fallback or authorization switch exist"
+      ],
+      "unresolved_limitations": [
+        "Supported-entrypoint fail-closed boundary, not an OS sandbox against arbitrary malicious Python",
+        "Any future actual-source runner requires separately reviewed implementation and explicit release authorization"
+      ],
       "block_reason": null
     },
     {
@@ -332,12 +349,24 @@
       "dependencies": [
         "X12"
       ],
-      "status": "PENDING",
-      "code_configuration_identity": {},
-      "tests_performed": [],
-      "produced_artifacts": [],
-      "scientific_findings": [],
-      "unresolved_limitations": [],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_core": "phase10_reporting_freeze_v2.json"
+      },
+      "tests_performed": [
+        "Protocol reviewed against supplied Phase X11-gate contract, original split/preprocessing and measured/mock limitations"
+      ],
+      "produced_artifacts": [
+        "docs/mist_cove/PHASE_X_TRAIN_ONLY_PROTOCOL_V1.md",
+        "docs/mist_cove/PHASE_X_OPERATOR_LIMITATIONS_V1.md"
+      ],
+      "scientific_findings": [
+        "At most150 original TRAIN epochs: first2 scored per stage/person in frozen recording/index order; missing strata not replaced",
+        "All11 prelaunch gates explicit; no real runner or launch authorization"
+      ],
+      "unresolved_limitations": [
+        "Ready for human protocol review only; actual checkpoint authentication, actual resource pilot and real launch remain blocked/unexecuted"
+      ],
       "block_reason": null
     },
     {
@@ -346,12 +375,24 @@
       "dependencies": [
         "X13"
       ],
-      "status": "PENDING",
-      "code_configuration_identity": {},
-      "tests_performed": [],
-      "produced_artifacts": [],
-      "scientific_findings": [],
-      "unresolved_limitations": [],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_core": "phase10_reporting_freeze_v2.json"
+      },
+      "tests_performed": [
+        "Protocol reviewed against supplied Phase X11-gate contract, original split/preprocessing and measured/mock limitations"
+      ],
+      "produced_artifacts": [
+        "docs/mist_cove/PHASE_X_TRAIN_ONLY_PROTOCOL_V1.md",
+        "docs/mist_cove/PHASE_X_OPERATOR_LIMITATIONS_V1.md"
+      ],
+      "scientific_findings": [
+        "Correct/wrong original predictions separated from masked repairs",
+        "Model-support terminology only; no automatic clinical event or causal labels; prior/whole-epoch/operator-sensitive cases retained"
+      ],
+      "unresolved_limitations": [
+        "Ready for human protocol review only; actual checkpoint authentication, actual resource pilot and real launch remain blocked/unexecuted"
+      ],
       "block_reason": null
     },
     {
