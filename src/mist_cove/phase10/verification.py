@@ -1,5 +1,9 @@
 """Measured mock correctness and explicit scientific dependency gates."""
+import hashlib
+import json
+import subprocess
 import torch
+from .dependency_graph import ROOT
 from .mock_models import make_mock,mock_input
 from .source_adapter import SourceAdapter
 
@@ -14,6 +18,16 @@ def errors(a,b):
 def require_gates(receipt, names):
     if any(receipt.get(name,{}).get('status')!='PASS' for name in names):
         raise ValueError('required scientific dependency gate failed or absent')
+
+
+def verify_frozen_mock_core():
+    p=ROOT/'experiments/mist_cove/phase10_mock_freeze_v1.json'
+    freeze=json.loads(p.read_text())
+    for name,sha in freeze['files'].items():
+        data=(ROOT/name).read_bytes()
+        if hashlib.sha256(data).hexdigest()!=sha:raise ValueError('frozen mock source changed: '+name)
+        if subprocess.check_output(['git','show',f'HEAD:{name}'],cwd=ROOT)!=data:raise ValueError('mock source must be committed')
+    return {'status':'PASS','frozen_files':len(freeze['files'])}
 
 
 @torch.no_grad()
