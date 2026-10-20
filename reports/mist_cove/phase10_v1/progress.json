@@ -122,12 +122,23 @@
       "dependencies": [
         "X04"
       ],
-      "status": "PENDING",
-      "code_configuration_identity": {},
-      "tests_performed": [],
-      "produced_artifacts": [],
-      "scientific_findings": [],
-      "unresolved_limitations": [],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "operator_commit": "3bb3ba0abb7ee0169b038f147cadc602ef84c686"
+      },
+      "tests_performed": [
+        "13 identity/interface tests passed",
+        "9 configurations x4 inputs; features and logits bitwise equal; max absolute and relative errors0"
+      ],
+      "produced_artifacts": [
+        "reports/mist_cove/phase10_v1/correctness_receipt.json"
+      ],
+      "scientific_findings": [
+        "Full-input identity PASS for all3 seeds and full/no-amplitude/no-summary configs; original five-stage head retained"
+      ],
+      "unresolved_limitations": [
+        "Random synthetic weights and buffers only; actual source checkpoint identity not tested"
+      ],
       "block_reason": null
     },
     {
@@ -136,12 +147,24 @@
       "dependencies": [
         "X05"
       ],
-      "status": "PENDING",
-      "code_configuration_identity": {},
-      "tests_performed": [],
-      "produced_artifacts": [],
-      "scientific_findings": [],
-      "unresolved_limitations": [],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "operator_commit": "3bb3ba0"
+      },
+      "tests_performed": [
+        "37 noninterference/tamper/input-validation tests passed",
+        "252 retained-path/logit comparisons across3 seeds,6 masks,7 perturbations,2 neutrals; max errors0; all bitwise equal",
+        "15 deliberately broken global-path controls detect nonzero hidden dependence"
+      ],
+      "produced_artifacts": [
+        "reports/mist_cove/phase10_v1/correctness_receipt.json"
+      ],
+      "scientific_findings": [
+        "Hidden-sample noninterference PASS under declared operator; all available embeddings and head inputs verified"
+      ],
+      "unresolved_limitations": [
+        "Finite synthetic numerical probes supplement static support proof; do not establish physiological validity"
+      ],
       "block_reason": null
     },
     {
