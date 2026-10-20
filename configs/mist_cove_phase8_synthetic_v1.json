@@ -1,0 +1,16 @@
+{
+ "version":"phase8-robust-evidence-v1","scope":"SYNTHETIC_ONLY",
+ "base_commit":"4262a1a9680f9e8c1747363553204aaeb1ce976b","primary":"B1",
+ "methods":["P0","R1","R2","B1","A1","T1"],"tasks":["single","multiple"],"seeds":[123,456,789],
+ "train_offset":10000,"probe_train_offset":8100000,"diagnostic_offset":8200000,
+ "locked_offset":8300000,"calibration_offset":8400000,"stress_offset":8500000,
+ "loss_offset":8600000,"failure_offset":8700000,"pair_offset":8800000,
+ "donor_train_offset":8900000,"donor_calibration_offset":9000000,"donor_eval_offset":9100000,
+ "independent_offset":9200000,"head_train_offset":9300000,"head_eval_offset":9400000,
+ "train_examples":1000,"evaluation_examples":1000,"calibration_examples":500,
+ "diagnostic_examples":100,"stress_examples":100,"pair_examples":100,
+ "updates":300,"head_updates":300,"batch_size":16,"learning_rate":0.001,"weight_decay":0.0001,
+ "gradient_clip":5,"cpu_threads":2,"diagnostic_budget_seconds":600,"confirmatory_budget_seconds":3600,
+ "criteria":{"clean_f1":0.8,"competitive_f1":0.7,"pair_appropriate":0.8,"nuisance_agreement":0.8,"clean_penalty":0.03},
+ "real_data_authorized":false
+}

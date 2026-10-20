@@ -1,0 +1,22 @@
+{
+  "version": "phase8-descriptive-completion-v1",
+  "classification": "DESCRIPTIVE_AFTER_LOCKED_RESULTS",
+  "private_result_sha256": "c8472e94d75e973d5fd96c53b9b9e575d6534309a5b0729e356a216a850cefc3",
+  "remaining_budget_seconds": 3428.0781893129897,
+  "files": {
+    "analysis/mist_cove_phase8_v1/collect.py": "5fd76aa8cda710e270565522f8655ec6fe9f7bc5fa0deaeb921ff800dea8589d",
+    "analysis/mist_cove_phase8_v1/complete_diagnostics.py": "320fdbb6433fcd08eb38548a7febba1fe54f02a9a89c20d80ab5200e08f90ac7",
+    "docs/mist_cove/PHASE_VIII_DESCRIPTIVE_COMPLETION_V1.md": "971398b07f3927ba11bc805f5dfaeaea0df38c3044c2f86c7f3c674d5a0c2ac8",
+    "src/mist_cove/phase8/__init__.py": "ac2875a33407008c1dc0b42b9bedd5f51b3327909a5e29bca146e41177847604",
+    "src/mist_cove/phase8/calibration.py": "65c428e56c43a1c60c8e2b760ac7912229b61b64f917a86a56acfed15db6c8f9",
+    "src/mist_cove/phase8/diagnostics.py": "19d22f100da15a698c0d35279bfede4ee34edef581f2e56274d5d4db387da345",
+    "src/mist_cove/phase8/evaluation.py": "4830e5ef274d3a262557fbd794e04d5100155d855ddcc345ba8e9f3aaa85ea16",
+    "src/mist_cove/phase8/evidence.py": "4a282ac1e794652bc3795379afb5920cb113bd3ff960e8ee99eddc7a9562c8fb",
+    "src/mist_cove/phase8/generator.py": "90db5c6cc199ea3bff38795fab3a9357c44291b743a0b7b37baf2ec5f6358954",
+    "src/mist_cove/phase8/interventions.py": "d3e78fd46aa3d55ff7ffe4d4b529bbec0bc850e0ae403b38b8be3530359a1ec4",
+    "src/mist_cove/phase8/pooling.py": "99b63b09961def6ad30e908f582206281962b7e13c4c18cf5df75ccddbbc1ef5",
+    "src/mist_cove/phase8/provenance.py": "c3714fcee8efc3c4cfa7dac7dae8d21238a4b024cdd67284dd05a36914c71cc4",
+    "src/mist_cove/phase8/representation.py": "64f7ea416033ed5629cbae5b9e9207bc90fae3f211e92afadde9ad8dbdf76d13",
+    "src/mist_cove/phase8/robustness.py": "f0bab44ce7e5ff13af46a8729eb6cf4527d592c4a20ab5e6e6ace380e1acc12c"
+  }
+}

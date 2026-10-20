@@ -1,0 +1,12 @@
+{
+  "scope": "GENERATED_PILOT_NO_LOCKED_SCORES",
+  "updates": 20,
+  "batch_size": 16,
+  "train_seconds": 0.13686128999688663,
+  "inference_examples": 100,
+  "inference_seconds": 0.016183657993678935,
+  "peak_rss_KiB": 439264,
+  "projected_18_fit_seconds": 36.95254829915939,
+  "projected_350000_example_inference_seconds": 56.64280297787627,
+  "ceiling_seconds": 3600
+}

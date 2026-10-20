@@ -1,0 +1,454 @@
+{
+  "heads": {
+    "status": "NOT TESTED",
+    "reason": "PRIMARY_ROBUSTNESS_GATE_FAILED",
+    "fits": 0,
+    "rows": []
+  },
+  "donors": [
+    {
+      "task": "single",
+      "seed": 123,
+      "method": "B1",
+      "donors": {
+        "population": {
+          "train_baseline": {
+            "attempted": 150,
+            "accepted": 0,
+            "rejections": {
+              "envelope": 47,
+              "energy": 60,
+              "spectrum": 146,
+              "boundary": 41
+            },
+            "mean_distortions": {
+              "energy_relative": 0.4531882952439295,
+              "spectral_l1": 1.9091464269342384,
+              "boundary_max": 21.83524160352846
+            }
+          },
+          "bridge": {
+            "attempted": 50,
+            "accepted": 0,
+            "rejections": {
+              "envelope": 0,
+              "energy": 49,
+              "spectrum": 50,
+              "boundary": 0
+            },
+            "mean_distortions": {
+              "energy_relative": 0.9601916371557535,
+              "spectral_l1": 1.905807644636405,
+              "boundary_max": 0.0
+            }
+          },
+          "oracle_neutral": {
+            "attempted": 50,
+            "accepted": 0,
+            "rejections": {
+              "envelope": 5,
+              "energy": 45,
+              "spectrum": 46,
+              "boundary": 0
+            },
+            "mean_distortions": {
+              "energy_relative": 0.8912311334669631,
+              "spectral_l1": 1.7346862513059988,
+              "boundary_max": 0.0
+            }
+          }
+        },
+        "evaluation_examples": 50,
+        "accepted_coverage": 0.0,
+        "multiple_accepted_examples": 0,
+        "conditional_prediction_disagreement": null,
+        "mean_effect_spread": null,
+        "accepted_donor_robustness": "NOT TESTED",
+        "neutrality": "TRAIN baseline and oracle-neutral populations contain no generated diagnostic component; bridge neutrality unverified",
+        "overlap_policy": "single first diagnostic interval only; no union geometry confound",
+        "clinical_validity": "NOT TESTED",
+        "envelope_center": [
+          0.6876094336078431,
+          0.5490913947088337,
+          0.20691445637717276
+        ],
+        "envelope_scale": [
+          0.1788687133682672,
+          0.024240750492078855,
+          0.12869560824154935
+        ],
+        "cutoff": 109.88016071918923
+      }
+    },
+    {
+      "task": "single",
+      "seed": 456,
+      "method": "B1",
+      "donors": {
+        "population": {
+          "train_baseline": {
+            "attempted": 150,
+            "accepted": 0,
+            "rejections": {
+              "envelope": 22,
+              "energy": 102,
+              "spectrum": 149,
+              "boundary": 17
+            },
+            "mean_distortions": {
+              "energy_relative": 0.5869165851134943,
+              "spectral_l1": 1.8477439832223908,
+              "boundary_max": 13.632256228675445
+            }
+          },
+          "bridge": {
+            "attempted": 50,
+            "accepted": 0,
+            "rejections": {
+              "envelope": 0,
+              "energy": 49,
+              "spectrum": 50,
+              "boundary": 0
+            },
+            "mean_distortions": {
+              "energy_relative": 0.9582105268497423,
+              "spectral_l1": 1.9069735499441989,
+              "boundary_max": 0.0
+            }
+          },
+          "oracle_neutral": {
+            "attempted": 50,
+            "accepted": 0,
+            "rejections": {
+              "envelope": 7,
+              "energy": 44,
+              "spectrum": 47,
+              "boundary": 0
+            },
+            "mean_distortions": {
+              "energy_relative": 0.8895063066535184,
+              "spectral_l1": 1.747123090865487,
+              "boundary_max": 0.0
+            }
+          }
+        },
+        "evaluation_examples": 50,
+        "accepted_coverage": 0.0,
+        "multiple_accepted_examples": 0,
+        "conditional_prediction_disagreement": null,
+        "mean_effect_spread": null,
+        "accepted_donor_robustness": "NOT TESTED",
+        "neutrality": "TRAIN baseline and oracle-neutral populations contain no generated diagnostic component; bridge neutrality unverified",
+        "overlap_policy": "single first diagnostic interval only; no union geometry confound",
+        "clinical_validity": "NOT TESTED",
+        "envelope_center": [
+          0.6462542437929196,
+          0.5304162461119679,
+          0.17415662454448966
+        ],
+        "envelope_scale": [
+          0.1867118227697262,
+          0.02465912286989913,
+          0.11631301272405449
+        ],
+        "cutoff": 88.82676203430475
+      }
+    },
+    {
+      "task": "single",
+      "seed": 789,
+      "method": "B1",
+      "donors": {
+        "population": {
+          "train_baseline": {
+            "attempted": 150,
+            "accepted": 0,
+            "rejections": {
+              "envelope": 28,
+              "energy": 92,
+              "spectrum": 149,
+              "boundary": 6
+            },
+            "mean_distortions": {
+              "energy_relative": 0.5080305413556848,
+              "spectral_l1": 1.9099835107780294,
+              "boundary_max": 15.913445584072422
+            }
+          },
+          "bridge": {
+            "attempted": 50,
+            "accepted": 0,
+            "rejections": {
+              "envelope": 0,
+              "energy": 47,
+              "spectrum": 50,
+              "boundary": 0
+            },
+            "mean_distortions": {
+              "energy_relative": 0.9388589447691765,
+              "spectral_l1": 1.8964528421099167,
+              "boundary_max": 0.0
+            }
+          },
+          "oracle_neutral": {
+            "attempted": 50,
+            "accepted": 0,
+            "rejections": {
+              "envelope": 5,
+              "energy": 43,
+              "spectrum": 46,
+              "boundary": 0
+            },
+            "mean_distortions": {
+              "energy_relative": 0.8658164941677329,
+              "spectral_l1": 1.6876314934591499,
+              "boundary_max": 0.0
+            }
+          }
+        },
+        "evaluation_examples": 50,
+        "accepted_coverage": 0.0,
+        "multiple_accepted_examples": 0,
+        "conditional_prediction_disagreement": null,
+        "mean_effect_spread": null,
+        "accepted_donor_robustness": "NOT TESTED",
+        "neutrality": "TRAIN baseline and oracle-neutral populations contain no generated diagnostic component; bridge neutrality unverified",
+        "overlap_policy": "single first diagnostic interval only; no union geometry confound",
+        "clinical_validity": "NOT TESTED",
+        "envelope_center": [
+          0.7422797016307892,
+          0.5406430039475973,
+          0.15830098063627357
+        ],
+        "envelope_scale": [
+          0.21894529719431188,
+          0.025098425701700455,
+          0.09732593779139363
+        ],
+        "cutoff": 96.80838424493797
+      }
+    },
+    {
+      "task": "multiple",
+      "seed": 123,
+      "method": "B1",
+      "donors": {
+        "population": {
+          "train_baseline": {
+            "attempted": 150,
+            "accepted": 0,
+            "rejections": {
+              "envelope": 47,
+              "energy": 60,
+              "spectrum": 146,
+              "boundary": 41
+            },
+            "mean_distortions": {
+              "energy_relative": 0.4558591598436513,
+              "spectral_l1": 1.9125023331432787,
+              "boundary_max": 21.83524160352846
+            }
+          },
+          "bridge": {
+            "attempted": 50,
+            "accepted": 0,
+            "rejections": {
+              "envelope": 0,
+              "energy": 49,
+              "spectrum": 50,
+              "boundary": 0
+            },
+            "mean_distortions": {
+              "energy_relative": 0.9601196151154825,
+              "spectral_l1": 1.9185013329991336,
+              "boundary_max": 0.0
+            }
+          },
+          "oracle_neutral": {
+            "attempted": 50,
+            "accepted": 0,
+            "rejections": {
+              "envelope": 5,
+              "energy": 45,
+              "spectrum": 46,
+              "boundary": 0
+            },
+            "mean_distortions": {
+              "energy_relative": 0.8910998901898306,
+              "spectral_l1": 1.7385673137035544,
+              "boundary_max": 0.0
+            }
+          }
+        },
+        "evaluation_examples": 50,
+        "accepted_coverage": 0.0,
+        "multiple_accepted_examples": 0,
+        "conditional_prediction_disagreement": null,
+        "mean_effect_spread": null,
+        "accepted_donor_robustness": "NOT TESTED",
+        "neutrality": "TRAIN baseline and oracle-neutral populations contain no generated diagnostic component; bridge neutrality unverified",
+        "overlap_policy": "single first diagnostic interval only; no union geometry confound",
+        "clinical_validity": "NOT TESTED",
+        "envelope_center": [
+          0.6876094336078431,
+          0.5490913947088337,
+          0.20691445637717276
+        ],
+        "envelope_scale": [
+          0.1788687133682672,
+          0.024240750492078855,
+          0.12869560824154935
+        ],
+        "cutoff": 109.88016071918923
+      }
+    },
+    {
+      "task": "multiple",
+      "seed": 456,
+      "method": "B1",
+      "donors": {
+        "population": {
+          "train_baseline": {
+            "attempted": 150,
+            "accepted": 0,
+            "rejections": {
+              "envelope": 21,
+              "energy": 102,
+              "spectrum": 149,
+              "boundary": 17
+            },
+            "mean_distortions": {
+              "energy_relative": 0.5865935812233751,
+              "spectral_l1": 1.884154797187131,
+              "boundary_max": 13.50003436639905
+            }
+          },
+          "bridge": {
+            "attempted": 50,
+            "accepted": 0,
+            "rejections": {
+              "envelope": 0,
+              "energy": 49,
+              "spectrum": 50,
+              "boundary": 0
+            },
+            "mean_distortions": {
+              "energy_relative": 0.958153552076609,
+              "spectral_l1": 1.9273305316388716,
+              "boundary_max": 0.0
+            }
+          },
+          "oracle_neutral": {
+            "attempted": 50,
+            "accepted": 0,
+            "rejections": {
+              "envelope": 7,
+              "energy": 44,
+              "spectrum": 47,
+              "boundary": 0
+            },
+            "mean_distortions": {
+              "energy_relative": 0.8894977030845687,
+              "spectral_l1": 1.7504227465607463,
+              "boundary_max": 0.0
+            }
+          }
+        },
+        "evaluation_examples": 50,
+        "accepted_coverage": 0.0,
+        "multiple_accepted_examples": 0,
+        "conditional_prediction_disagreement": null,
+        "mean_effect_spread": null,
+        "accepted_donor_robustness": "NOT TESTED",
+        "neutrality": "TRAIN baseline and oracle-neutral populations contain no generated diagnostic component; bridge neutrality unverified",
+        "overlap_policy": "single first diagnostic interval only; no union geometry confound",
+        "clinical_validity": "NOT TESTED",
+        "envelope_center": [
+          0.6462542437929196,
+          0.5304162461119679,
+          0.17415662454448966
+        ],
+        "envelope_scale": [
+          0.1867118227697262,
+          0.02465912286989913,
+          0.11631301272405449
+        ],
+        "cutoff": 88.82676203430475
+      }
+    },
+    {
+      "task": "multiple",
+      "seed": 789,
+      "method": "B1",
+      "donors": {
+        "population": {
+          "train_baseline": {
+            "attempted": 150,
+            "accepted": 0,
+            "rejections": {
+              "envelope": 28,
+              "energy": 94,
+              "spectrum": 149,
+              "boundary": 6
+            },
+            "mean_distortions": {
+              "energy_relative": 0.5091282576762598,
+              "spectral_l1": 1.9100381080402804,
+              "boundary_max": 15.913445584072422
+            }
+          },
+          "bridge": {
+            "attempted": 50,
+            "accepted": 0,
+            "rejections": {
+              "envelope": 0,
+              "energy": 47,
+              "spectrum": 50,
+              "boundary": 0
+            },
+            "mean_distortions": {
+              "energy_relative": 0.9387407587646607,
+              "spectral_l1": 1.9195870772609331,
+              "boundary_max": 0.0
+            }
+          },
+          "oracle_neutral": {
+            "attempted": 50,
+            "accepted": 0,
+            "rejections": {
+              "envelope": 5,
+              "energy": 43,
+              "spectrum": 46,
+              "boundary": 0
+            },
+            "mean_distortions": {
+              "energy_relative": 0.8660598509356361,
+              "spectral_l1": 1.7023376582278018,
+              "boundary_max": 0.0
+            }
+          }
+        },
+        "evaluation_examples": 50,
+        "accepted_coverage": 0.0,
+        "multiple_accepted_examples": 0,
+        "conditional_prediction_disagreement": null,
+        "mean_effect_spread": null,
+        "accepted_donor_robustness": "NOT TESTED",
+        "neutrality": "TRAIN baseline and oracle-neutral populations contain no generated diagnostic component; bridge neutrality unverified",
+        "overlap_policy": "single first diagnostic interval only; no union geometry confound",
+        "clinical_validity": "NOT TESTED",
+        "envelope_center": [
+          0.7422797016307892,
+          0.5406430039475973,
+          0.15830098063627357
+        ],
+        "envelope_scale": [
+          0.21894529719431188,
+          0.025098425701700455,
+          0.09732593779139363
+        ],
+        "cutoff": 96.80838424493797
+      }
+    }
+  ]
+}

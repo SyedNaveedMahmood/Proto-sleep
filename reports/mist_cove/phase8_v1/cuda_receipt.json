@@ -1,0 +1,6 @@
+{
+  "status": "BLOCKED",
+  "device_query": "NVIDIA GeForce RTX 4080 SUPER, 16376 MiB, 15940 MiB, 5 MiB, 580.95.05",
+  "compute_processes": "239869, python, 15898 MiB",
+  "model_operations": 0
+}
