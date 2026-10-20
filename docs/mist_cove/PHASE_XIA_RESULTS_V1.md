@@ -74,3 +74,7 @@ The scoped metadata audit took 1.066441875998862 seconds, below its 60-second ce
 ## Decision and remaining uncertainty
 
 Preserve the useful original root reference and pursue the two-receipt permission before requesting checkpoint bytes. Do not switch to Phase III because its seal is easier to inspect. If the original chain cannot be recovered, historical authentication stays blocked; a prospective reproduction would be a separately authorized new model identity. Finish XI-A publication and stop for review. This package demonstrates verifier behavior and recoverable historical references, not original-weight authenticity or clinical explanation validity.
+
+## Publication closeout
+
+All twelve authorized work packages are complete; completing a provenance investigation does not mean the historical artifact gate passes. Draft PR [#13](https://github.com/SyedNaveedMahmood/Proto-sleep/pull/13) targets the Phase X branch. The unchanged CPU workflow passed [run 39448706371](https://github.com/SyedNaveedMahmood/Proto-sleep/actions/runs/39448706371) on `33624493a9cb053179f7d6867e76733b58980ba5`, with 1,022 passed and 11 CUDA skips. Its job took 83 seconds including setup. The final closeout changes only reports, documentation and their publication hashes; the final commit and its own exact-head CI result are recorded externally in the PR after push, avoiding a self-referential commit digest. No later phase is launched.

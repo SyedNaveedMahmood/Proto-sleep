@@ -368,7 +368,21 @@
     "fixture_wall_seconds": 0.004288673997507431
   },
   "exact_final_commit_CI": {
-    "status": "PENDING",
-    "verification_location": "Draft PR checks on exact final pushed commit; recorded in PR closeout"
+    "recording_method": "External draft PR closeout and GitHub check, verified after final push; avoids self-referential commit hash",
+    "PR": "https://github.com/SyedNaveedMahmood/Proto-sleep/pull/13",
+    "required_head": "Exact final pushed Phase XI-A commit",
+    "pre_closeout_code_CI": "PASS; code/configuration identical to final closeout"
+  },
+  "pre_closeout_CI": {
+    "status": "PASS",
+    "head_sha": "33624493a9cb053179f7d6867e76733b58980ba5",
+    "run_id": 39448706371,
+    "url": "https://github.com/SyedNaveedMahmood/Proto-sleep/actions/runs/39448706371",
+    "job_wall_seconds_including_setup": 83,
+    "log_sha256": "2def2fa5030c1603a8b4f436249d9bca3dc817699c40fb7a3140227ee682efc8",
+    "tests_passed": 1022,
+    "CUDA_skipped": 11,
+    "failures": 0,
+    "workflow_changed": false
   }
 }
