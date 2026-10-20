@@ -1,0 +1,326 @@
+{
+  "plan_commit": "99ee93d4343970a948b6b29a064728b6c82d0ae0",
+  "plan_blob": "e40e646cb027de163d43220e47e51a491316bce2",
+  "base_commit": "b50e41efb3b09a9cb7fa4142366424725fc603e5",
+  "scope": "SYNTHETIC_ONLY",
+  "work_packages": [
+    {
+      "id": "WP01",
+      "title": "Repository foundation",
+      "dependencies": [],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "commit": "99ee93d4343970a948b6b29a064728b6c82d0ae0",
+        "plan_sha256": "5297b790fb2a6610755516ba1f182527255fd0f007266561aa2b3deda04b3a3d"
+      },
+      "tests_performed": [
+        "clean status; fetched existing branch; exact HEAD/blob; Phase VIII ancestry"
+      ],
+      "produced_artifacts": [
+        "next_steps.md (unchanged)"
+      ],
+      "scientific_findings": [],
+      "unresolved_limitations": [
+        "synthetic-only scope; no real EEG authorization"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP02",
+      "title": "Novelty and related work",
+      "dependencies": [
+        "WP01"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "commit": "99ee93d4343970a948b6b29a064728b6c82d0ae0",
+        "plan_sha256": "5297b790fb2a6610755516ba1f182527255fd0f007266561aa2b3deda04b3a3d"
+      },
+      "tests_performed": [
+        "R1\u2013R9 plus focused formal/time-series/EEG primary-source review"
+      ],
+      "produced_artifacts": [
+        "docs/mist_cove/PHASE_IX_METHOD_AND_NOVELTY_V1.md"
+      ],
+      "scientific_findings": [
+        "No novelty priority or clinical validity established"
+      ],
+      "unresolved_limitations": [
+        "synthetic-only scope; no real EEG authorization"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP03",
+      "title": "Checkpoint authenticity",
+      "dependencies": [
+        "WP02"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "commit": "99ee93d4343970a948b6b29a064728b6c82d0ae0",
+        "plan_sha256": "5297b790fb2a6610755516ba1f182527255fd0f007266561aa2b3deda04b3a3d"
+      },
+      "tests_performed": [
+        "six P0 creation/checkpoint/seal/source/environment/model/optimizer/RNG checks"
+      ],
+      "produced_artifacts": [
+        "reports/mist_cove/phase9_v1/reference_integrity.json"
+      ],
+      "scientific_findings": [
+        "All six authenticated references available; no reproduction needed"
+      ],
+      "unresolved_limitations": [
+        "synthetic-only scope; no real EEG authorization"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP04",
+      "title": "Overlap-aware availability",
+      "dependencies": [
+        "WP03"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "commit": "99ee93d4343970a948b6b29a064728b6c82d0ae0",
+        "plan_sha256": "5297b790fb2a6610755516ba1f182527255fd0f007266561aa2b3deda04b3a3d"
+      },
+      "tests_performed": [],
+      "produced_artifacts": [],
+      "scientific_findings": [],
+      "unresolved_limitations": [
+        "synthetic-only scope; no real EEG authorization"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP05",
+      "title": "Response circuits",
+      "dependencies": [
+        "WP04"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "commit": "99ee93d4343970a948b6b29a064728b6c82d0ae0",
+        "plan_sha256": "5297b790fb2a6610755516ba1f182527255fd0f007266561aa2b3deda04b3a3d"
+      },
+      "tests_performed": [],
+      "produced_artifacts": [],
+      "scientific_findings": [],
+      "unresolved_limitations": [
+        "synthetic-only scope; no real EEG authorization"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP06",
+      "title": "Freeze the experiment",
+      "dependencies": [
+        "WP05"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "commit": "99ee93d4343970a948b6b29a064728b6c82d0ae0",
+        "plan_sha256": "5297b790fb2a6610755516ba1f182527255fd0f007266561aa2b3deda04b3a3d"
+      },
+      "tests_performed": [],
+      "produced_artifacts": [],
+      "scientific_findings": [],
+      "unresolved_limitations": [
+        "synthetic-only scope; no real EEG authorization"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP07",
+      "title": "Track A1 frozen-model explanations",
+      "dependencies": [
+        "WP06"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "commit": "99ee93d4343970a948b6b29a064728b6c82d0ae0",
+        "plan_sha256": "5297b790fb2a6610755516ba1f182527255fd0f007266561aa2b3deda04b3a3d"
+      },
+      "tests_performed": [],
+      "produced_artifacts": [],
+      "scientific_findings": [],
+      "unresolved_limitations": [
+        "synthetic-only scope; no real EEG authorization"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP08",
+      "title": "Track A2 clean matched heads",
+      "dependencies": [
+        "WP07"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "commit": "99ee93d4343970a948b6b29a064728b6c82d0ae0",
+        "plan_sha256": "5297b790fb2a6610755516ba1f182527255fd0f007266561aa2b3deda04b3a3d"
+      },
+      "tests_performed": [],
+      "produced_artifacts": [],
+      "scientific_findings": [],
+      "unresolved_limitations": [
+        "synthetic-only scope; no real EEG authorization"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP09",
+      "title": "Track B robustness training",
+      "dependencies": [
+        "WP08"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "commit": "99ee93d4343970a948b6b29a064728b6c82d0ae0",
+        "plan_sha256": "5297b790fb2a6610755516ba1f182527255fd0f007266561aa2b3deda04b3a3d"
+      },
+      "tests_performed": [],
+      "produced_artifacts": [],
+      "scientific_findings": [],
+      "unresolved_limitations": [
+        "synthetic-only scope; no real EEG authorization"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP10",
+      "title": "Explanation stability",
+      "dependencies": [
+        "WP09"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "commit": "99ee93d4343970a948b6b29a064728b6c82d0ae0",
+        "plan_sha256": "5297b790fb2a6610755516ba1f182527255fd0f007266561aa2b3deda04b3a3d"
+      },
+      "tests_performed": [],
+      "produced_artifacts": [],
+      "scientific_findings": [],
+      "unresolved_limitations": [
+        "synthetic-only scope; no real EEG authorization"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP11",
+      "title": "Intervention validity",
+      "dependencies": [
+        "WP10"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "commit": "99ee93d4343970a948b6b29a064728b6c82d0ae0",
+        "plan_sha256": "5297b790fb2a6610755516ba1f182527255fd0f007266561aa2b3deda04b3a3d"
+      },
+      "tests_performed": [],
+      "produced_artifacts": [],
+      "scientific_findings": [],
+      "unresolved_limitations": [
+        "synthetic-only scope; no real EEG authorization"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP12",
+      "title": "Localization and reliability",
+      "dependencies": [
+        "WP11"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "commit": "99ee93d4343970a948b6b29a064728b6c82d0ae0",
+        "plan_sha256": "5297b790fb2a6610755516ba1f182527255fd0f007266561aa2b3deda04b3a3d"
+      },
+      "tests_performed": [],
+      "produced_artifacts": [],
+      "scientific_findings": [],
+      "unresolved_limitations": [
+        "synthetic-only scope; no real EEG authorization"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP13",
+      "title": "Correctness and hardware",
+      "dependencies": [
+        "WP12"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "commit": "99ee93d4343970a948b6b29a064728b6c82d0ae0",
+        "plan_sha256": "5297b790fb2a6610755516ba1f182527255fd0f007266561aa2b3deda04b3a3d"
+      },
+      "tests_performed": [],
+      "produced_artifacts": [],
+      "scientific_findings": [],
+      "unresolved_limitations": [
+        "synthetic-only scope; no real EEG authorization"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP14",
+      "title": "Scientific publication",
+      "dependencies": [
+        "WP13"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "commit": "99ee93d4343970a948b6b29a064728b6c82d0ae0",
+        "plan_sha256": "5297b790fb2a6610755516ba1f182527255fd0f007266561aa2b3deda04b3a3d"
+      },
+      "tests_performed": [],
+      "produced_artifacts": [],
+      "scientific_findings": [],
+      "unresolved_limitations": [
+        "synthetic-only scope; no real EEG authorization"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP15",
+      "title": "Future real-source proposal",
+      "dependencies": [
+        "WP14"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "commit": "99ee93d4343970a948b6b29a064728b6c82d0ae0",
+        "plan_sha256": "5297b790fb2a6610755516ba1f182527255fd0f007266561aa2b3deda04b3a3d"
+      },
+      "tests_performed": [],
+      "produced_artifacts": [],
+      "scientific_findings": [],
+      "unresolved_limitations": [
+        "synthetic-only scope; no real EEG authorization"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP16",
+      "title": "GitHub completion",
+      "dependencies": [
+        "WP15"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "commit": "99ee93d4343970a948b6b29a064728b6c82d0ae0",
+        "plan_sha256": "5297b790fb2a6610755516ba1f182527255fd0f007266561aa2b3deda04b3a3d"
+      },
+      "tests_performed": [],
+      "produced_artifacts": [],
+      "scientific_findings": [],
+      "unresolved_limitations": [
+        "synthetic-only scope; no real EEG authorization"
+      ],
+      "block_reason": null
+    }
+  ]
+}
