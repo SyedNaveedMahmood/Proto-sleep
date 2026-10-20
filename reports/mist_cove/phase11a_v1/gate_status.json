@@ -1,0 +1,110 @@
+{
+  "version": "phase11a-historical-gates-v1",
+  "domain": "HISTORICAL_P3B_RAW_CONTEXT_123",
+  "overall_status": "BLOCKED",
+  "subgates": [
+    {
+      "id": "XI-A0",
+      "title": "Repository provenance",
+      "status": "PASS",
+      "scope": "PINNED_GIT_METADATA",
+      "basis": "Original source/config/publication objects and ancestry verified;42+9 source hashes reproduce published manifests",
+      "missing_evidence": []
+    },
+    {
+      "id": "XI-A1",
+      "title": "Run identity",
+      "status": "PASS",
+      "scope": "PUBLISHED_REFERENCE_ONLY",
+      "basis": "Original P3B/raw_context/123 row and run fingerprint recovered from pinned publication",
+      "missing_evidence": [
+        "Actual candidate payload identity not tested"
+      ]
+    },
+    {
+      "id": "XI-A2",
+      "title": "Split identity",
+      "status": "PASS",
+      "scope": "PUBLISHED_REFERENCE_ONLY",
+      "basis": "Published split fingerprint and split-file reference agree; fingerprint not relabeled normalization",
+      "missing_evidence": [
+        "Actual split-file byte comparison outside scope"
+      ]
+    },
+    {
+      "id": "XI-A3",
+      "title": "Training lineage",
+      "status": "INCONCLUSIVE",
+      "scope": "CODE_AND_PUBLISHED_METADATA",
+      "basis": "Original protocol/code recovered; detailed creation/environment/TRAIN normalization/bank links uninspected",
+      "missing_evidence": [
+        "Authenticated original root/fit/provenance/creation references; no fitted values access"
+      ]
+    },
+    {
+      "id": "XI-A4",
+      "title": "Historical byte reference",
+      "status": "INCONCLUSIVE",
+      "scope": "HISTORICAL_ROOT_ANCHOR",
+      "basis": "Original root marker905ba78c reference found; code defines transitive checkpoint output-map chain",
+      "missing_evidence": [
+        "Authorized root and selected child JSON read; direct selected checkpoint-byte value not materialized"
+      ]
+    },
+    {
+      "id": "XI-A5",
+      "title": "Artifact-byte match",
+      "status": "BLOCKED",
+      "scope": "NO_REAL_ARTIFACT_ACCESS",
+      "basis": "Phase XI-A intentionally has no actual artifact-byte reader",
+      "missing_evidence": [
+        "Independent selected byte reference and separately authorized reviewed file tool"
+      ]
+    },
+    {
+      "id": "XI-A6",
+      "title": "Restricted deserialization",
+      "status": "NOT TESTED",
+      "scope": "FUTURE_REVIEWED_RELEASE",
+      "basis": "No actual trained artifact loaded; safe generated JSON loader is a separate domain",
+      "missing_evidence": [
+        "Actual artifact authentication and explicit restricted-loader release"
+      ]
+    },
+    {
+      "id": "XI-A7",
+      "title": "Authenticated-model adapter identity",
+      "status": "NOT TESTED",
+      "scope": "FUTURE_XI_B",
+      "basis": "Phase X mock correctness retained; trained-weight behavior untested",
+      "missing_evidence": [
+        "Authenticated original state plus separately authorized generated-input tests"
+      ]
+    }
+  ],
+  "metadata_proof": {
+    "status": "PASS",
+    "verified_historical_records": 61,
+    "original_source_files": 42,
+    "reused_source_files": 9,
+    "root_completion_reference_sha256": "905ba78cf8326594a431ce7a71ce9624c35814d2e76c94f57abda8afbe7c7e7d",
+    "trust_level": "LEVEL_2_HISTORICAL_REFERENCES_ONLY",
+    "original_checkpoint_byte_value_materialized": false,
+    "actual_artifact_authenticated": false
+  },
+  "graph_validation": {
+    "status": "PASS",
+    "nodes": 14,
+    "edges": 13,
+    "graph_sha256": "fea1202d42b837e8f76c46964d2587a0411ea03242667fc66789159a30535c0d",
+    "historical_level3_edges": 0
+  },
+  "actual_artifact_authenticated": false,
+  "generated_fixture_PASS_can_promote_historical_gate": false,
+  "ready_for_XI_B_launch": false,
+  "next_minimal_permission": "Read only pinned original root completion JSON and exact selected child completion JSON; no checkpoint/bank/scaler/EEG access",
+  "real_EEG_accessed": false,
+  "real_checkpoint_bytes_hashed": 0,
+  "real_checkpoints_deserialized": 0,
+  "GPU_queries": 0
+}

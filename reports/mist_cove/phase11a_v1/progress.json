@@ -170,14 +170,26 @@
       "dependencies": [
         "XI-A06"
       ],
-      "status": "PENDING",
+      "status": "COMPLETE",
       "code_configuration_identity": {
-        "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8"
+        "verifier_commit": "04df6d0"
       },
-      "tests_performed": [],
-      "produced_artifacts": [],
-      "scientific_findings": [],
-      "unresolved_limitations": [],
+      "tests_performed": [
+        "25 fixture security tests pass",
+        "All20 required scenarios return exact expected meaningful statuses; duplicate and contradictory receipt controls both rejected",
+        "Unsafe pickle bytes can authenticate as generated fixture bytes but parsing is BLOCKED; execution tripwire absent"
+      ],
+      "produced_artifacts": [
+        "reports/mist_cove/phase11a_v1/correctness_receipt.json",
+        "tests/mist_cove/test_phase11a_security.py"
+      ],
+      "scientific_findings": [
+        "One fully linked generated chain safely loads;14 required negative cases FAIL and5 BLOCKED as expected",
+        "Local sidecars never establish trust; source paths never accepted; TOCTOU prevents changed bytes from loading"
+      ],
+      "unresolved_limitations": [
+        "Successful synthetic Level3 verification is not actual historical authentication"
+      ],
       "block_reason": null
     },
     {
@@ -186,14 +198,23 @@
       "dependencies": [
         "XI-A07"
       ],
-      "status": "PENDING",
+      "status": "COMPLETE",
       "code_configuration_identity": {
         "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8"
       },
-      "tests_performed": [],
-      "produced_artifacts": [],
-      "scientific_findings": [],
-      "unresolved_limitations": [],
+      "tests_performed": [
+        "Procedure reviewed against independently published905ba root and actual frozen output-map contracts; no private existence check"
+      ],
+      "produced_artifacts": [
+        "docs/mist_cove/PHASE_XIA_RESTRICTED_ARTIFACT_PLAN_V1.md"
+      ],
+      "scientific_findings": [
+        "Smallest next permission is two bounded hash-pinned selected receipt JSONs, without checkpoint/bank/normalization/EEG access",
+        "Later byte hashing, restricted loading, generated tests and actual EEG pilot are separate approvals"
+      ],
+      "unresolved_limitations": [
+        "Receipt contents and actual candidate remain uninspected; byte/state digest cannot be manufactured or substituted"
+      ],
       "block_reason": null
     },
     {
@@ -202,14 +223,26 @@
       "dependencies": [
         "XI-A08"
       ],
-      "status": "PENDING",
+      "status": "COMPLETE",
       "code_configuration_identity": {
         "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8"
       },
-      "tests_performed": [],
-      "produced_artifacts": [],
-      "scientific_findings": [],
-      "unresolved_limitations": [],
+      "tests_performed": [
+        "9 gate/graph/CLI/privacy/atomicity/tamper tests passed",
+        "Actual metadata gate produced PASS/PASS/PASS/INCONCLUSIVE/INCONCLUSIVE/BLOCKED/NOT TESTED/NOT TESTED; overall BLOCKED"
+      ],
+      "produced_artifacts": [
+        "reports/mist_cove/phase11a_v1/gate_status.json",
+        "src/mist_cove/phase11a/gates.py",
+        "scripts/check_mist_cove_phase11a.py"
+      ],
+      "scientific_findings": [
+        "No manual override or fixture success can promote historical artifact authentication",
+        "Original root reference useful but selected-byte value and actual bytes remain untested"
+      ],
+      "unresolved_limitations": [
+        "Future actual artifact reader/loader is intentionally absent"
+      ],
       "block_reason": null
     },
     {
@@ -218,14 +251,22 @@
       "dependencies": [
         "XI-A09"
       ],
-      "status": "PENDING",
+      "status": "COMPLETE",
       "code_configuration_identity": {
         "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8"
       },
-      "tests_performed": [],
-      "produced_artifacts": [],
-      "scientific_findings": [],
-      "unresolved_limitations": [],
+      "tests_performed": [
+        "Reviewed against XI-A authorization boundaries, original lineage findings and independent gate statuses"
+      ],
+      "produced_artifacts": [
+        "docs/mist_cove/PHASE_XIA_PHASE_XIB_PROPOSAL_V1.md"
+      ],
+      "scientific_findings": [
+        "Future generated-input trained-weight tests require authenticated original bytes and separate authorization"
+      ],
+      "unresolved_limitations": [
+        "Actual trained-state loading, source fitting lineage and real EEG tests remain outside authorization"
+      ],
       "block_reason": null
     },
     {
@@ -234,14 +275,22 @@
       "dependencies": [
         "XI-A10"
       ],
-      "status": "PENDING",
+      "status": "COMPLETE",
       "code_configuration_identity": {
         "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8"
       },
-      "tests_performed": [],
-      "produced_artifacts": [],
-      "scientific_findings": [],
-      "unresolved_limitations": [],
+      "tests_performed": [
+        "Reviewed against XI-A authorization boundaries, original lineage findings and independent gate statuses"
+      ],
+      "produced_artifacts": [
+        "docs/mist_cove/PHASE_XIA_RESULTS_V1.md"
+      ],
+      "scientific_findings": [
+        "Q1-Q8 answered explicitly; original root anchor useful while actual historical authentication remains BLOCKED"
+      ],
+      "unresolved_limitations": [
+        "Actual trained-state loading, source fitting lineage and real EEG tests remain outside authorization"
+      ],
       "block_reason": null
     },
     {
@@ -250,7 +299,7 @@
       "dependencies": [
         "XI-A11"
       ],
-      "status": "PENDING",
+      "status": "IN PROGRESS",
       "code_configuration_identity": {
         "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8"
       },
