@@ -139,14 +139,29 @@
       "dependencies": [
         "XI-A05"
       ],
-      "status": "PENDING",
+      "status": "COMPLETE",
       "code_configuration_identity": {
         "base_commit": "0ce6d4235661c6bda57392040954abb506abb7b8"
       },
-      "tests_performed": [],
-      "produced_artifacts": [],
-      "scientific_findings": [],
-      "unresolved_limitations": [],
+      "tests_performed": [
+        "10 strict schema/typed hash/Git object/path tests pass;2 basic fixture chain/tamper tests pass",
+        "61 historical records reverified through approved Git paths; original source manifests reconstruct published hashes",
+        "14-node13-edge historical graph validates with zero Level3 claims"
+      ],
+      "produced_artifacts": [
+        "src/mist_cove/phase11a/provenance.py",
+        "src/mist_cove/phase11a/evidence_graph.py",
+        "src/mist_cove/phase11a/fixtures.py",
+        "src/mist_cove/phase11a/verification.py"
+      ],
+      "scientific_findings": [
+        "Generated-only capability verifier has no caller artifact path; independent retained anchor precedes receipt/candidate parsing",
+        "Metadata, bytes, model-state and safe parsing decisions remain separate"
+      ],
+      "unresolved_limitations": [
+        "Fixture trust root is synthetic and not evidence of actual P3B authentication",
+        "Supported-interface safety is not an OS sandbox against arbitrary malicious Python"
+      ],
       "block_reason": null
     },
     {
