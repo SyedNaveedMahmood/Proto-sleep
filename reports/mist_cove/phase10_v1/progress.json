@@ -1,0 +1,260 @@
+{
+  "version": "mist-cove-phase10-progress-v1",
+  "base_commit": "ac611572c2efea1acfed48465fd482e6715ec57e",
+  "scope": "CODE_AND_SYNTHETIC_MOCK_ONLY",
+  "real_artifacts_opened": 0,
+  "work_packages": [
+    {
+      "id": "X01",
+      "title": "Source architecture dependency audit",
+      "dependencies": [],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "base_commit": "ac611572c2efea1acfed48465fd482e6715ec57e",
+        "config_sha256": "2cda20130e80fd90e2460fb55262042abec2f5ac38aeaa429f85113c4eb55820",
+        "support_identity": "23b453421bce8089ccd506e726b41482e126a37ab2e2532f24a23dcc733a4233"
+      },
+      "tests_performed": [
+        "6 dependency tests pass; all 169 window supports independently checked against sample intersections"
+      ],
+      "produced_artifacts": [
+        "reports/mist_cove/phase10_v1/dependency_summary.json",
+        "docs/mist_cove/PHASE_X_DEPENDENCY_AUDIT_V1.md"
+      ],
+      "scientific_findings": [
+        "59/57/53 windows at scales100/200/400 with stride50; 209 native features including17 whole-epoch features",
+        "GroupNorm and local RMS see the full individual window; no cross-window normalization",
+        "raw_context uses bank waveform dimensions but not bank waveform values or similarity metric"
+      ],
+      "unresolved_limitations": [
+        "Static frozen-code audit only; actual source checkpoint configuration remains unauthenticated"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "X02",
+      "title": "Physical availability support maps",
+      "dependencies": [
+        "X01"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "base_commit": "ac611572c2efea1acfed48465fd482e6715ec57e",
+        "config_sha256": "2cda20130e80fd90e2460fb55262042abec2f5ac38aeaa429f85113c4eb55820",
+        "support_identity": "23b453421bce8089ccd506e726b41482e126a37ab2e2532f24a23dcc733a4233"
+      },
+      "tests_performed": [
+        "6 dependency tests pass; all 169 window supports independently checked against sample intersections"
+      ],
+      "produced_artifacts": [
+        "reports/mist_cove/phase10_v1/dependency_summary.json",
+        "docs/mist_cove/PHASE_X_DEPENDENCY_AUDIT_V1.md"
+      ],
+      "scientific_findings": [
+        "59/57/53 windows at scales100/200/400 with stride50; 209 native features including17 whole-epoch features",
+        "GroupNorm and local RMS see the full individual window; no cross-window normalization",
+        "raw_context uses bank waveform dimensions but not bank waveform values or similarity metric"
+      ],
+      "unresolved_limitations": [
+        "Static frozen-code audit only; actual source checkpoint configuration remains unauthenticated"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "X03",
+      "title": "Global feature and aggregation policy",
+      "dependencies": [
+        "X02"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {},
+      "tests_performed": [],
+      "produced_artifacts": [],
+      "scientific_findings": [],
+      "unresolved_limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "X04",
+      "title": "Source-compatible mock adapter",
+      "dependencies": [
+        "X03"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {},
+      "tests_performed": [],
+      "produced_artifacts": [],
+      "scientific_findings": [],
+      "unresolved_limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "X05",
+      "title": "Full-visibility identity",
+      "dependencies": [
+        "X04"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {},
+      "tests_performed": [],
+      "produced_artifacts": [],
+      "scientific_findings": [],
+      "unresolved_limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "X06",
+      "title": "Hidden-sample noninterference",
+      "dependencies": [
+        "X05"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {},
+      "tests_performed": [],
+      "produced_artifacts": [],
+      "scientific_findings": [],
+      "unresolved_limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "X07",
+      "title": "Nonlocal and degenerate behavior",
+      "dependencies": [
+        "X06"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {},
+      "tests_performed": [],
+      "produced_artifacts": [],
+      "scientific_findings": [],
+      "unresolved_limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "X08",
+      "title": "Exact response circuits",
+      "dependencies": [
+        "X07"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {},
+      "tests_performed": [],
+      "produced_artifacts": [],
+      "scientific_findings": [],
+      "unresolved_limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "X09",
+      "title": "Scientific mock controls",
+      "dependencies": [
+        "X08"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {},
+      "tests_performed": [],
+      "produced_artifacts": [],
+      "scientific_findings": [],
+      "unresolved_limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "X10",
+      "title": "Metadata-only historical provenance",
+      "dependencies": [
+        "X09"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {},
+      "tests_performed": [],
+      "produced_artifacts": [],
+      "scientific_findings": [],
+      "unresolved_limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "X11",
+      "title": "Mock computational feasibility",
+      "dependencies": [
+        "X10"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {},
+      "tests_performed": [],
+      "produced_artifacts": [],
+      "scientific_findings": [],
+      "unresolved_limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "X12",
+      "title": "Fail-closed authorization",
+      "dependencies": [
+        "X11"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {},
+      "tests_performed": [],
+      "produced_artifacts": [],
+      "scientific_findings": [],
+      "unresolved_limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "X13",
+      "title": "Future TRAIN-only protocol",
+      "dependencies": [
+        "X12"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {},
+      "tests_performed": [],
+      "produced_artifacts": [],
+      "scientific_findings": [],
+      "unresolved_limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "X14",
+      "title": "Scientific interpretation rules",
+      "dependencies": [
+        "X13"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {},
+      "tests_performed": [],
+      "produced_artifacts": [],
+      "scientific_findings": [],
+      "unresolved_limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "X15",
+      "title": "Testing and reproducibility",
+      "dependencies": [
+        "X14"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {},
+      "tests_performed": [],
+      "produced_artifacts": [],
+      "scientific_findings": [],
+      "unresolved_limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "X16",
+      "title": "Final review and GitHub publication",
+      "dependencies": [
+        "X15"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {},
+      "tests_performed": [],
+      "produced_artifacts": [],
+      "scientific_findings": [],
+      "unresolved_limitations": [],
+      "block_reason": null
+    }
+  ]
+}
