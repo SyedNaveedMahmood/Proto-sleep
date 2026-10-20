@@ -1,0 +1,37 @@
+{
+  "version": "phase10-accounting-freeze-v3",
+  "purpose": "Freeze zero/.01 neutrals, native aggregation, strict gates, hand-constructed controls and fixed random mocks before response outcome probes",
+  "files": {
+    "src/mist_cove/phase10/__init__.py": "0c2b067d5fc12cef9db191e75c68467090da7450b4c04c1a5c1b08019bb758ec",
+    "src/mist_cove/phase10/dependency_graph.py": "2f8a67366adbbd905bdcb0fb257af8113586a42d6dc4af6a1cedfbe8b819a009",
+    "src/mist_cove/phase10/mock_controls.py": "9568d73a97a8bead444bb368013e2522446f4ced06e6b7745237d2f7e160f6f1",
+    "src/mist_cove/phase10/mock_models.py": "b2c59aa7bbcb0f98f41023641f588d7e6d36e2f7b31bbc3f2e4a785b048bd1df",
+    "src/mist_cove/phase10/mock_study.py": "092d36d2c1c14fa221d27312987d2ca3b73f0fcd34eba5f0b26d478acc0db384",
+    "src/mist_cove/phase10/response_circuits.py": "59c9bfc0454b30da13c5b8cb775df3dfaec075a2692d93fdb981608b7b3dc2f5",
+    "src/mist_cove/phase10/safety.py": "bb6303ec291fb956f25d5139acce89c37ef3625d10bb8e5ce452b0f15f674218",
+    "src/mist_cove/phase10/source_adapter.py": "5286d51c808327363a21006cd80817174683e34c1b66c3b39314cc487f7ac68e",
+    "src/mist_cove/phase10/source_availability.py": "c2fceb8912ab9a382181de55e556ae54a815a639524434791ad82fb6f0d881da",
+    "src/mist_cove/phase10/verification.py": "76ad53e55da7f45c97a96ec8b086bb9e1e4abb1dc18269a19d3bd144a1af5ef3",
+    "configs/mist_cove_phase10_v1.json": "2cda20130e80fd90e2460fb55262042abec2f5ac38aeaa429f85113c4eb55820",
+    "docs/mist_cove/PHASE_X_OPERATOR_SPEC_V1.md": "f3e80c1ec254b3493c81a380cd4c75a41d941df9aab240677964a8294c119ca9",
+    "docs/mist_cove/PHASE_X_SCIENTIFIC_DECISION_V1.md": "75714ef9ed85e450db386ff6b65a8c7d884fe86f8862999655eb4285d5a267d2"
+  },
+  "base_commit": "ac611572c2efea1acfed48465fd482e6715ec57e",
+  "scientific_cpu_wall_ceiling_seconds": 600,
+  "real_artifacts_opened": 0,
+  "parent_freeze_sha256": "f37ab63dd07e0322a810f21b4cef2c90aa7840db590c8963e5e14ba70e0f3bac",
+  "parent_probe_commit": "9f9c84d",
+  "amendment": {
+    "scope": "Resource counter only: literal constant analytic head performs zero backward queries; successful attribution rows17, actual backward operations16",
+    "scientific_outcomes_changed": false,
+    "response_tables_or_models_rerun": false,
+    "affected_sources": [
+      "src/mist_cove/phase10/mock_study.py",
+      "src/mist_cove/phase10/verification.py"
+    ],
+    "completed_circuit_receipt_sha256": "ec5fc7a2fdfc19a9772453604ddb4da335834535ab90b8b9c2d6053b265c2bc4",
+    "behavior_receipt_sha256": "b4f43ca5d0c050343935bd863a0952cd3bb854bb92ba6751065555b4b2f475c4",
+    "corrected_comparator_receipt_sha256": "a0ce519cbd533657747cf924bbdefb31ab6dcafb4e0feec5d856b38f74311849"
+  },
+  "parent_reporting_commit": "91e6639"
+}

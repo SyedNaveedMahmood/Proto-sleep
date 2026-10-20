@@ -536,7 +536,7 @@
         "method": "native-head gradient-times-feature distributed through mean/max to physical atoms; approximate, not additive reconciliation",
         "uses_model_internals": true,
         "uses_oracle_to_select": false,
-        "head_backward_queries": 1,
+        "head_backward_queries": 0,
         "global_attribution_absolute_sum": 0.0,
         "atom_attribution_absolute_sum": 0.0,
         "global_attribution_not_falsely_localized": true
@@ -821,5 +821,7 @@
   ],
   "wall_seconds": 0.0788123060046928,
   "external_explainer_implementations_run": false,
-  "real_artifacts_opened": 0
+  "real_artifacts_opened": 0,
+  "successful_actual_head_backpropagations": 16,
+  "accounting_correction": "v3: constant-bias derivative has no backward query; all17 result values/tables unchanged"
 }

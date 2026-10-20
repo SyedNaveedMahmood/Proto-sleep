@@ -236,7 +236,8 @@
       "code_configuration_identity": {
         "scientific_probe_commit": "9f9c84d",
         "constant_head_export_correction": "phase10_reporting_freeze_v2.json",
-        "config_sha256": "2cda20130e80fd90e2460fb55262042abec2f5ac38aeaa429f85113c4eb55820"
+        "config_sha256": "2cda20130e80fd90e2460fb55262042abec2f5ac38aeaa429f85113c4eb55820",
+        "backward_counter_correction": "phase10_accounting_freeze_v3.json"
       },
       "tests_performed": [
         "4 behavior/constant-gradient tests pass",
@@ -249,7 +250,8 @@
       "scientific_findings": [
         "Native-head gradient attribution, greedy canonical selection, positive-only and signed clauses, and fixed random subsets compared on shared tables",
         "Constant-bias head attribution is exactly zero; undefined autograd graph explicitly handled",
-        "Oracle interval scoring limited to privileged constructed controls; no oracle labels for random historical architecture"
+        "Oracle interval scoring limited to privileged constructed controls; no oracle labels for random historical architecture",
+        "16 actual successful backward operations across17 rows; constant-bias row counter corrected to0 without recomputing results"
       ],
       "unresolved_limitations": [
         "Hand-engineered controls are not independent EEG experiments",
@@ -468,7 +470,12 @@
       "unresolved_limitations": [
         "GitHub publication and final exact-head CI pending"
       ],
-      "block_reason": null
+      "block_reason": null,
+      "github": {
+        "draft_pr": "https://github.com/SyedNaveedMahmood/Proto-sleep/pull/12",
+        "base_branch": "research/mist-cove-phase9-witness-circuits-v1",
+        "final_exact_commit_and_ci_location": "Draft PR body and final response to avoid self-reference"
+      }
     }
   ]
 }

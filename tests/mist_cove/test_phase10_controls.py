@@ -33,3 +33,4 @@ def test_constant_head_has_zero_feature_attribution_without_autograd_graph():
     assert ranking==list(range(15))
     assert receipt['atom_attribution_absolute_sum']==0
     assert receipt['global_attribution_absolute_sum']==0
+    assert receipt['head_backward_queries']==0

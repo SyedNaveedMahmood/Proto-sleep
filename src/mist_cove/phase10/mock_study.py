@@ -101,7 +101,7 @@ def gradient_ranking(adapter,cache,target):
     global_absolute=float((f.detach()[0,0,global_start:]*grad[global_start:]).abs().sum())
     ranking=sorted(range(15),key=lambda j:(-float(scores[j].abs()),j))
     return ranking,{'method':'native-head gradient-times-feature distributed through mean/max to physical atoms; approximate, not additive reconciliation',
-                    'uses_model_internals':True,'uses_oracle_to_select':False,'head_backward_queries':1,
+                    'uses_model_internals':True,'uses_oracle_to_select':False,'head_backward_queries':int(score.requires_grad),
                     'global_attribution_absolute_sum':global_absolute,'atom_attribution_absolute_sum':float(scores.abs().sum()),
                     'global_attribution_not_falsely_localized':True}
 
