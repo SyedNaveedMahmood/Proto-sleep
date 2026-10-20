@@ -61,5 +61,63 @@
     "tests/mist_cove/test_phase9_operators.py": "31e778a6b55192a5a32e177c3cdebb849381985bc159b062baba7bc8ae0c07ae",
     "tests/mist_cove/test_phase9_tracks.py": "5962e0a6a683aba93e5904c8304766cd11b6433b21f4274ae79b8de28511f551"
   },
-  "execution": "PENDING"
+  "execution": {
+    "status": "COMPLETE",
+    "scientific_freeze_commit": "702e90802e1ebbaa1b39940ad6de25ebd20dacd1",
+    "reporting_continuation_commit": "31c4a19",
+    "reporting_freeze_sha256": "9a4d1980592b6db6dad25a003926853691bac18031c6d840c64d8cf3c424554d",
+    "private_receipt_sha256": {
+      "WP07": "0de09c8368505f67d72e785dbfda80c79f02b80ff5cba99d9f61dea202362f0a",
+      "WP08": "ef3e21d693b1ce6245e61d636ed010bed60acb0fc041336ebb1ac5ad207e4ce5",
+      "WP09": "655edcb822ec8e09497ba3871500591614acbef73aa9f5a3a96462f5a9407eef",
+      "WP10": "977ff7140e9ba1b0cdb0560a362518c2e32a4df5d99451a3d44e37fb773bd06f",
+      "WP11": "0df822278c006bc4ebe5ba2ec5cc7afb63c17d2bf9cc42833d9a6e52c1d3067a",
+      "WP12": "710307f9caf0c9e26792a604e30955d820542b48c955d565a4612e792ac04e2e",
+      "WP13": "414069dafe3b66b87b4531054f78c002707e233a61db722a078b80858d862478"
+    },
+    "resources": {
+      "neural_fits": 42,
+      "optimizer_updates": 9000,
+      "preserved_E0_fits_counted_once": 1,
+      "reference_reproduction_fits": 0,
+      "cached_head_training_examples": 57600,
+      "head_fit_full_network_training_examples": 0,
+      "paired_training_base_examples": 86400,
+      "paired_training_full_view_forwards": 172800,
+      "paired_training_retained_query_head_forwards": 115200,
+      "completed_scientific_availability_queries": 41680896,
+      "reporting_recovery_duplicate_availability_queries": 1310720,
+      "scientific_wall_seconds_including_failed_attempt": 339.2250081659877,
+      "ceiling_seconds": 3600,
+      "per_track_wall_seconds": {
+        "7": 15.93150762100413,
+        "8": 129.158594352004,
+        "9": 145.28375997599505,
+        "10": 17.18911485199351,
+        "11": 1.1543705280055292,
+        "12": 23.255977216991596
+      },
+      "failed_reporting_seconds": 7.251683619993855,
+      "peak_scientific_process_rss_KiB": 1181796,
+      "measured_feature_cache_bytes_per_example_view": 1064,
+      "Boolean_mask_grid_bytes": 491520,
+      "scalar_calibration_fits": 48,
+      "timing_scope": "scientific timers include generation, fits, evaluation, circuit analysis and private IO; exclude imports, CI, setup, reporting and WP13 audit; no kernel/core-time claim",
+      "query_scope": "availability queries count masked-head examples; native ranking and full-view head calls are not mislabeled as extra full-network exposures"
+    },
+    "final_cpu": {
+      "passed": 880,
+      "skipped": 11,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 15.254,
+      "junit_sha256": "5118b2353856b877d8a7dcb6ec3746eda2d420626007bada30c8a4da464c1c8b",
+      "log_sha256": "6335ec1dabd0e704a29c822dbc040d6cbb0b3537b1ac7004c0f07017e822d163",
+      "scope": "complete CPU regression including final publication/privacy checks"
+    },
+    "cuda_status": "BLOCKED",
+    "reference_reproduction_fits": 0,
+    "unauthenticated_historical_states_deserialized": 0,
+    "real_data_accessed": false
+  }
 }

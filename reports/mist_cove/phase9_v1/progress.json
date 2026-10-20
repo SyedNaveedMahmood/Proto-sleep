@@ -329,14 +329,26 @@
       "dependencies": [
         "WP13"
       ],
-      "status": "PENDING",
+      "status": "COMPLETE",
       "code_configuration_identity": {
-        "commit": "99ee93d4343970a948b6b29a064728b6c82d0ae0",
-        "plan_sha256": "5297b790fb2a6610755516ba1f182527255fd0f007266561aa2b3deda04b3a3d"
+        "commit": "fdc2266a4c84ae04db168b3c3b16e4e048cc2271",
+        "config_sha256": "32d947fc6b2858ad5c9a1a2e0a7b0782d6f96373520391839906265ec422bac2"
       },
-      "tests_performed": [],
-      "produced_artifacts": [],
-      "scientific_findings": [],
+      "tests_performed": [
+        "all private receipt/checkpoint/circuit hashes verified",
+        "public schema excludes states and per-mask arrays",
+        "six principal figures"
+      ],
+      "produced_artifacts": [
+        "docs/mist_cove/PHASE_IX_RESULTS_V1.md",
+        "reports/mist_cove/phase9_v1/results.json",
+        "reports/mist_cove/phase9_v1/dashboard.html",
+        "reports/mist_cove/phase9_v1/figures"
+      ],
+      "scientific_findings": [
+        "Track-specific scientific failures retained independently",
+        "Exhaustive finite fidelity and bounded clean compactness supported"
+      ],
       "unresolved_limitations": [
         "synthetic-only scope; no real EEG authorization"
       ],
@@ -348,14 +360,21 @@
       "dependencies": [
         "WP14"
       ],
-      "status": "PENDING",
+      "status": "COMPLETE",
       "code_configuration_identity": {
-        "commit": "99ee93d4343970a948b6b29a064728b6c82d0ae0",
-        "plan_sha256": "5297b790fb2a6610755516ba1f182527255fd0f007266561aa2b3deda04b3a3d"
+        "commit": "fdc2266a4c84ae04db168b3c3b16e4e048cc2271",
+        "config_sha256": "32d947fc6b2858ad5c9a1a2e0a7b0782d6f96373520391839906265ec422bac2"
       },
-      "tests_performed": [],
-      "produced_artifacts": [],
-      "scientific_findings": [],
+      "tests_performed": [
+        "proposal reviewed against actual Phase IX results, original source contract and global-feature bypass limitation"
+      ],
+      "produced_artifacts": [
+        "docs/mist_cove/PHASE_IX_SOURCE_PROPOSAL_V1.md"
+      ],
+      "scientific_findings": [
+        "Narrow source-model dependency question may merit independent review; perfect synthetic robustness is not assumed necessary",
+        "No real EEG loader or fitted source artifact opened"
+      ],
       "unresolved_limitations": [
         "synthetic-only scope; no real EEG authorization"
       ],
@@ -367,14 +386,22 @@
       "dependencies": [
         "WP15"
       ],
-      "status": "PENDING",
+      "status": "IN_PROGRESS",
       "code_configuration_identity": {
-        "commit": "99ee93d4343970a948b6b29a064728b6c82d0ae0",
-        "plan_sha256": "5297b790fb2a6610755516ba1f182527255fd0f007266561aa2b3deda04b3a3d"
+        "commit": "fdc2266a4c84ae04db168b3c3b16e4e048cc2271",
+        "config_sha256": "32d947fc6b2858ad5c9a1a2e0a7b0782d6f96373520391839906265ec422bac2"
       },
-      "tests_performed": [],
-      "produced_artifacts": [],
-      "scientific_findings": [],
+      "tests_performed": [
+        "880 passed / 11 CUDA skips / 0 failures / 0 errors",
+        "authoritative plan and frozen source hashes verify",
+        "all differences from Phase VIII are additions"
+      ],
+      "produced_artifacts": [
+        "reports/mist_cove/phase9_v1/publication_manifest.json"
+      ],
+      "scientific_findings": [
+        "Scientific campaign and safe aggregate publication complete; GitHub push, draft PR and exact-final-commit CI pending"
+      ],
       "unresolved_limitations": [
         "synthetic-only scope; no real EEG authorization"
       ],
