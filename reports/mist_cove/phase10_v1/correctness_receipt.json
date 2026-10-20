@@ -4324,14 +4324,15 @@
     "real_artifacts_opened": 0
   },
   "full_cpu": {
-    "tests": 979,
-    "passed": 968,
+    "tests": 984,
+    "passed": 973,
     "skipped": 11,
     "failures": 0,
     "errors": 0,
-    "seconds": 17.293,
-    "junit_sha256": "124947ef6a0278a1f9cba323eff59470e8bac9cf5dec2cde335ecfcdf76de45a",
-    "log_sha256": "adfbb80b68d636f0c6e7b382f52774e3ec5cff46ef4744d1f7dd2d1ce5d85fae"
+    "seconds": 17.305,
+    "junit_sha256": "5c60b212165cdbf466d96f18647547bbec976a63f8f05c1bead32352e98ab1ed",
+    "log_sha256": "3dfae173b2fbd248bf63f584c1e81df707521428c1b3af9076be567ebfa4ee5f",
+    "tested_guard_commit": "6499fe9"
   },
   "cuda": {
     "status": "BLOCKED",
@@ -4350,5 +4351,48 @@
     "device": "CPU",
     "inference_dtype": "float32",
     "optimizer_updates": 0
+  },
+  "final_guard_correctness_probe_wall_seconds": 2.1438893409940647,
+  "earlier_cpu_runs": [
+    {
+      "tests": 979,
+      "passed": 968,
+      "skipped": 11,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 17.293,
+      "junit_sha256": "124947ef6a0278a1f9cba323eff59470e8bac9cf5dec2cde335ecfcdf76de45a",
+      "log_sha256": "adfbb80b68d636f0c6e7b382f52774e3ec5cff46ef4744d1f7dd2d1ce5d85fae"
+    },
+    {
+      "passed": 968,
+      "skipped": 11,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 17.331,
+      "junit_sha256": "165a214856869e87fb850162da111b7e2b37b93a609206c33fbfdda9ffe31e6a",
+      "log_sha256": "aed9cd141a3f9f55e9c1eb85c08bc016c6229d0e2a2419be3d2b8bb41453814a",
+      "tested_accounting_commit": "11f65c5"
+    }
+  ],
+  "architecture_guard": {
+    "status": "PASS",
+    "unreviewed_layer_changes_rejected": 4,
+    "late_hooks_rejected": true,
+    "CPU_random_stream_preserved": true,
+    "temporary_reference": "in-memory generated ramp buffers only; not attached to classifier",
+    "old_numeric_operator_outcomes_changed": false
+  },
+  "active_freeze": "phase10_architecture_guard_v4.json",
+  "scientific_resource_summary": {
+    "complete_table_queries": 1343488,
+    "successful_actual_head_backpropagations": 16,
+    "successful_comparator_rows": 17,
+    "training_updates": 0,
+    "measured_study_stage_wall_seconds": 11.532822796012624,
+    "failed_comparator_enclosing_command_wall_upper_seconds": 3.389662967,
+    "failed_comparator_isolated_seconds": null,
+    "failed_comparator_actual_backwards": null,
+    "scope": "study/benchmark timers; excludes correctness probes, regression tests, setup, publication and CI; no CPU-core/kernel-time claim"
   }
 }

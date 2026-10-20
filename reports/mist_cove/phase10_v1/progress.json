@@ -97,7 +97,8 @@
       "status": "COMPLETE",
       "code_configuration_identity": {
         "commit": "7c270373529227632bcad21a8a5d482a0c006d80",
-        "config_sha256": "2cda20130e80fd90e2460fb55262042abec2f5ac38aeaa429f85113c4eb55820"
+        "config_sha256": "2cda20130e80fd90e2460fb55262042abec2f5ac38aeaa429f85113c4eb55820",
+        "final_architecture_guard_commit": "6499fe9"
       },
       "tests_performed": [
         "2 focused aggregation/interface tests passed; negative-coordinate max, empty state, fixed denominator, global suppression, unchanged parameters"
@@ -125,11 +126,13 @@
       "status": "COMPLETE",
       "code_configuration_identity": {
         "operator_commit": "3bb3ba0abb7ee0169b038f147cadc602ef84c686",
-        "config_sha256": "2cda20130e80fd90e2460fb55262042abec2f5ac38aeaa429f85113c4eb55820"
+        "config_sha256": "2cda20130e80fd90e2460fb55262042abec2f5ac38aeaa429f85113c4eb55820",
+        "final_architecture_guard_commit": "6499fe9"
       },
       "tests_performed": [
         "13 identity/interface tests passed",
-        "9 configurations x4 inputs; features and logits bitwise equal; max absolute and relative errors0"
+        "9 configurations x4 inputs; features and logits bitwise equal; max absolute and relative errors0",
+        "Final identity module18 tests; four altered normalization/topology/hook cases and one late-hook/RNG case rejected; final probes remain bitwise equal"
       ],
       "produced_artifacts": [
         "reports/mist_cove/phase10_v1/correctness_receipt.json"
@@ -151,7 +154,8 @@
       "status": "COMPLETE",
       "code_configuration_identity": {
         "operator_commit": "3bb3ba0",
-        "config_sha256": "2cda20130e80fd90e2460fb55262042abec2f5ac38aeaa429f85113c4eb55820"
+        "config_sha256": "2cda20130e80fd90e2460fb55262042abec2f5ac38aeaa429f85113c4eb55820",
+        "final_architecture_guard_commit": "6499fe9"
       },
       "tests_performed": [
         "37 noninterference/tamper/input-validation tests passed",
@@ -308,12 +312,13 @@
       "produced_artifacts": [
         "reports/mist_cove/phase10_v1/resource_estimates.json",
         "reports/mist_cove/phase10_v1/cuda_receipt.json",
-        "docs/mist_cove/PHASE_X_RESOURCE_FEASIBILITY_V1.md"
+        "docs/mist_cove/PHASE_X_RESOURCE_FEASIBILITY_V1.md",
+        "reports/mist_cove/phase10_v1/resource_estimates_guard_v4.json"
       ],
       "scientific_findings": [
-        "CPU mock complete-table median .303184s;150-example pipeline scenarios46.895/47.406/115.886s; no actual150-input run",
-        "Cache21700bytes/example; peak benchmark process RSS662532KiB",
-        "Actual source and one-GPU-hour feasibility NOT_ESTABLISHED"
+        "Final guarded complete-table median .304813s;150-example CPU scenarios46.879/47.320/119.386s; no actual150-input run",
+        "Both benchmark versions preserved and counted:393216 table queries each; complete study total1343488",
+        "Actual source and one-GPU-hour feasibility NOT_ESTABLISHED; CUDA blocked"
       ],
       "unresolved_limitations": [
         "Random weights produce unusually simple circuits; stress scenario is not a worst-case guarantee",
@@ -389,7 +394,8 @@
       "status": "COMPLETE",
       "code_configuration_identity": {
         "frozen_core": "phase10_reporting_freeze_v2.json",
-        "config_sha256": "2cda20130e80fd90e2460fb55262042abec2f5ac38aeaa429f85113c4eb55820"
+        "config_sha256": "2cda20130e80fd90e2460fb55262042abec2f5ac38aeaa429f85113c4eb55820",
+        "final_architecture_guard_commit": "6499fe9"
       },
       "tests_performed": [
         "Protocol reviewed against supplied Phase X11-gate contract, original split/preprocessing and measured/mock limitations"
@@ -415,15 +421,15 @@
       ],
       "status": "COMPLETE",
       "code_configuration_identity": {
-        "tested_commit": "cdb5672b8233829d8c688d28effec82c6fe505e9",
+        "tested_commit": "6499fe9",
         "frozen_core": "phase10_reporting_freeze_v2.json",
-        "config_sha256": "2cda20130e80fd90e2460fb55262042abec2f5ac38aeaa429f85113c4eb55820"
+        "config_sha256": "2cda20130e80fd90e2460fb55262042abec2f5ac38aeaa429f85113c4eb55820",
+        "active_freeze": "phase10_architecture_guard_v4.json"
       },
       "tests_performed": [
-        "Complete CPU regression: 968 passed / 11 CUDA skips / 0 failures/errors",
-        "JUnit wall 17.293s; log/JUnit digests retained",
-        "Native full-input bitwise equality;252 noninterference comparisons;17 full32768-row circuits; source-access/tamper/atomicity/gate tests pass",
-        "Default metadata verification does not open source artifacts; all baseline tracked files unchanged"
+        "Final complete CPU regression: 973 passed /11 CUDA skips /0 failures/errors",
+        "Final JUnit wall 17.305s; earlier runs and their logs retained",
+        "93 new tests plus880 historical CPU tests; final architecture guard and repeat identity/noninterference probes PASS"
       ],
       "produced_artifacts": [
         "reports/mist_cove/phase10_v1/correctness_receipt.json",
@@ -436,8 +442,7 @@
         "tests/mist_cove/test_phase10_authorization.py"
       ],
       "scientific_findings": [
-        "880 historical CPU tests preserved and88 new Phase X tests passed",
-        "Zero source artifact loads; optional new CUDA checks blocked, historical CUDA results not substituted"
+        "Final973 CPU tests pass; zero source loads; optional CUDA blocked; historical results not substituted"
       ],
       "unresolved_limitations": [
         "Mock-only correctness; actual trained source model and GPU correctness untested"
@@ -450,31 +455,41 @@
       "dependencies": [
         "X15"
       ],
-      "status": "IN_PROGRESS",
+      "status": "COMPLETE",
       "code_configuration_identity": {
-        "frozen_core": "phase10_reporting_freeze_v2.json",
+        "final_engineering_commit": "6499fe9",
+        "active_freeze": "phase10_architecture_guard_v4.json",
         "config_sha256": "2cda20130e80fd90e2460fb55262042abec2f5ac38aeaa429f85113c4eb55820"
       },
       "tests_performed": [
-        "968 passed /11 CUDA skips /0 failures; all independent tasks complete",
-        "Safe aggregate schema and historical immutability checks; publication manifest/push/draft PR/final-head CI next"
+        "Final local full regression973 passed /11 CUDA skips /0 failures/errors",
+        "Initial publication GitHub Actions PASS on d9b2529505351ba7017f5ec9afe7e11c86d7a350; final guard commit independently verified after push in PR/final response",
+        "All publication hashes, frozen core, authoritative historical plan and historical immutability verified"
       ],
       "produced_artifacts": [
         "docs/mist_cove/PHASE_X_RESULTS_V1.md",
-        "reports/mist_cove/phase10_v1/publication_manifest.json"
+        "reports/mist_cove/phase10_v1/publication_manifest.json",
+        "https://github.com/SyedNaveedMahmood/Proto-sleep/pull/12"
       ],
       "scientific_findings": [
-        "Engineering interface verified on mocks; source authentication/actual GPU feasibility remain blocked or untested",
-        "Human-review protocol ready; no real pilot or Phase XI authorized"
+        "All16 required work packages complete; draft PR targets Phase IX; exact final commit/CI verification recorded externally to avoid self-reference",
+        "Interface verified on mocks and source protocol ready for human review; source authentication and real launch remain blocked",
+        "Zero real EEG or fitted source artifacts opened; no Phase XI started"
       ],
       "unresolved_limitations": [
-        "GitHub publication and final exact-head CI pending"
+        "Actual source checkpoint authentication, TRAIN-fit lineage and actual-source resource pilot remain unresolved; CUDA blocked"
       ],
       "block_reason": null,
       "github": {
         "draft_pr": "https://github.com/SyedNaveedMahmood/Proto-sleep/pull/12",
         "base_branch": "research/mist-cove-phase9-witness-circuits-v1",
         "final_exact_commit_and_ci_location": "Draft PR body and final response to avoid self-reference"
+      },
+      "initial_publication_ci": {
+        "conclusion": "success",
+        "headSha": "d9b2529505351ba7017f5ec9afe7e11c86d7a350",
+        "status": "completed",
+        "url": "https://github.com/SyedNaveedMahmood/Proto-sleep/actions/runs/39430682479"
       }
     }
   ]
