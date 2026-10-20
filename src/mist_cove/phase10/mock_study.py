@@ -87,7 +87,9 @@ def gradient_ranking(adapter,cache,target):
         others=torch.cat((logits[:target],logits[target+1:]));score=logits[target]-others.max()
     else:
         s=adapter.score(f).sum();score=2*s if target==0 else -2*s
-    grad=torch.autograd.grad(score,f)[0][0,0];scores=torch.zeros(15)
+    # A literal constant control has derivative zero but no autograd graph.
+    grad=(torch.autograd.grad(score,f)[0] if score.requires_grad else torch.zeros_like(f))[0,0]
+    scores=torch.zeros(15)
     for embed,scale in zip(cache.local_embeddings,adapter.graph['scales']):
         d=scale['embedding_dim'];start=scale['feature_start'];e=embed[0]
         influence=(e*grad[start:start+d]/len(e)).sum(-1)

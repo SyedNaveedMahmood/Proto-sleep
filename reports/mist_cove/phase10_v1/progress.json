@@ -173,12 +173,26 @@
       "dependencies": [
         "X06"
       ],
-      "status": "PENDING",
-      "code_configuration_identity": {},
-      "tests_performed": [],
-      "produced_artifacts": [],
-      "scientific_findings": [],
-      "unresolved_limitations": [],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_probe_commit": "9f9c84dafb3362136be3d3e3dcadfb8807be9c37"
+      },
+      "tests_performed": [
+        "3 meaningful constructed behavior controls passed",
+        "17 fixed mocks probed on20 prespecified masks plus isolated feature/denominator diagnostics"
+      ],
+      "produced_artifacts": [
+        "reports/mist_cove/phase10_v1/behavior_receipt.json",
+        "docs/mist_cove/PHASE_X_OPERATOR_LIMITATIONS_V1.md"
+      ],
+      "scientific_findings": [
+        "Whole-epoch and neutral-bias controls distinguished; alternative valid-count denominator can change predictions",
+        "Random historical architectures recorded independently of privileged analytic controls"
+      ],
+      "unresolved_limitations": [
+        "Analytic detectors use generated knowledge and do not demonstrate learned waveform localization",
+        "Partial-input aggregation is a declared new operator, not native input semantics"
+      ],
       "block_reason": null
     },
     {
@@ -187,12 +201,25 @@
       "dependencies": [
         "X07"
       ],
-      "status": "PENDING",
-      "code_configuration_identity": {},
-      "tests_performed": [],
-      "produced_artifacts": [],
-      "scientific_findings": [],
-      "unresolved_limitations": [],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_probe_commit": "9f9c84d"
+      },
+      "tests_performed": [
+        "6 circuit tests passed including all32768 native-geometry OR/AND/blocker/global/constant rows, XOR and no-support control",
+        "17 complete response tables and ROBDDs verified; every displayed clause checked over all completions and literal deletions"
+      ],
+      "produced_artifacts": [
+        "reports/mist_cove/phase10_v1/circuit_receipt.json"
+      ],
+      "scientific_findings": [
+        "17 exact circuits; 557056 availability queries; complete per-mask arrays remain private",
+        "Whole-epoch and prior-only behavior retained, not promoted to sparse diagnostic explanations"
+      ],
+      "unresolved_limitations": [
+        "Exactness only within fifteen-atom internal-availability domain",
+        "Four displayed subset-minimal clauses are incomplete, not minimum-cardinality"
+      ],
       "block_reason": null
     },
     {

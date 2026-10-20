@@ -25,3 +25,11 @@ def test_privileged_control_hidden_samples_cannot_affect_visible_features():
     a=ControlAdapter('mixed_global_local');x=a.waveform();y=x.clone();mask=torch.zeros(1,15,dtype=torch.bool);mask[0,2]=True
     y[:,:,600:]+=20000
     assert torch.equal(a.features(a.cache(x),mask).features,a.features(a.cache(y),mask).features)
+
+
+def test_constant_head_has_zero_feature_attribution_without_autograd_graph():
+    from mist_cove.phase10.mock_study import gradient_ranking
+    a=ControlAdapter('neutral_bias');ranking,receipt=gradient_ranking(a,a.cache(a.waveform()),0)
+    assert ranking==list(range(15))
+    assert receipt['atom_attribution_absolute_sum']==0
+    assert receipt['global_attribution_absolute_sum']==0

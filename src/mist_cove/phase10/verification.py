@@ -21,8 +21,10 @@ def require_gates(receipt, names):
 
 
 def verify_frozen_mock_core():
-    p=ROOT/'experiments/mist_cove/phase10_mock_freeze_v1.json'
+    v2=ROOT/'experiments/mist_cove/phase10_reporting_freeze_v2.json'
+    p=v2 if v2.exists() else ROOT/'experiments/mist_cove/phase10_mock_freeze_v1.json'
     freeze=json.loads(p.read_text())
+    if subprocess.check_output(['git','show',f'HEAD:{p.relative_to(ROOT)}'],cwd=ROOT)!=p.read_bytes():raise ValueError('freeze record must be committed')
     for name,sha in freeze['files'].items():
         data=(ROOT/name).read_bytes()
         if hashlib.sha256(data).hexdigest()!=sha:raise ValueError('frozen mock source changed: '+name)
