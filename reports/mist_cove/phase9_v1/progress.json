@@ -1,0 +1,476 @@
+{
+  "plan_commit": "99ee93d4343970a948b6b29a064728b6c82d0ae0",
+  "plan_blob": "e40e646cb027de163d43220e47e51a491316bce2",
+  "base_commit": "b50e41efb3b09a9cb7fa4142366424725fc603e5",
+  "scope": "SYNTHETIC_ONLY",
+  "work_packages": [
+    {
+      "id": "WP01",
+      "title": "Repository foundation",
+      "dependencies": [],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "commit": "99ee93d4343970a948b6b29a064728b6c82d0ae0",
+        "plan_sha256": "5297b790fb2a6610755516ba1f182527255fd0f007266561aa2b3deda04b3a3d"
+      },
+      "tests_performed": [
+        "clean status; fetched existing branch; exact HEAD/blob; Phase VIII ancestry"
+      ],
+      "produced_artifacts": [
+        "next_steps.md (unchanged)"
+      ],
+      "scientific_findings": [],
+      "unresolved_limitations": [
+        "No historical tracked file modified; original plan remains authoritative",
+        "Synthetic only; zero real EEG access and no real EEG authorization"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP02",
+      "title": "Novelty and related work",
+      "dependencies": [
+        "WP01"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "commit": "99ee93d4343970a948b6b29a064728b6c82d0ae0",
+        "plan_sha256": "5297b790fb2a6610755516ba1f182527255fd0f007266561aa2b3deda04b3a3d"
+      },
+      "tests_performed": [
+        "R1\u2013R9 plus focused formal/time-series/EEG primary-source review"
+      ],
+      "produced_artifacts": [
+        "docs/mist_cove/PHASE_IX_METHOD_AND_NOVELTY_V1.md"
+      ],
+      "scientific_findings": [
+        "No novelty priority or clinical validity established"
+      ],
+      "unresolved_limitations": [
+        "Focused literature review is not exhaustive novelty clearance; external explainer implementations were not benchmarked",
+        "Synthetic only; zero real EEG access and no real EEG authorization"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP03",
+      "title": "Checkpoint authenticity",
+      "dependencies": [
+        "WP02"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "commit": "99ee93d4343970a948b6b29a064728b6c82d0ae0",
+        "plan_sha256": "5297b790fb2a6610755516ba1f182527255fd0f007266561aa2b3deda04b3a3d"
+      },
+      "tests_performed": [
+        "six P0 creation/checkpoint/seal/source/environment/model/optimizer/RNG checks"
+      ],
+      "produced_artifacts": [
+        "reports/mist_cove/phase9_v1/reference_integrity.json"
+      ],
+      "scientific_findings": [
+        "All six authenticated references available; no reproduction needed"
+      ],
+      "unresolved_limitations": [
+        "Authenticated private synthetic artifacts required for direct replay; no optional reproduction was needed",
+        "Synthetic only; zero real EEG access and no real EEG authorization"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP04",
+      "title": "Overlap-aware availability",
+      "dependencies": [
+        "WP03"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "source_sha256": "0f3b99cd374227c46b7a6e6f640efc52a64e507a4ba25076dc23ef7238405edf"
+      },
+      "tests_performed": [
+        "Full/native identity, atom closure, arbitrary withheld samples, RMS and zero-mask paths:23 cases"
+      ],
+      "produced_artifacts": [
+        "src/mist_cove/phase9/operators.py"
+      ],
+      "scientific_findings": [
+        "Engineering correctness only; clinical validity NOT TESTED"
+      ],
+      "unresolved_limitations": [
+        "Neutral withholding is an internal feature operator, not physiologically plausible waveform deletion",
+        "Overlapping receptive-field closure can remove neighboring nontarget features",
+        "Synthetic only; zero real EEG access and no real EEG authorization"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP05",
+      "title": "Response circuits",
+      "dependencies": [
+        "WP04"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "source_sha256": "90002ed99e8209b7157257cee70087128c04facfeaf6e9145286a11cd6711faf"
+      },
+      "tests_performed": [
+        "32,768-row OR/AND/XOR/blocker/mixed/constants, minimal clauses and nonmonotone greedy counterexample:9 cases"
+      ],
+      "produced_artifacts": [
+        "src/mist_cove/phase9/circuits.py"
+      ],
+      "scientific_findings": [
+        "Engineering correctness only; clinical validity NOT TESTED"
+      ],
+      "unresolved_limitations": [
+        "Exactness is bounded to fifteen atoms and fixed feature operator",
+        "Four displayed subset-minimal clauses are incomplete and not globally minimum; arbitrary circuits need not be compact",
+        "Synthetic only; zero real EEG access and no real EEG authorization"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP06",
+      "title": "Freeze the experiment",
+      "dependencies": [
+        "WP05"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "commit": "99ee93d4343970a948b6b29a064728b6c82d0ae0",
+        "plan_sha256": "5297b790fb2a6610755516ba1f182527255fd0f007266561aa2b3deda04b3a3d"
+      },
+      "tests_performed": [
+        "two-example full-enumeration resource pilot",
+        "45 Phase IX behavior tests; prior full869-pass CPU run before final added audit fixture"
+      ],
+      "produced_artifacts": [
+        "configs/mist_cove_phase9_v1.json",
+        "experiments/mist_cove/phase9_preregistration_v1.json",
+        "experiments/mist_cove/phase9_execution_manifest_v1.json"
+      ],
+      "scientific_findings": [
+        "All60 audit cases retained; up to42 fits/9000 updates; corrected conservative budget projection below3600s"
+      ],
+      "unresolved_limitations": [
+        "Resource projections are pilot estimates; actual campaign time and queries measured separately",
+        "Synthetic streams and criteria frozen; reporting-only operational continuation documented without scientific changes",
+        "Synthetic only; zero real EEG access and no real EEG authorization"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP07",
+      "title": "Track A1 frozen-model explanations",
+      "dependencies": [
+        "WP06"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "commit": "702e90802e1ebbaa1b39940ad6de25ebd20dacd1",
+        "config_sha256": "32d947fc6b2858ad5c9a1a2e0a7b0782d6f96373520391839906265ec422bac2"
+      },
+      "tests_performed": [],
+      "produced_artifacts": [
+        "mist_transfer_runs/mist_cove/phase9_v1/core_v1/wp07_receipt.json"
+      ],
+      "scientific_findings": [
+        "All 32768 masks verified per discovery table; 540 discovery ROBDDs across P0/E0/E1 are exact",
+        "P0 compact active clean clauses found for 59/60 correct cases; bounded summaries do not imply complete explanation coverage"
+      ],
+      "unresolved_limitations": [
+        "Only 60 underlying generated inputs; three discovery views; no population or clinical validity",
+        "All 60 P0 predictions happened to be correct; E0/E1 wrong cases retained in their later circuits",
+        "Bounded clause discovery gives lower bounds on compactness and summary coverage",
+        "Synthetic only; zero real EEG access and no real EEG authorization"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP08",
+      "title": "Track A2 clean matched heads",
+      "dependencies": [
+        "WP07"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "commit": "31c4a191ccd8384888a057107f382618dfe5beba",
+        "config_sha256": "32d947fc6b2858ad5c9a1a2e0a7b0782d6f96373520391839906265ec422bac2"
+      },
+      "tests_performed": [],
+      "produced_artifacts": [
+        "mist_transfer_runs/mist_cove/phase9_v1/core_v1/wp08_receipt.json"
+      ],
+      "scientific_findings": [
+        "All six authenticated shared encoders eligible; zero ineligible; 24 heads and 3600 updates completed",
+        "Complete clean additive utility FAIL: clean retention fails single/123, single/789 and multiple/456",
+        "E1 improves single-witness precision by at least .10 versus E3 RMS in all three seeds, without establishing superiority over conventional E0"
+      ],
+      "unresolved_limitations": [
+        "Clean retention fails 3/6 cells; good RMS comparison does not establish superiority to E0",
+        "One generator family and three optimization seeds; head-only cached fits are not encoder-training exposures",
+        "Synthetic only; zero real EEG access and no real EEG authorization"
+      ],
+      "block_reason": null,
+      "operational_history": [
+        {
+          "status": "BLOCKED",
+          "reason": "Strict JSON refused undefined constant-confidence correlation after first sealed head; no scientific criterion changed",
+          "preserved_updates": 150,
+          "reporting_amendment": "experiments/mist_cove/phase9_reporting_freeze_v2.json"
+        }
+      ]
+    },
+    {
+      "id": "WP09",
+      "title": "Track B robustness training",
+      "dependencies": [
+        "WP08"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "commit": "31c4a191ccd8384888a057107f382618dfe5beba",
+        "config_sha256": "32d947fc6b2858ad5c9a1a2e0a7b0782d6f96373520391839906265ec422bac2"
+      },
+      "tests_performed": [],
+      "produced_artifacts": [
+        "mist_transfer_runs/mist_cove/phase9_v1/core_v1/wp09_receipt.json"
+      ],
+      "scientific_findings": [
+        "18 fits and 5400 updates completed; C2 remained primary",
+        "All C2 absolute clean/competitive thresholds pass, but paired diagnostic/nuisance gates fail single/456 and multiple/123",
+        "Incremental C2 versus C1 FAIL: competitive mean F1 delta -0.004447326771605771; positive in 2/6 cells; no additional seed or loss search"
+      ],
+      "unresolved_limitations": [
+        "No demonstrated incremental C2-over-C1 benefit; full C2 gate fails two cells",
+        "Three-seed cluster bootstrap is descriptive; additional masked-head compute has no established utility",
+        "Synthetic only; zero real EEG access and no real EEG authorization"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP10",
+      "title": "Explanation stability",
+      "dependencies": [
+        "WP09"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "commit": "31c4a191ccd8384888a057107f382618dfe5beba",
+        "config_sha256": "32d947fc6b2858ad5c9a1a2e0a7b0782d6f96373520391839906265ec422bac2"
+      },
+      "tests_performed": [],
+      "produced_artifacts": [
+        "mist_transfer_runs/mist_cove/phase9_v1/core_v1/wp10_receipt.json"
+      ],
+      "scientific_findings": [
+        "Full-input predictions stable: P0 34/60, E0 34/60, E1 36/60",
+        "Fixed active-clause conditional survival P0 .735294, E0 .647059, E1 .444444; all fail .80",
+        "Substitution conditional survival .764706/.676471/.444444 applies only to the frozen bounded clause family"
+      ],
+      "unresolved_limitations": [
+        "Finite independent nuisance views and frozen bounded displayed clause family",
+        "Prediction stability and explanation stability both insufficient; unrestricted full-mask explanation would be trivial",
+        "Synthetic only; zero real EEG access and no real EEG authorization"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP11",
+      "title": "Intervention validity",
+      "dependencies": [
+        "WP10"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "commit": "31c4a191ccd8384888a057107f382618dfe5beba",
+        "config_sha256": "32d947fc6b2858ad5c9a1a2e0a7b0782d6f96373520391839906265ec422bac2"
+      },
+      "tests_performed": [],
+      "produced_artifacts": [
+        "mist_transfer_runs/mist_cove/phase9_v1/core_v1/wp11_receipt.json"
+      ],
+      "scientific_findings": [
+        "Oracle generated-component correctness PASS; target removal, preservation, compatibility and prediction effects separated",
+        "Historical guards unchanged; 0/120 replacement donors accepted; accepted-donor conditional spread null/untested",
+        "Internal withholding does not make a waveform; exact diagnostic removal preserves nontarget components but only 15/60 pass waveform guards"
+      ],
+      "unresolved_limitations": [
+        "0/120 donors meet unchanged guards; conditional donor invariance is untested",
+        "Component deletion, internal withholding and waveform replacement answer different questions; no physiological validity",
+        "Synthetic only; zero real EEG access and no real EEG authorization"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP12",
+      "title": "Localization and reliability",
+      "dependencies": [
+        "WP11"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "commit": "31c4a191ccd8384888a057107f382618dfe5beba",
+        "config_sha256": "32d947fc6b2858ad5c9a1a2e0a7b0782d6f96373520391839906265ec422bac2"
+      },
+      "tests_performed": [],
+      "produced_artifacts": [
+        "mist_transfer_runs/mist_cove/phase9_v1/core_v1/wp12_receipt.json"
+      ],
+      "scientific_findings": [
+        "Correct and wrong predictions retain their own predicted-class explanation target",
+        "All calibration/error/localization strata and random-label/model-randomization controls completed",
+        "Diagnostic-removed accuracy remains near .20 with mean confidence near .75; reliable absence-of-information recognition unsupported"
+      ],
+      "unresolved_limitations": [
+        "Full-view temperature calibration does not calibrate all masked states",
+        "High-confidence null/removed errors persist; no clinical event validation or real distribution calibration",
+        "Synthetic only; zero real EEG access and no real EEG authorization"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP13",
+      "title": "Correctness and hardware",
+      "dependencies": [
+        "WP12"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "commit": "31c4a191ccd8384888a057107f382618dfe5beba",
+        "config_sha256": "32d947fc6b2858ad5c9a1a2e0a7b0782d6f96373520391839906265ec422bac2"
+      },
+      "tests_performed": [
+        "full CPU: 871 passed/11 skipped",
+        "42 sealed new states and exact circuit archives match"
+      ],
+      "produced_artifacts": [
+        "mist_transfer_runs/mist_cove/phase9_v1/core_v1/wp13_receipt.json"
+      ],
+      "scientific_findings": [
+        "CUDA BLOCKED by another compute process; no new device allocation"
+      ],
+      "unresolved_limitations": [
+        "Optional CUDA correctness/exact-resume not executed because device occupied",
+        "CPU suite passed; historical CUDA success is not substituted",
+        "Synthetic only; zero real EEG access and no real EEG authorization"
+      ],
+      "block_reason": null,
+      "optional_cuda": {
+        "status": "BLOCKED",
+        "exact_reason": "Another compute process (PID 290360, python, 14460 MiB) occupied the RTX 4080 SUPER; observed total usage 14532 MiB and free 1413 MiB; zero new CUDA model operations and no interruption"
+      }
+    },
+    {
+      "id": "WP14",
+      "title": "Scientific publication",
+      "dependencies": [
+        "WP13"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "commit": "fdc2266a4c84ae04db168b3c3b16e4e048cc2271",
+        "config_sha256": "32d947fc6b2858ad5c9a1a2e0a7b0782d6f96373520391839906265ec422bac2"
+      },
+      "tests_performed": [
+        "all private receipt/checkpoint/circuit hashes verified",
+        "public schema excludes states and per-mask arrays",
+        "six principal figures"
+      ],
+      "produced_artifacts": [
+        "docs/mist_cove/PHASE_IX_RESULTS_V1.md",
+        "reports/mist_cove/phase9_v1/results.json",
+        "reports/mist_cove/phase9_v1/dashboard.html",
+        "reports/mist_cove/phase9_v1/figures"
+      ],
+      "scientific_findings": [
+        "Track-specific scientific failures retained independently",
+        "Exhaustive finite fidelity and bounded clean compactness supported"
+      ],
+      "unresolved_limitations": [
+        "Safe aggregate publication excludes private full tables, weights, waveforms and logs",
+        "Exactly six principal figures; scientific failures retained and no clinical claims",
+        "Synthetic only; zero real EEG access and no real EEG authorization"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP15",
+      "title": "Future real-source proposal",
+      "dependencies": [
+        "WP14"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "commit": "fdc2266a4c84ae04db168b3c3b16e4e048cc2271",
+        "config_sha256": "32d947fc6b2858ad5c9a1a2e0a7b0782d6f96373520391839906265ec422bac2"
+      },
+      "tests_performed": [
+        "proposal reviewed against actual Phase IX results, original source contract and global-feature bypass limitation"
+      ],
+      "produced_artifacts": [
+        "docs/mist_cove/PHASE_IX_SOURCE_PROPOSAL_V1.md"
+      ],
+      "scientific_findings": [
+        "Narrow source-model dependency question may merit independent review; perfect synthetic robustness is not assumed necessary",
+        "No real EEG loader or fitted source artifact opened"
+      ],
+      "unresolved_limitations": [
+        "Proposal only; separate real-source authorization and receptive-field/global-pathway review required",
+        "Repeated development VAL use precludes independent-test claims",
+        "Synthetic only; zero real EEG access and no real EEG authorization"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP16",
+      "title": "GitHub completion",
+      "dependencies": [
+        "WP15"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "commit": "694a83e2acab4b756aaf636a31c9aca2f1189f41",
+        "config_sha256": "32d947fc6b2858ad5c9a1a2e0a7b0782d6f96373520391839906265ec422bac2"
+      },
+      "tests_performed": [
+        "Complete local CPU regression: 880 passed / 11 CUDA skips / 0 failures/errors",
+        "GitHub Actions publication CI success on 694a83e2acab4b756aaf636a31c9aca2f1189f41: 880 passed / 11 skipped",
+        "All checkpoint seals, circuit digests, publication hashes and unchanged plan/historical files verified",
+        "Final closeout commit and its independent exact-head Actions verification recorded in PR body and final response"
+      ],
+      "produced_artifacts": [
+        "https://github.com/SyedNaveedMahmood/Proto-sleep/pull/11",
+        "https://github.com/SyedNaveedMahmood/Proto-sleep/actions/runs/39423595644",
+        "reports/mist_cove/phase9_v1/publication_manifest.json"
+      ],
+      "scientific_findings": [
+        "Safe source/aggregate outputs committed and pushed on existing Phase IX branch; draft PR #11 targets Phase VIII",
+        "Required scientific tasks complete; optional CUDA blocked by occupied GPU",
+        "Scientific failures preserved; stop for scientific review; no Phase X initiated"
+      ],
+      "unresolved_limitations": [
+        "Draft PR remains for scientific review; no automatic Phase X or real-data authorization",
+        "Synthetic only; zero real EEG access and no real EEG authorization"
+      ],
+      "block_reason": null,
+      "github": {
+        "pull_request": "https://github.com/SyedNaveedMahmood/Proto-sleep/pull/11",
+        "base_branch": "research/mist-cove-phase8-robust-evidence-v1",
+        "draft": true,
+        "final_commit_and_exact_head_ci_location": "PR body and final response; kept external to avoid self-referential file hashes"
+      },
+      "publication_ci": {
+        "conclusion": "success",
+        "headSha": "694a83e2acab4b756aaf636a31c9aca2f1189f41",
+        "status": "completed",
+        "url": "https://github.com/SyedNaveedMahmood/Proto-sleep/actions/runs/39423595644",
+        "passed": 880,
+        "skipped": 11,
+        "seconds": 42.58,
+        "scope": "Published code/results commit; closeout changes ledger and its manifest only. Exact final-head verification is recorded externally in the PR."
+      }
+    }
+  ]
+}

@@ -1,0 +1,265 @@
+{
+  "version": "mist-wic-phase9-preregistration-v1",
+  "status": "FROZEN_BEFORE_CONFIRMATORY_RESULTS",
+  "primary": "C2",
+  "plan_commit": "99ee93d4343970a948b6b29a064728b6c82d0ae0",
+  "plan_blob": "e40e646cb027de163d43220e47e51a491316bce2",
+  "files": {
+    "configs/mist_cove_phase9_v1.json": "32d947fc6b2858ad5c9a1a2e0a7b0782d6f96373520391839906265ec422bac2",
+    "docs/mist_cove/PHASE_IX_METHOD_AND_NOVELTY_V1.md": "2969b3bfaac8d7c691baff5bbd22f68f16da8815fee67967d18e38bf9d698a59",
+    "next_steps.md": "5297b790fb2a6610755516ba1f182527255fd0f007266561aa2b3deda04b3a3d",
+    "scripts/run_mist_cove_phase9.py": "2742da209661d693179afec11c4cb165126212064d9425ea84724e93adf1964b",
+    "src/mist_cove/phase4/__init__.py": "0930fe38391a4bcd97c7c4908ad0e357cf90d61deac489c7de7d20103d63d792",
+    "src/mist_cove/phase4/audit.py": "b3d792e9869861fb02ff18e113b364ec8264c44314a5cb6c6ce082553b947050",
+    "src/mist_cove/phase4/correctness.py": "abe7a934c3ef173f54649c153349725ec0f86e21382008f8481efe95a00b0d20",
+    "src/mist_cove/phase4/donors.py": "c32d96895fd6f7fee4b5ef176376d11b8ca21366eb5b90d99b668a3fa04ce8aa",
+    "src/mist_cove/phase4/experiment.py": "1bf44cc2203899c310e99cb51ace41907e4d9cf9ac8a719f000206d334a7d002",
+    "src/mist_cove/phase4/model.py": "bf99b78ca9d5534f3dced329a84529642ee02adff8412e0ae699c603ab503ad0",
+    "src/mist_cove/phase4/source.py": "e72097e9f32a4ee76854e1340b2fc928f7c80469c4021d0f2dfeda5db28f24c9",
+    "src/mist_cove/phase4/synthetic.py": "2646dd18857f8e439d958973433d1e82d24692480b9c1b77bf3506198e045d0b",
+    "src/mist_cove/phase5/__init__.py": "28858fbb3e27991c787f1d1ab29aff907c906ed6ac085bfcbb211944507a0722",
+    "src/mist_cove/phase5/audits.py": "bfb4637784e9bbadfbcd4da1acf6f2cc22f9630b724bb66f2f17262658df9ebf",
+    "src/mist_cove/phase5/correctness.py": "706b2efa69a16172c04e75c54167bbfb006bae3ec639b85addff15a4cb930efb",
+    "src/mist_cove/phase5/experiment.py": "c943d3e8bdb6753c6d92ea6a00a0eb31c60f06421f73f0abd6468e84a58e78ad",
+    "src/mist_cove/phase5/features.py": "9dd09cb65ecbfedd19cfcc14e344b1f507c0e1c61dd6f2a952ec548f657f01af",
+    "src/mist_cove/phase5/models.py": "3cf95b2c5d0b16d57344bf5374ca83b8161283571b80f68e185fa2e02b9b2304",
+    "src/mist_cove/phase5/runtime.py": "96833bcdf7b1e1335f9e548e08c216e0d9aa3d6828bd5c8bc486f89a48dd47fa",
+    "src/mist_cove/phase5/signals.py": "de41bdd2573ca29daca34eb1e1d147a37da94a0a48d6417dc0f63bf82df44373",
+    "src/mist_cove/phase6/__init__.py": "cc191ade92f8ea8a0139bcb6f6d019537b2acb0e6ef52a5fa2e1eeb862f95887",
+    "src/mist_cove/phase6/audit.py": "565b982702ed4da5a21c0277bebd53eb5e45419dd37a470c54608b99ba33190f",
+    "src/mist_cove/phase6/correctness.py": "c0da4713e88e9dca5f4fbf1fa7ab51856de59dd993dfbc89e4022856280dc8a0",
+    "src/mist_cove/phase6/evaluation.py": "2804cb4fb1fcefb9ea0efa6e0aff7502fc0a25776751ddb1d66785acb9f40545",
+    "src/mist_cove/phase6/experiment.py": "431768a1632581de1e997103846e308f95a9a52f8a0a806fb707937a188ade6e",
+    "src/mist_cove/phase6/features.py": "75a78116a4f02c832f68e3e176dfd19b88f26a507f8d8a9857fb26aa614d69f0",
+    "src/mist_cove/phase6/generator.py": "94aa0d5a0a0eb88870b77778f7fae68c5c8ea0494fb781f1f4bb0a99c42f0d13",
+    "src/mist_cove/phase6/runtime.py": "1c10ee3517b15b97cc8aab86aea623c7e450c08adfd846c43b1e7eab5099c8ba",
+    "src/mist_cove/phase7/__init__.py": "6088f5eaaef2659b66311cdbf0d9dccb7bc41f310b0fb7f04e1c76b1b41a6cbe",
+    "src/mist_cove/phase7/integrity.py": "6e40974815bad1b60efd79fd84d0354e8a715242b53d4b79a23fa79852901fcf",
+    "src/mist_cove/phase7/prospective.py": "d9c5fc5724d44ae6b70229918af6972649f2840097f102948e830c9356095cd7",
+    "src/mist_cove/phase7/robustness.py": "c5557851b1ac80f8198d49f132a63849cff2b9ebaea80f686fa472d8b7fb67f7",
+    "src/mist_cove/phase8/__init__.py": "ac2875a33407008c1dc0b42b9bedd5f51b3327909a5e29bca146e41177847604",
+    "src/mist_cove/phase8/calibration.py": "65c428e56c43a1c60c8e2b760ac7912229b61b64f917a86a56acfed15db6c8f9",
+    "src/mist_cove/phase8/diagnostics.py": "19d22f100da15a698c0d35279bfede4ee34edef581f2e56274d5d4db387da345",
+    "src/mist_cove/phase8/evaluation.py": "4830e5ef274d3a262557fbd794e04d5100155d855ddcc345ba8e9f3aaa85ea16",
+    "src/mist_cove/phase8/evidence.py": "4a282ac1e794652bc3795379afb5920cb113bd3ff960e8ee99eddc7a9562c8fb",
+    "src/mist_cove/phase8/generator.py": "90db5c6cc199ea3bff38795fab3a9357c44291b743a0b7b37baf2ec5f6358954",
+    "src/mist_cove/phase8/interventions.py": "d3e78fd46aa3d55ff7ffe4d4b529bbec0bc850e0ae403b38b8be3530359a1ec4",
+    "src/mist_cove/phase8/pooling.py": "99b63b09961def6ad30e908f582206281962b7e13c4c18cf5df75ccddbbc1ef5",
+    "src/mist_cove/phase8/provenance.py": "c3714fcee8efc3c4cfa7dac7dae8d21238a4b024cdd67284dd05a36914c71cc4",
+    "src/mist_cove/phase8/representation.py": "64f7ea416033ed5629cbae5b9e9207bc90fae3f211e92afadde9ad8dbdf76d13",
+    "src/mist_cove/phase8/robustness.py": "f0bab44ce7e5ff13af46a8729eb6cf4527d592c4a20ab5e6e6ace380e1acc12c",
+    "src/mist_cove/phase9/__init__.py": "ae378b6f3892eb8bd5ae4d5d16c1bf1ff57480a4ed308d39e7cf525f12fdb19d",
+    "src/mist_cove/phase9/circuits.py": "90002ed99e8209b7157257cee70087128c04facfeaf6e9145286a11cd6711faf",
+    "src/mist_cove/phase9/clauses.py": "4874472ef7a4947c26cab2e18c6465941a709dff77c60d57faec3005053a073f",
+    "src/mist_cove/phase9/experiments.py": "bf2d6989c53f105a1bfe5a2affecbd77ceaa0fc13fca8bc2e086ab446e346e7c",
+    "src/mist_cove/phase9/objectives.py": "a1cf56e7676ba862b60a1e161867d45ae1f645dbaa0e2b3fde8a68c6034d797f",
+    "src/mist_cove/phase9/operators.py": "0f3b99cd374227c46b7a6e6f640efc52a64e507a4ba25076dc23ef7238405edf",
+    "src/mist_evidence/runtime.py": "15d56ab58aad5a830946be540c69c22b9fec067b7f42e077a10f41e3ceb6bd61",
+    "tests/mist_cove/test_phase9_circuits.py": "2df9d929905a4fce371895d641c8262d843b2b6bd9ef61a059e36afb518f5dfd",
+    "tests/mist_cove/test_phase9_operators.py": "31e778a6b55192a5a32e177c3cdebb849381985bc159b062baba7bc8ae0c07ae",
+    "tests/mist_cove/test_phase9_tracks.py": "5962e0a6a683aba93e5904c8304766cd11b6433b21f4274ae79b8de28511f551"
+  },
+  "seed_mapping": {
+    "train": {
+      "single_123": 2672933400,
+      "single_456": 879194543,
+      "single_789": 1196616512,
+      "multiple_123": 2730550140,
+      "multiple_456": 1694723101,
+      "multiple_789": 349792476
+    },
+    "development": {
+      "single_123": 1572674492,
+      "single_456": 1616078716,
+      "single_789": 1510827112,
+      "multiple_123": 99563023,
+      "multiple_456": 918805359,
+      "multiple_789": 3084547087
+    },
+    "calibration": {
+      "single_123": 414229341,
+      "single_456": 2320834093,
+      "single_789": 180247398,
+      "multiple_123": 1319107250,
+      "multiple_456": 144495678,
+      "multiple_789": 626735225
+    },
+    "circuit_discovery": {
+      "single_123": 155026889,
+      "single_456": 4012465993,
+      "single_789": 4145293003,
+      "multiple_123": 3697494021,
+      "multiple_456": 2474792079,
+      "multiple_789": 1229047165
+    },
+    "circuit_verification/0": {
+      "single_123": 1776200293,
+      "single_456": 2248877320,
+      "single_789": 1000285683,
+      "multiple_123": 319342601,
+      "multiple_456": 3244809253,
+      "multiple_789": 4229970556
+    },
+    "circuit_verification/1": {
+      "single_123": 756040205,
+      "single_456": 390720049,
+      "single_789": 283698002,
+      "multiple_123": 2815750642,
+      "multiple_456": 983871939,
+      "multiple_789": 1159052983
+    },
+    "circuit_verification/2": {
+      "single_123": 1005576376,
+      "single_456": 2882669752,
+      "single_789": 542172721,
+      "multiple_123": 2784659820,
+      "multiple_456": 2331544693,
+      "multiple_789": 3738367695
+    },
+    "locked_evaluation": {
+      "single_123": 2281964837,
+      "single_456": 257004612,
+      "single_789": 1989173266,
+      "multiple_123": 2239502376,
+      "multiple_456": 2472702522,
+      "multiple_789": 2925695368
+    },
+    "paired_evaluation": {
+      "single_123": 2528022950,
+      "single_456": 1029244624,
+      "single_789": 2681280792,
+      "multiple_123": 3635476387,
+      "multiple_456": 3972532856,
+      "multiple_789": 3688642404
+    },
+    "paired_other": {
+      "single_123": 1761130851,
+      "single_456": 1218132680,
+      "single_789": 3959926214,
+      "multiple_123": 1505733780,
+      "multiple_456": 1082346739,
+      "multiple_789": 2658371002
+    },
+    "operator_independent_baseline": {
+      "single_123": 169755717,
+      "single_456": 2414075221,
+      "single_789": 3252703394,
+      "multiple_123": 2695598518,
+      "multiple_456": 1436839538,
+      "multiple_789": 350924378
+    },
+    "train_nuisance/hf": {
+      "single_123": 3570040326,
+      "single_456": 3080950119,
+      "single_789": 3716860322,
+      "multiple_123": 781530023,
+      "multiple_456": 2533998702,
+      "multiple_789": 2444987789
+    },
+    "train_nuisance/artifact": {
+      "single_123": 1765665887,
+      "single_456": 2528701206,
+      "single_789": 2297941357,
+      "multiple_123": 122779157,
+      "multiple_456": 1517451666,
+      "multiple_789": 2643720869
+    },
+    "calibration_nuisance/hf": {
+      "single_123": 1010677403,
+      "single_456": 836945522,
+      "single_789": 620684959,
+      "multiple_123": 2854032261,
+      "multiple_456": 2448812378,
+      "multiple_789": 2935669311
+    },
+    "calibration_nuisance/artifact": {
+      "single_123": 1206510474,
+      "single_456": 484976365,
+      "single_789": 1497045434,
+      "multiple_123": 852459887,
+      "multiple_456": 3635745264,
+      "multiple_789": 447168988
+    },
+    "discovery_high_frequency": {
+      "single_123": 1968866633,
+      "single_456": 492592569,
+      "single_789": 3534778878,
+      "multiple_123": 3908284929,
+      "multiple_456": 568187954,
+      "multiple_789": 308054111
+    },
+    "discovery_transient": {
+      "single_123": 675777220,
+      "single_456": 383133637,
+      "single_789": 3130226572,
+      "multiple_123": 844253055,
+      "multiple_456": 3958907460,
+      "multiple_789": 166546232
+    },
+    "locked_added": {
+      "single_123": 2933380765,
+      "single_456": 3464934551,
+      "single_789": 4024278833,
+      "multiple_123": 4140832422,
+      "multiple_456": 1296245073,
+      "multiple_789": 3407639381
+    },
+    "model_randomization": {
+      "single_123": 1018675116,
+      "single_456": 2950585113,
+      "single_789": 2814319516,
+      "multiple_123": 22505914,
+      "multiple_456": 235836142,
+      "multiple_789": 2994325390
+    },
+    "random_labels": {
+      "single_123": 2833676942,
+      "single_456": 432709768,
+      "single_789": 2662080226,
+      "multiple_123": 3092010871,
+      "multiple_456": 1199992250,
+      "multiple_789": 1864988722
+    },
+    "pilot": {
+      "single_123": 1371988548,
+      "single_456": 2038345361,
+      "single_789": 3570813637,
+      "multiple_123": 2972969315,
+      "multiple_456": 1032640796,
+      "multiple_789": 3428324021
+    }
+  },
+  "pilot": {
+    "scope": "TWO_GENERATED_DEVELOPMENT_EXAMPLES_RESOURCE_ONLY",
+    "rows": [
+      {
+        "method": "M1",
+        "seconds": 0.055507547993329354,
+        "mask_queries": 32768,
+        "encoded_examples": 1,
+        "cache_bytes": 1064
+      },
+      {
+        "method": "M2",
+        "seconds": 0.03247252899745945,
+        "mask_queries": 32768,
+        "encoded_examples": 1,
+        "cache_bytes": 1064
+      }
+    ],
+    "projected_exact_table_calls": 1140,
+    "projected_exact_seconds": 63.27860471239546,
+    "conservative_training_and_other_seconds": 600,
+    "ceiling_seconds": 3600,
+    "scientific_outcomes_inspected": false,
+    "conservative_projection_seconds": 726.5572094247909
+  },
+  "reviewed_table_maximum": 1272,
+  "reviewed_projection_seconds": 741.2112020950299,
+  "core_neural_fit_maximum": 42,
+  "core_optimizer_update_maximum": 9000,
+  "scientific_wall_maximum": 3600,
+  "private_reference_reproduction_fits": 0,
+  "principal_figure_maximum": 6,
+  "external_implementations": "NOT RUN"
+}
