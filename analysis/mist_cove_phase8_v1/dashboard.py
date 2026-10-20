@@ -21,7 +21,7 @@ def main():
     lines=['# Phase VIII offline research dashboard','',f"Primary **{g['primary']}** robustness gate: **{g['status']}**. Additive confirmation: **{e['heads']['status']}**. CUDA: **{compute['cuda_status']}**. Provenance: **PASS**.",'','| Task | Seed | Method | Clean F1 | Competitive F1 | Added F1 | Competitive ECE |','|---|---:|---|---:|---:|---:|---:|']
     for v in summary['task_seed_scores']:lines.append('| '+str(v['task'])+' | '+str(v['seed'])+' | '+v['method']+' | '+' | '.join(f'{v[k]:.6f}' for k in ('clean_f1','competitive_f1','added_f1','competitive_ece'))+' |')
     lines+=['','## Failed primary clauses','']
-    for v in g['checks']:lines.append(f"- {v['task']}/{v['seed']}: "+', '.join(k for k,passed in v['clauses'].items() if not passed))
+    for v in g['checks']:lines.append(f"- {v['task']}/{v['seed']}: "+(', '.join(k for k,passed in v['clauses'].items() if not passed) or 'all clauses pass'))
     lines+=['','## Authorization and next blockers','',summary['authorization'],'']+['- '+v for v in summary['next_blockers']]
     lines += ['', 'CPU correctness: '+str(summary['cpu_correctness']['passed'])+' passed / '+str(summary['cpu_correctness']['skipped'])+' CUDA skipped. Source and test hashes are in correctness_receipt.json.', '', 'Descriptive completion: descriptive_diagnostics_summary.json. Aggregate figures: figures/ (16 charts). No new fits or gate changes in the appendix.']
     target=PUBLIC/'dashboard_v2.md'

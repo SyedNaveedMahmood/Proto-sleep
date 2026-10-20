@@ -45,10 +45,10 @@ Primary **B1** robustness gate: **FAIL**. Additive confirmation: **NOT TESTED**.
 
 - single/123: clean_floor, clean_penalty, competitive, diagnostic_pairs
 - single/456: clean_penalty, diagnostic_pairs, nuisance_pairs
-- single/789: 
+- single/789:
 - multiple/123: clean_floor, clean_penalty, competitive, diagnostic_pairs
 - multiple/456: clean_floor, clean_penalty, competitive, diagnostic_pairs, nuisance_pairs
-- multiple/789: 
+- multiple/789:
 
 ## Authorization and next blockers
 

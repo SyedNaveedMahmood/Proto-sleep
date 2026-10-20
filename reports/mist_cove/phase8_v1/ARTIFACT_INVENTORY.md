@@ -1,12 +1,13 @@
 # Phase VIII artifact inventory
 
-88 added files; no Phase III–VII tracked file modified. Final commit and passing final-head Actions are linked in the draft PR.
+90 added files; no Phase III–VII tracked file modified. Final commit and passing final-head Actions are linked in the draft PR.
 
 - `analysis/mist_cove_phase8_v1/collect.py`
 - `analysis/mist_cove_phase8_v1/complete_diagnostics.py`
 - `analysis/mist_cove_phase8_v1/dashboard.py`
 - `analysis/mist_cove_phase8_v1/figures.py`
 - `analysis/mist_cove_phase8_v1/render_examples.py`
+- `analysis/mist_cove_phase8_v1/verify_package.py`
 - `analysis/mist_cove_phase8_v1/verify_replay.py`
 - `analysis/mist_cove_phase8_v1/write_report.py`
 - `configs/mist_cove_phase8_synthetic_v1.json`
@@ -61,6 +62,7 @@
 - `reports/mist_cove/phase8_v1/figures/14_compute_parameters.png`
 - `reports/mist_cove/phase8_v1/figures/15_group_effect_quantiles.png`
 - `reports/mist_cove/phase8_v1/figures/16_strength_localization.png`
+- `reports/mist_cove/phase8_v1/final_verification_receipt.json`
 - `reports/mist_cove/phase8_v1/pilot_receipt.json`
 - `reports/mist_cove/phase8_v1/provenance_receipt.json`
 - `reports/mist_cove/phase8_v1/provenance_replay_receipt.json`
