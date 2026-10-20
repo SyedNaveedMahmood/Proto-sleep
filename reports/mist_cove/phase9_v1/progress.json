@@ -129,14 +129,23 @@
       "dependencies": [
         "WP05"
       ],
-      "status": "IN_PROGRESS",
+      "status": "COMPLETE",
       "code_configuration_identity": {
         "commit": "99ee93d4343970a948b6b29a064728b6c82d0ae0",
         "plan_sha256": "5297b790fb2a6610755516ba1f182527255fd0f007266561aa2b3deda04b3a3d"
       },
-      "tests_performed": [],
-      "produced_artifacts": [],
-      "scientific_findings": [],
+      "tests_performed": [
+        "two-example full-enumeration resource pilot",
+        "45 Phase IX behavior tests; prior full869-pass CPU run before final added audit fixture"
+      ],
+      "produced_artifacts": [
+        "configs/mist_cove_phase9_v1.json",
+        "experiments/mist_cove/phase9_preregistration_v1.json",
+        "experiments/mist_cove/phase9_execution_manifest_v1.json"
+      ],
+      "scientific_findings": [
+        "All60 audit cases retained; up to42 fits/9000 updates; corrected conservative budget projection below3600s"
+      ],
       "unresolved_limitations": [
         "synthetic-only scope; no real EEG authorization"
       ],

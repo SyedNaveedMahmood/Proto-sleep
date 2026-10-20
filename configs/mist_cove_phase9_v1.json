@@ -1,0 +1,68 @@
+{
+  "version": "mist-wic-phase9-v1",
+  "scope": "SYNTHETIC_ONLY",
+  "plan_commit": "99ee93d4343970a948b6b29a064728b6c82d0ae0",
+  "plan_blob": "e40e646cb027de163d43220e47e51a491316bce2",
+  "base_commit": "b50e41efb3b09a9cb7fa4142366424725fc603e5",
+  "tasks": [
+    "single",
+    "multiple"
+  ],
+  "seeds": [
+    123,
+    456,
+    789
+  ],
+  "primary": "C2",
+  "train_examples": 1000,
+  "development_examples": 500,
+  "calibration_examples": 500,
+  "evaluation_examples": 1000,
+  "audit_generation_examples": 100,
+  "audit_per_class": 2,
+  "discovery_views": 3,
+  "verification_views": 3,
+  "head_updates": 150,
+  "updates": 300,
+  "batch_size": 16,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "gradient_clip": 5,
+  "cpu_threads": 2,
+  "scientific_wall_seconds": 3600,
+  "mask_batch": 512,
+  "margin_threshold": 1e-06,
+  "full_identity_atol": 1e-06,
+  "high_confidence_probability": 0.6,
+  "max_display_clauses": 4,
+  "max_summary_literals": 8,
+  "max_retained_seconds": 8,
+  "discovery_strength": 1.0,
+  "verification_strength": 1.0,
+  "neutral_control": 0.01,
+  "head_methods": {
+    "E0": "M1",
+    "E1": "M2",
+    "E2": "M3",
+    "E3": "M2_rms"
+  },
+  "criteria": {
+    "parent_clean_f1": 0.8,
+    "compact_coverage": 0.8,
+    "clean_retention": 0.03,
+    "localization_precision_gain": 0.1,
+    "stable_clause_survival": 0.8,
+    "clean_f1": 0.8,
+    "competitive_f1": 0.7,
+    "paired_behavior": 0.8,
+    "incremental_mean_gain": 0.03,
+    "incremental_positive_cells": 4
+  },
+  "donor_guard": {
+    "relative_energy_max": 0.5,
+    "relative_magnitude_l1_max": 0.5,
+    "boundary_change_uV_max": 5.0,
+    "spread_logit_max": 0.25
+  },
+  "real_data_authorized": false
+}
