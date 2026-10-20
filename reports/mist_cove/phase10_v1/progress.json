@@ -66,12 +66,26 @@
       "dependencies": [
         "X02"
       ],
-      "status": "PENDING",
-      "code_configuration_identity": {},
-      "tests_performed": [],
-      "produced_artifacts": [],
-      "scientific_findings": [],
-      "unresolved_limitations": [],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "commit": "7c270373529227632bcad21a8a5d482a0c006d80",
+        "config_sha256": "2cda20130e80fd90e2460fb55262042abec2f5ac38aeaa429f85113c4eb55820"
+      },
+      "tests_performed": [
+        "2 focused aggregation/interface tests passed; negative-coordinate max, empty state, fixed denominator, global suppression, unchanged parameters"
+      ],
+      "produced_artifacts": [
+        "src/mist_cove/phase10/source_availability.py",
+        "src/mist_cove/phase10/source_adapter.py",
+        "src/mist_cove/phase10/mock_models.py",
+        "docs/mist_cove/PHASE_X_OPERATOR_SPEC_V1.md"
+      ],
+      "scientific_findings": [
+        "Explicit fixed-P mean, valid-only max, empty neutral and global all-or-neutral semantics"
+      ],
+      "unresolved_limitations": [
+        "Mandatory full identity and noninterference gates run next; no real artifact inspected"
+      ],
       "block_reason": null
     },
     {
@@ -80,12 +94,26 @@
       "dependencies": [
         "X03"
       ],
-      "status": "PENDING",
-      "code_configuration_identity": {},
-      "tests_performed": [],
-      "produced_artifacts": [],
-      "scientific_findings": [],
-      "unresolved_limitations": [],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "commit": "7c270373529227632bcad21a8a5d482a0c006d80",
+        "config_sha256": "2cda20130e80fd90e2460fb55262042abec2f5ac38aeaa429f85113c4eb55820"
+      },
+      "tests_performed": [
+        "2 focused aggregation/interface tests passed; negative-coordinate max, empty state, fixed denominator, global suppression, unchanged parameters"
+      ],
+      "produced_artifacts": [
+        "src/mist_cove/phase10/source_availability.py",
+        "src/mist_cove/phase10/source_adapter.py",
+        "src/mist_cove/phase10/mock_models.py",
+        "docs/mist_cove/PHASE_X_OPERATOR_SPEC_V1.md"
+      ],
+      "scientific_findings": [
+        "In-memory historical architecture adapter with batched masks, five logits, trace and tamper-bound caches"
+      ],
+      "unresolved_limitations": [
+        "Mandatory full identity and noninterference gates run next; no real artifact inspected"
+      ],
       "block_reason": null
     },
     {
