@@ -1,0 +1,91 @@
+{
+  "primary": "B1",
+  "status": "FAIL",
+  "complete": true,
+  "checks": [
+    {
+      "task": "single",
+      "seed": 123,
+      "clauses": {
+        "clean_floor": false,
+        "clean_penalty": false,
+        "competitive": false,
+        "added": true,
+        "diagnostic_pairs": false,
+        "nuisance_pairs": true,
+        "no_collapse": true
+      },
+      "pass": false
+    },
+    {
+      "task": "single",
+      "seed": 456,
+      "clauses": {
+        "clean_floor": true,
+        "clean_penalty": false,
+        "competitive": true,
+        "added": true,
+        "diagnostic_pairs": false,
+        "nuisance_pairs": false,
+        "no_collapse": true
+      },
+      "pass": false
+    },
+    {
+      "task": "single",
+      "seed": 789,
+      "clauses": {
+        "clean_floor": true,
+        "clean_penalty": true,
+        "competitive": true,
+        "added": true,
+        "diagnostic_pairs": true,
+        "nuisance_pairs": true,
+        "no_collapse": true
+      },
+      "pass": true
+    },
+    {
+      "task": "multiple",
+      "seed": 123,
+      "clauses": {
+        "clean_floor": false,
+        "clean_penalty": false,
+        "competitive": false,
+        "added": true,
+        "diagnostic_pairs": false,
+        "nuisance_pairs": true,
+        "no_collapse": true
+      },
+      "pass": false
+    },
+    {
+      "task": "multiple",
+      "seed": 456,
+      "clauses": {
+        "clean_floor": false,
+        "clean_penalty": false,
+        "competitive": false,
+        "added": true,
+        "diagnostic_pairs": false,
+        "nuisance_pairs": false,
+        "no_collapse": true
+      },
+      "pass": false
+    },
+    {
+      "task": "multiple",
+      "seed": 789,
+      "clauses": {
+        "clean_floor": true,
+        "clean_penalty": true,
+        "competitive": true,
+        "added": true,
+        "diagnostic_pairs": true,
+        "nuisance_pairs": true,
+        "no_collapse": true
+      },
+      "pass": true
+    }
+  ]
+}

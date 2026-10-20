@@ -1,0 +1,26 @@
+{
+  "inputs": {
+    "robustness_summary.json": "1f024cd7df291e4fe88970d0a54718308210a67ecd142318e48c6339c701ad65",
+    "diagnostic_summary.json": "d0a4e5dd5bde0c944fdadfadbf537967c59a98a8bc8b77b7233e27f3907977ad",
+    "calibration_summary.json": "038a3e2f907b434c09837c66734dadadbc0869547bcc428cfbda72eb967dec34",
+    "evidence_summary.json": "f1eb0a0fdce070b5ecf572d54c9ed4be98fc0b00b514f5c93beeb6ab660b4d02",
+    "execution_receipt.json": "f4c8947ebad3dcc5480979a5b4b295d4cab7f23740e98665a91943c9036d76d4"
+  },
+  "figures": {
+    "01_clean_corrupted.png": "0790bc64f913ccd6a1c6a53527a05302c847c54aecc025e6a6225a212b32553f",
+    "02_strength.png": "7ccdf98d193c6e2384cc128e1e0f8051f2be92c0cf5e008f9a52cf8f324369cb",
+    "03_artifact_types.png": "b7dbddf73a5d9ef48cdb1b11b82ad8f10c683afda2d0628500f89a17f2be1676",
+    "04_class_recall.png": "f6234fcc9be6d16116264c1c4d8d70cbc31aedcc1ab9823ed885e8b79a895719",
+    "05_pareto.png": "4c592ecea7ad49ee12058d769363e8c3fa3fee897fd0870ace838b083ae3d693",
+    "06_calibration.png": "fd4be2531012253bbb425baac822eb7777d0c60fcd059ab3b5d104fb5b6bc8a5",
+    "07_incorrect_high_confidence.png": "7983d843520c0af9564c7df7ca93b9e0357fbedd693fbf952bc69863ae7773a8",
+    "08_candidate_drift.png": "9db2e948cde1190d69fb623f2a02c8be322c7fbf3f7e857c3997b66dae89fa93",
+    "09_localization.png": "243a0df702b397b703e5bde7cd569fc958d05f5528ab4aae40e5d701f31c61cb",
+    "10_oracle_pooling.png": "f65ee14279afdefa8618f135bbf94d88e729b321ceae127762aa6d7430549e8a",
+    "11_separability.png": "8cde13f26e1b8ca55aac3cd0de07ce2745bd945f5f478ec47991280d33b98760",
+    "12_intervention_effects.png": "9440b4330fcd459139e7dbfa2979a5aad8bae3a576ceb33e90a4eacdbc49124c",
+    "13_donor_rejection.png": "63ab281d3f434c935413e65ab143236890c96a7831510e37d1f7564f158fe51e",
+    "14_compute_parameters.png": "2d930b3475c823df05bb7632a8af19d039d4e8b6311bc6867819079ff4b33c4b"
+  },
+  "scope": "AGGREGATE_SYNTHETIC_ONLY"
+}

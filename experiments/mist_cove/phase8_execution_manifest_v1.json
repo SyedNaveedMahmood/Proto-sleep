@@ -1,0 +1,32 @@
+{
+  "version": "phase8-execution-manifest-v1",
+  "implementation_commit": "2bcfdff3a1b85b3016552f8ef53a13a755f3b2bd",
+  "confirmatory_freeze": {
+    "sha256": "211c0315aaec96293928508c2347bdc027f3c75a750decc48197fc3a760e90aa",
+    "inventory_sha256": "f6caad17131ad434d3ce9a8bf8aec4253efaaaf810e1e5098f39aee503e90747"
+  },
+  "private_receipts": {
+    "diagnostic_v2": "f4c6b07c3aac19da012eaec961c3812fe074dd437582462dbdffa809258b64ba",
+    "confirmatory_v1": "c8472e94d75e973d5fd96c53b9b9e575d6534309a5b0729e356a216a850cefc3"
+  },
+  "new_model_creation_sha256": {
+    "single_123_B1": "89d2a3eecc27c6c7f43abbddbc1cfc5b64e3bc9d44884e860c5b3b51facb5b1f",
+    "single_123_A1": "98e42fbb229d0a2681e855b77e421dcf3aa9e5236aafd60d4f7a26a1c9fdecbc",
+    "single_123_T1": "de1f9b2c3524a38e19379bb00f6e1146e4b46ef66b1ef272593355ca219d5d79",
+    "single_456_B1": "faade87aa24b24c68323450a22a03bbf5399bd05904043cd0959f6a200aad413",
+    "single_456_A1": "e63b25f3b5fab9405bb5a31ce05611c08043eadcf5b9f7783f3eaf38f5759859",
+    "single_456_T1": "4dc3f2804cd01d5f7805f3482bc9138f153b163b933013bac6aec376dc793663",
+    "single_789_B1": "05998cb45ed38ed82479d4c69de7cbbf0d037d5d779d84bb7e1362ff6ab50add",
+    "single_789_A1": "6ed1af6560687662cef5df7f7c0dfb5141057366541c0b8b3e59620201943abf",
+    "single_789_T1": "12a9c4f14cf742f3fb481dc6305f63a02efc4758367bbbb81342223c3f5c16c3",
+    "multiple_123_B1": "258ec17f980aae16785c11148de5382fa953eb9f41c7b64d7674051b735dc61f",
+    "multiple_123_A1": "eed7fd52a350aa486e290c494f092aec63a3c88f2c565bea8306d97945964156",
+    "multiple_123_T1": "ac59ceb858cb62ed1f2d8e1ff8bf5f6c6a82adf1909d9f6bd938794ecdd3765e",
+    "multiple_456_B1": "1d401d2b471e1c90884f0b653fb3574f7ae3622aa31429a3a776eb51715c7b88",
+    "multiple_456_A1": "c1e53e29d8adfa48d54d3d1ba0aeba518e1fce680ef4db004b68785c09bdc2ea",
+    "multiple_456_T1": "28a0dce4a0f89e1b332c50fc792d9124d7b868df44293b9fb6fcee0954566763",
+    "multiple_789_B1": "5aca75aa79974c6f9e2c7ab481005e790bf9383a1601a304c932a81023a5e843",
+    "multiple_789_A1": "abc8caa993e0fde9b25c7a2a8f3fe57d0d4952636049180c35efb28c29e060d1",
+    "multiple_789_T1": "b572a1002604bd72395ee3e1aa23e83dad97c82e828992dc6db63a3261a9b27e"
+  }
+}

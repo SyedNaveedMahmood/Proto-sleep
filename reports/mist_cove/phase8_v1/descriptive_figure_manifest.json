@@ -1,0 +1,11 @@
+{
+  "input_sha256": "083437ddf9814494fd979af97d7f2188c08c8d7f554f59e065b4c681d8e6d9c4",
+  "figures": {
+    "15_group_effect_quantiles.png": "a1d2ec94f80d87ee5f8fab6a1f90dfcf4e3ee389b0c11f08483bca8dd3e834c6",
+    "16_strength_localization.png": "8d614993813a0864556a81e220d5f7a3227be0c99e183929f052b1d2f875c2e9"
+  },
+  "private_synthetic_example_figures": 36,
+  "example_selection": "first generated draw per class plus first error, each task/seed primary B1",
+  "public_waveform_exports": 0,
+  "real_data_accessed": false
+}
