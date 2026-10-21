@@ -77,7 +77,7 @@ class SourceAccess:
     def require_record(self,record):
         role=record.get('split')
         if role not in ('train','val'):raise IntegrityError('unauthorized record before source access')
-        if not any(record is r for r in self.records(role)):raise IntegrityError('unissued or substituted record')
+        if not any(record is r for r in self.by_role.get(role,[])):raise IntegrityError('unissued or substituted record')
         validate_geometry(record)
 
     @contextmanager

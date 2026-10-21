@@ -1,0 +1,30 @@
+{
+  "status": "COMPLETE",
+  "completed": 750,
+  "primary_completed": 150,
+  "selection_sha256": "220e63611f8363aa5bd15eaff29b0e7179ed14cab3c2ab1ab0bc94a1d95d4500",
+  "source_access": {
+    "descriptor_files": 29,
+    "waveform_file_reads": 16,
+    "annotation_hash_reads": 16,
+    "waveform_bytes": 798652928,
+    "physical_epochs_decoded": 750,
+    "source_io_seconds": 1.3771796859982715
+  },
+  "resources": {
+    "cached_head_queries_including_prior_checks": 44371028,
+    "native_full_example_forwards": 4204,
+    "feature_cache_example_forwards": 1204,
+    "table_seconds": 385.3194349229834,
+    "compile_seconds": 40.79385174600429,
+    "native_seconds": 4.773494758992456,
+    "cache_seconds": 2.628774970977247,
+    "intervention_seconds": 0.12149098399459035,
+    "wall_seconds": 440.80973649399857,
+    "peak_RSS_KiB": 679988,
+    "optimizer_updates": 0,
+    "new_fits": 0,
+    "GPU_seconds": 0
+  },
+  "state_unchanged": true
+}

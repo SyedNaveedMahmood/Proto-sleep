@@ -1,0 +1,23 @@
+{
+  "allocation_sha256": "eaa379402186543b3fc23157fd9971132c4a01d16bf78fadd9f85d516c84e374",
+  "fit_participants": 10,
+  "internal_dev_participants": 5,
+  "seed": 123,
+  "historical_model_exposure": "All fifteen participants previously used by historical model; partition only controls new fitting",
+  "calibration": {
+    "temperature_fit": "bounded scalar NLL minimization on ten TRAIN fit participants",
+    "temperature_bounds": [
+      0.1,
+      10.0
+    ],
+    "abstention_fit": "fit-participant calibrated confidence quantiles",
+    "target_coverages": [
+      0.5,
+      0.8,
+      0.9,
+      0.95
+    ],
+    "test_role": "five internal TRAIN development participants",
+    "VAL_fit": false
+  }
+}

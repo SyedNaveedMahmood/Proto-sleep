@@ -187,13 +187,19 @@
       "dependencies": [
         "WP08"
       ],
-      "status": "IN PROGRESS",
+      "status": "COMPLETE",
       "code_configuration_identity": {
         "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "tests": [
+        "Two actual TRAIN epochs: bitwise native/full identity; both complete 32768-mask circuits verified"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase11b_v1/source_pilot.json"
+      ],
+      "findings": [
+        "Projected 1350-table CPU time 425.48 seconds; primary and extended audits fit frozen ceiling"
+      ],
       "limitations": [],
       "block_reason": null
     },
@@ -203,13 +209,17 @@
       "dependencies": [
         "WP09"
       ],
-      "status": "PENDING",
+      "status": "COMPLETE",
       "code_configuration_identity": {
         "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
       },
       "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "artifacts": [
+        "reports/mist_cove/phase11b_v1/sample_selection.json"
+      ],
+      "findings": [
+        "150 primary and 750 inclusive extended coordinates frozen before predictions; no missing strata"
+      ],
       "limitations": [],
       "block_reason": null
     },
@@ -219,7 +229,7 @@
       "dependencies": [
         "WP10"
       ],
-      "status": "PENDING",
+      "status": "IN PROGRESS",
       "code_configuration_identity": {
         "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
       },
@@ -265,7 +275,9 @@
       "id": "WP14",
       "title": "Controlled descriptive development-VAL audit",
       "dependencies": [
-        "WP13"
+        "WP13",
+        "WP29",
+        "WP31"
       ],
       "status": "PENDING",
       "code_configuration_identity": {
@@ -274,7 +286,9 @@
       "tests": [],
       "artifacts": [],
       "findings": [],
-      "limitations": [],
+      "limitations": [
+        "Deferred until TRAIN-only model decision and applicable training choices are frozen"
+      ],
       "block_reason": null
     },
     {
@@ -409,15 +423,23 @@
       "id": "WP23",
       "title": "Formalize the method",
       "dependencies": [
-        "WP22"
+        "WP06",
+        "WP08"
       ],
-      "status": "PENDING",
+      "status": "COMPLETE",
       "code_configuration_identity": {
         "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "tests": [
+        "9 generated TRIAD/control tests pass"
+      ],
+      "artifacts": [
+        "docs/mist_cove/PHASE_XII_MIST_TRIAD_METHOD_V1.md",
+        "src/mist_cove/phase11b/triad.py"
+      ],
+      "findings": [
+        "Signed clauses, fixed-target independent views and compatible waveform effects remain distinct"
+      ],
       "limitations": [],
       "block_reason": null
     },
