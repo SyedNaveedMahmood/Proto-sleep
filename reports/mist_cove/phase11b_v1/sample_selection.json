@@ -1,0 +1,18 @@
+{
+  "status": "FROZEN_BEFORE_PREDICTIONS",
+  "selection_sha256": "220e63611f8363aa5bd15eaff29b0e7179ed14cab3c2ab1ab0bc94a1d95d4500",
+  "primary_count": 150,
+  "extended_count": 750,
+  "missing_primary": 0,
+  "missing_extended": 0,
+  "source_access": {
+    "descriptor_files": 29,
+    "waveform_file_reads": 0,
+    "annotation_hash_reads": 0,
+    "waveform_bytes": 0,
+    "physical_epochs_decoded": 0,
+    "source_io_seconds": 0.0
+  },
+  "wall_seconds": 1.0853828830004204,
+  "waveforms_read": false
+}
