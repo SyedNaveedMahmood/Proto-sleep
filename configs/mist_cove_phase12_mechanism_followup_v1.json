@@ -1,0 +1,13 @@
+{
+  "status": "EXPLORATORY_TRAIN_ONLY_FROZEN_BEFORE_FOLLOWUP",
+  "trigger": "Primary audit accuracy 0.66 clean versus 0.30 under predefined whole-epoch strong high-frequency addition",
+  "question": "Does a single localized high-frequency addition also alter native predictions?",
+  "sample": "same frozen primary150; no reselection",
+  "atom": "extended canonical ordinal modulo15",
+  "operator": "35Hz sinusoid, amplitude3 times centered whole-epoch RMS, one200-sample atom, phase0",
+  "analysis": "prediction changes, accuracy difference, participant-cluster bootstrap",
+  "purpose": "Mechanism test for possible local reliability routing; not independent confirmation",
+  "max_additional_full_forwards": 150,
+  "new_neural_fits": 0,
+  "VAL_access": false
+}
