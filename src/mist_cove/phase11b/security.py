@@ -90,7 +90,10 @@ def restricted_load(snapshot):
         raise IntegrityError('authenticated immutable snapshot required')
     version=tuple(int(x) for x in torch.__version__.split('+')[0].split('.')[:3])
     if version<(2,10,0):raise LoadingBlocked('patched PyTorch >=2.10.0 required')
-    if torch.serialization.get_safe_globals():raise LoadingBlocked('custom serialization globals present')
+    # PyTorch imports can register optional classes themselves. Remove all user
+    # globals for this isolated, single-threaded operation and restore afterwards.
+    previous_globals=torch.serialization.get_safe_globals()
+    torch.serialization.clear_safe_globals()
     try:
         with zipfile.ZipFile(io.BytesIO(snapshot.data)) as archive:
             entries=archive.infolist();names=[e.filename for e in entries]
@@ -108,4 +111,7 @@ def restricted_load(snapshot):
     except Exception as error:
         # Never export exception strings containing private state or paths.
         raise LoadingBlocked('restricted parsing rejected: '+type(error).__name__) from None
+    finally:
+        torch.serialization.clear_safe_globals()
+        torch.serialization.add_safe_globals(previous_globals)
     return payload
