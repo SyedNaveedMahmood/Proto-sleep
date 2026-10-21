@@ -1,0 +1,591 @@
+{
+  "version": "phase11b-execution-ledger-v1",
+  "base_commit": "2f21e4436ac4288c2e53a5704b3b0f0a4d871865",
+  "authorization_text_sha256": "2882a656c18d826238545abf1e45b8376e1c1e498a6556eb7953ca00df7ea6f8",
+  "work_packages": [
+    {
+      "id": "WP01",
+      "title": "Repository integrity and research inheritance",
+      "dependencies": [],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+      },
+      "tests": [
+        "Clean base and remote branch match exact user-pinned commit; fetched origin; new branch created from that commit"
+      ],
+      "artifacts": [
+        "configs/mist_cove_phase11b_v1.json"
+      ],
+      "findings": [
+        "Historical files unchanged; new authorization supersedes previous phase access prohibitions only inside its explicit gates"
+      ],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP02",
+      "title": "Consolidated scientific failure map",
+      "dependencies": [
+        "WP01"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+      },
+      "tests": [],
+      "artifacts": [
+        "docs/mist_cove/PHASE_XIB_EXECUTION_FOUNDATION_V1.md"
+      ],
+      "findings": [
+        "Ten failure domains mapped; historical negatives retained; real hypotheses distinguished from observations"
+      ],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP03",
+      "title": "Secure checkpoint loading design",
+      "dependencies": [
+        "WP02"
+      ],
+      "status": "IN PROGRESS",
+      "code_configuration_identity": {
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP04",
+      "title": "Validate original named model state",
+      "dependencies": [
+        "WP03"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP05",
+      "title": "Complete remaining TRAIN-lineage checks",
+      "dependencies": [
+        "WP04"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP06",
+      "title": "Trained-model Phase X adapter verification",
+      "dependencies": [
+        "WP05"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP07",
+      "title": "Restricted data-loader and role verification",
+      "dependencies": [
+        "WP06"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP08",
+      "title": "Freeze the real-data research protocol",
+      "dependencies": [
+        "WP07"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP09",
+      "title": "Two-epoch actual TRAIN resource pilot",
+      "dependencies": [
+        "WP08"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP10",
+      "title": "Freeze the initial real-EEG audit sample",
+      "dependencies": [
+        "WP09"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP11",
+      "title": "Run the complete 150-epoch original-model audit",
+      "dependencies": [
+        "WP10"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP12",
+      "title": "Extended TRAIN audit",
+      "dependencies": [
+        "WP11"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP13",
+      "title": "Broader original TRAIN prediction audit",
+      "dependencies": [
+        "WP12"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP14",
+      "title": "Controlled descriptive development-VAL audit",
+      "dependencies": [
+        "WP13"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP15",
+      "title": "Real signal quality and confounding audit",
+      "dependencies": [
+        "WP14"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP16",
+      "title": "Quantify what makes N1 and other difficult stages fail",
+      "dependencies": [
+        "WP15"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP17",
+      "title": "Audit dependence on global versus local features",
+      "dependencies": [
+        "WP16"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP18",
+      "title": "Run real-data MIST-WIC circuits",
+      "dependencies": [
+        "WP17"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP19",
+      "title": "Compare explanation methods fairly",
+      "dependencies": [
+        "WP18"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP20",
+      "title": "Evaluate explanations of correct versus incorrect predictions",
+      "dependencies": [
+        "WP19"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP21",
+      "title": "Assess explanation sensitivity to the operator",
+      "dependencies": [
+        "WP20"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP22",
+      "title": "Evaluate confidence, information loss and abstention",
+      "dependencies": [
+        "WP21"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP23",
+      "title": "Formalize the method",
+      "dependencies": [
+        "WP22"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP24",
+      "title": "Develop realistic-within-scope waveform interventions",
+      "dependencies": [
+        "WP23"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP25",
+      "title": "Build an intervention validity ledger",
+      "dependencies": [
+        "WP24"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP26",
+      "title": "Construct witness-triangulation graphs",
+      "dependencies": [
+        "WP25"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP27",
+      "title": "Identify explanation failure mechanisms",
+      "dependencies": [
+        "WP26"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP28",
+      "title": "Statistical robustness and generalization analysis",
+      "dependencies": [
+        "WP27"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP29",
+      "title": "Make the model-development go/no-go decision",
+      "dependencies": [
+        "WP28"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP30",
+      "title": "Design one compact evidence-aware architecture",
+      "dependencies": [
+        "WP29"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP31",
+      "title": "Establish matched training controls",
+      "dependencies": [
+        "WP30"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP32",
+      "title": "Run bounded real TRAIN-only experiments",
+      "dependencies": [
+        "WP31"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP33",
+      "title": "Evaluate clean classification and reliability",
+      "dependencies": [
+        "WP32"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP34",
+      "title": "Evaluate explanation quality and robustness",
+      "dependencies": [
+        "WP33"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP35",
+      "title": "Comprehensive correctness and security testing",
+      "dependencies": [
+        "WP34"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP36",
+      "title": "Final scientific package and GitHub delivery",
+      "dependencies": [
+        "WP35"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    }
+  ]
+}
