@@ -1,0 +1,51 @@
+{
+  "status": "COMPLETE",
+  "fits": 9,
+  "optimizer_updates": 2700,
+  "full_example_forwards": 122400,
+  "paired": [
+    {
+      "seed": 123,
+      "M2_minus_M1": {
+        "clean": 0.011363867092081259,
+        "local_hf": 0.012912746025935451,
+        "strong_hf": 0.02218277683221498,
+        "mild_hf": 0.011396540933046984
+      },
+      "primary_gate": false
+    },
+    {
+      "seed": 456,
+      "M2_minus_M1": {
+        "clean": -0.026320688611249032,
+        "local_hf": -0.024732068738219648,
+        "strong_hf": -0.02003883596450695,
+        "mild_hf": -0.025331887515973872
+      },
+      "primary_gate": false
+    },
+    {
+      "seed": 789,
+      "M2_minus_M1": {
+        "clean": -0.0033878168561805033,
+        "local_hf": 0.0076187957320540955,
+        "strong_hf": 0.005717693883670605,
+        "mild_hf": -0.0043457954183377945
+      },
+      "primary_gate": false
+    }
+  ],
+  "all_seed_primary_gate": false,
+  "mean_delta": {
+    "clean": -0.006114879458449425,
+    "local_hf": -0.0014001756600767006,
+    "strong_hf": 0.0026205449171262107,
+    "mild_hf": -0.006093714000421561
+  },
+  "wall_seconds": 13.746837994996895,
+  "GPU_seconds": 0,
+  "peak_RSS_KiB": 487368,
+  "final_all15_fit": "NOT_RUN_NO_SLOT_RESERVED",
+  "no_M3": true,
+  "holdout_selection_exposure": "TRAIN-only mechanism discovery includes all fifteen historical TRAIN people; prospective training holdout is not independent scientific replication"
+}

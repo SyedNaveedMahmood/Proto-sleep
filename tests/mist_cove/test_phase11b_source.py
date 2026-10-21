@@ -14,6 +14,12 @@ def test_missing_adapter_gate_blocks_access():
     with pytest.raises(IntegrityError):SourceAccess({}, {}, {'status':'PASS'})
 
 
+def test_unissued_approved_role_record_rejected_without_descriptor_access(monkeypatch):
+    access=SourceAccess({}, {}, {'status':'PASS','state_unchanged':True})
+    monkeypatch.setattr(access,'records',lambda role:pytest.fail('unissued record caused descriptor read'))
+    with pytest.raises(IntegrityError,match='unissued'):access.require_record({'split':'val'})
+
+
 def test_sealed_memory_snapshot_is_readonly():
     import os
     with sealed_memfile(b'generated') as path:
