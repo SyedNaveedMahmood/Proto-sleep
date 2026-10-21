@@ -1,0 +1,11 @@
+{
+  "domain": "GENERATED_ONLY_ENGINEERING_PILOT",
+  "updates": 20,
+  "wall_seconds": 0.09313900699999067,
+  "projected_2700_training_updates_seconds": 12.57376594499874,
+  "GPU_allocated": false,
+  "parameters": {
+    "M0": 1029,
+    "M1_M2": 1078
+  }
+}
