@@ -1,0 +1,28 @@
+# Phase XI-C real EEG results v1
+
+The original model is competent on its historically fitted TRAIN grid but has substantial stage-specific and confidence failures. High overall accuracy is dominated by Wake prevalence; it does not imply reliable N1 recognition, stable explanations or external generalization.
+
+| Sample | Scored epochs | Accuracy | Pooled fixed-five F1 | Mean participant F1 | N1 recall |
+|---|---:|---:|---:|---:|---:|
+| Original TRAIN, in-sample |79,025|.947700|.824579|.815992|.504386|
+| Reused development-VAL |21,789|.905457|.745354|.721514|.326733|
+| Primary stage-balanced early epochs |150|.660000|.659862|.614032|.566667|
+| Extended early epochs, includes primary |750|.746667|.747092|see aggregate receipt|see aggregate receipt|
+
+Complete physical-grid counts are79,984 TRAIN and21,796 development-VAL, retaining959 and7 unscored positions respectively. The primary and extended lists were frozen before predictions, with no missing strata, replacement of difficult examples or incomplete circuits. Their deliberately balanced, early-stage sampling is not a whole-night prevalence estimate. The large difference between primary/extended and full-grid scores demonstrates sensitivity to the selection policy; the nested extension is not independent replication.
+
+Development-VAL was opened after the model decision, candidate, losses and endpoints were committed. Its confusion matrix and mean participant F1 exactly reproduce the historical P3B seed123 aggregate. The four participants were repeatedly used in historical model selection. The new mean-participant F1 descriptive bootstrap interval is[.622957,.793995], with worst participant F1 .588904. This small, reused cohort is not untouched, external or clinical validation.
+
+On full TRAIN, N1 F1 is.486486 and recall.504386; REM recall is.791436. On development-VAL, N1 F1 is.378585 and recall.326733, while REM recall is.690964. The primary sample has18/30 N3 epochs classified N2 and10/30 REM epochs classified N2. These are observed confusions. Stage annotations alone cannot separate physiological ambiguity, annotation error, absent local morphology and representation failure. The [stage taxonomy](../../reports/mist_cove/phase11b_v1/mechanistic_details.json) retains full-stage denominators, scored transitions within the same recording, confidence failures, and within-stage participant-clustered quality associations.
+
+Quality diagnostics measured absolute amplitude, centered RMS, DC, low/high-frequency power, broadband step RMS, flatness, large transients and within-epoch RMS extremes. Both unconditional and stage-conditioned error associations are published. Original night boundaries were preserved, and transition calculations never cross recordings. These correlations do not identify artifacts or establish causality. Absolute amplitude can encode stage information. Fixed gain and normalization mis-specification probes are sensitivity checks; the historical normalization was never refitted for the original model.
+
+Confidence is often excessive under error. Full TRAIN contains433 wrong predictions with confidence≥.9; development-VAL contains756, representing36.7% of its errors. TRAIN NLL/Brier/ECE15 are.137602/.073925/.003004; development-VAL values are.398033/.145028/.041106. Aggregate ECE is affected by the dominant Wake distribution and must not conceal stage failures. The balanced primary audit has ECE15 .174248.
+
+A scalar temperature and confidence-quantile rules were fitted only on the committed ten-participant TRAIN fit group, then evaluated on the five other TRAIN participants. The original model had previously trained on all fifteen, so this does not create an independent holdout for that model. Temperature fitting did not improve internal-dev calibration: NLL .176028→.176146, ECE15 .005957→.006213. At target fit coverage.8, actual internal-dev coverage was.744931 and retained error rate.003205. At target.5, zero observed errors came at only.401349 coverage. These are development risk/coverage observations, not safety guarantees.
+
+Complete internal withholding yields mean confidence.738920 despite zero available waveform features. It changes123/150 original predictions. Global-only feature states average confidence.721804 and change113/150 predictions; local-only states average.795619 and change31/150. Greedy canonical and exact-positive retained states preserve their fixed target but have different confidence distributions. Artificial feature states are not physical EEG. Missing information does not reliably produce uniform uncertainty.
+
+Historical adverse findings remain unchanged: Phase III analytic local models underperformed raw_context; Phase VI–VIII robustness/donor gates failed; Phase IX additive superiority, C2 incremental consistency robustness and fixed-witness stability were unsupported. The current real-source investigation explains some weaknesses but does not reverse those results.
+
+Data access was limited to the approved fifteen TRAIN and four development-VAL participants. No RESERVED, Sleep-Telemetry, SHHS, external cohort, legacy trimmed NPZ, unapproved donor bank or target adaptation was accessed. No EEG or derived private prediction arrays were uploaded. [Classification figures and dashboard](../../reports/mist_cove/phase11b_v1/DASHBOARD.md), [TRAIN metrics](../../reports/mist_cove/phase11b_v1/train_descriptive_metrics.json), [development-VAL metrics](../../reports/mist_cove/phase11b_v1/val_descriptive_metrics.json), [calibration](../../reports/mist_cove/phase11b_v1/calibration_metrics.json) and [information-loss audit](../../reports/mist_cove/phase11b_v1/information_loss_metrics.json) contain the safe aggregate evidence.

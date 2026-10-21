@@ -1,0 +1,18 @@
+{
+  "CPU": {
+    "passed": 1076,
+    "skipped": 11,
+    "failures": 0,
+    "errors": 0,
+    "wall_seconds": 18.35111451299599,
+    "torch": "2.10.0+cpu",
+    "baseline_passed": 1022,
+    "new_passed": 54
+  },
+  "CUDA": {
+    "status": "NOT_RUN",
+    "reason": "Occupancy probe19percent utilization; patched CPU environment used; no GPU process interrupted"
+  },
+  "historical_CPU_CI_job": "preserved",
+  "added_CI_job": "patched-loader-tests: generated artifacts only on torch2.10.0+cpu"
+}

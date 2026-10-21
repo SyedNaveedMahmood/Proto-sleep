@@ -9,7 +9,11 @@
       "dependencies": [],
       "status": "COMPLETE",
       "code_configuration_identity": {
-        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e",
+        "final_source_tree_sha256": "08dd055dd148f72e503c3319fb8b6174ded5fb9eaee75f9f34225cc6cc857d9f",
+        "implementation_milestone_commits": [
+          "0da0f07"
+        ]
       },
       "tests": [
         "Clean base and remote branch match exact user-pinned commit; fetched origin; new branch created from that commit"
@@ -31,7 +35,11 @@
       ],
       "status": "COMPLETE",
       "code_configuration_identity": {
-        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e",
+        "final_source_tree_sha256": "08dd055dd148f72e503c3319fb8b6174ded5fb9eaee75f9f34225cc6cc857d9f",
+        "implementation_milestone_commits": [
+          "0da0f07"
+        ]
       },
       "tests": [],
       "artifacts": [
@@ -51,7 +59,11 @@
       ],
       "status": "COMPLETE",
       "code_configuration_identity": {
-        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e",
+        "final_source_tree_sha256": "08dd055dd148f72e503c3319fb8b6174ded5fb9eaee75f9f34225cc6cc857d9f",
+        "implementation_milestone_commits": [
+          "e71325a"
+        ]
       },
       "tests": [
         "9 generated security tests pass; actual authenticated model/lineage receipt passes"
@@ -75,7 +87,11 @@
       ],
       "status": "COMPLETE",
       "code_configuration_identity": {
-        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e",
+        "final_source_tree_sha256": "08dd055dd148f72e503c3319fb8b6174ded5fb9eaee75f9f34225cc6cc857d9f",
+        "implementation_milestone_commits": [
+          "e71325a"
+        ]
       },
       "tests": [
         "9 generated security tests pass; actual authenticated model/lineage receipt passes"
@@ -97,9 +113,13 @@
       "dependencies": [
         "WP04"
       ],
-      "status": "COMPLETE",
+      "status": "COMPLETE_WITH_LIMITATIONS",
       "code_configuration_identity": {
-        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e",
+        "final_source_tree_sha256": "08dd055dd148f72e503c3319fb8b6174ded5fb9eaee75f9f34225cc6cc857d9f",
+        "implementation_milestone_commits": [
+          "95fea8c"
+        ]
       },
       "tests": [
         "9 generated security tests pass; actual authenticated model/lineage receipt passes"
@@ -111,7 +131,7 @@
         "Original root/run fingerprints reconstructed; embedded bank and TRAIN normalization bind to frozen source references"
       ],
       "limitations": [
-        "No independent historical signing/time attestation; source crop comparison not yet performed"
+        "P3A reuse remains a root-bound receipt assertion; independent creation/signing/time and full training replay unestablished"
       ],
       "block_reason": null
     },
@@ -123,7 +143,11 @@
       ],
       "status": "COMPLETE",
       "code_configuration_identity": {
-        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e",
+        "final_source_tree_sha256": "08dd055dd148f72e503c3319fb8b6174ded5fb9eaee75f9f34225cc6cc857d9f",
+        "implementation_milestone_commits": [
+          "95fea8c"
+        ]
       },
       "tests": [
         "Bitwise full features/logits;84 noninterference cases;65536 complete table rows verified"
@@ -145,13 +169,18 @@
       ],
       "status": "COMPLETE",
       "code_configuration_identity": {
-        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e",
+        "final_source_tree_sha256": "08dd055dd148f72e503c3319fb8b6174ded5fb9eaee75f9f34225cc6cc857d9f",
+        "implementation_milestone_commits": [
+          "0c979e5",
+          "da56131"
+        ]
       },
       "tests": [
         "18 security/source unit cases pass;role rejection before descriptor access;sealed memory mutation rejected"
       ],
       "artifacts": [
-        "src/mist_cove/phase11b/source.py"
+        "reports/mist_cove/phase11b_v1/source_authorization_contract.json"
       ],
       "findings": [
         "Inherited load_development executes against authenticated immutable descriptor bytes; EDF decoder uses sealed RAM snapshot"
@@ -169,7 +198,11 @@
       ],
       "status": "COMPLETE",
       "code_configuration_identity": {
-        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e",
+        "final_source_tree_sha256": "08dd055dd148f72e503c3319fb8b6174ded5fb9eaee75f9f34225cc6cc857d9f",
+        "implementation_milestone_commits": [
+          "0c979e5"
+        ]
       },
       "tests": [],
       "artifacts": [
@@ -189,7 +222,11 @@
       ],
       "status": "COMPLETE",
       "code_configuration_identity": {
-        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e",
+        "final_source_tree_sha256": "08dd055dd148f72e503c3319fb8b6174ded5fb9eaee75f9f34225cc6cc857d9f",
+        "implementation_milestone_commits": [
+          "0af4858"
+        ]
       },
       "tests": [
         "Two actual TRAIN epochs: bitwise native/full identity; both complete 32768-mask circuits verified"
@@ -211,7 +248,11 @@
       ],
       "status": "COMPLETE",
       "code_configuration_identity": {
-        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e",
+        "final_source_tree_sha256": "08dd055dd148f72e503c3319fb8b6174ded5fb9eaee75f9f34225cc6cc857d9f",
+        "implementation_milestone_commits": [
+          "0af4858"
+        ]
       },
       "tests": [],
       "artifacts": [
@@ -229,13 +270,23 @@
       "dependencies": [
         "WP10"
       ],
-      "status": "IN PROGRESS",
+      "status": "COMPLETE",
       "code_configuration_identity": {
-        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e",
+        "final_source_tree_sha256": "08dd055dd148f72e503c3319fb8b6174ded5fb9eaee75f9f34225cc6cc857d9f",
+        "implementation_milestone_commits": [
+          "d70b039"
+        ]
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "tests": [
+        "Full1076-test CPU suite passes; relevant actual-model checks and fixed-denominator receipts linked"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase11b_v1/circuit_metrics.json"
+      ],
+      "findings": [
+        "150 primary cases complete; all wrong predictions retained"
+      ],
       "limitations": [],
       "block_reason": null
     },
@@ -245,14 +296,26 @@
       "dependencies": [
         "WP11"
       ],
-      "status": "PENDING",
+      "status": "COMPLETE_WITH_LIMITATIONS",
       "code_configuration_identity": {
-        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e",
+        "final_source_tree_sha256": "08dd055dd148f72e503c3319fb8b6174ded5fb9eaee75f9f34225cc6cc857d9f",
+        "implementation_milestone_commits": [
+          "d70b039"
+        ]
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "Full1076-test CPU suite passes; relevant actual-model checks and fixed-denominator receipts linked"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase11b_v1/circuit_metrics.json"
+      ],
+      "findings": [
+        "750 nested extended cases complete; no independent replication claim"
+      ],
+      "limitations": [
+        "Nested early-epoch selection; not prevalence or external sample"
+      ],
       "block_reason": null
     },
     {
@@ -261,13 +324,23 @@
       "dependencies": [
         "WP12"
       ],
-      "status": "PENDING",
+      "status": "COMPLETE",
       "code_configuration_identity": {
-        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e",
+        "final_source_tree_sha256": "08dd055dd148f72e503c3319fb8b6174ded5fb9eaee75f9f34225cc6cc857d9f",
+        "implementation_milestone_commits": [
+          "da56131"
+        ]
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "tests": [
+        "Full1076-test CPU suite passes; relevant actual-model checks and fixed-denominator receipts linked"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase11b_v1/train_descriptive_metrics.json"
+      ],
+      "findings": [
+        "79984 physical/79025 scored; in-sample macroF1 .824579"
+      ],
       "limitations": [],
       "block_reason": null
     },
@@ -279,15 +352,26 @@
         "WP29",
         "WP31"
       ],
-      "status": "PENDING",
+      "status": "COMPLETE_WITH_LIMITATIONS",
       "code_configuration_identity": {
-        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e",
+        "final_source_tree_sha256": "08dd055dd148f72e503c3319fb8b6174ded5fb9eaee75f9f34225cc6cc857d9f",
+        "implementation_milestone_commits": [
+          "3135627"
+        ]
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "tests": [
+        "Full1076-test CPU suite passes; relevant actual-model checks and fixed-denominator receipts linked"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase11b_v1/val_descriptive_metrics.json",
+        "reports/mist_cove/phase11b_v1/historical_reproduction.json"
+      ],
+      "findings": [
+        "21796 physical/21789 scored; exact historical mean-participant F1 reproduction .7215141151347595"
+      ],
       "limitations": [
-        "Deferred until TRAIN-only model decision and applicable training choices are frozen"
+        "Four repeatedly reused development-VAL participants; no independent validation"
       ],
       "block_reason": null
     },
@@ -295,16 +379,27 @@
       "id": "WP15",
       "title": "Real signal quality and confounding audit",
       "dependencies": [
-        "WP14"
+        "WP13",
+        "WP11"
       ],
-      "status": "PENDING",
+      "status": "COMPLETE_WITH_LIMITATIONS",
       "code_configuration_identity": {
-        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e",
+        "final_source_tree_sha256": "08dd055dd148f72e503c3319fb8b6174ded5fb9eaee75f9f34225cc6cc857d9f"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "Full1076-test CPU suite passes; relevant actual-model checks and fixed-denominator receipts linked"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase11b_v1/mechanistic_details.json",
+        "reports/mist_cove/phase11b_v1/information_loss_metrics.json"
+      ],
+      "findings": [
+        "Stage-conditioned quality associations and fixed normalization sensitivities; no causal artifact diagnosis"
+      ],
+      "limitations": [
+        "Signal-quality correlations do not identify clinical artifacts"
+      ],
       "block_reason": null
     },
     {
@@ -313,14 +408,23 @@
       "dependencies": [
         "WP15"
       ],
-      "status": "PENDING",
+      "status": "COMPLETE_WITH_LIMITATIONS",
       "code_configuration_identity": {
-        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e",
+        "final_source_tree_sha256": "08dd055dd148f72e503c3319fb8b6174ded5fb9eaee75f9f34225cc6cc857d9f"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "Full1076-test CPU suite passes; relevant actual-model checks and fixed-denominator receipts linked"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase11b_v1/mechanistic_details.json"
+      ],
+      "findings": [
+        "N1/REM and N2-N3 confusion quantified; physiological ambiguity cannot be separated from label/model error"
+      ],
+      "limitations": [
+        "No independently annotated diagnostic events or ambiguity labels"
+      ],
       "block_reason": null
     },
     {
@@ -329,13 +433,23 @@
       "dependencies": [
         "WP16"
       ],
-      "status": "PENDING",
+      "status": "COMPLETE",
       "code_configuration_identity": {
-        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e",
+        "final_source_tree_sha256": "08dd055dd148f72e503c3319fb8b6174ded5fb9eaee75f9f34225cc6cc857d9f",
+        "implementation_milestone_commits": [
+          "d70b039"
+        ]
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "tests": [
+        "Full1076-test CPU suite passes; relevant actual-model checks and fixed-denominator receipts linked"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase11b_v1/circuit_metrics.json"
+      ],
+      "findings": [
+        "Local-only stable119/150; global-only37/150; global suppression changes31/150"
+      ],
       "limitations": [],
       "block_reason": null
     },
@@ -345,13 +459,24 @@
       "dependencies": [
         "WP17"
       ],
-      "status": "PENDING",
+      "status": "COMPLETE",
       "code_configuration_identity": {
-        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e",
+        "final_source_tree_sha256": "08dd055dd148f72e503c3319fb8b6174ded5fb9eaee75f9f34225cc6cc857d9f",
+        "implementation_milestone_commits": [
+          "d70b039"
+        ]
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "tests": [
+        "Full1076-test CPU suite passes; relevant actual-model checks and fixed-denominator receipts linked"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase11b_v1/circuit_metrics.json",
+        "reports/mist_cove/phase11b_v1/audit_execution.json"
+      ],
+      "findings": [
+        "All1350 real tables exactly verified;139/150 primary nonmonotone;100 exact compact positive supports"
+      ],
       "limitations": [],
       "block_reason": null
     },
@@ -361,14 +486,27 @@
       "dependencies": [
         "WP18"
       ],
-      "status": "PENDING",
+      "status": "COMPLETE_WITH_LIMITATIONS",
       "code_configuration_identity": {
-        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e",
+        "final_source_tree_sha256": "08dd055dd148f72e503c3319fb8b6174ded5fb9eaee75f9f34225cc6cc857d9f",
+        "implementation_milestone_commits": [
+          "d70b039",
+          "9b66e35"
+        ]
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "Full1076-test CPU suite passes; relevant actual-model checks and fixed-denominator receipts linked"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase11b_v1/triad_metrics.json"
+      ],
+      "findings": [
+        "Native/gradient/greedy/positive/signed/random comparisons complete; signed bounded summary coverage below positive-only"
+      ],
+      "limitations": [
+        "External published time-series implementation NOT_TESTED; no superiority claim"
+      ],
       "block_reason": null
     },
     {
@@ -377,13 +515,24 @@
       "dependencies": [
         "WP19"
       ],
-      "status": "PENDING",
+      "status": "COMPLETE",
       "code_configuration_identity": {
-        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e",
+        "final_source_tree_sha256": "08dd055dd148f72e503c3319fb8b6174ded5fb9eaee75f9f34225cc6cc857d9f",
+        "implementation_milestone_commits": [
+          "d70b039",
+          "9b66e35"
+        ]
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "tests": [
+        "Full1076-test CPU suite passes; relevant actual-model checks and fixed-denominator receipts linked"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase11b_v1/circuit_metrics.json"
+      ],
+      "findings": [
+        "58/99 correct and28/51 incorrect compact active summaries; clustered difference interval crosses zero"
+      ],
       "limitations": [],
       "block_reason": null
     },
@@ -393,13 +542,23 @@
       "dependencies": [
         "WP20"
       ],
-      "status": "PENDING",
+      "status": "COMPLETE",
       "code_configuration_identity": {
-        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e",
+        "final_source_tree_sha256": "08dd055dd148f72e503c3319fb8b6174ded5fb9eaee75f9f34225cc6cc857d9f",
+        "implementation_milestone_commits": [
+          "d70b039"
+        ]
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "tests": [
+        "Full1076-test CPU suite passes; relevant actual-model checks and fixed-denominator receipts linked"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase11b_v1/triad_metrics.json"
+      ],
+      "findings": [
+        "Zero/.01 table sensitivity in140/150; both operators retained"
+      ],
       "limitations": [],
       "block_reason": null
     },
@@ -409,13 +568,25 @@
       "dependencies": [
         "WP21"
       ],
-      "status": "PENDING",
+      "status": "COMPLETE",
       "code_configuration_identity": {
-        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e",
+        "final_source_tree_sha256": "08dd055dd148f72e503c3319fb8b6174ded5fb9eaee75f9f34225cc6cc857d9f",
+        "implementation_milestone_commits": [
+          "9b66e35",
+          "f145994"
+        ]
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "tests": [
+        "Full1076-test CPU suite passes; relevant actual-model checks and fixed-denominator receipts linked"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase11b_v1/calibration_metrics.json",
+        "reports/mist_cove/phase11b_v1/information_loss_metrics.json"
+      ],
+      "findings": [
+        "Empty-state confidence .738920; temperature did not improve internal-dev NLL/ECE; rejection trades coverage"
+      ],
       "limitations": [],
       "block_reason": null
     },
@@ -428,14 +599,17 @@
       ],
       "status": "COMPLETE",
       "code_configuration_identity": {
-        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e",
+        "final_source_tree_sha256": "08dd055dd148f72e503c3319fb8b6174ded5fb9eaee75f9f34225cc6cc857d9f",
+        "implementation_milestone_commits": [
+          "d70b039"
+        ]
       },
       "tests": [
-        "9 generated TRIAD/control tests pass"
+        "Full1076-test CPU suite passes; relevant actual-model checks and fixed-denominator receipts linked"
       ],
       "artifacts": [
-        "docs/mist_cove/PHASE_XII_MIST_TRIAD_METHOD_V1.md",
-        "src/mist_cove/phase11b/triad.py"
+        "docs/mist_cove/PHASE_XII_MIST_TRIAD_METHOD_V1.md"
       ],
       "findings": [
         "Signed clauses, fixed-target independent views and compatible waveform effects remain distinct"
@@ -449,14 +623,27 @@
       "dependencies": [
         "WP23"
       ],
-      "status": "PENDING",
+      "status": "COMPLETE_WITH_LIMITATIONS",
       "code_configuration_identity": {
-        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e",
+        "final_source_tree_sha256": "08dd055dd148f72e503c3319fb8b6174ded5fb9eaee75f9f34225cc6cc857d9f",
+        "implementation_milestone_commits": [
+          "d70b039",
+          "9b66e35"
+        ]
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "Full1076-test CPU suite passes; relevant actual-model checks and fixed-denominator receipts linked"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase11b_v1/triad_metrics.json"
+      ],
+      "findings": [
+        "Eight fixed whole-epoch probes and2250 bridge attempts; localized follow-up separately frozen"
+      ],
+      "limitations": [
+        "Original labels may not remain valid after waveform modification"
+      ],
       "block_reason": null
     },
     {
@@ -465,14 +652,26 @@
       "dependencies": [
         "WP24"
       ],
-      "status": "PENDING",
+      "status": "COMPLETE_WITH_LIMITATIONS",
       "code_configuration_identity": {
-        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e",
+        "final_source_tree_sha256": "08dd055dd148f72e503c3319fb8b6174ded5fb9eaee75f9f34225cc6cc857d9f",
+        "implementation_milestone_commits": [
+          "d70b039"
+        ]
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "Full1076-test CPU suite passes; relevant actual-model checks and fixed-denominator receipts linked"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase11b_v1/triad_metrics.json"
+      ],
+      "findings": [
+        "33/2250 compatible bridges;2250 background requests have no eligible donor; no guards weakened"
+      ],
+      "limitations": [
+        "Background conditional effects NOT_TESTED; compatibility guards are not physiological validity"
+      ],
       "block_reason": null
     },
     {
@@ -481,13 +680,25 @@
       "dependencies": [
         "WP25"
       ],
-      "status": "PENDING",
+      "status": "COMPLETE",
       "code_configuration_identity": {
-        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e",
+        "final_source_tree_sha256": "08dd055dd148f72e503c3319fb8b6174ded5fb9eaee75f9f34225cc6cc857d9f",
+        "implementation_milestone_commits": [
+          "d70b039",
+          "0601b89"
+        ]
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "tests": [
+        "Full1076-test CPU suite passes; relevant actual-model checks and fixed-denominator receipts linked"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase11b_v1/triad_metrics.json",
+        "reports/mist_cove/phase11b_v1/new_model_operator_audit.json"
+      ],
+      "findings": [
+        "Typed structural, waveform, stability and disagreement graphs private;2/33 original compatible comparisons disagree"
+      ],
       "limitations": [],
       "block_reason": null
     },
@@ -497,13 +708,23 @@
       "dependencies": [
         "WP26"
       ],
-      "status": "PENDING",
+      "status": "COMPLETE",
       "code_configuration_identity": {
-        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e",
+        "final_source_tree_sha256": "08dd055dd148f72e503c3319fb8b6174ded5fb9eaee75f9f34225cc6cc857d9f",
+        "implementation_milestone_commits": [
+          "9b66e35"
+        ]
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "tests": [
+        "Full1076-test CPU suite passes; relevant actual-model checks and fixed-denominator receipts linked"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase11b_v1/failure_mechanisms.json"
+      ],
+      "findings": [
+        "Overlapping failure counts and first canonical private examples retained"
+      ],
       "limitations": [],
       "block_reason": null
     },
@@ -513,14 +734,24 @@
       "dependencies": [
         "WP27"
       ],
-      "status": "PENDING",
+      "status": "COMPLETE_WITH_LIMITATIONS",
       "code_configuration_identity": {
-        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e",
+        "final_source_tree_sha256": "08dd055dd148f72e503c3319fb8b6174ded5fb9eaee75f9f34225cc6cc857d9f"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "Full1076-test CPU suite passes; relevant actual-model checks and fixed-denominator receipts linked"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase11b_v1/model_paired_uncertainty.json",
+        "reports/mist_cove/phase11b_v1/mechanistic_details.json"
+      ],
+      "findings": [
+        "Participant bootstrap1000, paired views/seeds retained; four VAL subjects limit inference"
+      ],
+      "limitations": [
+        "Only15 TRAIN/four reused VAL; new optimization holdout was included in mechanism discovery"
+      ],
       "block_reason": null
     },
     {
@@ -529,13 +760,24 @@
       "dependencies": [
         "WP28"
       ],
-      "status": "PENDING",
+      "status": "COMPLETE",
       "code_configuration_identity": {
-        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e",
+        "final_source_tree_sha256": "08dd055dd148f72e503c3319fb8b6174ded5fb9eaee75f9f34225cc6cc857d9f",
+        "implementation_milestone_commits": [
+          "3135627"
+        ]
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "tests": [
+        "Matched streams verified across all arms; exact additive accounting; all seeded results preserved"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase11b_v1/model_development_decision.json",
+        "reports/mist_cove/phase11b_v1/scientific_gates.json"
+      ],
+      "findings": [
+        "GO for bounded test from observed local-noise failure; final NO_GO for promotion after failed primary gate"
+      ],
       "limitations": [],
       "block_reason": null
     },
@@ -545,13 +787,23 @@
       "dependencies": [
         "WP29"
       ],
-      "status": "PENDING",
+      "status": "COMPLETE",
       "code_configuration_identity": {
-        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e",
+        "final_source_tree_sha256": "08dd055dd148f72e503c3319fb8b6174ded5fb9eaee75f9f34225cc6cc857d9f",
+        "implementation_milestone_commits": [
+          "3135627"
+        ]
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "tests": [
+        "Matched streams verified across all arms; exact additive accounting; all seeded results preserved"
+      ],
+      "artifacts": [
+        "docs/mist_cove/PHASE_XII_MODEL_DEVELOPMENT_V1.md"
+      ],
+      "findings": [
+        "One1078-slot architecture; M0 has1029 trainable, M1/M2 have1078; arithmetic accounting passes"
+      ],
       "limitations": [],
       "block_reason": null
     },
@@ -561,13 +813,23 @@
       "dependencies": [
         "WP30"
       ],
-      "status": "PENDING",
+      "status": "COMPLETE",
       "code_configuration_identity": {
-        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e",
+        "final_source_tree_sha256": "08dd055dd148f72e503c3319fb8b6174ded5fb9eaee75f9f34225cc6cc857d9f",
+        "implementation_milestone_commits": [
+          "3135627"
+        ]
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "tests": [
+        "Matched streams verified across all arms; exact additive accounting; all seeded results preserved"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase11b_v1/model_training_preregistration.json"
+      ],
+      "findings": [
+        "M0/M1/M2, three seeds,300updates,16batch,local objective and gates frozen before fits/VAL"
+      ],
       "limitations": [],
       "block_reason": null
     },
@@ -575,16 +837,30 @@
       "id": "WP32",
       "title": "Run bounded real TRAIN-only experiments",
       "dependencies": [
+        "WP29",
+        "WP30",
         "WP31"
       ],
-      "status": "PENDING",
+      "status": "COMPLETE_WITH_LIMITATIONS",
       "code_configuration_identity": {
-        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e",
+        "final_source_tree_sha256": "08dd055dd148f72e503c3319fb8b6174ded5fb9eaee75f9f34225cc6cc857d9f",
+        "implementation_milestone_commits": [
+          "3135627"
+        ]
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "Matched streams verified across all arms; exact additive accounting; all seeded results preserved"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase11b_v1/model_comparison.json"
+      ],
+      "findings": [
+        "All9 fits completed;2700 updates;86400 paired training exposures; no extra fits"
+      ],
+      "limitations": [
+        "Small capacity and roughly one-pass exposure; no final-fit slot reserved"
+      ],
       "block_reason": null
     },
     {
@@ -593,14 +869,26 @@
       "dependencies": [
         "WP32"
       ],
-      "status": "PENDING",
+      "status": "COMPLETE_WITH_LIMITATIONS",
       "code_configuration_identity": {
-        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e",
+        "final_source_tree_sha256": "08dd055dd148f72e503c3319fb8b6174ded5fb9eaee75f9f34225cc6cc857d9f",
+        "implementation_milestone_commits": [
+          "3135627"
+        ]
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "Matched streams verified across all arms; exact additive accounting; all seeded results preserved"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase11b_v1/model_comparison.json"
+      ],
+      "findings": [
+        "All arms/seeds weak; N1 recall0-.06; mean M2-M1 cleanF1 -.006115"
+      ],
+      "limitations": [
+        "Insufficient capacity versus optimization remains unresolved"
+      ],
       "block_reason": null
     },
     {
@@ -609,14 +897,28 @@
       "dependencies": [
         "WP33"
       ],
-      "status": "PENDING",
+      "status": "COMPLETE_WITH_LIMITATIONS",
       "code_configuration_identity": {
-        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e",
+        "final_source_tree_sha256": "08dd055dd148f72e503c3319fb8b6174ded5fb9eaee75f9f34225cc6cc857d9f",
+        "implementation_milestone_commits": [
+          "3135627",
+          "0601b89"
+        ]
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "Matched streams verified across all arms; exact additive accounting; all seeded results preserved"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase11b_v1/new_model_operator_audit.json",
+        "reports/mist_cove/phase11b_v1/model_comparison.json"
+      ],
+      "findings": [
+        "All3 M2 primary gates fail; mean localHF delta -.001400; exact additive accounting passes"
+      ],
+      "limitations": [
+        "New internal branch-removal operator differs from original WIC; seven compatible bridges per model only"
+      ],
       "block_reason": null
     },
     {
@@ -625,14 +927,23 @@
       "dependencies": [
         "WP34"
       ],
-      "status": "PENDING",
+      "status": "COMPLETE_WITH_LIMITATIONS",
       "code_configuration_identity": {
-        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e",
+        "final_source_tree_sha256": "08dd055dd148f72e503c3319fb8b6174ded5fb9eaee75f9f34225cc6cc857d9f"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "1076 passed,11 skipped,0 failed; generated security/state/role/geometry/TRIAD/matched-stream/publication tests included"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase11b_v1/correctness_results.json"
+      ],
+      "findings": [
+        "1076 CPU tests passed,11 CUDA skips; no GPU allocation"
+      ],
+      "limitations": [
+        "CUDA correctness/exact resume NOT_RUN; occupied-device policy and CPU-only patched runtime"
+      ],
       "block_reason": null
     },
     {
@@ -641,13 +952,21 @@
       "dependencies": [
         "WP35"
       ],
-      "status": "PENDING",
+      "status": "IN PROGRESS",
       "code_configuration_identity": {
-        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
+        "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e",
+        "final_source_tree_sha256": "08dd055dd148f72e503c3319fb8b6174ded5fb9eaee75f9f34225cc6cc857d9f"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "tests": [
+        "Public release review and exact final GitHub CI pending"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase11b_v1/DASHBOARD.md",
+        "docs/mist_cove/PHASE_XII_SCIENTIFIC_DECISION_V1.md"
+      ],
+      "findings": [
+        "Scientific package prepared; GitHub draft PR and final-commit checks pending"
+      ],
       "limitations": [],
       "block_reason": null
     }
@@ -663,6 +982,19 @@
       "reason": "Historical git_info schema uses sha, not commit; fixed the new checker against original source",
       "preserved_attempt": "training_lineage_attempt1.json",
       "scientific_threshold_change": false
+    },
+    {
+      "id": "source-transport-v2",
+      "reason": "Unissued records now reject before loading even an otherwise approved role; no scientific rerun"
+    },
+    {
+      "id": "query-accounting-reconciliation",
+      "reason": "Added338 generated-check head evaluations and86 cache examples omitted from provisional offsets; totals remain below frozen ceilings"
+    },
+    {
+      "id": "generated-state-fixture",
+      "reason": "Corrected test fixture accessor from model to network; no scientific run affected"
     }
-  ]
+  ],
+  "execution_order_note": "TRIAD operator definitions were frozen early as an independent prerequisite; VAL execution was deferred until TRAIN-only choices froze. All scientific gates retain their original thresholds."
 }

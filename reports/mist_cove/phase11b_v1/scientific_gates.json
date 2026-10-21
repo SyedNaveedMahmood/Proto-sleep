@@ -1,0 +1,14 @@
+{
+  "original_byte_state_authentication": "PASS",
+  "trained_adapter_identity": "PASS",
+  "finite_response_circuits": "PASS_1350_REAL_TABLES",
+  "compactness_predicts_correctness": "NOT_SUPPORTED",
+  "same_clause_survives_mild_nuisance": "PARTIAL_109_OF_150",
+  "background_donor_conditional_results": "NOT_TESTED_NO_ELIGIBLE_BACKGROUND",
+  "M2_primary_gate": "FAIL_ALL_THREE_SEEDS",
+  "new_model_promotion": "NO_GO",
+  "independent_clinical_localization": "NOT_TESTED",
+  "external_validation": "NOT_AUTHORIZED_NOT_TESTED",
+  "new_method_priority": "UNESTABLISHED",
+  "next_phase_started": false
+}

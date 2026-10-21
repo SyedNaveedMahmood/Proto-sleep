@@ -1,0 +1,62 @@
+{
+  "stage_CPU_wall_seconds": {
+    "model_authentication.json": 0.015889125999819953,
+    "trained_adapter_correctness.json": 1.6732843259997026,
+    "sample_selection.json": 1.0853828830004204,
+    "source_pilot.json": 1.643934519999675,
+    "train_descriptive_metrics.json": 150.3943379299999,
+    "val_descriptive_metrics.json": 45.90066598300109,
+    "local_hf_followup.json": 1.2972402980012703,
+    "new_model_data_receipt.json": 4.457881880000059,
+    "model_comparison.json": 13.746837994996895,
+    "new_model_operator_audit.json": 0.700284405000275,
+    "information_loss_metrics.json": 1.8980717499944149,
+    "aggregate_analysis_resource.json": 0.6680030540010193,
+    "audit_execution.json": 440.80973649399857
+  },
+  "total_scientific_CPU_wall_seconds": 664.2915506439931,
+  "scientific_CPU_ceiling_seconds": 7200,
+  "cached_head_queries": 44378416,
+  "cached_head_query_ceiling": 50000000,
+  "native_full_example_forwards": 236034,
+  "feature_cache_example_forwards": 1440,
+  "combined_full_and_cache_examples": 237474,
+  "full_example_ceiling": 250000,
+  "core_new_neural_fits": 9,
+  "scientific_optimizer_updates": 2700,
+  "clean_training_exposures": 43200,
+  "paired_nuisance_training_exposures": 43200,
+  "GPU_seconds": 0,
+  "source_access": {
+    "descriptor_files": 153,
+    "waveform_file_reads": 81,
+    "annotation_hash_reads": 81,
+    "waveform_bytes": 4055683968,
+    "physical_epochs_decoded": 108416,
+    "source_io_seconds": 12.555669929986834
+  },
+  "distinct_approved_recordings": 37,
+  "distinct_physical_source_epochs": 101780,
+  "peak_measured_process_RSS_KiB": 951032,
+  "table_queries_not_training_exposures": true,
+  "accounting_correction": "Add338 generated adapter head queries and86 generated cache examples omitted from initial audit runner offset; no experiment rerun",
+  "generated_new_model_engineering_pilot": {
+    "domain": "GENERATED_ONLY_ENGINEERING_PILOT",
+    "updates": 20,
+    "wall_seconds": 0.09313900699999067,
+    "projected_2700_training_updates_seconds": 12.57376594499874,
+    "GPU_allocated": false,
+    "parameters": {
+      "M0": 1029,
+      "M1_M2": 1078
+    }
+  },
+  "CUDA_status": "NOT_RUN: occupancy probe19percent utilization; no allocation, no interrupted process; patched research environment CPU only",
+  "excluded_from_scientific_wall": [
+    "dependency installation",
+    "test suites",
+    "literature/source review",
+    "report rendering",
+    "interactive engineering time"
+  ]
+}

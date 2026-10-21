@@ -1,0 +1,31 @@
+{
+  "source_tree_sha256": "08dd055dd148f72e503c3319fb8b6174ded5fb9eaee75f9f34225cc6cc857d9f",
+  "source_sha256": {
+    "src/mist_cove/phase11b/__init__.py": "d247ab288d71133448d56f329392a4359892766be254a0d289fc2e898ff9f78e",
+    "src/mist_cove/phase11b/adapter_checks.py": "7f8ff8bb58f9f244c0f33a30955b479b6c63cbb5caec72d531d177e963db323c",
+    "src/mist_cove/phase11b/audit.py": "a1cb36fa2d99c72a0e7e6615a113236b81ca9b8b0076a2da8d5bf9d67aa2ad02",
+    "src/mist_cove/phase11b/calibration.py": "053c8ae6ad395cb7a345b30709652e6381a7b1c4b62af08c8d70700e37a75a92",
+    "src/mist_cove/phase11b/campaign.py": "2cbcf77f4e547c84b5a6a937c4d3b189354470cf1a3c37d4b5534548c5bfac1a",
+    "src/mist_cove/phase11b/development.py": "fec7f83dcbd0307a050215f12efa87d5b2fd2b78cac9245c5f3f980e2a5ceae7",
+    "src/mist_cove/phase11b/evaluation.py": "56fff8b93ac2edcb67959fdcf28355d124e2d06ef1c6424195b9409fe7b48b5b",
+    "src/mist_cove/phase11b/historical.py": "6cb02e6d7b835da8f1462262ef69b35aa4c5d953715dd0010f2b675b215887dc",
+    "src/mist_cove/phase11b/information_audit.py": "b59f7e044796d73702e0bdba6ac13c65b4eb957fb62f04f77cc7938330897f4a",
+    "src/mist_cove/phase11b/post_training_audit.py": "eaf4f1d7bdd9364bc853dad28d9f9c9ad048e0f4f8127afe1e45689d8c5c8c38",
+    "src/mist_cove/phase11b/predictions.py": "74501cb280ff9418e0e564b5dd2eca6b1703a26b4b1feff64c86a880e4d1d951",
+    "src/mist_cove/phase11b/publication.py": "8c8ba9ae610aca1b7b06863640d2320b3ecb5eb712099d69931edc8db28bb6e7",
+    "src/mist_cove/phase11b/release.py": "cea55eee9f4f75ee867264921d8c06b8a595cd5c9e661140ff0eeb1c63991bcc",
+    "src/mist_cove/phase11b/security.py": "59974d9923fc26dc1e1f02e92a6bd819ea4e7e9ec0af88436963a6132f376db0",
+    "src/mist_cove/phase11b/source.py": "2c00a9062220cbea9dc88e022cedfb0fd89caf78992857c10cf93b3c5939c72e",
+    "src/mist_cove/phase11b/summarize.py": "d8afe5924bafaaa39e5bb0f1d00348e9baa7662c5c404a029c2def98e5c10d45",
+    "src/mist_cove/phase11b/training.py": "a809d54b28d0f0b100ade55f6099c674d89c7dd43d8ef97f75bf48e1c0253311",
+    "src/mist_cove/phase11b/triad.py": "39963c5b71d7c27f951c50a1f6a4ac16fbe10663fd348325b976bae6aa48c0d3"
+  },
+  "base_commit": "2f21e4436ac4288c2e53a5704b3b0f0a4d871865",
+  "sample_freeze_commit": "0af4858",
+  "TRIAD_audit_freeze_commit": "d70b039",
+  "training_freeze_commit": "3135627",
+  "model_primary_failure_commit": "0601b89",
+  "source_contract": "source_authorization_contract.json",
+  "current_phase_date": "2026-10-22",
+  "historical_plan_blob_unchanged": "e40e646cb027de163d43220e47e51a491316bce2"
+}

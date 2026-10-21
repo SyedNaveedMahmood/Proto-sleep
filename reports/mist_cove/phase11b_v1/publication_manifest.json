@@ -1,0 +1,424 @@
+{
+  "status": "REVIEWED_SAFE_SOURCE_AND_AGGREGATES",
+  "files": [
+    {
+      "file": ".github/workflows/ci.yml",
+      "sha256": "1350dfaa5933b88a2ceeb0825d04342f2a9b4036c383c9bc003c28228ab7c34a",
+      "bytes": 2296
+    },
+    {
+      "file": "configs/mist_cove_phase11b_v1.json",
+      "sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e",
+      "bytes": 1267
+    },
+    {
+      "file": "configs/mist_cove_phase12_mechanism_followup_v1.json",
+      "sha256": "bd25be2a3b4b5f3ec6b78989632f2f99d981dce2e8634d7952f7cd14776ca48c",
+      "bytes": 761
+    },
+    {
+      "file": "docs/mist_cove/PHASE_XIB_AUTHENTICATED_MODEL_RESULTS_V1.md",
+      "sha256": "957b4ff677e09db18f133c2a4439be501a58368c6d18574bec5eaf7c36fd39f0",
+      "bytes": 5069
+    },
+    {
+      "file": "docs/mist_cove/PHASE_XIB_EXECUTION_FOUNDATION_V1.md",
+      "sha256": "83a4ce45bd4268beab46a29e2f781012445dd8f7c4e7e0d00e5260b333c94598",
+      "bytes": 4696
+    },
+    {
+      "file": "docs/mist_cove/PHASE_XIC_REAL_EEG_DIAGNOSTIC_PROTOCOL_V1.md",
+      "sha256": "1d4b4ae95b9e0e00d248e4e1606a42c7607d1affc545aa37f838d967d92534ff",
+      "bytes": 8168
+    },
+    {
+      "file": "docs/mist_cove/PHASE_XIC_REAL_EEG_RESULTS_V1.md",
+      "sha256": "3c662877435c02d9008e92dd028adae48fcf5bb51682bb6b2901f6a5bd961d12",
+      "bytes": 5716
+    },
+    {
+      "file": "docs/mist_cove/PHASE_XII_MIST_TRIAD_METHOD_V1.md",
+      "sha256": "e3d432763df3d70d9ed42d02cc8214d802c7f9e3b48904d73648956d33301338",
+      "bytes": 6551
+    },
+    {
+      "file": "docs/mist_cove/PHASE_XII_MIST_TRIAD_RESULTS_V1.md",
+      "sha256": "0f2fd0a95b0d919b8ef228f6de657a41cc9a1c3b397a00e163991f89eae40d69",
+      "bytes": 8867
+    },
+    {
+      "file": "docs/mist_cove/PHASE_XII_MODEL_DEVELOPMENT_V1.md",
+      "sha256": "b20349b7f1cdba5946d57974a511bda2369db2e8c2a9a8ffb848c549a2976edd",
+      "bytes": 7483
+    },
+    {
+      "file": "docs/mist_cove/PHASE_XII_SCIENTIFIC_DECISION_V1.md",
+      "sha256": "68130fedeb701ae1a009d8537cf365998fc27ee3934d688f8153c92bb495f4d1",
+      "bytes": 9544
+    },
+    {
+      "file": "reports/mist_cove/phase11b_v1/DASHBOARD.md",
+      "sha256": "2716d2e6b0f75fc9e8e50a9520e9a92c91d9b1a707eaa07ee25f41c9d5ccfc77",
+      "bytes": 2345
+    },
+    {
+      "file": "reports/mist_cove/phase11b_v1/M0_123_metrics.json",
+      "sha256": "e0ae5e0113488380a6676260e75873caa6579599841f3a3652ce282a72d30a76",
+      "bytes": 13563
+    },
+    {
+      "file": "reports/mist_cove/phase11b_v1/M0_456_metrics.json",
+      "sha256": "61a307080eeb6c818ff08a3e7444a96fe84012ce6b425581f10ca09833871ebb",
+      "bytes": 13559
+    },
+    {
+      "file": "reports/mist_cove/phase11b_v1/M0_789_metrics.json",
+      "sha256": "941958cc46fe453553ec147709f3abdf281f27d401672c8db4d3e960cdce5bfe",
+      "bytes": 13408
+    },
+    {
+      "file": "reports/mist_cove/phase11b_v1/M1_123_metrics.json",
+      "sha256": "fb73989736f164f6da0aa4f538986bccefa1700788d01c1d52b0c5debe8fb620",
+      "bytes": 13561
+    },
+    {
+      "file": "reports/mist_cove/phase11b_v1/M1_456_metrics.json",
+      "sha256": "698150976a03a315d925a2da0826c9c6ba93d7365de11072b0928ef91c59b674",
+      "bytes": 13672
+    },
+    {
+      "file": "reports/mist_cove/phase11b_v1/M1_789_metrics.json",
+      "sha256": "ee0616f8dd175826433787e79a28f83e629d4fbaf326b90fa39a57378204f271",
+      "bytes": 13514
+    },
+    {
+      "file": "reports/mist_cove/phase11b_v1/M2_123_metrics.json",
+      "sha256": "294df0f5b7ab849b2d712a6f4ecbd5bb02f490726884fed22bcc601a0784219f",
+      "bytes": 13608
+    },
+    {
+      "file": "reports/mist_cove/phase11b_v1/M2_456_metrics.json",
+      "sha256": "a0188565ae296290e0f02926feaedb3722eaee843e55d6b6a5047e17fd7dbd95",
+      "bytes": 13670
+    },
+    {
+      "file": "reports/mist_cove/phase11b_v1/M2_789_metrics.json",
+      "sha256": "28accf8e9e9fc88bf3151f14dc02f3ff213957392ecc02ac9a5a783d751535a2",
+      "bytes": 13470
+    },
+    {
+      "file": "reports/mist_cove/phase11b_v1/aggregate_analysis_resource.json",
+      "sha256": "e7375a6d840b05953487b71d003930457c022bb6cf914dedf08f113bd5c50589",
+      "bytes": 92
+    },
+    {
+      "file": "reports/mist_cove/phase11b_v1/audit_execution.json",
+      "sha256": "10da65fbf66490af6ac4e175200d5701e124ee1ab314c4611b6a63328ef015b3",
+      "bytes": 939
+    },
+    {
+      "file": "reports/mist_cove/phase11b_v1/calibration_metrics.json",
+      "sha256": "d773afca3c5fbcafffb692c5ee0f76501e85f478827055b010fe56ae4ba75215",
+      "bytes": 5981
+    },
+    {
+      "file": "reports/mist_cove/phase11b_v1/circuit_metrics.json",
+      "sha256": "c936631a9f7efb767e7fd7c3b888190313524edc9743ace40d3e98930dbb1670",
+      "bytes": 18631
+    },
+    {
+      "file": "reports/mist_cove/phase11b_v1/correctness_results.json",
+      "sha256": "6a91fbf731e84bdc7bdf8712c1c724e31d75fd54be192e48a0196890168f8814",
+      "bytes": 490
+    },
+    {
+      "file": "reports/mist_cove/phase11b_v1/execution_manifest.json",
+      "sha256": "58a8213abf3595c0a658945fb7789db1f82d5bb643dc4fd276153a8664b4aed1",
+      "bytes": 2535
+    },
+    {
+      "file": "reports/mist_cove/phase11b_v1/failure_mechanisms.json",
+      "sha256": "51410f9fbc7245706318652183342375948b869c9a73c1a98db7d69e653d5eff",
+      "bytes": 461
+    },
+    {
+      "file": "reports/mist_cove/phase11b_v1/figures/01_classification.png",
+      "sha256": "6f5b52c160505cdc4ded47011a82755b38bd0a5ecc30ad6a5ebc759ae901b5d3",
+      "bytes": 99764
+    },
+    {
+      "file": "reports/mist_cove/phase11b_v1/figures/02_circuits.png",
+      "sha256": "0ad7424aebea9a0ed7b6d1b6b04ffa93f921475ce9ee0fab3d59b5da45a3c7e1",
+      "bytes": 124022
+    },
+    {
+      "file": "reports/mist_cove/phase11b_v1/figures/03_triad.png",
+      "sha256": "61cb7210100440562b565224a79bb6d0e62cd71996295ca90dbbbde7e940741c",
+      "bytes": 130183
+    },
+    {
+      "file": "reports/mist_cove/phase11b_v1/figures/04_models_compute.png",
+      "sha256": "00d8ab4254a0dcc75979c98ff4378095e34a097a4c1ca374f7cec386157043a4",
+      "bytes": 101905
+    },
+    {
+      "file": "reports/mist_cove/phase11b_v1/historical_reproduction.json",
+      "sha256": "725d9a1e7abf5cae35e921b7ef9703437dbf1eca0a28bb3db9e7cd1c9042e9fe",
+      "bytes": 316
+    },
+    {
+      "file": "reports/mist_cove/phase11b_v1/information_loss_metrics.json",
+      "sha256": "a342685077b67b83a5633829578f8aaa0b338a6ebc9f61c7f4b95b5cc593de24",
+      "bytes": 10525
+    },
+    {
+      "file": "reports/mist_cove/phase11b_v1/local_hf_followup.json",
+      "sha256": "ae4bd4afccab9a48791ca0544748f677b43b5b69c30e1ee7ab90808acc21eef3",
+      "bytes": 2834
+    },
+    {
+      "file": "reports/mist_cove/phase11b_v1/mechanistic_details.json",
+      "sha256": "8d5cf597c1e04a41ac8da5fb5704e560da9956266c6b5356931bdbc17b2cd4fb",
+      "bytes": 18403
+    },
+    {
+      "file": "reports/mist_cove/phase11b_v1/model_authentication.json",
+      "sha256": "dc3bd30ad18d90f12b4d8fc9ee24f4f294cf742ce0a1ae1716edde20d258a5bd",
+      "bytes": 1094
+    },
+    {
+      "file": "reports/mist_cove/phase11b_v1/model_comparison.json",
+      "sha256": "2ea8c04da02121fc78d9cc153d8e71a4064a4e74741cccb6abdd4e1a7614d88a",
+      "bytes": 1440
+    },
+    {
+      "file": "reports/mist_cove/phase11b_v1/model_development_decision.json",
+      "sha256": "ea915e69c2de14dddba8e82f9f77f69b04d0060bd84184b1d379e355228ca9c6",
+      "bytes": 398
+    },
+    {
+      "file": "reports/mist_cove/phase11b_v1/model_paired_uncertainty.json",
+      "sha256": "04c339de5f3babcc6885b5ab007c2c4c891a39ef2cc41a68761f5df3e1295628",
+      "bytes": 1669
+    },
+    {
+      "file": "reports/mist_cove/phase11b_v1/model_training_preregistration.json",
+      "sha256": "3a283070b918a7ccc9a08d539ca1c076b6f72ea88ddaf5dfe4d2cd308ea3549d",
+      "bytes": 1143
+    },
+    {
+      "file": "reports/mist_cove/phase11b_v1/new_model_data_receipt.json",
+      "sha256": "2b30ad6379b4b4b105a23e5c854fd7bba62face2b73a0af784966f4b3681f863",
+      "bytes": 806
+    },
+    {
+      "file": "reports/mist_cove/phase11b_v1/new_model_generated_pilot.json",
+      "sha256": "5e6c497b798bdcf46a9f88eb3d3bc88632176e1498cbb1e849e4574f08efc371",
+      "bytes": 254
+    },
+    {
+      "file": "reports/mist_cove/phase11b_v1/new_model_operator_audit.json",
+      "sha256": "10719bb2cb7ba34d7baa9923b6f7c82ec66e942de64f23f4b3478215fbf0650d",
+      "bytes": 5406
+    },
+    {
+      "file": "reports/mist_cove/phase11b_v1/participant_partition.json",
+      "sha256": "1bf9319579fbcd0d73ae778827870ab65fcaab923d2d95e4b7d5492ff909457e",
+      "bytes": 706
+    },
+    {
+      "file": "reports/mist_cove/phase11b_v1/progress.json",
+      "sha256": "b184b4c8361b976e39d9fca52ea73f06042049e60ebad055f7445904e3c7c770",
+      "bytes": 35811
+    },
+    {
+      "file": "reports/mist_cove/phase11b_v1/resource_receipts.json",
+      "sha256": "e38a049a817bec634065b68f07d825bf04f89e11c208fc41da22cb7271d40635",
+      "bytes": 2460
+    },
+    {
+      "file": "reports/mist_cove/phase11b_v1/sample_selection.json",
+      "sha256": "6ac581a142e6387ccc3b0f6d8ceaae90dade38b4fa17b0d9435140201ab8916f",
+      "bytes": 501
+    },
+    {
+      "file": "reports/mist_cove/phase11b_v1/scientific_gates.json",
+      "sha256": "938828862183c26cc4f2118c529b64bf848044fc0fd1ef7873565f78504a5c21",
+      "bytes": 599
+    },
+    {
+      "file": "reports/mist_cove/phase11b_v1/source_authorization_contract.json",
+      "sha256": "3f5df312bcfda0ee621b74f53d1d3dadd264b4cc51351ca1a7216ff63ed1f48f",
+      "bytes": 909
+    },
+    {
+      "file": "reports/mist_cove/phase11b_v1/source_pilot.json",
+      "sha256": "a0f67f292a87c81cf543adf326429897868e44c53051eb7a7d318c9b089b935c",
+      "bytes": 1303
+    },
+    {
+      "file": "reports/mist_cove/phase11b_v1/train_descriptive_metrics.json",
+      "sha256": "31daaf5732834db570648c716b6bb5f5733cc807264fdb3b99dae8eea4b107a9",
+      "bytes": 11648
+    },
+    {
+      "file": "reports/mist_cove/phase11b_v1/trained_adapter_correctness.json",
+      "sha256": "f32cb965a47e8b30732967497b9b066e43996e9b337d545d754db7462ac755c0",
+      "bytes": 1135
+    },
+    {
+      "file": "reports/mist_cove/phase11b_v1/training_lineage.json",
+      "sha256": "442546c395d4138a55a9e75e04f5249b35bc5ddc00135c7f8c53db5c7bb60137",
+      "bytes": 1456
+    },
+    {
+      "file": "reports/mist_cove/phase11b_v1/training_lineage_attempt1.json",
+      "sha256": "1d94fa06d569198f24bb4e698874a590153f2447b9debce1a766b5519564c0d0",
+      "bytes": 80
+    },
+    {
+      "file": "reports/mist_cove/phase11b_v1/triad_metrics.json",
+      "sha256": "5b2e6825814c2f4b99719782e15e7b02f7a459e33a6d187ab2f0e767d14f1479",
+      "bytes": 38427
+    },
+    {
+      "file": "reports/mist_cove/phase11b_v1/val_descriptive_metrics.json",
+      "sha256": "66c4098890cd0b4bd3f79aabc8d08b989b746e8f7a42294c5f643df6044b4096",
+      "bytes": 11593
+    },
+    {
+      "file": "src/mist_cove/phase11b/__init__.py",
+      "sha256": "d247ab288d71133448d56f329392a4359892766be254a0d289fc2e898ff9f78e",
+      "bytes": 81
+    },
+    {
+      "file": "src/mist_cove/phase11b/adapter_checks.py",
+      "sha256": "7f8ff8bb58f9f244c0f33a30955b479b6c63cbb5caec72d531d177e963db323c",
+      "bytes": 3402
+    },
+    {
+      "file": "src/mist_cove/phase11b/audit.py",
+      "sha256": "a1cb36fa2d99c72a0e7e6615a113236b81ca9b8b0076a2da8d5bf9d67aa2ad02",
+      "bytes": 9651
+    },
+    {
+      "file": "src/mist_cove/phase11b/calibration.py",
+      "sha256": "053c8ae6ad395cb7a345b30709652e6381a7b1c4b62af08c8d70700e37a75a92",
+      "bytes": 4558
+    },
+    {
+      "file": "src/mist_cove/phase11b/campaign.py",
+      "sha256": "2cbcf77f4e547c84b5a6a937c4d3b189354470cf1a3c37d4b5534548c5bfac1a",
+      "bytes": 5104
+    },
+    {
+      "file": "src/mist_cove/phase11b/development.py",
+      "sha256": "fec7f83dcbd0307a050215f12efa87d5b2fd2b78cac9245c5f3f980e2a5ceae7",
+      "bytes": 3202
+    },
+    {
+      "file": "src/mist_cove/phase11b/evaluation.py",
+      "sha256": "56fff8b93ac2edcb67959fdcf28355d124e2d06ef1c6424195b9409fe7b48b5b",
+      "bytes": 4685
+    },
+    {
+      "file": "src/mist_cove/phase11b/historical.py",
+      "sha256": "6cb02e6d7b835da8f1462262ef69b35aa4c5d953715dd0010f2b675b215887dc",
+      "bytes": 11601
+    },
+    {
+      "file": "src/mist_cove/phase11b/information_audit.py",
+      "sha256": "b59f7e044796d73702e0bdba6ac13c65b4eb957fb62f04f77cc7938330897f4a",
+      "bytes": 2985
+    },
+    {
+      "file": "src/mist_cove/phase11b/post_training_audit.py",
+      "sha256": "eaf4f1d7bdd9364bc853dad28d9f9c9ad048e0f4f8127afe1e45689d8c5c8c38",
+      "bytes": 5206
+    },
+    {
+      "file": "src/mist_cove/phase11b/predictions.py",
+      "sha256": "74501cb280ff9418e0e564b5dd2eca6b1703a26b4b1feff64c86a880e4d1d951",
+      "bytes": 3599
+    },
+    {
+      "file": "src/mist_cove/phase11b/publication.py",
+      "sha256": "8c8ba9ae610aca1b7b06863640d2320b3ecb5eb712099d69931edc8db28bb6e7",
+      "bytes": 15496
+    },
+    {
+      "file": "src/mist_cove/phase11b/release.py",
+      "sha256": "cea55eee9f4f75ee867264921d8c06b8a595cd5c9e661140ff0eeb1c63991bcc",
+      "bytes": 1878
+    },
+    {
+      "file": "src/mist_cove/phase11b/security.py",
+      "sha256": "59974d9923fc26dc1e1f02e92a6bd819ea4e7e9ec0af88436963a6132f376db0",
+      "bytes": 5769
+    },
+    {
+      "file": "src/mist_cove/phase11b/source.py",
+      "sha256": "2c00a9062220cbea9dc88e022cedfb0fd89caf78992857c10cf93b3c5939c72e",
+      "bytes": 7400
+    },
+    {
+      "file": "src/mist_cove/phase11b/summarize.py",
+      "sha256": "d8afe5924bafaaa39e5bb0f1d00348e9baa7662c5c404a029c2def98e5c10d45",
+      "bytes": 10941
+    },
+    {
+      "file": "src/mist_cove/phase11b/training.py",
+      "sha256": "a809d54b28d0f0b100ade55f6099c674d89c7dd43d8ef97f75bf48e1c0253311",
+      "bytes": 10919
+    },
+    {
+      "file": "src/mist_cove/phase11b/triad.py",
+      "sha256": "39963c5b71d7c27f951c50a1f6a4ac16fbe10663fd348325b976bae6aa48c0d3",
+      "bytes": 7676
+    },
+    {
+      "file": "tests/mist_cove/test_phase11b_boundaries.py",
+      "sha256": "a7c6ab0d556c2e4f82c2ee1213d2121e1bf7b5a2e409f1bdbdbb3ad6c2299a0e",
+      "bytes": 1883
+    },
+    {
+      "file": "tests/mist_cove/test_phase11b_development.py",
+      "sha256": "1080d435c238b9a59205e1fab9420a5b3f89c6f5309f076767406be5da62c008",
+      "bytes": 1623
+    },
+    {
+      "file": "tests/mist_cove/test_phase11b_release.py",
+      "sha256": "637d0a1d6e3cdebca242137a76f27a2ebe3d3d46a83c281e81948e58fb3363cc",
+      "bytes": 1496
+    },
+    {
+      "file": "tests/mist_cove/test_phase11b_security.py",
+      "sha256": "2aef82068d62d2dc51d87c170b1e836bc614a4ca08824a62173cd4e08b0d7768",
+      "bytes": 2504
+    },
+    {
+      "file": "tests/mist_cove/test_phase11b_source.py",
+      "sha256": "b342e7dcb41af7c981ba726a28863d0e141a830c2b8c749db3709ad4c7e59db2",
+      "bytes": 1764
+    },
+    {
+      "file": "tests/mist_cove/test_phase11b_state.py",
+      "sha256": "41ced8fc2452fa0856252c2869ebe17903f06cec3d95379c7f0b4eb2bb498ae7",
+      "bytes": 2359
+    },
+    {
+      "file": "tests/test_phase11b_triad.py",
+      "sha256": "7cf538eadd693856222982b4928383b69dd8fa407120f53ddcb62dafc0ed4a39",
+      "bytes": 1977
+    }
+  ],
+  "excludes_self": true,
+  "private_identifier_scan": "PASS",
+  "absolute_private_path_scan": "PASS",
+  "generated_negative_fixture_exceptions": "Only literal generated path and generated recording in test_phase11b_release.py; all real identifier checks remain active",
+  "private_data_and_weights_excluded": true,
+  "historical_reports_unchanged": true,
+  "existing_CI_job_unchanged_new_patched_job_added": true,
+  "figures": 4,
+  "GitHub_final_commit_CI": "TO_BE_VERIFIED_ON_DELIVERED_REVISION"
+}
