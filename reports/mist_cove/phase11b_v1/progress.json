@@ -49,14 +49,22 @@
       "dependencies": [
         "WP02"
       ],
-      "status": "IN PROGRESS",
+      "status": "COMPLETE",
       "code_configuration_identity": {
         "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "9 generated security tests pass; actual authenticated model/lineage receipt passes"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase11b_v1/model_authentication.json"
+      ],
+      "findings": [
+        "Restricted loading without custom globals succeeded; actual state and configuration match"
+      ],
+      "limitations": [
+        "No independent historical signing/time attestation; source crop comparison not yet performed"
+      ],
       "block_reason": null
     },
     {
@@ -65,14 +73,22 @@
       "dependencies": [
         "WP03"
       ],
-      "status": "PENDING",
+      "status": "COMPLETE",
       "code_configuration_identity": {
         "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "9 generated security tests pass; actual authenticated model/lineage receipt passes"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase11b_v1/model_authentication.json"
+      ],
+      "findings": [
+        "Restricted loading without custom globals succeeded; actual state and configuration match"
+      ],
+      "limitations": [
+        "No independent historical signing/time attestation; source crop comparison not yet performed"
+      ],
       "block_reason": null
     },
     {
@@ -81,14 +97,22 @@
       "dependencies": [
         "WP04"
       ],
-      "status": "PENDING",
+      "status": "COMPLETE",
       "code_configuration_identity": {
         "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "9 generated security tests pass; actual authenticated model/lineage receipt passes"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase11b_v1/training_lineage.json"
+      ],
+      "findings": [
+        "Original root/run fingerprints reconstructed; embedded bank and TRAIN normalization bind to frozen source references"
+      ],
+      "limitations": [
+        "No independent historical signing/time attestation; source crop comparison not yet performed"
+      ],
       "block_reason": null
     },
     {
@@ -97,7 +121,7 @@
       "dependencies": [
         "WP05"
       ],
-      "status": "PENDING",
+      "status": "IN PROGRESS",
       "code_configuration_identity": {
         "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
       },
@@ -586,6 +610,19 @@
       "findings": [],
       "limitations": [],
       "block_reason": null
+    }
+  ],
+  "engineering_corrections": [
+    {
+      "id": "loader-v2",
+      "reason": "PyTorch imports pre-register optional safe globals; clear all user globals for isolated load and restore afterward; no allowlist expansion",
+      "before_real_payload_access": true
+    },
+    {
+      "id": "lineage-v2",
+      "reason": "Historical git_info schema uses sha, not commit; fixed the new checker against original source",
+      "preserved_attempt": "training_lineage_attempt1.json",
+      "scientific_threshold_change": false
     }
   ]
 }
