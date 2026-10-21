@@ -121,13 +121,19 @@
       "dependencies": [
         "WP05"
       ],
-      "status": "IN PROGRESS",
+      "status": "COMPLETE",
       "code_configuration_identity": {
         "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "tests": [
+        "Bitwise full features/logits;84 noninterference cases;65536 complete table rows verified"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase11b_v1/trained_adapter_correctness.json"
+      ],
+      "findings": [
+        "Actual authenticated trained weights pass the Phase X adapter gate"
+      ],
       "limitations": [],
       "block_reason": null
     },
@@ -137,14 +143,22 @@
       "dependencies": [
         "WP06"
       ],
-      "status": "PENDING",
+      "status": "COMPLETE",
       "code_configuration_identity": {
         "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "18 security/source unit cases pass;role rejection before descriptor access;sealed memory mutation rejected"
+      ],
+      "artifacts": [
+        "src/mist_cove/phase11b/source.py"
+      ],
+      "findings": [
+        "Inherited load_development executes against authenticated immutable descriptor bytes; EDF decoder uses sealed RAM snapshot"
+      ],
+      "limitations": [
+        "Actual source availability and decoding are tested in the resource pilot"
+      ],
       "block_reason": null
     },
     {
@@ -153,13 +167,17 @@
       "dependencies": [
         "WP07"
       ],
-      "status": "PENDING",
+      "status": "COMPLETE",
       "code_configuration_identity": {
         "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
       },
       "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "artifacts": [
+        "docs/mist_cove/PHASE_XIC_REAL_EEG_DIAGNOSTIC_PROTOCOL_V1.md"
+      ],
+      "findings": [
+        "Sample rules,metrics,operator settings,privacy,query and CPU ceilings frozen before EEG predictions; VAL embargo until model decision"
+      ],
       "limitations": [],
       "block_reason": null
     },
@@ -169,7 +187,7 @@
       "dependencies": [
         "WP08"
       ],
-      "status": "PENDING",
+      "status": "IN PROGRESS",
       "code_configuration_identity": {
         "config_sha256": "95aba4a088a6f02fa61514b1b6c85b32949007a870cbe9805773428bbc6cbc7e"
       },

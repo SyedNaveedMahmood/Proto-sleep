@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "input_domain": "TWO_FIXED_GENERATED_INPUTS_ON_AUTHENTICATED_TRAINED_STATE",
+  "seed": 44112,
+  "feature_identity": {
+    "maximum_absolute": 0.0,
+    "maximum_relative_reference_floor_1e_12": 0.0,
+    "bitwise_equal": true
+  },
+  "logit_identity": {
+    "maximum_absolute": 0.0,
+    "maximum_relative_reference_floor_1e_12": 0.0,
+    "bitwise_equal": true
+  },
+  "atol": 1e-06,
+  "rtol": 1e-06,
+  "noninterference_comparisons": 84,
+  "noninterference_max_absolute": 0.0,
+  "broken_global_negative_controls_detected": 5,
+  "windows": 169,
+  "features": 209,
+  "global_features": 17,
+  "exhaustive_tables": [
+    {
+      "generated_index": 0,
+      "exact_all_rows": true,
+      "masks": 32768,
+      "BDD_nonterminal_nodes": 796,
+      "full_response": true,
+      "zero_response": true
+    },
+    {
+      "generated_index": 1,
+      "exact_all_rows": true,
+      "masks": 32768,
+      "BDD_nonterminal_nodes": 24,
+      "full_response": true,
+      "zero_response": false
+    }
+  ],
+  "table_head_queries": 65538,
+  "state_unchanged": true,
+  "wall_seconds": 1.6732843259997026,
+  "real_EEG_accessed": false
+}
