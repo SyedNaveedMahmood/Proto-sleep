@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "epochs": [
+    {
+      "full_identity_max_abs": 0.0,
+      "exact_all_rows": true,
+      "mask_count": 32768,
+      "timing": {
+        "native_seconds": 0.004571245000988711,
+        "cache_seconds": 0.0021084220006741816,
+        "full_identity_seconds": 0.0017270299995288951,
+        "table_seconds": 0.2889940720015147,
+        "circuit_clause_seconds": 0.02028155100015283
+      }
+    },
+    {
+      "full_identity_max_abs": 0.0,
+      "exact_all_rows": true,
+      "mask_count": 32768,
+      "timing": {
+        "native_seconds": 0.0028066080012649763,
+        "cache_seconds": 0.0021893030007049674,
+        "full_identity_seconds": 0.0015705820005678106,
+        "table_seconds": 0.2873471849998168,
+        "circuit_clause_seconds": 0.018737690001216833
+      }
+    }
+  ],
+  "head_queries": 65540,
+  "native_example_forwards": 2,
+  "feature_cache_examples": 2,
+  "projected_1350_tables_seconds": 425.47523940434075,
+  "cuda": "NOT_TESTED_CPU_FIRST",
+  "state_unchanged": true,
+  "source_access": {
+    "descriptor_files": 29,
+    "waveform_file_reads": 2,
+    "annotation_hash_reads": 2,
+    "waveform_bytes": 96676096,
+    "physical_epochs_decoded": 2,
+    "source_io_seconds": 0.13215071800186706
+  },
+  "wall_seconds": 1.643934519999675,
+  "peak_RSS_KiB": 522408
+}
