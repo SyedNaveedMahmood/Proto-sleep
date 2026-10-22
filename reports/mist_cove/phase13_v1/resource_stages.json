@@ -1,0 +1,18 @@
+{
+  "source_cache": {
+    "track": "SHARED",
+    "status": "COMPLETE",
+    "wall_seconds": 6.3899549469933845,
+    "descriptor_files": 29,
+    "waveform_file_reads": 26,
+    "annotation_hash_reads": 26,
+    "waveform_bytes": 1303811968,
+    "physical_epochs_decoded": 5914,
+    "source_io_seconds": 1.6123867489950499
+  },
+  "annotation_packets": {
+    "track": "A",
+    "status": "COMPLETE",
+    "wall_seconds": 0.0071775340038584545
+  }
+}

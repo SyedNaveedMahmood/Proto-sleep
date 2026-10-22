@@ -1,0 +1,15 @@
+{
+  "engineering_status": "READY_FOR_APPROVED_LOCAL_REVIEW",
+  "human_annotation": "NOT_TESTED",
+  "physiological_validation": "NOT_TESTED",
+  "approved_reviewers": 0,
+  "reason": "User confirmed no approved qualified reviewers are available",
+  "primary": 150,
+  "secondary": 30,
+  "duplicate_presentations": 15,
+  "total_presentations": 195,
+  "private_master_canonical_sha256": "240471275f1985f06241e1539dbd6c1ad3264922629f1465dc5afdedad3f5fb5",
+  "blind_initial_pass": true,
+  "external_transfer": false,
+  "human_annotation_blocker": "Requires explicitly approved local qualified reviewers and locked independent exports; no clinical labels fabricated"
+}

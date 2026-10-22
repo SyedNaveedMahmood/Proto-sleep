@@ -1,0 +1,22 @@
+{
+  "status": "PASS_TRAIN_ONLY",
+  "data_sha256": "4841c6ee80e89a4baeeabafc4251d9854ffc4a7b3f877b3c62de08251eca6192",
+  "annotation_context_sha256": "9f658ccd9208c3385c3405b0347b4264fb5024daf00351740f14ca6ceb35712a",
+  "fit_examples": 4884,
+  "internal_dev_examples": 1000,
+  "primary": 150,
+  "source_access": {
+    "descriptor_files": 29,
+    "waveform_file_reads": 26,
+    "annotation_hash_reads": 26,
+    "waveform_bytes": 1303811968,
+    "physical_epochs_decoded": 5914,
+    "source_io_seconds": 1.6123867489950499
+  },
+  "raw_VAL_reads": 0,
+  "excluded_source_reads": 0,
+  "normalization_fit_people": 10,
+  "normalization_historical_P3B_modified": false,
+  "cache": "newly verified calibrated physical samples with original coordinates; not legacy trimmed NPZ",
+  "context": "only immediately adjacent physical epochs in the same approved TRAIN recording"
+}
