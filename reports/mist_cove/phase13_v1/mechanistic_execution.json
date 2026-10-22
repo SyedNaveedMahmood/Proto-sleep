@@ -1,0 +1,43 @@
+{
+  "status": "COMPLETE",
+  "original_primary": 150,
+  "new_state_cases": 900,
+  "historical_state_unchanged": true,
+  "source_access": {
+    "descriptor_files": 0,
+    "waveform_file_reads": 0,
+    "annotation_hash_reads": 0,
+    "waveform_bytes": 0,
+    "physical_epochs_decoded": 0,
+    "source_io_seconds": 0.0
+  },
+  "resources": {
+    "cached_head_queries": 122884350,
+    "feature_cache_example_forwards": 3300,
+    "native_full_example_forwards": 19050,
+    "tables": 3750,
+    "exact_tables": 3750,
+    "full_identity_max_abs": 0.0,
+    "wall_seconds": 320.8022071529995,
+    "GPU_seconds": 0,
+    "query_unit": "one cached availability state, not a full-network training exposure"
+  },
+  "secondary": "annotation-only prior-enriched cases, no new mechanistic pooling",
+  "new_view_namespace": "25-case mechanistic ordinal, matched across all36states; independent from1000-case development ordinal",
+  "between_family_caution": "original whole-epoch mild32Hz differs from new localized35Hz; no fair cross-family nuisance superiority claim",
+  "table_column_order": {
+    "original": [
+      "base",
+      "mild_hf",
+      "drift",
+      "gain",
+      "neutral_.01"
+    ],
+    "new": [
+      "base",
+      "mild_local_HF",
+      "gain",
+      "neutral_.01_at3000_only"
+    ]
+  }
+}

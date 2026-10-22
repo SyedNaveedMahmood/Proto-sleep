@@ -1,0 +1,53 @@
+{
+  "status": "FROZEN_BEFORE_PHASE_XIII_PREDICTIONS",
+  "canonical_sha256": "f338e63e76a5969aba9e61920aa8a61136c4d64023ca13d88b19da45b582f89b",
+  "primary": 150,
+  "primary_missing": 0,
+  "primary_old_extended_overlap": 0,
+  "secondary": 30,
+  "secondary_strata": {
+    "N1_error": {
+      "selected": 5,
+      "missing": 0
+    },
+    "N2_N3_error": {
+      "selected": 5,
+      "missing": 0
+    },
+    "REM_N2_error": {
+      "selected": 5,
+      "missing": 0
+    },
+    "high_confidence_error": {
+      "selected": 5,
+      "missing": 0
+    },
+    "correct_compact": {
+      "selected": 5,
+      "missing": 0
+    },
+    "global_dependence": {
+      "selected": 5,
+      "missing": 0
+    }
+  },
+  "mechanistic": 25,
+  "fit": 4884,
+  "internal_dev": 1000,
+  "fit_missing": 116,
+  "dev_missing": 0,
+  "fit_group_normalization_reused": true,
+  "normalization_sha256": "ba583a0cc501570599c593a2218eb3d2b803a1262dcca3e0d42afac22ac6d0b9",
+  "allocation_sha256": "eaa379402186543b3fc23157fd9971132c4a01d16bf78fadd9f85d516c84e374",
+  "source_access": {
+    "descriptor_files": 29,
+    "waveform_file_reads": 0,
+    "annotation_hash_reads": 0,
+    "waveform_bytes": 0,
+    "physical_epochs_decoded": 0,
+    "source_io_seconds": 0.0
+  },
+  "wall_seconds": 1.1333297130040592,
+  "raw_waveforms_read": false,
+  "raw_VAL_read": false
+}

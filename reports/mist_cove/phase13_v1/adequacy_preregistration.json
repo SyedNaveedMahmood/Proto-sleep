@@ -1,0 +1,72 @@
+{
+  "version": "phase13-adequacy-v1",
+  "seeds": [
+    123,
+    456,
+    789
+  ],
+  "capacities": [
+    "S",
+    "L"
+  ],
+  "routing": [
+    "R0",
+    "R1"
+  ],
+  "horizon": 3000,
+  "milestones": [
+    300,
+    1000,
+    3000
+  ],
+  "batch_size": 16,
+  "optimizer": "Adam",
+  "learning_rate": 0.001,
+  "schedule": "constant",
+  "loss": "mean of clean and one local-HF paired classification CE; no regularizer",
+  "source_sha256": {
+    "src/mist_cove/phase13/model_adequacy.py": "894e6eb12fc3ad21a9e532c022d35e0ca6e58af22b753e6da3c5a8216bcd3b42",
+    "src/mist_cove/phase13/optimization.py": "dfddd73190e38b47ff0b15bb9ed7e58c55743ac0779a759d16d4619a1a48e28e",
+    "src/mist_cove/phase13/training.py": "dc85bcb818aed17b8b97d130c28af61704ea12d6717e2876eedc5d9e99b084cb",
+    "src/mist_cove/phase13/evaluation.py": "342a86cdef08b1cd932fcdc82450643ee7265e3691d06b7c447d4ba067a73850",
+    "src/mist_cove/phase13/seals.py": "a245c9971c39df7ee6e97559cfa466c4f56a27067fe71fdcb0ad36723b9bcfce",
+    "src/mist_cove/phase13/support_operator.py": "0f8b56365dd60891e62d52a37e898a58a2777f12c08892df87c50949a4a47084",
+    "src/mist_cove/phase13/data.py": "4abb511537625ed7947d763aa37543f136d19e7a3cf8093fe1bf9a0bc66938f1",
+    "src/mist_cove/phase13/provenance.py": "fc8724334fe57d3b3cac3add591c33d8cbe70405589b7989e74fafa864ae47c6",
+    "src/mist_cove/phase13/gates.py": "0a6d922440fbc840cab76f206790f8fbd17f1d074cffc78d264389ad26e0938a",
+    "src/mist_cove/phase13/resources.py": "0d56db53cb92cd5cd47ceb6a1c516f82004abe40e3d9748dc7fdd5db01170b4f"
+  },
+  "protocol_sha256": "378ca9dc99008e24b354ac5ba500b5e7e3566670d574e671e5d193854eb59c13",
+  "source_data_sha256": "4841c6ee80e89a4baeeabafc4251d9854ffc4a7b3f877b3c62de08251eca6192",
+  "primary_absolute_adequacy": {
+    "family": "L_R0",
+    "participant_F1_min": 0.6,
+    "N1_recall_min": 0.2,
+    "every_class_F1_min": 0.1,
+    "all_seeds": true
+  },
+  "primary_width": {
+    "pair": "L_R0 minus S_R0 at3000",
+    "participant_F1_delta_min": 0.03,
+    "other_class_F1_penalty_max": 0.1,
+    "all_seeds": true
+  },
+  "primary_exposure": {
+    "pair": "S_R0 step3000 minus300",
+    "participant_F1_delta_min": 0.03,
+    "N1_recall_delta_min": 0.1,
+    "all_seeds": true
+  },
+  "primary_routing": {
+    "pair": "L_R1 minus L_R0 at3000",
+    "strong_local_HF_participant_F1_delta_min": 0.02,
+    "clean_penalty_max": 0.02,
+    "class_F1_penalty_max": 0.1,
+    "all_seeds": true
+  },
+  "confirmatory_trajectories_max": 12,
+  "confirmatory_updates_max": 36000,
+  "scientific_CPU_seconds_max": 14400,
+  "main_CPU_seconds_max": 10000,
+  "selection": "fixed final3000; no early stopping, sweeps, M2, best-checkpoint selection or all15 final fit"
+}

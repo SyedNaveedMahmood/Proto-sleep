@@ -1,0 +1,18 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Local blinded morphology review</title>
+<style>body{font:16px system-ui;max-width:1400px;margin:20px auto;padding:0 16px}canvas{border:1px solid #888;width:100%;height:360px}label{margin-right:15px}button,input,select{font:inherit}#records{white-space:pre-wrap}#message{color:#26496b}</style>
+<h1>Blinded single-channel morphology review</h1><p>Fpz-Cz ·100Hz · calibrated µV. Describe observable patterns; use uncertain or not assessable when this lead is insufficient. No stage or model overlay is provided.</p>
+<label>Private access token <input id="token" type="password" autocomplete="off"></label><button id="login">Open assigned cases</button>
+<p><select id="cases"></select><button id="load">Load case</button><span id="message"></span></p>
+<label>Zoom <select id="zoom"><option>1</option><option>2</option><option>4</option><option>8</option></select></label>
+<label>Pan seconds <input id="pan" type="range" min="0" max="30" step=".01" value="0"></label>
+<label>Vertical offset µV <input id="offset" type="number" min="-500" max="500" value="0" step="10"></label>
+<label><input type="checkbox" id="context">Show available adjacent physical context</label>
+<canvas id="plot" width="1300" height="360"></canvas><p>Grid spacing50µV; no automatic gain normalization. Drag within the original0–30s epoch to mark a half-open interval. Context is display-only.</p>
+<label>Category <select id="category"></select></label><label>State <select id="state"></select></label>
+<label>Confidence0–3 <input id="confidence" type="number" min="0" max="3" value="1"></label>
+<label><input id="artifact" type="checkbox">Possible artifact</label><label><input id="quality" type="checkbox">Insufficient quality</label>
+<button id="add">Add assessment</button><pre id="records"></pre>
+<p><label>Notes <textarea id="notes" maxlength="1000" rows="3" cols="70"></textarea></label></p>
+<button id="save">Save case</button><button id="lock">Lock this review and export</button>
+<p>Reviewers work independently. Locking ends editing and preserves the annotation chain. Do not enter participant identifiers.</p>
+<script src="/app.js"></script></html>

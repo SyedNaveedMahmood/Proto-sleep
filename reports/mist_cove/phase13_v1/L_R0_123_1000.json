@@ -1,0 +1,1131 @@
+{
+  "capacity": "L",
+  "routing": "R0",
+  "seed": 123,
+  "step": 1000,
+  "counts": {
+    "trainable": 11781,
+    "frozen": 193,
+    "stored": 11974,
+    "local_convolution_receptive_field_samples": 17,
+    "local_atom_samples": 200,
+    "global_features": 7,
+    "temporal_context_epochs": 1
+  },
+  "training_loss_last100": 0.6948369774222374,
+  "gradient_norm_last100": 1.2789978489279747,
+  "parameter_drift_L2": 10.832633018493652,
+  "fit_monitor": {
+    "metrics": {
+      "accuracy": 0.72,
+      "macro_f1": 0.71642464837766,
+      "per_stage_f1": [
+        0.9424083769633508,
+        0.45751633986928103,
+        0.6775510204081633,
+        0.91005291005291,
+        0.5945945945945946
+      ],
+      "balanced_accuracy": 0.72,
+      "five_class_balanced_accuracy_zero_absent": 0.72,
+      "per_stage_recall": [
+        0.9,
+        0.35,
+        0.83,
+        0.86,
+        0.66
+      ],
+      "support": [
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "absent_truth_classes": [],
+      "kappa": 0.65,
+      "confusion_matrix": [
+        [
+          90,
+          0,
+          5,
+          3,
+          2
+        ],
+        [
+          0,
+          35,
+          26,
+          0,
+          39
+        ],
+        [
+          0,
+          2,
+          83,
+          0,
+          15
+        ],
+        [
+          1,
+          0,
+          13,
+          86,
+          0
+        ],
+        [
+          0,
+          16,
+          18,
+          0,
+          66
+        ]
+      ],
+      "n_epochs": 500,
+      "absent_class_policy": "fixed-five Macro-F1: undefined F1=0; balanced accuracy averages observed truth classes; undefined kappa/recall=null",
+      "mean_subject_macro_f1": 0.700973243651427,
+      "unscored_epochs": 0,
+      "subject_macro_f1_distribution": {
+        "n": 10,
+        "mean": 0.700973243651427,
+        "median": 0.6942592898128288,
+        "min": 0.6023809523809524,
+        "max": 0.792063492063492,
+        "q25": 0.6679206250144465,
+        "q75": 0.7451320307037185
+      },
+      "mean_subject_macro_f1_bootstrap95": {
+        "n_participants": 10,
+        "mean": 0.700973243651427,
+        "bootstrap95": [
+          0.6649824671567155,
+          0.7352150346646064
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "calibration": {
+        "NLL": 0.7031425645182278,
+        "Brier": 0.38824261042847213,
+        "ECE15": 0.07990615469447016,
+        "mean_confidence_correct": 0.6830327678624498,
+        "mean_confidence_wrong": 0.5296794730163072,
+        "high_confidence_wrong_count": 1,
+        "high_confidence_wrong_fraction_all": 0.002,
+        "high_confidence_wrong_fraction_errors": 0.007142857142857143
+      },
+      "stage_mean_subject_f1": [
+        0.9415204678362571,
+        0.40226636108989045,
+        0.6834328092086713,
+        0.9022556390977442,
+        0.5753909410245716
+      ]
+    },
+    "collapse": {
+      "predicted_counts": [
+        91,
+        53,
+        145,
+        89,
+        122
+      ],
+      "predicted_classes": 5,
+      "largest_fraction": 0.29,
+      "N1_not_predicted": false,
+      "near_single_class": false
+    },
+    "prediction_stability": 1.0,
+    "mean_confidence": 0.6400938630104065,
+    "mean_entropy": 0.844237208366394,
+    "gate_mean": 1.0,
+    "gate_std": 0.0,
+    "gate_near_zero": 0.0,
+    "gate_near_one": 1.0,
+    "gate_collapsed": null,
+    "evidence_saturated_fraction": 0.3518933355808258,
+    "mean_abs_local_logit": 1.6732945442199707,
+    "mean_sum_abs_local": 2.226116180419922,
+    "mean_abs_global_logit": 0.8956133723258972,
+    "contribution_change": 0.0,
+    "same_local_contributions_fraction": 1.0,
+    "additive_identity": "BITWISE",
+    "label_preservation": "ORIGINAL"
+  },
+  "development": {
+    "clean": {
+      "metrics": {
+        "accuracy": 0.669,
+        "macro_f1": 0.6569826298003782,
+        "per_stage_f1": [
+          0.92,
+          0.4412811387900356,
+          0.5934489402697495,
+          0.8626506024096385,
+          0.4675324675324675
+        ],
+        "balanced_accuracy": 0.669,
+        "five_class_balanced_accuracy_zero_absent": 0.669,
+        "per_stage_recall": [
+          0.92,
+          0.31,
+          0.77,
+          0.895,
+          0.45
+        ],
+        "support": [
+          200,
+          200,
+          200,
+          200,
+          200
+        ],
+        "absent_truth_classes": [],
+        "kappa": 0.58625,
+        "confusion_matrix": [
+          [
+            184,
+            1,
+            5,
+            10,
+            0
+          ],
+          [
+            14,
+            62,
+            45,
+            4,
+            75
+          ],
+          [
+            1,
+            3,
+            154,
+            22,
+            20
+          ],
+          [
+            0,
+            0,
+            21,
+            179,
+            0
+          ],
+          [
+            1,
+            15,
+            94,
+            0,
+            90
+          ]
+        ],
+        "n_epochs": 1000,
+        "absent_class_policy": "fixed-five Macro-F1: undefined F1=0; balanced accuracy averages observed truth classes; undefined kappa/recall=null",
+        "mean_subject_macro_f1": 0.6423995205177058,
+        "unscored_epochs": 0,
+        "subject_macro_f1_distribution": {
+          "n": 5,
+          "mean": 0.6423995205177058,
+          "median": 0.6301466768037036,
+          "min": 0.4846462536644032,
+          "max": 0.8073316041209424,
+          "q25": 0.49096981692231567,
+          "q75": 0.798903251077164
+        },
+        "mean_subject_macro_f1_bootstrap95": {
+          "n_participants": 5,
+          "mean": 0.6423995205177058,
+          "bootstrap95": [
+            0.5162757635954283,
+            0.7685232774399833
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        },
+        "calibration": {
+          "NLL": 0.8422248879576271,
+          "Brier": 0.44977513115749984,
+          "ECE15": 0.034391648150238034,
+          "mean_confidence_correct": 0.7085925878543141,
+          "mean_confidence_wrong": 0.5763893772155678,
+          "high_confidence_wrong_count": 7,
+          "high_confidence_wrong_fraction_all": 0.007,
+          "high_confidence_wrong_fraction_errors": 0.021148036253776436
+        },
+        "stage_mean_subject_f1": [
+          0.9210304964690931,
+          0.3830110430649837,
+          0.6262656879762025,
+          0.8657360501332132,
+          0.41595432494503654
+        ]
+      },
+      "collapse": {
+        "predicted_counts": [
+          200,
+          81,
+          319,
+          215,
+          185
+        ],
+        "predicted_classes": 5,
+        "largest_fraction": 0.319,
+        "N1_not_predicted": false,
+        "near_single_class": false
+      },
+      "prediction_stability": 1.0,
+      "mean_confidence": 0.6648333668708801,
+      "mean_entropy": 0.8138418793678284,
+      "gate_mean": 1.0,
+      "gate_std": 0.0,
+      "gate_near_zero": 0.0,
+      "gate_near_one": 1.0,
+      "gate_collapsed": null,
+      "evidence_saturated_fraction": 0.3610000014305115,
+      "mean_abs_local_logit": 1.6441539525985718,
+      "mean_sum_abs_local": 2.2106919288635254,
+      "mean_abs_global_logit": 0.8585185408592224,
+      "contribution_change": 0.0,
+      "same_local_contributions_fraction": 1.0,
+      "additive_identity": "BITWISE",
+      "label_preservation": "ORIGINAL"
+    },
+    "mild_local_HF": {
+      "metrics": {
+        "accuracy": 0.67,
+        "macro_f1": 0.6579380225884157,
+        "per_stage_f1": [
+          0.9226932668329177,
+          0.4412811387900356,
+          0.5934489402697495,
+          0.8647342995169082,
+          0.4675324675324675
+        ],
+        "balanced_accuracy": 0.67,
+        "five_class_balanced_accuracy_zero_absent": 0.67,
+        "per_stage_recall": [
+          0.925,
+          0.31,
+          0.77,
+          0.895,
+          0.45
+        ],
+        "support": [
+          200,
+          200,
+          200,
+          200,
+          200
+        ],
+        "absent_truth_classes": [],
+        "kappa": 0.5875,
+        "confusion_matrix": [
+          [
+            185,
+            1,
+            5,
+            9,
+            0
+          ],
+          [
+            14,
+            62,
+            45,
+            4,
+            75
+          ],
+          [
+            1,
+            3,
+            154,
+            22,
+            20
+          ],
+          [
+            0,
+            0,
+            21,
+            179,
+            0
+          ],
+          [
+            1,
+            15,
+            94,
+            0,
+            90
+          ]
+        ],
+        "n_epochs": 1000,
+        "absent_class_policy": "fixed-five Macro-F1: undefined F1=0; balanced accuracy averages observed truth classes; undefined kappa/recall=null",
+        "mean_subject_macro_f1": 0.6433381321069198,
+        "unscored_epochs": 0,
+        "subject_macro_f1_distribution": {
+          "n": 5,
+          "mean": 0.6433381321069198,
+          "median": 0.6301466768037036,
+          "min": 0.4846462536644032,
+          "max": 0.8073316041209424,
+          "q25": 0.49566287486838567,
+          "q75": 0.798903251077164
+        },
+        "mean_subject_macro_f1_bootstrap95": {
+          "n_participants": 5,
+          "mean": 0.6433381321069198,
+          "bootstrap95": [
+            0.5181529867738563,
+            0.7685232774399833
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        },
+        "calibration": {
+          "NLL": 0.8420865029431135,
+          "Brier": 0.4495989135633736,
+          "ECE15": 0.03822682455292532,
+          "mean_confidence_correct": 0.708256609191935,
+          "mean_confidence_wrong": 0.576259588269257,
+          "high_confidence_wrong_count": 7,
+          "high_confidence_wrong_fraction_all": 0.007,
+          "high_confidence_wrong_fraction_errors": 0.021212121212121213
+        },
+        "stage_mean_subject_f1": [
+          0.9238876393262359,
+          0.3830110430649837,
+          0.6262656879762025,
+          0.8675719652221405,
+          0.41595432494503654
+        ]
+      },
+      "collapse": {
+        "predicted_counts": [
+          201,
+          81,
+          319,
+          214,
+          185
+        ],
+        "predicted_classes": 5,
+        "largest_fraction": 0.319,
+        "N1_not_predicted": false,
+        "near_single_class": false
+      },
+      "prediction_stability": 0.999,
+      "mean_confidence": 0.6646975874900818,
+      "mean_entropy": 0.8141977787017822,
+      "gate_mean": 1.0,
+      "gate_std": 0.0,
+      "gate_near_zero": 0.0,
+      "gate_near_one": 1.0,
+      "gate_collapsed": null,
+      "evidence_saturated_fraction": 0.3609600067138672,
+      "mean_abs_local_logit": 1.6443015336990356,
+      "mean_sum_abs_local": 2.210620880126953,
+      "mean_abs_global_logit": 0.858169436454773,
+      "contribution_change": 3.3642998459981754e-05,
+      "same_local_contributions_fraction": 0.9333333373069763,
+      "additive_identity": "BITWISE",
+      "label_preservation": "UNVERIFIED_PHYSICAL_SENSITIVITY"
+    },
+    "strong_local_HF": {
+      "metrics": {
+        "accuracy": 0.682,
+        "macro_f1": 0.6672405996938113,
+        "per_stage_f1": [
+          0.92018779342723,
+          0.46153846153846156,
+          0.5967741935483871,
+          0.8905109489051095,
+          0.4671916010498688
+        ],
+        "balanced_accuracy": 0.6819999999999999,
+        "five_class_balanced_accuracy_zero_absent": 0.6819999999999999,
+        "per_stage_recall": [
+          0.98,
+          0.33,
+          0.74,
+          0.915,
+          0.445
+        ],
+        "support": [
+          200,
+          200,
+          200,
+          200,
+          200
+        ],
+        "absent_truth_classes": [],
+        "kappa": 0.6025,
+        "confusion_matrix": [
+          [
+            196,
+            1,
+            1,
+            2,
+            0
+          ],
+          [
+            19,
+            66,
+            41,
+            3,
+            71
+          ],
+          [
+            4,
+            4,
+            148,
+            23,
+            21
+          ],
+          [
+            4,
+            0,
+            13,
+            183,
+            0
+          ],
+          [
+            3,
+            15,
+            93,
+            0,
+            89
+          ]
+        ],
+        "n_epochs": 1000,
+        "absent_class_policy": "fixed-five Macro-F1: undefined F1=0; balanced accuracy averages observed truth classes; undefined kappa/recall=null",
+        "mean_subject_macro_f1": 0.654089125398529,
+        "unscored_epochs": 0,
+        "subject_macro_f1_distribution": {
+          "n": 5,
+          "mean": 0.654089125398529,
+          "median": 0.6727314670978544,
+          "min": 0.4879324639038195,
+          "max": 0.8074196079007306,
+          "q25": 0.5241948656087296,
+          "q75": 0.7781672224815107
+        },
+        "mean_subject_macro_f1_bootstrap95": {
+          "n_participants": 5,
+          "mean": 0.654089125398529,
+          "bootstrap95": [
+            0.5393972252245905,
+            0.7687810255724674
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        },
+        "calibration": {
+          "NLL": 0.8488771757848479,
+          "Brier": 0.4439142587298678,
+          "ECE15": 0.036542833462195376,
+          "mean_confidence_correct": 0.6998314988238116,
+          "mean_confidence_wrong": 0.5520177110675296,
+          "high_confidence_wrong_count": 7,
+          "high_confidence_wrong_fraction_all": 0.007,
+          "high_confidence_wrong_fraction_errors": 0.0220125786163522
+        },
+        "stage_mean_subject_f1": [
+          0.922756293705523,
+          0.4113403330717422,
+          0.626810210695515,
+          0.8945368766749583,
+          0.41500191284490623
+        ]
+      },
+      "collapse": {
+        "predicted_counts": [
+          226,
+          86,
+          296,
+          211,
+          181
+        ],
+        "predicted_classes": 5,
+        "largest_fraction": 0.296,
+        "N1_not_predicted": false,
+        "near_single_class": false
+      },
+      "prediction_stability": 0.948,
+      "mean_confidence": 0.652826726436615,
+      "mean_entropy": 0.8421611189842224,
+      "gate_mean": 1.0,
+      "gate_std": 0.0,
+      "gate_near_zero": 0.0,
+      "gate_near_one": 1.0,
+      "gate_collapsed": null,
+      "evidence_saturated_fraction": 0.36161333322525024,
+      "mean_abs_local_logit": 1.645966649055481,
+      "mean_sum_abs_local": 2.2053682804107666,
+      "mean_abs_global_logit": 0.8484134078025818,
+      "contribution_change": 0.0027010689955204725,
+      "same_local_contributions_fraction": 0.9333333373069763,
+      "additive_identity": "BITWISE",
+      "label_preservation": "UNVERIFIED_PHYSICAL_SENSITIVITY"
+    },
+    "global_HF": {
+      "metrics": {
+        "accuracy": 0.675,
+        "macro_f1": 0.6626129460401302,
+        "per_stage_f1": [
+          0.926829268292683,
+          0.45774647887323944,
+          0.5905511811023622,
+          0.8743961352657005,
+          0.4635416666666667
+        ],
+        "balanced_accuracy": 0.6749999999999999,
+        "five_class_balanced_accuracy_zero_absent": 0.6749999999999999,
+        "per_stage_recall": [
+          0.95,
+          0.325,
+          0.75,
+          0.905,
+          0.445
+        ],
+        "support": [
+          200,
+          200,
+          200,
+          200,
+          200
+        ],
+        "absent_truth_classes": [],
+        "kappa": 0.59375,
+        "confusion_matrix": [
+          [
+            190,
+            1,
+            2,
+            7,
+            0
+          ],
+          [
+            15,
+            65,
+            43,
+            3,
+            74
+          ],
+          [
+            3,
+            3,
+            150,
+            23,
+            21
+          ],
+          [
+            0,
+            0,
+            19,
+            181,
+            0
+          ],
+          [
+            2,
+            15,
+            94,
+            0,
+            89
+          ]
+        ],
+        "n_epochs": 1000,
+        "absent_class_policy": "fixed-five Macro-F1: undefined F1=0; balanced accuracy averages observed truth classes; undefined kappa/recall=null",
+        "mean_subject_macro_f1": 0.6495550634179934,
+        "unscored_epochs": 0,
+        "subject_macro_f1_distribution": {
+          "n": 5,
+          "mean": 0.6495550634179934,
+          "median": 0.6412193657907176,
+          "min": 0.4942983022802484,
+          "max": 0.8026018699421433,
+          "q25": 0.5151745479714982,
+          "q75": 0.7944812311053593
+        },
+        "mean_subject_macro_f1_bootstrap95": {
+          "n_participants": 5,
+          "mean": 0.6495550634179934,
+          "bootstrap95": [
+            0.5320330132588422,
+            0.7670771135771446
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        },
+        "calibration": {
+          "NLL": 0.8401904449489696,
+          "Brier": 0.44446679412554113,
+          "ECE15": 0.03576463407878174,
+          "mean_confidence_correct": 0.7057919729938696,
+          "mean_confidence_wrong": 0.5648646192437596,
+          "high_confidence_wrong_count": 8,
+          "high_confidence_wrong_fraction_all": 0.008,
+          "high_confidence_wrong_fraction_errors": 0.024615384615384615
+        },
+        "stage_mean_subject_f1": [
+          0.9291379622167086,
+          0.40876973863705157,
+          0.6219458005166766,
+          0.8773314844076445,
+          0.4105903313118854
+        ]
+      },
+      "collapse": {
+        "predicted_counts": [
+          210,
+          84,
+          308,
+          214,
+          184
+        ],
+        "predicted_classes": 5,
+        "largest_fraction": 0.308,
+        "N1_not_predicted": false,
+        "near_single_class": false
+      },
+      "prediction_stability": 0.977,
+      "mean_confidence": 0.6599906086921692,
+      "mean_entropy": 0.8266724348068237,
+      "gate_mean": 1.0,
+      "gate_std": 0.0,
+      "gate_near_zero": 0.0,
+      "gate_near_one": 1.0,
+      "gate_collapsed": null,
+      "evidence_saturated_fraction": 0.35998666286468506,
+      "mean_abs_local_logit": 1.6500427722930908,
+      "mean_sum_abs_local": 2.2072317600250244,
+      "mean_abs_global_logit": 0.848783016204834,
+      "contribution_change": 0.0013248181203380227,
+      "same_local_contributions_fraction": 0.0,
+      "additive_identity": "BITWISE",
+      "label_preservation": "UNVERIFIED_PHYSICAL_SENSITIVITY"
+    },
+    "drift": {
+      "metrics": {
+        "accuracy": 0.668,
+        "macro_f1": 0.654401757930186,
+        "per_stage_f1": [
+          0.9226932668329177,
+          0.4326241134751773,
+          0.59375,
+          0.8646080760095012,
+          0.4583333333333333
+        ],
+        "balanced_accuracy": 0.6679999999999999,
+        "five_class_balanced_accuracy_zero_absent": 0.6679999999999999,
+        "per_stage_recall": [
+          0.925,
+          0.305,
+          0.76,
+          0.91,
+          0.44
+        ],
+        "support": [
+          200,
+          200,
+          200,
+          200,
+          200
+        ],
+        "absent_truth_classes": [],
+        "kappa": 0.585,
+        "confusion_matrix": [
+          [
+            185,
+            1,
+            3,
+            11,
+            0
+          ],
+          [
+            14,
+            61,
+            44,
+            4,
+            77
+          ],
+          [
+            1,
+            4,
+            152,
+            24,
+            19
+          ],
+          [
+            0,
+            0,
+            18,
+            182,
+            0
+          ],
+          [
+            1,
+            16,
+            95,
+            0,
+            88
+          ]
+        ],
+        "n_epochs": 1000,
+        "absent_class_policy": "fixed-five Macro-F1: undefined F1=0; balanced accuracy averages observed truth classes; undefined kappa/recall=null",
+        "mean_subject_macro_f1": 0.641197510545224,
+        "unscored_epochs": 0,
+        "subject_macro_f1_distribution": {
+          "n": 5,
+          "mean": 0.641197510545224,
+          "median": 0.6419735978599788,
+          "min": 0.47818208519239447,
+          "max": 0.7985172943441755,
+          "q25": 0.49519946808510634,
+          "q75": 0.7921151072444649
+        },
+        "mean_subject_macro_f1_bootstrap95": {
+          "n_participants": 5,
+          "mean": 0.641197510545224,
+          "bootstrap95": [
+            0.5177473408829961,
+            0.764647680207452
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        },
+        "calibration": {
+          "NLL": 0.8434907335902435,
+          "Brier": 0.45008692187735994,
+          "ECE15": 0.0377628662036769,
+          "mean_confidence_correct": 0.7085977943909882,
+          "mean_confidence_wrong": 0.5760943180845484,
+          "high_confidence_wrong_count": 7,
+          "high_confidence_wrong_fraction_all": 0.007,
+          "high_confidence_wrong_fraction_errors": 0.02108433734939759
+        },
+        "stage_mean_subject_f1": [
+          0.9238928972262306,
+          0.3830456944134756,
+          0.6257185110288318,
+          0.8692412815305751,
+          0.40408916852700694
+        ]
+      },
+      "collapse": {
+        "predicted_counts": [
+          201,
+          82,
+          312,
+          221,
+          184
+        ],
+        "predicted_classes": 5,
+        "largest_fraction": 0.312,
+        "N1_not_predicted": false,
+        "near_single_class": false
+      },
+      "prediction_stability": 0.979,
+      "mean_confidence": 0.6646066308021545,
+      "mean_entropy": 0.8145796060562134,
+      "gate_mean": 1.0,
+      "gate_std": 0.0,
+      "gate_near_zero": 0.0,
+      "gate_near_one": 1.0,
+      "gate_collapsed": null,
+      "evidence_saturated_fraction": 0.36134666204452515,
+      "mean_abs_local_logit": 1.6459591388702393,
+      "mean_sum_abs_local": 2.209470272064209,
+      "mean_abs_global_logit": 0.8578677773475647,
+      "contribution_change": 0.007717321626842022,
+      "same_local_contributions_fraction": 0.0,
+      "additive_identity": "BITWISE",
+      "label_preservation": "UNVERIFIED_PHYSICAL_SENSITIVITY"
+    },
+    "gain": {
+      "metrics": {
+        "accuracy": 0.672,
+        "macro_f1": 0.6526990538129345,
+        "per_stage_f1": [
+          0.9313725490196079,
+          0.41025641025641024,
+          0.5859375,
+          0.8735632183908046,
+          0.46236559139784944
+        ],
+        "balanced_accuracy": 0.6719999999999999,
+        "five_class_balanced_accuracy_zero_absent": 0.6719999999999999,
+        "per_stage_recall": [
+          0.95,
+          0.28,
+          0.75,
+          0.95,
+          0.43
+        ],
+        "support": [
+          200,
+          200,
+          200,
+          200,
+          200
+        ],
+        "absent_truth_classes": [],
+        "kappa": 0.59,
+        "confusion_matrix": [
+          [
+            190,
+            1,
+            1,
+            8,
+            0
+          ],
+          [
+            15,
+            56,
+            53,
+            4,
+            72
+          ],
+          [
+            1,
+            2,
+            150,
+            33,
+            14
+          ],
+          [
+            0,
+            0,
+            10,
+            190,
+            0
+          ],
+          [
+            2,
+            14,
+            98,
+            0,
+            86
+          ]
+        ],
+        "n_epochs": 1000,
+        "absent_class_policy": "fixed-five Macro-F1: undefined F1=0; balanced accuracy averages observed truth classes; undefined kappa/recall=null",
+        "mean_subject_macro_f1": 0.6401916376036224,
+        "unscored_epochs": 0,
+        "subject_macro_f1_distribution": {
+          "n": 5,
+          "mean": 0.6401916376036224,
+          "median": 0.6338104993484173,
+          "min": 0.4780053176687364,
+          "max": 0.8158063631972752,
+          "q25": 0.48845144243576166,
+          "q75": 0.7848845653679215
+        },
+        "mean_subject_macro_f1_bootstrap95": {
+          "n_participants": 5,
+          "mean": 0.6401916376036224,
+          "bootstrap95": [
+            0.5133448039114827,
+            0.7670384712957621
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        },
+        "calibration": {
+          "NLL": 0.8686575737564424,
+          "Brier": 0.4529206940866677,
+          "ECE15": 0.021496850442902518,
+          "mean_confidence_correct": 0.7241509325529639,
+          "mean_confidence_wrong": 0.587982000159545,
+          "high_confidence_wrong_count": 9,
+          "high_confidence_wrong_fraction_all": 0.009,
+          "high_confidence_wrong_fraction_errors": 0.027439024390243903
+        },
+        "stage_mean_subject_f1": [
+          0.9333816363352229,
+          0.35808427718913655,
+          0.6208989269454784,
+          0.880423756581318,
+          0.4081695909669564
+        ]
+      },
+      "collapse": {
+        "predicted_counts": [
+          208,
+          73,
+          312,
+          235,
+          172
+        ],
+        "predicted_classes": 5,
+        "largest_fraction": 0.312,
+        "N1_not_predicted": false,
+        "near_single_class": false
+      },
+      "prediction_stability": 0.938,
+      "mean_confidence": 0.6794875264167786,
+      "mean_entropy": 0.7925859689712524,
+      "gate_mean": 1.0,
+      "gate_std": 0.0,
+      "gate_near_zero": 0.0,
+      "gate_near_one": 1.0,
+      "gate_collapsed": null,
+      "evidence_saturated_fraction": 0.3673466742038727,
+      "mean_abs_local_logit": 1.6546449661254883,
+      "mean_sum_abs_local": 2.2140579223632812,
+      "mean_abs_global_logit": 0.8642488121986389,
+      "contribution_change": 0.009393226355314255,
+      "same_local_contributions_fraction": 0.0,
+      "additive_identity": "BITWISE",
+      "label_preservation": "UNVERIFIED_PHYSICAL_SENSITIVITY"
+    },
+    "broadband": {
+      "metrics": {
+        "accuracy": 0.689,
+        "macro_f1": 0.6786575910668409,
+        "per_stage_f1": [
+          0.9270588235294117,
+          0.5276872964169381,
+          0.591715976331361,
+          0.8762376237623762,
+          0.47058823529411764
+        ],
+        "balanced_accuracy": 0.6890000000000001,
+        "five_class_balanced_accuracy_zero_absent": 0.6890000000000001,
+        "per_stage_recall": [
+          0.985,
+          0.405,
+          0.75,
+          0.885,
+          0.42
+        ],
+        "support": [
+          200,
+          200,
+          200,
+          200,
+          200
+        ],
+        "absent_truth_classes": [],
+        "kappa": 0.6112499999999998,
+        "confusion_matrix": [
+          [
+            197,
+            1,
+            1,
+            1,
+            0
+          ],
+          [
+            17,
+            81,
+            44,
+            3,
+            55
+          ],
+          [
+            4,
+            5,
+            150,
+            23,
+            18
+          ],
+          [
+            4,
+            0,
+            19,
+            177,
+            0
+          ],
+          [
+            3,
+            20,
+            93,
+            0,
+            84
+          ]
+        ],
+        "n_epochs": 1000,
+        "absent_class_policy": "fixed-five Macro-F1: undefined F1=0; balanced accuracy averages observed truth classes; undefined kappa/recall=null",
+        "mean_subject_macro_f1": 0.6658749809535396,
+        "unscored_epochs": 0,
+        "subject_macro_f1_distribution": {
+          "n": 5,
+          "mean": 0.6658749809535396,
+          "median": 0.7063124584654702,
+          "min": 0.49478575008614323,
+          "max": 0.8070922006938519,
+          "q25": 0.5345708071323972,
+          "q75": 0.7866136883898357
+        },
+        "mean_subject_macro_f1_bootstrap95": {
+          "n_participants": 5,
+          "mean": 0.6658749809535396,
+          "bootstrap95": [
+            0.5530051145805103,
+            0.7787448473265691
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        },
+        "calibration": {
+          "NLL": 0.8443480346559958,
+          "Brier": 0.44199000781343384,
+          "ECE15": 0.04353310744183484,
+          "mean_confidence_correct": 0.7044677936164726,
+          "mean_confidence_wrong": 0.5639081194765551,
+          "high_confidence_wrong_count": 8,
+          "high_confidence_wrong_fraction_all": 0.008,
+          "high_confidence_wrong_fraction_errors": 0.02572347266881029
+        },
+        "stage_mean_subject_f1": [
+          0.9299193147916286,
+          0.4769963668862077,
+          0.6225961279926036,
+          0.8787461867338028,
+          0.4211169083634555
+        ]
+      },
+      "collapse": {
+        "predicted_counts": [
+          225,
+          107,
+          307,
+          204,
+          157
+        ],
+        "predicted_classes": 5,
+        "largest_fraction": 0.307,
+        "N1_not_predicted": false,
+        "near_single_class": false
+      },
+      "prediction_stability": 0.941,
+      "mean_confidence": 0.6607537865638733,
+      "mean_entropy": 0.8241305351257324,
+      "gate_mean": 1.0,
+      "gate_std": 0.0,
+      "gate_near_zero": 0.0,
+      "gate_near_one": 1.0,
+      "gate_collapsed": null,
+      "evidence_saturated_fraction": 0.35872000455856323,
+      "mean_abs_local_logit": 1.6512480974197388,
+      "mean_sum_abs_local": 2.196784734725952,
+      "mean_abs_global_logit": 0.8627938628196716,
+      "contribution_change": 0.009273074567317963,
+      "same_local_contributions_fraction": 0.0,
+      "additive_identity": "BITWISE",
+      "label_preservation": "UNVERIFIED_PHYSICAL_SENSITIVITY"
+    }
+  },
+  "checkpoint_byte_sha256": "d9c7e3e845cf7eb5a5edfcd32d0d0f3b4e986eb6a7093300f016fed8fc77667c",
+  "state_digest": "cf5c21011240cc8e5ad996f40eb55e29159ac70967286fcc487961115f873796",
+  "stream_sha256": "a39f6c67aa7263e9444221ec987a56760d590139a75cf8749696c879e6518d64",
+  "clean_exposures": 16000,
+  "paired_exposures": 16000,
+  "evaluation_seconds": 1.1580227550002746,
+  "trajectory_wall_to_milestone": 16.271580999993603
+}

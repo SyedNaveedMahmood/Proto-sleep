@@ -1,0 +1,51 @@
+{
+  "version": "phase13-v1",
+  "base_commit": "798af5629b7067af5230f64681926829e1178007",
+  "base_tree": "b1f4f4c55d6ab3d4e355f540f3137c6f282ac84e",
+  "authorization_sha256": "b5b56662e8c2af430208cf15d4a7d7aed866f4a60fe96b29d4fc683700a8557f",
+  "data_roles": [
+    "original_train"
+  ],
+  "forbidden": [
+    "raw_VAL",
+    "RESERVED",
+    "ST",
+    "SHHS",
+    "external",
+    "other_channels",
+    "legacy_trimmed_NPZ",
+    "external_EEG_transfer"
+  ],
+  "primary_annotation_max": 150,
+  "primary_policy": "ranks11 and12 per stage/person after original first10; no outcome replacement",
+  "secondary_max": 30,
+  "duplicate_primary_cases": 15,
+  "seeds": [
+    123,
+    456,
+    789
+  ],
+  "capacities": [
+    "S",
+    "L"
+  ],
+  "routing": [
+    "R0",
+    "R1"
+  ],
+  "trajectories_max": 12,
+  "updates_per_trajectory": 3000,
+  "milestones": [
+    300,
+    1000,
+    3000
+  ],
+  "confirmatory_updates_max": 36000,
+  "engineering_real_overfit_runs_max": 2,
+  "engineering_real_updates_per_run": 1000,
+  "scientific_CPU_seconds_max": 14400,
+  "allocated_GPU_seconds_max": 21600,
+  "CPU_threads": 2,
+  "no_new_M2": true,
+  "no_raw_VAL_access": true
+}

@@ -1,0 +1,99 @@
+{
+  "source_cache": {
+    "track": "SHARED",
+    "status": "COMPLETE",
+    "wall_seconds": 6.3899549469933845,
+    "descriptor_files": 29,
+    "waveform_file_reads": 26,
+    "annotation_hash_reads": 26,
+    "waveform_bytes": 1303811968,
+    "physical_epochs_decoded": 5914,
+    "source_io_seconds": 1.6123867489950499
+  },
+  "annotation_packets": {
+    "track": "A",
+    "status": "COMPLETE",
+    "wall_seconds": 0.0071775340038584545
+  },
+  "previous_model_diagnostics": {
+    "track": "B",
+    "status": "COMPLETE",
+    "wall_seconds": 0.009079794006538577
+  },
+  "generated_resource_pilot": {
+    "track": "ENGINEERING",
+    "status": "COMPLETE",
+    "wall_seconds": 1.288536687992746,
+    "generated_updates": 100
+  },
+  "real_fit_engineering_overfit": {
+    "track": "B_ENGINEERING",
+    "status": "COMPLETE",
+    "wall_seconds": 6.550803776000976,
+    "real_overfit_runs": 2,
+    "optimizer_updates": 2000,
+    "native_examples": 20000
+  },
+  "generated_operator_correctness": {
+    "track": "ENGINEERING",
+    "status": "COMPLETE",
+    "wall_seconds": 0.38352938399475534,
+    "tables": 8,
+    "table_state_evaluations": 262144
+  },
+  "confirmatory_campaign": {
+    "track": "B",
+    "status": "COMPLETE",
+    "wall_seconds": 359.7591282739886,
+    "trajectories": 12,
+    "optimizer_updates": 36000,
+    "native_full_example_forwards": 1422000,
+    "realized_updates": 36000,
+    "peak_RSS_KiB": 737964
+  },
+  "explanation_campaign": {
+    "track": "A_AND_B",
+    "status": "FAILED",
+    "wall_seconds": 0.3491119309910573
+  },
+  "explanation_campaign_gradient_fix": {
+    "track": "A_AND_B",
+    "status": "COMPLETE",
+    "wall_seconds": 320.80219529999886,
+    "cached_head_queries": 122884350,
+    "feature_cache_example_forwards": 3300,
+    "native_full_example_forwards": 19050,
+    "tables": 3750,
+    "exact_tables": 3750,
+    "full_identity_max_abs": 0.0,
+    "GPU_seconds": 0,
+    "query_unit": "one cached availability state, not a full-network training exposure"
+  },
+  "explanation_aggregation": {
+    "track": "A_AND_B",
+    "status": "COMPLETE",
+    "wall_seconds": 0.17916516300465446
+  },
+  "stage_adjusted_analysis": {
+    "track": "B",
+    "status": "COMPLETE",
+    "wall_seconds": 0.4254254139959812
+  },
+  "initial_authentication": {
+    "track": "SHARED",
+    "status": "COMPLETE",
+    "wall_seconds": 1.6663443119905423,
+    "accounting": "restored from separately recorded phase-owned receipt after sequential ledger reconciliation"
+  },
+  "frozen_selection": {
+    "track": "SHARED",
+    "status": "COMPLETE",
+    "wall_seconds": 1.1333297130040592
+  },
+  "classification_statistics": {
+    "track": "B",
+    "status": "COMPLETE_WITH_ENGINEERING_FIX",
+    "wall_seconds": 3.261240683,
+    "accounting": "conservative measured command wall including interpreter startup and initial metrics-signature correction; no model fits repeated"
+  }
+}

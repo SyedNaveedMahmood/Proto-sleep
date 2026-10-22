@@ -1,0 +1,522 @@
+{
+  "contrasts": {
+    "width": {
+      "clean": {
+        "mean": 0.034359619358490044,
+        "seed_means": [
+          0.056841038164754346,
+          0.019655657184203968,
+          0.026582162726511815
+        ],
+        "seed_SD": 0.019775104637242656,
+        "participant_cluster_bootstrap_95_percent": [
+          0.025431738805830415,
+          0.042709334773421405
+        ],
+        "people": 5,
+        "seeds": 3,
+        "bootstrap_draws": 1000,
+        "bootstrap_seed": 123,
+        "interpretation": "descriptive previously studied TRAIN development people; seeds retained inside each person"
+      },
+      "mild_local_HF": {
+        "mean": 0.03437196243521838,
+        "seed_means": [
+          0.05783241950615421,
+          0.018701305072989127,
+          0.026582162726511815
+        ],
+        "seed_SD": 0.02069593592524119,
+        "participant_cluster_bootstrap_95_percent": [
+          0.024489950512273193,
+          0.043035607281335486
+        ],
+        "people": 5,
+        "seeds": 3,
+        "bootstrap_draws": 1000,
+        "bootstrap_seed": 123,
+        "interpretation": "descriptive previously studied TRAIN development people; seeds retained inside each person"
+      },
+      "strong_local_HF": {
+        "mean": 0.05114325494180161,
+        "seed_means": [
+          0.0687717301882206,
+          0.04225580205844466,
+          0.04240223257873956
+        ],
+        "seed_SD": 0.015266882953292192,
+        "participant_cluster_bootstrap_95_percent": [
+          0.03593593318964049,
+          0.06508985178711581
+        ],
+        "people": 5,
+        "seeds": 3,
+        "bootstrap_draws": 1000,
+        "bootstrap_seed": 123,
+        "interpretation": "descriptive previously studied TRAIN development people; seeds retained inside each person"
+      },
+      "global_HF": {
+        "mean": 0.035442142647922774,
+        "seed_means": [
+          0.05977826355442489,
+          0.01833287174599827,
+          0.028215292643345147
+        ],
+        "seed_SD": 0.021647185643404013,
+        "participant_cluster_bootstrap_95_percent": [
+          0.021150239994994012,
+          0.047922741850622674
+        ],
+        "people": 5,
+        "seeds": 3,
+        "bootstrap_draws": 1000,
+        "bootstrap_seed": 123,
+        "interpretation": "descriptive previously studied TRAIN development people; seeds retained inside each person"
+      },
+      "drift": {
+        "mean": 0.032909065374238315,
+        "seed_means": [
+          0.05865542542662404,
+          0.016793037715566082,
+          0.02327873298052483
+        ],
+        "seed_SD": 0.022531585668296616,
+        "participant_cluster_bootstrap_95_percent": [
+          0.02227072045383113,
+          0.04357263783277578
+        ],
+        "people": 5,
+        "seeds": 3,
+        "bootstrap_draws": 1000,
+        "bootstrap_seed": 123,
+        "interpretation": "descriptive previously studied TRAIN development people; seeds retained inside each person"
+      },
+      "gain": {
+        "mean": 0.031807637335132,
+        "seed_means": [
+          0.04797680808563833,
+          0.02280199732081185,
+          0.0246441065989458
+        ],
+        "seed_SD": 0.014033171548777527,
+        "participant_cluster_bootstrap_95_percent": [
+          0.01752010798813588,
+          0.04609516668212811
+        ],
+        "people": 5,
+        "seeds": 3,
+        "bootstrap_draws": 1000,
+        "bootstrap_seed": 123,
+        "interpretation": "descriptive previously studied TRAIN development people; seeds retained inside each person"
+      },
+      "broadband": {
+        "mean": 0.022572388738095934,
+        "seed_means": [
+          0.006536120966204084,
+          0.039500211983154856,
+          0.021680833264928867
+        ],
+        "seed_SD": 0.0165001205303099,
+        "participant_cluster_bootstrap_95_percent": [
+          0.0033708356646935536,
+          0.043257020846095014
+        ],
+        "people": 5,
+        "seeds": 3,
+        "bootstrap_draws": 1000,
+        "bootstrap_seed": 123,
+        "interpretation": "descriptive previously studied TRAIN development people; seeds retained inside each person"
+      }
+    },
+    "exposure": {
+      "clean": {
+        "mean": 0.27774982665940434,
+        "seed_means": [
+          0.2922638558293582,
+          0.2924482049455831,
+          0.2485374192032718
+        ],
+        "seed_SD": 0.025298854878956393,
+        "participant_cluster_bootstrap_95_percent": [
+          0.22266054215456427,
+          0.34540903676076967
+        ],
+        "people": 5,
+        "seeds": 3,
+        "bootstrap_draws": 1000,
+        "bootstrap_seed": 123,
+        "interpretation": "descriptive previously studied TRAIN development people; seeds retained inside each person"
+      },
+      "mild_local_HF": {
+        "mean": 0.27808392132591503,
+        "seed_means": [
+          0.2924215808687055,
+          0.29340255705679785,
+          0.24842762605224156
+        ],
+        "seed_SD": 0.025687788258039638,
+        "participant_cluster_bootstrap_95_percent": [
+          0.2228322686569289,
+          0.3465374241863502
+        ],
+        "people": 5,
+        "seeds": 3,
+        "bootstrap_draws": 1000,
+        "bootstrap_seed": 123,
+        "interpretation": "descriptive previously studied TRAIN development people; seeds retained inside each person"
+      },
+      "strong_local_HF": {
+        "mean": 0.2662886163265618,
+        "seed_means": [
+          0.28279824833779993,
+          0.2938233825340484,
+          0.22224421810783723
+        ],
+        "seed_SD": 0.03853985154159933,
+        "participant_cluster_bootstrap_95_percent": [
+          0.21745970021191313,
+          0.31580678274759416
+        ],
+        "people": 5,
+        "seeds": 3,
+        "bootstrap_draws": 1000,
+        "bootstrap_seed": 123,
+        "interpretation": "descriptive previously studied TRAIN development people; seeds retained inside each person"
+      },
+      "global_HF": {
+        "mean": 0.28325445140703653,
+        "seed_means": [
+          0.29582381452751855,
+          0.30849668773671235,
+          0.24544285195687882
+        ],
+        "seed_SD": 0.0333532340047926,
+        "participant_cluster_bootstrap_95_percent": [
+          0.22849976166882793,
+          0.3439751359215073
+        ],
+        "people": 5,
+        "seeds": 3,
+        "bootstrap_draws": 1000,
+        "bootstrap_seed": 123,
+        "interpretation": "descriptive previously studied TRAIN development people; seeds retained inside each person"
+      },
+      "drift": {
+        "mean": 0.277480004075615,
+        "seed_means": [
+          0.28940532109850753,
+          0.2927265803594572,
+          0.25030811076888027
+        ],
+        "seed_SD": 0.02359007270387361,
+        "participant_cluster_bootstrap_95_percent": [
+          0.22452067220424451,
+          0.3407415985556967
+        ],
+        "people": 5,
+        "seeds": 3,
+        "bootstrap_draws": 1000,
+        "bootstrap_seed": 123,
+        "interpretation": "descriptive previously studied TRAIN development people; seeds retained inside each person"
+      },
+      "gain": {
+        "mean": 0.26495081803801945,
+        "seed_means": [
+          0.2616159893476463,
+          0.29702615327008547,
+          0.23621031149632649
+        ],
+        "seed_SD": 0.030544761653323208,
+        "participant_cluster_bootstrap_95_percent": [
+          0.19583112242789535,
+          0.3371547058380347
+        ],
+        "people": 5,
+        "seeds": 3,
+        "bootstrap_draws": 1000,
+        "bootstrap_seed": 123,
+        "interpretation": "descriptive previously studied TRAIN development people; seeds retained inside each person"
+      },
+      "broadband": {
+        "mean": 0.2783209833673387,
+        "seed_means": [
+          0.30112684604277257,
+          0.2905098233887762,
+          0.2433262806704672
+        ],
+        "seed_SD": 0.030767713680751204,
+        "participant_cluster_bootstrap_95_percent": [
+          0.25024889626780283,
+          0.31947318121583884
+        ],
+        "people": 5,
+        "seeds": 3,
+        "bootstrap_draws": 1000,
+        "bootstrap_seed": 123,
+        "interpretation": "descriptive previously studied TRAIN development people; seeds retained inside each person"
+      }
+    },
+    "routing_large": {
+      "clean": {
+        "mean": -0.00037592731380216754,
+        "seed_means": [
+          0.0005457210137189916,
+          0.002075465535647236,
+          -0.0037489684907727307
+        ],
+        "seed_SD": 0.003019616641520342,
+        "participant_cluster_bootstrap_95_percent": [
+          -0.0013511742420204253,
+          0.0002630850393391097
+        ],
+        "people": 5,
+        "seeds": 3,
+        "bootstrap_draws": 1000,
+        "bootstrap_seed": 123,
+        "interpretation": "descriptive previously studied TRAIN development people; seeds retained inside each person"
+      },
+      "mild_local_HF": {
+        "mean": 0.00029759388928976744,
+        "seed_means": [
+          0.0014994509931490984,
+          0.0031422991654929343,
+          -0.0037489684907727307
+        ],
+        "seed_SD": 0.0035994079862035886,
+        "participant_cluster_bootstrap_95_percent": [
+          -0.0010260677571244528,
+          0.0014520038206820086
+        ],
+        "people": 5,
+        "seeds": 3,
+        "bootstrap_draws": 1000,
+        "bootstrap_seed": 123,
+        "interpretation": "descriptive previously studied TRAIN development people; seeds retained inside each person"
+      },
+      "strong_local_HF": {
+        "mean": -0.0008129066165673067,
+        "seed_means": [
+          -0.0024732883927339523,
+          9.406951994539448e-06,
+          2.5161591037492492e-05
+        ],
+        "seed_SD": 0.0014379543748438517,
+        "participant_cluster_bootstrap_95_percent": [
+          -0.002607095208619296,
+          0.0012398594091994767
+        ],
+        "people": 5,
+        "seeds": 3,
+        "bootstrap_draws": 1000,
+        "bootstrap_seed": 123,
+        "interpretation": "descriptive previously studied TRAIN development people; seeds retained inside each person"
+      },
+      "global_HF": {
+        "mean": -0.0013110053571285215,
+        "seed_means": [
+          -0.004323059705919841,
+          0.0023832607581015797,
+          -0.0019932171235673033
+        ],
+        "seed_SD": 0.0034048117733934667,
+        "participant_cluster_bootstrap_95_percent": [
+          -0.004846504970203254,
+          0.0022244942559462113
+        ],
+        "people": 5,
+        "seeds": 3,
+        "bootstrap_draws": 1000,
+        "bootstrap_seed": 123,
+        "interpretation": "descriptive previously studied TRAIN development people; seeds retained inside each person"
+      },
+      "drift": {
+        "mean": 0.002635114116557857,
+        "seed_means": [
+          0.005535452689725417,
+          0.003023284461242448,
+          -0.0006533948012942936
+        ],
+        "seed_SD": 0.0031126299939351378,
+        "participant_cluster_bootstrap_95_percent": [
+          0.0003005728707433282,
+          0.004958978331269578
+        ],
+        "people": 5,
+        "seeds": 3,
+        "bootstrap_draws": 1000,
+        "bootstrap_seed": 123,
+        "interpretation": "descriptive previously studied TRAIN development people; seeds retained inside each person"
+      },
+      "gain": {
+        "mean": 0.0012822645207630694,
+        "seed_means": [
+          0.003005515581249041,
+          0.001957971420565996,
+          -0.0011166934395258287
+        ],
+        "seed_SD": 0.002142565439740497,
+        "participant_cluster_bootstrap_95_percent": [
+          0.00040589387695605015,
+          0.002119021826737022
+        ],
+        "people": 5,
+        "seeds": 3,
+        "bootstrap_draws": 1000,
+        "bootstrap_seed": 123,
+        "interpretation": "descriptive previously studied TRAIN development people; seeds retained inside each person"
+      },
+      "broadband": {
+        "mean": -0.00016641727725900482,
+        "seed_means": [
+          -0.0025073630974227433,
+          0.0027702550368847055,
+          -0.0007621437712389767
+        ],
+        "seed_SD": 0.002688769390374519,
+        "participant_cluster_bootstrap_95_percent": [
+          -0.0010028649791284261,
+          0.00032554946844605875
+        ],
+        "people": 5,
+        "seeds": 3,
+        "bootstrap_draws": 1000,
+        "bootstrap_seed": 123,
+        "interpretation": "descriptive previously studied TRAIN development people; seeds retained inside each person"
+      }
+    },
+    "routing_small": {
+      "clean": {
+        "mean": 0.0034995195604083486,
+        "seed_means": [
+          -0.00026964693434077257,
+          0.009367936878424766,
+          0.0014002687371410527
+        ],
+        "seed_SD": 0.005150329693452779,
+        "participant_cluster_bootstrap_95_percent": [
+          -0.0014926820606447455,
+          0.008942454445363901
+        ],
+        "people": 5,
+        "seeds": 3,
+        "bootstrap_draws": 1000,
+        "bootstrap_seed": 123,
+        "interpretation": "descriptive previously studied TRAIN development people; seeds retained inside each person"
+      },
+      "mild_local_HF": {
+        "mean": 0.003465483021705196,
+        "seed_means": [
+          0.0005825955607646094,
+          0.008413584767209926,
+          0.0014002687371410527
+        ],
+        "seed_SD": 0.004304640579507376,
+        "participant_cluster_bootstrap_95_percent": [
+          -0.0019847239021942927,
+          0.009102074521077318
+        ],
+        "people": 5,
+        "seeds": 3,
+        "bootstrap_draws": 1000,
+        "bootstrap_seed": 123,
+        "interpretation": "descriptive previously studied TRAIN development people; seeds retained inside each person"
+      },
+      "strong_local_HF": {
+        "mean": 0.004076217935135736,
+        "seed_means": [
+          0.0025382848479537866,
+          0.009678086313441091,
+          1.2282644012329148e-05
+        ],
+        "seed_SD": 0.005013069795990515,
+        "participant_cluster_bootstrap_95_percent": [
+          -2.0997534202606937e-05,
+          0.007839993604927412
+        ],
+        "people": 5,
+        "seeds": 3,
+        "bootstrap_draws": 1000,
+        "bootstrap_seed": 123,
+        "interpretation": "descriptive previously studied TRAIN development people; seeds retained inside each person"
+      },
+      "global_HF": {
+        "mean": -0.0029104189180004605,
+        "seed_means": [
+          -0.007573854486017673,
+          0.00048294946964384523,
+          -0.0016403517376275545
+        ],
+        "seed_SD": 0.004175862243535586,
+        "participant_cluster_bootstrap_95_percent": [
+          -0.007473863759375243,
+          0.0014418747224533475
+        ],
+        "people": 5,
+        "seeds": 3,
+        "bootstrap_draws": 1000,
+        "bootstrap_seed": 123,
+        "interpretation": "descriptive previously studied TRAIN development people; seeds retained inside each person"
+      },
+      "drift": {
+        "mean": 0.006093112388440758,
+        "seed_means": [
+          0.002830330420889371,
+          0.011598872379502611,
+          0.003850134364930291
+        ],
+        "seed_SD": 0.0047953148833474344,
+        "participant_cluster_bootstrap_95_percent": [
+          -0.002357207892236867,
+          0.014707343315923885
+        ],
+        "people": 5,
+        "seeds": 3,
+        "bootstrap_draws": 1000,
+        "bootstrap_seed": 123,
+        "interpretation": "descriptive previously studied TRAIN development people; seeds retained inside each person"
+      },
+      "gain": {
+        "mean": 0.00041540835410287894,
+        "seed_means": [
+          -0.005258276825846597,
+          0.004665856400865231,
+          0.0018386454872900027
+        ],
+        "seed_SD": 0.005112857129662774,
+        "participant_cluster_bootstrap_95_percent": [
+          -0.0036699866077397466,
+          0.0051882030720085456
+        ],
+        "people": 5,
+        "seeds": 3,
+        "bootstrap_draws": 1000,
+        "bootstrap_seed": 123,
+        "interpretation": "descriptive previously studied TRAIN development people; seeds retained inside each person"
+      },
+      "broadband": {
+        "mean": 0.0007966100924629534,
+        "seed_means": [
+          -0.00028453442637721427,
+          -0.0007315019295325298,
+          0.003405866633298604
+        ],
+        "seed_SD": 0.002270706885341973,
+        "participant_cluster_bootstrap_95_percent": [
+          -0.003799669359164356,
+          0.006896395835621531
+        ],
+        "people": 5,
+        "seeds": 3,
+        "bootstrap_draws": 1000,
+        "bootstrap_seed": 123,
+        "interpretation": "descriptive previously studied TRAIN development people; seeds retained inside each person"
+      }
+    }
+  },
+  "independent_development_people": 5,
+  "limitations": [
+    "TRAIN people previously fitted by historical P3B",
+    "3seeds are not3new cohorts",
+    "multiple exploratory views, no multiplicity-adjusted discovery claims"
+  ]
+}

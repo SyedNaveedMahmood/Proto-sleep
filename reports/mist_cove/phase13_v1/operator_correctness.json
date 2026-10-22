@@ -1,0 +1,83 @@
+{
+  "status": "PASS",
+  "domain": "GENERATED_NO_REAL_EEG",
+  "tables": [
+    {
+      "capacity": "S",
+      "routing": false,
+      "example": 0,
+      "exact_all_rows": true,
+      "BDD_nodes": 46,
+      "support_identity": "0892cb8ebf2bf12318a34729e0c2bfa5db2a0fe3f6c38e3e1404ddbd5efdd2f1",
+      "full_identity_max_abs": 0
+    },
+    {
+      "capacity": "S",
+      "routing": false,
+      "example": 1,
+      "exact_all_rows": true,
+      "BDD_nodes": 105,
+      "support_identity": "0892cb8ebf2bf12318a34729e0c2bfa5db2a0fe3f6c38e3e1404ddbd5efdd2f1",
+      "full_identity_max_abs": 0
+    },
+    {
+      "capacity": "S",
+      "routing": true,
+      "example": 0,
+      "exact_all_rows": true,
+      "BDD_nodes": 0,
+      "support_identity": "0892cb8ebf2bf12318a34729e0c2bfa5db2a0fe3f6c38e3e1404ddbd5efdd2f1",
+      "full_identity_max_abs": 0
+    },
+    {
+      "capacity": "S",
+      "routing": true,
+      "example": 1,
+      "exact_all_rows": true,
+      "BDD_nodes": 15,
+      "support_identity": "0892cb8ebf2bf12318a34729e0c2bfa5db2a0fe3f6c38e3e1404ddbd5efdd2f1",
+      "full_identity_max_abs": 0
+    },
+    {
+      "capacity": "L",
+      "routing": false,
+      "example": 0,
+      "exact_all_rows": true,
+      "BDD_nodes": 223,
+      "support_identity": "0892cb8ebf2bf12318a34729e0c2bfa5db2a0fe3f6c38e3e1404ddbd5efdd2f1",
+      "full_identity_max_abs": 0
+    },
+    {
+      "capacity": "L",
+      "routing": false,
+      "example": 1,
+      "exact_all_rows": true,
+      "BDD_nodes": 193,
+      "support_identity": "0892cb8ebf2bf12318a34729e0c2bfa5db2a0fe3f6c38e3e1404ddbd5efdd2f1",
+      "full_identity_max_abs": 0
+    },
+    {
+      "capacity": "L",
+      "routing": true,
+      "example": 0,
+      "exact_all_rows": true,
+      "BDD_nodes": 300,
+      "support_identity": "0892cb8ebf2bf12318a34729e0c2bfa5db2a0fe3f6c38e3e1404ddbd5efdd2f1",
+      "full_identity_max_abs": 0
+    },
+    {
+      "capacity": "L",
+      "routing": true,
+      "example": 1,
+      "exact_all_rows": true,
+      "BDD_nodes": 349,
+      "support_identity": "0892cb8ebf2bf12318a34729e0c2bfa5db2a0fe3f6c38e3e1404ddbd5efdd2f1",
+      "full_identity_max_abs": 0
+    }
+  ],
+  "noninterference_comparisons": 128,
+  "broken_global_controls_detected": 4,
+  "P3B_proof_reused": false,
+  "atol": 1e-06,
+  "rtol": 1e-06
+}

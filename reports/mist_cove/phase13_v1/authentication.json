@@ -1,0 +1,103 @@
+{
+  "status": "PASS",
+  "checkpoint_byte_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147",
+  "named_state_digest": "1b308f3fc38af22609d2043b0988998b1a193c6d4ace73ac84382bb17e1a4c6d",
+  "restricted_load": true,
+  "custom_globals": false,
+  "torch_version": "2.10.0+cpu",
+  "source_hashes": {
+    "src/mist_evidence/model.py": "366ea206ed01f1579466ead362ecf3d2e5cf7f43ff5446b419cf879a60be1058",
+    "src/mist_evidence/cli.py": "16938fccb99f35b0a0cbb8ad1e67f357da253511c9e8ddd315c658ff276b3c09",
+    "src/mist_transfer/baselines.py": "77e0c409f6b886137b80b9cecb0a4fa9c2f0e36d022d9484e36920715f0b8854"
+  },
+  "parameters": 34197,
+  "originally_trainable_parameters": 33957,
+  "features": 209,
+  "stages": [
+    "Wake",
+    "N1",
+    "N2",
+    "N3",
+    "REM"
+  ],
+  "best_epoch": 28,
+  "bank_waveforms_digest": "4b207142763ec056f7cd0c01a85859f6a7e955ad03be6f63d003e435b0a2d743",
+  "bank_metadata_digest": "ee1d3c19b617c8d12b114fbeaee6c0926067adff3aad71120a9d25d6dd902bf4",
+  "state_unchanged": true,
+  "wall_seconds": 1.6663443119905423,
+  "real_EEG_accessed": false,
+  "adapter": {
+    "status": "PASS",
+    "input_domain": "TWO_FIXED_GENERATED_INPUTS_ON_AUTHENTICATED_TRAINED_STATE",
+    "seed": 44112,
+    "feature_identity": {
+      "maximum_absolute": 0.0,
+      "maximum_relative_reference_floor_1e_12": 0.0,
+      "bitwise_equal": true
+    },
+    "logit_identity": {
+      "maximum_absolute": 0.0,
+      "maximum_relative_reference_floor_1e_12": 0.0,
+      "bitwise_equal": true
+    },
+    "atol": 1e-06,
+    "rtol": 1e-06,
+    "noninterference_comparisons": 84,
+    "noninterference_max_absolute": 0.0,
+    "broken_global_negative_controls_detected": 5,
+    "windows": 169,
+    "features": 209,
+    "global_features": 17,
+    "exhaustive_tables": [
+      {
+        "generated_index": 0,
+        "exact_all_rows": true,
+        "masks": 32768,
+        "BDD_nonterminal_nodes": 796,
+        "full_response": true,
+        "zero_response": true
+      },
+      {
+        "generated_index": 1,
+        "exact_all_rows": true,
+        "masks": 32768,
+        "BDD_nonterminal_nodes": 24,
+        "full_response": true,
+        "zero_response": false
+      }
+    ],
+    "table_head_queries": 65538,
+    "state_unchanged": true,
+    "wall_seconds": 1.258353282988537,
+    "real_EEG_accessed": false
+  },
+  "lineage": {
+    "status": "PASS_METADATA_LINEAGE",
+    "root_linked_metadata_hashes": {
+      "provenance.json": "1a7aea7743c1327cf1c16d9d7d35891196bbeb23e55b32a678e6d95510cf8a73",
+      "normalization.json": "0679b44c76e8c6667c4daba0b1915420eb04b02310be68536130f807899c5742",
+      "fit_artifacts.receipt.json": "3f384f0f568b2c7a0ebcb9627f59686fb18f8bd45c207bfeb3d5d6e8edbcbcf3",
+      "seed_123/raw_context/provenance.json": "7b40f5162e910628658edd6d740ce320f6e2dae0caeb88c19a34fdf8053bdc7d",
+      "seed_123/raw_context/COMPLETE.json": "ac0d876a89c7e93714c5bc24c95a3ac43dfbc2d51c426c9eed36598ce002b254"
+    },
+    "split_sha256": "1162a41098bb8a724a0b8bf8bb320469c2b1c02bb802d9b5cf7f2e49d2da54e5",
+    "split_fingerprint": "3e7a7260aae50ca522752f1cede41246daf1b2f6a8fd482800cfda97b4564e84",
+    "TRAIN_participants": 15,
+    "VAL_participants": 4,
+    "TRAIN_recordings": 29,
+    "VAL_recordings": 8,
+    "normalization_fit_role": "train",
+    "normalization_physical_epochs": 79984,
+    "normalization_label_access": false,
+    "P3A_reuse": "HASH_BOUND_P3B_RECEIPT_ASSERTION",
+    "bank_metadata_and_waveforms_match_original_run": true,
+    "original_run_fingerprint_reconstructed": true,
+    "original_model_signature_reconstructed": true,
+    "environment_compatibility": "STATE_IDENTITY_PASS; numerical behavior checked separately under patched CPU runtime",
+    "creation_time_independent_signer": "NOT ESTABLISHED",
+    "source_crop_waveform_recomparison": "NOT PERFORMED",
+    "real_EEG_accessed": false
+  },
+  "raw_TRAIN_read": false,
+  "raw_VAL_read": false
+}

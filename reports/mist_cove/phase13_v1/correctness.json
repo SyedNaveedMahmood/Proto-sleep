@@ -1,0 +1,21 @@
+{
+  "CPU_passed": 1112,
+  "CUDA_skipped": 11,
+  "warnings": 7,
+  "CPU_test_seconds": 18.6,
+  "CUDA": "NOT_RUN_CPU_ONLY_PATCHED_RUNTIME",
+  "historical_paths_unchanged": true,
+  "only_existing_path_extended": ".github/workflows/ci.yml",
+  "frozen_main_implementation_hashes": "PASS",
+  "annotation_protocol_hashes": "PASS",
+  "private_data_ignored": true,
+  "safe_aggregate_scan": "PASS",
+  "baseline_tests_preserved": true,
+  "phase13_added_tests": 36,
+  "main_exact_resume": "generated sealed resumed model/optimizer/sampler test; two fit-only R0 engineering probes bitwise resume",
+  "new_model_states_loaded_for_audit": 36,
+  "all_new_state_bytes_and_named_digests_verified": true,
+  "full_input_native_identity": "BITWISE on all1050base state-case inputs",
+  "tables_all_rows_verified": 3750,
+  "test_log_sha256": "c715613015416182d5d05ef0733a6c41ea8b9e508943ee9214b08d6f36393af2"
+}

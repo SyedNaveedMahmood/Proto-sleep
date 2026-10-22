@@ -1,0 +1,8 @@
+{
+  "Python": "3.12.9",
+  "torch": "2.10.0+cpu",
+  "numpy": "1.26.4",
+  "device": "CPU",
+  "threads": 2,
+  "historical_environment_modified": false
+}
