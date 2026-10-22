@@ -4,7 +4,7 @@ The strongest result is that longer optimization substantially improves the smal
 
 GO: preserve the exact model-audit software and completed blinded-review infrastructure for scientific review. NO-GO: promoting physiological explanations, learned reliability routing, clinical robustness, independent generalization or a new reliability loss from these results. OutcomeC (no experts), clear exposure evidence, modest but nonqualifying width evidence and OutcomeF (routing unhelpful under tested conditions) coexist. No new phase begins automatically.
 
-Base commit: `798af5629b7067af5230f64681926829e1178007`. Branch: `research/mist-cove-phase13-explanation-adequacy-v1`. Final commit and exact-head workflow evidence are provided by the draft PR head and closeout comment, avoiding a self-referential Git hash in a tracked report. No historical draft PR was merged and no historical branch was changed.
+Base commit: `798af5629b7067af5230f64681926829e1178007`. Branch: `research/mist-cove-phase13-explanation-adequacy-v1`. Final commit and exact-head workflow evidence are provided by [draft PR15](https://github.com/SyedNaveedMahmood/Proto-sleep/pull/15) and its closeout comment, avoiding a self-referential Git hash in a tracked report. No historical draft PR was merged and no historical branch was changed.
 
 ## Scientific questions
 
@@ -74,8 +74,8 @@ COMPLETE means the authorized engineering package and available evidence are del
 |WP26|Produce a decisive GO/NO-GO research recommendation|COMPLETE|PASS|MIXED|
 |WP27|Expand correctness and privacy testing|COMPLETE|PASS|NOT_APPLICABLE|
 |WP28|Produce the Phase XIII research package|COMPLETE|PASS|MIXED|
-|WP29|GitHub completion and final CI|IN_PROGRESS|IN_PROGRESS|NOT_APPLICABLE|
-|WP30|Final scientific closeout and future decision|IN_PROGRESS|IN_PROGRESS|MIXED|
+|WP29|GitHub completion and final CI|COMPLETE|PASS|NOT_APPLICABLE|
+|WP30|Final scientific closeout and future decision|COMPLETE|PASS|MIXED|
 
 ## Resources, correctness and privacy
 

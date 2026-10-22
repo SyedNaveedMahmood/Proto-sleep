@@ -1,6 +1,6 @@
 # Phase XIII aggregate dashboard
 
-**Decision: exposure supported; width/routing incremental gates fail; physiological validity NOT TESTED.** No approved qualified reviewers are available. All independently authorized scientific execution is complete; publication closes with exact-head CI. No next phase starts.
+**Decision: exposure supported; width/routing incremental gates fail; physiological validity NOT TESTED.** No approved qualified reviewers are available. All independently authorized execution is complete; [draft PR15](https://github.com/SyedNaveedMahmood/Proto-sleep/pull/15) carries the final commit and exact-head CI closeout. No next phase starts.
 
 | Frozen result | Status | Evidence |
 |---|---|---|

@@ -8,15 +8,15 @@
     "configs/mist_cove_phase13_v1.json": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499",
     "docs/mist_cove/PHASE_XIII_ANNOTATION_CODEBOOK_V1.md": "c9fb10e6caaacedf298d9c87bd9f6cfdc1a7499c7cb249d0091003ef7cc8e0fe",
     "docs/mist_cove/PHASE_XIII_BLINDED_REVIEW_PROTOCOL_V1.md": "c5fb60ee0746265a6d8db921e440f5c888a61ed26e1b0e519ad4fec67994adc1",
-    "docs/mist_cove/PHASE_XIII_EXPLANATION_VALIDITY_V1.md": "8f3e5cf09839c56fa5f44db522b1fa4cb70708694c7a77c987c8cd6c9df05f2f",
+    "docs/mist_cove/PHASE_XIII_EXPLANATION_VALIDITY_V1.md": "7e7e4b242937595e772566e7c3310896b039962c58cf9e4f2c31fcd44c3f857c",
     "docs/mist_cove/PHASE_XIII_MODEL_ADEQUACY_PROTOCOL_V1.md": "378ca9dc99008e24b354ac5ba500b5e7e3566670d574e671e5d193854eb59c13",
-    "docs/mist_cove/PHASE_XIII_MODEL_ADEQUACY_RESULTS_V1.md": "a58d5404cd8267a91b8e53abcbb04aaabc386c166bc3b53777aa1d9467c7e458",
+    "docs/mist_cove/PHASE_XIII_MODEL_ADEQUACY_RESULTS_V1.md": "2318a70069d6e8157f2dda4087b71a4a32b1f4c3dff475cabc54e6d0e5810c46",
     "docs/mist_cove/PHASE_XIII_NOVELTY_AND_FAIRNESS_V1.md": "5c85976283bb55d58e44746f33771276067db359c9acdba0e87478eba4b6c12d",
     "docs/mist_cove/PHASE_XIII_RESEARCH_FOUNDATION_V1.md": "c1f615a0168ef51b1979be9ce2c8ebaec454ced1c3fcf138bc26870ae6990406",
-    "docs/mist_cove/PHASE_XIII_SCIENTIFIC_DECISION_V1.md": "57bd443bbc77f79b59a92ecbb6ac7f9a2cb20760806d86e9840ea13d1c321773",
+    "docs/mist_cove/PHASE_XIII_SCIENTIFIC_DECISION_V1.md": "8b9143dca8959ea5cb4d0cb3606c3d538833c5eec740d0d54050702fc7039a20",
     "docs/mist_cove/PHASE_XIII_SCIENTIFIC_PROTOCOL_V1.md": "0bbc70feb663bccd6c6d09c1e6d02ef65acb6687dfe4107dbde68d452f2ca4df",
     "docs/mist_cove/PHASE_XIII_TRIAD_COMPARISON_V1.md": "4fe62fd197f271844f7b21f2c94c497a668e4b546382a3348fb8c5e13b48fa8f",
-    "reports/mist_cove/phase13_v1/DASHBOARD.md": "ef037a6c7a13390aa14a664747cd3cff7d9ff62b275a0aee929abafed97a08d0",
+    "reports/mist_cove/phase13_v1/DASHBOARD.md": "e757f77632b7b2b3c20c95c1ded7d8c86157fe2abc8a44b04b88ec0695f7b1b2",
     "reports/mist_cove/phase13_v1/L_R0_123_1000.json": "789eccdbf8c597e27bbceda201d2afbd9c225f7dbf6df91fa19eefffba80f81a",
     "reports/mist_cove/phase13_v1/L_R0_123_300.json": "1df546700769f23a9981b391af80eb46dee6d51923e986007ff743705f101ea3",
     "reports/mist_cove/phase13_v1/L_R0_123_3000.json": "15836fb36cbacd7870cd4062255da72cb9219c54f934b0bfd562e42a159daba9",
@@ -74,7 +74,7 @@
     "reports/mist_cove/phase13_v1/operator_correctness.json": "81917aa418e69a396ce76e682ae609ab1b887a95972cb6b7f34aa080af020660",
     "reports/mist_cove/phase13_v1/per_seed_results.json": "7fbac695d8796620c2959ac56e881a8fbd80c7d04e7ee29f3b65d30915cb67cb",
     "reports/mist_cove/phase13_v1/previous_model_diagnostics.json": "45f6b4b9f9761806bde5fee01d6b21206ed2f18778e79ddc62773e29a36ec66c",
-    "reports/mist_cove/phase13_v1/progress.json": "2f341797b340582c556c2863065ad2f17bfe5342b05daf76558f568887fa7056",
+    "reports/mist_cove/phase13_v1/progress.json": "a97c0b0598b73f54b574ef7b9c4c5012e452886d0b11400c5fbc340bbcb2d68f",
     "reports/mist_cove/phase13_v1/resource_pilot.json": "c62dce03f233ce6134eb7ecfa2e184d52bb731af201786298056885d23c5bf90",
     "reports/mist_cove/phase13_v1/resource_receipts.json": "06b910cb21b523f213a43571edaa4a5776f4cc582e7029eea442fde02e542d39",
     "reports/mist_cove/phase13_v1/resource_stages.json": "2075ffe167eace91e740c1fa7066928a7fd2b7c9db227a9a808220be7e60d036",
@@ -117,6 +117,7 @@
     "tests/mist_cove/test_phase13_analysis.py": "5753f08482e167fbfe687d0676d9da216b19149bdfa6571a02a9b484a8ea73c5",
     "tests/mist_cove/test_phase13_annotations.py": "4fc388e7638099a445129d40ca599c05c17b9d29c5772b933b66c3291ae2080d",
     "tests/mist_cove/test_phase13_foundation.py": "d7462d6eecbf231fb3632d955d3e8b88a3b9c8ecefe7b5455f21e078b5bc2754",
-    "tests/mist_cove/test_phase13_training.py": "20db2352a746a50c194464cd7d5a977871dc6f9752ce75e19f642cc9f1bfaeb9"
+    "tests/mist_cove/test_phase13_training.py": "20db2352a746a50c194464cd7d5a977871dc6f9752ce75e19f642cc9f1bfaeb9",
+    "reports/mist_cove/phase13_v1/github_publication.json": "d1bd43dd65c13c47f9b8ab200ab3610ef2c3dd4f36ca3e013b53d4c7ae61dd7c"
   }
 }

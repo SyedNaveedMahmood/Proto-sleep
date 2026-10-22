@@ -1,0 +1,14 @@
+{
+  "draft_PR": "https://github.com/SyedNaveedMahmood/Proto-sleep/pull/15",
+  "is_draft": true,
+  "base": "research/mist-cove-phase11b-real-eeg-audit-v1",
+  "verified_implementation_milestone": "09ed760d1297f600f5dbf7a6825f623dade90b8c",
+  "milestone_push_CI": "https://github.com/SyedNaveedMahmood/Proto-sleep/actions/runs/39744440962",
+  "milestone_structural_tests": "PASS",
+  "milestone_patched_loader_tests": "PASS",
+  "final_head_verification": "PRcloseout will cite immutable final-head run links; this file does not assert a self-referential commitSHA",
+  "human_validation": "NOT_TESTED",
+  "actual_review_blocker": "No approved qualified local reviewers; user confirmed",
+  "merge_performed": false,
+  "future_phase_started": false
+}

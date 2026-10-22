@@ -11,16 +11,22 @@
       "engineering_status": "PASS",
       "scientific_status": "NOT_APPLICABLE",
       "code_configuration_identity": {
-        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499",
+        "adequacy_preregistration_byte_sha256": "b79fdd23a11008b14f73d76198ea593efe250f48d009e875f6ca8e9835a8df06",
+        "published_source_identities": "reports/mist_cove/phase13_v1/publication_manifest.json"
       },
       "tests": [
-        "30 focused generated security, blinding, metrics, state, resume, stream and operator tests pass;8 generated exhaustive tables and128 noninterference checks pass"
+        "Exact base798af562/tree verified; clean branch created; old tracked scientific paths and historical branch unchanged"
       ],
       "artifacts": [
         "configs/mist_cove_phase13_v1.json"
       ],
-      "findings": [],
-      "limitations": [],
+      "findings": [
+        "Exact base798af562/tree verified; clean branch created; old tracked scientific paths and historical branch unchanged"
+      ],
+      "limitations": [
+        "No historical rewrite or merge performed"
+      ],
       "block_reason": null
     },
     {
@@ -33,16 +39,22 @@
       "engineering_status": "PASS",
       "scientific_status": "COMPLETE",
       "code_configuration_identity": {
-        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499",
+        "adequacy_preregistration_byte_sha256": "b79fdd23a11008b14f73d76198ea593efe250f48d009e875f6ca8e9835a8df06",
+        "published_source_identities": "reports/mist_cove/phase13_v1/publication_manifest.json"
       },
       "tests": [
-        "30 focused generated security, blinding, metrics, state, resume, stream and operator tests pass;8 generated exhaustive tables and128 noninterference checks pass"
+        "Evidence matrix separates exact mathematics, generated tests, TRAIN findings, reused VAL aggregates and missing independent physiology"
       ],
       "artifacts": [
         "docs/mist_cove/PHASE_XIII_RESEARCH_FOUNDATION_V1.md"
       ],
-      "findings": [],
-      "limitations": [],
+      "findings": [
+        "Evidence matrix separates exact mathematics, generated tests, TRAIN findings, reused VAL aggregates and missing independent physiology"
+      ],
+      "limitations": [
+        "Historical aggregates are reused developmental evidence"
+      ],
       "block_reason": null
     },
     {
@@ -55,16 +67,22 @@
       "engineering_status": "PASS",
       "scientific_status": "COMPLETE",
       "code_configuration_identity": {
-        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499",
+        "adequacy_preregistration_byte_sha256": "b79fdd23a11008b14f73d76198ea593efe250f48d009e875f6ca8e9835a8df06",
+        "published_source_identities": "reports/mist_cove/phase13_v1/publication_manifest.json"
       },
       "tests": [
-        "30 focused generated security, blinding, metrics, state, resume, stream and operator tests pass;8 generated exhaustive tables and128 noninterference checks pass"
+        "Original checkpoint-byte and named-state digests authenticated under default-only patched restricted loading; trained adapter native identity verified"
       ],
       "artifacts": [
         "reports/mist_cove/phase13_v1/authentication.json"
       ],
-      "findings": [],
-      "limitations": [],
+      "findings": [
+        "Original checkpoint-byte and named-state digests authenticated under default-only patched restricted loading; trained adapter native identity verified"
+      ],
+      "limitations": [
+        "No independent creation-time signer, complete training replay or source-crop reconstruction"
+      ],
       "block_reason": null
     },
     {
@@ -77,16 +95,22 @@
       "engineering_status": "PASS",
       "scientific_status": "NOT_APPLICABLE",
       "code_configuration_identity": {
-        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499",
+        "adequacy_preregistration_byte_sha256": "b79fdd23a11008b14f73d76198ea593efe250f48d009e875f6ca8e9835a8df06",
+        "published_source_identities": "reports/mist_cove/phase13_v1/publication_manifest.json"
       },
       "tests": [
-        "30 focused generated security, blinding, metrics, state, resume, stream and operator tests pass;8 generated exhaustive tables and128 noninterference checks pass"
+        "Independent A/B protocols frozen; absent qualified humans did not block the twelve-trajectory study"
       ],
       "artifacts": [
         "docs/mist_cove/PHASE_XIII_SCIENTIFIC_PROTOCOL_V1.md"
       ],
-      "findings": [],
-      "limitations": [],
+      "findings": [
+        "Independent A/B protocols frozen; absent qualified humans did not block the twelve-trajectory study"
+      ],
+      "limitations": [
+        "A andB conclusions must remain separate"
+      ],
       "block_reason": null
     },
     {
@@ -99,16 +123,22 @@
       "engineering_status": "PASS",
       "scientific_status": "NOT_APPLICABLE",
       "code_configuration_identity": {
-        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499",
+        "adequacy_preregistration_byte_sha256": "b79fdd23a11008b14f73d76198ea593efe250f48d009e875f6ca8e9835a8df06",
+        "published_source_identities": "reports/mist_cove/phase13_v1/publication_manifest.json"
       },
       "tests": [
-        "30 focused generated security, blinding, metrics, state, resume, stream and operator tests pass;8 generated exhaustive tables and128 noninterference checks pass"
+        "Only original15TRAIN source accessed; new rawVAL/excluded reads zero; waveforms, states, predictions and coordinates remain ignored"
       ],
       "artifacts": [
         "reports/mist_cove/phase13_v1/source_scope_receipt.json"
       ],
-      "findings": [],
-      "limitations": [],
+      "findings": [
+        "Only original15TRAIN source accessed; new rawVAL/excluded reads zero; waveforms, states, predictions and coordinates remain ignored"
+      ],
+      "limitations": [
+        "PriorTRAIN participants are not untouched evaluation people"
+      ],
       "block_reason": null
     },
     {
@@ -121,17 +151,21 @@
       "engineering_status": "PASS",
       "scientific_status": "NOT_TESTED",
       "code_configuration_identity": {
-        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499",
+        "adequacy_preregistration_byte_sha256": "b79fdd23a11008b14f73d76198ea593efe250f48d009e875f6ca8e9835a8df06",
+        "published_source_identities": "reports/mist_cove/phase13_v1/publication_manifest.json"
       },
       "tests": [
-        "30 focused generated security, blinding, metrics, state, resume, stream and operator tests pass;8 generated exhaustive tables and128 noninterference checks pass"
+        "Nine single-channel morphology candidates and six assessability states documented as draft; no event labels derived from stages"
       ],
       "artifacts": [
         "docs/mist_cove/PHASE_XIII_ANNOTATION_CODEBOOK_V1.md"
       ],
-      "findings": [],
+      "findings": [
+        "Nine single-channel morphology candidates and six assessability states documented as draft; no event labels derived from stages"
+      ],
       "limitations": [
-        "No approved qualified reviewers available; user confirmed. No human agreement or physiological labels fabricated."
+        "Draft requires qualified lead-specific review; other leads/EOG/EMG unavailable"
       ],
       "block_reason": null
     },
@@ -145,16 +179,22 @@
       "engineering_status": "PASS",
       "scientific_status": "NOT_APPLICABLE",
       "code_configuration_identity": {
-        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499",
+        "adequacy_preregistration_byte_sha256": "b79fdd23a11008b14f73d76198ea593efe250f48d009e875f6ca8e9835a8df06",
+        "published_source_identities": "reports/mist_cove/phase13_v1/publication_manifest.json"
       },
       "tests": [
-        "30 focused generated security, blinding, metrics, state, resume, stream and operator tests pass;8 generated exhaustive tables and128 noninterference checks pass"
+        "Primary150 next stage ranks11/12, zero prior750overlap, no missing primary strata; secondary30 and15duplicates separate"
       ],
       "artifacts": [
         "reports/mist_cove/phase13_v1/sample_selection.json"
       ],
-      "findings": [],
-      "limitations": [],
+      "findings": [
+        "Primary150 next stage ranks11/12, zero prior750overlap, no missing primary strata; secondary30 and15duplicates separate"
+      ],
+      "limitations": [
+        "Stage-balanced early epochs; secondary outcome-enriched;100primary cases belong to new-model fit people"
+      ],
       "block_reason": null
     },
     {
@@ -167,17 +207,21 @@
       "engineering_status": "PASS",
       "scientific_status": "NOT_TESTED",
       "code_configuration_identity": {
-        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499",
+        "adequacy_preregistration_byte_sha256": "b79fdd23a11008b14f73d76198ea593efe250f48d009e875f6ca8e9835a8df06",
+        "published_source_identities": "reports/mist_cove/phase13_v1/publication_manifest.json"
       },
       "tests": [
-        "30 focused generated security, blinding, metrics, state, resume, stream and operator tests pass;8 generated exhaustive tables and128 noninterference checks pass"
+        "Local blinded waveform/context interval app, role/scope/credential gate, immutable hash-chained export and protocol seals ready"
       ],
       "artifacts": [
         "src/mist_cove/phase13/annotation_interface.py"
       ],
-      "findings": [],
+      "findings": [
+        "Local blinded waveform/context interval app, role/scope/credential gate, immutable hash-chained export and protocol seals ready"
+      ],
       "limitations": [
-        "No approved qualified reviewers available; user confirmed. No human agreement or physiological labels fabricated."
+        "Generated functional tests only; no actual human usability study or production security certification"
       ],
       "block_reason": null
     },
@@ -191,7 +235,9 @@
       "engineering_status": "PASS",
       "scientific_status": "NOT_TESTED",
       "code_configuration_identity": {
-        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499",
+        "adequacy_preregistration_byte_sha256": "b79fdd23a11008b14f73d76198ea593efe250f48d009e875f6ca8e9835a8df06",
+        "published_source_identities": "reports/mist_cove/phase13_v1/publication_manifest.json"
       },
       "tests": [
         "30 focused generated security, blinding, metrics, state, resume, stream and operator tests pass;8 generated exhaustive tables and128 noninterference checks pass"
@@ -201,10 +247,10 @@
         "reports/mist_cove/phase13_v1/annotation_readiness.json"
       ],
       "findings": [
-        "Review infrastructure, codebook, frozen private panel, QA and locked alignment entrypoint complete; genuine human outcomes NOT TESTED"
+        "User confirmed no approved qualified reviewers; actual blinded human study BLOCKED and human validation NOT TESTED"
       ],
       "limitations": [
-        "Actual independent expert annotations unavailable; no human or physiological results generated"
+        "No approved qualified reviewers available"
       ],
       "block_reason": "No approved qualified local reviewers available; user explicitly requested NOT TESTED human validation"
     },
@@ -218,7 +264,9 @@
       "engineering_status": "PASS",
       "scientific_status": "NOT_TESTED",
       "code_configuration_identity": {
-        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499",
+        "adequacy_preregistration_byte_sha256": "b79fdd23a11008b14f73d76198ea593efe250f48d009e875f6ca8e9835a8df06",
+        "published_source_identities": "reports/mist_cove/phase13_v1/publication_manifest.json"
       },
       "tests": [
         "30 focused generated security, blinding, metrics, state, resume, stream and operator tests pass;8 generated exhaustive tables and128 noninterference checks pass"
@@ -228,10 +276,10 @@
         "reports/mist_cove/phase13_v1/annotation_readiness.json"
       ],
       "findings": [
-        "Review infrastructure, codebook, frozen private panel, QA and locked alignment entrypoint complete; genuine human outcomes NOT TESTED"
+        "Generated fixtures validate interval/event/categorical/uncertainty/confidence/duplicate metrics; no human agreement statistics"
       ],
       "limitations": [
-        "Actual independent expert annotations unavailable; no human or physiological results generated"
+        "All human agreement and repeatability NOT TESTED"
       ],
       "block_reason": null
     },
@@ -245,7 +293,9 @@
       "engineering_status": "PASS",
       "scientific_status": "NOT_TESTED",
       "code_configuration_identity": {
-        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499",
+        "adequacy_preregistration_byte_sha256": "b79fdd23a11008b14f73d76198ea593efe250f48d009e875f6ca8e9835a8df06",
+        "published_source_identities": "reports/mist_cove/phase13_v1/publication_manifest.json"
       },
       "tests": [
         "30 focused generated security, blinding, metrics, state, resume, stream and operator tests pass;8 generated exhaustive tables and128 noninterference checks pass"
@@ -255,10 +305,10 @@
         "reports/mist_cove/phase13_v1/annotation_readiness.json"
       ],
       "findings": [
-        "Review infrastructure, codebook, frozen private panel, QA and locked alignment entrypoint complete; genuine human outcomes NOT TESTED"
+        "Locked-export alignment pipeline and matched random/position/RMS/spectral/gradient/greedy/exact supports implemented; actual human alignment NOT TESTED"
       ],
       "limitations": [
-        "Actual independent expert annotations unavailable; no human or physiological results generated"
+        "No actual independent event overlap or artifact alignment"
       ],
       "block_reason": null
     },
@@ -272,7 +322,9 @@
       "engineering_status": "PASS",
       "scientific_status": "NOT_TESTED",
       "code_configuration_identity": {
-        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499",
+        "adequacy_preregistration_byte_sha256": "b79fdd23a11008b14f73d76198ea593efe250f48d009e875f6ca8e9835a8df06",
+        "published_source_identities": "reports/mist_cove/phase13_v1/publication_manifest.json"
       },
       "tests": [
         "30 focused generated security, blinding, metrics, state, resume, stream and operator tests pass;8 generated exhaustive tables and128 noninterference checks pass"
@@ -282,10 +334,10 @@
         "reports/mist_cove/phase13_v1/annotation_readiness.json"
       ],
       "findings": [
-        "Review infrastructure, codebook, frozen private panel, QA and locked alignment entrypoint complete; genuine human outcomes NOT TESTED"
+        "OutcomeC: physiological relevance NOT TESTED, with complete review infrastructure and explicit reviewer blocker"
       ],
       "limitations": [
-        "Actual independent expert annotations unavailable; no human or physiological results generated"
+        "Clinical validity and category-specific decisions unavailable"
       ],
       "block_reason": null
     },
@@ -301,16 +353,22 @@
       "engineering_status": "PASS",
       "scientific_status": "COMPLETE",
       "code_configuration_identity": {
-        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499",
+        "adequacy_preregistration_byte_sha256": "b79fdd23a11008b14f73d76198ea593efe250f48d009e875f6ca8e9835a8df06",
+        "published_source_identities": "reports/mist_cove/phase13_v1/publication_manifest.json"
       },
       "tests": [
-        "30 focused generated security, blinding, metrics, state, resume, stream and operator tests pass;8 generated exhaustive tables and128 noninterference checks pass"
+        "Nine previous models authenticated read-only;300-update weak N1 and remaining loss motivate controlled exposure/width test; old missing gradients not fabricated"
       ],
       "artifacts": [
         "reports/mist_cove/phase13_v1/previous_model_diagnostics.json"
       ],
-      "findings": [],
-      "limitations": [],
+      "findings": [
+        "Nine previous models authenticated read-only;300-update weak N1 and remaining loss motivate controlled exposure/width test; old missing gradients not fabricated"
+      ],
+      "limitations": [
+        "Historical per-step gradients/optimizer states missing; no retrospective reconstruction"
+      ],
       "block_reason": null
     },
     {
@@ -323,16 +381,22 @@
       "engineering_status": "PASS",
       "scientific_status": "NOT_APPLICABLE",
       "code_configuration_identity": {
-        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499",
+        "adequacy_preregistration_byte_sha256": "b79fdd23a11008b14f73d76198ea593efe250f48d009e875f6ca8e9835a8df06",
+        "published_source_identities": "reports/mist_cove/phase13_v1/publication_manifest.json"
       },
       "tests": [
-        "30 focused generated security, blinding, metrics, state, resume, stream and operator tests pass;8 generated exhaustive tables and128 noninterference checks pass"
+        "S exactly reproduces old family; L changes width only; active/stored counts and independent support closures verified"
       ],
       "artifacts": [
         "src/mist_cove/phase13/model_adequacy.py"
       ],
-      "findings": [],
-      "limitations": [],
+      "findings": [
+        "S exactly reproduces old family; L changes width only; active/stored counts and independent support closures verified"
+      ],
+      "limitations": [
+        "Width preserves short local receptive field and one-epoch context"
+      ],
       "block_reason": null
     },
     {
@@ -345,18 +409,22 @@
       "engineering_status": "PASS",
       "scientific_status": "MIXED",
       "code_configuration_identity": {
-        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499",
+        "adequacy_preregistration_byte_sha256": "b79fdd23a11008b14f73d76198ea593efe250f48d009e875f6ca8e9835a8df06",
+        "published_source_identities": "reports/mist_cove/phase13_v1/publication_manifest.json"
       },
       "tests": [
-        "30 focused generated security, blinding, metrics, state, resume, stream and operator tests pass;8 generated exhaustive tables and128 noninterference checks pass"
+        "Two fit-only10example probes reach100% accuracy; S CE.29447fails<=.1, L CE.06643passes; finite/update/additive/resume controls pass;2004updates counted"
       ],
       "artifacts": [
         "reports/mist_cove/phase13_v1/engineering_overfit.json"
       ],
       "findings": [
-        "Both tiny fit-only probes reached100percent accuracy and exact resume; S misses CE<=.1 gate(.29447); L passes(.06643). No extra probe or tuning."
+        "Two fit-only10example probes reach100% accuracy; S CE.29447fails<=.1, L CE.06643passes; finite/update/additive/resume controls pass;2004updates counted"
       ],
-      "limitations": [],
+      "limitations": [
+        "Tiny-set memorization is not generalization; S CEgate failure retained"
+      ],
       "block_reason": null
     },
     {
@@ -369,16 +437,22 @@
       "engineering_status": "PASS",
       "scientific_status": "NOT_APPLICABLE",
       "code_configuration_identity": {
-        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499",
+        "adequacy_preregistration_byte_sha256": "b79fdd23a11008b14f73d76198ea593efe250f48d009e875f6ca8e9835a8df06",
+        "published_source_identities": "reports/mist_cove/phase13_v1/publication_manifest.json"
       },
       "tests": [
-        "30 focused generated security, blinding, metrics, state, resume, stream and operator tests pass;8 generated exhaustive tables and128 noninterference checks pass"
+        "Generated pilot projects389.840CPU seconds, authorizing uniform full3000horizon without outcome-based truncation"
       ],
       "artifacts": [
         "reports/mist_cove/phase13_v1/resource_pilot.json"
       ],
-      "findings": [],
-      "limitations": [],
+      "findings": [
+        "Generated pilot projects389.840CPU seconds, authorizing uniform full3000horizon without outcome-based truncation"
+      ],
+      "limitations": [
+        "CPU pilot throughput is hardware-specific; GPU unused"
+      ],
       "block_reason": null
     },
     {
@@ -391,16 +465,22 @@
       "engineering_status": "PASS",
       "scientific_status": "NOT_APPLICABLE",
       "code_configuration_identity": {
-        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499",
+        "adequacy_preregistration_byte_sha256": "b79fdd23a11008b14f73d76198ea593efe250f48d009e875f6ca8e9835a8df06",
+        "published_source_identities": "reports/mist_cove/phase13_v1/publication_manifest.json"
       },
       "tests": [
-        "30 focused generated security, blinding, metrics, state, resume, stream and operator tests pass;8 generated exhaustive tables and128 noninterference checks pass"
+        "Twelve S/L xR0/R1 x123/456/789 trajectories and300/1000/3000 milestones frozen with source/protocol/data identities and all-seed numeric gates"
       ],
       "artifacts": [
         "reports/mist_cove/phase13_v1/adequacy_preregistration.json"
       ],
-      "findings": [],
-      "limitations": [],
+      "findings": [
+        "Twelve S/L xR0/R1 x123/456/789 trajectories and300/1000/3000 milestones frozen with source/protocol/data identities and all-seed numeric gates"
+      ],
+      "limitations": [
+        "No sweeps, extra seeds or model selection after outcomes"
+      ],
       "block_reason": null
     },
     {
@@ -417,16 +497,22 @@
       "engineering_status": "PASS",
       "scientific_status": "PASS",
       "code_configuration_identity": {
-        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499",
+        "adequacy_preregistration_byte_sha256": "b79fdd23a11008b14f73d76198ea593efe250f48d009e875f6ca8e9835a8df06",
+        "published_source_identities": "reports/mist_cove/phase13_v1/publication_manifest.json"
       },
-      "tests": [],
+      "tests": [
+        "All12fixed trajectories and36sealed milestones complete;36000updates,matched draw streams,weights/optimizer/RNG/history preserved privately"
+      ],
       "artifacts": [
         "reports/mist_cove/phase13_v1/campaign_execution.json"
       ],
       "findings": [
-        "12fixed trajectories,36milestones,36000updates,matched streams all complete"
+        "All12fixed trajectories and36sealed milestones complete;36000updates,matched draw streams,weights/optimizer/RNG/history preserved privately"
       ],
-      "limitations": [],
+      "limitations": [
+        "Only10fit/5development previously studiedTRAIN people; no finalall15fit"
+      ],
       "block_reason": null
     },
     {
@@ -439,16 +525,22 @@
       "engineering_status": "PASS",
       "scientific_status": "PASS",
       "code_configuration_identity": {
-        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499",
+        "adequacy_preregistration_byte_sha256": "b79fdd23a11008b14f73d76198ea593efe250f48d009e875f6ca8e9835a8df06",
+        "published_source_identities": "reports/mist_cove/phase13_v1/publication_manifest.json"
       },
-      "tests": [],
+      "tests": [
+        "Exposure and absoluteadequacy PASS; widthincrement FAIL; per-seed loss,calibration,gradients,drift,saturation and class metrics retained"
+      ],
       "artifacts": [
         "reports/mist_cove/phase13_v1/adequacy_summary.json"
       ],
       "findings": [
-        "All horizons/seeds: training and development metrics, gradient drift, calibration, saturation and local/global ledgers recorded"
+        "Exposure and absoluteadequacy PASS; widthincrement FAIL; per-seed loss,calibration,gradients,drift,saturation and class metrics retained"
       ],
-      "limitations": [],
+      "limitations": [
+        "Three seeds/five people; no convergence or universal-capacity inference"
+      ],
       "block_reason": null
     },
     {
@@ -461,16 +553,22 @@
       "engineering_status": "PASS",
       "scientific_status": "INCONCLUSIVE",
       "code_configuration_identity": {
-        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499",
+        "adequacy_preregistration_byte_sha256": "b79fdd23a11008b14f73d76198ea593efe250f48d009e875f6ca8e9835a8df06",
+        "published_source_identities": "reports/mist_cove/phase13_v1/publication_manifest.json"
       },
-      "tests": [],
+      "tests": [
+        "Transition and HF-proxy strata plus matched person/stage descriptive error differences analyzed; no causal context or physiological ambiguity claim"
+      ],
       "artifacts": [
         "reports/mist_cove/phase13_v1/stage_context_analysis.json"
       ],
       "findings": [
-        "Stage, preceding-stage transition and HF quality-proxy strata analyzed descriptively; no physiological ambiguity inference"
+        "Transition and HF-proxy strata plus matched person/stage descriptive error differences analyzed; no causal context or physiological ambiguity claim"
       ],
-      "limitations": [],
+      "limitations": [
+        "Signal quality is a proxy, not independent clinical artifact annotation"
+      ],
       "block_reason": null
     },
     {
@@ -483,16 +581,22 @@
       "engineering_status": "PASS",
       "scientific_status": "FAIL",
       "code_configuration_identity": {
-        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499",
+        "adequacy_preregistration_byte_sha256": "b79fdd23a11008b14f73d76198ea593efe250f48d009e875f6ca8e9835a8df06",
+        "published_source_identities": "reports/mist_cove/phase13_v1/publication_manifest.json"
       },
-      "tests": [],
+      "tests": [
+        "Primary large routing gate FAIL all3seeds; full7views retained; gates saturate near1; no post-hoc candidate replacement"
+      ],
       "artifacts": [
         "reports/mist_cove/phase13_v1/scientific_gates.json"
       ],
       "findings": [
-        "Frozen primary routing gate fails all3seeds; all7views retained, no post-hoc replacement"
+        "Primary large routing gate FAIL all3seeds; full7views retained; gates saturate near1; no post-hoc candidate replacement"
       ],
-      "limitations": [],
+      "limitations": [
+        "Class-blind physical nuisance label preservation not clinically verified"
+      ],
       "block_reason": null
     },
     {
@@ -507,7 +611,9 @@
       "engineering_status": "PASS",
       "scientific_status": "NOT_TESTED",
       "code_configuration_identity": {
-        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499",
+        "adequacy_preregistration_byte_sha256": "b79fdd23a11008b14f73d76198ea593efe250f48d009e875f6ca8e9835a8df06",
+        "published_source_identities": "reports/mist_cove/phase13_v1/publication_manifest.json"
       },
       "tests": [],
       "artifacts": [
@@ -515,10 +621,10 @@
         "reports/mist_cove/phase13_v1/annotation_readiness.json"
       ],
       "findings": [
-        "Review infrastructure, codebook, frozen private panel, QA and locked alignment entrypoint complete; genuine human outcomes NOT TESTED"
+        "No expert labels; cross-model clinical alignment NOT TESTED; fit/development overlap documented for future analysis"
       ],
       "limitations": [
-        "Actual independent expert annotations unavailable; no human or physiological results generated"
+        "Physiological alignment unavailable; no energy-threshold surrogate labels"
       ],
       "block_reason": null
     },
@@ -535,17 +641,23 @@
       "engineering_status": "PASS",
       "scientific_status": "PASS",
       "code_configuration_identity": {
-        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499",
+        "adequacy_preregistration_byte_sha256": "b79fdd23a11008b14f73d76198ea593efe250f48d009e875f6ca8e9835a8df06",
+        "published_source_identities": "reports/mist_cove/phase13_v1/publication_manifest.json"
       },
-      "tests": [],
+      "tests": [
+        "3750real tables all32768rows exact;1050native identities bitwise; fixed-clause/substitution, neutral and guarded physical disagreements preserved"
+      ],
       "artifacts": [
         "reports/mist_cove/phase13_v1/mechanistic_execution.json",
         "reports/mist_cove/phase13_v1/explanation_validity.json"
       ],
       "findings": [
-        "3750real tables all exact; native identity bitwise; original mildHF142predictionstable vs119originalclausesvalid; neutral and physical disagreement retained"
+        "3750real tables all32768rows exact;1050native identities bitwise; fixed-clause/substitution, neutral and guarded physical disagreements preserved"
       ],
-      "limitations": [],
+      "limitations": [
+        "Operator-specific semantics; replacement compatibility scarce, background donors absent; no clinical event deletion"
+      ],
       "block_reason": null
     },
     {
@@ -558,17 +670,23 @@
       "engineering_status": "PASS",
       "scientific_status": "INCONCLUSIVE",
       "code_configuration_identity": {
-        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499",
+        "adequacy_preregistration_byte_sha256": "b79fdd23a11008b14f73d76198ea593efe250f48d009e875f6ca8e9835a8df06",
+        "published_source_identities": "reports/mist_cove/phase13_v1/publication_manifest.json"
       },
-      "tests": [],
+      "tests": [
+        "Five-person clustered matched contrasts retain3optimization seeds per person; public distributions/private individual metrics; exploratory multiplicity stated"
+      ],
       "artifacts": [
         "reports/mist_cove/phase13_v1/uncertainty_summary.json",
         "reports/mist_cove/phase13_v1/stage_adjusted_analysis.json"
       ],
       "findings": [
-        "5person clustered matched contrasts with3seeds retained; stage/person matched descriptive transition/HF analysis; epoch-as-person inference excluded"
+        "Five-person clustered matched contrasts retain3optimization seeds per person; public distributions/private individual metrics; exploratory multiplicity stated"
       ],
-      "limitations": [],
+      "limitations": [
+        "Descriptive bootstrap ignores broader population/selection uncertainty; no multiplicity-adjusted discoveries"
+      ],
       "block_reason": null
     },
     {
@@ -581,16 +699,22 @@
       "engineering_status": "PASS",
       "scientific_status": "INCONCLUSIVE",
       "code_configuration_identity": {
-        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499",
+        "adequacy_preregistration_byte_sha256": "b79fdd23a11008b14f73d76198ea593efe250f48d009e875f6ca8e9835a8df06",
+        "published_source_identities": "reports/mist_cove/phase13_v1/publication_manifest.json"
       },
-      "tests": [],
+      "tests": [
+        "Focused primary sources establish prior art in sufficiency, time-series masks, EEG attention/context, gating and uncertainty; first-priority novelty unestablished"
+      ],
       "artifacts": [
         "docs/mist_cove/PHASE_XIII_NOVELTY_AND_FAIRNESS_V1.md"
       ],
       "findings": [
-        "Focused primary sources establish prior art; potential exact operator-audit contribution, no novelty priority established"
+        "Focused primary sources establish prior art in sufficiency, time-series masks, EEG attention/context, gating and uncertainty; first-priority novelty unestablished"
       ],
-      "limitations": [],
+      "limitations": [
+        "Focused review/access restrictions, not exhaustive priority search"
+      ],
       "block_reason": null
     },
     {
@@ -603,16 +727,22 @@
       "engineering_status": "PASS",
       "scientific_status": "MIXED",
       "code_configuration_identity": {
-        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499",
+        "adequacy_preregistration_byte_sha256": "b79fdd23a11008b14f73d76198ea593efe250f48d009e875f6ca8e9835a8df06",
+        "published_source_identities": "reports/mist_cove/phase13_v1/publication_manifest.json"
       },
-      "tests": [],
+      "tests": [
+        "GO exact audit/review readiness; exposurePASS/absoluteadequacyPASS; width/routingFAIL; physiologyNOTTESTED; no next phase"
+      ],
       "artifacts": [
         "docs/mist_cove/PHASE_XIII_SCIENTIFIC_DECISION_V1.md"
       ],
       "findings": [
-        "GO exact auditing and review readiness; exposurePASS/absoluteadequacyPASS; width/routing primarygatesFAIL; physiologyNOTTESTED; no next phase"
+        "GO exact audit/review readiness; exposurePASS/absoluteadequacyPASS; width/routingFAIL; physiologyNOTTESTED; no next phase"
       ],
-      "limitations": [],
+      "limitations": [
+        "No clinical/untouched-cohort/routing promotion supported"
+      ],
       "block_reason": null
     },
     {
@@ -625,16 +755,22 @@
       "engineering_status": "PASS",
       "scientific_status": "NOT_APPLICABLE",
       "code_configuration_identity": {
-        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499",
+        "adequacy_preregistration_byte_sha256": "b79fdd23a11008b14f73d76198ea593efe250f48d009e875f6ca8e9835a8df06",
+        "published_source_identities": "reports/mist_cove/phase13_v1/publication_manifest.json"
       },
       "tests": [
-        "Complete patched CPU regression:1112passed,11CUDA skipped; all generated-only fixtures; CUDA not run under CPU runtime"
+        "Complete CPU regression1112passed/11CUDA skips; generated-only CI fixtures; historical tests preserved; privacy/source/checkpoint/operator/gate tests pass"
       ],
       "artifacts": [
         "reports/mist_cove/phase13_v1/correctness.json"
       ],
-      "findings": [],
-      "limitations": [],
+      "findings": [
+        "Complete CPU regression1112passed/11CUDA skips; generated-only CI fixtures; historical tests preserved; privacy/source/checkpoint/operator/gate tests pass"
+      ],
+      "limitations": [
+        "CUDA correctness and actual-review usability untested"
+      ],
       "block_reason": null
     },
     {
@@ -647,15 +783,23 @@
       "engineering_status": "PASS",
       "scientific_status": "MIXED",
       "code_configuration_identity": {
-        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499",
+        "adequacy_preregistration_byte_sha256": "b79fdd23a11008b14f73d76198ea593efe250f48d009e875f6ca8e9835a8df06",
+        "published_source_identities": "reports/mist_cove/phase13_v1/publication_manifest.json"
       },
-      "tests": [],
+      "tests": [
+        "Full reports, Q1-Q16, aggregate dashboard, six scientific figures and safe publication hash manifest complete"
+      ],
       "artifacts": [
         "reports/mist_cove/phase13_v1/DASHBOARD.md",
         "reports/mist_cove/phase13_v1/publication_manifest.json"
       ],
-      "findings": [],
-      "limitations": [],
+      "findings": [
+        "Full reports, Q1-Q16, aggregate dashboard, six scientific figures and safe publication hash manifest complete"
+      ],
+      "limitations": [
+        "Only safe aggregates published; reproduction of private findings requires authorized local source access"
+      ],
       "block_reason": null
     },
     {
@@ -664,18 +808,27 @@
       "dependencies": [
         "WP28"
       ],
-      "status": "IN_PROGRESS",
-      "engineering_status": "IN_PROGRESS",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
       "scientific_status": "NOT_APPLICABLE",
       "code_configuration_identity": {
-        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499",
+        "adequacy_preregistration_byte_sha256": "b79fdd23a11008b14f73d76198ea593efe250f48d009e875f6ca8e9835a8df06",
+        "published_source_identities": "reports/mist_cove/phase13_v1/publication_manifest.json"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [
-        "Draft PR and exact pushed-head GitHub Actions pending"
+      "tests": [
+        "DraftPR15 targets exact requested historical branch; bothCIjobs passed09ed760milestone; finalcloseout head receives separately verified immutable Actions links in PR closeout"
       ],
-      "limitations": [],
+      "artifacts": [
+        "https://github.com/SyedNaveedMahmood/Proto-sleep/pull/15",
+        "https://github.com/SyedNaveedMahmood/Proto-sleep/actions/runs/39744440962"
+      ],
+      "findings": [
+        "DraftPR15 targets exact requested historical branch; bothCIjobs passed09ed760milestone; finalcloseout head receives separately verified immutable Actions links in PR closeout"
+      ],
+      "limitations": [
+        "Draft remains unmerged; exact final-head checks are GitHub metadata, not a self-referential tracked SHA"
+      ],
       "block_reason": null
     },
     {
@@ -684,20 +837,37 @@
       "dependencies": [
         "WP29"
       ],
-      "status": "IN_PROGRESS",
-      "engineering_status": "IN_PROGRESS",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
       "scientific_status": "MIXED",
       "code_configuration_identity": {
-        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499",
+        "adequacy_preregistration_byte_sha256": "b79fdd23a11008b14f73d76198ea593efe250f48d009e875f6ca8e9835a8df06",
+        "published_source_identities": "reports/mist_cove/phase13_v1/publication_manifest.json"
       },
-      "tests": [],
+      "tests": [
+        "All16scientific questions answered; failures and missing human evidence preserved; next decisive experiment is separately approved two-reviewer local review; stopped for scientific review"
+      ],
       "artifacts": [
         "docs/mist_cove/PHASE_XIII_SCIENTIFIC_DECISION_V1.md"
       ],
-      "findings": [],
-      "limitations": [],
+      "findings": [
+        "All16scientific questions answered; failures and missing human evidence preserved; next decisive experiment is separately approved two-reviewer local review; stopped for scientific review"
+      ],
+      "limitations": [
+        "Review/access authorization required before future human or untouched-cohort work"
+      ],
       "block_reason": null
     }
   ],
-  "reviewer_availability": "User confirmed none approved; only the human-dependent tasks stop."
+  "reviewer_availability": "User confirmed none approved; only the human-dependent tasks stop.",
+  "closeout": {
+    "draft_PR": "https://github.com/SyedNaveedMahmood/Proto-sleep/pull/15",
+    "complete_work_packages": 29,
+    "blocked_actual_human_review": 1,
+    "actual_human_validation": "NOT_TESTED",
+    "independent_work_completed": true,
+    "next_phase_started": false,
+    "final_head_CI_evidence": "immutable final-head run links in draftPR closeout and user final response"
+  }
 }

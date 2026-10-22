@@ -47,6 +47,21 @@ L/R0 final mean participantF1=.70384 versus S/R0=.66948. Width gives positive ga
 
 R1's L-width primary strong-local-HF ΔF1 averages−.00081, with an interval spanning zero; clean ΔF1=−.00038. The three final R1 gates at each width saturate near1: mean>.999, all observed clean gate values≥.95, tiny across-atom standard deviations, satisfying the frozen collapse diagnostic. Under the tested paired-CE objective, learned routing behaves nearly like fixed routing. This negative result is specific to this representation, objective, sampling and nuisance regime; it is not a universal impossibility result. No new reliability loss was added.
 
+Arithmetic contribution diagnostics (mean over3seeds; these magnitudes are not sufficient-support or causal effects):
+
+| Family/route | Horizon | Mean absolute summed-local logit | Mean absolute global logit | Evidence saturation fraction | Learned gate mean |
+|---|---:|---:|---:|---:|---:|
+|S/R0|300|1.09426|0.29732|0.08788|fixed1|
+|S/R0|3000|1.54314|1.19215|0.37630|fixed1|
+|S/R1|300|1.10010|0.30507|0.12746|0.91166|
+|S/R1|3000|1.54700|1.17219|0.37848|0.99946|
+|L/R0|300|1.37295|0.41020|0.23954|fixed1|
+|L/R0|3000|1.77490|1.68069|0.42667|fixed1|
+|L/R1|300|1.41328|0.41746|0.27588|0.98206|
+|L/R1|3000|1.78201|1.68017|0.43224|0.99983|
+
+The global head is unbounded while each local atom contributes bounded evidence divided by15. Different architectural bounds and observed gate/evidence saturation are plausible mechanisms for limited incremental routing use, but this campaign does not causally isolate them. The observed final absolute magnitudes are comparable; they do not demonstrate global dominance, and magnitudes do not measure class-decision dependence. Changing logit scaling, receptive fields or objectives would require a new separately frozen experiment.
+
 Training loss, gradients, parameter drift, predicted distributions, N2/N3 and REM/N2 confusion matrices, gate/evidence saturation, local/global magnitudes, error confidence, NLL/Brier/ECE15 and all7nuisance views are retained in each milestone aggregate JSON. S/R0 final ECE15mean=.04686 and L/R0=.06202; better classification did not uniformly improve calibration. Fit-monitor F1 remains above developmentF1; the monitor is a fixed500example subset, not the full training population. There is no evidence for declaring optimization converged at3,000updates or for claiming no overfit.
 
 `stage_context_analysis.json` retains transition and physical-HF-proxy strata for each final state/view. `stage_adjusted_analysis.json` adds equal-stage within-person error differences and recording-F1 distributions without identifiers. Previous-stage transition errors are generally higher even after this descriptive matching. This association motivates a future context study, but no temporal-context architecture was tested and stage mismatch does not establish physiological ambiguity. High-HF power is an unvalidated quality proxy, not an expert artifact label. Incomplete stage coverage makes recording-level fixed-five F1 different from participant-level F1.
