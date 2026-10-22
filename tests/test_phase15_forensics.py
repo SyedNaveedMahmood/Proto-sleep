@@ -14,6 +14,7 @@ def test_physical_positions_are_not_compressed():
     assert len(d)==len(y)
     assert d[4]==2  # Unscored predecessor is not an invented transition.
     assert d[6]==0
+    assert _distances(np.array([4,4,-1,0,4]))[0]==5
 
 
 def test_panel_seed_does_not_use_model_response_or_labels():

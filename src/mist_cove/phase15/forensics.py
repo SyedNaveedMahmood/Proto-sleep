@@ -67,13 +67,19 @@ def _round_robin(rows, limit, seed):
 
 
 def _distances(y):
-    changes = np.flatnonzero((y[1:] >= 0) & (y[:-1] >= 0) & (y[1:] != y[:-1])) + 1
     out = np.full(len(y), len(y), dtype=int)
-    if len(changes):
-        indices = np.arange(len(y))
-        j = np.searchsorted(changes, indices)
-        out = np.minimum(np.abs(indices-changes[np.minimum(j, len(changes)-1)]),
-                         np.abs(indices-changes[np.maximum(j-1, 0)]))
+    # Search only within contiguous scored physical runs. A missing hypnogram
+    # position is an impenetrable boundary, not a removable gap.
+    valid=y>=0
+    starts=np.flatnonzero(valid & ~np.r_[False,valid[:-1]])
+    ends=np.flatnonzero(valid & ~np.r_[valid[1:],False])+1
+    for lo,hi in zip(starts,ends):
+        changes=np.flatnonzero(y[lo+1:hi]!=y[lo:hi-1])+lo+1
+        if not len(changes):continue
+        indices=np.arange(lo,hi)
+        j=np.searchsorted(changes,indices)
+        out[lo:hi]=np.minimum(np.abs(indices-changes[np.minimum(j,len(changes)-1)]),
+                             np.abs(indices-changes[np.maximum(j-1,0)]))
     return out
 
 
