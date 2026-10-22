@@ -1,0 +1,132 @@
+{
+  "audited": {
+    "SC_TRAIN": {
+      "EEG Fpz-Cz": {
+        "recordings": 29,
+        "sample_rates_Hz": [
+          100.0
+        ],
+        "units": [
+          "uV"
+        ]
+      },
+      "EEG Pz-Oz": {
+        "recordings": 29,
+        "sample_rates_Hz": [
+          100.0
+        ],
+        "units": [
+          "uV"
+        ]
+      },
+      "EOG horizontal": {
+        "recordings": 29,
+        "sample_rates_Hz": [
+          100.0
+        ],
+        "units": [
+          "uV"
+        ]
+      },
+      "Resp oro-nasal": {
+        "recordings": 29,
+        "sample_rates_Hz": [
+          1.0
+        ],
+        "units": [
+          ""
+        ]
+      },
+      "EMG submental": {
+        "recordings": 29,
+        "sample_rates_Hz": [
+          1.0
+        ],
+        "units": [
+          "uV"
+        ]
+      },
+      "Temp rectal": {
+        "recordings": 29,
+        "sample_rates_Hz": [
+          1.0
+        ],
+        "units": [
+          "",
+          "DegC"
+        ]
+      },
+      "Event marker": {
+        "recordings": 29,
+        "sample_rates_Hz": [
+          1.0
+        ],
+        "units": [
+          ""
+        ]
+      }
+    },
+    "ST_EVAL": {
+      "EEG Fpz-Cz": {
+        "recordings": 44,
+        "sample_rates_Hz": [
+          100.0
+        ],
+        "units": [
+          "uV"
+        ]
+      },
+      "EEG Pz-Oz": {
+        "recordings": 44,
+        "sample_rates_Hz": [
+          100.0
+        ],
+        "units": [
+          "uV"
+        ]
+      },
+      "EOG horizontal": {
+        "recordings": 44,
+        "sample_rates_Hz": [
+          100.0
+        ],
+        "units": [
+          "uV"
+        ]
+      },
+      "EMG submental": {
+        "recordings": 44,
+        "sample_rates_Hz": [
+          100.0
+        ],
+        "units": [
+          "uV"
+        ]
+      },
+      "Marker": {
+        "recordings": 44,
+        "sample_rates_Hz": [
+          10.0
+        ],
+        "units": [
+          "ID+M-E"
+        ]
+      }
+    }
+  },
+  "decoded_channels": [
+    "EEG Fpz-Cz",
+    "EEG Pz-Oz",
+    "EOG horizontal",
+    "EMG submental",
+    "Event marker"
+  ],
+  "slow_auxiliary_not_decoded": [
+    "Resp oro-nasal",
+    "Temp rectal"
+  ],
+  "SC_EMG": "native processed1Hz envelope, no rawEMG equivalence",
+  "ST_EMG": "native100Hz raw signal",
+  "original_model_channel": "EEG Fpz-Cz only",
+  "human_event_ground_truth": false
+}

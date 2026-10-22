@@ -1,0 +1,24 @@
+{
+  "root_metadata_and_authentication": {
+    "status": "COMPLETE",
+    "wall_seconds": 10.787609691993566,
+    "metadata_reads": 3,
+    "source_hash_reads": 0,
+    "header_reads": 0,
+    "waveform_reads": 0,
+    "hypnogram_reads": 0,
+    "bytes_hashed": 0,
+    "forbidden_opened": 0
+  },
+  "file_integrity_headers_and_hypnograms": {
+    "status": "COMPLETE",
+    "wall_seconds": 4.311210455998662,
+    "metadata_reads": 0,
+    "source_hash_reads": 146,
+    "header_reads": 73,
+    "waveform_reads": 0,
+    "hypnogram_reads": 73,
+    "bytes_hashed": 0,
+    "forbidden_opened": 0
+  }
+}

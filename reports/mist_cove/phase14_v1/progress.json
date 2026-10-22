@@ -1,0 +1,951 @@
+{
+  "version": "phase14-progress-v1",
+  "authorization_sha256": "df5d420eb9a7ee60036d18f95fc35fe6538a5b8cfca2ef1218db289071becef1",
+  "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+  "work_packages": [
+    {
+      "id": "WP01",
+      "title": "Repository integrity",
+      "dependencies": [],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "NOT_APPLICABLE",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/data_scope_receipt.json"
+      ],
+      "findings": [
+        "Exact base and root verified; SC29historical digests match independent official manifest; ST44unique subject/night pairs"
+      ],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP02",
+      "title": "Consolidated Phase XIII evidence review",
+      "dependencies": [
+        "WP01"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "NOT_APPLICABLE",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/data_scope_receipt.json"
+      ],
+      "findings": [
+        "Exact base and root verified; SC29historical digests match independent official manifest; ST44unique subject/night pairs"
+      ],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP03",
+      "title": "Strict local dataset root verification",
+      "dependencies": [
+        "WP02"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "NOT_APPLICABLE",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/data_scope_receipt.json"
+      ],
+      "findings": [
+        "Exact base and root verified; SC29historical digests match independent official manifest; ST44unique subject/night pairs"
+      ],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP04",
+      "title": "Build the Phase XIV allowlist",
+      "dependencies": [
+        "WP03"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "NOT_APPLICABLE",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/data_scope_receipt.json"
+      ],
+      "findings": [
+        "Exact base and root verified; SC29historical digests match independent official manifest; ST44unique subject/night pairs"
+      ],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP05",
+      "title": "Verify dataset integrity",
+      "dependencies": [
+        "WP04"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "NOT_APPLICABLE",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/file_integrity_receipt.json",
+        "reports/mist_cove/phase14_v1/channel_contract.json"
+      ],
+      "findings": [
+        "Every issued source pair independently hashed and strict geometry audited; any failures quarantined; no ST waveform values"
+      ],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP06",
+      "title": "Inspect channel availability",
+      "dependencies": [
+        "WP05"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "NOT_APPLICABLE",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/file_integrity_receipt.json",
+        "reports/mist_cove/phase14_v1/channel_contract.json"
+      ],
+      "findings": [
+        "Every issued source pair independently hashed and strict geometry audited; any failures quarantined; no ST waveform values"
+      ],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP07",
+      "title": "Verify hypnogram geometry",
+      "dependencies": [
+        "WP06"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "NOT_APPLICABLE",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/file_integrity_receipt.json",
+        "reports/mist_cove/phase14_v1/channel_contract.json"
+      ],
+      "findings": [
+        "Every issued source pair independently hashed and strict geometry audited; any failures quarantined; no ST waveform values"
+      ],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP08",
+      "title": "Preregister and seal the scientific protocol",
+      "dependencies": [
+        "WP07"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "NOT_APPLICABLE",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [
+        "configs/mist_cove_phase14_v1.json",
+        "reports/mist_cove/phase14_v1/protocol_preregistration.json"
+      ],
+      "findings": [
+        "Initial scientific choices and outcome-independent samples frozen; contextGO isolates adjacent physical context at equal parameter count; ST values remain unopened"
+      ],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP09",
+      "title": "Build a secure multichannel EDF loader",
+      "dependencies": [
+        "WP08"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "NOT_TESTED",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP10",
+      "title": "Implement channel-specific calibration",
+      "dependencies": [
+        "WP09"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "NOT_TESTED",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP11",
+      "title": "Continuous-recording preprocessing",
+      "dependencies": [
+        "WP10"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "NOT_TESTED",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP12",
+      "title": "Define automated physiological proxies",
+      "dependencies": [
+        "WP11"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "NOT_TESTED",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP13",
+      "title": "Implement spindle-like event detection",
+      "dependencies": [
+        "WP12"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "NOT_TESTED",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP14",
+      "title": "Implement slow-wave-like detection",
+      "dependencies": [
+        "WP13"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "NOT_TESTED",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP15",
+      "title": "Implement EOG/EMG and artifact proxies",
+      "dependencies": [
+        "WP14"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "NOT_TESTED",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP16",
+      "title": "Implement transparent independent controls",
+      "dependencies": [
+        "WP15"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "NOT_TESTED",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP17",
+      "title": "Freeze SC analysis samples",
+      "dependencies": [
+        "WP16"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "NOT_APPLICABLE",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [
+        "configs/mist_cove_phase14_v1.json",
+        "reports/mist_cove/phase14_v1/protocol_preregistration.json"
+      ],
+      "findings": [
+        "Initial scientific choices and outcome-independent samples frozen; contextGO isolates adjacent physical context at equal parameter count; ST values remain unopened"
+      ],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP18",
+      "title": "Establish SC detector calibration and quality controls",
+      "dependencies": [
+        "WP17"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "NOT_TESTED",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP19",
+      "title": "Evaluate detector consistency on SC TRAIN development",
+      "dependencies": [
+        "WP18"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "NOT_TESTED",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP20",
+      "title": "Build a multichannel EEG morphology atlas",
+      "dependencies": [
+        "WP19"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "NOT_TESTED",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP21",
+      "title": "Quantify cross-channel physiological concordance",
+      "dependencies": [
+        "WP20"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "NOT_TESTED",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP22",
+      "title": "Revalidate the authenticated original model",
+      "dependencies": [
+        "WP21"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "NOT_TESTED",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP23",
+      "title": "Run SC local/global dependency analysis",
+      "dependencies": [
+        "WP22"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "NOT_TESTED",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP24",
+      "title": "Compare MIST-WIC support to automated EEG events",
+      "dependencies": [
+        "WP23"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "NOT_TESTED",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP25",
+      "title": "Explain correct and incorrect classifications using multiple signals",
+      "dependencies": [
+        "WP24"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "NOT_TESTED",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP26",
+      "title": "Test internal-versus-physical explanation validity",
+      "dependencies": [
+        "WP25"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "NOT_TESTED",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP27",
+      "title": "Decide whether temporal context deserves testing",
+      "dependencies": [
+        "WP26"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "NOT_APPLICABLE",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [
+        "configs/mist_cove_phase14_v1.json",
+        "reports/mist_cove/phase14_v1/protocol_preregistration.json"
+      ],
+      "findings": [
+        "Initial scientific choices and outcome-independent samples frozen; contextGO isolates adjacent physical context at equal parameter count; ST values remain unopened"
+      ],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP28",
+      "title": "Implement a tightly matched context candidate",
+      "dependencies": [
+        "WP27"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "NOT_TESTED",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP29",
+      "title": "Freeze the context training comparison",
+      "dependencies": [
+        "WP28"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "NOT_TESTED",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP30",
+      "title": "Train and validate the context candidate",
+      "dependencies": [
+        "WP29"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "NOT_TESTED",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP31",
+      "title": "Evaluate context versus explanation behavior",
+      "dependencies": [
+        "WP30"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "NOT_TESTED",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP32",
+      "title": "Seal the complete ST evaluation package",
+      "dependencies": [
+        "WP31"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "NOT_TESTED",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP33",
+      "title": "Execute ST preflight",
+      "dependencies": [
+        "WP32"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "NOT_TESTED",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP34",
+      "title": "Load and verify all authorized ST recordings",
+      "dependencies": [
+        "WP33"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "NOT_TESTED",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP35",
+      "title": "Construct the ST complete physical sleep-stage grid",
+      "dependencies": [
+        "WP34"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "NOT_TESTED",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP36",
+      "title": "Run frozen original P3B inference across ST",
+      "dependencies": [
+        "WP35"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "NOT_TESTED",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP37",
+      "title": "Quantify cross-study stage classification",
+      "dependencies": [
+        "WP36"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "NOT_TESTED",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP38",
+      "title": "Examine temazepam/placebo conditions descriptively",
+      "dependencies": [
+        "WP37"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "NOT_TESTED",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP39",
+      "title": "Quantify SC-to-ST signal-domain differences",
+      "dependencies": [
+        "WP38"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "NOT_TESTED",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP40",
+      "title": "Run frozen event-proxy detectors on ST",
+      "dependencies": [
+        "WP39"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "NOT_TESTED",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP41",
+      "title": "Create the frozen ST witness-audit sample",
+      "dependencies": [
+        "WP40"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "NOT_TESTED",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP42",
+      "title": "Test ST explanation-to-proxy concordance",
+      "dependencies": [
+        "WP41"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "NOT_TESTED",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP43",
+      "title": "Evaluate ST failure mechanisms and uncertainty",
+      "dependencies": [
+        "WP42"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "NOT_TESTED",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP44",
+      "title": "Integrate the three scientific views",
+      "dependencies": [
+        "WP43"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "NOT_TESTED",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP45",
+      "title": "Run prespecified robustness and falsification controls",
+      "dependencies": [
+        "WP44"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "NOT_TESTED",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP46",
+      "title": "Perform rigorous statistical analysis",
+      "dependencies": [
+        "WP45"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "NOT_TESTED",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP47",
+      "title": "Build a falsification-oriented scientific decision",
+      "dependencies": [
+        "WP46"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "NOT_TESTED",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP48",
+      "title": "Complete extensive security and correctness testing",
+      "dependencies": [
+        "WP47"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "NOT_TESTED",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP49",
+      "title": "Produce a comprehensive scientific research package",
+      "dependencies": [
+        "WP48"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "NOT_TESTED",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP50",
+      "title": "GitHub delivery and final scientific decision",
+      "dependencies": [
+        "WP49"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "NOT_TESTED",
+      "code_configuration_identity": {
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    }
+  ]
+}
