@@ -1,0 +1,44 @@
+{
+  "domain": "TEN_TRAIN_FIT_EXAMPLES_ONLY",
+  "runs": [
+    {
+      "capacity": "S",
+      "routing": "R0",
+      "updates": 1000,
+      "resume_verification_extra_updates": 2,
+      "initial_CE": 1.6405601501464844,
+      "final_CE": 0.29446977376937866,
+      "accuracy": 1.0,
+      "predicted_classes": 5,
+      "tiny_overfit_gate": false,
+      "finite_gradients": true,
+      "intended_weights_updated": true,
+      "exact_additive_accounting": true,
+      "exact_resume": true,
+      "state_changed": true,
+      "wall_seconds": 1.887977670005057
+    },
+    {
+      "capacity": "L",
+      "routing": "R0",
+      "updates": 1000,
+      "resume_verification_extra_updates": 2,
+      "initial_CE": 1.6303746700286865,
+      "final_CE": 0.06642676889896393,
+      "accuracy": 1.0,
+      "predicted_classes": 5,
+      "tiny_overfit_gate": true,
+      "finite_gradients": true,
+      "intended_weights_updated": true,
+      "exact_additive_accounting": true,
+      "exact_resume": true,
+      "state_changed": true,
+      "wall_seconds": 4.657651134999469
+    }
+  ],
+  "scientific_generalization_claim": false,
+  "real_overfit_runs": 2,
+  "trajectory_updates": 2000,
+  "extra_resume_verification_updates": 4,
+  "total_engineering_real_updates": 2004
+}

@@ -39,6 +39,7 @@ def validate_submission(value, known_cases):
     if not isinstance(value.get('notes',''),str) or len(value.get('notes',''))>1000:raise ValueError('bounded notes')
     assessments=value.get('assessments')
     if not isinstance(assessments,list) or not 1<=len(assessments)<=100:raise ValueError('explicit assessments required')
+    if len({a.get('category') for a in assessments})!=len(assessments):raise ValueError('one category assessment with multiple intervals required')
     return {**value,'assessments':[validate_assessment(v) for v in assessments]}
 
 

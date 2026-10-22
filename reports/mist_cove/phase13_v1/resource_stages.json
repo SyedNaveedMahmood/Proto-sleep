@@ -14,5 +14,31 @@
     "track": "A",
     "status": "COMPLETE",
     "wall_seconds": 0.0071775340038584545
+  },
+  "previous_model_diagnostics": {
+    "track": "B",
+    "status": "COMPLETE",
+    "wall_seconds": 0.009079794006538577
+  },
+  "generated_resource_pilot": {
+    "track": "ENGINEERING",
+    "status": "COMPLETE",
+    "wall_seconds": 1.288536687992746,
+    "generated_updates": 100
+  },
+  "real_fit_engineering_overfit": {
+    "track": "B_ENGINEERING",
+    "status": "COMPLETE",
+    "wall_seconds": 6.550803776000976,
+    "real_overfit_runs": 2,
+    "optimizer_updates": 2000,
+    "native_examples": 20000
+  },
+  "generated_operator_correctness": {
+    "track": "ENGINEERING",
+    "status": "COMPLETE",
+    "wall_seconds": 0.38352938399475534,
+    "tables": 8,
+    "table_state_evaluations": 262144
   }
 }

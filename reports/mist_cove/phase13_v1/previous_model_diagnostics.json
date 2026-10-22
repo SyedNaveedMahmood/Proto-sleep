@@ -1,0 +1,130 @@
+{
+  "models": [
+    {
+      "arm": "M0",
+      "seed": 123,
+      "authenticated_bytes": true,
+      "stored_slots": 1078,
+      "final_training_CE": 1.062073141336441,
+      "clean_N1_recall": 0.005,
+      "global_logit_magnitude": 0.3363288342952728,
+      "local_logit_magnitude": 1.3433878421783447,
+      "mean_reliability": 1.0,
+      "named_state_digest": "053b8134411707c35ace9d4abbc88fcf1d665269e76239000e184554048193f1"
+    },
+    {
+      "arm": "M1",
+      "seed": 123,
+      "authenticated_bytes": true,
+      "stored_slots": 1078,
+      "final_training_CE": 1.0594167172908784,
+      "clean_N1_recall": 0.0,
+      "global_logit_magnitude": 0.337065190076828,
+      "local_logit_magnitude": 1.3611137866973877,
+      "mean_reliability": 0.9098161458969116,
+      "named_state_digest": "369b2d80ca50bfa4153e48c007a2377575a65563ec4e4d5226bd2fa3004e8dcc"
+    },
+    {
+      "arm": "M2",
+      "seed": 123,
+      "authenticated_bytes": true,
+      "stored_slots": 1078,
+      "final_training_CE": 1.0882028609514236,
+      "clean_N1_recall": 0.0,
+      "global_logit_magnitude": 0.3544340431690216,
+      "local_logit_magnitude": 1.0508203506469727,
+      "mean_reliability": 0.812402606010437,
+      "named_state_digest": "a99f6064c737b5ec1238c90935b5e7667ae1ba117153a4abc816d2f12220dd09"
+    },
+    {
+      "arm": "M0",
+      "seed": 456,
+      "authenticated_bytes": true,
+      "stored_slots": 1078,
+      "final_training_CE": 1.0533608198165894,
+      "clean_N1_recall": 0.06,
+      "global_logit_magnitude": 0.25128570199012756,
+      "local_logit_magnitude": 1.3310980796813965,
+      "mean_reliability": 1.0,
+      "named_state_digest": "55a7e9545b5af74cf87081e4ce0629b9a9a9b2820e2426f7e0928c9886f5c798"
+    },
+    {
+      "arm": "M1",
+      "seed": 456,
+      "authenticated_bytes": true,
+      "stored_slots": 1078,
+      "final_training_CE": 1.0505625158548355,
+      "clean_N1_recall": 0.055,
+      "global_logit_magnitude": 0.2729099988937378,
+      "local_logit_magnitude": 1.3440908193588257,
+      "mean_reliability": 0.8877987265586853,
+      "named_state_digest": "0c4e3a3a9f973494e0b9eb6ad7cb46f3c457b133cb4136b96bc8ccd90f7246a6"
+    },
+    {
+      "arm": "M2",
+      "seed": 456,
+      "authenticated_bytes": true,
+      "stored_slots": 1078,
+      "final_training_CE": 1.0784085899591447,
+      "clean_N1_recall": 0.03,
+      "global_logit_magnitude": 0.2946511507034302,
+      "local_logit_magnitude": 1.0369983911514282,
+      "mean_reliability": 0.786884605884552,
+      "named_state_digest": "cff6c75d19254e68d4041fc668bd51e2b101f798624a581cdf325417ce21e873"
+    },
+    {
+      "arm": "M0",
+      "seed": 789,
+      "authenticated_bytes": true,
+      "stored_slots": 1078,
+      "final_training_CE": 1.0527961432933808,
+      "clean_N1_recall": 0.0,
+      "global_logit_magnitude": 0.30434349179267883,
+      "local_logit_magnitude": 1.3265231847763062,
+      "mean_reliability": 1.0,
+      "named_state_digest": "f624c09a23cd8c27d81e95313f2aa72c866b525d3cde422c527642325a68883d"
+    },
+    {
+      "arm": "M1",
+      "seed": 789,
+      "authenticated_bytes": true,
+      "stored_slots": 1078,
+      "final_training_CE": 1.0452642023563385,
+      "clean_N1_recall": 0.0,
+      "global_logit_magnitude": 0.3052313029766083,
+      "local_logit_magnitude": 1.3640943765640259,
+      "mean_reliability": 0.9373742341995239,
+      "named_state_digest": "a83c9fd93e780264e15db405045ce1440f8d08d77a39dfb1f91f227d6e5d87fe"
+    },
+    {
+      "arm": "M2",
+      "seed": 789,
+      "authenticated_bytes": true,
+      "stored_slots": 1078,
+      "final_training_CE": 1.074504342675209,
+      "clean_N1_recall": 0.0,
+      "global_logit_magnitude": 0.3255491554737091,
+      "local_logit_magnitude": 1.0531272888183594,
+      "mean_reliability": 0.8621373772621155,
+      "named_state_digest": "63cc742d69b3e471069ee686b6c39d918d9b69df7be8e216599b38cfcb410cb7"
+    }
+  ],
+  "historical_states_modified": false,
+  "measured": [
+    "short300-update exposure",
+    "weak N1",
+    "remaining CE above1",
+    "fixed17-sample convolutional receptive field",
+    "early averaging of46 local positions",
+    "reported local/global magnitudes"
+  ],
+  "hypotheses": [
+    "limited width",
+    "underoptimization",
+    "missing long waveform/temporal context",
+    "gate initialization/weak local gradient effects"
+  ],
+  "not_recoverable": [
+    "Phase XII per-step gradients and optimizer states were not preserved; no retrospective gradient-flow proof"
+  ]
+}

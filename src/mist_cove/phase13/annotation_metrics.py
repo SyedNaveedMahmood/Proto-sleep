@@ -48,6 +48,10 @@ def categorical_agreement(first,second):
 def require_locked_expert_labels(exports):
     if len(exports)<2 or any(not e.get('locked') or not e.get('qualified_approved') or e.get('domain')!='REAL_TRAIN' for e in exports):
         raise ValueError('independently approved qualified locked human exports required')
+    if len({e.get('reviewer') for e in exports})!=len(exports) or any(not e.get('reviewer') for e in exports):
+        raise ValueError('distinct independent reviewer identities required')
+    if len({e.get('packet_sha256') for e in exports})!=1 or not exports[0].get('packet_sha256'):
+        raise ValueError('same frozen blinded packet required')
 
 
 def controls(mask,seed=123):
