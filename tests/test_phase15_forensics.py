@@ -5,6 +5,7 @@ import pytest
 from mist_cove.phase15.forensics import _distances, _prob, _round_robin, _stratum
 from mist_cove.phase15.wave_diagnostics import _wave_features
 from mist_cove.phase15.explanation import _align
+from mist_cove.phase15.comparison import _ci_person, _eligible
 from mist_cove.phase14.event_alignment import matched_candidates
 
 
@@ -54,3 +55,15 @@ def test_proxy_comparators_have_equal_atom_budget_without_labels():
         'gradient_matched','random_matched','position_matched','sigma_matched','delta_matched'))
     out=_align({'EEG Pz-Oz|spindle':[]},0,c)
     assert out['EEG Pz-Oz|spindle']['event_count']==0
+
+
+def test_participant_bootstrap_keeps_nested_cases_together():
+    r=_ci_person([('a',1),('a',3),('b',-2)],15015)
+    assert r['people']==2 and r['cases']==3
+    assert r['person_mean_delta']==pytest.approx(0.)
+
+
+def test_no_event_is_explicitly_ineligible():
+    row={'summary':{'positive_minimum_mask':3},'proxy_alignment':
+         {'EEG Pz-Oz|spindle':{'event_count':0}}}
+    assert _eligible(row)==(False,'NO_PZ_SPINDLE_CANDIDATE')

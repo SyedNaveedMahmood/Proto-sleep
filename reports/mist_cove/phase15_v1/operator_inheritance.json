@@ -1,0 +1,56 @@
+{
+  "phase14_ST_cases": 219,
+  "phase14_exact_tables": 1095,
+  "phase14_views": {
+    "mild_hf": {
+      "cases": 219,
+      "prediction_stable": 208,
+      "fixed_clause_eligible": 219,
+      "fixed_clause_valid": 142,
+      "active_substitution": 1,
+      "any_original_active_valid": 143
+    },
+    "drift": {
+      "cases": 219,
+      "prediction_stable": 216,
+      "fixed_clause_eligible": 219,
+      "fixed_clause_valid": 182,
+      "active_substitution": 0,
+      "any_original_active_valid": 182
+    },
+    "gain": {
+      "cases": 219,
+      "prediction_stable": 212,
+      "fixed_clause_eligible": 219,
+      "fixed_clause_valid": 208,
+      "active_substitution": 0,
+      "any_original_active_valid": 208
+    }
+  },
+  "phase14_physical": {
+    "bridge": {
+      "requests": 3285,
+      "attempted": 3285,
+      "compatible": 500,
+      "nontarget_exact": 3285,
+      "target_response_lost": 37,
+      "structural_physical_disagreements": 102,
+      "not_estimable": false,
+      "clinical_event_deletion": "NOT_TESTED"
+    },
+    "background": {
+      "requests": 3285,
+      "attempted": 282,
+      "compatible": 94,
+      "nontarget_exact": 282,
+      "target_response_lost": 0,
+      "structural_physical_disagreements": 7,
+      "not_estimable": false,
+      "clinical_event_deletion": "NOT_TESTED"
+    }
+  },
+  "phase14_neutral_changed_tables": 206,
+  "phase14_neutral_changed_minimum": 45,
+  "status": "INHERITED_EXPLORATORY_REUSED_ST",
+  "interpretation": "same frozen model, distinct internal and physical operators"
+}
