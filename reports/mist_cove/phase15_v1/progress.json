@@ -1,0 +1,1402 @@
+{
+  "version": "mist-cove-phase15-progress-v1",
+  "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
+  "analysis_status": "EXPLORATORY_REUSED_ST",
+  "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+  "work_packages": [
+    {
+      "id": "WP01",
+      "title": "Verify repository starting state",
+      "dependencies": [],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_GOVERNANCE",
+      "code_configuration_identity": {
+        "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376"
+      },
+      "tests": [
+        "exact base/source/digest and public-manifest checks"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/starting_commit.json"
+      ],
+      "findings": [
+        "Exact base and tree, remote Phase XIV identity, clean branch start and Python packages verified."
+      ],
+      "limitations": [
+        "ST outcomes were previously examined; protocol is an exploratory lock"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP02",
+      "title": "Build a complete historical evidence map",
+      "dependencies": [
+        "WP01"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_GOVERNANCE",
+      "code_configuration_identity": {
+        "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376"
+      },
+      "tests": [
+        "exact base/source/digest and public-manifest checks"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/historical_evidence_map.json"
+      ],
+      "findings": [
+        "Evidence graph separates computational, synthetic, source-development, inherited ST and unverified physiological claims."
+      ],
+      "limitations": [
+        "ST outcomes were previously examined; protocol is an exploratory lock"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP03",
+      "title": "Record the accepted dataset-path publication decision",
+      "dependencies": [
+        "WP02"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_GOVERNANCE",
+      "code_configuration_identity": {
+        "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376"
+      },
+      "tests": [
+        "exact base/source/digest and public-manifest checks"
+      ],
+      "artifacts": [
+        "docs/mist_cove/PHASE_XV_AUTHORIZATION_AND_EXPOSURE_V1.md"
+      ],
+      "findings": [
+        "Owner accepted the earlier root-path appearance in Git history; no other private artifact exception."
+      ],
+      "limitations": [
+        "ST outcomes were previously examined; protocol is an exploratory lock"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP04",
+      "title": "Audit Phase XIV output consistency",
+      "dependencies": [
+        "WP03"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_GOVERNANCE",
+      "code_configuration_identity": {
+        "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376"
+      },
+      "tests": [
+        "exact base/source/digest and public-manifest checks"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/phase14_WP23_corrigendum.json"
+      ],
+      "findings": [
+        "Phase XIV WP23 pending-aggregation status is inconsistent with 900 completed exact SC tables and published SC aggregate; original ledger unchanged."
+      ],
+      "limitations": [
+        "ST outcomes were previously examined; protocol is an exploratory lock"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP05",
+      "title": "Reauthenticate source-model and data contracts",
+      "dependencies": [
+        "WP04"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_GOVERNANCE",
+      "code_configuration_identity": {
+        "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376"
+      },
+      "tests": [
+        "exact base/source/digest and public-manifest checks"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/model_reauthentication.json"
+      ],
+      "findings": [
+        "Historical checkpoint restricted-loaded with exact byte and named-state digests; Phase XIV source manifest/geometry and 103 published artifact hashes matched."
+      ],
+      "limitations": [
+        "ST outcomes were previously examined; protocol is an exploratory lock"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP06",
+      "title": "Build a Phase XV study exposure ledger",
+      "dependencies": [
+        "WP05"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_GOVERNANCE",
+      "code_configuration_identity": {
+        "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376"
+      },
+      "tests": [
+        "exact base/source/digest and public-manifest checks"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/exposure_ledger.json"
+      ],
+      "findings": [
+        "Prior ST complete-grid and witness/proxy outcomes are marked exposed; all new ST work must be exploratory."
+      ],
+      "limitations": [
+        "ST outcomes were previously examined; protocol is an exploratory lock"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP07",
+      "title": "Freeze the new analysis plan",
+      "dependencies": [
+        "WP06"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_GOVERNANCE",
+      "code_configuration_identity": {
+        "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376"
+      },
+      "tests": [
+        "SHA256 protocol lock; committed-byte verification required before analysis"
+      ],
+      "artifacts": [
+        "configs/mist_cove_phase15_v1.json",
+        "reports/mist_cove/phase15_v1/analysis_protocol.json"
+      ],
+      "findings": [
+        "Locked config prespecifies three panel definitions, REM strata, fixed warnings, baseline access, participant bootstrap and zero-fit compute limits before new research queries."
+      ],
+      "limitations": [
+        "ST outcomes were previously examined; protocol is an exploratory lock"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP08",
+      "title": "Build leakage and negative-control fixtures",
+      "dependencies": [
+        "WP07"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "ENGINEERING_PASS",
+      "code_configuration_identity": {
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "2acd67e74b65c0e6b010dd8a64928ce92dfafdd667f07cd3ba6a4719793e0a8e",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
+      },
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "tests/test_phase15_forensics.py"
+      ],
+      "findings": [
+        "Generated leakage, role, geometry, clause and ordering controls pass; inherited source/cache tests retained."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP09",
+      "title": "Reproduce the original ST confusion structure",
+      "dependencies": [
+        "WP08"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
+      "code_configuration_identity": {
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "2acd67e74b65c0e6b010dd8a64928ce92dfafdd667f07cd3ba6a4719793e0a8e",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
+      },
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/rem_forensics.json"
+      ],
+      "findings": [
+        "Published 42,691 scored-epoch confusion and REM row reproduce exactly."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP10",
+      "title": "Construct a detailed REM failure taxonomy",
+      "dependencies": [
+        "WP09"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
+      "code_configuration_identity": {
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "2acd67e74b65c0e6b010dd8a64928ce92dfafdd667f07cd3ba6a4719793e0a8e",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
+      },
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/rem_forensics.json"
+      ],
+      "findings": [
+        "REM to W/N1/N2/N3 separated; rare N3 denominator four preserved."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP11",
+      "title": "Freeze balanced and error-enriched forensic panels",
+      "dependencies": [
+        "WP10"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
+      "code_configuration_identity": {
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "2acd67e74b65c0e6b010dd8a64928ce92dfafdd667f07cd3ba6a4719793e0a8e",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
+      },
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/panel_seal.json"
+      ],
+      "findings": [
+        "219 representative and 240 enriched cases frozen privately with public SHA seal."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP12",
+      "title": "Analyze transition-related REM errors",
+      "dependencies": [
+        "WP11"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
+      "code_configuration_identity": {
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "2acd67e74b65c0e6b010dd8a64928ce92dfafdd667f07cd3ba6a4719793e0a8e",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
+      },
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/rem_statistics.json"
+      ],
+      "findings": [
+        "Transition contrasts use contiguous scored physical runs; REM-to-N2 is transition-enriched."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP13",
+      "title": "Quantify EEG characteristics of REM errors",
+      "dependencies": [
+        "WP12"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
+      "code_configuration_identity": {
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "2acd67e74b65c0e6b010dd8a64928ce92dfafdd667f07cd3ba6a4719793e0a8e",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
+      },
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/rem_wave_diagnostics.json"
+      ],
+      "findings": [
+        "Both calibrated EEG leads analyzed; within-REM sigma and entropy contrasts reported."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP14",
+      "title": "Investigate EOG information",
+      "dependencies": [
+        "WP13"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
+      "code_configuration_identity": {
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "2acd67e74b65c0e6b010dd8a64928ce92dfafdd667f07cd3ba6a4719793e0a8e",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
+      },
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/rem_wave_diagnostics.json"
+      ],
+      "findings": [
+        "Fixed horizontal EOG candidate activity differs by REM error type; no new EOG classifier."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP15",
+      "title": "Investigate chin EMG information",
+      "dependencies": [
+        "WP14"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
+      "code_configuration_identity": {
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "2acd67e74b65c0e6b010dd8a64928ce92dfafdd667f07cd3ba6a4719793e0a8e",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
+      },
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/rem_wave_diagnostics.json"
+      ],
+      "findings": [
+        "Native ST 100-Hz chin EMG and within-night ranks reported, separate from SC 1-Hz envelope."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP16",
+      "title": "Analyze multiple-channel evidence disagreements",
+      "dependencies": [
+        "WP15"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
+      "code_configuration_identity": {
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "2acd67e74b65c0e6b010dd8a64928ce92dfafdd667f07cd3ba6a4719793e0a8e",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
+      },
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/rem_wave_diagnostics.json"
+      ],
+      "findings": [
+        "EEG/EOG/EMG and model-score disagreements reported without synthetic expert labels."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP17",
+      "title": "Audit signal-quality confounding",
+      "dependencies": [
+        "WP16"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
+      "code_configuration_identity": {
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "2acd67e74b65c0e6b010dd8a64928ce92dfafdd667f07cd3ba6a4719793e0a8e",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
+      },
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/quality_results.json"
+      ],
+      "findings": [
+        "Fixed flat/step/extreme/clip event flags and within-person error contrasts reported."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP18",
+      "title": "Analyze study-condition and night effects",
+      "dependencies": [
+        "WP17"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
+      "code_configuration_identity": {
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "2acd67e74b65c0e6b010dd8a64928ce92dfafdd667f07cd3ba6a4719793e0a8e",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
+      },
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/rem_statistics.json"
+      ],
+      "findings": [
+        "Paired temazepam-placebo REM recall difference +0.0124; bootstrap interval crosses zero."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP19",
+      "title": "Examine historical classifier output geometry",
+      "dependencies": [
+        "WP18"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
+      "code_configuration_identity": {
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "2acd67e74b65c0e6b010dd8a64928ce92dfafdd667f07cd3ba6a4719793e0a8e",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
+      },
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/rem_forensics.json"
+      ],
+      "findings": [
+        "Five-class margins/confidence and REM error taxonomy reported."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP20",
+      "title": "Investigate calibration and uncertainty failure",
+      "dependencies": [
+        "WP19"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
+      "code_configuration_identity": {
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "2acd67e74b65c0e6b010dd8a64928ce92dfafdd667f07cd3ba6a4719793e0a8e",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
+      },
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/rem_statistics.json"
+      ],
+      "findings": [
+        "ECE15 reproduced; REM stage ECE 0.453, high-confidence wrong count 3,209."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP21",
+      "title": "Evaluate source-frozen warning indicators",
+      "dependencies": [
+        "WP20"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
+      "code_configuration_identity": {
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "2acd67e74b65c0e6b010dd8a64928ce92dfafdd667f07cd3ba6a4719793e0a8e",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
+      },
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/rem_statistics.json"
+      ],
+      "findings": [
+        "Fixed warning rules have limited REM-error sensitivity and material false-warning rates."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP22",
+      "title": "Perform participant-aware REM failure modeling",
+      "dependencies": [
+        "WP21"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
+      "code_configuration_identity": {
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "2acd67e74b65c0e6b010dd8a64928ce92dfafdd667f07cd3ba6a4719793e0a8e",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
+      },
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/rem_statistics.json"
+      ],
+      "findings": [
+        "Person-clustered descriptive contrasts; no fitted ST predictor or causal claim."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP23",
+      "title": "Produce a private REM failure atlas",
+      "dependencies": [
+        "WP22"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "NOT_TESTED_HUMAN",
+      "code_configuration_identity": {
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "2acd67e74b65c0e6b010dd8a64928ce92dfafdd667f07cd3ba6a4719793e0a8e",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
+      },
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/atlas_receipt.json"
+      ],
+      "findings": [
+        "Ten calibrated multichannel reports retained privately; no expert adjudication."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP24",
+      "title": "Formalize the incremental-value question",
+      "dependencies": [
+        "WP23"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
+      "code_configuration_identity": {
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "2acd67e74b65c0e6b010dd8a64928ce92dfafdd667f07cd3ba6a4719793e0a8e",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
+      },
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "docs/mist_cove/PHASE_XV_RESEARCH_REPORT_V1.md"
+      ],
+      "findings": [
+        "Faithfulness, proxy agreement, stability and utility estimands kept distinct."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP25",
+      "title": "Audit all comparison methods",
+      "dependencies": [
+        "WP24"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
+      "code_configuration_identity": {
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "2acd67e74b65c0e6b010dd8a64928ce92dfafdd667f07cd3ba6a4719793e0a8e",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
+      },
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/explanation_comparison.json"
+      ],
+      "findings": [
+        "Exact, signed, greedy, spectral, gradient, random, position and inherited physical comparators audited."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP26",
+      "title": "Establish fair interval-budget contracts",
+      "dependencies": [
+        "WP25"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
+      "code_configuration_identity": {
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "2acd67e74b65c0e6b010dd8a64928ce92dfafdd667f07cd3ba6a4719793e0a8e",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
+      },
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/explanation_comparison.json"
+      ],
+      "findings": [
+        "All interval baselines matched to exact-positive two-second atom count; greedy own length separate."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP27",
+      "title": "Freeze the new explanation challenge panels",
+      "dependencies": [
+        "WP26"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
+      "code_configuration_identity": {
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "2acd67e74b65c0e6b010dd8a64928ce92dfafdd667f07cd3ba6a4719793e0a8e",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
+      },
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/panel_seal.json"
+      ],
+      "findings": [
+        "E1/E2/E3 panel identities sealed before new explanation comparison."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP28",
+      "title": "Quantify event-proxy eligibility",
+      "dependencies": [
+        "WP27"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
+      "code_configuration_identity": {
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "2acd67e74b65c0e6b010dd8a64928ce92dfafdd667f07cd3ba6a4719793e0a8e",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
+      },
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/explanation_comparison.json"
+      ],
+      "findings": [
+        "E1 has 63 detector-candidate cases; 55 nondegenerate eligible from 20 people."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP29",
+      "title": "Reproduce the frozen spindle-proxy detector",
+      "dependencies": [
+        "WP28"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
+      "code_configuration_identity": {
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "2acd67e74b65c0e6b010dd8a64928ce92dfafdd667f07cd3ba6a4719793e0a8e",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
+      },
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/rem_wave_diagnostics.json"
+      ],
+      "findings": [
+        "Original stage-blind YASA event cache and version reused with authenticated Phase XIV identity."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP30",
+      "title": "Audit proxy-target dependence and circularity",
+      "dependencies": [
+        "WP29"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
+      "code_configuration_identity": {
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "2acd67e74b65c0e6b010dd8a64928ce92dfafdd667f07cd3ba6a4719793e0a8e",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
+      },
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "docs/mist_cove/PHASE_XV_RESEARCH_REPORT_V1.md"
+      ],
+      "findings": [
+        "Detector targets are independent of explanation ranking but not expert event truth."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP31",
+      "title": "Evaluate alternative nonclinical physiological proxies",
+      "dependencies": [
+        "WP30"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
+      "code_configuration_identity": {
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "2acd67e74b65c0e6b010dd8a64928ce92dfafdd667f07cd3ba6a4719793e0a8e",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
+      },
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/explanation_comparison.json"
+      ],
+      "findings": [
+        "Pz slow-wave, frontal spindle, EOG excursion and EMG low-tone candidates reported separately."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP32",
+      "title": "Recompute interval-level concordance",
+      "dependencies": [
+        "WP31"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
+      "code_configuration_identity": {
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "2acd67e74b65c0e6b010dd8a64928ce92dfafdd667f07cd3ba6a4719793e0a8e",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
+      },
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/explanation_comparison.json"
+      ],
+      "findings": [
+        "0, 0.1 and 0.25-second interval tolerances; missing event/support cases retained."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP33",
+      "title": "Perform the definitive exploratory sigma-baseline challenge",
+      "dependencies": [
+        "WP32"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
+      "code_configuration_identity": {
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "2acd67e74b65c0e6b010dd8a64928ce92dfafdd667f07cd3ba6a4719793e0a8e",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
+      },
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/explanation_comparison.json"
+      ],
+      "findings": [
+        "Exact minus sigma is -0.0462 by person on 55 eligible E2 cases; registered FAIL unchanged."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP34",
+      "title": "Evaluate explanation disagreement as an informative output",
+      "dependencies": [
+        "WP33"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
+      "code_configuration_identity": {
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "2acd67e74b65c0e6b010dd8a64928ce92dfafdd667f07cd3ba6a4719793e0a8e",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
+      },
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/explanation_comparison.json"
+      ],
+      "findings": [
+        "Sigma wins 24 cases, exact wins 9 and 22 tie; wrong predictions remain explainable."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP35",
+      "title": "Participant-level statistical robustness",
+      "dependencies": [
+        "WP34"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
+      "code_configuration_identity": {
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "2acd67e74b65c0e6b010dd8a64928ce92dfafdd667f07cd3ba6a4719793e0a8e",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
+      },
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/rem_statistics.json",
+        "reports/mist_cove/phase15_v1/explanation_comparison.json"
+      ],
+      "findings": [
+        "One thousand person-bootstrap draws; nights/cases remain nested within participant."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP36",
+      "title": "Reaudit original exact response circuits",
+      "dependencies": [
+        "WP35"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "ENGINEERING_PASS",
+      "code_configuration_identity": {
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "2acd67e74b65c0e6b010dd8a64928ce92dfafdd667f07cd3ba6a4719793e0a8e",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
+      },
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/explanation_execution.json"
+      ],
+      "findings": [
+        "360 base and 360 neutral full tables; all 32,768 states verified; full-input error zero."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP37",
+      "title": "Quantify missing-information operator sensitivity",
+      "dependencies": [
+        "WP36"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
+      "code_configuration_identity": {
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "2acd67e74b65c0e6b010dd8a64928ce92dfafdd667f07cd3ba6a4719793e0a8e",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
+      },
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/explanation_comparison.json"
+      ],
+      "findings": [
+        "E1 neutral-state table changes in 190/219; same-model operator sensitivity remains high."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP38",
+      "title": "Reevaluate physical replacement compatibility",
+      "dependencies": [
+        "WP37"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
+      "code_configuration_identity": {
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "2acd67e74b65c0e6b010dd8a64928ce92dfafdd667f07cd3ba6a4719793e0a8e",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
+      },
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/operator_inheritance.json"
+      ],
+      "findings": [
+        "Inherited compatible physical bridge 500/3,285 and background 94/3,285; no donor-guard relaxation."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP39",
+      "title": "Compare prediction stability with certificate stability",
+      "dependencies": [
+        "WP38"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
+      "code_configuration_identity": {
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "2acd67e74b65c0e6b010dd8a64928ce92dfafdd667f07cd3ba6a4719793e0a8e",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
+      },
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/stability_results.json"
+      ],
+      "findings": [
+        "Mild HF prediction stable 93/100, same primary clause valid 70/100, three substitutions."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP40",
+      "title": "Evaluate computational and practical utility",
+      "dependencies": [
+        "WP39"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
+      "code_configuration_identity": {
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "2acd67e74b65c0e6b010dd8a64928ce92dfafdd667f07cd3ba6a4719793e0a8e",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
+      },
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/resource_receipts.json"
+      ],
+      "findings": [
+        "33,426,540 attempted-inclusive cached-head states; 0 fits and updates."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP41",
+      "title": "Implement negative and falsification controls",
+      "dependencies": [
+        "WP40"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
+      "code_configuration_identity": {
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "2acd67e74b65c0e6b010dd8a64928ce92dfafdd667f07cd3ba6a4719793e0a8e",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
+      },
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/explanation_comparison.json",
+        "tests/test_phase15_forensics.py"
+      ],
+      "findings": [
+        "Fixed shifted/next-epoch and random controls; generated malformed mask/clause/role/ordering tests."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP42",
+      "title": "Determine the limits of identifiability",
+      "dependencies": [
+        "WP41"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
+      "code_configuration_identity": {
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "2acd67e74b65c0e6b010dd8a64928ce92dfafdd667f07cd3ba6a4719793e0a8e",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
+      },
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "docs/mist_cove/PHASE_XV_RESEARCH_REPORT_V1.md"
+      ],
+      "findings": [
+        "Internal exactness does not identify clinical events or physical deletions."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP43",
+      "title": "Review scientific novelty and prior methods",
+      "dependencies": [
+        "WP42"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "NOVELTY_UNCERTAIN",
+      "code_configuration_identity": {
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "2acd67e74b65c0e6b010dd8a64928ce92dfafdd667f07cd3ba6a4719793e0a8e",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
+      },
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "docs/mist_cove/PHASE_XV_NOVELTY_AND_PUBLICATION_V1.md"
+      ],
+      "findings": [
+        "Prior SIS, Boolean, time-series, YASA and reliability work reviewed; world-first novelty not claimed."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP44",
+      "title": "Statistical and scientific decision synthesis",
+      "dependencies": [
+        "WP43"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
+      "code_configuration_identity": {
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "2acd67e74b65c0e6b010dd8a64928ce92dfafdd667f07cd3ba6a4719793e0a8e",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
+      },
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/scientific_gates.json"
+      ],
+      "findings": [
+        "Evidence table separates exact correctness from failed sigma increment and untested clinical validity."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP45",
+      "title": "Make a recommendation for the next scientific contribution",
+      "dependencies": [
+        "WP44"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
+      "code_configuration_identity": {
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "2acd67e74b65c0e6b010dd8a64928ce92dfafdd667f07cd3ba6a4719793e0a8e",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
+      },
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "docs/mist_cove/PHASE_XVI_PROSPECTIVE_STUDY_PROPOSAL_V1.md"
+      ],
+      "findings": [
+        "Narrow independent blinded annotation study proposed; Phase XVI not executed."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP46",
+      "title": "Security and public-release review",
+      "dependencies": [
+        "WP45"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "ENGINEERING_PASS",
+      "code_configuration_identity": {
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "2acd67e74b65c0e6b010dd8a64928ce92dfafdd667f07cd3ba6a4719793e0a8e",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
+      },
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/privacy_review.json"
+      ],
+      "findings": [
+        "New public assets scanned; ignored waveforms and atlas not tracked; old accepted root history unchanged."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP47",
+      "title": "Comprehensive regression and correctness testing",
+      "dependencies": [
+        "WP46"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "ENGINEERING_PASS",
+      "code_configuration_identity": {
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "2acd67e74b65c0e6b010dd8a64928ce92dfafdd667f07cd3ba6a4719793e0a8e",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
+      },
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/resource_receipts.json"
+      ],
+      "findings": [
+        "Full CPU regression pass, 11 CUDA-only skips; no GPU science operation."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP48",
+      "title": "Publish and stop",
+      "dependencies": [
+        "WP47"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS_SUBJECT_TO_FINAL_HEAD_CI_VERIFICATION",
+      "scientific_status": "EXPLORATORY_REUSED_ST_PUBLICATION",
+      "code_configuration_identity": {
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "public_manifest_sha256": "0d15f6db8003d46c595c1e0c3bc2e6ec47657b2478e359f75a1bd03de2d33106",
+        "pre_closeout_head": "8c0605c0bdf62f609ef6c7ad37c16072f092fd51"
+      },
+      "tests": [
+        "local CPU 1152 passed, 11 CUDA skips",
+        "draft PR #17 correct base and head confirmed",
+        "GitHub Actions structural-tests and patched-loader-tests success on pre-closeout head 8c0605c0bdf62f609ef6c7ad37c16072f092fd51",
+        "exact final head CI to be verified after this ledger commit"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/DASHBOARD.md",
+        "reports/mist_cove/phase15_v1/publication_manifest.json",
+        "https://github.com/SyedNaveedMahmood/Proto-sleep/pull/17",
+        "https://github.com/SyedNaveedMahmood/Proto-sleep/actions/runs/39782825910"
+      ],
+      "findings": [
+        "Phase XV scientific package pushed to the existing branch; draft PR #17 targets Phase XIV; prior head CI jobs succeeded."
+      ],
+      "limitations": [
+        "Final closeout commit requires exact-head GitHub Actions verification before release",
+        "ST outcomes previously exposed; no expert event validation; Phase XVI not executed"
+      ],
+      "block_reason": null
+    }
+  ],
+  "github_completion": {
+    "draft_PR": "https://github.com/SyedNaveedMahmood/Proto-sleep/pull/17",
+    "base": "research/mist-cove-phase14-multichannel-st-transfer-v1",
+    "working_branch": "research/mist-cove-phase15-rem-proxy-method-value-v1",
+    "pre_closeout_head": "8c0605c0bdf62f609ef6c7ad37c16072f092fd51",
+    "pre_closeout_CI_run": "https://github.com/SyedNaveedMahmood/Proto-sleep/actions/runs/39782825910",
+    "pre_closeout_CI": "SUCCESS",
+    "exact_final_commit_CI": "VERIFY_AFTER_PUSH"
+  }
+}

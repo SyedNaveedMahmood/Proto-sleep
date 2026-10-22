@@ -1,0 +1,17 @@
+{
+  "status": "EXPLORATORY_REUSED_ST",
+  "private_panel_canonical_sha256": "6ead661b23b2f20100a56e3bdf6d6660bea88a3dc6f77915c6bb67454284833f",
+  "E1": 219,
+  "E2": 63,
+  "E3": 240,
+  "E3_shortfalls": {
+    "REM_to_W": 0,
+    "REM_to_N1": 0,
+    "REM_to_N2": 0,
+    "correct_REM": 0,
+    "correct_N2": 0,
+    "non_REM_error": 0
+  },
+  "E1_E3_overlap": 99,
+  "selection_before_new_explanation_queries": true
+}

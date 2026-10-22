@@ -1,0 +1,11 @@
+# Phase XV research foundation
+
+Phase XV branches from the exact Phase XIV completion commit `74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce`, tree `3a539db6a5ba232cd6b042a7063e6f50d98125eb`. The new branch is `research/mist-cove-phase15-rem-proxy-method-value-v1`; its draft PR will target Phase XIV. Historical P3B and prior MIST-COVE experiments remain unchanged.
+
+The problem is twofold. The authenticated original classifier loses most ST REM epochs while retaining strong N2 recognition. Its exact witness circuits are computationally sound, but a simple sigma-ranked interval outperformed exact retained intervals on the registered spindle-like proxy endpoint. Phase XV tests explanations of these failures, including EEG/EOG/EMG signals absent from the original single-channel model, without fitting a new classifier. A good forensic association is not proof of the mechanism that caused a prediction.
+
+Evidence is tiered. Exact circuits and authenticated model state are computational facts; synthetic interference findings are synthetic; SC TRAIN is repeatedly used in-sample development; four SC VAL people appear only through reused published aggregates; ST complete-grid and proxy outcomes were first frozen in Phase XIV but are now previously exposed; new ST analyses are **EXPLORATORY_REUSED_ST**. No independent expert event reference is available. The [machine-readable evidence map](../../reports/mist_cove/phase15_v1/historical_evidence_map.json) links each question to these evidence classes.
+
+The Phase XIV ledger's WP23 `PENDING_AGGREGATION` scientific-status field conflicts with its completed SC witness execution and published aggregate. Phase XV records a [corrigendum](../../reports/mist_cove/phase15_v1/phase14_WP23_corrigendum.json), leaves the original ledger unchanged, and keeps the SC physiological gate **NOT ESTIMABLE**. The result is an aggregation-status correction, not a new positive scientific finding.
+
+All neural training and optimizer updates are forbidden. The 18,000-second CPU and 38-million new attempted/successful cached-head-query ceilings constrain optional new circuit analyses. Previously verified response tables and detector outputs are reused only under exact source/model identity checks. This phase stops after a scientific decision and a proposal for an independently bounded future study.

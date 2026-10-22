@@ -1,0 +1,33 @@
+{
+  "status": "EXPLORATORY_REUSED_ST",
+  "panels": {
+    "E1": {
+      "cases": 219,
+      "local_only_changes": 84,
+      "global_only_preserves": 96,
+      "global_preserves_local_changes": 36,
+      "global_preserves_local_changes_and_wrong": 7
+    },
+    "E2": {
+      "cases": 63,
+      "local_only_changes": 13,
+      "global_only_preserves": 24,
+      "global_preserves_local_changes": 4,
+      "global_preserves_local_changes_and_wrong": 1
+    },
+    "E3": {
+      "cases": 240,
+      "local_only_changes": 99,
+      "global_only_preserves": 65,
+      "global_preserves_local_changes": 20,
+      "global_preserves_local_changes_and_wrong": 20
+    }
+  },
+  "head_queries_charged": 1080,
+  "total_phase15_charged": 33426540,
+  "feature_cache_computations": 360,
+  "model_state_unchanged": true,
+  "wall_seconds": 1.3630099809961393,
+  "private_rows_sha256": "a99766f98f790aa8c6153344a81e73b7738e2dea7a4e5e2c6480b578e0e3c4d5",
+  "interpretation": "feature-branch ablation; not an EEG-channel causal effect"
+}

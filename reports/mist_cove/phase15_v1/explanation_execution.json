@@ -1,0 +1,15 @@
+{
+  "status": "EXPLORATORY_REUSED_ST",
+  "cases": 360,
+  "exact_tables": 720,
+  "head_queries_attempted_including_successes": 23594760,
+  "head_query_ceiling": 38000000,
+  "interrupted_cases": 0,
+  "base_table_full_identity_max_abs": 0.0,
+  "model_named_state_unchanged": true,
+  "scientific_CPU_wall_seconds": 229.90208929000073,
+  "private_rows_sha256": "5e93a2587eb7add85b2a9ae02f000677b1b96044971fd025fa5d229d887455d6",
+  "query_unit": "cached head state, not full-network training exposure",
+  "new_neural_fits": 0,
+  "optimizer_updates": 0
+}

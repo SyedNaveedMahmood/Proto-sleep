@@ -1,0 +1,67 @@
+{
+  "version": "mist-cove-phase15-exploratory-v1",
+  "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
+  "status": "EXPLORATORY_REUSED_ST",
+  "identity": {
+    "original_checkpoint_byte_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147",
+    "original_named_state_sha256": "1b308f3fc38af22609d2043b0988998b1a193c6d4ace73ac84382bb17e1a4c6d",
+    "phase14_source_manifest_canonical_sha256": "cddf1d4bd1d5f188999a5572a14865145ab1b76a147306a0feddecd8cbc1dc70",
+    "phase14_geometry_canonical_sha256": "2c52cc1e5c701d766a06880bc68f7c52a8574416c04f763880d5b29068a9c3ad",
+    "phase14_ST_audit_input_sha256": "c7ddd1013ee7edfbf9ac4e601f133d8ec96e778b510e18518890d8934ea91bc8",
+    "phase14_ST_witness_rows_sha256": "e1daf1517a7970569f42dc7054d28f057d247a0ee3e44dd1f151770bd1f752df"
+  },
+  "roles": {"SC_TRAIN_people": 15, "SC_TRAIN_recordings": 29, "ST_EVAL_people": 22, "ST_EVAL_recordings": 44, "new_SC_VAL_raw_reads": 0, "SC_RESERVED_reads": 0, "ST_classifier_fits": 0},
+  "scientific_questions": {
+    "REM": "Which predeclared signal, transition, condition and model-output properties accompany REM-to-W/N1/N2 errors relative to correct REM? Associations only.",
+    "explanation": "What exact model-behavior information do certificates add when sigma-ranked intervals outperform them on the registered ST spindle proxy?",
+    "strategy": "Should the next independent study prioritize model auditing, expert-verified physiology or classifier development?"
+  },
+  "panels": {
+    "E1_representative": "One scored physical epoch per stage/person/night chosen by lowest SHA256(seed|study|recording|physical_epoch); no model prediction or detector input; maximum 220; missing strata kept",
+    "E2_proxy_enriched": "All E1 epochs with the existing frozen Pz-Oz spindle-like candidate and assessable detector status; selection independent of explanation support",
+    "E3_failure_enriched": "At most 40 unique epochs in each of REM_to_W, REM_to_N1, REM_to_N2, correct_REM, correct_N2, non_REM_error; SHA256-ranked with round-robin person/night priority; shortages reported without replacement",
+    "seed": 15011,
+    "overlap_policy": "Keep coordinates unique per panel; cross-panel overlap is recorded and shared cached computations are never counted as independent observations",
+    "private_coordinates_only": true
+  },
+  "error_strata": ["REM_to_W", "REM_to_N1", "REM_to_N2", "REM_to_N3", "correct_REM", "correct_N2", "non_REM_error"],
+  "signal_measures": {
+    "channels": ["EEG Fpz-Cz", "EEG Pz-Oz", "EOG horizontal", "EMG submental"],
+    "EEG": ["centered_RMS_uV", "absolute_peak_uV", "DC_uV", "delta_fraction", "theta_fraction", "alpha_fraction", "sigma_fraction", "HF_fraction", "spectral_entropy", "short_window_RMS_variability", "broadband_transient_proxy", "flat_fraction", "step_fraction"],
+    "EOG": ["fixed_excursion_count", "RMS_uV", "0.3_to_5_Hz_power", "short_window_RMS_variability"],
+    "ST_EMG": ["native_RMS_uV", "20_to_45_Hz_RMS_uV", "within_night_rank", "low_and_high_fixed_proxy_intervals"],
+    "SC_EMG": "native_1_Hz_processed_envelope_only; not pooled as equivalent to raw ST EMG",
+    "source": "frozen Phase XIV caches where identities match; one approved original-ST read pass only for new waveform measures"
+  },
+  "geometry": {"epoch_seconds": 30, "EEG_EOG_Hz": 100, "ST_EMG_Hz": 100, "SC_EMG_Hz": 1, "unscored_positions_retained": true, "cross_night_context": false, "future_labels_as_inputs": false},
+  "forensics": {
+    "transition_radii_epochs": [1, 2, 4],
+    "long_stable_REM_min_epochs": 5,
+    "confidence_threshold_high": 0.9,
+    "warning_rules": {"small_top2_logit_margin": 0.5, "high_predictive_entropy_nats": 1.1, "local_global_argmax_disagree": true},
+    "warning_threshold_source": "fixed numeric protocol constants, not fitted on ST",
+    "calibration_bins": 15,
+    "calibration_fitting": false
+  },
+  "comparison": {
+    "physical_atoms": 15,
+    "atom_seconds": 2,
+    "windows_original": 169,
+    "base_response_masks": 32768,
+    "new_tables": "base and neutral_0.01 only for unique E1/E3 cases not already cached; cached Phase XIV panels reused when exact identities match",
+    "methods": ["exact_positive", "signed_certificate", "greedy_own_budget", "sigma_matched", "RMS_matched", "delta_matched", "gradient_matched", "absolute_gradient_matched", "random_matched", "position_matched"],
+    "method_access": "No method receives scored labels or proxy intervals when selecting atoms; event overlap uses the same proxy intervals afterward",
+    "matching": "All ranking methods matched to exact-positive atom count/physical seconds per case; greedy reported at its own length; empty and whole-epoch support separate",
+    "proxy": "Phase XIV YASA 0.6.5 Pz-Oz spindle-like default and strict RMS sensitivity; stage-blind continuous-recording detection unchanged",
+    "alignment_tolerances_seconds": [0, 0.1, 0.25],
+    "negative_controls": ["proxy_shift_10_seconds", "next_Pz_epoch_within_recording", "duration_matched_random", "deliberately_wrong_mask", "wrong_cache_identity", "invalid_clause", "incorrect_channel_rate", "wrong_coordinate_order"],
+    "registered_phase14_ST_sigma_gate": "FAIL_UNCHANGED",
+    "new_success_gate": null
+  },
+  "statistics": {"unit": "participant", "ST_people": 22, "SC_people": 15, "bootstrap_draws": 1000, "seed": 15015, "nights_and_cases_nested_within_person": true, "exploratory_multiplicity": "no familywise confirmatory claims", "missing_policy": "report no event, empty support, unassessable flat, detector failure, missing stage and unscored separately", "interpretation": "association, not cause or deployable prediction"},
+  "resources": {"new_neural_fits": 0, "new_optimizer_updates": 0, "scientific_CPU_wall_seconds_max": 18000, "new_head_queries_attempted_plus_successful_max": 38000000, "ST_training_updates": 0, "new_SC_VAL_raw_reads": 0, "SC_RESERVED_reads": 0, "external_EEG_transfers": 0, "optional_GPU": "generated_correctness_only_if_idle_and_compatible"},
+  "stopping": ["identity_or_source_hash_mismatch", "unapproved_role_or_channel", "unsafe_checkpoint_load", "model_state_change", "scientific_CPU_wall_limit", "head_query_limit", "new_neural_fit", "ST_tuning_or_checkpoint_selection"],
+  "all_ST_analysis_label": "EXPLORATORY_REUSED_ST",
+  "human_event_validation": "NOT_TESTED",
+  "Phase_XVI_execution": "NOT_AUTHORIZED"
+}

@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "new_public_files_scanned": 56,
+  "text_files": 49,
+  "aggregate_PNGs": 7,
+  "private_Phase_XV_files_tracked": 0,
+  "forbidden_root_or_subject_literals": 0,
+  "private_waveform_crops_published": false,
+  "private_full_prediction_arrays_published": false,
+  "fitted_weights_or_normalization_values_published": false,
+  "old_accepted_dataset_root_literal_in_prior_history": true,
+  "history_rewritten": false,
+  "new_raw_SC_VAL_reads": 0,
+  "new_SC_RESERVED_reads": 0,
+  "ST_neural_fits": 0,
+  "human_validation": "NOT_TESTED"
+}

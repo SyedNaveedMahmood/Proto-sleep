@@ -1,0 +1,21 @@
+{
+  "status": "EXPLORATORY_REUSED_ST",
+  "private_case_reports": 10,
+  "category_candidates": {
+    "high_confidence_REM_to_W": 9,
+    "high_confidence_REM_to_N1": 0,
+    "high_confidence_REM_to_N2": 12,
+    "low_confidence_REM_error": 48,
+    "correct_REM": 40,
+    "wrong_global_reliant": 19,
+    "neutral_sensitive": 228,
+    "interfering_clause": 226,
+    "strong_EOG_proxy_wrong": 73,
+    "EEG_EOG_model_disagreement": 6,
+    "fixed_signal_quality_flag": 6
+  },
+  "private_atlas_sha256": "69c6ceb9618f471e2d0f419cca418f3c3f40f7b8883aa65694b7c21957384b6f",
+  "raw_waveforms_public": false,
+  "expert_adjudication": "NOT_TESTED",
+  "extension_new_head_queries": 0
+}

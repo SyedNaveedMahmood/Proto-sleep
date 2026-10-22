@@ -1,0 +1,809 @@
+{
+  "status": "EXPLORATORY_REUSED_ST",
+  "panels": {
+    "E1": {
+      "panel": "E1",
+      "status": "EXPLORATORY_REUSED_ST",
+      "sampling": "outcome_independent",
+      "cases": 219,
+      "people": 22,
+      "eligibility": {
+        "WHOLE_EPOCH_SUPPORT": 66,
+        "NO_PZ_SPINDLE_CANDIDATE": 98,
+        "ELIGIBLE": 55
+      },
+      "eligible_cases": 55,
+      "positive_minimum_exists": 219,
+      "prior_response": 19,
+      "whole_epoch_positive": 66,
+      "positive_support_atom_histogram": {
+        "0": 0,
+        "1": 32,
+        "2": 37,
+        "3": 29,
+        "4": 11,
+        "5": 6,
+        "6": 9,
+        "7": 6,
+        "8": 3,
+        "9": 2,
+        "10": 5,
+        "11": 2,
+        "12": 2,
+        "13": 4,
+        "14": 5,
+        "15": 66
+      },
+      "missing_positive_support": 0,
+      "nonmonotone_cases": 187,
+      "neutral_changed_tables": 190,
+      "neutral_changed_positive_minimum": 54,
+      "BDD_nodes": {
+        "mean": 629.4429223744293,
+        "median": 619.0
+      },
+      "active_compact_signed": 92,
+      "signed_interference_cases": 187,
+      "model_wrong": 85,
+      "methods": {
+        "0": {
+          "exact_positive": {
+            "n": 55,
+            "mean_precision": 0.17054537129537128,
+            "median_precision": 0.10166666666666667
+          },
+          "sigma_matched": {
+            "n": 55,
+            "mean_precision": 0.2171134471589017,
+            "median_precision": 0.155
+          },
+          "RMS_matched": {
+            "n": 55,
+            "mean_precision": 0.07471624436169892,
+            "median_precision": 0.0
+          },
+          "delta_matched": {
+            "n": 55,
+            "mean_precision": 0.03272906487451942,
+            "median_precision": 0.0
+          },
+          "gradient_matched": {
+            "n": 55,
+            "mean_precision": 0.05981799261344717,
+            "median_precision": 0.0
+          },
+          "absolute_gradient_matched": {
+            "n": 55,
+            "mean_precision": 0.05981799261344717,
+            "median_precision": 0.0
+          },
+          "random_matched": {
+            "n": 55,
+            "mean_precision": 0.05239000999000999,
+            "median_precision": 0.0
+          },
+          "position_matched": {
+            "n": 55,
+            "mean_precision": 0.06315959040959042,
+            "median_precision": 0.0
+          }
+        },
+        "0.1": {
+          "exact_positive": {
+            "n": 55,
+            "mean_precision": 0.20092232767232765,
+            "median_precision": 0.135
+          },
+          "sigma_matched": {
+            "n": 55,
+            "mean_precision": 0.2543619864983501,
+            "median_precision": 0.1875
+          },
+          "RMS_matched": {
+            "n": 55,
+            "mean_precision": 0.0900312172675809,
+            "median_precision": 0.0
+          },
+          "delta_matched": {
+            "n": 55,
+            "mean_precision": 0.042065016801380445,
+            "median_precision": 0.0
+          },
+          "gradient_matched": {
+            "n": 55,
+            "mean_precision": 0.07576350164986528,
+            "median_precision": 0.015
+          },
+          "absolute_gradient_matched": {
+            "n": 55,
+            "mean_precision": 0.07576350164986528,
+            "median_precision": 0.015
+          },
+          "random_matched": {
+            "n": 55,
+            "mean_precision": 0.0638030969030969,
+            "median_precision": 0.0
+          },
+          "position_matched": {
+            "n": 55,
+            "mean_precision": 0.07745496170496169,
+            "median_precision": 0.0
+          }
+        },
+        "0.25": {
+          "exact_positive": {
+            "n": 55,
+            "mean_precision": 0.24311035176944268,
+            "median_precision": 0.185
+          },
+          "sigma_matched": {
+            "n": 55,
+            "mean_precision": 0.3067575227802501,
+            "median_precision": 0.225
+          },
+          "RMS_matched": {
+            "n": 55,
+            "mean_precision": 0.1144657978385251,
+            "median_precision": 0.0
+          },
+          "delta_matched": {
+            "n": 55,
+            "mean_precision": 0.05743936215299852,
+            "median_precision": 0.0
+          },
+          "gradient_matched": {
+            "n": 55,
+            "mean_precision": 0.10363631065903793,
+            "median_precision": 0.0375
+          },
+          "absolute_gradient_matched": {
+            "n": 55,
+            "mean_precision": 0.10363631065903793,
+            "median_precision": 0.0375
+          },
+          "random_matched": {
+            "n": 55,
+            "mean_precision": 0.07980289256198346,
+            "median_precision": 0.0
+          },
+          "position_matched": {
+            "n": 55,
+            "mean_precision": 0.10100545666454758,
+            "median_precision": 0.0
+          }
+        }
+      },
+      "paired_differences": {
+        "exact_minus_sigma_matched": {
+          "people": 20,
+          "cases": 55,
+          "person_mean_delta": -0.04619295843045842,
+          "bootstrap95": [
+            -0.0797155396513209,
+            -0.016720791448135215
+          ],
+          "unit": "participant; nights and cases nested",
+          "status": "EXPLORATORY_REUSED_ST"
+        },
+        "exact_minus_RMS_matched": {
+          "people": 20,
+          "cases": 55,
+          "person_mean_delta": 0.10721558857808858,
+          "bootstrap95": [
+            0.045939660304972804,
+            0.1722204686285936
+          ],
+          "unit": "participant; nights and cases nested",
+          "status": "EXPLORATORY_REUSED_ST"
+        },
+        "exact_minus_delta_matched": {
+          "people": 20,
+          "cases": 55,
+          "person_mean_delta": 0.14700522533022534,
+          "bootstrap95": [
+            0.09314090277777777,
+            0.20061339646464643
+          ],
+          "unit": "participant; nights and cases nested",
+          "status": "EXPLORATORY_REUSED_ST"
+        },
+        "exact_minus_random_matched": {
+          "people": 20,
+          "cases": 55,
+          "person_mean_delta": 0.1378590811965812,
+          "bootstrap95": [
+            0.07501062767094019,
+            0.20057291666666663
+          ],
+          "unit": "participant; nights and cases nested",
+          "status": "EXPLORATORY_REUSED_ST"
+        },
+        "exact_minus_gradient_matched": {
+          "people": 20,
+          "cases": 55,
+          "person_mean_delta": 0.11452787490287489,
+          "bootstrap95": [
+            0.059869967705905205,
+            0.17793642919580419
+          ],
+          "unit": "participant; nights and cases nested",
+          "status": "EXPLORATORY_REUSED_ST"
+        },
+        "exact_minus_absolute_gradient_matched": {
+          "people": 20,
+          "cases": 55,
+          "person_mean_delta": 0.11452787490287489,
+          "bootstrap95": [
+            0.059869967705905205,
+            0.17793642919580419
+          ],
+          "unit": "participant; nights and cases nested",
+          "status": "EXPLORATORY_REUSED_ST"
+        }
+      }
+    },
+    "E2": {
+      "panel": "E2",
+      "status": "EXPLORATORY_REUSED_ST",
+      "sampling": "proxy_conditioned",
+      "cases": 63,
+      "people": 21,
+      "eligibility": {
+        "ELIGIBLE": 55,
+        "WHOLE_EPOCH_SUPPORT": 8
+      },
+      "eligible_cases": 55,
+      "positive_minimum_exists": 63,
+      "prior_response": 0,
+      "whole_epoch_positive": 8,
+      "positive_support_atom_histogram": {
+        "0": 0,
+        "1": 24,
+        "2": 13,
+        "3": 8,
+        "4": 1,
+        "5": 1,
+        "6": 3,
+        "7": 0,
+        "8": 0,
+        "9": 0,
+        "10": 0,
+        "11": 1,
+        "12": 1,
+        "13": 2,
+        "14": 1,
+        "15": 8
+      },
+      "missing_positive_support": 0,
+      "nonmonotone_cases": 59,
+      "neutral_changed_tables": 60,
+      "neutral_changed_positive_minimum": 16,
+      "BDD_nodes": {
+        "mean": 528.8888888888889,
+        "median": 437.0
+      },
+      "active_compact_signed": 41,
+      "signed_interference_cases": 59,
+      "model_wrong": 21,
+      "methods": {
+        "0": {
+          "exact_positive": {
+            "n": 55,
+            "mean_precision": 0.17054537129537128,
+            "median_precision": 0.10166666666666667
+          },
+          "sigma_matched": {
+            "n": 55,
+            "mean_precision": 0.2171134471589017,
+            "median_precision": 0.155
+          },
+          "RMS_matched": {
+            "n": 55,
+            "mean_precision": 0.07471624436169892,
+            "median_precision": 0.0
+          },
+          "delta_matched": {
+            "n": 55,
+            "mean_precision": 0.03272906487451942,
+            "median_precision": 0.0
+          },
+          "gradient_matched": {
+            "n": 55,
+            "mean_precision": 0.05981799261344717,
+            "median_precision": 0.0
+          },
+          "absolute_gradient_matched": {
+            "n": 55,
+            "mean_precision": 0.05981799261344717,
+            "median_precision": 0.0
+          },
+          "random_matched": {
+            "n": 55,
+            "mean_precision": 0.05239000999000999,
+            "median_precision": 0.0
+          },
+          "position_matched": {
+            "n": 55,
+            "mean_precision": 0.06315959040959042,
+            "median_precision": 0.0
+          }
+        },
+        "0.1": {
+          "exact_positive": {
+            "n": 55,
+            "mean_precision": 0.20092232767232765,
+            "median_precision": 0.135
+          },
+          "sigma_matched": {
+            "n": 55,
+            "mean_precision": 0.2543619864983501,
+            "median_precision": 0.1875
+          },
+          "RMS_matched": {
+            "n": 55,
+            "mean_precision": 0.0900312172675809,
+            "median_precision": 0.0
+          },
+          "delta_matched": {
+            "n": 55,
+            "mean_precision": 0.042065016801380445,
+            "median_precision": 0.0
+          },
+          "gradient_matched": {
+            "n": 55,
+            "mean_precision": 0.07576350164986528,
+            "median_precision": 0.015
+          },
+          "absolute_gradient_matched": {
+            "n": 55,
+            "mean_precision": 0.07576350164986528,
+            "median_precision": 0.015
+          },
+          "random_matched": {
+            "n": 55,
+            "mean_precision": 0.0638030969030969,
+            "median_precision": 0.0
+          },
+          "position_matched": {
+            "n": 55,
+            "mean_precision": 0.07745496170496169,
+            "median_precision": 0.0
+          }
+        },
+        "0.25": {
+          "exact_positive": {
+            "n": 55,
+            "mean_precision": 0.24311035176944268,
+            "median_precision": 0.185
+          },
+          "sigma_matched": {
+            "n": 55,
+            "mean_precision": 0.3067575227802501,
+            "median_precision": 0.225
+          },
+          "RMS_matched": {
+            "n": 55,
+            "mean_precision": 0.1144657978385251,
+            "median_precision": 0.0
+          },
+          "delta_matched": {
+            "n": 55,
+            "mean_precision": 0.05743936215299852,
+            "median_precision": 0.0
+          },
+          "gradient_matched": {
+            "n": 55,
+            "mean_precision": 0.10363631065903793,
+            "median_precision": 0.0375
+          },
+          "absolute_gradient_matched": {
+            "n": 55,
+            "mean_precision": 0.10363631065903793,
+            "median_precision": 0.0375
+          },
+          "random_matched": {
+            "n": 55,
+            "mean_precision": 0.07980289256198346,
+            "median_precision": 0.0
+          },
+          "position_matched": {
+            "n": 55,
+            "mean_precision": 0.10100545666454758,
+            "median_precision": 0.0
+          }
+        }
+      },
+      "paired_differences": {
+        "exact_minus_sigma_matched": {
+          "people": 20,
+          "cases": 55,
+          "person_mean_delta": -0.04619295843045842,
+          "bootstrap95": [
+            -0.0797155396513209,
+            -0.016720791448135215
+          ],
+          "unit": "participant; nights and cases nested",
+          "status": "EXPLORATORY_REUSED_ST"
+        },
+        "exact_minus_RMS_matched": {
+          "people": 20,
+          "cases": 55,
+          "person_mean_delta": 0.10721558857808858,
+          "bootstrap95": [
+            0.045939660304972804,
+            0.1722204686285936
+          ],
+          "unit": "participant; nights and cases nested",
+          "status": "EXPLORATORY_REUSED_ST"
+        },
+        "exact_minus_delta_matched": {
+          "people": 20,
+          "cases": 55,
+          "person_mean_delta": 0.14700522533022534,
+          "bootstrap95": [
+            0.09314090277777777,
+            0.20061339646464643
+          ],
+          "unit": "participant; nights and cases nested",
+          "status": "EXPLORATORY_REUSED_ST"
+        },
+        "exact_minus_random_matched": {
+          "people": 20,
+          "cases": 55,
+          "person_mean_delta": 0.1378590811965812,
+          "bootstrap95": [
+            0.07501062767094019,
+            0.20057291666666663
+          ],
+          "unit": "participant; nights and cases nested",
+          "status": "EXPLORATORY_REUSED_ST"
+        },
+        "exact_minus_gradient_matched": {
+          "people": 20,
+          "cases": 55,
+          "person_mean_delta": 0.11452787490287489,
+          "bootstrap95": [
+            0.059869967705905205,
+            0.17793642919580419
+          ],
+          "unit": "participant; nights and cases nested",
+          "status": "EXPLORATORY_REUSED_ST"
+        },
+        "exact_minus_absolute_gradient_matched": {
+          "people": 20,
+          "cases": 55,
+          "person_mean_delta": 0.11452787490287489,
+          "bootstrap95": [
+            0.059869967705905205,
+            0.17793642919580419
+          ],
+          "unit": "participant; nights and cases nested",
+          "status": "EXPLORATORY_REUSED_ST"
+        }
+      }
+    },
+    "E3": {
+      "panel": "E3",
+      "status": "EXPLORATORY_REUSED_ST",
+      "sampling": "model_error_enriched",
+      "cases": 240,
+      "people": 22,
+      "eligibility": {
+        "NO_PZ_SPINDLE_CANDIDATE": 123,
+        "WHOLE_EPOCH_SUPPORT": 67,
+        "ELIGIBLE": 50
+      },
+      "eligible_cases": 50,
+      "positive_minimum_exists": 240,
+      "prior_response": 43,
+      "whole_epoch_positive": 67,
+      "positive_support_atom_histogram": {
+        "0": 0,
+        "1": 28,
+        "2": 31,
+        "3": 35,
+        "4": 12,
+        "5": 11,
+        "6": 7,
+        "7": 11,
+        "8": 3,
+        "9": 2,
+        "10": 8,
+        "11": 3,
+        "12": 5,
+        "13": 4,
+        "14": 13,
+        "15": 67
+      },
+      "missing_positive_support": 0,
+      "nonmonotone_cases": 233,
+      "neutral_changed_tables": 233,
+      "neutral_changed_positive_minimum": 55,
+      "BDD_nodes": {
+        "mean": 719.6041666666666,
+        "median": 736.0
+      },
+      "active_compact_signed": 91,
+      "signed_interference_cases": 232,
+      "model_wrong": 160,
+      "methods": {
+        "0": {
+          "exact_positive": {
+            "n": 50,
+            "mean_precision": 0.1907154761904762,
+            "median_precision": 0.14964285714285713
+          },
+          "sigma_matched": {
+            "n": 50,
+            "mean_precision": 0.24413257575757577,
+            "median_precision": 0.1575
+          },
+          "RMS_matched": {
+            "n": 50,
+            "mean_precision": 0.0961040043290043,
+            "median_precision": 0.0
+          },
+          "delta_matched": {
+            "n": 50,
+            "mean_precision": 0.03873495670995671,
+            "median_precision": 0.0
+          },
+          "gradient_matched": {
+            "n": 50,
+            "mean_precision": 0.0633099567099567,
+            "median_precision": 0.0
+          },
+          "absolute_gradient_matched": {
+            "n": 50,
+            "mean_precision": 0.0633099567099567,
+            "median_precision": 0.0
+          },
+          "random_matched": {
+            "n": 50,
+            "mean_precision": 0.05694285714285714,
+            "median_precision": 0.0
+          },
+          "position_matched": {
+            "n": 50,
+            "mean_precision": 0.07172380952380952,
+            "median_precision": 0.0
+          }
+        },
+        "0.1": {
+          "exact_positive": {
+            "n": 50,
+            "mean_precision": 0.22335833333333333,
+            "median_precision": 0.18773809523809523
+          },
+          "sigma_matched": {
+            "n": 50,
+            "mean_precision": 0.28631796536796533,
+            "median_precision": 0.18791666666666668
+          },
+          "RMS_matched": {
+            "n": 50,
+            "mean_precision": 0.11450248917748918,
+            "median_precision": 0.0
+          },
+          "delta_matched": {
+            "n": 50,
+            "mean_precision": 0.04988939393939394,
+            "median_precision": 0.0
+          },
+          "gradient_matched": {
+            "n": 50,
+            "mean_precision": 0.07831082251082251,
+            "median_precision": 0.0
+          },
+          "absolute_gradient_matched": {
+            "n": 50,
+            "mean_precision": 0.07831082251082251,
+            "median_precision": 0.0
+          },
+          "random_matched": {
+            "n": 50,
+            "mean_precision": 0.07103809523809525,
+            "median_precision": 0.0
+          },
+          "position_matched": {
+            "n": 50,
+            "mean_precision": 0.0889392857142857,
+            "median_precision": 0.01107142857142857
+          }
+        },
+        "0.25": {
+          "exact_positive": {
+            "n": 50,
+            "mean_precision": 0.26781580086580087,
+            "median_precision": 0.2532142857142857
+          },
+          "sigma_matched": {
+            "n": 50,
+            "mean_precision": 0.3434335497835498,
+            "median_precision": 0.2473809523809524
+          },
+          "RMS_matched": {
+            "n": 50,
+            "mean_precision": 0.14352521645021646,
+            "median_precision": 0.0
+          },
+          "delta_matched": {
+            "n": 50,
+            "mean_precision": 0.06787251082251083,
+            "median_precision": 0.0
+          },
+          "gradient_matched": {
+            "n": 50,
+            "mean_precision": 0.10490497835497836,
+            "median_precision": 0.01875
+          },
+          "absolute_gradient_matched": {
+            "n": 50,
+            "mean_precision": 0.10490497835497836,
+            "median_precision": 0.01875
+          },
+          "random_matched": {
+            "n": 50,
+            "mean_precision": 0.09075627705627705,
+            "median_precision": 0.0
+          },
+          "position_matched": {
+            "n": 50,
+            "mean_precision": 0.11861818181818183,
+            "median_precision": 0.04839285714285714
+          }
+        }
+      },
+      "paired_differences": {
+        "exact_minus_sigma_matched": {
+          "people": 21,
+          "cases": 50,
+          "person_mean_delta": -0.06828304301518588,
+          "bootstrap95": [
+            -0.14461537784305645,
+            -0.010664717970521586
+          ],
+          "unit": "participant; nights and cases nested",
+          "status": "EXPLORATORY_REUSED_ST"
+        },
+        "exact_minus_RMS_matched": {
+          "people": 21,
+          "cases": 50,
+          "person_mean_delta": 0.10659157905586476,
+          "bootstrap95": [
+            0.04903007047515977,
+            0.16841833084243799
+          ],
+          "unit": "participant; nights and cases nested",
+          "status": "EXPLORATORY_REUSED_ST"
+        },
+        "exact_minus_delta_matched": {
+          "people": 21,
+          "cases": 50,
+          "person_mean_delta": 0.14661425479282622,
+          "bootstrap95": [
+            0.09523206727135299,
+            0.19366426424104993
+          ],
+          "unit": "participant; nights and cases nested",
+          "status": "EXPLORATORY_REUSED_ST"
+        },
+        "exact_minus_random_matched": {
+          "people": 21,
+          "cases": 50,
+          "person_mean_delta": 0.1325983560090703,
+          "bootstrap95": [
+            0.07930477371504156,
+            0.18774362244897957
+          ],
+          "unit": "participant; nights and cases nested",
+          "status": "EXPLORATORY_REUSED_ST"
+        },
+        "exact_minus_gradient_matched": {
+          "people": 21,
+          "cases": 50,
+          "person_mean_delta": 0.11879084209441351,
+          "bootstrap95": [
+            0.06669121057513915,
+            0.17314577213461144
+          ],
+          "unit": "participant; nights and cases nested",
+          "status": "EXPLORATORY_REUSED_ST"
+        },
+        "exact_minus_absolute_gradient_matched": {
+          "people": 21,
+          "cases": 50,
+          "person_mean_delta": 0.11879084209441351,
+          "bootstrap95": [
+            0.06669121057513915,
+            0.17314577213461144
+          ],
+          "unit": "participant; nights and cases nested",
+          "status": "EXPLORATORY_REUSED_ST"
+        }
+      }
+    }
+  },
+  "negative_controls_E2": {
+    "eligible_cases": 55,
+    "proxy_shift_10_seconds_mean_precision": 0.058595487845487855,
+    "next_Pz_epoch_within_recording_mean_precision": 0.08596556473829202,
+    "not_proxy_ground_truth": true
+  },
+  "alternative_proxies_E1": {
+    "EEG Pz-Oz|slow_wave": {
+      "candidate_cases": 16,
+      "exact_mean_precision": 0.054639787296037294,
+      "sigma_matched_mean_precision": 0.05693855623543123,
+      "event_accuracy": "NOT_TESTED"
+    },
+    "EEG Fpz-Cz|spindle": {
+      "candidate_cases": 46,
+      "exact_mean_precision": 0.23658747412008282,
+      "sigma_matched_mean_precision": 0.3323273809523809,
+      "event_accuracy": "NOT_TESTED"
+    },
+    "EOG horizontal|excursion": {
+      "candidate_cases": 79,
+      "exact_mean_precision": 0.19780350345856676,
+      "sigma_matched_mean_precision": 0.1599902386642893,
+      "event_accuracy": "NOT_TESTED"
+    },
+    "EMG submental|low": {
+      "candidate_cases": 141,
+      "exact_mean_precision": 0.8496752656327125,
+      "sigma_matched_mean_precision": 0.844553555191853,
+      "event_accuracy": "NOT_TESTED"
+    }
+  },
+  "alternative_proxies_E3": {
+    "EEG Pz-Oz|slow_wave": {
+      "candidate_cases": 12,
+      "exact_mean_precision": 0.08320917508417508,
+      "sigma_matched_mean_precision": 0.048380681818181816,
+      "event_accuracy": "NOT_TESTED"
+    },
+    "EEG Fpz-Cz|spindle": {
+      "candidate_cases": 45,
+      "exact_mean_precision": 0.23353465608465607,
+      "sigma_matched_mean_precision": 0.3352169312169312,
+      "event_accuracy": "NOT_TESTED"
+    },
+    "EOG horizontal|excursion": {
+      "candidate_cases": 89,
+      "exact_mean_precision": 0.15811554363239755,
+      "sigma_matched_mean_precision": 0.09007439470641719,
+      "event_accuracy": "NOT_TESTED"
+    },
+    "EMG submental|low": {
+      "candidate_cases": 172,
+      "exact_mean_precision": 0.9783760328818469,
+      "sigma_matched_mean_precision": 0.9709424780645711,
+      "event_accuracy": "NOT_TESTED"
+    }
+  },
+  "exact_sigma_disagreement_E2": {
+    "eligible_cases": 55,
+    "exact_higher": 9,
+    "sigma_higher": 24,
+    "tie": 22,
+    "correct_cases": 37,
+    "wrong_cases": 18,
+    "correct_exact_minus_sigma_mean": -0.052443693693693685,
+    "wrong_exact_minus_sigma_mean": -0.03449041699041698,
+    "interpretation": "wrong classifier predictions remain fully explainable; this measures automated-proxy agreement only"
+  },
+  "method_access": {
+    "exact_positive": "model cached head/full 32768 masks, own predicted class; no human labels or proxy locations",
+    "signed_certificate": "same exact table; positive and negative literals; only active positive literals are waveform support",
+    "greedy_own_budget": "same exact table; own support length, not falsely equal duration",
+    "sigma_RMS_delta": "original Fpz-Cz waveform only, matched physical atoms, no model or proxy or labels",
+    "gradient_absolute_gradient": "original model gradient and cached features; matched atoms, no proxy or labels",
+    "random_position": "seeded fixed controls, matched atoms, no model or proxy or labels"
+  },
+  "formal_model_faithfulness": "Exact minimum and signed clauses verified against all 32768 masks for each of 360 new cases; comparator masks are interval selections, not certified sufficient reasons",
+  "event_proxy_target": "Unvalidated stage-blind Pz-Oz spindle-like candidates, not expert-confirmed events",
+  "registered_phase14_sigma_increment_gate": "FAIL_UNCHANGED",
+  "human_event_validation": "NOT_TESTED",
+  "new_success_gate": null
+}
