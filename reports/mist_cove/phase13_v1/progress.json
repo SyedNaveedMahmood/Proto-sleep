@@ -1,0 +1,547 @@
+{
+  "version": "phase13-progress-v1",
+  "base_commit": "798af5629b7067af5230f64681926829e1178007",
+  "authorization_sha256": "b5b56662e8c2af430208cf15d4a7d7aed866f4a60fe96b29d4fc683700a8557f",
+  "work_packages": [
+    {
+      "id": "WP01",
+      "title": "Pull the completed research repository",
+      "dependencies": [],
+      "status": "IN PROGRESS",
+      "engineering_status": "PENDING",
+      "scientific_status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP02",
+      "title": "Reconstruct the complete scientific evidence",
+      "dependencies": [
+        "WP01"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP03",
+      "title": "Preserve authenticated artifact and source access",
+      "dependencies": [
+        "WP02"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP04",
+      "title": "Establish separate scientific protocols",
+      "dependencies": [
+        "WP03"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP05",
+      "title": "Establish data-access and privacy boundaries",
+      "dependencies": [
+        "WP04"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP06",
+      "title": "Define a defensible EEG morphology taxonomy",
+      "dependencies": [
+        "WP05"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP07",
+      "title": "Construct a prospectively selected annotation panel",
+      "dependencies": [
+        "WP06"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP08",
+      "title": "Build a private, offline annotation interface",
+      "dependencies": [
+        "WP07"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP09",
+      "title": "Establish a blinded review protocol",
+      "dependencies": [
+        "WP08"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP10",
+      "title": "Implement annotation quality assurance",
+      "dependencies": [
+        "WP09"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP11",
+      "title": "Build controlled explanation-alignment tests",
+      "dependencies": [
+        "WP10"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP12",
+      "title": "Reach the expert-validation scientific decision",
+      "dependencies": [
+        "WP11"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP13",
+      "title": "Audit why the previous models underperformed",
+      "dependencies": [
+        "WP02",
+        "WP03",
+        "WP05"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP14",
+      "title": "Implement a controlled two-width architecture family",
+      "dependencies": [
+        "WP13"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP15",
+      "title": "Establish optimization and expressiveness controls",
+      "dependencies": [
+        "WP14"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP16",
+      "title": "Measure the real training resource requirement",
+      "dependencies": [
+        "WP15"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP17",
+      "title": "Freeze the model adequacy experiment",
+      "dependencies": [
+        "WP16"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP18",
+      "title": "Execute the full controlled training campaign",
+      "dependencies": [
+        "WP17"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP19",
+      "title": "Analyze optimization trajectories",
+      "dependencies": [
+        "WP18"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP20",
+      "title": "Test specific stage-recognition weaknesses",
+      "dependencies": [
+        "WP19"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP21",
+      "title": "Evaluate routing usefulness and nuisance behavior",
+      "dependencies": [
+        "WP20"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP22",
+      "title": "Relate independent morphology to learned representations",
+      "dependencies": [
+        "WP21"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP23",
+      "title": "Compare explanation operators on real EEG",
+      "dependencies": [
+        "WP22"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP24",
+      "title": "Statistical analysis with participant-aware uncertainty",
+      "dependencies": [
+        "WP23"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP25",
+      "title": "Evaluate novelty and comparison fairness",
+      "dependencies": [
+        "WP24"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP26",
+      "title": "Produce a decisive GO/NO-GO research recommendation",
+      "dependencies": [
+        "WP25"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP27",
+      "title": "Expand correctness and privacy testing",
+      "dependencies": [
+        "WP26"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP28",
+      "title": "Produce the Phase XIII research package",
+      "dependencies": [
+        "WP27"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP29",
+      "title": "GitHub completion and final CI",
+      "dependencies": [
+        "WP28"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP30",
+      "title": "Final scientific closeout and future decision",
+      "dependencies": [
+        "WP29"
+      ],
+      "status": "PENDING",
+      "engineering_status": "PENDING",
+      "scientific_status": "PENDING",
+      "code_configuration_identity": {
+        "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
+      },
+      "tests": [],
+      "artifacts": [],
+      "findings": [],
+      "limitations": [],
+      "block_reason": null
+    }
+  ]
+}
