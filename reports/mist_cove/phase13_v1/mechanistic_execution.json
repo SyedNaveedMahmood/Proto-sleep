@@ -24,5 +24,20 @@
   },
   "secondary": "annotation-only prior-enriched cases, no new mechanistic pooling",
   "new_view_namespace": "25-case mechanistic ordinal, matched across all36states; independent from1000-case development ordinal",
-  "between_family_caution": "original whole-epoch mild32Hz differs from new localized35Hz; no fair cross-family nuisance superiority claim"
+  "between_family_caution": "original whole-epoch mild32Hz differs from new localized35Hz; no fair cross-family nuisance superiority claim",
+  "table_column_order": {
+    "original": [
+      "base",
+      "mild_hf",
+      "drift",
+      "gain",
+      "neutral_.01"
+    ],
+    "new": [
+      "base",
+      "mild_local_HF",
+      "gain",
+      "neutral_.01_at3000_only"
+    ]
+  }
 }
