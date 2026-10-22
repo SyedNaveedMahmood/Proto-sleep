@@ -1,0 +1,13 @@
+{
+  "decision": "GO_BOUNDED_MECHANISM_TEST",
+  "evidence": [
+    "Full primary accuracy .66; global strong HF .30",
+    "Localized HF accuracy .58; paired participant difference -.08, bootstrap95 [-.1266667,-.0266667]"
+  ],
+  "choices_frozen_before_VAL": true,
+  "M2_primary": true,
+  "new_fits_max": 9,
+  "no_M3": true,
+  "independent_confirmation": false,
+  "clinical_event_supervision": false
+}

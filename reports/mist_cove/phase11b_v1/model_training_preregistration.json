@@ -1,0 +1,33 @@
+{
+  "status": "FROZEN_BEFORE_SCIENTIFIC_FITS_AND_VAL",
+  "implementation_sha256": {
+    "src/mist_cove/phase11b/development.py": "fec7f83dcbd0307a050215f12efa87d5b2fd2b78cac9245c5f3f980e2a5ceae7",
+    "src/mist_cove/phase11b/training.py": "a809d54b28d0f0b100ade55f6099c674d89c7dd43d8ef97f75bf48e1c0253311",
+    "src/mist_cove/phase11b/evaluation.py": "56fff8b93ac2edcb67959fdcf28355d124e2d06ef1c6424195b9409fe7b48b5b"
+  },
+  "protocol_sha256": "b20349b7f1cdba5946d57974a511bda2369db2e8c2a9a8ffb848c549a2976edd",
+  "seeds": [
+    123,
+    456,
+    789
+  ],
+  "arms": [
+    "M0",
+    "M1",
+    "M2"
+  ],
+  "primary": "M2",
+  "updates_per_fit": 300,
+  "batch_size": 16,
+  "fits_max": 9,
+  "scientific_updates_max": 2700,
+  "paired_training_forwards_max": 86400,
+  "evaluation_forwards_max": 36000,
+  "CPU_seconds_max": 1800,
+  "GPU_allocation_seconds": 0,
+  "early_stopping": false,
+  "selection": "final update300",
+  "primary_gate": "M2-M1 local_hf pooled Macro-F1 >=.02 and clean >=-.02 in every seed",
+  "normalization": "new ten-fit-participant all-physical moments; distinct historical normalization",
+  "final_all15_fit_reserved": false
+}

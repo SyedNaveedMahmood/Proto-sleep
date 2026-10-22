@@ -1,0 +1,62 @@
+{
+  "clean": {
+    "mean_seed_difference_by_participant": {
+      "n_participants": 5,
+      "mean": -0.00547757688120133,
+      "bootstrap95": [
+        -0.012789547426401099,
+        0.0011695439415547108
+      ],
+      "unit": "participant mean; paired views retained within participant",
+      "draws": 1000,
+      "seed": 123
+    },
+    "seeds_kept_within_participant": true,
+    "independent_subjects": 5
+  },
+  "local_hf": {
+    "mean_seed_difference_by_participant": {
+      "n_participants": 5,
+      "mean": 0.002552829729529087,
+      "bootstrap95": [
+        -0.003599772818089161,
+        0.009352151309631096
+      ],
+      "unit": "participant mean; paired views retained within participant",
+      "draws": 1000,
+      "seed": 123
+    },
+    "seeds_kept_within_participant": true,
+    "independent_subjects": 5
+  },
+  "strong_hf": {
+    "mean_seed_difference_by_participant": {
+      "n_participants": 5,
+      "mean": 0.0053207681758270136,
+      "bootstrap95": [
+        -0.003146407737631722,
+        0.013787944089285747
+      ],
+      "unit": "participant mean; paired views retained within participant",
+      "draws": 1000,
+      "seed": 123
+    },
+    "seeds_kept_within_participant": true,
+    "independent_subjects": 5
+  },
+  "mild_hf": {
+    "mean_seed_difference_by_participant": {
+      "n_participants": 5,
+      "mean": -0.0053737885961334655,
+      "bootstrap95": [
+        -0.012308705775886344,
+        0.0008372967750515733
+      ],
+      "unit": "participant mean; paired views retained within participant",
+      "draws": 1000,
+      "seed": 123
+    },
+    "seeds_kept_within_participant": true,
+    "independent_subjects": 5
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "authorization_text_sha256": "2882a656c18d826238545abf1e45b8376e1c1e498a6556eb7953ca00df7ea6f8",
+  "roles": {
+    "train": {
+      "participants": 15,
+      "recordings": 29
+    },
+    "development_val": {
+      "participants": 4,
+      "recordings": 8,
+      "historically_reused": true,
+      "opened_after_choices_frozen": true
+    }
+  },
+  "split_fingerprint": "3e7a7260aae50ca522752f1cede41246daf1b2f6a8fd482800cfda97b4564e84",
+  "geometry": {
+    "channel": "Fpz-Cz",
+    "Hz": 100,
+    "samples_per_physical_epoch": 3000,
+    "units": "uV",
+    "complete_physical_positions": true,
+    "original_night_boundaries": true,
+    "original_scored_masks": true
+  },
+  "real_EEG_accessed": true,
+  "excluded_sources_accessed": false,
+  "excluded": [
+    "55_RESERVED",
+    "Sleep_Telemetry",
+    "SHHS",
+    "external_cohorts",
+    "legacy_trimmed_NPZ"
+  ],
+  "private_data_or_weights_published": false
+}

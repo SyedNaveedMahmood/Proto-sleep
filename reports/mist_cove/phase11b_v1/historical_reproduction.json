@@ -1,0 +1,8 @@
+{
+  "selected_seed": 123,
+  "published_mean_subject_macro_f1": 0.7215141151347595,
+  "current_mean_subject_macro_f1": 0.7215141151347595,
+  "exact_mean_subject_score_match": true,
+  "confusion_matrix_match": true,
+  "interpretation": "same reused development cohort; numerical reproduction, not external validity"
+}

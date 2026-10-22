@@ -1,0 +1,45 @@
+{
+  "version": "phase11b-through12a-v1",
+  "base_commit": "2f21e4436ac4288c2e53a5704b3b0f0a4d871865",
+  "authorization_text_sha256": "2882a656c18d826238545abf1e45b8376e1c1e498a6556eb7953ca00df7ea6f8",
+  "candidate": {
+    "experiment": "P3B",
+    "variant": "raw_context",
+    "seed": 123,
+    "checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147",
+    "named_state_digest": "1b308f3fc38af22609d2043b0988998b1a193c6d4ace73ac84382bb17e1a4c6d",
+    "run_fingerprint": "a9146071f32c148e30ed84a6763d77cc82c3de83bf6f90719be0f774c114754b"
+  },
+  "roles": [
+    "train",
+    "val"
+  ],
+  "excluded": [
+    "reserved",
+    "ST",
+    "SHHS",
+    "legacy_NPZ",
+    "external"
+  ],
+  "checkpoint_max_bytes": 67108864,
+  "receipt_max_bytes": 2097152,
+  "minimum_secure_torch": "2.10.0",
+  "primary_max_epochs": 150,
+  "extended_max_epochs": 750,
+  "scientific_cpu_wall_ceiling_seconds": 7200,
+  "new_scientific_fits_max": 9,
+  "new_training_gpu_hours_max": 10,
+  "new_training_requires_train_mechanism_go": true,
+  "native_tolerance": {
+    "atol": 1e-06,
+    "rtol": 1e-06
+  },
+  "neutral_values": [
+    0.0,
+    0.01
+  ],
+  "margin_threshold": 1e-06,
+  "seed": 123,
+  "CPU_threads": 2,
+  "public_waveforms_or_participant_identifiers": false
+}

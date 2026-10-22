@@ -1,0 +1,16 @@
+{
+  "n": 150,
+  "overlapping_counts": {
+    "wrong_valid_compact": 28,
+    "neutral_sensitive": 140,
+    "operator_disagreement": 2,
+    "correct_unstable": 24,
+    "global_only_stable_local_changed": 16
+  },
+  "selection": "first canonical example per category, private only",
+  "unresolved": [
+    "Clinical ambiguity versus annotation noise",
+    "True physiological events versus nuisance",
+    "Causal global shortcut versus valid stage information"
+  ]
+}

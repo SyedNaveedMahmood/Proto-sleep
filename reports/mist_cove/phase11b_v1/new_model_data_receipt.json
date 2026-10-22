@@ -1,0 +1,20 @@
+{
+  "selection_sha256": "20929d123092b78128b3fcba8e228d5bdaedcfe52cace70831225c55b4603301",
+  "normalization_sha256": "ba583a0cc501570599c593a2218eb3d2b803a1262dcca3e0d42afac22ac6d0b9",
+  "fit_epochs": 4884,
+  "internal_dev_epochs": 1000,
+  "fit_normalization_physical_epochs": 55268,
+  "normalization_excludes_internal_dev": true,
+  "missing_fit_strata_epochs": 116,
+  "missing_dev_strata_epochs": 0,
+  "source_access": {
+    "descriptor_files": 29,
+    "waveform_file_reads": 26,
+    "annotation_hash_reads": 26,
+    "waveform_bytes": 1303811968,
+    "physical_epochs_decoded": 5884,
+    "source_io_seconds": 1.6364643130036711
+  },
+  "wall_seconds": 4.457881880000059,
+  "selection_policy": "first100/40 scored epochs per stage per fit/internal-dev participant; stage-balanced, not prevalence sample"
+}

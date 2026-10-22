@@ -1,0 +1,603 @@
+{
+  "stage_taxonomy": [
+    {
+      "stage": 0,
+      "full_train_scored": 53751,
+      "error_count": 312,
+      "preceded_by_stage_transition": {
+        "n": 400,
+        "errors": 89
+      },
+      "not_preceded_by_scored_transition": {
+        "n": 53351,
+        "errors": 223
+      },
+      "within_stage_wrong_minus_correct_quality": {
+        "absolute_peak_uV": {
+          "n_participants": 15,
+          "mean": -56.34571412346543,
+          "bootstrap95": [
+            -63.570498384136705,
+            -48.816027190746446
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        },
+        "centered_rms_uV": {
+          "n_participants": 15,
+          "mean": -15.66488011623686,
+          "bootstrap95": [
+            -17.970506815023313,
+            -13.5997955394794
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        },
+        "DC_uV": {
+          "n_participants": 15,
+          "mean": 0.04652925199217387,
+          "bootstrap95": [
+            -0.1478793708718067,
+            0.31310737757646034
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        },
+        "low_frequency_fraction": {
+          "n_participants": 15,
+          "mean": 0.05089919279301185,
+          "bootstrap95": [
+            0.014395673593304311,
+            0.08573738775974245
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        },
+        "high_frequency_fraction": {
+          "n_participants": 15,
+          "mean": -0.011996858954023915,
+          "bootstrap95": [
+            -0.026544099594007862,
+            0.001974531320839983
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        },
+        "broadband_step_rms_uV": {
+          "n_participants": 15,
+          "mean": -7.2055651334800945,
+          "bootstrap95": [
+            -9.09157805198798,
+            -5.443686622122099
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        },
+        "flat_fraction": {
+          "n_participants": 15,
+          "mean": 0.003756700534037539,
+          "bootstrap95": [
+            0.003129004820970252,
+            0.004393815479767108
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        },
+        "largest_step_uV": {
+          "n_participants": 15,
+          "mean": -50.8528375463728,
+          "bootstrap95": [
+            -61.59188904246444,
+            -40.586917623499644
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        },
+        "atom_rms_max_median_ratio": {
+          "n_participants": 15,
+          "mean": 0.17420672553539018,
+          "bootstrap95": [
+            -0.01667532944729935,
+            0.36756177720620703
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        }
+      },
+      "primary_global_only_stable": 12,
+      "primary_high_confidence_wrong": 0,
+      "primary_nontrivial_positive_minimum_compact": 30
+    },
+    {
+      "stage": 1,
+      "full_train_scored": 2052,
+      "error_count": 1017,
+      "preceded_by_stage_transition": {
+        "n": 733,
+        "errors": 383
+      },
+      "not_preceded_by_scored_transition": {
+        "n": 1319,
+        "errors": 634
+      },
+      "within_stage_wrong_minus_correct_quality": {
+        "absolute_peak_uV": {
+          "n_participants": 15,
+          "mean": 14.827675237926318,
+          "bootstrap95": [
+            9.796229471156876,
+            20.30550961785167
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        },
+        "centered_rms_uV": {
+          "n_participants": 15,
+          "mean": 2.7066548681885085,
+          "bootstrap95": [
+            2.0076881648770954,
+            3.455872758871072
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        },
+        "DC_uV": {
+          "n_participants": 15,
+          "mean": -0.0631965799429318,
+          "bootstrap95": [
+            -0.211786539082579,
+            0.05012394568151149
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        },
+        "low_frequency_fraction": {
+          "n_participants": 15,
+          "mean": -0.006063660061127211,
+          "bootstrap95": [
+            -0.02939197487411511,
+            0.019126099092110133
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        },
+        "high_frequency_fraction": {
+          "n_participants": 15,
+          "mean": 0.0008274550096031316,
+          "bootstrap95": [
+            -0.006005709605505212,
+            0.007928254946781933
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        },
+        "broadband_step_rms_uV": {
+          "n_participants": 15,
+          "mean": 0.9078896603759425,
+          "bootstrap95": [
+            0.41423880773836624,
+            1.462209918976542
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        },
+        "flat_fraction": {
+          "n_participants": 15,
+          "mean": -0.00015553006739989507,
+          "bootstrap95": [
+            -0.0006179703447266135,
+            0.0003242379299008846
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        },
+        "largest_step_uV": {
+          "n_participants": 15,
+          "mean": 9.757619310328012,
+          "bootstrap95": [
+            4.179202684317887,
+            16.540064320173396
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        },
+        "atom_rms_max_median_ratio": {
+          "n_participants": 15,
+          "mean": 0.3027957261927996,
+          "bootstrap95": [
+            0.1849370023942918,
+            0.4230589210030488
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        }
+      },
+      "primary_global_only_stable": 6,
+      "primary_high_confidence_wrong": 2,
+      "primary_nontrivial_positive_minimum_compact": 16
+    },
+    {
+      "stage": 2,
+      "full_train_scored": 13272,
+      "error_count": 1053,
+      "preceded_by_stage_transition": {
+        "n": 1164,
+        "errors": 196
+      },
+      "not_preceded_by_scored_transition": {
+        "n": 12108,
+        "errors": 857
+      },
+      "within_stage_wrong_minus_correct_quality": {
+        "absolute_peak_uV": {
+          "n_participants": 15,
+          "mean": -6.720658957976922,
+          "bootstrap95": [
+            -9.741160017032472,
+            -3.2612769659803225
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        },
+        "centered_rms_uV": {
+          "n_participants": 15,
+          "mean": -1.1833596368789052,
+          "bootstrap95": [
+            -2.029221939220706,
+            -0.2910903979831932
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        },
+        "DC_uV": {
+          "n_participants": 15,
+          "mean": -0.03891403212332142,
+          "bootstrap95": [
+            -0.1207941765130238,
+            0.031214745404806975
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        },
+        "low_frequency_fraction": {
+          "n_participants": 15,
+          "mean": 0.05466749850013781,
+          "bootstrap95": [
+            0.03810804460006087,
+            0.07321225498560086
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        },
+        "high_frequency_fraction": {
+          "n_participants": 15,
+          "mean": 0.01765435224691059,
+          "bootstrap95": [
+            0.012287446608756386,
+            0.024519977013180524
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        },
+        "broadband_step_rms_uV": {
+          "n_participants": 15,
+          "mean": 0.46000121962579954,
+          "bootstrap95": [
+            0.16879261324169972,
+            0.7871877690269049
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        },
+        "flat_fraction": {
+          "n_participants": 15,
+          "mean": 0.00010594495112733564,
+          "bootstrap95": [
+            -0.00025278389993505337,
+            0.00046271494915200566
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        },
+        "largest_step_uV": {
+          "n_participants": 15,
+          "mean": 7.018709005570336,
+          "bootstrap95": [
+            4.315639963842355,
+            9.750556480353891
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        },
+        "atom_rms_max_median_ratio": {
+          "n_participants": 15,
+          "mean": -0.10741530315955744,
+          "bootstrap95": [
+            -0.180001883018039,
+            -0.03191978677869388
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        }
+      },
+      "primary_global_only_stable": 5,
+      "primary_high_confidence_wrong": 0,
+      "primary_nontrivial_positive_minimum_compact": 17
+    },
+    {
+      "stage": 3,
+      "full_train_scored": 4182,
+      "error_count": 548,
+      "preceded_by_stage_transition": {
+        "n": 576,
+        "errors": 222
+      },
+      "not_preceded_by_scored_transition": {
+        "n": 3606,
+        "errors": 326
+      },
+      "within_stage_wrong_minus_correct_quality": {
+        "absolute_peak_uV": {
+          "n_participants": 15,
+          "mean": -9.29459067340969,
+          "bootstrap95": [
+            -11.764764785033275,
+            -6.766417996215693
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        },
+        "centered_rms_uV": {
+          "n_participants": 15,
+          "mean": -5.397405112203475,
+          "bootstrap95": [
+            -6.581385507801876,
+            -4.261428005081979
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        },
+        "DC_uV": {
+          "n_participants": 15,
+          "mean": 0.0006764097849516056,
+          "bootstrap95": [
+            -0.126039172518219,
+            0.12226164971104744
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        },
+        "low_frequency_fraction": {
+          "n_participants": 15,
+          "mean": 0.01709795919010248,
+          "bootstrap95": [
+            0.00532079928840974,
+            0.030221745465576363
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        },
+        "high_frequency_fraction": {
+          "n_participants": 15,
+          "mean": 0.0017627135006396668,
+          "bootstrap95": [
+            0.0010447162881553405,
+            0.0025538083248887867
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        },
+        "broadband_step_rms_uV": {
+          "n_participants": 15,
+          "mean": 0.10226808924578681,
+          "bootstrap95": [
+            -0.13062895061219068,
+            0.33272991078238023
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        },
+        "flat_fraction": {
+          "n_participants": 15,
+          "mean": 5.105675934078783e-05,
+          "bootstrap95": [
+            -0.000304565289501914,
+            0.0004300736532523823
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        },
+        "largest_step_uV": {
+          "n_participants": 15,
+          "mean": 2.3124866664130814,
+          "bootstrap95": [
+            0.36063117111430676,
+            4.462378610456153
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        },
+        "atom_rms_max_median_ratio": {
+          "n_participants": 15,
+          "mean": 0.19529273339182682,
+          "bootstrap95": [
+            0.11682037344737017,
+            0.2745253901391344
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        }
+      },
+      "primary_global_only_stable": 11,
+      "primary_high_confidence_wrong": 5,
+      "primary_nontrivial_positive_minimum_compact": 16
+    },
+    {
+      "stage": 4,
+      "full_train_scored": 5768,
+      "error_count": 1203,
+      "preceded_by_stage_transition": {
+        "n": 308,
+        "errors": 75
+      },
+      "not_preceded_by_scored_transition": {
+        "n": 5460,
+        "errors": 1128
+      },
+      "within_stage_wrong_minus_correct_quality": {
+        "absolute_peak_uV": {
+          "n_participants": 15,
+          "mean": 5.588533302971816,
+          "bootstrap95": [
+            2.5926470015460463,
+            8.520345555322985
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        },
+        "centered_rms_uV": {
+          "n_participants": 15,
+          "mean": 0.860953786701623,
+          "bootstrap95": [
+            0.3483572351075585,
+            1.3686534425441872
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        },
+        "DC_uV": {
+          "n_participants": 15,
+          "mean": -0.03362034956937143,
+          "bootstrap95": [
+            -0.1523587574523208,
+            0.05565526684820851
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        },
+        "low_frequency_fraction": {
+          "n_participants": 15,
+          "mean": -0.018282237618677963,
+          "bootstrap95": [
+            -0.03734416348549285,
+            0.001954384116276108
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        },
+        "high_frequency_fraction": {
+          "n_participants": 15,
+          "mean": 0.006444918352181571,
+          "bootstrap95": [
+            0.0014582801415306229,
+            0.014195427489398657
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        },
+        "broadband_step_rms_uV": {
+          "n_participants": 15,
+          "mean": 0.7362791103560814,
+          "bootstrap95": [
+            0.40660052888868164,
+            1.1225604532149622
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        },
+        "flat_fraction": {
+          "n_participants": 15,
+          "mean": -0.0007861108212470414,
+          "bootstrap95": [
+            -0.0011985993933815403,
+            -0.00037246401806747555
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        },
+        "largest_step_uV": {
+          "n_participants": 15,
+          "mean": 5.2926774303432715,
+          "bootstrap95": [
+            1.8761311752234142,
+            9.61678986144248
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        },
+        "atom_rms_max_median_ratio": {
+          "n_participants": 15,
+          "mean": 0.10721280336021151,
+          "bootstrap95": [
+            0.00696674001484626,
+            0.2093366869919621
+          ],
+          "unit": "participant mean; paired views retained within participant",
+          "draws": 1000,
+          "seed": 123
+        }
+      },
+      "primary_global_only_stable": 3,
+      "primary_high_confidence_wrong": 4,
+      "primary_nontrivial_positive_minimum_compact": 21
+    }
+  ],
+  "primary_exact_compact_positive_count": 100,
+  "primary_nonmonotone_examples": 139,
+  "primary_nonmonotone_edge_fraction": {
+    "n": 150,
+    "mean": 0.021664089626736112,
+    "median": 0.008589680989583334,
+    "min": 0.0,
+    "max": 0.11941731770833333,
+    "q25": 0.0010447184244791667,
+    "q75": 0.03412068684895833
+  },
+  "primary_multiple_displayed_clauses": 140,
+  "stage_transition_is_ambiguity_truth": false,
+  "quality_associations_are_causal": false
+}
