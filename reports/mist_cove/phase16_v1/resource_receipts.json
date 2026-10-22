@@ -1,0 +1,17 @@
+{
+  "schema": "mist-cove-phase16-resource-v1",
+  "new_model_fits": 0,
+  "optimizer_updates": 0,
+  "cached_head_explanation_queries": 0,
+  "historical_P3B_weight_updates": 0,
+  "ST_model_updates": 0,
+  "new_SC_VAL_reads": 0,
+  "SC_RESERVED_reads": 0,
+  "SHHS_reads": 0,
+  "DREAMS_archives_downloaded": 0,
+  "external_EEG_reads": 0,
+  "GPU_hours": 0,
+  "scientific_CPU_wall_seconds": 0,
+  "note": "Only documentation review and generated-only unit tests ran; no scientific EEG computation. Test wall time is reported with the full CPU regression receipt.",
+  "CPU_test_wall_seconds": 20.57
+}

@@ -2,7 +2,7 @@ name: ci
 
 on:
   push:
-    branches: [main, research/mist-cove-phase11b-real-eeg-audit-v1, research/mist-cove-phase13-explanation-adequacy-v1, research/mist-cove-phase14-multichannel-st-transfer-v1]
+    branches: [main, research/mist-cove-phase11b-real-eeg-audit-v1, research/mist-cove-phase13-explanation-adequacy-v1, research/mist-cove-phase14-multichannel-st-transfer-v1, research/mist-cove-phase16-expert-event-benchmark-v1]
   pull_request:
 
 permissions:

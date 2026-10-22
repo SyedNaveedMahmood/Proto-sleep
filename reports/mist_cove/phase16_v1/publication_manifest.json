@@ -1,0 +1,30 @@
+{
+  "schema": "mist-cove-phase16-publication-v1",
+  "files_sha256": {
+    "docs/mist_cove/phase16/BENCHMARK_PROTOCOL_V1.md": "8b5bb5661eb644278fdd3b4cb7352c80d6d86b8b33fe302803ab939eb315c4ff",
+    "docs/mist_cove/phase16/RESEARCH_REPORT_V1.md": "855a711defef30e6b6797b57b08a63d77022432ff355f6ad07ca53b57900f6ca",
+    "docs/mist_cove/phase16/SOURCE_AND_SCIENTIFIC_REVIEW_V1.md": "375b0bda5ac294a063ff5250efbe714a61fe253db9213088ba4c4b95a509bf73",
+    "reports/mist_cove/phase16_v1/DASHBOARD.md": "7da9f0db888cdce4c357d1e29db281027574af83910c3b5a9915081e0bf144c7",
+    "reports/mist_cove/phase16_v1/resource_receipts.json": "be8ca9b757c7dbccae0e9aedf6670c89b5cc0adcfdf31aa4b9fe14f6b1209b2d",
+    "reports/mist_cove/phase16_v1/scientific_gates.json": "e0ed7477e5bfa278311f7b01f87b388384b6c5f0f79cc1b06ee15e979ef3cafa",
+    "reports/mist_cove/phase16_v1/source_permissions.json": "ebe5105c2fbb435ba6f94f94bba600e858f7909cf5649222f81e56d158175f13",
+    "src/mist_cove/phase16/__init__.py": "af321a144c6d9f11da0df0cbe7c4d49d2b59ba133cec8be8a038964446091a14",
+    "src/mist_cove/phase16/annotations.py": "ac2b111680783ed81dc9473ca200e246db91e784908dd2db155390d613b099b7",
+    "src/mist_cove/phase16/archive_security.py": "24205955ad63e0345d59d1302acf7548472f77fd6f65cd37ad7859c346f8f602",
+    "src/mist_cove/phase16/benchmark.py": "a9bfaa851dfb22d4b56f58ddb5719803df5771ac7a7213696923d3d7668b223d",
+    "src/mist_cove/phase16/edf_contract.py": "066953d6e9a8079ffa77dee1fc4cb357c50c1f3f8aa4e90b931b23010c30ff97",
+    "src/mist_cove/phase16/reference.py": "35d82d8356e855af11178648eebc572f40e0f2b48de094faf399c27d0d575342",
+    "src/mist_cove/phase16/release.py": "22d6b60d8bacd5928be0049e5a55dbcb4683db0a004d81d6db3074c65c62f12d",
+    "src/mist_cove/phase16/source.py": "8f98676a1737c27e20e9783035bcf6bbe367599baac103fe011c2e917ed3bd0f",
+    "src/mist_cove/phase16/spectral.py": "99f593c82dfda23ed75a69e88f3987a926b6fcb170a17728546ebd957ca8c7c4",
+    "tests/mist_cove/test_phase16.py": "85e7eca68bb20000f50950232c028f2096cfd89593de6d09c8bf9cb868637843"
+  },
+  "file_count": 17,
+  "excluded_mutable": [
+    "reports/mist_cove/phase16_v1/progress.json"
+  ],
+  "excluded_self": "reports/mist_cove/phase16_v1/publication_manifest.json",
+  "no_raw_EEG_or_annotation_arrays": true,
+  "DREAMS_archives_downloaded": 0,
+  "real_human_event_benchmark": "NOT_TESTED_RIGHTS_BLOCKED"
+}
