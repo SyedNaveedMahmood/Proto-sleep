@@ -55,5 +55,45 @@
     "track": "A_AND_B",
     "status": "FAILED",
     "wall_seconds": 0.3491119309910573
+  },
+  "explanation_campaign_gradient_fix": {
+    "track": "A_AND_B",
+    "status": "COMPLETE",
+    "wall_seconds": 320.80219529999886,
+    "cached_head_queries": 122884350,
+    "feature_cache_example_forwards": 3300,
+    "native_full_example_forwards": 19050,
+    "tables": 3750,
+    "exact_tables": 3750,
+    "full_identity_max_abs": 0.0,
+    "GPU_seconds": 0,
+    "query_unit": "one cached availability state, not a full-network training exposure"
+  },
+  "explanation_aggregation": {
+    "track": "A_AND_B",
+    "status": "COMPLETE",
+    "wall_seconds": 0.17916516300465446
+  },
+  "stage_adjusted_analysis": {
+    "track": "B",
+    "status": "COMPLETE",
+    "wall_seconds": 0.4254254139959812
+  },
+  "initial_authentication": {
+    "track": "SHARED",
+    "status": "COMPLETE",
+    "wall_seconds": 1.6663443119905423,
+    "accounting": "restored from separately recorded phase-owned receipt after sequential ledger reconciliation"
+  },
+  "frozen_selection": {
+    "track": "SHARED",
+    "status": "COMPLETE",
+    "wall_seconds": 1.1333297130040592
+  },
+  "classification_statistics": {
+    "track": "B",
+    "status": "COMPLETE_WITH_ENGINEERING_FIX",
+    "wall_seconds": 3.261240683,
+    "accounting": "conservative measured command wall including interpreter startup and initial metrics-signature correction; no model fits repeated"
   }
 }

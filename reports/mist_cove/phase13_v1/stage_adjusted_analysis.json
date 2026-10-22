@@ -1,0 +1,535 @@
+{
+  "rows": [
+    {
+      "capacity": "S",
+      "routing": "R0",
+      "seed": 123,
+      "contrasts": {
+        "transition": {
+          "matched_person_stage_error_difference": {
+            "n_participants": 5,
+            "mean": 0.18964793392383603,
+            "bootstrap95": [
+              0.09976442519871578,
+              0.27953144264895624
+            ],
+            "unit": "participant mean; paired views retained within participant",
+            "draws": 1000,
+            "seed": 123
+          },
+          "person_stage_strata": "equal-stage averages within each person; missing contrasts remain missing"
+        },
+        "high_HF_proxy": {
+          "matched_person_stage_error_difference": {
+            "n_participants": 5,
+            "mean": 0.026750993244801298,
+            "bootstrap95": [
+              -0.08793553367856774,
+              0.1362889260722078
+            ],
+            "unit": "participant mean; paired views retained within participant",
+            "draws": 1000,
+            "seed": 123
+          },
+          "person_stage_strata": "equal-stage averages within each person; missing contrasts remain missing"
+        }
+      },
+      "recording_F1_distribution": {
+        "n": 7,
+        "mean": 0.49043677309769934,
+        "median": 0.5335329750175987,
+        "min": 0.096,
+        "max": 0.7964683768244141,
+        "q25": 0.29077748625687155,
+        "q75": 0.7127505436640695
+      }
+    },
+    {
+      "capacity": "S",
+      "routing": "R0",
+      "seed": 456,
+      "contrasts": {
+        "transition": {
+          "matched_person_stage_error_difference": {
+            "n_participants": 5,
+            "mean": 0.20423221024639568,
+            "bootstrap95": [
+              0.12379464718906374,
+              0.2895451980190107
+            ],
+            "unit": "participant mean; paired views retained within participant",
+            "draws": 1000,
+            "seed": 123
+          },
+          "person_stage_strata": "equal-stage averages within each person; missing contrasts remain missing"
+        },
+        "high_HF_proxy": {
+          "matched_person_stage_error_difference": {
+            "n_participants": 5,
+            "mean": 0.026810788111097706,
+            "bootstrap95": [
+              -0.11005220269926153,
+              0.19769794189298834
+            ],
+            "unit": "participant mean; paired views retained within participant",
+            "draws": 1000,
+            "seed": 123
+          },
+          "person_stage_strata": "equal-stage averages within each person; missing contrasts remain missing"
+        }
+      },
+      "recording_F1_distribution": {
+        "n": 7,
+        "mean": 0.5164153890084686,
+        "median": 0.584000877844351,
+        "min": 0.12903225806451613,
+        "max": 0.8265958950334262,
+        "q25": 0.32253873251063137,
+        "q75": 0.7151006135478623
+      }
+    },
+    {
+      "capacity": "S",
+      "routing": "R0",
+      "seed": 789,
+      "contrasts": {
+        "transition": {
+          "matched_person_stage_error_difference": {
+            "n_participants": 5,
+            "mean": 0.190466676233584,
+            "bootstrap95": [
+              0.10077439936765227,
+              0.30775861524840653
+            ],
+            "unit": "participant mean; paired views retained within participant",
+            "draws": 1000,
+            "seed": 123
+          },
+          "person_stage_strata": "equal-stage averages within each person; missing contrasts remain missing"
+        },
+        "high_HF_proxy": {
+          "matched_person_stage_error_difference": {
+            "n_participants": 5,
+            "mean": 0.041031009753919975,
+            "bootstrap95": [
+              -0.09417209037952072,
+              0.18850575808780143
+            ],
+            "unit": "participant mean; paired views retained within participant",
+            "draws": 1000,
+            "seed": 123
+          },
+          "person_stage_strata": "equal-stage averages within each person; missing contrasts remain missing"
+        }
+      },
+      "recording_F1_distribution": {
+        "n": 7,
+        "mean": 0.5063393724814835,
+        "median": 0.5644753592547342,
+        "min": 0.08333333333333334,
+        "max": 0.8116304625502687,
+        "q25": 0.31431851609218164,
+        "q75": 0.7281497100238424
+      }
+    },
+    {
+      "capacity": "S",
+      "routing": "R1",
+      "seed": 123,
+      "contrasts": {
+        "transition": {
+          "matched_person_stage_error_difference": {
+            "n_participants": 5,
+            "mean": 0.1890345443537434,
+            "bootstrap95": [
+              0.10497298134844842,
+              0.2733243920346915
+            ],
+            "unit": "participant mean; paired views retained within participant",
+            "draws": 1000,
+            "seed": 123
+          },
+          "person_stage_strata": "equal-stage averages within each person; missing contrasts remain missing"
+        },
+        "high_HF_proxy": {
+          "matched_person_stage_error_difference": {
+            "n_participants": 5,
+            "mean": 0.024492579144281924,
+            "bootstrap95": [
+              -0.08303633930568917,
+              0.1326952974785792
+            ],
+            "unit": "participant mean; paired views retained within participant",
+            "draws": 1000,
+            "seed": 123
+          },
+          "person_stage_strata": "equal-stage averages within each person; missing contrasts remain missing"
+        }
+      },
+      "recording_F1_distribution": {
+        "n": 7,
+        "mean": 0.4889949948092185,
+        "median": 0.5226855164707349,
+        "min": 0.096,
+        "max": 0.8066619628461602,
+        "q25": 0.2911220532236818,
+        "q75": 0.7076866889501352
+      }
+    },
+    {
+      "capacity": "S",
+      "routing": "R1",
+      "seed": 456,
+      "contrasts": {
+        "transition": {
+          "matched_person_stage_error_difference": {
+            "n_participants": 5,
+            "mean": 0.18810528999878579,
+            "bootstrap95": [
+              0.10167205594578285,
+              0.271906758322111
+            ],
+            "unit": "participant mean; paired views retained within participant",
+            "draws": 1000,
+            "seed": 123
+          },
+          "person_stage_strata": "equal-stage averages within each person; missing contrasts remain missing"
+        },
+        "high_HF_proxy": {
+          "matched_person_stage_error_difference": {
+            "n_participants": 5,
+            "mean": 0.023772432417943246,
+            "bootstrap95": [
+              -0.11156402936588697,
+              0.19241750515995867
+            ],
+            "unit": "participant mean; paired views retained within participant",
+            "draws": 1000,
+            "seed": 123
+          },
+          "person_stage_strata": "equal-stage averages within each person; missing contrasts remain missing"
+        }
+      },
+      "recording_F1_distribution": {
+        "n": 7,
+        "mean": 0.5207818608465316,
+        "median": 0.5740972539036463,
+        "min": 0.12,
+        "max": 0.8218034224259464,
+        "q25": 0.32554723537134767,
+        "q75": 0.7392389394267168
+      }
+    },
+    {
+      "capacity": "S",
+      "routing": "R1",
+      "seed": 789,
+      "contrasts": {
+        "transition": {
+          "matched_person_stage_error_difference": {
+            "n_participants": 5,
+            "mean": 0.17304011689912993,
+            "bootstrap95": [
+              0.08807040350576169,
+              0.2823419485817399
+            ],
+            "unit": "participant mean; paired views retained within participant",
+            "draws": 1000,
+            "seed": 123
+          },
+          "person_stage_strata": "equal-stage averages within each person; missing contrasts remain missing"
+        },
+        "high_HF_proxy": {
+          "matched_person_stage_error_difference": {
+            "n_participants": 5,
+            "mean": 0.027201706102634893,
+            "bootstrap95": [
+              -0.11543726311528171,
+              0.15815343411318644
+            ],
+            "unit": "participant mean; paired views retained within participant",
+            "draws": 1000,
+            "seed": 123
+          },
+          "person_stage_strata": "equal-stage averages within each person; missing contrasts remain missing"
+        }
+      },
+      "recording_F1_distribution": {
+        "n": 7,
+        "mean": 0.5067198321877757,
+        "median": 0.564196816914045,
+        "min": 0.06956521739130435,
+        "max": 0.805403218522067,
+        "q25": 0.31431851609218164,
+        "q75": 0.7396182701513252
+      }
+    },
+    {
+      "capacity": "L",
+      "routing": "R0",
+      "seed": 123,
+      "contrasts": {
+        "transition": {
+          "matched_person_stage_error_difference": {
+            "n_participants": 5,
+            "mean": 0.21940656308362755,
+            "bootstrap95": [
+              0.11812997031885134,
+              0.3275370570283229
+            ],
+            "unit": "participant mean; paired views retained within participant",
+            "draws": 1000,
+            "seed": 123
+          },
+          "person_stage_strata": "equal-stage averages within each person; missing contrasts remain missing"
+        },
+        "high_HF_proxy": {
+          "matched_person_stage_error_difference": {
+            "n_participants": 5,
+            "mean": 0.05842403632920525,
+            "bootstrap95": [
+              -0.08825209877841456,
+              0.21177321216794898
+            ],
+            "unit": "participant mean; paired views retained within participant",
+            "draws": 1000,
+            "seed": 123
+          },
+          "person_stage_strata": "equal-stage averages within each person; missing contrasts remain missing"
+        }
+      },
+      "recording_F1_distribution": {
+        "n": 7,
+        "mean": 0.5356672264940138,
+        "median": 0.574185312101055,
+        "min": 0.12903225806451613,
+        "max": 0.8490069909266695,
+        "q25": 0.3278655163804821,
+        "q75": 0.7708574958024457
+      }
+    },
+    {
+      "capacity": "L",
+      "routing": "R0",
+      "seed": 456,
+      "contrasts": {
+        "transition": {
+          "matched_person_stage_error_difference": {
+            "n_participants": 5,
+            "mean": 0.15777216402386549,
+            "bootstrap95": [
+              0.08291799937444219,
+              0.2674531225149419
+            ],
+            "unit": "participant mean; paired views retained within participant",
+            "draws": 1000,
+            "seed": 123
+          },
+          "person_stage_strata": "equal-stage averages within each person; missing contrasts remain missing"
+        },
+        "high_HF_proxy": {
+          "matched_person_stage_error_difference": {
+            "n_participants": 5,
+            "mean": 0.03305282944871046,
+            "bootstrap95": [
+              -0.12861088523358008,
+              0.21019880897396356
+            ],
+            "unit": "participant mean; paired views retained within participant",
+            "draws": 1000,
+            "seed": 123
+          },
+          "person_stage_strata": "equal-stage averages within each person; missing contrasts remain missing"
+        }
+      },
+      "recording_F1_distribution": {
+        "n": 7,
+        "mean": 0.5315140954932379,
+        "median": 0.6098077133594375,
+        "min": 0.1375,
+        "max": 0.8101986057127416,
+        "q25": 0.34344843796612823,
+        "q75": 0.738097736724115
+      }
+    },
+    {
+      "capacity": "L",
+      "routing": "R0",
+      "seed": 789,
+      "contrasts": {
+        "transition": {
+          "matched_person_stage_error_difference": {
+            "n_participants": 5,
+            "mean": 0.20096278158948305,
+            "bootstrap95": [
+              0.14990417916915194,
+              0.2598869948433242
+            ],
+            "unit": "participant mean; paired views retained within participant",
+            "draws": 1000,
+            "seed": 123
+          },
+          "person_stage_strata": "equal-stage averages within each person; missing contrasts remain missing"
+        },
+        "high_HF_proxy": {
+          "matched_person_stage_error_difference": {
+            "n_participants": 5,
+            "mean": 0.048921242156536295,
+            "bootstrap95": [
+              -0.08848802040752504,
+              0.21245840159152857
+            ],
+            "unit": "participant mean; paired views retained within participant",
+            "draws": 1000,
+            "seed": 123
+          },
+          "person_stage_strata": "equal-stage averages within each person; missing contrasts remain missing"
+        }
+      },
+      "recording_F1_distribution": {
+        "n": 7,
+        "mean": 0.531969142731774,
+        "median": 0.5863486897581303,
+        "min": 0.10769230769230768,
+        "max": 0.8571360594805479,
+        "q25": 0.3202547412134791,
+        "q75": 0.7660487298822372
+      }
+    },
+    {
+      "capacity": "L",
+      "routing": "R1",
+      "seed": 123,
+      "contrasts": {
+        "transition": {
+          "matched_person_stage_error_difference": {
+            "n_participants": 5,
+            "mean": 0.2220404641221338,
+            "bootstrap95": [
+              0.13191156362188575,
+              0.32246494164370754
+            ],
+            "unit": "participant mean; paired views retained within participant",
+            "draws": 1000,
+            "seed": 123
+          },
+          "person_stage_strata": "equal-stage averages within each person; missing contrasts remain missing"
+        },
+        "high_HF_proxy": {
+          "matched_person_stage_error_difference": {
+            "n_participants": 5,
+            "mean": 0.06662877276923582,
+            "bootstrap95": [
+              -0.08925616039409955,
+              0.24049615589089274
+            ],
+            "unit": "participant mean; paired views retained within participant",
+            "draws": 1000,
+            "seed": 123
+          },
+          "person_stage_strata": "equal-stage averages within each person; missing contrasts remain missing"
+        }
+      },
+      "recording_F1_distribution": {
+        "n": 7,
+        "mean": 0.5365436537806244,
+        "median": 0.5695815422613817,
+        "min": 0.12903225806451613,
+        "max": 0.8488093340806518,
+        "q25": 0.33419738420747747,
+        "q75": 0.7699938368214334
+      }
+    },
+    {
+      "capacity": "L",
+      "routing": "R1",
+      "seed": 456,
+      "contrasts": {
+        "transition": {
+          "matched_person_stage_error_difference": {
+            "n_participants": 5,
+            "mean": 0.16069714889984854,
+            "bootstrap95": [
+              0.08291799937444219,
+              0.26247897720504343
+            ],
+            "unit": "participant mean; paired views retained within participant",
+            "draws": 1000,
+            "seed": 123
+          },
+          "person_stage_strata": "equal-stage averages within each person; missing contrasts remain missing"
+        },
+        "high_HF_proxy": {
+          "matched_person_stage_error_difference": {
+            "n_participants": 5,
+            "mean": -0.002582091186210181,
+            "bootstrap95": [
+              -0.17901694846859068,
+              0.17344670286115974
+            ],
+            "unit": "participant mean; paired views retained within participant",
+            "draws": 1000,
+            "seed": 123
+          },
+          "person_stage_strata": "equal-stage averages within each person; missing contrasts remain missing"
+        }
+      },
+      "recording_F1_distribution": {
+        "n": 7,
+        "mean": 0.5323197173181199,
+        "median": 0.6088853624251855,
+        "min": 0.1375,
+        "max": 0.8115859311453179,
+        "q25": 0.34344843796612823,
+        "q75": 0.7406849258620396
+      }
+    },
+    {
+      "capacity": "L",
+      "routing": "R1",
+      "seed": 789,
+      "contrasts": {
+        "transition": {
+          "matched_person_stage_error_difference": {
+            "n_participants": 5,
+            "mean": 0.2026294482561497,
+            "bootstrap95": [
+              0.15532147979437,
+              0.2615536615099909
+            ],
+            "unit": "participant mean; paired views retained within participant",
+            "draws": 1000,
+            "seed": 123
+          },
+          "person_stage_strata": "equal-stage averages within each person; missing contrasts remain missing"
+        },
+        "high_HF_proxy": {
+          "matched_person_stage_error_difference": {
+            "n_participants": 5,
+            "mean": 0.05297352973823564,
+            "bootstrap95": [
+              -0.08737690929641392,
+              0.21356951270263966
+            ],
+            "unit": "participant mean; paired views retained within participant",
+            "draws": 1000,
+            "seed": 123
+          },
+          "person_stage_strata": "equal-stage averages within each person; missing contrasts remain missing"
+        }
+      },
+      "recording_F1_distribution": {
+        "n": 7,
+        "mean": 0.5288378057166447,
+        "median": 0.5863486897581303,
+        "min": 0.096,
+        "max": 0.8521677172490479,
+        "q25": 0.3202547412134791,
+        "q75": 0.7634193752911882
+      }
+    }
+  ],
+  "status": "EXPLORATORY_ASSOCIATION",
+  "HF_proxy": "fraction of physical waveform power at>=30Hz; not a clinical artifact label",
+  "causal_context_effect": "NOT_TESTED"
+}

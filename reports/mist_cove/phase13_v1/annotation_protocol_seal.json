@@ -1,0 +1,15 @@
+{
+  "version": "phase13-review-protocol-v1",
+  "human_annotation_started": false,
+  "source_sha256": {
+    "docs/mist_cove/PHASE_XIII_ANNOTATION_CODEBOOK_V1.md": "c9fb10e6caaacedf298d9c87bd9f6cfdc1a7499c7cb249d0091003ef7cc8e0fe",
+    "docs/mist_cove/PHASE_XIII_BLINDED_REVIEW_PROTOCOL_V1.md": "c5fb60ee0746265a6d8db921e440f5c888a61ed26e1b0e519ad4fec67994adc1",
+    "docs/mist_cove/PHASE_XIII_SCIENTIFIC_PROTOCOL_V1.md": "0bbc70feb663bccd6c6d09c1e6d02ef65acb6687dfe4107dbde68d452f2ca4df",
+    "src/mist_cove/phase13/annotation_schema.py": "6aceef144c0bc399c17912f7d6f5ec1e31ad91c2c252cb5174e998cb686e73b4",
+    "src/mist_cove/phase13/annotation_metrics.py": "e788f1d3b02e3494614ad5781f6e8b21ff0594cb0d8b416550aeb02ab221afac",
+    "src/mist_cove/phase13/annotation_interface.py": "b96ee1d1303f172b86acf6b185bbd5bc1cd6e2dfdd4fb6fed8a9f2b6e70edc1d",
+    "src/mist_cove/phase13/annotation_ui.html": "b59d1f18d32116b0567442ea4148940dd8457f10c1ce92b400a920fbfe6d3da3",
+    "src/mist_cove/phase13/annotation_ui.js": "232227a40334fe6c35772c88693773ede0bfb383b99aedf01593a7cd664b4a56",
+    "src/mist_cove/phase13/annotation_packets.py": "818f19bc37ac13d45f8176629dcbf5162d8c0445f3f9e2fb73c17e3dd540a074"
+  }
+}

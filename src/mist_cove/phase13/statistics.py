@@ -72,7 +72,7 @@ def summarize():
                     'worst_participant_F1':float(min(private_metrics[s,r,k,t]['clean'].min() for k in seeds))})
     write_new(PUBLIC/'adequacy_summary.json',{'seeds':list(seeds),'rows':summary,'all_milestones':36,'fit_people':10,'development_people':5,
                'no_VAL_evaluation':True,'selection':'fixed final3000','clinical_ambiguity':'NOT_TESTED','context':'transition proxy uses preceding physical epoch, no future labels as inputs'})
-    write_new(PUBLIC/'per_seed_results.json',{'rows':[records[key] for key in sorted(records)]})
+    write_new(PUBLIC/'per_seed_results.json',{'rows':[{k:records[key][k] for k in ('capacity','routing','seed','step','training_loss_last100','gradient_norm_last100','parameter_drift_L2','checkpoint_byte_sha256','state_digest','stream_sha256')} for key in sorted(records)],'detailed_metrics':'each named capacity_routing_seed_step JSON retains all7view metrics'})
     write_new(PUBLIC/'stage_context_analysis.json',{'rows':group,'quality':'unvalidated signal-quality proxy, median TRAIN development stratification, not medical artifact labels',
                'context_causality':'NOT_TESTED; descriptive stage/transition association only','transition':'previous physical scored stage differs within recording'})
     print(json.dumps({k:all(v.values()) for k,v in gates.items()}))

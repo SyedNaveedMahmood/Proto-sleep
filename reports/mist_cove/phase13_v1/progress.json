@@ -197,13 +197,16 @@
         "30 focused generated security, blinding, metrics, state, resume, stream and operator tests pass;8 generated exhaustive tables and128 noninterference checks pass"
       ],
       "artifacts": [
-        "docs/mist_cove/PHASE_XIII_BLINDED_REVIEW_PROTOCOL_V1.md"
+        "docs/mist_cove/PHASE_XIII_EXPLANATION_VALIDITY_V1.md",
+        "reports/mist_cove/phase13_v1/annotation_readiness.json"
       ],
-      "findings": [],
+      "findings": [
+        "Review infrastructure, codebook, frozen private panel, QA and locked alignment entrypoint complete; genuine human outcomes NOT TESTED"
+      ],
       "limitations": [
-        "No approved qualified reviewers available; user confirmed. No human agreement or physiological labels fabricated."
+        "Actual independent expert annotations unavailable; no human or physiological results generated"
       ],
-      "block_reason": "User confirmed no approved qualified local reviewers; actual human study cannot proceed. Interface, protocol and generated controls complete."
+      "block_reason": "No approved qualified local reviewers available; user explicitly requested NOT TESTED human validation"
     },
     {
       "id": "WP10",
@@ -221,11 +224,14 @@
         "30 focused generated security, blinding, metrics, state, resume, stream and operator tests pass;8 generated exhaustive tables and128 noninterference checks pass"
       ],
       "artifacts": [
-        "src/mist_cove/phase13/annotation_metrics.py"
+        "docs/mist_cove/PHASE_XIII_EXPLANATION_VALIDITY_V1.md",
+        "reports/mist_cove/phase13_v1/annotation_readiness.json"
       ],
-      "findings": [],
+      "findings": [
+        "Review infrastructure, codebook, frozen private panel, QA and locked alignment entrypoint complete; genuine human outcomes NOT TESTED"
+      ],
       "limitations": [
-        "No approved qualified reviewers available; user confirmed. No human agreement or physiological labels fabricated."
+        "Actual independent expert annotations unavailable; no human or physiological results generated"
       ],
       "block_reason": null
     },
@@ -245,11 +251,14 @@
         "30 focused generated security, blinding, metrics, state, resume, stream and operator tests pass;8 generated exhaustive tables and128 noninterference checks pass"
       ],
       "artifacts": [
-        "src/mist_cove/phase13/evidence_alignment.py"
+        "docs/mist_cove/PHASE_XIII_EXPLANATION_VALIDITY_V1.md",
+        "reports/mist_cove/phase13_v1/annotation_readiness.json"
       ],
-      "findings": [],
+      "findings": [
+        "Review infrastructure, codebook, frozen private panel, QA and locked alignment entrypoint complete; genuine human outcomes NOT TESTED"
+      ],
       "limitations": [
-        "No approved qualified reviewers available; user confirmed. No human agreement or physiological labels fabricated."
+        "Actual independent expert annotations unavailable; no human or physiological results generated"
       ],
       "block_reason": null
     },
@@ -269,11 +278,14 @@
         "30 focused generated security, blinding, metrics, state, resume, stream and operator tests pass;8 generated exhaustive tables and128 noninterference checks pass"
       ],
       "artifacts": [
+        "docs/mist_cove/PHASE_XIII_EXPLANATION_VALIDITY_V1.md",
         "reports/mist_cove/phase13_v1/annotation_readiness.json"
       ],
-      "findings": [],
+      "findings": [
+        "Review infrastructure, codebook, frozen private panel, QA and locked alignment entrypoint complete; genuine human outcomes NOT TESTED"
+      ],
       "limitations": [
-        "No approved qualified reviewers available; user confirmed. No human agreement or physiological labels fabricated."
+        "Actual independent expert annotations unavailable; no human or physiological results generated"
       ],
       "block_reason": null
     },
@@ -491,17 +503,22 @@
         "WP11",
         "WP18"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
       "scientific_status": "NOT_TESTED",
       "code_configuration_identity": {
         "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
       },
       "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "artifacts": [
+        "docs/mist_cove/PHASE_XIII_EXPLANATION_VALIDITY_V1.md",
+        "reports/mist_cove/phase13_v1/annotation_readiness.json"
+      ],
+      "findings": [
+        "Review infrastructure, codebook, frozen private panel, QA and locked alignment entrypoint complete; genuine human outcomes NOT TESTED"
+      ],
       "limitations": [
-        "No approved qualified reviewers available; user confirmed. No human agreement or physiological labels fabricated."
+        "Actual independent expert annotations unavailable; no human or physiological results generated"
       ],
       "block_reason": null
     },
@@ -514,16 +531,19 @@
         "WP17",
         "WP18"
       ],
-      "status": "IN_PROGRESS",
-      "engineering_status": "IN_PROGRESS",
-      "scientific_status": "IN_PROGRESS",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "PASS",
       "code_configuration_identity": {
         "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
       },
       "tests": [],
-      "artifacts": [],
+      "artifacts": [
+        "reports/mist_cove/phase13_v1/mechanistic_execution.json",
+        "reports/mist_cove/phase13_v1/explanation_validity.json"
+      ],
       "findings": [
-        "Exact original150 and new36-state/25-case operator campaign running"
+        "3750real tables all exact; native identity bitwise; original mildHF142predictionstable vs119originalclausesvalid; neutral and physical disagreement retained"
       ],
       "limitations": [],
       "block_reason": null
@@ -534,18 +554,19 @@
       "dependencies": [
         "WP23"
       ],
-      "status": "IN_PROGRESS",
-      "engineering_status": "IN_PROGRESS",
-      "scientific_status": "IN_PROGRESS",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "INCONCLUSIVE",
       "code_configuration_identity": {
         "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
       },
       "tests": [],
       "artifacts": [
-        "reports/mist_cove/phase13_v1/uncertainty_summary.json"
+        "reports/mist_cove/phase13_v1/uncertainty_summary.json",
+        "reports/mist_cove/phase13_v1/stage_adjusted_analysis.json"
       ],
       "findings": [
-        "Paired width/exposure/routing participant-cluster bootstrap completed; explanation aggregation pending"
+        "5person clustered matched contrasts with3seeds retained; stage/person matched descriptive transition/HF analysis; epoch-as-person inference excluded"
       ],
       "limitations": [],
       "block_reason": null
@@ -578,15 +599,19 @@
       "dependencies": [
         "WP25"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "PENDING",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "MIXED",
       "code_configuration_identity": {
         "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
       },
       "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "artifacts": [
+        "docs/mist_cove/PHASE_XIII_SCIENTIFIC_DECISION_V1.md"
+      ],
+      "findings": [
+        "GO exact auditing and review readiness; exposurePASS/absoluteadequacyPASS; width/routing primarygatesFAIL; physiologyNOTTESTED; no next phase"
+      ],
       "limitations": [],
       "block_reason": null
     },
@@ -596,14 +621,18 @@
       "dependencies": [
         "WP26"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "PENDING",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "NOT_APPLICABLE",
       "code_configuration_identity": {
         "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
       },
-      "tests": [],
-      "artifacts": [],
+      "tests": [
+        "Complete patched CPU regression:1112passed,11CUDA skipped; all generated-only fixtures; CUDA not run under CPU runtime"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase13_v1/correctness.json"
+      ],
       "findings": [],
       "limitations": [],
       "block_reason": null
@@ -614,14 +643,17 @@
       "dependencies": [
         "WP27"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "PENDING",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "MIXED",
       "code_configuration_identity": {
         "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
       },
       "tests": [],
-      "artifacts": [],
+      "artifacts": [
+        "reports/mist_cove/phase13_v1/DASHBOARD.md",
+        "reports/mist_cove/phase13_v1/publication_manifest.json"
+      ],
       "findings": [],
       "limitations": [],
       "block_reason": null
@@ -632,15 +664,17 @@
       "dependencies": [
         "WP28"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "PENDING",
+      "status": "IN_PROGRESS",
+      "engineering_status": "IN_PROGRESS",
+      "scientific_status": "NOT_APPLICABLE",
       "code_configuration_identity": {
         "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
       },
       "tests": [],
       "artifacts": [],
-      "findings": [],
+      "findings": [
+        "Draft PR and exact pushed-head GitHub Actions pending"
+      ],
       "limitations": [],
       "block_reason": null
     },
@@ -650,14 +684,16 @@
       "dependencies": [
         "WP29"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "PENDING",
+      "status": "IN_PROGRESS",
+      "engineering_status": "IN_PROGRESS",
+      "scientific_status": "MIXED",
       "code_configuration_identity": {
         "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
       },
       "tests": [],
-      "artifacts": [],
+      "artifacts": [
+        "docs/mist_cove/PHASE_XIII_SCIENTIFIC_DECISION_V1.md"
+      ],
       "findings": [],
       "limitations": [],
       "block_reason": null

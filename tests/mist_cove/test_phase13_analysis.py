@@ -61,3 +61,10 @@ def test_locked_alignment_contract_on_generated_fixture():
     assert len(result['reviewers'])==2 and not result['automatic_adjudication']
     assert result['paired_event_intersections'][0]['intersection_seconds']==2
     assert not result['reviewers'][0]['rows'][0]['correct']
+
+
+def test_safe_aggregate_rejects_private_waveforms_fitted_values_and_people():
+    from mist_cove.phase13.publication import safe_aggregate
+    assert safe_aggregate({'participants':15,'human_annotation':'NOT_TESTED','macro_F1':[.4,.5]})
+    for bad in ({'coordinate':{'epoch':1}},{'wave_uV':[0.]},{'normalization':{'std_uV':2.}}, {'x':'SC9999E0'}):
+        with pytest.raises(ValueError):safe_aggregate(bad)
