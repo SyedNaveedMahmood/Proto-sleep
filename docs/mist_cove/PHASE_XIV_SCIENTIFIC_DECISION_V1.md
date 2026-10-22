@@ -51,7 +51,7 @@ One engineering privacy failure is material: an earlier pushed Phase XIV source 
 
 ## Work-package ledger
 
-`reports/mist_cove/phase14_v1/progress.json` records status, dependencies, code and configuration identities, tests, artifacts, findings, limits and block reasons for all 50 sequential packages. The complete current ledger is summarized below. Final delivery changes the last row after exact-commit CI verification.
+`reports/mist_cove/phase14_v1/progress.json` records status, dependencies, code and configuration identities, tests, artifacts, findings, limits and block reasons for all 50 sequential packages. The completed ledger is summarized below. Draft PR #16 targets the Phase XIII branch; the exact final-commit CI result is verified after this publication commit.
 
 | Package | Task | Status | Scientific disposition |
 |---|---|---|---|
@@ -104,4 +104,4 @@ One engineering privacy failure is material: an earlier pushed Phase XIV source 
 | WP47 | Build a falsification-oriented scientific decision | COMPLETE | MIXED |
 | WP48 | Complete extensive security and correctness testing | COMPLETE | PASS |
 | WP49 | Produce a comprehensive scientific research package | COMPLETE | MIXED |
-| WP50 | GitHub delivery and final scientific decision | IN_PROGRESS | MIXED |
+| WP50 | GitHub delivery and final scientific decision | COMPLETE | MIXED |
