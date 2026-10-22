@@ -1,0 +1,23 @@
+{
+  "schema": "mist-cove-phase16-source-permissions-v1",
+  "source": "DREAMS original Zenodo record 2650142",
+  "license_document": "https://zenodo.org/records/2650142/preview/Dreams%20License.txt?include_deleted=0",
+  "owner_document": "https://zenodo.org/records/2650142/files/The%20DREAMS%20Databases%20and%20Assessment%20Algorithm.pdf?download=1",
+  "license_identification": "CC BY-NC-ND 3.0 per owner PDF; original owner license text examined",
+  "project_noncommercial_status": "UNCLEAR",
+  "private_derivative_permission": "NOT_DOCUMENTED",
+  "model_training_permission": "NOT_DOCUMENTED",
+  "aggregate_publication_permission": "NOT_DOCUMENTED",
+  "user_rights_answer": "No permission or unclear",
+  "archive_acquisition": "BLOCKED",
+  "reason": "Commercial status and permitted adaptation/model-development scope unresolved under the original owner license",
+  "archives_accessed": 0,
+  "external_eeg_accessed": 0,
+  "owner_published_md5": {
+    "DatabaseSpindles.rar": "2f8a101194e133dd4324f21047dce579",
+    "DatabaseKcomplexes.rar": "0bfc5bde8e36bcb1edcded50077423de",
+    "DatabaseREMs.rar": "03275d367096af03a8673dd4b0b82500",
+    "DatabaseArtifacts.rar": "7947989e047cdc7ae5c32e29bf9aeb75"
+  },
+  "archive_sha256": "NOT_MEASURED_NO_ACQUISITION"
+}

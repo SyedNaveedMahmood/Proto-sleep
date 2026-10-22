@@ -1,0 +1,1247 @@
+{
+  "schema": "mist-cove-phase16-progress-v1",
+  "created_utc": "2026-10-22T14:56:30.728231+00:00",
+  "starting_commit": "2f15db3e4653327dd28420ff8fe6cd743b4e705e",
+  "starting_tree": "65d419e61db0eaab204bd3317f66f7b5c33cabe5",
+  "branch": "research/mist-cove-phase16-expert-event-benchmark-v1",
+  "external_data_access": "ZERO_DREAMS_ARCHIVES_ZERO_EXTERNAL_EEG",
+  "tasks": [
+    {
+      "id": "WP01",
+      "title": "Initialize Phase XVI",
+      "description": "Create the correct branch from the exact Phase XV commit. Verify the working tree. Record source ancestry and repository instructions. Preserve the Phase XV negative outcomes. Create the first Phase XVI execution ledger.",
+      "dependencies": [],
+      "status": "COMPLETE",
+      "implementation_reference": [
+        "reports/mist_cove/phase16_v1/progress.json"
+      ],
+      "data_source": "Public owner documentation and/or generated fixtures; no external EEG",
+      "test_receipt": [],
+      "scientific_result": "Required documentation, policy, or generated-only software contract completed; no human-event performance claim",
+      "limitations": [],
+      "blockers": [],
+      "artifacts": [
+        "reports/mist_cove/phase16_v1/progress.json"
+      ],
+      "code_configuration_identity": {
+        "starting_commit": "2f15db3e4653327dd28420ff8fe6cd743b4e705e",
+        "starting_tree": "65d419e61db0eaab204bd3317f66f7b5c33cabe5"
+      }
+    },
+    {
+      "id": "WP02",
+      "title": "Reconstruct all relevant historical findings",
+      "description": "Review MIST-COVE Phases IX–XV. Create an evidence matrix separating: Connect each Phase XVI experiment to a precise unresolved claim.",
+      "dependencies": [
+        "WP01"
+      ],
+      "status": "COMPLETE",
+      "implementation_reference": [
+        "docs/mist_cove/phase16/SOURCE_AND_SCIENTIFIC_REVIEW_V1.md"
+      ],
+      "data_source": "Public owner documentation and/or generated fixtures; no external EEG",
+      "test_receipt": [],
+      "scientific_result": "Historical exact response correctness preserved; Phase XIV/XV sigma failures and absent human labels remain explicit",
+      "limitations": [],
+      "blockers": [],
+      "artifacts": [
+        "docs/mist_cove/phase16/SOURCE_AND_SCIENTIFIC_REVIEW_V1.md"
+      ],
+      "code_configuration_identity": {
+        "sha256": "375b0bda5ac294a063ff5250efbe714a61fe253db9213088ba4c4b95a509bf73"
+      }
+    },
+    {
+      "id": "WP03",
+      "title": "Study the original DREAMS documentation",
+      "description": "Investigate all primary-source descriptions, original licenses and dataset archive metadata. Record actual reported event types, channels, recording counts, sampling rates and scorer coverage. Mark discrepancies among publications as discrepancies. Do not silently reconcile conflicting counts. Use actual archive contents to resolve operational file inventories after authorized acquisition.",
+      "dependencies": [
+        "WP01"
+      ],
+      "status": "COMPLETE",
+      "implementation_reference": [
+        "docs/mist_cove/phase16/SOURCE_AND_SCIENTIFIC_REVIEW_V1.md"
+      ],
+      "data_source": "Public owner documentation and/or generated fixtures; no external EEG",
+      "test_receipt": [],
+      "scientific_result": "Original owner PDF and record reviewed; K-complex count conflict preserved (record 5, PDF 10 with second expert on first 5)",
+      "limitations": [],
+      "blockers": [],
+      "artifacts": [
+        "docs/mist_cove/phase16/SOURCE_AND_SCIENTIFIC_REVIEW_V1.md"
+      ],
+      "code_configuration_identity": {
+        "sha256": "375b0bda5ac294a063ff5250efbe714a61fe253db9213088ba4c4b95a509bf73"
+      }
+    },
+    {
+      "id": "WP04",
+      "title": "Evaluate source licensing and permitted use",
+      "description": "Read the original owner-provided license. Assess whether this project's intended use meets the terms. Check conditions affecting: Do not interpret license uncertainty as blanket permission. Create a machine-readable source-permission status.",
+      "dependencies": [
+        "WP03"
+      ],
+      "status": "COMPLETE",
+      "implementation_reference": [
+        "reports/mist_cove/phase16_v1/source_permissions.json"
+      ],
+      "data_source": "Public owner documentation and/or generated fixtures; no external EEG",
+      "test_receipt": [],
+      "scientific_result": "CC BY-NC-ND 3.0 owner terms reviewed; user says permission unclear; acquisition gate BLOCKED",
+      "limitations": [],
+      "blockers": [],
+      "artifacts": [
+        "reports/mist_cove/phase16_v1/source_permissions.json"
+      ],
+      "code_configuration_identity": {
+        "sha256": "ebe5105c2fbb435ba6f94f94bba600e858f7909cf5649222f81e56d158175f13"
+      }
+    },
+    {
+      "id": "WP05",
+      "title": "Inspect alternative benchmark availability",
+      "description": "Review MODA and MASS documentation. Determine whether waveform data, labels and subject identities can be obtained through the official permitted channels. Do not access restricted waveforms. Record approval requirements and whether they create an actual blocker.",
+      "dependencies": [
+        "WP03"
+      ],
+      "status": "COMPLETE",
+      "implementation_reference": [
+        "docs/mist_cove/phase16/SOURCE_AND_SCIENTIFIC_REVIEW_V1.md"
+      ],
+      "data_source": "Public owner documentation and/or generated fixtures; no external EEG",
+      "test_receipt": [],
+      "scientific_result": "MODA labels derive from MASS; official MASS biosignal access requires project and ethics approval",
+      "limitations": [],
+      "blockers": [],
+      "artifacts": [
+        "docs/mist_cove/phase16/SOURCE_AND_SCIENTIFIC_REVIEW_V1.md"
+      ],
+      "code_configuration_identity": {
+        "sha256": "375b0bda5ac294a063ff5250efbe714a61fe253db9213088ba4c4b95a509bf73"
+      }
+    },
+    {
+      "id": "WP06",
+      "title": "Build an evidence-quality and suitability matrix",
+      "description": "For each candidate dataset, evaluate: Select DREAMS spindle annotations as the provisional primary benchmark only if the source passes eligibility.",
+      "dependencies": [
+        "WP02",
+        "WP03",
+        "WP04",
+        "WP05"
+      ],
+      "status": "COMPLETE",
+      "implementation_reference": [
+        "docs/mist_cove/phase16/SOURCE_AND_SCIENTIFIC_REVIEW_V1.md"
+      ],
+      "data_source": "Public owner documentation and/or generated fixtures; no external EEG",
+      "test_receipt": [],
+      "scientific_result": "DREAMS provisionally best small event source; channel incompatibility and incomplete coverage limit claims",
+      "limitations": [],
+      "blockers": [],
+      "artifacts": [
+        "docs/mist_cove/phase16/SOURCE_AND_SCIENTIFIC_REVIEW_V1.md"
+      ],
+      "code_configuration_identity": {
+        "sha256": "375b0bda5ac294a063ff5250efbe714a61fe253db9213088ba4c4b95a509bf73"
+      }
+    },
+    {
+      "id": "WP07",
+      "title": "Implement secure source acquisition",
+      "description": "Build a restricted downloader for only the authorized source archives. Requirements: If rights clearance is missing, do not download the data.",
+      "dependencies": [
+        "WP04"
+      ],
+      "status": "PARTIAL",
+      "implementation_reference": [
+        "src/mist_cove/phase16/source.py"
+      ],
+      "data_source": "Public owner documentation and/or generated fixtures; no external EEG",
+      "test_receipt": [
+        "28 generated-only Phase XVI tests passed"
+      ],
+      "scientific_result": "Implemented/tested bounded component; real-file validation or final scientific endpoint NOT TESTED",
+      "limitations": [
+        "Downloader unexecuted; owner MD5 and SHA256 verification not exercised on original bytes because rights are unresolved"
+      ],
+      "blockers": [],
+      "artifacts": [
+        "src/mist_cove/phase16/source.py"
+      ],
+      "code_configuration_identity": {
+        "sha256": "af31929a6f57c7d3236971e6d51eeb3fa56f55c14f458034c5bde13cb8110f5f"
+      }
+    },
+    {
+      "id": "WP08",
+      "title": "Implement safe archive extraction",
+      "description": "Use an allowlisted extractor. Reject: Preserve all original archive bytes. Generate private extraction receipts.",
+      "dependencies": [
+        "WP07"
+      ],
+      "status": "PARTIAL",
+      "implementation_reference": [
+        "src/mist_cove/phase16/archive_security.py"
+      ],
+      "data_source": "Public owner documentation and/or generated fixtures; no external EEG",
+      "test_receipt": [
+        "28 generated-only Phase XVI tests passed"
+      ],
+      "scientific_result": "Implemented/tested bounded component; real-file validation or final scientific endpoint NOT TESTED",
+      "limitations": [
+        "Pure member preflight tested; safe RAR extraction not implemented or exercised"
+      ],
+      "blockers": [],
+      "artifacts": [
+        "src/mist_cove/phase16/archive_security.py"
+      ],
+      "code_configuration_identity": {
+        "sha256": "24205955ad63e0345d59d1302acf7548472f77fd6f65cd37ad7859c346f8f602"
+      }
+    },
+    {
+      "id": "WP09",
+      "title": "Audit actual source files",
+      "description": "After authorization, inventory only the approved extracted archives. Inspect EDF headers and annotation files. Record file types, channel identities and sampling frequencies. Reject unexpected changes and duplicate identifiers. Do not execute third-party scripts from an archive without separate code review.",
+      "dependencies": [
+        "WP08"
+      ],
+      "status": "BLOCKED_RIGHTS_AND_DATA",
+      "implementation_reference": [],
+      "data_source": "NONE: no original DREAMS archive or annotation content accessed",
+      "test_receipt": [],
+      "scientific_result": "NOT TESTED",
+      "limitations": [],
+      "blockers": [
+        "DREAMS commercial-use and adaptation/model-training rights unresolved; user confirmed no permission or unclear; no archive acquired"
+      ],
+      "artifacts": [],
+      "unresolved_limitations": [
+        "No original archive inventory, verified participant mapping, or human annotation outcome"
+      ],
+      "code_configuration_identity": "NO_NEW_CODE_OR_CONFIG"
+    },
+    {
+      "id": "WP10",
+      "title": "Establish the prospective evaluation boundaries",
+      "description": "Determine exactly which annotated people and excerpts are available. Freeze individual/excerpt grouping. No waveform excerpt from one original participant may appear in both training and held-out evaluation. Verify whether datasets share underlying recordings. Do not assume differently named archives imply participant-disjoint populations.",
+      "dependencies": [
+        "WP09"
+      ],
+      "status": "BLOCKED_RIGHTS_AND_DATA",
+      "implementation_reference": [],
+      "data_source": "NONE: no original DREAMS archive or annotation content accessed",
+      "test_receipt": [],
+      "scientific_result": "NOT TESTED",
+      "limitations": [],
+      "blockers": [
+        "DREAMS commercial-use and adaptation/model-training rights unresolved; user confirmed no permission or unclear; no archive acquired"
+      ],
+      "artifacts": [],
+      "unresolved_limitations": [
+        "No original archive inventory, verified participant mapping, or human annotation outcome"
+      ],
+      "code_configuration_identity": "NO_NEW_CODE_OR_CONFIG"
+    },
+    {
+      "id": "WP11",
+      "title": "Implement a canonical annotation schema",
+      "description": "Create a typed event-annotation structure with: Preserve exact event coordinates.",
+      "dependencies": [
+        "WP03"
+      ],
+      "status": "COMPLETE",
+      "implementation_reference": [
+        "src/mist_cove/phase16/annotations.py"
+      ],
+      "data_source": "Public owner documentation and/or generated fixtures; no external EEG",
+      "test_receipt": [
+        "28 generated-only Phase XVI tests passed"
+      ],
+      "scientific_result": "Required documentation, policy, or generated-only software contract completed; no human-event performance claim",
+      "limitations": [],
+      "blockers": [],
+      "artifacts": [
+        "src/mist_cove/phase16/annotations.py"
+      ],
+      "code_configuration_identity": {
+        "sha256": "ac2b111680783ed81dc9473ca200e246db91e784908dd2db155390d613b099b7"
+      }
+    },
+    {
+      "id": "WP12",
+      "title": "Parse the original human event annotations",
+      "description": "Implement separate adapters for: Do not assume they all use the same file format. Do not fabricate fields absent from the original data.",
+      "dependencies": [
+        "WP11"
+      ],
+      "status": "PARTIAL",
+      "implementation_reference": [
+        "src/mist_cove/phase16/annotations.py"
+      ],
+      "data_source": "Public owner documentation and/or generated fixtures; no external EEG",
+      "test_receipt": [
+        "28 generated-only Phase XVI tests passed"
+      ],
+      "scientific_result": "Implemented/tested bounded component; real-file validation or final scientific endpoint NOT TESTED",
+      "limitations": [
+        "Owner PDF layout implemented on generated text; compatibility with original files NOT TESTED"
+      ],
+      "blockers": [],
+      "artifacts": [
+        "src/mist_cove/phase16/annotations.py"
+      ],
+      "code_configuration_identity": {
+        "sha256": "ac2b111680783ed81dc9473ca200e246db91e784908dd2db155390d613b099b7"
+      },
+      "unresolved_limitations": [
+        "No original archive inventory, verified participant mapping, or human annotation outcome"
+      ]
+    },
+    {
+      "id": "WP13",
+      "title": "Handle incomplete scorer coverage correctly",
+      "description": "The DREAMS spindle reference has incomplete annotation coverage. Represent unannotated time as: `UNKNOWN_ANNOTATION_COVERAGE` not: `NO_EVENT` For the primary dual-reviewer spindle analysis, restrict to genuinely jointly annotated intervals. If only one reviewer covered a recording or time interval, report it separately. Do not silently use unscored sections as negative examples.",
+      "dependencies": [
+        "WP11"
+      ],
+      "status": "PARTIAL",
+      "implementation_reference": [
+        "src/mist_cove/phase16/benchmark.py"
+      ],
+      "data_source": "Public owner documentation and/or generated fixtures; no external EEG",
+      "test_receipt": [
+        "28 generated-only Phase XVI tests passed"
+      ],
+      "scientific_result": "Implemented/tested bounded component; real-file validation or final scientific endpoint NOT TESTED",
+      "limitations": [
+        "Original DREAMS archive and expert labels unavailable under current rights gate"
+      ],
+      "blockers": [],
+      "artifacts": [
+        "src/mist_cove/phase16/benchmark.py"
+      ],
+      "code_configuration_identity": {
+        "sha256": "a9bfaa851dfb22d4b56f58ddb5719803df5771ac7a7213696923d3d7668b223d"
+      },
+      "unresolved_limitations": [
+        "No original archive inventory, verified participant mapping, or human annotation outcome"
+      ]
+    },
+    {
+      "id": "WP14",
+      "title": "Validate temporal coordinate conversion",
+      "description": "Verify: Test synthetic boundary cases. Reject annotations outside verified recording bounds.",
+      "dependencies": [
+        "WP11"
+      ],
+      "status": "PARTIAL",
+      "implementation_reference": [
+        "src/mist_cove/phase16/edf_contract.py"
+      ],
+      "data_source": "Public owner documentation and/or generated fixtures; no external EEG",
+      "test_receipt": [
+        "28 generated-only Phase XVI tests passed"
+      ],
+      "scientific_result": "Implemented/tested bounded component; real-file validation or final scientific endpoint NOT TESTED",
+      "limitations": [
+        "Original DREAMS archive and expert labels unavailable under current rights gate"
+      ],
+      "blockers": [],
+      "artifacts": [
+        "src/mist_cove/phase16/edf_contract.py"
+      ],
+      "code_configuration_identity": {
+        "sha256": "066953d6e9a8079ffa77dee1fc4cb357c50c1f3f8aa4e90b931b23010c30ff97"
+      },
+      "unresolved_limitations": [
+        "No original archive inventory, verified participant mapping, or human annotation outcome"
+      ]
+    },
+    {
+      "id": "WP15",
+      "title": "Validate event geometry and signal units",
+      "description": "Check: Do not modify original event labels to make metrics look better.",
+      "dependencies": [
+        "WP14"
+      ],
+      "status": "PARTIAL",
+      "implementation_reference": [
+        "src/mist_cove/phase16/annotations.py"
+      ],
+      "data_source": "Public owner documentation and/or generated fixtures; no external EEG",
+      "test_receipt": [
+        "28 generated-only Phase XVI tests passed"
+      ],
+      "scientific_result": "Implemented/tested bounded component; real-file validation or final scientific endpoint NOT TESTED",
+      "limitations": [
+        "Original DREAMS archive and expert labels unavailable under current rights gate"
+      ],
+      "blockers": [],
+      "artifacts": [
+        "src/mist_cove/phase16/annotations.py"
+      ],
+      "code_configuration_identity": {
+        "sha256": "ac2b111680783ed81dc9473ca200e246db91e784908dd2db155390d613b099b7"
+      },
+      "unresolved_limitations": [
+        "No original archive inventory, verified participant mapping, or human annotation outcome"
+      ]
+    },
+    {
+      "id": "WP16",
+      "title": "Analyze agreement between genuine human scorers",
+      "description": "For intervals jointly covered by two reviewers, calculate: Use a transparent one-to-one matching policy. Report all matching thresholds.",
+      "dependencies": [
+        "WP13"
+      ],
+      "status": "PARTIAL",
+      "implementation_reference": [
+        "src/mist_cove/phase16/benchmark.py"
+      ],
+      "data_source": "Public owner documentation and/or generated fixtures; no external EEG",
+      "test_receipt": [
+        "28 generated-only Phase XVI tests passed"
+      ],
+      "scientific_result": "Implemented/tested bounded component; real-file validation or final scientific endpoint NOT TESTED",
+      "limitations": [
+        "One-to-one matcher tested on generated events; no real interscorer metric"
+      ],
+      "blockers": [],
+      "artifacts": [
+        "src/mist_cove/phase16/benchmark.py"
+      ],
+      "code_configuration_identity": {
+        "sha256": "a9bfaa851dfb22d4b56f58ddb5719803df5771ac7a7213696923d3d7668b223d"
+      },
+      "unresolved_limitations": [
+        "No original archive inventory, verified participant mapping, or human annotation outcome"
+      ]
+    },
+    {
+      "id": "WP17",
+      "title": "Define reference-annotation variants",
+      "description": "Preserve reviewer-specific results separately. Possible analyses: These are different operational reference standards. A union is not automatically an adjudicated clinical truth. A consensus target must be defined prospectively.",
+      "dependencies": [
+        "WP16"
+      ],
+      "status": "COMPLETE",
+      "implementation_reference": [
+        "src/mist_cove/phase16/reference.py"
+      ],
+      "data_source": "Public owner documentation and/or generated fixtures; no external EEG",
+      "test_receipt": [
+        "28 generated-only Phase XVI tests passed"
+      ],
+      "scientific_result": "Reviewer-specific, union and matched-intersection operational references implemented; no adjudicated consensus claimed",
+      "limitations": [],
+      "blockers": [],
+      "artifacts": [
+        "src/mist_cove/phase16/reference.py"
+      ],
+      "code_configuration_identity": {
+        "sha256": "35d82d8356e855af11178648eebc572f40e0f2b48de094faf399c27d0d575342"
+      }
+    },
+    {
+      "id": "WP18",
+      "title": "Construct valid negative intervals",
+      "description": "Generate no-event intervals only where annotation coverage is complete under the selected reference definition. Avoid: Record the difference between true covered-negative intervals and unknown intervals.",
+      "dependencies": [
+        "WP13"
+      ],
+      "status": "COMPLETE",
+      "implementation_reference": [
+        "src/mist_cove/phase16/benchmark.py"
+      ],
+      "data_source": "Public owner documentation and/or generated fixtures; no external EEG",
+      "test_receipt": [
+        "28 generated-only Phase XVI tests passed"
+      ],
+      "scientific_result": "Generated tests distinguish covered negative from unknown annotation coverage",
+      "limitations": [],
+      "blockers": [],
+      "artifacts": [
+        "src/mist_cove/phase16/benchmark.py"
+      ],
+      "code_configuration_identity": {
+        "sha256": "a9bfaa851dfb22d4b56f58ddb5719803df5771ac7a7213696923d3d7668b223d"
+      }
+    },
+    {
+      "id": "WP19",
+      "title": "Implement generated annotation fixtures",
+      "description": "Create generated EEG and synthetic event annotations with known answers. Test: Do not label generated fixtures human ground truth.",
+      "dependencies": [
+        "WP11"
+      ],
+      "status": "COMPLETE",
+      "implementation_reference": [
+        "tests/mist_cove/test_phase16.py"
+      ],
+      "data_source": "Public owner documentation and/or generated fixtures; no external EEG",
+      "test_receipt": [
+        "28 generated-only Phase XVI tests passed"
+      ],
+      "scientific_result": "Generated fixtures exercise parser, coverage, matching, split, spectral and circuit contracts; not human ground truth",
+      "limitations": [],
+      "blockers": [],
+      "artifacts": [
+        "tests/mist_cove/test_phase16.py"
+      ],
+      "code_configuration_identity": {
+        "sha256": "a9b99ca4555d18d5da8be6b3c5dd7f8b48c49cd34cb102dea806237e27dd484f"
+      }
+    },
+    {
+      "id": "WP20",
+      "title": "Freeze the human-annotation benchmark protocol",
+      "description": "Commit: If any evaluation labels have already been inspected before this freeze, record the exposure honestly. A newly frozen analysis is not automatically independent when outcomes were already used to choose it.",
+      "dependencies": [
+        "WP10",
+        "WP13",
+        "WP17",
+        "WP18"
+      ],
+      "status": "PARTIAL",
+      "implementation_reference": [
+        "docs/mist_cove/phase16/BENCHMARK_PROTOCOL_V1.md"
+      ],
+      "data_source": "Public owner documentation and/or generated fixtures; no external EEG",
+      "test_receipt": [],
+      "scientific_result": "Implemented/tested bounded component; real-file validation or final scientific endpoint NOT TESTED",
+      "limitations": [
+        "Method rules fixed before external labels; actual participant allocation, inventory and sample counts cannot be frozen"
+      ],
+      "blockers": [],
+      "artifacts": [
+        "docs/mist_cove/phase16/BENCHMARK_PROTOCOL_V1.md"
+      ],
+      "code_configuration_identity": {
+        "sha256": "8b5bb5661eb644278fdd3b4cb7352c80d6d86b8b33fe302803ab939eb315c4ff"
+      },
+      "unresolved_limitations": [
+        "No original archive inventory, verified participant mapping, or human annotation outcome"
+      ]
+    },
+    {
+      "id": "WP21",
+      "title": "Reproduce the fixed automated spindle detector",
+      "description": "Reuse the established Phase XIV YASA implementation where channel and sampling contracts permit. Verify version and parameters. Run on central EEG rather than pretending it is Fpz-Cz. Do not use human event labels to tune the primary detector. Record missing and failed detections.",
+      "dependencies": [
+        "WP20"
+      ],
+      "status": "BLOCKED_RIGHTS_AND_DATA",
+      "implementation_reference": [],
+      "data_source": "NONE: no original DREAMS archive or annotation content accessed",
+      "test_receipt": [],
+      "scientific_result": "NOT TESTED",
+      "limitations": [],
+      "blockers": [
+        "DREAMS commercial-use and adaptation/model-training rights unresolved; user confirmed no permission or unclear; no archive acquired"
+      ],
+      "artifacts": [],
+      "unresolved_limitations": [
+        "No original archive inventory, verified participant mapping, or human annotation outcome"
+      ],
+      "code_configuration_identity": "NO_NEW_CODE_OR_CONFIG"
+    },
+    {
+      "id": "WP22",
+      "title": "Implement spectral spindle baselines",
+      "description": "Create transparent baselines using: Pin all implementations.",
+      "dependencies": [
+        "WP11"
+      ],
+      "status": "PARTIAL",
+      "implementation_reference": [
+        "src/mist_cove/phase16/spectral.py"
+      ],
+      "data_source": "Public owner documentation and/or generated fixtures; no external EEG",
+      "test_receipt": [
+        "28 generated-only Phase XVI tests passed"
+      ],
+      "scientific_result": "Implemented/tested bounded component; real-file validation or final scientific endpoint NOT TESTED",
+      "limitations": [
+        "Spectral controls implemented and tested on generated burst; no expert-label performance"
+      ],
+      "blockers": [],
+      "artifacts": [
+        "src/mist_cove/phase16/spectral.py"
+      ],
+      "code_configuration_identity": {
+        "sha256": "99f593c82dfda23ed75a69e88f3987a926b6fcb170a17728546ebd957ca8c7c4"
+      }
+    },
+    {
+      "id": "WP23",
+      "title": "Evaluate automatic spindle detection against expert events",
+      "description": "Using the frozen reference standard, calculate: Do not use stage labels to inflate performance. Report all scorer/reference variants.",
+      "dependencies": [
+        "WP20",
+        "WP21",
+        "WP22"
+      ],
+      "status": "BLOCKED_RIGHTS_AND_DATA",
+      "implementation_reference": [],
+      "data_source": "NONE: no original DREAMS archive or annotation content accessed",
+      "test_receipt": [],
+      "scientific_result": "NOT TESTED",
+      "limitations": [],
+      "blockers": [
+        "DREAMS commercial-use and adaptation/model-training rights unresolved; user confirmed no permission or unclear; no archive acquired"
+      ],
+      "artifacts": [],
+      "unresolved_limitations": [
+        "No original archive inventory, verified participant mapping, or human annotation outcome"
+      ],
+      "code_configuration_identity": "NO_NEW_CODE_OR_CONFIG"
+    },
+    {
+      "id": "WP24",
+      "title": "Quantify detector sensitivity",
+      "description": "Evaluate a small prespecified set of detector configurations. Distinguish: Do not select the best external test result and present it as the original registered detector.",
+      "dependencies": [
+        "WP23"
+      ],
+      "status": "BLOCKED_RIGHTS_AND_DATA",
+      "implementation_reference": [],
+      "data_source": "NONE: no original DREAMS archive or annotation content accessed",
+      "test_receipt": [],
+      "scientific_result": "NOT TESTED",
+      "limitations": [],
+      "blockers": [
+        "DREAMS commercial-use and adaptation/model-training rights unresolved; user confirmed no permission or unclear; no archive acquired"
+      ],
+      "artifacts": [],
+      "unresolved_limitations": [
+        "No original archive inventory, verified participant mapping, or human annotation outcome"
+      ],
+      "code_configuration_identity": "NO_NEW_CODE_OR_CONFIG"
+    },
+    {
+      "id": "WP25",
+      "title": "Analyze K-complex annotations",
+      "description": "When permitted source data and valid human labels are available, reproduce basic K-complex interval statistics. Evaluate suitable waveform and time-frequency controls. Document the dependence on EEG derivation and polarity. If the available files lack sufficient scorer agreement or sample diversity, report limited evidence rather than a positive result.",
+      "dependencies": [
+        "WP20"
+      ],
+      "status": "BLOCKED_RIGHTS_AND_DATA",
+      "implementation_reference": [],
+      "data_source": "NONE: no original DREAMS archive or annotation content accessed",
+      "test_receipt": [],
+      "scientific_result": "NOT TESTED",
+      "limitations": [],
+      "blockers": [
+        "DREAMS commercial-use and adaptation/model-training rights unresolved; user confirmed no permission or unclear; no archive acquired"
+      ],
+      "artifacts": [],
+      "unresolved_limitations": [
+        "No original archive inventory, verified participant mapping, or human annotation outcome"
+      ],
+      "code_configuration_identity": "NO_NEW_CODE_OR_CONFIG"
+    },
+    {
+      "id": "WP26",
+      "title": "Analyze rapid-eye-movement annotations",
+      "description": "Evaluate the original human-marked eye-movement intervals using the appropriate EOG channel. Compare against established EOG excursion detectors. Measure event localization, not sleep-stage classification. Do not interpret a rapid-eye-movement event as a complete REM stage label. This study may help identify how informative genuine eye-movement labels are for future REM research, but it cannot causally explain the historical P3B failure by itself.",
+      "dependencies": [
+        "WP20"
+      ],
+      "status": "BLOCKED_RIGHTS_AND_DATA",
+      "implementation_reference": [],
+      "data_source": "NONE: no original DREAMS archive or annotation content accessed",
+      "test_receipt": [],
+      "scientific_result": "NOT TESTED",
+      "limitations": [],
+      "blockers": [
+        "DREAMS commercial-use and adaptation/model-training rights unresolved; user confirmed no permission or unclear; no archive acquired"
+      ],
+      "artifacts": [],
+      "unresolved_limitations": [
+        "No original archive inventory, verified participant mapping, or human annotation outcome"
+      ],
+      "code_configuration_identity": "NO_NEW_CODE_OR_CONFIG"
+    },
+    {
+      "id": "WP27",
+      "title": "Analyze expert artifact annotations",
+      "description": "Where allowed, compare signal-quality proxies with human-marked artifacts. Investigate: Preserve actual source terminology. Do not claim the artifact annotations cover every possible form of contamination.",
+      "dependencies": [
+        "WP20"
+      ],
+      "status": "BLOCKED_RIGHTS_AND_DATA",
+      "implementation_reference": [],
+      "data_source": "NONE: no original DREAMS archive or annotation content accessed",
+      "test_receipt": [],
+      "scientific_result": "NOT TESTED",
+      "limitations": [],
+      "blockers": [
+        "DREAMS commercial-use and adaptation/model-training rights unresolved; user confirmed no permission or unclear; no archive acquired"
+      ],
+      "artifacts": [],
+      "unresolved_limitations": [
+        "No original archive inventory, verified participant mapping, or human annotation outcome"
+      ],
+      "code_configuration_identity": "NO_NEW_CODE_OR_CONFIG"
+    },
+    {
+      "id": "WP28",
+      "title": "Compare automated proxies with human annotations",
+      "description": "Determine whether prior assumptions about YASA-like detections remain appropriate. Measure: Avoid assuming all disagreement is detector error; human reviewers also disagree.",
+      "dependencies": [
+        "WP23",
+        "WP25",
+        "WP26",
+        "WP27"
+      ],
+      "status": "BLOCKED_RIGHTS_AND_DATA",
+      "implementation_reference": [],
+      "data_source": "NONE: no original DREAMS archive or annotation content accessed",
+      "test_receipt": [],
+      "scientific_result": "NOT TESTED",
+      "limitations": [],
+      "blockers": [
+        "DREAMS commercial-use and adaptation/model-training rights unresolved; user confirmed no permission or unclear; no archive acquired"
+      ],
+      "artifacts": [],
+      "unresolved_limitations": [
+        "No original archive inventory, verified participant mapping, or human annotation outcome"
+      ],
+      "code_configuration_identity": "NO_NEW_CODE_OR_CONFIG"
+    },
+    {
+      "id": "WP29",
+      "title": "Construct an expert-event benchmark dashboard",
+      "description": "Generate aggregate plots for: Keep source waveforms private unless their publication is explicitly licensed.",
+      "dependencies": [
+        "WP28"
+      ],
+      "status": "BLOCKED_RIGHTS_AND_DATA",
+      "implementation_reference": [],
+      "data_source": "NONE: no original DREAMS archive or annotation content accessed",
+      "test_receipt": [],
+      "scientific_result": "NOT TESTED",
+      "limitations": [],
+      "blockers": [
+        "DREAMS commercial-use and adaptation/model-training rights unresolved; user confirmed no permission or unclear; no archive acquired"
+      ],
+      "artifacts": [],
+      "unresolved_limitations": [
+        "No original archive inventory, verified participant mapping, or human annotation outcome"
+      ],
+      "code_configuration_identity": "NO_NEW_CODE_OR_CONFIG"
+    },
+    {
+      "id": "WP30",
+      "title": "Reach the event-benchmark scientific decision",
+      "description": "Answer whether: This is a valid standalone contribution even if the historical P3B model remains incompatible with DREAMS EEG channels.",
+      "dependencies": [
+        "WP28"
+      ],
+      "status": "BLOCKED_RIGHTS_AND_DATA",
+      "implementation_reference": [],
+      "data_source": "NONE: no original DREAMS archive or annotation content accessed",
+      "test_receipt": [],
+      "scientific_result": "NOT TESTED",
+      "limitations": [],
+      "blockers": [
+        "DREAMS commercial-use and adaptation/model-training rights unresolved; user confirmed no permission or unclear; no archive acquired"
+      ],
+      "artifacts": [],
+      "unresolved_limitations": [
+        "No original archive inventory, verified participant mapping, or human annotation outcome"
+      ],
+      "code_configuration_identity": "NO_NEW_CODE_OR_CONFIG"
+    },
+    {
+      "id": "WP31",
+      "title": "Produce a channel-compatibility matrix",
+      "description": "Compare the historical P3B input contract against DREAMS. Include: State whether direct use of P3B is scientifically justified. Do not use convenience or numerical resampling to override a mismatch.",
+      "dependencies": [
+        "WP03"
+      ],
+      "status": "COMPLETE",
+      "implementation_reference": [
+        "docs/mist_cove/phase16/SOURCE_AND_SCIENTIFIC_REVIEW_V1.md"
+      ],
+      "data_source": "Public owner documentation and/or generated fixtures; no external EEG",
+      "test_receipt": [],
+      "scientific_result": "Original Fpz-Cz P3B direct use on DREAMS C3-A1/Cz-A1 is scientifically invalid; NOT_TESTED_CHANNEL_INCOMPATIBLE",
+      "limitations": [],
+      "blockers": [],
+      "artifacts": [
+        "docs/mist_cove/phase16/SOURCE_AND_SCIENTIFIC_REVIEW_V1.md"
+      ],
+      "code_configuration_identity": {
+        "sha256": "375b0bda5ac294a063ff5250efbe714a61fe253db9213088ba4c4b95a509bf73"
+      }
+    },
+    {
+      "id": "WP32",
+      "title": "Establish the direct-P3B NO-GO when appropriate",
+      "description": "If DREAMS has no compatible Fpz-Cz measurement and no independently justified compatibility protocol, explicitly block direct historical P3B testing. Status: `NOT_TESTED_CHANNEL_INCOMPATIBLE` Do not try many resampling, filtering or amplitude transformations until one gives a favorable score. Do not claim a central-channel test validates the old sleep-stage classifier.",
+      "dependencies": [
+        "WP31"
+      ],
+      "status": "COMPLETE",
+      "implementation_reference": [
+        "docs/mist_cove/phase16/SOURCE_AND_SCIENTIFIC_REVIEW_V1.md"
+      ],
+      "data_source": "Public owner documentation and/or generated fixtures; no external EEG",
+      "test_receipt": [],
+      "scientific_result": "Original Fpz-Cz P3B direct use on DREAMS C3-A1/Cz-A1 is scientifically invalid; NOT_TESTED_CHANNEL_INCOMPATIBLE",
+      "limitations": [],
+      "blockers": [],
+      "artifacts": [
+        "docs/mist_cove/phase16/SOURCE_AND_SCIENTIFIC_REVIEW_V1.md"
+      ],
+      "code_configuration_identity": {
+        "sha256": "375b0bda5ac294a063ff5250efbe714a61fe253db9213088ba4c4b95a509bf73"
+      }
+    },
+    {
+      "id": "WP33",
+      "title": "Determine whether a new event-classifier experiment is justified",
+      "description": "A new channel-compatible model may help test whether MIST-WIC's exact dependency machinery generalizes to an expert-labeled task. The question is: **Can exact finite-model explanations provide useful diagnostic guarantees when applied to a separately trained, channel-compatible event classifier evaluated on held-out human-annotated EEG?** This is a new task. It does not validate the historical P3B sleep-stage model. Proceed only if: Otherwise record NO-GO and continue independent work.",
+      "dependencies": [
+        "WP04",
+        "WP10",
+        "WP18",
+        "WP32"
+      ],
+      "status": "COMPLETE",
+      "implementation_reference": [
+        "docs/mist_cove/phase16/SOURCE_AND_SCIENTIFIC_REVIEW_V1.md"
+      ],
+      "data_source": "Public owner documentation and/or generated fixtures; no external EEG",
+      "test_receipt": [],
+      "scientific_result": "Separate central-channel event-model training NO-GO until rights, coverage, participant identity and split proofs pass",
+      "limitations": [],
+      "blockers": [],
+      "artifacts": [
+        "docs/mist_cove/phase16/SOURCE_AND_SCIENTIFIC_REVIEW_V1.md"
+      ],
+      "code_configuration_identity": {
+        "sha256": "375b0bda5ac294a063ff5250efbe714a61fe253db9213088ba4c4b95a509bf73"
+      }
+    },
+    {
+      "id": "WP34",
+      "title": "Design the minimal event-classification target",
+      "description": "Prefer a bounded binary spindle-presence target on a fixed 30-second central EEG interval. Define positivity from valid human annotation coverage. Define negative cases only from fully assessable intervals. Exclude partially covered windows from the confirmatory label set. Retain exact event timestamps for later localization analysis. Do not use expert event positions as model inputs. The input contract must preserve continuous physical time and source identity.",
+      "dependencies": [
+        "WP33"
+      ],
+      "status": "PARTIAL",
+      "implementation_reference": [
+        "docs/mist_cove/phase16/BENCHMARK_PROTOCOL_V1.md"
+      ],
+      "data_source": "Public owner documentation and/or generated fixtures; no external EEG",
+      "test_receipt": [],
+      "scientific_result": "Implemented/tested bounded component; real-file validation or final scientific endpoint NOT TESTED",
+      "limitations": [
+        "Original DREAMS archive and expert labels unavailable under current rights gate"
+      ],
+      "blockers": [],
+      "artifacts": [
+        "docs/mist_cove/phase16/BENCHMARK_PROTOCOL_V1.md"
+      ],
+      "code_configuration_identity": {
+        "sha256": "8b5bb5661eb644278fdd3b4cb7352c80d6d86b8b33fe302803ab939eb315c4ff"
+      },
+      "unresolved_limitations": [
+        "No original archive inventory, verified participant mapping, or human annotation outcome"
+      ]
+    },
+    {
+      "id": "WP35",
+      "title": "Implement a simple matched model architecture",
+      "description": "Use a compact model with: Avoid a large architecture search. Do not reuse original P3B weights under a changed channel. The new checkpoint receives a completely separate scientific identity.",
+      "dependencies": [
+        "WP34"
+      ],
+      "status": "BLOCKED_RIGHTS_AND_DATA",
+      "implementation_reference": [],
+      "data_source": "NONE: no original DREAMS archive or annotation content accessed",
+      "test_receipt": [],
+      "scientific_result": "NOT TESTED",
+      "limitations": [],
+      "blockers": [
+        "DREAMS commercial-use and adaptation/model-training rights unresolved; user confirmed no permission or unclear; no archive acquired"
+      ],
+      "artifacts": [],
+      "unresolved_limitations": [
+        "No original archive inventory, verified participant mapping, or human annotation outcome"
+      ],
+      "code_configuration_identity": "NO_NEW_CODE_OR_CONFIG"
+    },
+    {
+      "id": "WP36",
+      "title": "Freeze participant-disjoint training and evaluation",
+      "description": "Prefer a small participant-disjoint cross-validation design that reflects the actual number of valid excerpts. For the eight-excerpt spindle collection, a bounded leave-one-excerpt/participant-out design is a candidate if the source confirms the excerpts come from distinct people. Do not assume that identity without checking. Primary dual-reviewer analyses must use genuinely covered intervals. No excerpt or recording from the held-out person may contribute: If the actual data are too sparse for a meaningful participant-disjoint design, mark training NO-GO.",
+      "dependencies": [
+        "WP34"
+      ],
+      "status": "BLOCKED_RIGHTS_AND_DATA",
+      "implementation_reference": [],
+      "data_source": "NONE: no original DREAMS archive or annotation content accessed",
+      "test_receipt": [],
+      "scientific_result": "NOT TESTED",
+      "limitations": [],
+      "blockers": [
+        "DREAMS commercial-use and adaptation/model-training rights unresolved; user confirmed no permission or unclear; no archive acquired"
+      ],
+      "artifacts": [],
+      "unresolved_limitations": [
+        "No original archive inventory, verified participant mapping, or human annotation outcome"
+      ],
+      "code_configuration_identity": "NO_NEW_CODE_OR_CONFIG"
+    },
+    {
+      "id": "WP37",
+      "title": "Train the bounded event model",
+      "description": "Conditional upper bound: Freeze the actual number of folds and examples before training. Do not consume the full allowance merely to maximize fit count. No extra seeds after unfavorable results. No test-label-based checkpoint selection. No external pretrained weights with unresolved training provenance. Preserve every failed fit.",
+      "dependencies": [
+        "WP35",
+        "WP36"
+      ],
+      "status": "BLOCKED_RIGHTS_AND_DATA",
+      "implementation_reference": [],
+      "data_source": "NONE: no original DREAMS archive or annotation content accessed",
+      "test_receipt": [],
+      "scientific_result": "NOT TESTED",
+      "limitations": [],
+      "blockers": [
+        "DREAMS commercial-use and adaptation/model-training rights unresolved; user confirmed no permission or unclear; no archive acquired"
+      ],
+      "artifacts": [],
+      "unresolved_limitations": [
+        "No original archive inventory, verified participant mapping, or human annotation outcome"
+      ],
+      "code_configuration_identity": "NO_NEW_CODE_OR_CONFIG"
+    },
+    {
+      "id": "WP38",
+      "title": "Verify event-model correctness",
+      "description": "Test: Do not assume the previous P3B feature-dependency proof applies to a new architecture.",
+      "dependencies": [
+        "WP37"
+      ],
+      "status": "BLOCKED_RIGHTS_AND_DATA",
+      "implementation_reference": [],
+      "data_source": "NONE: no original DREAMS archive or annotation content accessed",
+      "test_receipt": [],
+      "scientific_result": "NOT TESTED",
+      "limitations": [],
+      "blockers": [
+        "DREAMS commercial-use and adaptation/model-training rights unresolved; user confirmed no permission or unclear; no archive acquired"
+      ],
+      "artifacts": [],
+      "unresolved_limitations": [
+        "No original archive inventory, verified participant mapping, or human annotation outcome"
+      ],
+      "code_configuration_identity": "NO_NEW_CODE_OR_CONFIG"
+    },
+    {
+      "id": "WP39",
+      "title": "Build exact event-model explanation circuits",
+      "description": "On the held-out examples, construct complete response tables where feasible. Use the fixed 15-atom representation if appropriate. For 15 binary atoms: 32,768 masks per table. Build and verify: Target the original model-predicted class, including wrong event predictions.",
+      "dependencies": [
+        "WP38"
+      ],
+      "status": "BLOCKED_RIGHTS_AND_DATA",
+      "implementation_reference": [],
+      "data_source": "NONE: no original DREAMS archive or annotation content accessed",
+      "test_receipt": [],
+      "scientific_result": "NOT TESTED",
+      "limitations": [],
+      "blockers": [
+        "DREAMS commercial-use and adaptation/model-training rights unresolved; user confirmed no permission or unclear; no archive acquired"
+      ],
+      "artifacts": [],
+      "unresolved_limitations": [
+        "No original archive inventory, verified participant mapping, or human annotation outcome"
+      ],
+      "code_configuration_identity": "NO_NEW_CODE_OR_CONFIG"
+    },
+    {
+      "id": "WP40",
+      "title": "Compare exact explanations with human event intervals",
+      "description": "Compare the new event model's explanations against the frozen human annotation reference. Use: Match physical duration and explain empty/whole-window supports. A positive localization claim must require an incremental advantage over sigma, not merely random.",
+      "dependencies": [
+        "WP20",
+        "WP39"
+      ],
+      "status": "BLOCKED_RIGHTS_AND_DATA",
+      "implementation_reference": [],
+      "data_source": "NONE: no original DREAMS archive or annotation content accessed",
+      "test_receipt": [],
+      "scientific_result": "NOT TESTED",
+      "limitations": [],
+      "blockers": [
+        "DREAMS commercial-use and adaptation/model-training rights unresolved; user confirmed no permission or unclear; no archive acquired"
+      ],
+      "artifacts": [],
+      "unresolved_limitations": [
+        "No original archive inventory, verified participant mapping, or human annotation outcome"
+      ],
+      "code_configuration_identity": "NO_NEW_CODE_OR_CONFIG"
+    },
+    {
+      "id": "WP41",
+      "title": "Evaluate errors and counterexamples",
+      "description": "Analyze cases where: The objective is to find scientifically informative failures, not select beautiful examples.",
+      "dependencies": [
+        "WP40"
+      ],
+      "status": "BLOCKED_RIGHTS_AND_DATA",
+      "implementation_reference": [],
+      "data_source": "NONE: no original DREAMS archive or annotation content accessed",
+      "test_receipt": [],
+      "scientific_result": "NOT TESTED",
+      "limitations": [],
+      "blockers": [
+        "DREAMS commercial-use and adaptation/model-training rights unresolved; user confirmed no permission or unclear; no archive acquired"
+      ],
+      "artifacts": [],
+      "unresolved_limitations": [
+        "No original archive inventory, verified participant mapping, or human annotation outcome"
+      ],
+      "code_configuration_identity": "NO_NEW_CODE_OR_CONFIG"
+    },
+    {
+      "id": "WP42",
+      "title": "State the scope of the event-model result",
+      "description": "The new model, if trained, is a separately developed central-channel event classifier. Report: `HUMAN_EVENT_BENCHMARK_ON_NEW_MODEL` Do not report: `ORIGINAL_P3B_CLINICALLY_VALIDATED` Even successful held-out event localization would not prove clinical correctness of the original sleep-stage classifier or broad population generalization.",
+      "dependencies": [
+        "WP41"
+      ],
+      "status": "BLOCKED_RIGHTS_AND_DATA",
+      "implementation_reference": [],
+      "data_source": "NONE: no original DREAMS archive or annotation content accessed",
+      "test_receipt": [],
+      "scientific_result": "NOT TESTED",
+      "limitations": [],
+      "blockers": [
+        "DREAMS commercial-use and adaptation/model-training rights unresolved; user confirmed no permission or unclear; no archive acquired"
+      ],
+      "artifacts": [],
+      "unresolved_limitations": [
+        "No original archive inventory, verified participant mapping, or human annotation outcome"
+      ],
+      "code_configuration_identity": "NO_NEW_CODE_OR_CONFIG"
+    },
+    {
+      "id": "WP43",
+      "title": "Compare the two explanation research settings",
+      "description": "Create a methodological comparison between: **Historical P3B** Sleep-stage classification using Fpz-Cz, with verified model-dependency circuits but no human event-localization validation. **Optional new event model** A channel-compatible spindle-presence classifier trained and evaluated on independently annotated external data. Compare: No direct physiological equivalence should be inferred merely because the same Boolean verification machinery is used.",
+      "dependencies": [
+        "WP02",
+        "WP32",
+        "WP42"
+      ],
+      "status": "COMPLETE",
+      "implementation_reference": [
+        "docs/mist_cove/phase16/SOURCE_AND_SCIENTIFIC_REVIEW_V1.md"
+      ],
+      "data_source": "Public owner documentation and/or generated fixtures; no external EEG",
+      "test_receipt": [],
+      "scientific_result": "Historical sleep-stage P3B and possible central-channel event model have distinct targets, operators and claims",
+      "limitations": [],
+      "blockers": [],
+      "artifacts": [
+        "docs/mist_cove/phase16/SOURCE_AND_SCIENTIFIC_REVIEW_V1.md"
+      ],
+      "code_configuration_identity": {
+        "sha256": "375b0bda5ac294a063ff5250efbe714a61fe253db9213088ba4c4b95a509bf73"
+      }
+    },
+    {
+      "id": "WP44",
+      "title": "Assess whether the explanation framework generalizes",
+      "description": "Determine whether the exact circuit construction supports more than a single model architecture. Verify generality through: Separate computational generality from physiological utility.",
+      "dependencies": [
+        "WP19",
+        "WP39"
+      ],
+      "status": "PARTIAL",
+      "implementation_reference": [
+        "tests/mist_cove/test_phase16.py"
+      ],
+      "data_source": "Public owner documentation and/or generated fixtures; no external EEG",
+      "test_receipt": [
+        "28 generated-only Phase XVI tests passed"
+      ],
+      "scientific_result": "Implemented/tested bounded component; real-file validation or final scientific endpoint NOT TESTED",
+      "limitations": [
+        "Generated Boolean functions show computational reuse, not new model-architecture or physiological generality"
+      ],
+      "blockers": [],
+      "artifacts": [
+        "tests/mist_cove/test_phase16.py"
+      ],
+      "code_configuration_identity": {
+        "sha256": "a9b99ca4555d18d5da8be6b3c5dd7f8b48c49cd34cb102dea806237e27dd484f"
+      }
+    },
+    {
+      "id": "WP45",
+      "title": "Evaluate the REM-annotation opportunity",
+      "description": "Assess whether the DREAMS rapid-eye-movement database offers an independent, useful benchmark for EOG event detection. Compare this with the ST REM forensics from Phase XV. Do not train a new ST REM classifier. Do not use DREAMS eye-movement event intervals as if they directly explain why the historical ST classifier predicted Wake or N2. Produce a scientifically clear bridge between event-level evidence and future multichannel REM-classification research.",
+      "dependencies": [
+        "WP03",
+        "WP26"
+      ],
+      "status": "COMPLETE",
+      "implementation_reference": [
+        "docs/mist_cove/phase16/SOURCE_AND_SCIENTIFIC_REVIEW_V1.md"
+      ],
+      "data_source": "Public owner documentation and/or generated fixtures; no external EEG",
+      "test_receipt": [],
+      "scientific_result": "DREAMS REM database has 9 excerpts from 5 people per owner PDF; event-level EOG opportunity only; no causal inference about ST REM stage failures",
+      "limitations": [],
+      "blockers": [],
+      "artifacts": [
+        "docs/mist_cove/phase16/SOURCE_AND_SCIENTIFIC_REVIEW_V1.md"
+      ],
+      "code_configuration_identity": {
+        "sha256": "375b0bda5ac294a063ff5250efbe714a61fe253db9213088ba4c4b95a509bf73"
+      }
+    },
+    {
+      "id": "WP46",
+      "title": "Design the next causal-discrimination study",
+      "description": "Prepare a separate future protocol capable of distinguishing: A future model-development study should compare properly matched single-channel and multichannel models with participant-disjoint development. It needs an independent evaluation boundary not repeatedly used for model selection. Do not execute this follow-up automatically.",
+      "dependencies": [
+        "WP02",
+        "WP45"
+      ],
+      "status": "COMPLETE",
+      "implementation_reference": [
+        "docs/mist_cove/phase16/SOURCE_AND_SCIENTIFIC_REVIEW_V1.md"
+      ],
+      "data_source": "Public owner documentation and/or generated fixtures; no external EEG",
+      "test_receipt": [],
+      "scientific_result": "Proposed separately authorized matched single- versus multichannel independent-boundary study; not executed",
+      "limitations": [],
+      "blockers": [],
+      "artifacts": [
+        "docs/mist_cove/phase16/SOURCE_AND_SCIENTIFIC_REVIEW_V1.md"
+      ],
+      "code_configuration_identity": {
+        "sha256": "375b0bda5ac294a063ff5250efbe714a61fe253db9213088ba4c4b95a509bf73"
+      }
+    },
+    {
+      "id": "WP47",
+      "title": "Make the contribution and publication decision",
+      "description": "Evaluate whether MIST-COVE now supports: 1. A methods paper about exact EEG model-dependency auditing. 2. A validated event-localization paper. 3. An event-classifier explanation benchmark. 4. A negative-results paper about explanation faithfulness versus physiological concordance. 5. A cross-study classifier audit. 6. A combined methodological study with explicitly separate claims. Review relevant primary literature. Do not claim first-in-the-world novelty based on a short reference search. Report negative findings without minimizing them.",
+      "dependencies": [
+        "WP02",
+        "WP30",
+        "WP42",
+        "WP44"
+      ],
+      "status": "COMPLETE",
+      "implementation_reference": [
+        "docs/mist_cove/phase16/SOURCE_AND_SCIENTIFIC_REVIEW_V1.md"
+      ],
+      "data_source": "Public owner documentation and/or generated fixtures; no external EEG",
+      "test_receipt": [],
+      "scientific_result": "Methods/negative-results publication may be reviewable; expert-event or event-model validation paper unsupported by Phase XVI evidence",
+      "limitations": [],
+      "blockers": [],
+      "artifacts": [
+        "docs/mist_cove/phase16/SOURCE_AND_SCIENTIFIC_REVIEW_V1.md"
+      ],
+      "code_configuration_identity": {
+        "sha256": "375b0bda5ac294a063ff5250efbe714a61fe253db9213088ba4c4b95a509bf73"
+      }
+    },
+    {
+      "id": "WP48",
+      "title": "Build a comprehensive test suite",
+      "description": "Preserve the existing Phase XV baseline: **1,152 CPU tests passed and 11 CUDA skips.** Add tests for: Use synthetic fixtures in GitHub Actions. Do not publish actual EEG or human annotation arrays to CI.",
+      "dependencies": [
+        "WP07",
+        "WP08",
+        "WP11",
+        "WP19"
+      ],
+      "status": "COMPLETE",
+      "implementation_reference": [
+        "tests/mist_cove/test_phase16.py"
+      ],
+      "data_source": "Public owner documentation and/or generated fixtures; no external EEG",
+      "test_receipt": [
+        "Full CPU regression: 1,180 passed, 11 CUDA-only skipped, 0 failed; 20.61 s",
+        "Phase XVI generated-only: 28 passed"
+      ],
+      "scientific_result": "Implemented/tested bounded component; real-file validation or final scientific endpoint NOT TESTED",
+      "limitations": [
+        "CUDA correctness not run; no GPU operation"
+      ],
+      "blockers": [],
+      "artifacts": [
+        "tests/mist_cove/test_phase16.py"
+      ],
+      "code_configuration_identity": {
+        "sha256": "a9b99ca4555d18d5da8be6b3c5dd7f8b48c49cd34cb102dea806237e27dd484f"
+      }
+    },
+    {
+      "id": "WP49",
+      "title": "Produce the full research package",
+      "description": "Suggested documentation: ```text docs/mist_cove/ PHASE_XVI_RESEARCH_FOUNDATION_V1.md PHASE_XVI_SOURCE_LICENSING_AND_ACCESS_V1.md PHASE_XVI_EXTERNAL_DATASET_REVIEW_V1.md PHASE_XVI_ANNOTATION_SCHEMA_V1.md PHASE_XVI_EXPERT_COVERAGE_AUDIT_V1.md PHASE_XVI_INTERSCORER_AGREEMENT_V1.md PHASE_XVI_EVENT_BENCHMARK_PROTOCOL_V1.md PHASE_XVI_HUMAN_EVENT_BENCHMARK_RESULTS_V1.md PHASE_XVI_KCOMPLEX_REM_ARTIFACT_RESULTS_V1.md PHASE_XVI_CHANNEL_COMPATIBILITY_V1.md PHASE_XVI_EVENT_MODEL_PROTOCOL_V1.md PHASE_XVI_EVENT_MODEL_RESULTS_V1.md PHASE_XVI_EXACT_EXPLANATION_RESULTS_V1.md PHASE_XVI_SIGMA_BASELINE_COMPARISON",
+      "dependencies": [
+        "WP02",
+        "WP04",
+        "WP48"
+      ],
+      "status": "PARTIAL",
+      "implementation_reference": [
+        "docs/mist_cove/phase16/RESEARCH_REPORT_V1.md"
+      ],
+      "data_source": "Public owner documentation and/or generated fixtures; no external EEG",
+      "test_receipt": [],
+      "scientific_result": "Implemented/tested bounded component; real-file validation or final scientific endpoint NOT TESTED",
+      "limitations": [
+        "Real expert-event figures/results cannot be produced without rights-cleared source data"
+      ],
+      "blockers": [],
+      "artifacts": [
+        "docs/mist_cove/phase16/RESEARCH_REPORT_V1.md",
+        "reports/mist_cove/phase16_v1/DASHBOARD.md",
+        "reports/mist_cove/phase16_v1/scientific_gates.json"
+      ],
+      "code_configuration_identity": {
+        "sha256": "02d2ef864919adc523ee04bc36769640bc52eec189b3fa7e20c03e398f304d88"
+      }
+    },
+    {
+      "id": "WP50",
+      "title": "GitHub publication and scientific closeout",
+      "description": "Complete all fifty ledger entries. Each work package must have: Run the complete CPU suite. Run CUDA-only correctness tests only when safely available and compatible. Do not claim CUDA PASS if unavailable. Push: `research/mist-cove-phase16-expert-event-benchmark-v1` Open a draft PR targeting: `research/mist-cove-phase15-rem-proxy-method-value-v1` Suggested title: **MIST-COVE Phase XVI: Human-Annotated EEG Event Benchmarking and Exact Explanation Validation** Verify GitHub Actions on the exact final commit. Do not merge automatically. Report the true status of every scientific gate. Do not begi",
+      "dependencies": [
+        "WP49"
+      ],
+      "status": "IN_PROGRESS",
+      "implementation_reference": [
+        "research/mist-cove-phase16-expert-event-benchmark-v1"
+      ],
+      "data_source": "NONE",
+      "test_receipt": [],
+      "scientific_result": "NOT_TESTED",
+      "limitations": [],
+      "blockers": [
+        "Complete scientific real-data gates depend on owner rights; publication can report blocked outcomes honestly"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase16_v1/progress.json"
+      ],
+      "code_configuration_identity": "NO_NEW_CODE_OR_CONFIG"
+    }
+  ]
+}

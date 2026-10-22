@@ -1,0 +1,17 @@
+{
+  "schema": "mist-cove-phase16-scientific-gates-v1",
+  "XVI-A_source_legality_identity": "BLOCKED_RIGHTS_UNCLEAR_NO_ARCHIVE_ACQUIRED",
+  "XVI-B_human_annotation_correctness": "NOT_TESTED_ORIGINAL_FILES_UNAVAILABLE",
+  "XVI-C_reviewer_agreement": "NOT_TESTED_ORIGINAL_FILES_UNAVAILABLE",
+  "XVI-D_automated_event_benchmark": "NOT_TESTED_ORIGINAL_FILES_UNAVAILABLE",
+  "XVI-E_original_P3B_compatibility": "NOT_TESTED_CHANNEL_INCOMPATIBLE",
+  "XVI-F_new_event_model": "NO_GO_RIGHTS_COVERAGE_PARTICIPANT_MAPPING_UNRESOLVED",
+  "XVI-G_exact_new_model_explanation": "NOT_TESTED_NO_NEW_EVENT_MODEL",
+  "XVI-H_human_event_alignment": "NOT_TESTED_ORIGINAL_FILES_UNAVAILABLE",
+  "XVI-I_added_explanation_method_value": "NOT_TESTED_AGAINST_HUMAN_EVENTS",
+  "XVI-J_clinical_validity": "NOT_ESTABLISHED",
+  "software_generated_contracts": "28_PHASE_XVI_TESTS_PASSED_FULL_CPU_1180_PASSED_11_CUDA_SKIPPED",
+  "historical_P3B_checkpoint_unchanged": true,
+  "external_EEG_access_count": 0,
+  "DREAMS_archive_access_count": 0
+}
