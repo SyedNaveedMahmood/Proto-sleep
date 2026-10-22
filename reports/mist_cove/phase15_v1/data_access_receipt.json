@@ -1,0 +1,14 @@
+{
+  "status": "PRE_ANALYSIS_GOVERNANCE_ONLY",
+  "new_raw_SC_TRAIN_reads": 0,
+  "new_raw_SC_VAL_reads": 0,
+  "new_SC_RESERVED_reads": 0,
+  "new_ST_PSG_waveform_reads": 0,
+  "new_ST_annotation_reads": 0,
+  "new_ST_prediction_queries": 0,
+  "private_Phase_XIV_cache_manifest_reads": 1,
+  "private_Phase_XIV_geometry_reads": 1,
+  "historical_checkpoint_restricted_authentication": 1,
+  "forbidden_source_opens": 0,
+  "counts_are_phase15_incremental": true
+}

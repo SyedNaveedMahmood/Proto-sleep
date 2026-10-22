@@ -1,0 +1,27 @@
+{
+  "status": "EXPLORATORY_REUSED_ST",
+  "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+  "source": "configs/mist_cove_phase15_v1.json",
+  "lock_type": "exploratory reproducibility, not untouched prospective ST confirmation",
+  "commit_required_before_new_research_queries": true,
+  "inherited_identity": {
+    "source_manifest_canonical_sha256": "cddf1d4bd1d5f188999a5572a14865145ab1b76a147306a0feddecd8cbc1dc70",
+    "geometry_canonical_sha256": "2c52cc1e5c701d766a06880bc68f7c52a8574416c04f763880d5b29068a9c3ad",
+    "checkpoint_byte_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147",
+    "named_state_sha256": "1b308f3fc38af22609d2043b0988998b1a193c6d4ace73ac84382bb17e1a4c6d",
+    "approved_SC_recordings": 29,
+    "approved_ST_recordings": 44,
+    "scored_ST_epochs": 42691,
+    "ST_REM_row": [
+      2322,
+      1570,
+      2648,
+      4,
+      1805
+    ],
+    "ST_witness_tables": 1095,
+    "Phase_XIV_public_manifest_files_checked": 103,
+    "ST_spectral_increment_gate": "FAIL",
+    "SC_primary_proxy_gate": "NOT_ESTIMABLE"
+  }
+}

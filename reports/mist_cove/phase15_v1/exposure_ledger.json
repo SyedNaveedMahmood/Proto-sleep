@@ -1,0 +1,48 @@
+{
+  "status": "EXPLORATORY_REUSED_ST",
+  "all_new_ST_analysis_label": "EXPLORATORY_REUSED_ST",
+  "UNTOUCHED_TEST_permitted": false,
+  "previously_exposed": [
+    {
+      "scope": "SC_TRAIN",
+      "measurement": "full grid original P3B classification",
+      "interpretation": "IN_SAMPLE_DEVELOPMENT"
+    },
+    {
+      "scope": "SC_TRAIN",
+      "measurement": "150 stage-balanced and 150 prevalence witness cases",
+      "interpretation": "DEVELOPMENTAL"
+    },
+    {
+      "scope": "SC_VAL",
+      "measurement": "historical approved aggregate only",
+      "interpretation": "NO_NEW_RAW_ACCESS"
+    },
+    {
+      "scope": "ST_EVAL",
+      "measurement": "44-night complete-grid classification and calibration",
+      "interpretation": "EXPLORATORY_REUSED_ST"
+    },
+    {
+      "scope": "ST_EVAL",
+      "measurement": "219 witness cases, 1095 five-view truth tables",
+      "interpretation": "EXPLORATORY_REUSED_ST"
+    },
+    {
+      "scope": "ST_EVAL",
+      "measurement": "Pz-Oz spindle proxy random PASS, sigma increment FAIL; detector thresholds and zero/.01 neutral compared",
+      "interpretation": "EXPLORATORY_REUSED_ST"
+    },
+    {
+      "scope": "SC_TRAIN",
+      "measurement": "five-person spindle developmental gate with 9 eligible cases",
+      "interpretation": "NOT_ESTIMABLE"
+    },
+    {
+      "scope": "SC_TRAIN",
+      "measurement": "three-seed C0/C1 transition gate FAIL",
+      "interpretation": "DEVELOPMENTAL"
+    }
+  ],
+  "new_phase15_panels": "selected after plan commit; descriptive/exploratory regardless of locking"
+}

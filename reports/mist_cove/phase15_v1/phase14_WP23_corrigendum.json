@@ -1,0 +1,13 @@
+{
+  "phase": "XV",
+  "historical_phase": "XIV",
+  "work_package": "WP23",
+  "published_ledger_status": "COMPLETE",
+  "published_scientific_status": "PENDING_AGGREGATION",
+  "published_witness_execution_status": "COMPLETE",
+  "published_SC_tables": 900,
+  "published_aggregate_exists": true,
+  "interpretation": "status-aggregation field was left PENDING_AGGREGATION despite completed SC witness run and published aggregate; SC physiological primary gate remains NOT_ESTIMABLE",
+  "Phase_XIV_ledger_modified": false,
+  "scientific_gate_changed": false
+}

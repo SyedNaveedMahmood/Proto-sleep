@@ -1,0 +1,19 @@
+{
+  "status": "EXPLORATORY_REUSED_ST",
+  "new_raw_SC_VAL_reads": 0,
+  "new_SC_RESERVED_reads": 0,
+  "external_EEG_reads": 0,
+  "ST_training_updates": 0,
+  "approved_SC_TRAIN_recordings": 29,
+  "approved_ST_recordings": 44,
+  "allowed_channels": [
+    "EEG Fpz-Cz",
+    "EEG Pz-Oz",
+    "EOG horizontal",
+    "EMG submental"
+  ],
+  "dataset_root_source": "Phase XIV ignored local authorization; digest pinned; no new public literal",
+  "owner_accepted_earlier_root_path_in_Git_history": true,
+  "private_values_may_not_be_published": true,
+  "Phase_XVI_execution": "NOT_AUTHORIZED"
+}

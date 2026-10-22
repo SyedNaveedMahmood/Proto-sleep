@@ -1,0 +1,89 @@
+{
+  "nodes": [
+    {
+      "id": "exact15",
+      "category": "PROVEN_COMPUTATIONAL",
+      "claim": "15-atom closure, full identity and exhaustive finite tables"
+    },
+    {
+      "id": "phase9",
+      "category": "SYNTHETIC",
+      "claim": "clean additive versus conventional and C2 versus C1 gates failed"
+    },
+    {
+      "id": "phase11",
+      "category": "PROVEN_COMPUTATIONAL",
+      "claim": "historical source bytes/state and restricted loading authenticated"
+    },
+    {
+      "id": "phase12",
+      "category": "TRAIN_DEVELOPMENT",
+      "claim": "source operator and real-model dependency audit"
+    },
+    {
+      "id": "phase13",
+      "category": "TRAIN_DEVELOPMENT",
+      "claim": "exposure matters; width and routing incremental gates failed"
+    },
+    {
+      "id": "sc_full",
+      "category": "TRAIN_IN_SAMPLE",
+      "claim": "79,025 scored original-model classification epochs"
+    },
+    {
+      "id": "sc_proxy",
+      "category": "TRAIN_DEVELOPMENT",
+      "claim": "nine eligible cases, four people; primary gate not estimable"
+    },
+    {
+      "id": "st_full",
+      "category": "FROZEN_PHASE_XIV_ST",
+      "claim": "42,691 scored epochs; REM recall 0.2162 and ECE15 0.1339"
+    },
+    {
+      "id": "st_proxy",
+      "category": "FROZEN_PHASE_XIV_ST",
+      "claim": "25 eligible cases; random PASS, sigma increment FAIL"
+    },
+    {
+      "id": "context",
+      "category": "TRAIN_DEVELOPMENT",
+      "claim": "six fits; transition gate failed all three seeds"
+    },
+    {
+      "id": "human",
+      "category": "UNVERIFIED_PHYSIOLOGY",
+      "claim": "no qualified expert event validation"
+    },
+    {
+      "id": "phase15",
+      "category": "EXPLORATORY_REUSED_ST",
+      "claim": "new REM/proxy/operator analyses cannot restore independent test status"
+    }
+  ],
+  "question_links": {
+    "REM_failure": [
+      "st_full",
+      "sc_full",
+      "phase11",
+      "phase15",
+      "human"
+    ],
+    "sigma_challenge": [
+      "exact15",
+      "st_proxy",
+      "sc_proxy",
+      "phase15",
+      "human"
+    ],
+    "strategy": [
+      "phase9",
+      "phase13",
+      "context",
+      "st_full",
+      "st_proxy",
+      "human"
+    ]
+  },
+  "no_historical_fail_to_pass_promotion": true
+}

@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "checkpoint_byte_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147",
+  "named_state_digest": "1b308f3fc38af22609d2043b0988998b1a193c6d4ace73ac84382bb17e1a4c6d",
+  "restricted_load": true,
+  "custom_globals": false,
+  "torch_version": "2.10.0+cpu",
+  "source_hashes": {
+    "src/mist_evidence/model.py": "366ea206ed01f1579466ead362ecf3d2e5cf7f43ff5446b419cf879a60be1058",
+    "src/mist_evidence/cli.py": "16938fccb99f35b0a0cbb8ad1e67f357da253511c9e8ddd315c658ff276b3c09",
+    "src/mist_transfer/baselines.py": "77e0c409f6b886137b80b9cecb0a4fa9c2f0e36d022d9484e36920715f0b8854"
+  },
+  "parameters": 34197,
+  "originally_trainable_parameters": 33957,
+  "features": 209,
+  "stages": [
+    "Wake",
+    "N1",
+    "N2",
+    "N3",
+    "REM"
+  ],
+  "best_epoch": 28,
+  "bank_waveforms_digest": "4b207142763ec056f7cd0c01a85859f6a7e955ad03be6f63d003e435b0a2d743",
+  "bank_metadata_digest": "ee1d3c19b617c8d12b114fbeaee6c0926067adff3aad71120a9d25d6dd902bf4",
+  "state_unchanged": true,
+  "wall_seconds": 0.01673215600021649,
+  "real_EEG_accessed": false
+}

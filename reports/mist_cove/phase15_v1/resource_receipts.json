@@ -1,0 +1,15 @@
+{
+  "status": "PRE_ANALYSIS_GOVERNANCE_ONLY",
+  "new_neural_fits": 0,
+  "new_optimizer_updates": 0,
+  "new_cached_head_queries_attempted_plus_successful": 0,
+  "scientific_CPU_wall_seconds_recorded": 0,
+  "model_reauthentication_wall_seconds": 0.01673215600021649,
+  "limits": {
+    "fits": 0,
+    "updates": 0,
+    "scientific_CPU_wall_seconds": 18000,
+    "cached_head_queries": 38000000
+  },
+  "prior_Phase_XIV_queries_are_not_charged_to_new_Phase_XV_budget": true
+}

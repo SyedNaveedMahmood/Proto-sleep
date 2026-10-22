@@ -1,0 +1,18 @@
+{
+  "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
+  "base_tree": "3a539db6a5ba232cd6b042a7063e6f50d98125eb",
+  "branch": "research/mist-cove-phase15-rem-proxy-method-value-v1",
+  "working_tree_clean_before_branch": true,
+  "origin_phase14_matches": true,
+  "phase14_pr": "https://github.com/SyedNaveedMahmood/Proto-sleep/pull/16",
+  "python": "3.12.9",
+  "packages": {
+    "torch": "2.10.0+cpu",
+    "numpy": "1.26.4",
+    "mne": "1.10.2",
+    "pyedflib": "0.1.42"
+  },
+  "baseline_CPU_passed": 1139,
+  "baseline_CUDA_skipped": 11,
+  "historical_experiments_modified": false
+}
