@@ -198,17 +198,27 @@
       "dependencies": [
         "WP07"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_RUN",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "ENGINEERING_PASS",
       "code_configuration_identity": {
-        "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
-        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376"
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "7fd71d7549c6e45cb08527f7358aea68eab6e1c1866f6df82537d0c6d3b12c58",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "tests/test_phase15_forensics.py"
+      ],
+      "findings": [
+        "Generated leakage, role, geometry, clause and ordering controls pass; inherited source/cache tests retained."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
       "block_reason": null
     },
     {
@@ -217,17 +227,27 @@
       "dependencies": [
         "WP08"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_RUN",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
       "code_configuration_identity": {
-        "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
-        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376"
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "7fd71d7549c6e45cb08527f7358aea68eab6e1c1866f6df82537d0c6d3b12c58",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/rem_forensics.json"
+      ],
+      "findings": [
+        "Published 42,691 scored-epoch confusion and REM row reproduce exactly."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
       "block_reason": null
     },
     {
@@ -236,17 +256,27 @@
       "dependencies": [
         "WP09"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_RUN",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
       "code_configuration_identity": {
-        "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
-        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376"
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "7fd71d7549c6e45cb08527f7358aea68eab6e1c1866f6df82537d0c6d3b12c58",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/rem_forensics.json"
+      ],
+      "findings": [
+        "REM to W/N1/N2/N3 separated; rare N3 denominator four preserved."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
       "block_reason": null
     },
     {
@@ -255,17 +285,27 @@
       "dependencies": [
         "WP10"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_RUN",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
       "code_configuration_identity": {
-        "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
-        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376"
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "7fd71d7549c6e45cb08527f7358aea68eab6e1c1866f6df82537d0c6d3b12c58",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/panel_seal.json"
+      ],
+      "findings": [
+        "219 representative and 240 enriched cases frozen privately with public SHA seal."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
       "block_reason": null
     },
     {
@@ -274,17 +314,27 @@
       "dependencies": [
         "WP11"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_RUN",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
       "code_configuration_identity": {
-        "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
-        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376"
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "7fd71d7549c6e45cb08527f7358aea68eab6e1c1866f6df82537d0c6d3b12c58",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/rem_statistics.json"
+      ],
+      "findings": [
+        "Transition contrasts use contiguous scored physical runs; REM-to-N2 is transition-enriched."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
       "block_reason": null
     },
     {
@@ -293,17 +343,27 @@
       "dependencies": [
         "WP12"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_RUN",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
       "code_configuration_identity": {
-        "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
-        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376"
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "7fd71d7549c6e45cb08527f7358aea68eab6e1c1866f6df82537d0c6d3b12c58",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/rem_wave_diagnostics.json"
+      ],
+      "findings": [
+        "Both calibrated EEG leads analyzed; within-REM sigma and entropy contrasts reported."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
       "block_reason": null
     },
     {
@@ -312,17 +372,27 @@
       "dependencies": [
         "WP13"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_RUN",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
       "code_configuration_identity": {
-        "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
-        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376"
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "7fd71d7549c6e45cb08527f7358aea68eab6e1c1866f6df82537d0c6d3b12c58",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/rem_wave_diagnostics.json"
+      ],
+      "findings": [
+        "Fixed horizontal EOG candidate activity differs by REM error type; no new EOG classifier."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
       "block_reason": null
     },
     {
@@ -331,17 +401,27 @@
       "dependencies": [
         "WP14"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_RUN",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
       "code_configuration_identity": {
-        "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
-        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376"
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "7fd71d7549c6e45cb08527f7358aea68eab6e1c1866f6df82537d0c6d3b12c58",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/rem_wave_diagnostics.json"
+      ],
+      "findings": [
+        "Native ST 100-Hz chin EMG and within-night ranks reported, separate from SC 1-Hz envelope."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
       "block_reason": null
     },
     {
@@ -350,17 +430,27 @@
       "dependencies": [
         "WP15"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_RUN",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
       "code_configuration_identity": {
-        "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
-        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376"
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "7fd71d7549c6e45cb08527f7358aea68eab6e1c1866f6df82537d0c6d3b12c58",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/rem_wave_diagnostics.json"
+      ],
+      "findings": [
+        "EEG/EOG/EMG and model-score disagreements reported without synthetic expert labels."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
       "block_reason": null
     },
     {
@@ -369,17 +459,27 @@
       "dependencies": [
         "WP16"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_RUN",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
       "code_configuration_identity": {
-        "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
-        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376"
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "7fd71d7549c6e45cb08527f7358aea68eab6e1c1866f6df82537d0c6d3b12c58",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/quality_results.json"
+      ],
+      "findings": [
+        "Fixed flat/step/extreme/clip event flags and within-person error contrasts reported."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
       "block_reason": null
     },
     {
@@ -388,17 +488,27 @@
       "dependencies": [
         "WP17"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_RUN",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
       "code_configuration_identity": {
-        "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
-        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376"
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "7fd71d7549c6e45cb08527f7358aea68eab6e1c1866f6df82537d0c6d3b12c58",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/rem_statistics.json"
+      ],
+      "findings": [
+        "Paired temazepam-placebo REM recall difference +0.0124; bootstrap interval crosses zero."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
       "block_reason": null
     },
     {
@@ -407,17 +517,27 @@
       "dependencies": [
         "WP18"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_RUN",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
       "code_configuration_identity": {
-        "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
-        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376"
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "7fd71d7549c6e45cb08527f7358aea68eab6e1c1866f6df82537d0c6d3b12c58",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/rem_forensics.json"
+      ],
+      "findings": [
+        "Five-class margins/confidence and REM error taxonomy reported."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
       "block_reason": null
     },
     {
@@ -426,17 +546,27 @@
       "dependencies": [
         "WP19"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_RUN",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
       "code_configuration_identity": {
-        "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
-        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376"
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "7fd71d7549c6e45cb08527f7358aea68eab6e1c1866f6df82537d0c6d3b12c58",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/rem_statistics.json"
+      ],
+      "findings": [
+        "ECE15 reproduced; REM stage ECE 0.453, high-confidence wrong count 3,209."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
       "block_reason": null
     },
     {
@@ -445,17 +575,27 @@
       "dependencies": [
         "WP20"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_RUN",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
       "code_configuration_identity": {
-        "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
-        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376"
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "7fd71d7549c6e45cb08527f7358aea68eab6e1c1866f6df82537d0c6d3b12c58",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/rem_statistics.json"
+      ],
+      "findings": [
+        "Fixed warning rules have limited REM-error sensitivity and material false-warning rates."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
       "block_reason": null
     },
     {
@@ -464,17 +604,27 @@
       "dependencies": [
         "WP21"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_RUN",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
       "code_configuration_identity": {
-        "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
-        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376"
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "7fd71d7549c6e45cb08527f7358aea68eab6e1c1866f6df82537d0c6d3b12c58",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/rem_statistics.json"
+      ],
+      "findings": [
+        "Person-clustered descriptive contrasts; no fitted ST predictor or causal claim."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
       "block_reason": null
     },
     {
@@ -483,17 +633,27 @@
       "dependencies": [
         "WP22"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_RUN",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "NOT_TESTED_HUMAN",
       "code_configuration_identity": {
-        "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
-        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376"
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "7fd71d7549c6e45cb08527f7358aea68eab6e1c1866f6df82537d0c6d3b12c58",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/atlas_receipt.json"
+      ],
+      "findings": [
+        "Ten calibrated multichannel reports retained privately; no expert adjudication."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
       "block_reason": null
     },
     {
@@ -502,17 +662,27 @@
       "dependencies": [
         "WP23"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_RUN",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
       "code_configuration_identity": {
-        "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
-        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376"
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "7fd71d7549c6e45cb08527f7358aea68eab6e1c1866f6df82537d0c6d3b12c58",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "docs/mist_cove/PHASE_XV_RESEARCH_REPORT_V1.md"
+      ],
+      "findings": [
+        "Faithfulness, proxy agreement, stability and utility estimands kept distinct."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
       "block_reason": null
     },
     {
@@ -521,17 +691,27 @@
       "dependencies": [
         "WP24"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_RUN",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
       "code_configuration_identity": {
-        "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
-        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376"
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "7fd71d7549c6e45cb08527f7358aea68eab6e1c1866f6df82537d0c6d3b12c58",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/explanation_comparison.json"
+      ],
+      "findings": [
+        "Exact, signed, greedy, spectral, gradient, random, position and inherited physical comparators audited."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
       "block_reason": null
     },
     {
@@ -540,17 +720,27 @@
       "dependencies": [
         "WP25"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_RUN",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
       "code_configuration_identity": {
-        "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
-        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376"
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "7fd71d7549c6e45cb08527f7358aea68eab6e1c1866f6df82537d0c6d3b12c58",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/explanation_comparison.json"
+      ],
+      "findings": [
+        "All interval baselines matched to exact-positive two-second atom count; greedy own length separate."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
       "block_reason": null
     },
     {
@@ -559,17 +749,27 @@
       "dependencies": [
         "WP26"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_RUN",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
       "code_configuration_identity": {
-        "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
-        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376"
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "7fd71d7549c6e45cb08527f7358aea68eab6e1c1866f6df82537d0c6d3b12c58",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/panel_seal.json"
+      ],
+      "findings": [
+        "E1/E2/E3 panel identities sealed before new explanation comparison."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
       "block_reason": null
     },
     {
@@ -578,17 +778,27 @@
       "dependencies": [
         "WP27"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_RUN",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
       "code_configuration_identity": {
-        "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
-        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376"
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "7fd71d7549c6e45cb08527f7358aea68eab6e1c1866f6df82537d0c6d3b12c58",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/explanation_comparison.json"
+      ],
+      "findings": [
+        "E1 has 63 detector-candidate cases; 55 nondegenerate eligible from 20 people."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
       "block_reason": null
     },
     {
@@ -597,17 +807,27 @@
       "dependencies": [
         "WP28"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_RUN",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
       "code_configuration_identity": {
-        "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
-        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376"
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "7fd71d7549c6e45cb08527f7358aea68eab6e1c1866f6df82537d0c6d3b12c58",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/rem_wave_diagnostics.json"
+      ],
+      "findings": [
+        "Original stage-blind YASA event cache and version reused with authenticated Phase XIV identity."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
       "block_reason": null
     },
     {
@@ -616,17 +836,27 @@
       "dependencies": [
         "WP29"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_RUN",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
       "code_configuration_identity": {
-        "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
-        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376"
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "7fd71d7549c6e45cb08527f7358aea68eab6e1c1866f6df82537d0c6d3b12c58",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "docs/mist_cove/PHASE_XV_RESEARCH_REPORT_V1.md"
+      ],
+      "findings": [
+        "Detector targets are independent of explanation ranking but not expert event truth."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
       "block_reason": null
     },
     {
@@ -635,17 +865,27 @@
       "dependencies": [
         "WP30"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_RUN",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
       "code_configuration_identity": {
-        "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
-        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376"
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "7fd71d7549c6e45cb08527f7358aea68eab6e1c1866f6df82537d0c6d3b12c58",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/explanation_comparison.json"
+      ],
+      "findings": [
+        "Pz slow-wave, frontal spindle, EOG excursion and EMG low-tone candidates reported separately."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
       "block_reason": null
     },
     {
@@ -654,17 +894,27 @@
       "dependencies": [
         "WP31"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_RUN",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
       "code_configuration_identity": {
-        "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
-        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376"
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "7fd71d7549c6e45cb08527f7358aea68eab6e1c1866f6df82537d0c6d3b12c58",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/explanation_comparison.json"
+      ],
+      "findings": [
+        "0, 0.1 and 0.25-second interval tolerances; missing event/support cases retained."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
       "block_reason": null
     },
     {
@@ -673,17 +923,27 @@
       "dependencies": [
         "WP32"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_RUN",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
       "code_configuration_identity": {
-        "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
-        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376"
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "7fd71d7549c6e45cb08527f7358aea68eab6e1c1866f6df82537d0c6d3b12c58",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/explanation_comparison.json"
+      ],
+      "findings": [
+        "Exact minus sigma is -0.0462 by person on 55 eligible E2 cases; registered FAIL unchanged."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
       "block_reason": null
     },
     {
@@ -692,17 +952,27 @@
       "dependencies": [
         "WP33"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_RUN",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
       "code_configuration_identity": {
-        "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
-        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376"
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "7fd71d7549c6e45cb08527f7358aea68eab6e1c1866f6df82537d0c6d3b12c58",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/explanation_comparison.json"
+      ],
+      "findings": [
+        "Sigma wins 24 cases, exact wins 9 and 22 tie; wrong predictions remain explainable."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
       "block_reason": null
     },
     {
@@ -711,17 +981,28 @@
       "dependencies": [
         "WP34"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_RUN",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
       "code_configuration_identity": {
-        "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
-        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376"
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "7fd71d7549c6e45cb08527f7358aea68eab6e1c1866f6df82537d0c6d3b12c58",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/rem_statistics.json",
+        "reports/mist_cove/phase15_v1/explanation_comparison.json"
+      ],
+      "findings": [
+        "One thousand person-bootstrap draws; nights/cases remain nested within participant."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
       "block_reason": null
     },
     {
@@ -730,17 +1011,27 @@
       "dependencies": [
         "WP35"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_RUN",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "ENGINEERING_PASS",
       "code_configuration_identity": {
-        "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
-        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376"
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "7fd71d7549c6e45cb08527f7358aea68eab6e1c1866f6df82537d0c6d3b12c58",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/explanation_execution.json"
+      ],
+      "findings": [
+        "360 base and 360 neutral full tables; all 32,768 states verified; full-input error zero."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
       "block_reason": null
     },
     {
@@ -749,17 +1040,27 @@
       "dependencies": [
         "WP36"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_RUN",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
       "code_configuration_identity": {
-        "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
-        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376"
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "7fd71d7549c6e45cb08527f7358aea68eab6e1c1866f6df82537d0c6d3b12c58",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/explanation_comparison.json"
+      ],
+      "findings": [
+        "E1 neutral-state table changes in 190/219; same-model operator sensitivity remains high."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
       "block_reason": null
     },
     {
@@ -768,17 +1069,27 @@
       "dependencies": [
         "WP37"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_RUN",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
       "code_configuration_identity": {
-        "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
-        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376"
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "7fd71d7549c6e45cb08527f7358aea68eab6e1c1866f6df82537d0c6d3b12c58",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/operator_inheritance.json"
+      ],
+      "findings": [
+        "Inherited compatible physical bridge 500/3,285 and background 94/3,285; no donor-guard relaxation."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
       "block_reason": null
     },
     {
@@ -787,17 +1098,27 @@
       "dependencies": [
         "WP38"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_RUN",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
       "code_configuration_identity": {
-        "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
-        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376"
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "7fd71d7549c6e45cb08527f7358aea68eab6e1c1866f6df82537d0c6d3b12c58",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/stability_results.json"
+      ],
+      "findings": [
+        "Mild HF prediction stable 93/100, same primary clause valid 70/100, three substitutions."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
       "block_reason": null
     },
     {
@@ -806,17 +1127,27 @@
       "dependencies": [
         "WP39"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_RUN",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
       "code_configuration_identity": {
-        "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
-        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376"
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "7fd71d7549c6e45cb08527f7358aea68eab6e1c1866f6df82537d0c6d3b12c58",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/resource_receipts.json"
+      ],
+      "findings": [
+        "33,426,540 attempted-inclusive cached-head states; 0 fits and updates."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
       "block_reason": null
     },
     {
@@ -825,17 +1156,28 @@
       "dependencies": [
         "WP40"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_RUN",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
       "code_configuration_identity": {
-        "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
-        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376"
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "7fd71d7549c6e45cb08527f7358aea68eab6e1c1866f6df82537d0c6d3b12c58",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/explanation_comparison.json",
+        "tests/test_phase15_forensics.py"
+      ],
+      "findings": [
+        "Fixed shifted/next-epoch and random controls; generated malformed mask/clause/role/ordering tests."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
       "block_reason": null
     },
     {
@@ -844,17 +1186,27 @@
       "dependencies": [
         "WP41"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_RUN",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
       "code_configuration_identity": {
-        "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
-        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376"
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "7fd71d7549c6e45cb08527f7358aea68eab6e1c1866f6df82537d0c6d3b12c58",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "docs/mist_cove/PHASE_XV_RESEARCH_REPORT_V1.md"
+      ],
+      "findings": [
+        "Internal exactness does not identify clinical events or physical deletions."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
       "block_reason": null
     },
     {
@@ -863,17 +1215,27 @@
       "dependencies": [
         "WP42"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_RUN",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "NOVELTY_UNCERTAIN",
       "code_configuration_identity": {
-        "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
-        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376"
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "7fd71d7549c6e45cb08527f7358aea68eab6e1c1866f6df82537d0c6d3b12c58",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "docs/mist_cove/PHASE_XV_NOVELTY_AND_PUBLICATION_V1.md"
+      ],
+      "findings": [
+        "Prior SIS, Boolean, time-series, YASA and reliability work reviewed; world-first novelty not claimed."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
       "block_reason": null
     },
     {
@@ -882,17 +1244,27 @@
       "dependencies": [
         "WP43"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_RUN",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
       "code_configuration_identity": {
-        "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
-        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376"
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "7fd71d7549c6e45cb08527f7358aea68eab6e1c1866f6df82537d0c6d3b12c58",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/scientific_gates.json"
+      ],
+      "findings": [
+        "Evidence table separates exact correctness from failed sigma increment and untested clinical validity."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
       "block_reason": null
     },
     {
@@ -901,17 +1273,27 @@
       "dependencies": [
         "WP44"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_RUN",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "EXPLORATORY_REUSED_ST",
       "code_configuration_identity": {
-        "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
-        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376"
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "7fd71d7549c6e45cb08527f7358aea68eab6e1c1866f6df82537d0c6d3b12c58",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "docs/mist_cove/PHASE_XVI_PROSPECTIVE_STUDY_PROPOSAL_V1.md"
+      ],
+      "findings": [
+        "Narrow independent blinded annotation study proposed; Phase XVI not executed."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
       "block_reason": null
     },
     {
@@ -920,17 +1302,27 @@
       "dependencies": [
         "WP45"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_RUN",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "ENGINEERING_PASS",
       "code_configuration_identity": {
-        "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
-        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376"
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "7fd71d7549c6e45cb08527f7358aea68eab6e1c1866f6df82537d0c6d3b12c58",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/privacy_review.json"
+      ],
+      "findings": [
+        "New public assets scanned; ignored waveforms and atlas not tracked; old accepted root history unchanged."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
       "block_reason": null
     },
     {
@@ -939,17 +1331,27 @@
       "dependencies": [
         "WP46"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_RUN",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "ENGINEERING_PASS",
       "code_configuration_identity": {
-        "base_commit": "74ce0b0bac7e8fd9f53fb6d7adcf209ee9b4f5ce",
-        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376"
+        "config_sha256": "9850840f78b477fc73bdc91bd396331db63587353ff8c5cd1a63232603d8b376",
+        "phase15_code_bundle_sha256": "7fd71d7549c6e45cb08527f7358aea68eab6e1c1866f6df82537d0c6d3b12c58",
+        "model_checkpoint_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
-      "limitations": [],
+      "tests": [
+        "generated Phase XV negative/geometry/publication fixtures (13 pass)",
+        "complete CPU regression: 1152 pass, 11 CUDA skips"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase15_v1/resource_receipts.json"
+      ],
+      "findings": [
+        "Full CPU regression pass, 11 CUDA-only skips; no GPU science operation."
+      ],
+      "limitations": [
+        "Retrospective previously exposed ST; no expert event adjudication or causal identification"
+      ],
       "block_reason": null
     },
     {
@@ -958,7 +1360,7 @@
       "dependencies": [
         "WP47"
       ],
-      "status": "PENDING",
+      "status": "PENDING_PUBLICATION_AND_EXACT_CI",
       "engineering_status": "PENDING",
       "scientific_status": "NOT_RUN",
       "code_configuration_identity": {
@@ -968,7 +1370,9 @@
       "tests": [],
       "artifacts": [],
       "findings": [],
-      "limitations": [],
+      "limitations": [
+        "Draft PR and final-commit CI not yet verified"
+      ],
       "block_reason": null
     }
   ]

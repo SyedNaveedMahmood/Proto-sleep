@@ -1,0 +1,37 @@
+{
+  "status": "EXPLORATORY_REUSED_ST",
+  "E1_cases": 100,
+  "views": {
+    "mild_hf": {
+      "cases": 100,
+      "prediction_stable": 93,
+      "fixed_primary_clause_valid": 70,
+      "primary_clause_not_available": 0,
+      "any_original_active_clause_valid": 73,
+      "active_substitution": 3
+    },
+    "drift": {
+      "cases": 100,
+      "prediction_stable": 98,
+      "fixed_primary_clause_valid": 78,
+      "primary_clause_not_available": 0,
+      "any_original_active_clause_valid": 79,
+      "active_substitution": 1
+    },
+    "gain": {
+      "cases": 100,
+      "prediction_stable": 96,
+      "fixed_primary_clause_valid": 96,
+      "primary_clause_not_available": 0,
+      "any_original_active_clause_valid": 96,
+      "active_substitution": 0
+    }
+  },
+  "selection": "first 100 in already frozen outcome-independent E1 hash order",
+  "new_head_queries_attempted_including_successes": 9830700,
+  "total_phase15_head_queries_charged": 33425460,
+  "private_rows_sha256": "d81998c82d2dcdc3fa11a2a916689a8286823d100293ef6748593cf88fdfb6b8",
+  "model_state_unchanged": true,
+  "scientific_CPU_wall_seconds": 87.44150900600653,
+  "interpretation": "fixed original clause versus alternative original clause; model prediction tracked separately"
+}

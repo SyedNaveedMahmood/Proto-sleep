@@ -13,6 +13,10 @@ from .governance import PRIVATE, PUBLIC, OLD_PRIVATE, LABEL, read, new, sha, can
 CHANNELS=('EEG Fpz-Cz','EEG Pz-Oz','EOG horizontal','EMG submental')
 
 
+def _require_st_rate(rate):
+    if rate!=100:raise ValueError('ST native rate changed')
+
+
 def _wave_features(x, fs=100):
     x=np.asarray(x,dtype=np.float64)
     centered=x-x.mean(1,keepdims=True)
@@ -56,7 +60,7 @@ def run():
         with source.open(record,values=True) as (reader,_):
             for channel in CHANNELS:
                 values,identity=source.read(record,reader,channel,0,duration)
-                if identity['native_fs']!=100:raise ValueError('ST native rate changed')
+                _require_st_rate(identity['native_fs'])
                 if len(values)<n*3000:raise ValueError('ST channel physical grid truncated')
                 waves[channel]=np.asarray(values[:n*3000],dtype=np.float32).reshape(n,3000)
         indices=np.array([r['epoch'] for r in rr],dtype=int)
@@ -100,6 +104,7 @@ def run():
         'channels':list(CHANNELS),'native_Hz':100,'summary':summary,
         'source_access_counts':source.access.counts,'scientific_CPU_wall_seconds':elapsed,
         'private_wave_crop_sha256':sha((PRIVATE/'ST_panel_waves.npz').read_bytes()),
+        'private_wave_coordinate_sha256':sha(canonical({'coordinates':crop_coords,'panel_sha256':sha(canonical(panel))})),
         'human_event_validation':'NOT_TESTED','interpretation':'exploratory associations, no label adjudication'})
     source.access.close()
     print(json.dumps({'ST_records':44,'REM_epochs':len(private_features),'panel_crops':len(crop_coords),

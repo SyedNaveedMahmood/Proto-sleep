@@ -20,7 +20,10 @@ def run():
         raise ValueError('panel changed')
     chosen=panel['E1'][:100]  # Frozen E1 hash order, no outcome or proxy reselection.
     cases=[(c['recording'],c['epoch']) for c in chosen]
-    crops=read(PRIVATE/'ST_panel_wave_coordinates.json')['coordinates']
+    crop_receipt=read(PRIVATE/'ST_panel_wave_coordinates.json')
+    if sha(canonical(crop_receipt))!=read(PUBLIC/'rem_wave_diagnostics.json')['private_wave_coordinate_sha256']:
+        raise ValueError('ordered wave-crop coordinates changed')
+    crops=crop_receipt['coordinates']
     index={(r,int(e)):j for j,(r,e) in enumerate(crops)}
     with np.load(PRIVATE/'ST_panel_waves.npz',allow_pickle=False) as z:waves=z['EEG Fpz-Cz'].copy()
     original={}

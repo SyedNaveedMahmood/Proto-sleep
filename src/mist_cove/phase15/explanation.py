@@ -54,6 +54,8 @@ def run():
     coords=read(PRIVATE/'ST_panel_wave_coordinates.json')
     if coords['panel_sha256']!=seal['private_panel_canonical_sha256']:
         raise ValueError('wave crop panel identity changed')
+    if sha(canonical(coords))!=read(PUBLIC/'rem_wave_diagnostics.json')['private_wave_coordinate_sha256']:
+        raise ValueError('ordered wave-crop coordinates changed')
     if sha((PRIVATE/'ST_panel_waves.npz').read_bytes())!=read(PUBLIC/'rem_wave_diagnostics.json')['private_wave_crop_sha256']:
         raise ValueError('wave crop bytes changed')
     with np.load(PRIVATE/'ST_panel_waves.npz',allow_pickle=False) as z:

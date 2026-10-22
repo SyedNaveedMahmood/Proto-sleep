@@ -1,0 +1,307 @@
+{
+  "status": "EXPLORATORY_REUSED_ST",
+  "fixed_phase14_event_flags": [
+    "EEG Fpz-Cz|flat",
+    "EEG Fpz-Cz|step",
+    "EEG Fpz-Cz|extreme",
+    "EEG Fpz-Cz|clip",
+    "EEG Pz-Oz|flat",
+    "EEG Pz-Oz|step",
+    "EEG Pz-Oz|extreme",
+    "EEG Pz-Oz|clip"
+  ],
+  "ST_records": 44,
+  "scored_REM_epochs": 8349,
+  "by_REM_outcome": {
+    "REM_to_W": {
+      "n": 2322,
+      "by_channel_flag": {
+        "EEG Fpz-Cz|flat": {
+          "n": 0,
+          "fraction": 0.0
+        },
+        "EEG Fpz-Cz|step": {
+          "n": 71,
+          "fraction": 0.0305770887166236
+        },
+        "EEG Fpz-Cz|extreme": {
+          "n": 22,
+          "fraction": 0.009474590869939707
+        },
+        "EEG Fpz-Cz|clip": {
+          "n": 0,
+          "fraction": 0.0
+        },
+        "EEG Pz-Oz|flat": {
+          "n": 0,
+          "fraction": 0.0
+        },
+        "EEG Pz-Oz|step": {
+          "n": 50,
+          "fraction": 0.02153316106804479
+        },
+        "EEG Pz-Oz|extreme": {
+          "n": 63,
+          "fraction": 0.027131782945736434
+        },
+        "EEG Pz-Oz|clip": {
+          "n": 14,
+          "fraction": 0.006029285099052541
+        }
+      }
+    },
+    "REM_to_N1": {
+      "n": 1570,
+      "by_channel_flag": {
+        "EEG Fpz-Cz|flat": {
+          "n": 0,
+          "fraction": 0.0
+        },
+        "EEG Fpz-Cz|step": {
+          "n": 47,
+          "fraction": 0.029936305732484077
+        },
+        "EEG Fpz-Cz|extreme": {
+          "n": 3,
+          "fraction": 0.001910828025477707
+        },
+        "EEG Fpz-Cz|clip": {
+          "n": 0,
+          "fraction": 0.0
+        },
+        "EEG Pz-Oz|flat": {
+          "n": 0,
+          "fraction": 0.0
+        },
+        "EEG Pz-Oz|step": {
+          "n": 26,
+          "fraction": 0.016560509554140127
+        },
+        "EEG Pz-Oz|extreme": {
+          "n": 21,
+          "fraction": 0.01337579617834395
+        },
+        "EEG Pz-Oz|clip": {
+          "n": 1,
+          "fraction": 0.0006369426751592356
+        }
+      }
+    },
+    "correct_REM": {
+      "n": 1805,
+      "by_channel_flag": {
+        "EEG Fpz-Cz|flat": {
+          "n": 0,
+          "fraction": 0.0
+        },
+        "EEG Fpz-Cz|step": {
+          "n": 27,
+          "fraction": 0.014958448753462604
+        },
+        "EEG Fpz-Cz|extreme": {
+          "n": 0,
+          "fraction": 0.0
+        },
+        "EEG Fpz-Cz|clip": {
+          "n": 0,
+          "fraction": 0.0
+        },
+        "EEG Pz-Oz|flat": {
+          "n": 0,
+          "fraction": 0.0
+        },
+        "EEG Pz-Oz|step": {
+          "n": 14,
+          "fraction": 0.00775623268698061
+        },
+        "EEG Pz-Oz|extreme": {
+          "n": 10,
+          "fraction": 0.00554016620498615
+        },
+        "EEG Pz-Oz|clip": {
+          "n": 2,
+          "fraction": 0.00110803324099723
+        }
+      }
+    },
+    "REM_to_N2": {
+      "n": 2648,
+      "by_channel_flag": {
+        "EEG Fpz-Cz|flat": {
+          "n": 0,
+          "fraction": 0.0
+        },
+        "EEG Fpz-Cz|step": {
+          "n": 25,
+          "fraction": 0.00944108761329305
+        },
+        "EEG Fpz-Cz|extreme": {
+          "n": 9,
+          "fraction": 0.0033987915407854984
+        },
+        "EEG Fpz-Cz|clip": {
+          "n": 0,
+          "fraction": 0.0
+        },
+        "EEG Pz-Oz|flat": {
+          "n": 0,
+          "fraction": 0.0
+        },
+        "EEG Pz-Oz|step": {
+          "n": 6,
+          "fraction": 0.0022658610271903325
+        },
+        "EEG Pz-Oz|extreme": {
+          "n": 8,
+          "fraction": 0.0030211480362537764
+        },
+        "EEG Pz-Oz|clip": {
+          "n": 0,
+          "fraction": 0.0
+        }
+      }
+    },
+    "REM_to_N3": {
+      "n": 4,
+      "by_channel_flag": {
+        "EEG Fpz-Cz|flat": {
+          "n": 0,
+          "fraction": 0.0
+        },
+        "EEG Fpz-Cz|step": {
+          "n": 0,
+          "fraction": 0.0
+        },
+        "EEG Fpz-Cz|extreme": {
+          "n": 0,
+          "fraction": 0.0
+        },
+        "EEG Fpz-Cz|clip": {
+          "n": 0,
+          "fraction": 0.0
+        },
+        "EEG Pz-Oz|flat": {
+          "n": 0,
+          "fraction": 0.0
+        },
+        "EEG Pz-Oz|step": {
+          "n": 0,
+          "fraction": 0.0
+        },
+        "EEG Pz-Oz|extreme": {
+          "n": 0,
+          "fraction": 0.0
+        },
+        "EEG Pz-Oz|clip": {
+          "n": 0,
+          "fraction": 0.0
+        }
+      }
+    }
+  },
+  "within_person_contrasts": {
+    "REM_to_W": {
+      "EEG Fpz-Cz|flat": {
+        "people": 22,
+        "person_mean_error_minus_correct_REM": 0.0
+      },
+      "EEG Fpz-Cz|step": {
+        "people": 22,
+        "person_mean_error_minus_correct_REM": 0.012001419167686772
+      },
+      "EEG Fpz-Cz|extreme": {
+        "people": 22,
+        "person_mean_error_minus_correct_REM": 0.014639383919523125
+      },
+      "EEG Fpz-Cz|clip": {
+        "people": 22,
+        "person_mean_error_minus_correct_REM": 0.0
+      },
+      "EEG Pz-Oz|flat": {
+        "people": 22,
+        "person_mean_error_minus_correct_REM": 0.0
+      },
+      "EEG Pz-Oz|step": {
+        "people": 22,
+        "person_mean_error_minus_correct_REM": 0.0113874550744137
+      },
+      "EEG Pz-Oz|extreme": {
+        "people": 22,
+        "person_mean_error_minus_correct_REM": 0.021767706209238544
+      },
+      "EEG Pz-Oz|clip": {
+        "people": 22,
+        "person_mean_error_minus_correct_REM": 0.00212249006417556
+      }
+    },
+    "REM_to_N1": {
+      "EEG Fpz-Cz|flat": {
+        "people": 22,
+        "person_mean_error_minus_correct_REM": 0.0
+      },
+      "EEG Fpz-Cz|step": {
+        "people": 22,
+        "person_mean_error_minus_correct_REM": 0.012720450143279301
+      },
+      "EEG Fpz-Cz|extreme": {
+        "people": 22,
+        "person_mean_error_minus_correct_REM": 0.001978114478114478
+      },
+      "EEG Fpz-Cz|clip": {
+        "people": 22,
+        "person_mean_error_minus_correct_REM": 0.0
+      },
+      "EEG Pz-Oz|flat": {
+        "people": 22,
+        "person_mean_error_minus_correct_REM": 0.0
+      },
+      "EEG Pz-Oz|step": {
+        "people": 22,
+        "person_mean_error_minus_correct_REM": 0.012364625261392863
+      },
+      "EEG Pz-Oz|extreme": {
+        "people": 22,
+        "person_mean_error_minus_correct_REM": 0.013254438638698489
+      },
+      "EEG Pz-Oz|clip": {
+        "people": 22,
+        "person_mean_error_minus_correct_REM": 0.00017600244872972154
+      }
+    },
+    "REM_to_N2": {
+      "EEG Fpz-Cz|flat": {
+        "people": 22,
+        "person_mean_error_minus_correct_REM": 0.0
+      },
+      "EEG Fpz-Cz|step": {
+        "people": 22,
+        "person_mean_error_minus_correct_REM": -0.004090164230524032
+      },
+      "EEG Fpz-Cz|extreme": {
+        "people": 22,
+        "person_mean_error_minus_correct_REM": 0.002693195197947655
+      },
+      "EEG Fpz-Cz|clip": {
+        "people": 22,
+        "person_mean_error_minus_correct_REM": 0.0
+      },
+      "EEG Pz-Oz|flat": {
+        "people": 22,
+        "person_mean_error_minus_correct_REM": 0.0
+      },
+      "EEG Pz-Oz|step": {
+        "people": 22,
+        "person_mean_error_minus_correct_REM": -0.003349230745154851
+      },
+      "EEG Pz-Oz|extreme": {
+        "people": 22,
+        "person_mean_error_minus_correct_REM": -0.0018543901753895929
+      },
+      "EEG Pz-Oz|clip": {
+        "people": 22,
+        "person_mean_error_minus_correct_REM": -0.0008340985613712886
+      }
+    }
+  },
+  "interpretation": "automated quality flags only; high signal energy is not automatically artifact"
+}

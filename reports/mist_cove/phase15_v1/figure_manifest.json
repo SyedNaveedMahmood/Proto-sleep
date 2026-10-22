@@ -1,0 +1,16 @@
+{
+  "status": "EXPLORATORY_REUSED_ST",
+  "figures": [
+    "reports/mist_cove/phase15_v1/figures/01_REM_confusion_and_transfer.png",
+    "reports/mist_cove/phase15_v1/figures/02_REM_multichannel_and_transitions.png",
+    "reports/mist_cove/phase15_v1/figures/03_calibration_and_warning_indicators.png",
+    "reports/mist_cove/phase15_v1/figures/04_explanation_sigma_challenge.png",
+    "reports/mist_cove/phase15_v1/figures/05_circuits_stability_and_operators.png",
+    "reports/mist_cove/phase15_v1/figures/06_scientific_decision_and_cost.png",
+    "reports/mist_cove/phase15_v1/figures/07_participants_quality_support_and_disagreement.png"
+  ],
+  "source": "public aggregate results only",
+  "raw_EEG_in_figures": false,
+  "principal_figures": 7,
+  "human_event_validation": "NOT_TESTED"
+}

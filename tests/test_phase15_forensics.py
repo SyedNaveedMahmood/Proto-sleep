@@ -2,11 +2,16 @@
 import numpy as np
 import pytest
 
-from mist_cove.phase15.forensics import _distances, _prob, _round_robin, _stratum
-from mist_cove.phase15.wave_diagnostics import _wave_features
+from mist_cove.phase15.forensics import _distances, _prob, _round_robin, _stratum, _event_present
+from mist_cove.phase15.wave_diagnostics import _wave_features, _require_st_rate
 from mist_cove.phase15.explanation import _align
 from mist_cove.phase15.comparison import _ci_person, _eligible
 from mist_cove.phase14.event_alignment import matched_candidates
+from mist_cove.phase14.edf_reader import MultiReader
+from mist_cove.phase9.operators import atom_to_candidate_mask
+from mist_cove.phase9.clauses import verify_clause
+from mist_cove.phase15.governance import canonical, sha
+import torch
 
 
 def test_physical_positions_are_not_compressed():
@@ -67,3 +72,26 @@ def test_no_event_is_explicitly_ineligible():
     row={'summary':{'positive_minimum_mask':3},'proxy_alignment':
          {'EEG Pz-Oz|spindle':{'event_count':0}}}
     assert _eligible(row)==(False,'NO_PZ_SPINDLE_CANDIDATE')
+
+
+def test_stage_blind_event_epoch_geometry():
+    e={'Pz':[{'start':29.9,'end':30.1}]}
+    assert _event_present(e,0,'Pz') and _event_present(e,1,'Pz')
+    assert not _event_present(e,2,'Pz')
+
+
+def test_unauthorized_role_rejected_before_source_io():
+    reader=MultiReader.__new__(MultiReader)
+    reader.manifest={'records':[]}
+    with pytest.raises(ValueError):_require_st_rate(1)
+    with pytest.raises(Exception):reader.records('SC_VAL')
+    with pytest.raises(Exception):reader.records('SC_RESERVED')
+
+
+def test_invalid_clause_mask_and_coordinate_reordering_fail():
+    with pytest.raises(ValueError):atom_to_candidate_mask(torch.ones(1,14,dtype=torch.bool))
+    truth=np.zeros(1<<15,dtype=bool);truth[-1]=True
+    assert not verify_clause(truth,0,0)
+    a={'coordinates':[['r',1],['r',2]],'panel_sha256':'x'}
+    b={'coordinates':[['r',2],['r',1]],'panel_sha256':'x'}
+    assert sha(canonical(a))!=sha(canonical(b))

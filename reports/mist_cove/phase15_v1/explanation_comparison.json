@@ -16,6 +16,25 @@
       "positive_minimum_exists": 219,
       "prior_response": 19,
       "whole_epoch_positive": 66,
+      "positive_support_atom_histogram": {
+        "0": 0,
+        "1": 32,
+        "2": 37,
+        "3": 29,
+        "4": 11,
+        "5": 6,
+        "6": 9,
+        "7": 6,
+        "8": 3,
+        "9": 2,
+        "10": 5,
+        "11": 2,
+        "12": 2,
+        "13": 4,
+        "14": 5,
+        "15": 66
+      },
+      "missing_positive_support": 0,
       "nonmonotone_cases": 187,
       "neutral_changed_tables": 190,
       "neutral_changed_positive_minimum": 54,
@@ -237,6 +256,25 @@
       "positive_minimum_exists": 63,
       "prior_response": 0,
       "whole_epoch_positive": 8,
+      "positive_support_atom_histogram": {
+        "0": 0,
+        "1": 24,
+        "2": 13,
+        "3": 8,
+        "4": 1,
+        "5": 1,
+        "6": 3,
+        "7": 0,
+        "8": 0,
+        "9": 0,
+        "10": 0,
+        "11": 1,
+        "12": 1,
+        "13": 2,
+        "14": 1,
+        "15": 8
+      },
+      "missing_positive_support": 0,
       "nonmonotone_cases": 59,
       "neutral_changed_tables": 60,
       "neutral_changed_positive_minimum": 16,
@@ -459,6 +497,25 @@
       "positive_minimum_exists": 240,
       "prior_response": 43,
       "whole_epoch_positive": 67,
+      "positive_support_atom_histogram": {
+        "0": 0,
+        "1": 28,
+        "2": 31,
+        "3": 35,
+        "4": 12,
+        "5": 11,
+        "6": 7,
+        "7": 11,
+        "8": 3,
+        "9": 2,
+        "10": 8,
+        "11": 3,
+        "12": 5,
+        "13": 4,
+        "14": 13,
+        "15": 67
+      },
+      "missing_positive_support": 0,
       "nonmonotone_cases": 233,
       "neutral_changed_tables": 233,
       "neutral_changed_positive_minimum": 55,
@@ -672,6 +729,69 @@
     "proxy_shift_10_seconds_mean_precision": 0.058595487845487855,
     "next_Pz_epoch_within_recording_mean_precision": 0.08596556473829202,
     "not_proxy_ground_truth": true
+  },
+  "alternative_proxies_E1": {
+    "EEG Pz-Oz|slow_wave": {
+      "candidate_cases": 16,
+      "exact_mean_precision": 0.054639787296037294,
+      "sigma_matched_mean_precision": 0.05693855623543123,
+      "event_accuracy": "NOT_TESTED"
+    },
+    "EEG Fpz-Cz|spindle": {
+      "candidate_cases": 46,
+      "exact_mean_precision": 0.23658747412008282,
+      "sigma_matched_mean_precision": 0.3323273809523809,
+      "event_accuracy": "NOT_TESTED"
+    },
+    "EOG horizontal|excursion": {
+      "candidate_cases": 79,
+      "exact_mean_precision": 0.19780350345856676,
+      "sigma_matched_mean_precision": 0.1599902386642893,
+      "event_accuracy": "NOT_TESTED"
+    },
+    "EMG submental|low": {
+      "candidate_cases": 141,
+      "exact_mean_precision": 0.8496752656327125,
+      "sigma_matched_mean_precision": 0.844553555191853,
+      "event_accuracy": "NOT_TESTED"
+    }
+  },
+  "alternative_proxies_E3": {
+    "EEG Pz-Oz|slow_wave": {
+      "candidate_cases": 12,
+      "exact_mean_precision": 0.08320917508417508,
+      "sigma_matched_mean_precision": 0.048380681818181816,
+      "event_accuracy": "NOT_TESTED"
+    },
+    "EEG Fpz-Cz|spindle": {
+      "candidate_cases": 45,
+      "exact_mean_precision": 0.23353465608465607,
+      "sigma_matched_mean_precision": 0.3352169312169312,
+      "event_accuracy": "NOT_TESTED"
+    },
+    "EOG horizontal|excursion": {
+      "candidate_cases": 89,
+      "exact_mean_precision": 0.15811554363239755,
+      "sigma_matched_mean_precision": 0.09007439470641719,
+      "event_accuracy": "NOT_TESTED"
+    },
+    "EMG submental|low": {
+      "candidate_cases": 172,
+      "exact_mean_precision": 0.9783760328818469,
+      "sigma_matched_mean_precision": 0.9709424780645711,
+      "event_accuracy": "NOT_TESTED"
+    }
+  },
+  "exact_sigma_disagreement_E2": {
+    "eligible_cases": 55,
+    "exact_higher": 9,
+    "sigma_higher": 24,
+    "tie": 22,
+    "correct_cases": 37,
+    "wrong_cases": 18,
+    "correct_exact_minus_sigma_mean": -0.052443693693693685,
+    "wrong_exact_minus_sigma_mean": -0.03449041699041698,
+    "interpretation": "wrong classifier predictions remain fully explainable; this measures automated-proxy agreement only"
   },
   "method_access": {
     "exact_positive": "model cached head/full 32768 masks, own predicted class; no human labels or proxy locations",

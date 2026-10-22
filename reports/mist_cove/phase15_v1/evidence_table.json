@@ -1,0 +1,96 @@
+{
+  "status": "EXPLORATORY_REUSED_ST",
+  "questions": [
+    {
+      "question": "exact classifier response",
+      "original_hypothesis": "declared availability operator supports sound finite certificates",
+      "data": "360 sealed ST cases, reused exposure",
+      "denominator": 360,
+      "method": "720 exhaustive 32768-state tables and clause verification",
+      "uncertainty_unit": "case for coverage, deterministic verification for correctness",
+      "finding": "full-input discrepancy zero; all tables and clauses checked",
+      "negative_control": "generated incorrect mask/clause and cache identity tests",
+      "confounding": "operator and neutral state define the estimand",
+      "interpretation": "internal model behavior only",
+      "scientific_status": "ENGINEERING_PASS"
+    },
+    {
+      "question": "source-to-ST REM recognition",
+      "original_hypothesis": "frozen source model transfers across study",
+      "data": "44 previously exposed ST nights",
+      "denominator": 8349,
+      "method": "unchanged cached original logits and scored grid",
+      "uncertainty_unit": "participant, 22 people",
+      "finding": "REM recall 0.2162; 6544 REM errors; ECE15 0.1339",
+      "negative_control": "exact Phase XIV confusion reproduction",
+      "confounding": "study, channels, medication and scorer differences",
+      "interpretation": "single-model transfer failure, not physiological cause",
+      "scientific_status": "SCIENTIFIC_FAIL"
+    },
+    {
+      "question": "REM-error signal taxonomy",
+      "original_hypothesis": "error groups have distinct signal profiles",
+      "data": "8349 previously exposed scored ST REM epochs",
+      "denominator": 8349,
+      "method": "stage-conditioned calibrated wave and person-bootstrap contrasts",
+      "uncertainty_unit": "participant, 22 people",
+      "finding": "REM-to-N2 higher sigma/transition proximity and fewer EOG proxies; REM-to-W more EOG proxies",
+      "negative_control": "correct REM within-person reference; fixed quality flags",
+      "confounding": "observational, correlated features and unvalidated proxies",
+      "interpretation": "exploratory association only",
+      "scientific_status": "INCONCLUSIVE"
+    },
+    {
+      "question": "incremental spindle-proxy precision over sigma",
+      "original_hypothesis": "exact support exceeds matched sigma ranking",
+      "data": "E2 previously exposed ST; E1 detector-conditioned subset",
+      "denominator": 55,
+      "method": "equal-duration atoms, person-bootstrap 1000",
+      "uncertainty_unit": "participant, 20 people",
+      "finding": "exact minus sigma -0.0462, 95% [-0.0797,-0.0167]",
+      "negative_control": "random, shifted10s and next-epoch events",
+      "confounding": "automated unvalidated event proxy and retrospective ST exposure",
+      "interpretation": "prior registered sigma increment FAIL unchanged; new result exploratory",
+      "scientific_status": "SCIENTIFIC_FAIL"
+    },
+    {
+      "question": "clause versus prediction stability",
+      "original_hypothesis": "stable class need not imply stable original reason",
+      "data": "first100 already sealed E1 cases",
+      "denominator": 100,
+      "method": "three fixed nuisance views and full response tables",
+      "uncertainty_unit": "case within participant",
+      "finding": "mild HF 93 stable predictions versus 70 same clauses, three substitutions",
+      "negative_control": "separate alternative-active and prediction indicators",
+      "confounding": "synthetic nuisance views, no physiological claim",
+      "interpretation": "internal explanation instability",
+      "scientific_status": "INCONCLUSIVE"
+    },
+    {
+      "question": "physical intervention validity",
+      "original_hypothesis": "internal withholding predicts compatible waveform replacement",
+      "data": "inherited Phase XIV 219 ST cases",
+      "denominator": 3285,
+      "method": "frozen bridge/background compatibility guards",
+      "uncertainty_unit": "case/person nested, descriptive",
+      "finding": "500 bridge and 94 background compatible requests; disagreements remain",
+      "negative_control": "nontarget exact preservation and historical donor eligibility",
+      "confounding": "operators alter different estimands",
+      "interpretation": "clinical event deletion NOT TESTED",
+      "scientific_status": "INCONCLUSIVE"
+    },
+    {
+      "question": "expert-validated event localization",
+      "original_hypothesis": "certificate maps to clinical event",
+      "data": "no approved reviewers or independent annotations",
+      "denominator": 0,
+      "method": "not run",
+      "uncertainty_unit": "not applicable",
+      "finding": "no evidence",
+      "negative_control": "not applicable",
+      "confounding": "automated proxy imperfect",
+      "interpretation": "no clinical claim",
+      "scientific_status": "NOT_TESTED"
+    }
+  ]
+}

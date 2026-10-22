@@ -1,0 +1,15 @@
+{
+  "status": "EXPLORATORY_REUSED_ST",
+  "exact_operator_correctness": "ENGINEERING_PASS",
+  "ST_REM_transfer": "SCIENTIFIC_FAIL",
+  "Phase_XIV_ST_exact_minus_random": "SCIENTIFIC_PASS_INHERITED",
+  "Phase_XIV_ST_exact_minus_sigma": "SCIENTIFIC_FAIL_UNCHANGED",
+  "Phase_XV_exact_minus_sigma": "SCIENTIFIC_FAIL_EXPLORATORY",
+  "SC_TRAIN_proxy_primary": "NOT_ESTIMABLE_UNCHANGED",
+  "Phase_XIV_SC_context": "SCIENTIFIC_FAIL_UNCHANGED",
+  "human_event_validity": "NOT_TESTED",
+  "clinical_deletion_validity": "NOT_TESTED",
+  "new_independent_ST_confirmation": "NOT_TESTED",
+  "novelty_world_first": "NOT_CLAIMED",
+  "Phase_XVI_execution": "NOT_AUTHORIZED"
+}

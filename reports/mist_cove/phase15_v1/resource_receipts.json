@@ -1,9 +1,9 @@
 {
-  "status": "PRE_ANALYSIS_GOVERNANCE_ONLY",
+  "status": "EXPLORATORY_REUSED_ST",
   "new_neural_fits": 0,
   "new_optimizer_updates": 0,
-  "new_cached_head_queries_attempted_plus_successful": 0,
-  "scientific_CPU_wall_seconds_recorded": 0,
+  "new_cached_head_queries_attempted_plus_successful": 33426540,
+  "scientific_CPU_wall_seconds_recorded": 340.35867075900023,
   "model_reauthentication_wall_seconds": 0.01673215600021649,
   "limits": {
     "fits": 0,
@@ -11,5 +11,20 @@
     "scientific_CPU_wall_seconds": 18000,
     "cached_head_queries": 38000000
   },
-  "prior_Phase_XIV_queries_are_not_charged_to_new_Phase_XV_budget": true
+  "prior_Phase_XIV_queries_are_not_charged_to_new_Phase_XV_budget": true,
+  "scientific_CPU_stage_seconds": {
+    "ST_wave_diagnostics": 21.652062481996836,
+    "exact_base_and_neutral": 229.90208929000073,
+    "fixed_clause_nuisance": 87.44150900600653,
+    "branch_and_atlas": 1.3630099809961393
+  },
+  "native_full_example_forwards": 660,
+  "feature_cache_example_computations": 1020,
+  "exact_32768_mask_tables": 1020,
+  "new_ST_model_adaptation_updates": 0,
+  "GPU_scientific_operations": 0,
+  "failed_head_query_attempts": 0,
+  "accounting": "successful states included in attempted count; interrupted full cases charged in advance; Phase XIV historical queries excluded",
+  "scientific_CPU_wall_seconds_recorded_scope": "sum of four instrumented scientific stages; remaining aggregation and CPU regression run separately, so this is a lower-bound subtotal, not complete turn wall time",
+  "full_CPU_regression": "1152 passed, 11 CUDA-only skipped, 0 failures; 13 new generated/public-only Phase XV tests passed"
 }

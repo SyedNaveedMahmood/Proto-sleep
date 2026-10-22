@@ -61,6 +61,9 @@ def _panel(rows,coords,name):
                 'positive_minimum_exists':sum(r['summary']['positive_minimum_mask'] is not None for r in rr),
                 'prior_response':sum(r['summary']['prior_response'] for r in rr),
                 'whole_epoch_positive':sum(r['summary']['positive_minimum_mask']==32767 for r in rr),
+                'positive_support_atom_histogram':{str(k):sum(r['summary']['positive_minimum_mask'] is not None and
+                    r['summary']['positive_minimum_mask'].bit_count()==k for r in rr) for k in range(16)},
+                'missing_positive_support':sum(r['summary']['positive_minimum_mask'] is None for r in rr),
                 'nonmonotone_cases':sum(r['summary']['nonmonotone_edges']['response_lost_when_adding_atom']>0 for r in rr),
                 'neutral_changed_tables':sum(r['neutral']['table_disagreement_fraction']>0 for r in rr),
                 'neutral_changed_positive_minimum':sum(r['neutral']['positive_minimum_mask_changed'] for r in rr),
@@ -110,6 +113,37 @@ def _negative_controls(rows,coords):
             'not_proxy_ground_truth':True}
 
 
+def _alternative_proxies(rows,coords):
+    result={}
+    for key in ('EEG Pz-Oz|slow_wave','EEG Fpz-Cz|spindle','EOG horizontal|excursion','EMG submental|low'):
+        eligible=[]
+        for c in coords:
+            r=rows[_case_key(c)];positive=r['summary']['positive_minimum_mask']
+            if positive is None or positive in (0,32767) or r['proxy_alignment'] is None:continue
+            if r['proxy_alignment'][key]['event_count']>0:eligible.append(r)
+        result[key]={'candidate_cases':len(eligible),
+            'exact_mean_precision':_mean([r['proxy_alignment'][key]['methods']['exact_positive']['0']['precision'] for r in eligible]),
+            'sigma_matched_mean_precision':_mean([r['proxy_alignment'][key]['methods']['sigma_matched']['0']['precision'] for r in eligible]),
+            'event_accuracy':'NOT_TESTED'}
+    return result
+
+
+def _disagreement(rows,coords):
+    values=[]
+    for c in coords:
+        r=rows[_case_key(c)]
+        if not _eligible(r)[0]:continue
+        delta=_case_overlap(r,'exact_positive')-_case_overlap(r,'sigma_matched')
+        values.append((c['truth']==c['pred'],delta))
+    return {'eligible_cases':len(values),'exact_higher':sum(d>1e-12 for _,d in values),
+        'sigma_higher':sum(d< -1e-12 for _,d in values),
+        'tie':sum(abs(d)<=1e-12 for _,d in values),
+        'correct_cases':sum(ok for ok,_ in values),'wrong_cases':sum(not ok for ok,_ in values),
+        'correct_exact_minus_sigma_mean':_mean([d for ok,d in values if ok]),
+        'wrong_exact_minus_sigma_mean':_mean([d for ok,d in values if not ok]),
+        'interpretation':'wrong classifier predictions remain fully explainable; this measures automated-proxy agreement only'}
+
+
 def _inherited_operator():
     previous=read(OLD_PUBLIC/'st_explanation_results.json')
     primary=previous['strata']['primary']
@@ -134,6 +168,9 @@ def run():
         raise ValueError('panel changed')
     results={name:_panel(lookup,panel[name],name) for name in ('E1','E2','E3')}
     result={'status':LABEL,'panels':results,'negative_controls_E2':_negative_controls(lookup,panel['E2']),
+            'alternative_proxies_E1':_alternative_proxies(lookup,panel['E1']),
+            'alternative_proxies_E3':_alternative_proxies(lookup,panel['E3']),
+            'exact_sigma_disagreement_E2':_disagreement(lookup,panel['E2']),
             'method_access':{
                 'exact_positive':'model cached head/full 32768 masks, own predicted class; no human labels or proxy locations',
                 'signed_certificate':'same exact table; positive and negative literals; only active positive literals are waveform support',

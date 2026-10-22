@@ -1,14 +1,30 @@
 {
-  "status": "PRE_ANALYSIS_GOVERNANCE_ONLY",
+  "status": "EXPLORATORY_REUSED_ST",
   "new_raw_SC_TRAIN_reads": 0,
   "new_raw_SC_VAL_reads": 0,
   "new_SC_RESERVED_reads": 0,
-  "new_ST_PSG_waveform_reads": 0,
+  "new_ST_PSG_waveform_reads": 44,
   "new_ST_annotation_reads": 0,
-  "new_ST_prediction_queries": 0,
+  "new_ST_prediction_queries": 660,
   "private_Phase_XIV_cache_manifest_reads": 1,
   "private_Phase_XIV_geometry_reads": 1,
   "historical_checkpoint_restricted_authentication": 1,
   "forbidden_source_opens": 0,
-  "counts_are_phase15_incremental": true
+  "counts_are_phase15_incremental": true,
+  "ST_approved_channels": [
+    "EEG Fpz-Cz",
+    "EEG Pz-Oz",
+    "EOG horizontal",
+    "EMG submental"
+  ],
+  "source_access_counts": {
+    "metadata_reads": 0,
+    "source_hash_reads": 44,
+    "header_reads": 0,
+    "waveform_reads": 44,
+    "hypnogram_reads": 0,
+    "bytes_hashed": 1118391784,
+    "forbidden_opened": 0
+  },
+  "private_panel_crop_count": 360
 }
