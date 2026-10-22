@@ -20,5 +20,20 @@
     "hypnogram_reads": 73,
     "bytes_hashed": 0,
     "forbidden_opened": 0
+  },
+  "generated_detector_and_resource_pilot": {
+    "status": "FAILED",
+    "wall_seconds": 4.187070743995719
+  },
+  "generated_detector_pilot_flat_missingness_fix": {
+    "status": "COMPLETE",
+    "wall_seconds": 4.402275286003714,
+    "generated_only": true,
+    "pilot_seconds": 3.936728626009426,
+    "projected_detector_seconds": 8230.671633400028
+  },
+  "trained_original_adapter_revalidation": {
+    "status": "COMPLETE",
+    "wall_seconds": 1.6556181179912528
   }
 }

@@ -51,7 +51,9 @@ class RootAccess:
                 if not block:raise IntegrityError('truncated source')
                 blocks.append(block);offset+=len(block)
             data=b''.join(blocks)
-        if expected and hashlib.sha256(data).hexdigest()!=expected:raise IntegrityError('authenticated source bytes differ')
+        if expected:
+            self.counts['bytes_hashed']+=len(data)
+            if hashlib.sha256(data).hexdigest()!=expected:raise IntegrityError('authenticated source bytes differ')
         self.counts['metadata_reads' if kind=='metadata' else 'source_hash_reads']+=1
         return data
     def hash(self,relative,expected):

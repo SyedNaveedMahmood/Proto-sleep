@@ -187,15 +187,19 @@
       "dependencies": [
         "WP08"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
       "scientific_status": "NOT_TESTED",
       "code_configuration_identity": {
         "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
       },
       "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/detector_manifest.json"
+      ],
+      "findings": [
+        "Secure calibrated multichannel loader and stage-blind YASA/spectral/EOG/EMG/artifact proxies implemented; generated positive/flat and filter controls executed"
+      ],
       "limitations": [],
       "block_reason": null
     },
@@ -205,15 +209,19 @@
       "dependencies": [
         "WP09"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
       "scientific_status": "NOT_TESTED",
       "code_configuration_identity": {
         "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
       },
       "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/detector_manifest.json"
+      ],
+      "findings": [
+        "Secure calibrated multichannel loader and stage-blind YASA/spectral/EOG/EMG/artifact proxies implemented; generated positive/flat and filter controls executed"
+      ],
       "limitations": [],
       "block_reason": null
     },
@@ -223,15 +231,19 @@
       "dependencies": [
         "WP10"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
       "scientific_status": "NOT_TESTED",
       "code_configuration_identity": {
         "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
       },
       "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/detector_manifest.json"
+      ],
+      "findings": [
+        "Secure calibrated multichannel loader and stage-blind YASA/spectral/EOG/EMG/artifact proxies implemented; generated positive/flat and filter controls executed"
+      ],
       "limitations": [],
       "block_reason": null
     },
@@ -241,15 +253,19 @@
       "dependencies": [
         "WP11"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
       "scientific_status": "NOT_TESTED",
       "code_configuration_identity": {
         "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
       },
       "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/detector_manifest.json"
+      ],
+      "findings": [
+        "Secure calibrated multichannel loader and stage-blind YASA/spectral/EOG/EMG/artifact proxies implemented; generated positive/flat and filter controls executed"
+      ],
       "limitations": [],
       "block_reason": null
     },
@@ -259,15 +275,19 @@
       "dependencies": [
         "WP12"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
       "scientific_status": "NOT_TESTED",
       "code_configuration_identity": {
         "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
       },
       "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/detector_manifest.json"
+      ],
+      "findings": [
+        "Secure calibrated multichannel loader and stage-blind YASA/spectral/EOG/EMG/artifact proxies implemented; generated positive/flat and filter controls executed"
+      ],
       "limitations": [],
       "block_reason": null
     },
@@ -277,15 +297,19 @@
       "dependencies": [
         "WP13"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
       "scientific_status": "NOT_TESTED",
       "code_configuration_identity": {
         "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
       },
       "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/detector_manifest.json"
+      ],
+      "findings": [
+        "Secure calibrated multichannel loader and stage-blind YASA/spectral/EOG/EMG/artifact proxies implemented; generated positive/flat and filter controls executed"
+      ],
       "limitations": [],
       "block_reason": null
     },
@@ -295,15 +319,19 @@
       "dependencies": [
         "WP14"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
       "scientific_status": "NOT_TESTED",
       "code_configuration_identity": {
         "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
       },
       "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/detector_manifest.json"
+      ],
+      "findings": [
+        "Secure calibrated multichannel loader and stage-blind YASA/spectral/EOG/EMG/artifact proxies implemented; generated positive/flat and filter controls executed"
+      ],
       "limitations": [],
       "block_reason": null
     },
@@ -313,15 +341,19 @@
       "dependencies": [
         "WP15"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
       "scientific_status": "NOT_TESTED",
       "code_configuration_identity": {
         "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
       },
       "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/detector_manifest.json"
+      ],
+      "findings": [
+        "Secure calibrated multichannel loader and stage-blind YASA/spectral/EOG/EMG/artifact proxies implemented; generated positive/flat and filter controls executed"
+      ],
       "limitations": [],
       "block_reason": null
     },
@@ -354,15 +386,19 @@
       "dependencies": [
         "WP17"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
       "scientific_status": "NOT_TESTED",
       "code_configuration_identity": {
         "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
       },
       "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/detector_manifest.json"
+      ],
+      "findings": [
+        "Secure calibrated multichannel loader and stage-blind YASA/spectral/EOG/EMG/artifact proxies implemented; generated positive/flat and filter controls executed"
+      ],
       "limitations": [],
       "block_reason": null
     },
@@ -426,15 +462,19 @@
       "dependencies": [
         "WP21"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_TESTED",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "PASS",
       "code_configuration_identity": {
         "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
       },
       "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/model_authentication.json"
+      ],
+      "findings": [
+        "Fresh authenticated bytes/state and trained native adapter84noninterference comparisons pass; original features and weights unchanged"
+      ],
       "limitations": [],
       "block_reason": null
     },
