@@ -13,7 +13,7 @@ class Detector:
     def __init__(self):
         self.stderr=(PRIVATE/'detector_worker.log').open('a')
         python=PRIVATE/'detector_environment/bin/python'
-        self.worker=subprocess.Popen([str(python),str(Path(__file__).with_name('detector_worker.py'))],stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=self.stderr,text=True)
+        self.worker=subprocess.Popen([str(python),'-I','-c','import runpy,sys;runpy.run_path(sys.argv[1],run_name="__main__")',str(Path(__file__).with_name('detector_worker.py'))],stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=self.stderr,text=True)
         self.ordinal=0
     def run(self,arrays,config,start,core_start,core_stop,duration):
         self.ordinal+=1;label=f'worker_{os.getpid()}_{self.ordinal}'

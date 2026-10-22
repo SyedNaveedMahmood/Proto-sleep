@@ -17,7 +17,7 @@ def write_new(path,value):
 def atomic_json(path,value):
     temp=path.with_name(path.name+'.writing');write_new(temp,value);os.replace(temp,path)
 BASE='1b6f25ee48945d624cfde61af4824efcd04bb96d'
-DATA_ROOT='/home/FA006/Desktop/Sleep_dl/SLeep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0'
+ROOT_AUTH_SHA256='12a2814f8d7163a9066f3fb8e31f915325efb4ffc3582f5d0ca859f449b466e4'
 PRIVATE=ROOT/'mist_transfer_runs/mist_cove/phase14_v1'
 PUBLIC=ROOT/'reports/mist_cove/phase14_v1'
 def read_json(path):return json.loads(path.read_text())
@@ -40,3 +40,16 @@ def ledger(ids,status,findings,artifacts=(),science=None,block=None):
         if int(row['id'][2:]) not in ids:continue
         row.update(status=status,engineering_status='PASS' if status=='COMPLETE' else status,findings=[findings],artifacts=list(artifacts),scientific_status=science or 'NOT_APPLICABLE',block_reason=block)
     atomic_json(path,value)
+
+
+def authorized_root():
+    path=PRIVATE/'local_authorization.json';fd=os.open(path,os.O_RDONLY|os.O_NOFOLLOW)
+    try:
+        before=os.fstat(fd)
+        if before.st_nlink!=1 or not 0<before.st_size<=4096:raise IntegrityError('bounded local authorization required')
+        data=os.pread(fd,before.st_size,0)
+        if stamp(before)!=stamp(os.fstat(fd)) or stamp(before)!=stamp(os.stat(path,follow_symlinks=False)):raise IntegrityError('local authorization changed')
+    finally:os.close(fd)
+    value=json.loads(data)
+    if set(value)!={'root'} or sha256(value['root'].encode())!=ROOT_AUTH_SHA256:raise IntegrityError('explicit authorized root differs')
+    return value['root']

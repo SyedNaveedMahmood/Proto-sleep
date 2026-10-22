@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "generated_only": true,
+  "YASA_version": "0.6.5",
+  "stage_blind": true,
+  "Torch_dependency_in_detector_process": false,
+  "algorithm_or_threshold_changes": false
+}

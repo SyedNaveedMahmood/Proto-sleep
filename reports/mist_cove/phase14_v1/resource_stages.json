@@ -101,5 +101,13 @@
   "SC_TRAIN_statistical_analysis": {
     "status": "COMPLETE",
     "wall_seconds": 6.185032455003238
+  },
+  "ST_EVAL_source_campaign": {
+    "status": "FAILED",
+    "wall_seconds": 8.295949645005749
+  },
+  "generated_isolated_worker_recovery": {
+    "status": "COMPLETE",
+    "wall_seconds": 4.032656309995218
   }
 }

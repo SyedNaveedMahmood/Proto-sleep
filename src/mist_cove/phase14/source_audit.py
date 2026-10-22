@@ -26,16 +26,23 @@ def cached_selection():
     return value
 
 
-def run(role):
+def run(role,resume_transport=False):
     torch.set_num_threads(2);torch.use_deterministic_algorithms(True)
     if role not in ('SC_TRAIN','ST_EVAL'):raise ValueError('role denied')
     if role=='ST_EVAL':
         from .protocol import verify_st_seal
         verify_st_seal()
-    if (PRIVATE/(role+'_started.json')).exists():raise ValueError('source campaign already attempted')
+    retained=None
+    if (PRIVATE/(role+'_started.json')).exists():
+        if not resume_transport or role!='ST_EVAL':raise ValueError('source campaign already attempted')
+        retained=read_json(PRIVATE/'ST_transport_failure_retained.json')
+        if sha256(canonical(retained))!=read_json(PUBLIC/'ST_transport_failure.json')['retained_prediction_manifest_sha256']:raise ValueError('retained failed-attempt predictions changed')
+        for name,digest in retained['files'].items():
+            if sha256((PRIVATE/role/name).read_bytes())!=digest:raise ValueError('retained predictions changed')
+        write_new(PRIVATE/'ST_EVAL_continuation_started.json',{'failure_manifest_sha256':sha256(canonical(retained))})
     config=read_json(ROOT/'configs/mist_cove_phase14_v1.json')
     if read_json(PUBLIC/'detector_manifest.json')['status']!='PASS':raise ValueError('detector pilot gate')
-    write_new(PRIVATE/(role+'_started.json'),{'config_sha256':sha256(canonical(config))})
+    if not resume_transport:write_new(PRIVATE/(role+'_started.json'),{'config_sha256':sha256(canonical(config))})
     started=time.perf_counter();selection=cached_selection();source=MultiReader();geometry=read_json(PRIVATE/'geometry.json')['rows'];geom={r['record']['recording']:r for r in geometry}
     model,payload,root,child,auth=authenticate_model();norm=source.manifest['normalization'];worker=Detector();execution=[]
     training=selection['training']['fit']+selection['training']['internal_dev'];fitn=len(selection['training']['fit'])
@@ -57,7 +64,7 @@ def run(role):
         sample_waves={k:np.empty((len(samples),3000),np.float32) for k in ('EEG Fpz-Cz','EEG Pz-Oz','EOG horizontal')}
         write_new(PRIVATE/'ST_selection.json',{'primary':samples,'missing':220-len(samples),'policy':'first1perstagepersonnight,maximum220,missingstratakept; finalprospectiveSTrefinement,notpredictions'})
     outdir=PRIVATE/role;outdir.mkdir(exist_ok=True)
-    with measured(role+'_source_campaign') as counts:
+    with measured(role+('_source_continuation' if resume_transport else '_source_campaign')) as counts:
         for ordinal,record in enumerate(source.records(role)):
             check_budget(started);g=geom.get(record['recording'])
             if g is None:
@@ -72,9 +79,14 @@ def run(role):
             loading_seconds=time.perf_counter()-record_started
             t=time.perf_counter();features=epoch_features(channels,fs['EMG submental'],fs['marker'],n);feature_seconds=time.perf_counter()-t
             wave=channels['EEG Fpz-Cz'][:n*3000].reshape(n,1,3000)
-            t=time.perf_counter();z=native(model,wave,norm);inference_seconds=time.perf_counter()-t
+            reuse=retained is not None and record['recording']==retained['recording']
+            t=time.perf_counter()
+            if reuse:
+                with np.load(outdir/(record['recording']+'_epochs.npz'),allow_pickle=False) as old:z=old['logits'].copy()
+            else:z=native(model,wave,norm)
+            inference_seconds=time.perf_counter()-t
             y=np.array(g['labels']);transition=np.r_[False,(y[1:]!=y[:-1])&(y[1:]>=0)&(y[:-1]>=0)]
-            np.savez_compressed(outdir/(record['recording']+'_epochs.npz'),logits=z,truth=y,features=features,transition=transition)
+            if not reuse:np.savez_compressed(outdir/(record['recording']+'_epochs.npz'),logits=z,truth=y,features=features,transition=transition)
             if role=='SC_TRAIN':
                 for i,c in enumerate(training):
                     if c['recording_id']!=record['recording']:continue
@@ -83,7 +95,7 @@ def run(role):
                         if 0<=e<n:training_x[i,j,0]=(wave[e,0]-selection['normalization']['mean_uV'])/selection['normalization']['std_uV'];training_valid[i,j]=True
             else:
                 from .context_model import st_predict
-                st_predict(record,wave,selection['normalization'],outdir,n)
+                if not reuse:st_predict(record,wave,selection['normalization'],outdir,n)
             for i,c in enumerate(samples):
                 if c['recording_id']==record['recording']:
                     for channel in sample_waves:sample_waves[channel][i]=channels[channel][c['epoch']*3000:(c['epoch']+1)*3000]

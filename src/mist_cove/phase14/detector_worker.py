@@ -9,7 +9,11 @@ import io
 import numpy as np
 from scipy import signal
 import yasa
-from event_schema import validate_arrays
+import importlib.util
+from pathlib import Path
+_schema_spec=importlib.util.spec_from_file_location('phase14_event_schema',Path(__file__).with_name('event_schema.py'))
+_schema=importlib.util.module_from_spec(_schema_spec);_schema_spec.loader.exec_module(_schema)
+validate_arrays=_schema.validate_arrays
 
 
 def snapshot(path,expected):

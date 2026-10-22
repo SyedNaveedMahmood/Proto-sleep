@@ -1,0 +1,40 @@
+{
+  "version": "phase14-ST-engineering-amendment-v1",
+  "original_seal_byte_sha256": "69d4cf61ffef960df4a84743eed3420d491f3094c2909de0f900254072ed58f4",
+  "transport_only_source_changes": {
+    "src/mist_cove/phase14/access_control.py": {
+      "original_sha256": "3af7b894fb34745070b811abd1328218241ad5851353f38ea7509b98237c6b30",
+      "corrected_sha256": "6ece37c2ada8017e3a3ccfd2ddb8516f0adfc59d01d5ec2c195371308b4d9760"
+    },
+    "src/mist_cove/phase14/common.py": {
+      "original_sha256": "be56136a217a0da022770d7d11307e4b3c88f61af1b7fdb9a322d908aef710f5",
+      "corrected_sha256": "a2b55c07af6cf9a6ad627a937875d3ec706a1d7a137a361d51380c653c804970"
+    },
+    "src/mist_cove/phase14/detector_worker.py": {
+      "original_sha256": "75470b2de49d5fd1c59bda8a8aa065e2bb18c52ac440e5d41730cc850649399e",
+      "corrected_sha256": "18ca546c4e84a8fc51e0779fb10b5c719efafa34bf37cf0853b288b2ddfb77d8"
+    },
+    "src/mist_cove/phase14/protocol.py": {
+      "original_sha256": "ee6c1b17df04981b8e81b6d23078d64c23865f061381fff8833b4e90cc674932",
+      "corrected_sha256": "1d4a090a6415e02603878f0fa94701638a61bda944d424e6c65e5d0a37b72262"
+    },
+    "src/mist_cove/phase14/proxies.py": {
+      "original_sha256": "fb422e6748fe7b36b179869237c157e499155138982dbac4be12691e67e475e5",
+      "corrected_sha256": "d70dfa7b45c551a9296194159acb42663791d499ebe11b29e01386d73e096dce"
+    },
+    "src/mist_cove/phase14/source_audit.py": {
+      "original_sha256": "e5fe602069c58109a1eb14cea6812f6e8944792803f6fade41a057dc44ddaba3",
+      "corrected_sha256": "810c1294f8003eccd01ebce8ce64d02a8db7b5795bbdeead2dafa6993a9beef6"
+    }
+  },
+  "reason": "isolated worker import collision; absolute root removed from current public source; retain and verify first-record predictions for exact continuation",
+  "scientific_settings_changed": false,
+  "models_retrained": false,
+  "sampling_changed_since_final_seal": false,
+  "detector_thresholds_changed": false,
+  "ST_metrics_inspected_to_select_method": false,
+  "prior_exposure": "first recording source values and fixed predictions computed after original scientific seal; no detector outputs completed, no STmetrics examined",
+  "review": "locally checked source diff and generated isolated-worker recovery; permitted routine engineering correction, not new scientific candidate",
+  "private_path_history_limit": "suppliedroot present in previous publishedcommits; currentpublic source redacted, historicalbranchesnotrewritten",
+  "retained_first_prediction_manifest_sha256": "ba411a9a77f60e3ade826728b0f19612b5b78eff6c51193475fc7f9607d9e53d"
+}

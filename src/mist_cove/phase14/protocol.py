@@ -42,7 +42,19 @@ def verify_st_seal():
     subprocess.run(['git','merge-base','--is-ancestor',commit,'HEAD'],cwd=ROOT,check=True,capture_output=True)
     published=subprocess.check_output(['git','show',commit+':'+relative],cwd=ROOT)
     if sha256(published)!=sha256(path.read_bytes()):raise IntegrityError('STseal differs fromcommitted bytes')
-    for name,digest in frozen['source_sha256'].items():
+    source=dict(frozen['source_sha256'])
+    amendment=PUBLIC/'ST_engineering_amendment_v1.json'
+    if amendment.exists():
+        relative_amendment=str(amendment.relative_to(ROOT));amend_commit=subprocess.check_output(['git','log','-1','--format=%H','--',relative_amendment],cwd=ROOT,text=True).strip()
+        if not amend_commit:raise IntegrityError('engineering amendment must be committed')
+        subprocess.run(['git','merge-base','--is-ancestor',amend_commit,'HEAD'],cwd=ROOT,check=True,capture_output=True)
+        if subprocess.check_output(['git','show',amend_commit+':'+relative_amendment],cwd=ROOT)!=amendment.read_bytes():raise IntegrityError('engineering amendment uncommitted change')
+        approved=read_json(amendment)
+        if approved['original_seal_byte_sha256']!=sha256(path.read_bytes()):raise IntegrityError('amendment points to different scientific seal')
+        for name,changes in approved['transport_only_source_changes'].items():
+            if source.get(name)!=changes['original_sha256']:raise IntegrityError('amendment original source differs')
+            source[name]=changes['corrected_sha256']
+    for name,digest in source.items():
         if sha256((ROOT/name).read_bytes())!=digest:raise IntegrityError('pre-STfrozen implementation changed')
     if sha256(canonical(read_json(ROOT/'configs/mist_cove_phase14_v1.json')))!=frozen['config_sha256']:raise IntegrityError('STanalysisconfig changed')
     if sha256(canonical(read_json(PRIVATE/'source_manifest.json')))!=frozen['source_manifest_sha256']:raise IntegrityError('STmanifest changed')

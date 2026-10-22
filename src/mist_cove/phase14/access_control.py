@@ -4,14 +4,15 @@ import stat
 import hashlib
 from contextlib import contextmanager
 from pathlib import PurePosixPath
-from .common import DATA_ROOT,IntegrityError
+from .common import authorized_root,IntegrityError
 from .common import stamp
 
 ROOT_FILES={'RECORDS','RECORDS-v1','SHA256SUMS.txt','SC-subjects.xls','ST-subjects.xls'}
 
 
 class RootAccess:
-    def __init__(self,root=DATA_ROOT,allowed=None):
+    def __init__(self,root=None,allowed=None):
+        root=authorized_root() if root is None else str(root)
         self.root=root;self.allowed=dict(allowed or {});self.counts={'metadata_reads':0,'source_hash_reads':0,'header_reads':0,'waveform_reads':0,'hypnogram_reads':0,'bytes_hashed':0,'forbidden_opened':0}
         fd=os.open('/',os.O_RDONLY|os.O_DIRECTORY)
         try:
