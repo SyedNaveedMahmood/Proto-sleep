@@ -1,0 +1,306 @@
+{
+  "arm": "M1",
+  "seed": 456,
+  "status": "COMPLETE",
+  "steps": 1200,
+  "physical_train_views": 38400,
+  "trainable_parameters": 41429,
+  "wall_seconds": 8.669825781995314,
+  "peak_RSS_KiB": 3257896,
+  "peak_cuda_allocated_bytes": 91641856,
+  "prototype_initialization": {
+    "fit_only": true,
+    "token_count": 4096,
+    "token_sha256": "a7333f0a4409b7d03c765c7ce52e6d7602cb51cdbf90c32821ef44560db90d3f"
+  },
+  "trajectory": [
+    {
+      "step": 300,
+      "development": {
+        "n": 23872,
+        "participant_count": 5,
+        "mean_participant_macro_f1": 0.5957202743698564,
+        "pooled_macro_f1": 0.5822698573577305,
+        "accuracy": 0.7845593163538874,
+        "kappa": 0.6329063509203372,
+        "per_stage_f1": [
+          0.9348220707606946,
+          0.2710248552945182,
+          0.6754983922829582,
+          0.5708746230073244,
+          0.4591293454431569
+        ],
+        "per_stage_recall": [
+          0.8886501269779253,
+          0.6492659053833605,
+          0.5821325648414986,
+          0.9969902182091799,
+          0.35548011639185256
+        ],
+        "prediction_counts": [
+          13840,
+          2324,
+          3264,
+          3313,
+          1131
+        ],
+        "truth_counts": [
+          15357,
+          613,
+          4511,
+          1329,
+          2062
+        ],
+        "confusion": [
+          [
+            13647,
+            755,
+            176,
+            737,
+            42
+          ],
+          [
+            80,
+            398,
+            40,
+            17,
+            78
+          ],
+          [
+            36,
+            375,
+            2626,
+            1196,
+            278
+          ],
+          [
+            0,
+            0,
+            4,
+            1325,
+            0
+          ],
+          [
+            77,
+            796,
+            418,
+            38,
+            733
+          ]
+        ],
+        "nll": 0.5693789627995229,
+        "brier": 0.2944864866160376,
+        "ece_10": 0.035706006359656116,
+        "participant_macro_f1_sd": 0.10140057097737326
+      },
+      "diagnostics": {
+        "effective_prototypes": 62.255184173583984,
+        "dead_prototypes": 0,
+        "assignment_entropy": 3.436993360519409,
+        "near_duplicate_pairs": 0,
+        "embedding_feature_variance": 0.004244217183440924
+      },
+      "training_last": {
+        "stage_loss": 0.537384033203125,
+        "prototype_regularizer": 0.013096395879983902,
+        "supcon": 3.318646192550659,
+        "total_loss": 0.7164127230644226,
+        "gradient_norm": 4.480731010437012
+      },
+      "checkpoint_sha256": "ac265402c6f25bd128ca13f587126c3c82ded75228e0ed39c32d32c3ccc6935a",
+      "elapsed_seconds": 2.275347998001962
+    },
+    {
+      "step": 750,
+      "development": {
+        "n": 23872,
+        "participant_count": 5,
+        "mean_participant_macro_f1": 0.6770152713600883,
+        "pooled_macro_f1": 0.6646705573295464,
+        "accuracy": 0.8424095174262735,
+        "kappa": 0.7241769590601433,
+        "per_stage_f1": [
+          0.9570688378978535,
+          0.2789034564958284,
+          0.760885792485693,
+          0.6919631093544137,
+          0.6345315904139434
+        ],
+        "per_stage_recall": [
+          0.9261574526274663,
+          0.5725938009787929,
+          0.677898470405675,
+          0.9879608728367193,
+          0.5649854510184287
+        ],
+        "prediction_counts": [
+          14365,
+          1904,
+          3527,
+          2466,
+          1610
+        ],
+        "truth_counts": [
+          15357,
+          613,
+          4511,
+          1329,
+          2062
+        ],
+        "confusion": [
+          [
+            14223,
+            791,
+            60,
+            183,
+            100
+          ],
+          [
+            59,
+            351,
+            37,
+            16,
+            150
+          ],
+          [
+            21,
+            337,
+            3058,
+            900,
+            195
+          ],
+          [
+            1,
+            0,
+            15,
+            1313,
+            0
+          ],
+          [
+            61,
+            425,
+            357,
+            54,
+            1165
+          ]
+        ],
+        "nll": 0.45864767692505753,
+        "brier": 0.22394427797665925,
+        "ece_10": 0.02460189636925571,
+        "participant_macro_f1_sd": 0.11055611993591241
+      },
+      "diagnostics": {
+        "effective_prototypes": 61.07880783081055,
+        "dead_prototypes": 0,
+        "assignment_entropy": 3.3867862224578857,
+        "near_duplicate_pairs": 5,
+        "embedding_feature_variance": 0.0036120726726949215
+      },
+      "training_last": {
+        "stage_loss": 0.4548196792602539,
+        "prototype_regularizer": 0.011845615692436695,
+        "supcon": 2.5226807594299316,
+        "total_loss": 0.5927993059158325,
+        "gradient_norm": 3.7125144004821777
+      },
+      "checkpoint_sha256": "00367260406f6e2e1f64d9ee422dedb15c95cb4492616e7b5c02a2f86cb1a287",
+      "elapsed_seconds": 5.473281451006187
+    },
+    {
+      "step": 1200,
+      "development": {
+        "n": 23872,
+        "participant_count": 5,
+        "mean_participant_macro_f1": 0.6842356595420584,
+        "pooled_macro_f1": 0.6924106035424041,
+        "accuracy": 0.8668733243967829,
+        "kappa": 0.7574763399606652,
+        "per_stage_f1": [
+          0.9699624121588495,
+          0.2943805874840358,
+          0.8348418949100741,
+          0.8417746368276403,
+          0.5210934863314208
+        ],
+        "per_stage_recall": [
+          0.9662043367845282,
+          0.7520391517128875,
+          0.7871868765240523,
+          0.8066215199398044,
+          0.3743937924345296
+        ],
+        "prediction_counts": [
+          15238,
+          2519,
+          3996,
+          1218,
+          901
+        ],
+        "truth_counts": [
+          15357,
+          613,
+          4511,
+          1329,
+          2062
+        ],
+        "confusion": [
+          [
+            14838,
+            475,
+            17,
+            5,
+            22
+          ],
+          [
+            94,
+            461,
+            33,
+            2,
+            23
+          ],
+          [
+            94,
+            646,
+            3551,
+            136,
+            84
+          ],
+          [
+            35,
+            1,
+            221,
+            1072,
+            0
+          ],
+          [
+            177,
+            936,
+            174,
+            3,
+            772
+          ]
+        ],
+        "nll": 0.3336997385930721,
+        "brier": 0.17308267559537216,
+        "ece_10": 0.03606046356796265,
+        "participant_macro_f1_sd": 0.046886072661878365
+      },
+      "diagnostics": {
+        "effective_prototypes": 55.947330474853516,
+        "dead_prototypes": 0,
+        "assignment_entropy": 3.315401315689087,
+        "near_duplicate_pairs": 27,
+        "embedding_feature_variance": 0.002749753650277853
+      },
+      "training_last": {
+        "stage_loss": 0.5785783529281616,
+        "prototype_regularizer": 0.012796668335795403,
+        "supcon": 2.4387965202331543,
+        "total_loss": 0.7133148312568665,
+        "gradient_norm": 10.24129581451416
+      },
+      "checkpoint_sha256": "7604dd89168ee9bad7e8e68bbcd07d43c0918b9767da1b715af1e026f66abe8d",
+      "elapsed_seconds": 8.6697561530018
+    }
+  ]
+}
