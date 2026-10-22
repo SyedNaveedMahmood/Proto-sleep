@@ -1,0 +1,22 @@
+{
+  "CPU_passed": 1139,
+  "CUDA_skipped": 11,
+  "warnings": 7,
+  "CPU_seconds": 20.59,
+  "phase14_added_tests": 27,
+  "full_CPU_log_sha256": "8486872a4f66921aee99b2015c0062f2d53e60622836039adc4084f30b4bf241",
+  "CUDA_status": "NOT_RUN_CPU_ONLY_PATCHED_RUNTIME",
+  "baseline_tests_preserved": true,
+  "real_EEG_in_CI": false,
+  "generated_context_operator_rows": 131072,
+  "generated_isolated_YASA_controls": "PASS; positive/flat, frequency responses, stage-blind input, isolated namespace recovery",
+  "exact_context_resume": "PASS botharms; model,optimizer,generator",
+  "remaining_limits": [
+    "no human event validity study",
+    "no CUDA correctness",
+    "previous branch history contains supplied root path; current source redacted"
+  ],
+  "final_CPU_log_sha256": "cdb6b3bb3d8a27028f59e95ea592a761731245cb484059087dc6ae91977d57bc",
+  "final_CPU_suite": "PASS_1139_PASSED_11_CUDA_SKIPPED",
+  "post_publication_correction_suite": true
+}

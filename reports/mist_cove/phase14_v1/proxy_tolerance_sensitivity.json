@@ -1,0 +1,1468 @@
+{
+  "method": "cached masks and detector intervals; zero new EEG reads or head queries",
+  "SC_scope": "five developmental people only",
+  "ST_scope": "frozen selected panel",
+  "human_event_truth": "NOT_TESTED",
+  "results": {
+    "SC_TRAIN": {
+      "EEG Pz-Oz|spindle": {
+        "0": {
+          "eligible_cases": 9,
+          "contrasts": {
+            "exact_minus_random_matched": {
+              "n_participants": 4,
+              "mean": 0.020833333333333336,
+              "bootstrap95": [
+                -0.00125,
+                0.06375
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_RMS_matched": {
+              "n_participants": 4,
+              "mean": -0.03708333333333333,
+              "bootstrap95": [
+                -0.11666666666666667,
+                0.0425
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_sigma_matched": {
+              "n_participants": 4,
+              "mean": -0.025,
+              "bootstrap95": [
+                -0.07500000000000001,
+                0.0
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_position_matched": {
+              "n_participants": 4,
+              "mean": -0.008281249999999997,
+              "bootstrap95": [
+                -0.02484374999999999,
+                0.0
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_gradient_matched": {
+              "n_participants": 4,
+              "mean": -0.06749999999999999,
+              "bootstrap95": [
+                -0.2425,
+                0.051875000000000004
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            }
+          }
+        },
+        "0.1": {
+          "eligible_cases": 9,
+          "contrasts": {
+            "exact_minus_random_matched": {
+              "n_participants": 4,
+              "mean": 0.021875000000000002,
+              "bootstrap95": [
+                -0.0075,
+                0.073125
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_RMS_matched": {
+              "n_participants": 4,
+              "mean": -0.050625,
+              "bootstrap95": [
+                -0.15000000000000002,
+                0.04875
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_sigma_matched": {
+              "n_participants": 4,
+              "mean": -0.03125,
+              "bootstrap95": [
+                -0.09375,
+                0.0
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_position_matched": {
+              "n_participants": 4,
+              "mean": -0.01140625,
+              "bootstrap95": [
+                -0.03421875,
+                0.0
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_gradient_matched": {
+              "n_participants": 4,
+              "mean": -0.07270833333333333,
+              "bootstrap95": [
+                -0.2633333333333333,
+                0.059166666666666666
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            }
+          }
+        },
+        "0.25": {
+          "eligible_cases": 9,
+          "contrasts": {
+            "exact_minus_random_matched": {
+              "n_participants": 4,
+              "mean": 0.0234375,
+              "bootstrap95": [
+                -0.016875,
+                0.0871875
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_RMS_matched": {
+              "n_participants": 4,
+              "mean": -0.0709375,
+              "bootstrap95": [
+                -0.2,
+                0.058125
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_sigma_matched": {
+              "n_participants": 4,
+              "mean": -0.040625,
+              "bootstrap95": [
+                -0.12187500000000001,
+                0.0
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_position_matched": {
+              "n_participants": 4,
+              "mean": -0.01609375,
+              "bootstrap95": [
+                -0.04828125,
+                0.0
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_gradient_matched": {
+              "n_participants": 4,
+              "mean": -0.08052083333333332,
+              "bootstrap95": [
+                -0.2945833333333333,
+                0.07010416666666668
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            }
+          }
+        }
+      },
+      "EEG Pz-Oz|spindle_strict": {
+        "0": {
+          "eligible_cases": 8,
+          "contrasts": {
+            "exact_minus_random_matched": {
+              "n_participants": 4,
+              "mean": 0.020625,
+              "bootstrap95": [
+                -0.0009375,
+                0.06281250000000001
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_RMS_matched": {
+              "n_participants": 4,
+              "mean": -0.052500000000000005,
+              "bootstrap95": [
+                -0.146875,
+                0.041875
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_sigma_matched": {
+              "n_participants": 4,
+              "mean": -0.025,
+              "bootstrap95": [
+                -0.07500000000000001,
+                0.0
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_position_matched": {
+              "n_participants": 4,
+              "mean": -0.008125,
+              "bootstrap95": [
+                -0.024375,
+                0.0
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_gradient_matched": {
+              "n_participants": 4,
+              "mean": -0.073125,
+              "bootstrap95": [
+                -0.24656249999999996,
+                0.04500000000000001
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            }
+          }
+        },
+        "0.1": {
+          "eligible_cases": 8,
+          "contrasts": {
+            "exact_minus_random_matched": {
+              "n_participants": 4,
+              "mean": 0.020625,
+              "bootstrap95": [
+                -0.0103125,
+                0.0721875
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_RMS_matched": {
+              "n_participants": 4,
+              "mean": -0.07125,
+              "bootstrap95": [
+                -0.19218749999999998,
+                0.048125
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_sigma_matched": {
+              "n_participants": 4,
+              "mean": -0.03125,
+              "bootstrap95": [
+                -0.09375,
+                0.0
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_position_matched": {
+              "n_participants": 4,
+              "mean": -0.011249999999999996,
+              "bootstrap95": [
+                -0.03374999999999999,
+                0.0
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_gradient_matched": {
+              "n_participants": 4,
+              "mean": -0.079375,
+              "bootstrap95": [
+                -0.2684375,
+                0.051250000000000004
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            }
+          }
+        },
+        "0.25": {
+          "eligible_cases": 8,
+          "contrasts": {
+            "exact_minus_random_matched": {
+              "n_participants": 4,
+              "mean": 0.020625,
+              "bootstrap95": [
+                -0.024375,
+                0.08625000000000001
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_RMS_matched": {
+              "n_participants": 4,
+              "mean": -0.09937499999999999,
+              "bootstrap95": [
+                -0.26249999999999996,
+                0.0575
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_sigma_matched": {
+              "n_participants": 4,
+              "mean": -0.040625,
+              "bootstrap95": [
+                -0.12187500000000001,
+                0.0
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_position_matched": {
+              "n_participants": 4,
+              "mean": -0.015937499999999997,
+              "bootstrap95": [
+                -0.047812499999999994,
+                0.0
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_gradient_matched": {
+              "n_participants": 4,
+              "mean": -0.08875,
+              "bootstrap95": [
+                -0.30124999999999996,
+                0.06062500000000001
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            }
+          }
+        }
+      },
+      "EEG Pz-Oz|slow_wave": {
+        "0": {
+          "eligible_cases": 2,
+          "contrasts": {
+            "exact_minus_random_matched": {
+              "n_participants": 2,
+              "mean": 0.0,
+              "bootstrap95": [
+                0.0,
+                0.0
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_RMS_matched": {
+              "n_participants": 2,
+              "mean": 0.0,
+              "bootstrap95": [
+                0.0,
+                0.0
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_sigma_matched": {
+              "n_participants": 2,
+              "mean": 0.0,
+              "bootstrap95": [
+                0.0,
+                0.0
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_position_matched": {
+              "n_participants": 2,
+              "mean": 0.0,
+              "bootstrap95": [
+                0.0,
+                0.0
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_gradient_matched": {
+              "n_participants": 2,
+              "mean": 0.0,
+              "bootstrap95": [
+                0.0,
+                0.0
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            }
+          }
+        },
+        "0.1": {
+          "eligible_cases": 2,
+          "contrasts": {
+            "exact_minus_random_matched": {
+              "n_participants": 2,
+              "mean": 0.0,
+              "bootstrap95": [
+                0.0,
+                0.0
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_RMS_matched": {
+              "n_participants": 2,
+              "mean": 0.0,
+              "bootstrap95": [
+                0.0,
+                0.0
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_sigma_matched": {
+              "n_participants": 2,
+              "mean": 0.0,
+              "bootstrap95": [
+                0.0,
+                0.0
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_position_matched": {
+              "n_participants": 2,
+              "mean": 0.0,
+              "bootstrap95": [
+                0.0,
+                0.0
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_gradient_matched": {
+              "n_participants": 2,
+              "mean": 0.0,
+              "bootstrap95": [
+                0.0,
+                0.0
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            }
+          }
+        },
+        "0.25": {
+          "eligible_cases": 2,
+          "contrasts": {
+            "exact_minus_random_matched": {
+              "n_participants": 2,
+              "mean": 0.0,
+              "bootstrap95": [
+                0.0,
+                0.0
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_RMS_matched": {
+              "n_participants": 2,
+              "mean": 0.0,
+              "bootstrap95": [
+                0.0,
+                0.0
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_sigma_matched": {
+              "n_participants": 2,
+              "mean": 0.0,
+              "bootstrap95": [
+                0.0,
+                0.0
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_position_matched": {
+              "n_participants": 2,
+              "mean": 0.0,
+              "bootstrap95": [
+                0.0,
+                0.0
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_gradient_matched": {
+              "n_participants": 2,
+              "mean": 0.0,
+              "bootstrap95": [
+                0.0,
+                0.0
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            }
+          }
+        }
+      },
+      "EEG Pz-Oz|slow_wave_relaxed": {
+        "0": {
+          "eligible_cases": 12,
+          "contrasts": {
+            "exact_minus_random_matched": {
+              "n_participants": 5,
+              "mean": 0.0,
+              "bootstrap95": [
+                0.0,
+                0.0
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_RMS_matched": {
+              "n_participants": 5,
+              "mean": -0.006,
+              "bootstrap95": [
+                -0.018,
+                0.0
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_sigma_matched": {
+              "n_participants": 5,
+              "mean": -0.0001333333333333331,
+              "bootstrap95": [
+                -0.0003999999999999993,
+                0.0
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_position_matched": {
+              "n_participants": 5,
+              "mean": -0.0001333333333333331,
+              "bootstrap95": [
+                -0.0003999999999999993,
+                0.0
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_gradient_matched": {
+              "n_participants": 5,
+              "mean": 0.0,
+              "bootstrap95": [
+                0.0,
+                0.0
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            }
+          }
+        },
+        "0.1": {
+          "eligible_cases": 12,
+          "contrasts": {
+            "exact_minus_random_matched": {
+              "n_participants": 5,
+              "mean": 0.0,
+              "bootstrap95": [
+                0.0,
+                0.0
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_RMS_matched": {
+              "n_participants": 5,
+              "mean": -0.006500000000000001,
+              "bootstrap95": [
+                -0.0195,
+                0.0
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_sigma_matched": {
+              "n_participants": 5,
+              "mean": -0.00013333333333333364,
+              "bootstrap95": [
+                -0.0004000000000000009,
+                0.0
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_position_matched": {
+              "n_participants": 5,
+              "mean": -0.00013333333333333364,
+              "bootstrap95": [
+                -0.0004000000000000009,
+                0.0
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_gradient_matched": {
+              "n_participants": 5,
+              "mean": 0.0,
+              "bootstrap95": [
+                0.0,
+                0.0
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            }
+          }
+        },
+        "0.25": {
+          "eligible_cases": 12,
+          "contrasts": {
+            "exact_minus_random_matched": {
+              "n_participants": 5,
+              "mean": 0.0,
+              "bootstrap95": [
+                0.0,
+                0.0
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_RMS_matched": {
+              "n_participants": 5,
+              "mean": -0.0072499999999999995,
+              "bootstrap95": [
+                -0.02175,
+                0.0
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_sigma_matched": {
+              "n_participants": 5,
+              "mean": -0.0001333333333333331,
+              "bootstrap95": [
+                -0.0003999999999999993,
+                0.0
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_position_matched": {
+              "n_participants": 5,
+              "mean": -0.0001333333333333331,
+              "bootstrap95": [
+                -0.0003999999999999993,
+                0.0
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_gradient_matched": {
+              "n_participants": 5,
+              "mean": 0.0,
+              "bootstrap95": [
+                0.0,
+                0.0
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            }
+          }
+        }
+      }
+    },
+    "ST_EVAL": {
+      "EEG Pz-Oz|spindle": {
+        "0": {
+          "eligible_cases": 25,
+          "contrasts": {
+            "exact_minus_random_matched": {
+              "n_participants": 12,
+              "mean": 0.11684722222222223,
+              "bootstrap95": [
+                0.04658680555555556,
+                0.21211875
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_RMS_matched": {
+              "n_participants": 12,
+              "mean": 0.10980208333333331,
+              "bootstrap95": [
+                0.032332031250000004,
+                0.20755729166666667
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_sigma_matched": {
+              "n_participants": 12,
+              "mean": -0.06470833333333333,
+              "bootstrap95": [
+                -0.13120104166666666,
+                -0.012416666666666666
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_position_matched": {
+              "n_participants": 12,
+              "mean": 0.1072326388888889,
+              "bootstrap95": [
+                0.037272743055555564,
+                0.19012109375
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_gradient_matched": {
+              "n_participants": 12,
+              "mean": 0.029295634920634927,
+              "bootstrap95": [
+                -0.07993348214285714,
+                0.11420818452380951
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            }
+          }
+        },
+        "0.1": {
+          "eligible_cases": 25,
+          "contrasts": {
+            "exact_minus_random_matched": {
+              "n_participants": 12,
+              "mean": 0.13271527777777778,
+              "bootstrap95": [
+                0.054634548611111104,
+                0.23832812499999992
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_RMS_matched": {
+              "n_participants": 12,
+              "mean": 0.11962499999999998,
+              "bootstrap95": [
+                0.03449079861111111,
+                0.22764479166666668
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_sigma_matched": {
+              "n_participants": 12,
+              "mean": -0.07840625000000001,
+              "bootstrap95": [
+                -0.15505546875,
+                -0.01726041666666667
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_position_matched": {
+              "n_participants": 12,
+              "mean": 0.11955902777777778,
+              "bootstrap95": [
+                0.042661197916666664,
+                0.2081022569444444
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_gradient_matched": {
+              "n_participants": 12,
+              "mean": 0.035252976190476196,
+              "bootstrap95": [
+                -0.07546836557539684,
+                0.12179718501984121
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            }
+          }
+        },
+        "0.25": {
+          "eligible_cases": 25,
+          "contrasts": {
+            "exact_minus_random_matched": {
+              "n_participants": 12,
+              "mean": 0.15153819444444444,
+              "bootstrap95": [
+                0.06344001736111111,
+                0.26913793402777775
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_RMS_matched": {
+              "n_participants": 12,
+              "mean": 0.13475,
+              "bootstrap95": [
+                0.039004513888888884,
+                0.25855920138888877
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_sigma_matched": {
+              "n_participants": 12,
+              "mean": -0.08700000000000001,
+              "bootstrap95": [
+                -0.1696578125,
+                -0.019806770833333334
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_position_matched": {
+              "n_participants": 12,
+              "mean": 0.13981944444444444,
+              "bootstrap95": [
+                0.050186979166666666,
+                0.24360746527777777
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_gradient_matched": {
+              "n_participants": 12,
+              "mean": 0.043162202380952384,
+              "bootstrap95": [
+                -0.06485910218253968,
+                0.1336617435515873
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            }
+          }
+        }
+      },
+      "EEG Pz-Oz|spindle_strict": {
+        "0": {
+          "eligible_cases": 21,
+          "contrasts": {
+            "exact_minus_random_matched": {
+              "n_participants": 11,
+              "mean": 0.12396969696969698,
+              "bootstrap95": [
+                0.047974242424242426,
+                0.21205719696969694
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_RMS_matched": {
+              "n_participants": 11,
+              "mean": 0.1255416666666667,
+              "bootstrap95": [
+                0.04031439393939394,
+                0.21888285984848482
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_sigma_matched": {
+              "n_participants": 11,
+              "mean": -0.056340909090909094,
+              "bootstrap95": [
+                -0.12866136363636363,
+                -0.0031818181818181746
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_position_matched": {
+              "n_participants": 11,
+              "mean": 0.11445833333333334,
+              "bootstrap95": [
+                0.04157547348484849,
+                0.19924621212121213
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_gradient_matched": {
+              "n_participants": 11,
+              "mean": 0.03671049783549784,
+              "bootstrap95": [
+                -0.08968804112554113,
+                0.14364747023809518
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            }
+          }
+        },
+        "0.1": {
+          "eligible_cases": 21,
+          "contrasts": {
+            "exact_minus_random_matched": {
+              "n_participants": 11,
+              "mean": 0.14509343434343436,
+              "bootstrap95": [
+                0.056344760101010104,
+                0.2488505681818182
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_RMS_matched": {
+              "n_participants": 11,
+              "mean": 0.14180555555555555,
+              "bootstrap95": [
+                0.04905145202020203,
+                0.24499084595959594
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_sigma_matched": {
+              "n_participants": 11,
+              "mean": -0.06407954545454547,
+              "bootstrap95": [
+                -0.14194857954545453,
+                -0.00521590909090909
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_position_matched": {
+              "n_participants": 11,
+              "mean": 0.1312638888888889,
+              "bootstrap95": [
+                0.04834526515151515,
+                0.22602900883838384
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_gradient_matched": {
+              "n_participants": 11,
+              "mean": 0.0472389971139971,
+              "bootstrap95": [
+                -0.07370824314574317,
+                0.15399323593073594
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            }
+          }
+        },
+        "0.25": {
+          "eligible_cases": 21,
+          "contrasts": {
+            "exact_minus_random_matched": {
+              "n_participants": 11,
+              "mean": 0.16689267676767675,
+              "bootstrap95": [
+                0.06805555555555555,
+                0.2815217487373737
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_RMS_matched": {
+              "n_participants": 11,
+              "mean": 0.16142676767676767,
+              "bootstrap95": [
+                0.05402272727272728,
+                0.2822395833333333
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_sigma_matched": {
+              "n_participants": 11,
+              "mean": -0.068,
+              "bootstrap95": [
+                -0.15545454545454546,
+                -0.005454545454545459
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_position_matched": {
+              "n_participants": 11,
+              "mean": 0.15480555555555556,
+              "bootstrap95": [
+                0.05791161616161616,
+                0.26312563131313127
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_gradient_matched": {
+              "n_participants": 11,
+              "mean": 0.05649224386724386,
+              "bootstrap95": [
+                -0.0635208062770563,
+                0.16711931818181813
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            }
+          }
+        }
+      },
+      "EEG Pz-Oz|slow_wave": {
+        "0": {
+          "eligible_cases": 19,
+          "contrasts": {
+            "exact_minus_random_matched": {
+              "n_participants": 11,
+              "mean": -0.02109343434343434,
+              "bootstrap95": [
+                -0.09623617424242425,
+                0.03548863636363635
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_RMS_matched": {
+              "n_participants": 11,
+              "mean": -0.08580934343434345,
+              "bootstrap95": [
+                -0.14309517045454545,
+                -0.03363055555555556
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_sigma_matched": {
+              "n_participants": 11,
+              "mean": -0.008055555555555555,
+              "bootstrap95": [
+                -0.05471212121212121,
+                0.020997095959595945
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_position_matched": {
+              "n_participants": 11,
+              "mean": -0.03394381313131312,
+              "bootstrap95": [
+                -0.08685946969696971,
+                0.004090909090909092
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_gradient_matched": {
+              "n_participants": 11,
+              "mean": 0.01198989898989899,
+              "bootstrap95": [
+                -0.017076262626262627,
+                0.04847020202020201
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            }
+          }
+        },
+        "0.1": {
+          "eligible_cases": 19,
+          "contrasts": {
+            "exact_minus_random_matched": {
+              "n_participants": 11,
+              "mean": -0.022488636363636363,
+              "bootstrap95": [
+                -0.11198910984848486,
+                0.044988825757575755
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_RMS_matched": {
+              "n_participants": 11,
+              "mean": -0.10000757575757575,
+              "bootstrap95": [
+                -0.1709914772727273,
+                -0.035734659090909095
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_sigma_matched": {
+              "n_participants": 11,
+              "mean": -0.006742424242424242,
+              "bootstrap95": [
+                -0.05981893939393941,
+                0.02909090909090909
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_position_matched": {
+              "n_participants": 11,
+              "mean": -0.0357935606060606,
+              "bootstrap95": [
+                -0.094675,
+                0.007531723484848482
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_gradient_matched": {
+              "n_participants": 11,
+              "mean": 0.015575757575757576,
+              "bootstrap95": [
+                -0.020003030303030304,
+                0.06266666666666666
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            }
+          }
+        },
+        "0.25": {
+          "eligible_cases": 19,
+          "contrasts": {
+            "exact_minus_random_matched": {
+              "n_participants": 11,
+              "mean": -0.023912247474747485,
+              "bootstrap95": [
+                -0.13445075757575758,
+                0.06085782828282824
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_RMS_matched": {
+              "n_participants": 11,
+              "mean": -0.12063573232323233,
+              "bootstrap95": [
+                -0.21086592487373737,
+                -0.03987788825757582
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_sigma_matched": {
+              "n_participants": 11,
+              "mean": -0.004722222222222226,
+              "bootstrap95": [
+                -0.06743939393939395,
+                0.041257575757575736
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_position_matched": {
+              "n_participants": 11,
+              "mean": -0.03755808080808081,
+              "bootstrap95": [
+                -0.10851944444444445,
+                0.014875189393939387
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_gradient_matched": {
+              "n_participants": 11,
+              "mean": 0.021005050505050506,
+              "bootstrap95": [
+                -0.024193686868686868,
+                0.0830959595959596
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            }
+          }
+        }
+      },
+      "EEG Pz-Oz|slow_wave_relaxed": {
+        "0": {
+          "eligible_cases": 36,
+          "contrasts": {
+            "exact_minus_random_matched": {
+              "n_participants": 14,
+              "mean": 0.047094642857142856,
+              "bootstrap95": [
+                -0.03251891369047619,
+                0.1358925
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_RMS_matched": {
+              "n_participants": 14,
+              "mean": -0.06446249999999999,
+              "bootstrap95": [
+                -0.1541547619047619,
+                0.026839211309523794
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_sigma_matched": {
+              "n_participants": 14,
+              "mean": 0.03108095238095238,
+              "bootstrap95": [
+                -0.030111011904761904,
+                0.1040992261904762
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_position_matched": {
+              "n_participants": 14,
+              "mean": 0.012117857142857149,
+              "bootstrap95": [
+                -0.10051431547619048,
+                0.16082175595238093
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_gradient_matched": {
+              "n_participants": 14,
+              "mean": 0.06960694444444446,
+              "bootstrap95": [
+                -0.05795151289682538,
+                0.2132434672619048
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            }
+          }
+        },
+        "0.1": {
+          "eligible_cases": 36,
+          "contrasts": {
+            "exact_minus_random_matched": {
+              "n_participants": 14,
+              "mean": 0.05532380952380953,
+              "bootstrap95": [
+                -0.03662382440476191,
+                0.15755619047619046
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_RMS_matched": {
+              "n_participants": 14,
+              "mean": -0.07084047619047619,
+              "bootstrap95": [
+                -0.163891875,
+                0.028718750000000005
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_sigma_matched": {
+              "n_participants": 14,
+              "mean": 0.036149404761904765,
+              "bootstrap95": [
+                -0.033539895833333326,
+                0.11979611607142861
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_position_matched": {
+              "n_participants": 14,
+              "mean": 0.01870119047619048,
+              "bootstrap95": [
+                -0.10219880952380951,
+                0.17734773809523807
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_gradient_matched": {
+              "n_participants": 14,
+              "mean": 0.07908710317460318,
+              "bootstrap95": [
+                -0.0651892361111111,
+                0.23401944940476188
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            }
+          }
+        },
+        "0.25": {
+          "eligible_cases": 36,
+          "contrasts": {
+            "exact_minus_random_matched": {
+              "n_participants": 14,
+              "mean": 0.06603065476190476,
+              "bootstrap95": [
+                -0.04008416666666667,
+                0.18580576636904758
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_RMS_matched": {
+              "n_participants": 14,
+              "mean": -0.08402053571428572,
+              "bootstrap95": [
+                -0.18591926339285716,
+                0.025519367559523762
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_sigma_matched": {
+              "n_participants": 14,
+              "mean": 0.04171041666666666,
+              "bootstrap95": [
+                -0.038537745535714284,
+                0.13735550595238094
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_position_matched": {
+              "n_participants": 14,
+              "mean": 0.02319523809523809,
+              "bootstrap95": [
+                -0.10732468750000003,
+                0.18766964285714274
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            },
+            "exact_minus_gradient_matched": {
+              "n_participants": 14,
+              "mean": 0.08928948412698412,
+              "bootstrap95": [
+                -0.07145363591269842,
+                0.26227524801587293
+              ],
+              "unit": "participant mean; paired views retained within participant",
+              "draws": 1000,
+              "seed": 123
+            }
+          }
+        }
+      }
+    }
+  }
+}

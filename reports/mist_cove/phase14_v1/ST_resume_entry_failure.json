@@ -1,0 +1,9 @@
+{
+  "status": "FAIL_CLOSED_METADATA_COLLISION",
+  "reason": "exclusive selection write correctly rejected existing same-attempt frozen metadata; preserved and archived before identical reconstruction",
+  "new_ST_value_reads": 0,
+  "new_inference_forwards": 0,
+  "queries": 0,
+  "selection_canonical_sha256": "994c5f0ed05d74fa002fae642751da69570bf1ad19cb9354492f13fadba9f267",
+  "scientific_settings_changed": false
+}

@@ -1,0 +1,65 @@
+{
+  "unit": "participant resampling; nights, cases and views remain within participant",
+  "draws": 1000,
+  "seed": 123,
+  "primary_proxy_contrasts": {
+    "SC_TRAIN": {
+      "cases": 50,
+      "eligible_cases": 9,
+      "eligible_people": 4,
+      "exact_minus_random": {
+        "n_participants": 4,
+        "mean": 0.020833333333333336,
+        "bootstrap95": [
+          -0.00125,
+          0.06375
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "exact_minus_sigma": {
+        "n_participants": 4,
+        "mean": -0.025,
+        "bootstrap95": [
+          -0.07500000000000001,
+          0.0
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      }
+    },
+    "ST_EVAL": {
+      "cases": 219,
+      "eligible_cases": 25,
+      "eligible_people": 12,
+      "exact_minus_random": {
+        "n_participants": 12,
+        "mean": 0.11684722222222223,
+        "bootstrap95": [
+          0.04658680555555556,
+          0.21211875
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "exact_minus_sigma": {
+        "n_participants": 12,
+        "mean": -0.06470833333333333,
+        "bootstrap95": [
+          -0.13120104166666666,
+          -0.012416666666666666
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      }
+    }
+  },
+  "SC_ST_unpaired": true,
+  "ST_condition_within_person_paired": true,
+  "exploratory_strata_multiplicity_adjusted": false,
+  "human_event_reference": "NOT_TESTED"
+}

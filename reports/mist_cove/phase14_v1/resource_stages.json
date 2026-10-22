@@ -109,5 +109,82 @@
   "generated_isolated_worker_recovery": {
     "status": "COMPLETE",
     "wall_seconds": 4.032656309995218
+  },
+  "ST_EVAL_source_continuation": {
+    "status": "COMPLETE",
+    "wall_seconds": 539.227312641,
+    "role": "ST_EVAL",
+    "records": 44,
+    "complete_records": 44,
+    "physical_epochs": 45446,
+    "scored_epochs": 42691,
+    "detector_failures": 0,
+    "sample_cases": 219,
+    "source_access": {
+      "metadata_reads": 0,
+      "source_hash_reads": 44,
+      "header_reads": 0,
+      "waveform_reads": 44,
+      "hypnogram_reads": 0,
+      "bytes_hashed": 1118391784,
+      "forbidden_opened": 0
+    },
+    "native_full_epoch_forwards": 45446,
+    "GPU_seconds": 0,
+    "historical_state_unchanged": true,
+    "peak_RSS_KiB": 900792,
+    "stage_cost_seconds": {
+      "loading_seconds": 18.010454788061907,
+      "feature_seconds": 6.770778242949746,
+      "native_inference_seconds": 33.143594957946334,
+      "detector_seconds": 251.98430511711922
+    },
+    "audit_input_sha256": "c7ddd1013ee7edfbf9ac4e601f133d8ec96e778b510e18518890d8934ea91bc8",
+    "coordinates_sha256": "f64b34efd7eedbb0986d8056b647f69189ab154bb6b1c69598382b6cccd78762"
+  },
+  "private_waveform_atlas": {
+    "status": "COMPLETE",
+    "wall_seconds": 6.911089932007599,
+    "metadata_reads": 0,
+    "source_hash_reads": 8,
+    "header_reads": 0,
+    "waveform_reads": 8,
+    "hypnogram_reads": 0,
+    "bytes_hashed": 333105968,
+    "forbidden_opened": 0
+  },
+  "ST_EVAL_complete_grid_statistics": {
+    "status": "COMPLETE",
+    "wall_seconds": 3.4686801389907487
+  },
+  "ST_EVAL_witness_audit": {
+    "status": "COMPLETE",
+    "wall_seconds": 374.49869994800247,
+    "cached_head_queries": 35882931,
+    "native_full_example_forwards": 4443,
+    "feature_cache_example_forwards": 1095,
+    "tables": 1095,
+    "exact_tables": 1095,
+    "full_identity_max_abs": 0.0
+  },
+  "ST_EVAL_complete_witness_statistics": {
+    "status": "COMPLETE",
+    "wall_seconds": 0.6933049649960594
+  },
+  "cross_study_synthesis": {
+    "status": "COMPLETE",
+    "wall_seconds": 4.84928758899332
+  },
+  "postflight_fixed_tolerance_aggregation": {
+    "status": "COMPLETE",
+    "wall_seconds": 0.620889592988533,
+    "cached_only": true,
+    "head_queries": 0
+  },
+  "postflight_fixed_tolerance_status_filter_correction": {
+    "status": "COMPLETE",
+    "wall_seconds": 0.6131489969993709,
+    "cached_only": true,
+    "head_queries": 0
   }
 }

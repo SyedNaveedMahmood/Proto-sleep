@@ -1,0 +1,8 @@
+{
+  "stage_blind_algorithms_pretrained_weights_used": false,
+  "separate_pretrained_weight_download_requested": false,
+  "bundled_unused_classifier_files_in_YASA_software_wheel": 12,
+  "bundled_classifier_assets_opened_or_deserialized": false,
+  "original_environment_receipt_field_pretrained_weights_downloaded": false,
+  "clarification": "The frozen field meant no separate pretrained-weight download/use. The software wheel itself bundles12unusedclassifierassets; it is incorrect to infer that no bundled assets arrived with installation. Only deterministic event-detector functions were executed."
+}

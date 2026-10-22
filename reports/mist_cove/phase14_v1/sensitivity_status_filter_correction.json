@@ -1,0 +1,12 @@
+{
+  "status": "CORRECTED_CACHED_POSTFLIGHT_AGGREGATE",
+  "initial_aggregate_sha256": "af5877193135d373c42e949d9d376810b6cbef04c0e19c7ecacdc3f680214f94",
+  "corrected_aggregate_sha256": "8d74c36169d84e9e85b03546ecb55d8385ee0b69040e887816f79d32ef913853",
+  "initial_problem": "unassessable flat/failing detector strata had been included in tolerance summaries",
+  "correction": "apply the same DETECTOR_FAILED and UNASSESSABLE_FLAT exclusions as the frozen primary endpoint",
+  "frozen_primary_gates_changed": false,
+  "EEG_reads": 0,
+  "head_queries": 0,
+  "optimizer_updates": 0,
+  "initial_aggregate_preserved_privately": true
+}

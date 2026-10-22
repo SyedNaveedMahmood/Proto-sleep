@@ -1,0 +1,9 @@
+# Phase XIV multichannel manifest
+
+Metadata-only inventory used the exact authorized root without SCdirectory enumeration. The local SHA256manifest matches independently retrieved official HTTPS bytes; every approved SC file also matches its historical preserved reference. Allowlist:29SC TRAIN PSG/hypnogram pairs from15people and44STpairs from22people,146files total. No SC VAL, RESERVED, additional SC,SHHS or unrelated recordings were opened. Detailed source paths/IDs and manifests stay private; public receipts expose content digests and aggregate counts.
+
+Official STspreadsheet columns identify placebo and temazepam night numbers. Exactly22paired subjects/44condition assignments were verified against the official file digest. A condition was never guessed from the night filename alone. Header/hypnogram date and canonical subject/night matching passed for every pair, including the previously specified strict STcompatibility cases. Original bytes remain unchanged.
+
+Both EEGleads and horizontal EOG are100Hz in all73recordings. SCprocessed EMGenvelope is1Hz in29; STraw chin EMG100Hz in44. Actual STMarker is10Hz despite the generic official page's1Hzdescription. Its native units areID+M-E; it is a device signal, not expert event annotation. Respiration and temperature are inventoried but excluded from waveform analysis. Physical calibration and native timing take precedence over generic expectations.
+
+The first source root appeared as a code literal in early phase commits. It was subsequently removed from current public source and placed in ignored local authorization, pinned by its digest. Existing Git history was preserved under the no-force-push rule, so that earlier path exposure remains a publication limitation. No EEG values, participant prediction vectors or medication-by-person tables were uploaded. The final privacy audit applies to the current publication, with this historical limitation disclosed.

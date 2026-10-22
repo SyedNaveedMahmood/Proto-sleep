@@ -1,0 +1,77 @@
+{
+  "sampling": "first perstage/person/night, up to220; missingstrata not replaced",
+  "contrast": "temazepam-placebo within same person/stage, averaged withinperson",
+  "results": {
+    "BDD_nodes": {
+      "paired_person_stage_strata": 109,
+      "person_mean_delta": {
+        "n_participants": 22,
+        "mean": 79.22500000000001,
+        "bootstrap95": [
+          -30.7147727272727,
+          182.73096590909088
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      }
+    },
+    "compact_active": {
+      "paired_person_stage_strata": 109,
+      "person_mean_delta": {
+        "n_participants": 22,
+        "mean": 0.018181818181818184,
+        "bootstrap95": [
+          -0.09090909090909091,
+          0.1272727272727273
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      }
+    },
+    "global_stable_local_changed": {
+      "paired_person_stage_strata": 109,
+      "person_mean_delta": {
+        "n_participants": 22,
+        "mean": -0.03636363636363637,
+        "bootstrap95": [
+          -0.1,
+          0.03636363636363637
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      }
+    },
+    "spindle_proxy_overlap": {
+      "paired_person_stage_strata": 13,
+      "person_mean_delta": {
+        "n_participants": 11,
+        "mean": -0.004373376623376618,
+        "bootstrap95": [
+          -0.22165516774891778,
+          0.15835321969696972
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      }
+    },
+    "correct": {
+      "paired_person_stage_strata": 109,
+      "person_mean_delta": {
+        "n_participants": 22,
+        "mean": 0.022727272727272728,
+        "bootstrap95": [
+          -0.05454545454545454,
+          0.09545454545454546
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      }
+    }
+  },
+  "causal_effect": "NOT_ESTABLISHED"
+}

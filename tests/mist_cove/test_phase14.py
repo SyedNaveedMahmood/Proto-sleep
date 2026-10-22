@@ -147,3 +147,34 @@ def test_ST_missing_seal_denies_before_data_access(tmp_path,monkeypatch):
  import mist_cove.phase14.protocol as p
  monkeypatch.setattr(p,'PUBLIC',tmp_path)
  with pytest.raises(IntegrityError):p.verify_st_seal()
+
+
+def test_isolated_detector_command_avoids_stdlib_shadowing(tmp_path,monkeypatch):
+ import subprocess,sys
+ import mist_cove.phase14.proxies as p
+ captured=[]
+ class Dummy:pass
+ with monkeypatch.context() as m:
+  m.setattr(p,'PRIVATE',tmp_path);m.setattr(p.subprocess,'Popen',lambda cmd,**kwargs:(captured.append(cmd) or Dummy()))
+  d=p.Detector();d.stderr.close()
+ command=captured[0];assert '-I' in command
+ (tmp_path/'statistics.py').write_text("raise AssertionError('stdlibshadowed')")
+ worker=tmp_path/'worker.py';worker.write_text('import statistics; assert statistics.NormalDist().mean==0')
+ command=[sys.executable,*command[1:-1],str(worker)]
+ result=subprocess.run(command,cwd=tmp_path,capture_output=True,text=True)
+ assert result.returncode==0,result.stderr
+
+
+def test_root_authorization_exact_digest_required(tmp_path,monkeypatch):
+ import mist_cove.phase14.common as c
+ monkeypatch.setattr(c,'PRIVATE',tmp_path)
+ with pytest.raises(FileNotFoundError):c.authorized_root()
+ (tmp_path/'local_authorization.json').write_text(json.dumps({'root':'/generated/unapproved'}))
+ with pytest.raises(IntegrityError):c.authorized_root()
+
+
+@pytest.mark.parametrize('role',['SC_VAL','SC_RESERVED','SHHS','ST_TRAIN'])
+def test_no_fitting_or_excluded_role_record_issuance(role):
+ from mist_cove.phase14.edf_reader import MultiReader
+ m=MultiReader.__new__(MultiReader)
+ with pytest.raises(IntegrityError):m.records(role)

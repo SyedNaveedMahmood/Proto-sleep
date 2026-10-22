@@ -1,0 +1,66 @@
+{
+  "scientific_fits": 6,
+  "fit_limit": 6,
+  "optimizer_updates": 18000,
+  "update_limit": 18000,
+  "ST_fit_updates": 0,
+  "GPU_seconds": 0,
+  "CUDA_correctness": "NOT_RUN_CPU_ONLY_PATCHED_RUNTIME",
+  "conservative_summed_stage_wall_seconds": 2612.954641944947,
+  "scientific_CPU_wall_ceiling_seconds": 24000,
+  "stage_wall_note": "Sum includes failed engineering attempts and postflight aggregation; may overlap elapsed time. Not CPU-core seconds.",
+  "cached_head_queries_scientific": 73241181,
+  "cached_head_queries_by_track": {
+    "SC": 29493900,
+    "ST": 35882931,
+    "context": 7864350
+  },
+  "known_generated_proof_queries_lower_bound": 589826,
+  "known_scientific_plus_generated_proof_queries_lower_bound": 73831007,
+  "head_query_ceiling": 90000000,
+  "query_accounting_limit": "Preexisting regression-suite synthetic calls were not instrumented individually; combined exact all-test query total is not certified.",
+  "tables": {
+    "SC": 900,
+    "ST": 1095,
+    "context": 60
+  },
+  "native_original_epoch_forwards_unique": {
+    "SC": 79984,
+    "ST": 45446
+  },
+  "ST_initial_transport_failure_original_forwards_reused": 1196,
+  "ST_context_base_epoch_forwards_in_frozen_full_grid": 818028,
+  "context_training_base_waveform_forwards": 1728000,
+  "context_training_clean_and_paired_center_exposures": [
+    288000,
+    288000
+  ],
+  "source_access": {
+    "metadata_reads_initial": 3,
+    "official_condition_spreadsheet_reads": 1,
+    "initial_authenticated_source_hash_reads": 146,
+    "SC_source_campaign_hash_and_waveform_opens": 29,
+    "ST_failed_first_record_hash_and_waveform_opens": 1,
+    "ST_continuation_hash_and_waveform_opens": 44,
+    "private_atlas_hash_and_waveform_opens": 8,
+    "total_source_hash_reads_or_rechecks": 228,
+    "total_PSG_waveform_value_opens": 82,
+    "header_reads": 73,
+    "hypnogram_reads": 73,
+    "unique_PSG_and_hypnogram_pairs": 73,
+    "SC_VAL_new_raw_reads": 0,
+    "SC_RESERVED_reads": 0,
+    "unapproved_SC_or_external_reads": 0,
+    "source_count_note": "Counts combine stage receipts and preserved first-record transport failure; repeated approved reopens are included. Private derived-cache reads are separate."
+  },
+  "peak_parent_RSS_KiB_observed": 1226808,
+  "peak_memory_limit": "Detector subprocess peak and whole pipeline high-water were not instrumented.",
+  "private_phase_folder_bytes_including_environment": 2111154136,
+  "detector_environment_bytes": 807068962,
+  "unreviewed_reruns_for_favorable_outcome": 0,
+  "failed_attempts_preserved": [
+    "generated flat-control serialization",
+    "isolated worker import",
+    "ST continuation exclusive selection entry"
+  ]
+}

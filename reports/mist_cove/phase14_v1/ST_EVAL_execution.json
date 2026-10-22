@@ -1,0 +1,31 @@
+{
+  "status": "COMPLETE",
+  "role": "ST_EVAL",
+  "records": 44,
+  "complete_records": 44,
+  "physical_epochs": 45446,
+  "scored_epochs": 42691,
+  "detector_failures": 0,
+  "sample_cases": 219,
+  "source_access": {
+    "metadata_reads": 0,
+    "source_hash_reads": 44,
+    "header_reads": 0,
+    "waveform_reads": 44,
+    "hypnogram_reads": 0,
+    "bytes_hashed": 1118391784,
+    "forbidden_opened": 0
+  },
+  "native_full_epoch_forwards": 45446,
+  "GPU_seconds": 0,
+  "historical_state_unchanged": true,
+  "peak_RSS_KiB": 900792,
+  "stage_cost_seconds": {
+    "loading_seconds": 18.010454788061907,
+    "feature_seconds": 6.770778242949746,
+    "native_inference_seconds": 33.143594957946334,
+    "detector_seconds": 251.98430511711922
+  },
+  "audit_input_sha256": "c7ddd1013ee7edfbf9ac4e601f133d8ec96e778b510e18518890d8934ea91bc8",
+  "coordinates_sha256": "f64b34efd7eedbb0986d8056b647f69189ab154bb6b1c69598382b6cccd78762"
+}

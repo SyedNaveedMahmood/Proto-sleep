@@ -1,0 +1,115 @@
+{
+  "SC": {
+    "mild_hf": {
+      "cases": 150,
+      "prediction_stable": 142,
+      "fixed_clause_eligible": 150,
+      "fixed_clause_valid": 119,
+      "active_substitution": 5,
+      "any_original_active_valid": 124
+    },
+    "drift": {
+      "cases": 150,
+      "prediction_stable": 149,
+      "fixed_clause_eligible": 150,
+      "fixed_clause_valid": 141,
+      "active_substitution": 3,
+      "any_original_active_valid": 144
+    },
+    "gain": {
+      "cases": 150,
+      "prediction_stable": 148,
+      "fixed_clause_eligible": 150,
+      "fixed_clause_valid": 148,
+      "active_substitution": 0,
+      "any_original_active_valid": 148
+    }
+  },
+  "ST": {
+    "mild_hf": {
+      "cases": 219,
+      "prediction_stable": 208,
+      "fixed_clause_eligible": 219,
+      "fixed_clause_valid": 142,
+      "active_substitution": 1,
+      "any_original_active_valid": 143
+    },
+    "drift": {
+      "cases": 219,
+      "prediction_stable": 216,
+      "fixed_clause_eligible": 219,
+      "fixed_clause_valid": 182,
+      "active_substitution": 0,
+      "any_original_active_valid": 182
+    },
+    "gain": {
+      "cases": 219,
+      "prediction_stable": 212,
+      "fixed_clause_eligible": 219,
+      "fixed_clause_valid": 208,
+      "active_substitution": 0,
+      "any_original_active_valid": 208
+    }
+  },
+  "neutral": {
+    "SC": {
+      "cases": 150,
+      "neutral_cases": 150,
+      "neutral_changed_tables": 127,
+      "neutral_minimum_changed": 34
+    },
+    "ST": {
+      "cases": 219,
+      "neutral_cases": 219,
+      "neutral_changed_tables": 206,
+      "neutral_minimum_changed": 45
+    }
+  },
+  "physical": {
+    "SC": {
+      "bridge": {
+        "requests": 2250,
+        "attempted": 2250,
+        "compatible": 42,
+        "nontarget_exact": 2250,
+        "target_response_lost": 11,
+        "structural_physical_disagreements": 10,
+        "not_estimable": false,
+        "clinical_event_deletion": "NOT_TESTED"
+      },
+      "background": {
+        "requests": 2250,
+        "attempted": 0,
+        "compatible": 0,
+        "nontarget_exact": 0,
+        "target_response_lost": 0,
+        "structural_physical_disagreements": 0,
+        "not_estimable": true,
+        "clinical_event_deletion": "NOT_TESTED"
+      }
+    },
+    "ST": {
+      "bridge": {
+        "requests": 3285,
+        "attempted": 3285,
+        "compatible": 500,
+        "nontarget_exact": 3285,
+        "target_response_lost": 37,
+        "structural_physical_disagreements": 102,
+        "not_estimable": false,
+        "clinical_event_deletion": "NOT_TESTED"
+      },
+      "background": {
+        "requests": 3285,
+        "attempted": 282,
+        "compatible": 94,
+        "nontarget_exact": 282,
+        "target_response_lost": 0,
+        "structural_physical_disagreements": 7,
+        "not_estimable": false,
+        "clinical_event_deletion": "NOT_TESTED"
+      }
+    }
+  },
+  "interpretation": "fixed-target original clauses, active substitution distinct; rejected replacements preserved; no clinical label-preservation claim"
+}
