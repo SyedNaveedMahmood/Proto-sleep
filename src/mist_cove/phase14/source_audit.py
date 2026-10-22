@@ -44,12 +44,18 @@ def run(role):
         samples=selection['primary']+selection['prevalence'];sample_waves={k:np.empty((len(samples),3000),np.float32) for k in ('EEG Fpz-Cz','EEG Pz-Oz','EOG horizontal')}
     else:
         samples=[]
+        # Final prospective STseal refines the initial pooled-night proposal to
+        # one per stage/night for identifiable paired-condition summaries.
         for person in sorted({r['record']['subject'] for r in geometry if r['record']['role']==role}):
             for stage in range(5):
-                pool=[{'recording_id':r['record']['recording'],'subject':person,'stage':stage,'epoch':i} for r in sorted(geometry,key=lambda a:a['record']['recording']) if r['record']['subject']==person for i,y in enumerate(r['labels']) if y==stage]
-                samples.extend(pool[:2])
+                for night in (1,2):
+                    pool=[{'recording_id':r['record']['recording'],'subject':person,'stage':stage,'epoch':i}
+                          for r in sorted(geometry,key=lambda a:a['record']['recording'])
+                          if r['record']['subject']==person and r['record']['night']==night
+                          for i,y in enumerate(r['labels']) if y==stage]
+                    samples.extend(pool[:1])
         sample_waves={k:np.empty((len(samples),3000),np.float32) for k in ('EEG Fpz-Cz','EEG Pz-Oz','EOG horizontal')}
-        write_new(PRIVATE/'ST_selection.json',{'primary':samples,'missing':220-len(samples),'policy':'first2perstageperson,canonicalnight/physicalorder,notpredictions'})
+        write_new(PRIVATE/'ST_selection.json',{'primary':samples,'missing':220-len(samples),'policy':'first1perstagepersonnight,maximum220,missingstratakept; finalprospectiveSTrefinement,notpredictions'})
     outdir=PRIVATE/role;outdir.mkdir(exist_ok=True)
     with measured(role+'_source_campaign') as counts:
         for ordinal,record in enumerate(source.records(role)):
