@@ -1,0 +1,53 @@
+{
+  "status": "PASS_METADATA_ONLY",
+  "SC_TRAIN_participants": 15,
+  "SC_TRAIN_recordings": 29,
+  "ST_subjects": 22,
+  "ST_recordings": 44,
+  "allowed_PSG_hypnogram_files": 146,
+  "official_manifest_sha256": "1bc88e19e2e921f7851d7cf61e31ceb8f6d670211ca546a323e9db5a77525edf",
+  "official_manifest_independently_matched": true,
+  "manifest_canonical_sha256": "cddf1d4bd1d5f188999a5572a14865145ab1b76a147306a0feddecd8cbc1dc70",
+  "historical_model": {
+    "status": "PASS",
+    "checkpoint_byte_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147",
+    "named_state_digest": "1b308f3fc38af22609d2043b0988998b1a193c6d4ace73ac84382bb17e1a4c6d",
+    "restricted_load": true,
+    "custom_globals": false,
+    "torch_version": "2.10.0+cpu",
+    "source_hashes": {
+      "src/mist_evidence/model.py": "366ea206ed01f1579466ead362ecf3d2e5cf7f43ff5446b419cf879a60be1058",
+      "src/mist_evidence/cli.py": "16938fccb99f35b0a0cbb8ad1e67f357da253511c9e8ddd315c658ff276b3c09",
+      "src/mist_transfer/baselines.py": "77e0c409f6b886137b80b9cecb0a4fa9c2f0e36d022d9484e36920715f0b8854"
+    },
+    "parameters": 34197,
+    "originally_trainable_parameters": 33957,
+    "features": 209,
+    "stages": [
+      "Wake",
+      "N1",
+      "N2",
+      "N3",
+      "REM"
+    ],
+    "best_epoch": 28,
+    "bank_waveforms_digest": "4b207142763ec056f7cd0c01a85859f6a7e955ad03be6f63d003e435b0a2d743",
+    "bank_metadata_digest": "ee1d3c19b617c8d12b114fbeaee6c0926067adff3aad71120a9d25d6dd902bf4",
+    "state_unchanged": true,
+    "wall_seconds": 0.016399724991060793,
+    "real_EEG_accessed": false
+  },
+  "metadata_reads": {
+    "metadata_reads": 3,
+    "source_hash_reads": 0,
+    "header_reads": 0,
+    "waveform_reads": 0,
+    "hypnogram_reads": 0,
+    "bytes_hashed": 0,
+    "forbidden_opened": 0
+  },
+  "ST_waveform_values_opened": false,
+  "SC_RESERVED_reads": 0,
+  "new_SC_VAL_reads": 0,
+  "external_data_reads": 0
+}

@@ -1,0 +1,336 @@
+{
+  "version": "phase14-ST-final-freeze-v1",
+  "config": {
+    "version": "phase14-multichannel-v1",
+    "base": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+    "allowed_roles": [
+      "SC_TRAIN",
+      "ST_EVAL"
+    ],
+    "original_model": "P3B/raw_context/123",
+    "primary_channels": [
+      "EEG Fpz-Cz",
+      "EEG Pz-Oz",
+      "EOG horizontal",
+      "EMG submental"
+    ],
+    "marker_channels": [
+      "Event marker",
+      "Marker"
+    ],
+    "detector": {
+      "yasa": "0.6.5",
+      "numpy": "1.26.4",
+      "scipy": "1.15.3",
+      "mne": "1.10.2",
+      "stage_blind": true,
+      "pretrained_weights": false,
+      "core_seconds": 1800,
+      "padding_seconds": 30,
+      "recording_edge_exclusion_seconds": 10,
+      "spindle": {
+        "freq_sp": [
+          12,
+          15
+        ],
+        "freq_broad": [
+          1,
+          30
+        ],
+        "duration": [
+          0.5,
+          2
+        ],
+        "min_distance": 500,
+        "thresh": {
+          "rel_pow": 0.2,
+          "corr": 0.65,
+          "rms": 1.5
+        },
+        "multi_only": false,
+        "remove_outliers": false
+      },
+      "spindle_sensitivity_rms": 2.0,
+      "slow_wave": {
+        "freq_sw": [
+          0.3,
+          1.5
+        ],
+        "dur_neg": [
+          0.3,
+          1.5
+        ],
+        "dur_pos": [
+          0.1,
+          1
+        ],
+        "amp_neg": [
+          40,
+          200
+        ],
+        "amp_pos": [
+          10,
+          150
+        ],
+        "amp_ptp": [
+          75,
+          350
+        ],
+        "coupling": false,
+        "remove_outliers": false
+      },
+      "slow_wave_relaxed": {
+        "amp_neg": [
+          20,
+          200
+        ],
+        "amp_pos": [
+          5,
+          150
+        ],
+        "amp_ptp": [
+          40,
+          350
+        ]
+      },
+      "spectral_controls": {
+        "sigma": [
+          12,
+          15,
+          0.2
+        ],
+        "delta": [
+          0.5,
+          2,
+          0.4
+        ],
+        "alpha": [
+          8,
+          13,
+          0.3
+        ],
+        "theta": [
+          4,
+          7,
+          0.3
+        ],
+        "HF": [
+          30,
+          45,
+          0.3
+        ]
+      },
+      "EOG": {
+        "band_Hz": [
+          0.3,
+          5
+        ],
+        "excursion_uV": 50,
+        "duration_seconds": [
+          0.1,
+          3
+        ]
+      },
+      "EMG": {
+        "ST_band_Hz": [
+          20,
+          45
+        ],
+        "SC_native_envelope_Hz": 1,
+        "low_uV": 3,
+        "high_uV": 20
+      },
+      "artifacts": {
+        "flat_seconds": 1,
+        "step_uV": 100,
+        "extreme_uV": 500
+      }
+    },
+    "sampling": {
+      "SC_balanced": "reuse authenticated PhaseXIII150 ranks11/12 perstage/person",
+      "SC_prevalence_per_person": 10,
+      "SC_prevalence_seed": 14017,
+      "ST_per_stage_person": 2,
+      "ST_order": "canonical recording/night then physical epoch",
+      "context_mechanistic_cases": 5
+    },
+    "explanation": {
+      "atoms": 15,
+      "margin_epsilon": 1e-06,
+      "neutral": [
+        0,
+        0.01
+      ],
+      "views": [
+        "mild_hf",
+        "drift",
+        "gain"
+      ],
+      "whole_epoch_mild_HF_Hz": 32,
+      "mild_HF_RMS": 0.05,
+      "drift_Hz": 0.2,
+      "drift_RMS": 0.1,
+      "gain": 1.05,
+      "view_seed": 123,
+      "SC_prevalence_views": false,
+      "compact_retained_seconds_max": 8,
+      "compact_literals_max": 8,
+      "proxy_tolerances_seconds": [
+        0,
+        0.1,
+        0.25
+      ],
+      "control_random_seed": 14024,
+      "proxy_shift_seconds": 10
+    },
+    "statistics": {
+      "bootstrap_draws": 1000,
+      "seed": 123,
+      "unit": "participant; retain nights,epochs,views andoptimizationseeds within person",
+      "cross_study": "unpaired participant bootstrap",
+      "condition": "withinperson paired"
+    },
+    "gates": {
+      "proxy_primary": "Pz-Oz spindle strict overlap precision-like delta exact-positive minus durationmatchedrandom >=0.05 and participant bootstrap95lower>0 with >=20eventeligible nonempty supports and >=5people; SC5dev primary, ST22 independently reported",
+      "spectral_increment": "same criteria versus matched sigma ranking",
+      "transfer": "ST meanparticipantMacroF1>=0.50,N1recall>=0.20,eachstageF1>=0.10,all5classespredicted,maxclassfraction<0.98",
+      "human": "NOT_TESTED"
+    },
+    "context": {
+      "decision": "GO",
+      "reason": "PhaseXIII underoptimization resolved partly, transition-adjacent errors elevated, width/routing incremental gates failed; isolate temporal context at equal parameter count",
+      "capacity": "L",
+      "routing": "R0",
+      "arms": [
+        "C0",
+        "C1"
+      ],
+      "seeds": [
+        123,
+        456,
+        789
+      ],
+      "horizon": 3000,
+      "milestones": [
+        3000
+      ],
+      "batch_size": 16,
+      "optimizer": "Adam",
+      "learning_rate": 0.001,
+      "gradient_clip": 5,
+      "loss": "mean clean and center-local3RMS35Hz paired classification CE",
+      "weights": {
+        "C0": [
+          0,
+          1,
+          0
+        ],
+        "C1": [
+          0.25,
+          0.5,
+          0.25
+        ]
+      },
+      "boundary": "zero weight unavailable same-recording physical neighbors; renormalize valid weights",
+      "future_context": "offline noncausal",
+      "normalization": "reuse exact PhaseXIII10fit-only normalization",
+      "promotion": "allseeds C1-C0 meanparticipantF1>=0.02, transitionaccuracydelta>=0.03,N1recalldelta>=0.05,no classF1loss>0.10",
+      "availability": "17variables inphysicalorder:previouswhole30s,15center2satoms,nextwhole30s; independently verified coarsepartition",
+      "ST_evaluation": "all6fixed finalstates asprespecified comparators; SCgatefailure never permits STpromotion"
+    },
+    "limits": {
+      "scientific_CPU_wall_seconds": 24000,
+      "GPU_seconds": 7200,
+      "new_scientific_fits": 6,
+      "new_confirmatory_updates": 18000,
+      "head_queries": 90000000,
+      "ST_training_updates": 0,
+      "SC_VAL_raw_reads": 0,
+      "SC_RESERVED_reads": 0
+    }
+  },
+  "config_sha256": "aa0de9354c205cffaef5e70f9644d83ac4fa8879894de253f5c8274b381e7215",
+  "source_manifest_sha256": "cddf1d4bd1d5f188999a5572a14865145ab1b76a147306a0feddecd8cbc1dc70",
+  "geometry_sha256": "2c52cc1e5c701d766a06880bc68f7c52a8574416c04f763880d5b29068a9c3ad",
+  "source_sha256": {
+    "src/mist_cove/phase14/__init__.py": "491ed16a6a686fbf5aa5bb99363ea330c9a81de9ab39779426915ce36b60b9f5",
+    "src/mist_cove/phase14/access_control.py": "3af7b894fb34745070b811abd1328218241ad5851353f38ea7509b98237c6b30",
+    "src/mist_cove/phase14/common.py": "be56136a217a0da022770d7d11307e4b3c88f61af1b7fdb9a322d908aef710f5",
+    "src/mist_cove/phase14/context_audit.py": "825cd308e4f444c84daefc19479d22be560d26f400b263be780c4f40db16414d",
+    "src/mist_cove/phase14/context_model.py": "5a0f07545aa7124d4d7b9d663462e763a6cc2c6a0af64e44ef2892c7afa7469a",
+    "src/mist_cove/phase14/context_operator.py": "e81e26f15932d8c689dba311a2c6e41b6c5b4ebfd669cc2f05f71d995a03a90f",
+    "src/mist_cove/phase14/detector_worker.py": "75470b2de49d5fd1c59bda8a8aa065e2bb18c52ac440e5d41730cc850649399e",
+    "src/mist_cove/phase14/edf_reader.py": "e912eed89b69c35d8730c55cec79864caf5631f5cd7ad3d308568698c13b60fe",
+    "src/mist_cove/phase14/event_alignment.py": "495d297cefd18e71e2e601b3d24f07889be06959684d95d1e22e6d675f463f6e",
+    "src/mist_cove/phase14/event_schema.py": "cef5239d140195e2f35d431365d775582c3594de69ac3628c928c2c66c767c9d",
+    "src/mist_cove/phase14/manifest.py": "a03db17ef266bb0bb88ccd89c9bc9073f9eb527f0cc76f24ae7eccda7bfe9cac",
+    "src/mist_cove/phase14/protocol.py": "ee6c1b17df04981b8e81b6d23078d64c23865f061381fff8833b4e90cc674932",
+    "src/mist_cove/phase14/proxies.py": "fb422e6748fe7b36b179869237c157e499155138982dbac4be12691e67e475e5",
+    "src/mist_cove/phase14/signal_preprocessing.py": "37e929838ee9927bb96eb7e2905333a90067032fb541571d412d527248c7c589",
+    "src/mist_cove/phase14/source_audit.py": "e5fe602069c58109a1eb14cea6812f6e8944792803f6fade41a057dc44ddaba3",
+    "src/mist_cove/phase14/statistics.py": "7d71ce89efbf3982aa454f6f46b9671718a779fc41ff6979accb0d6ef52e302f",
+    "src/mist_cove/phase14/synthesis.py": "d362c85eb24ac8e5e33f45e8754ad5cc2e5585ba0f6215d8a97dbbcdb2f3e708",
+    "src/mist_cove/phase14/witness_audit.py": "70afd98787728baae713c1e48150410b6cc7d89298c92f6a791a4e262d29051b",
+    "configs/mist_cove_phase14_v1.json": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+    "docs/mist_cove/PHASE_XIV_ST_FROZEN_EVALUATION_PROTOCOL_V1.md": "454a1330b99fe15cb170416eb41eaec45e05223a5454a512560af81a4d5416e5"
+  },
+  "detector_environment_sha256": "4d299e492241d6e09092ad06b5c3c3c783e6431041ec2e4884d2dec1d9068101",
+  "original_checkpoint_byte_sha256": "f41b768c0ba81547872399a000f4a56338cc34f802bd49522fabb6bd7a56d147",
+  "original_state_digest": "1b308f3fc38af22609d2043b0988998b1a193c6d4ace73ac84382bb17e1a4c6d",
+  "context_states": [
+    {
+      "arm": "C0",
+      "seed": 123,
+      "checkpoint_byte_sha256": "3fbc815470d43c77c891e6935c2b32b66b4463f000cc2102368dd070523b881a",
+      "named_state_digest": "c486c33591a5813df5dc6ef31f43c9ecb62da6f79e1f62a485e4e367b7c09c36"
+    },
+    {
+      "arm": "C1",
+      "seed": 123,
+      "checkpoint_byte_sha256": "be0f9ef955c17c37fc50487112d2192c9841a7faee65c6bee5110aa65bb3ee9a",
+      "named_state_digest": "43e623641f3c08025544c9cb6a18bb23aba3d0030a3faa16efcdc5cde7f691d0"
+    },
+    {
+      "arm": "C0",
+      "seed": 456,
+      "checkpoint_byte_sha256": "dd8b54705c369dc32a0ea13c943fae24a0deb53a1a51471ad3ccb3d3bbe5d103",
+      "named_state_digest": "b7dc4d57af2e3d28ef4a5d13abcadb00c9e1f327a30a45e06081405886c39301"
+    },
+    {
+      "arm": "C1",
+      "seed": 456,
+      "checkpoint_byte_sha256": "4d1fd04177472d0f4aab72f20a3f6f0f541c57eab7e6e2bbcdd98d235c6f838b",
+      "named_state_digest": "70f03ce91abf7d7f5c9ce135b66badce83d09be04040b732b69f0403ec5c037b"
+    },
+    {
+      "arm": "C0",
+      "seed": 789,
+      "checkpoint_byte_sha256": "3b9ba9f817a6a6dbab396f51557c3afbe7f8af156c86a3e0b1056b54016a77ae",
+      "named_state_digest": "ed8a5b83f1aac12133f829699eae73cdebc26c2b9d0548d4e96927bbb6b43a1a"
+    },
+    {
+      "arm": "C1",
+      "seed": 789,
+      "checkpoint_byte_sha256": "c4e74da3bcc6f72e41fe3d50658d4a29e2040962bf9b1b7005cecbb47c96c73f",
+      "named_state_digest": "e22519ccb2d2c32ca1dd9cb33e7fc746b56663a5307b7bd758e0325a37397fd2"
+    }
+  ],
+  "context_SC_gate": "FAIL",
+  "ST_candidate_selection": "all6fixedfinalstates; no STpromotion",
+  "ST_waveform_values_previously_opened": false,
+  "ST_classifier_scores_previously_opened": false,
+  "ST_witness_sampling": "first1eligibleepochperstagepersonnight,maximum220; pre-STrefinementforpairedconditions; missingnight/stageskept",
+  "initial_sampling_proposal_retained": "6074419config proposedfirst2poolingnights; finalrefinementdoesnotchangefullgridinference/models/thresholds",
+  "condition_metadata_sha256": "b377133e03897559e3e9fa8ef468f4505becaecebe1bc0c988d39a9158267758",
+  "head_query_allocation_max": {
+    "SC_balanced": 24576000,
+    "SC_prevalence": 4915200,
+    "ST_balanced": 36044800,
+    "context_coarse": 7864320,
+    "auxiliary_and_controls": 2000000
+  },
+  "human_validation": "NOT_TESTED",
+  "ST_training_updates": 0,
+  "SC_VAL_reads": 0,
+  "SC_RESERVED_reads": 0
+}

@@ -1,0 +1,20 @@
+{
+  "version": "phase14-initial-freeze-v1",
+  "config_sha256": "aa0de9354c205cffaef5e70f9644d83ac4fa8879894de253f5c8274b381e7215",
+  "selection_sha256": "059937c8227fe22d0bd59c39cb85e50745a6f1e2eb3d6b4ec9bcb5fa70a0cd7d",
+  "condition_metadata_sha256": "b377133e03897559e3e9fa8ef468f4505becaecebe1bc0c988d39a9158267758",
+  "conditions_verified_people": 22,
+  "condition_counts": {
+    "placebo": 22,
+    "temazepam": 22
+  },
+  "SC_primary": 150,
+  "SC_prevalence": 150,
+  "context_decision": "GO",
+  "ST_values_opened": false,
+  "new_training_fits_max": 6,
+  "new_updates_max": 18000,
+  "source_manifest_sha256": "cddf1d4bd1d5f188999a5572a14865145ab1b76a147306a0feddecd8cbc1dc70",
+  "geometry_sha256": "2c52cc1e5c701d766a06880bc68f7c52a8574416c04f763880d5b29068a9c3ad",
+  "sample_selection_outcome_adaptive": false
+}

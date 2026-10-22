@@ -1,0 +1,24 @@
+{
+ "version":"phase14-multichannel-v1",
+ "base":"1b6f25ee48945d624cfde61af4824efcd04bb96d",
+ "allowed_roles":["SC_TRAIN","ST_EVAL"],
+ "original_model":"P3B/raw_context/123",
+ "primary_channels":["EEG Fpz-Cz","EEG Pz-Oz","EOG horizontal","EMG submental"],
+ "marker_channels":["Event marker","Marker"],
+ "detector":{"yasa":"0.6.5","numpy":"1.26.4","scipy":"1.15.3","mne":"1.10.2","stage_blind":true,"pretrained_weights":false,"core_seconds":1800,"padding_seconds":30,"recording_edge_exclusion_seconds":10,
+  "spindle":{"freq_sp":[12,15],"freq_broad":[1,30],"duration":[0.5,2],"min_distance":500,"thresh":{"rel_pow":0.2,"corr":0.65,"rms":1.5},"multi_only":false,"remove_outliers":false},
+  "spindle_sensitivity_rms":2.0,
+  "slow_wave":{"freq_sw":[0.3,1.5],"dur_neg":[0.3,1.5],"dur_pos":[0.1,1],"amp_neg":[40,200],"amp_pos":[10,150],"amp_ptp":[75,350],"coupling":false,"remove_outliers":false},
+  "slow_wave_relaxed":{"amp_neg":[20,200],"amp_pos":[5,150],"amp_ptp":[40,350]},
+  "spectral_controls":{"sigma":[12,15,0.2],"delta":[0.5,2,0.4],"alpha":[8,13,0.3],"theta":[4,7,0.3],"HF":[30,45,0.3]},
+  "EOG":{"band_Hz":[0.3,5],"excursion_uV":50,"duration_seconds":[0.1,3]},
+  "EMG":{"ST_band_Hz":[20,45],"SC_native_envelope_Hz":1,"low_uV":3,"high_uV":20},
+  "artifacts":{"flat_seconds":1,"step_uV":100,"extreme_uV":500}
+ },
+ "sampling":{"SC_balanced":"reuse authenticated PhaseXIII150 ranks11/12 perstage/person","SC_prevalence_per_person":10,"SC_prevalence_seed":14017,"ST_per_stage_person":2,"ST_order":"canonical recording/night then physical epoch","context_mechanistic_cases":5},
+ "explanation":{"atoms":15,"margin_epsilon":0.000001,"neutral":[0,0.01],"views":["mild_hf","drift","gain"],"whole_epoch_mild_HF_Hz":32,"mild_HF_RMS":0.05,"drift_Hz":0.2,"drift_RMS":0.1,"gain":1.05,"view_seed":123,"SC_prevalence_views":false,"compact_retained_seconds_max":8,"compact_literals_max":8,"proxy_tolerances_seconds":[0,0.1,0.25],"control_random_seed":14024,"proxy_shift_seconds":10},
+ "statistics":{"bootstrap_draws":1000,"seed":123,"unit":"participant; retain nights,epochs,views andoptimizationseeds within person","cross_study":"unpaired participant bootstrap","condition":"withinperson paired"},
+ "gates":{"proxy_primary":"Pz-Oz spindle strict overlap precision-like delta exact-positive minus durationmatchedrandom >=0.05 and participant bootstrap95lower>0 with >=20eventeligible nonempty supports and >=5people; SC5dev primary, ST22 independently reported","spectral_increment":"same criteria versus matched sigma ranking","transfer":"ST meanparticipantMacroF1>=0.50,N1recall>=0.20,eachstageF1>=0.10,all5classespredicted,maxclassfraction<0.98","human":"NOT_TESTED"},
+ "context":{"decision":"GO","reason":"PhaseXIII underoptimization resolved partly, transition-adjacent errors elevated, width/routing incremental gates failed; isolate temporal context at equal parameter count","capacity":"L","routing":"R0","arms":["C0","C1"],"seeds":[123,456,789],"horizon":3000,"milestones":[3000],"batch_size":16,"optimizer":"Adam","learning_rate":0.001,"gradient_clip":5,"loss":"mean clean and center-local3RMS35Hz paired classification CE","weights":{"C0":[0,1,0],"C1":[0.25,0.5,0.25]},"boundary":"zero weight unavailable same-recording physical neighbors; renormalize valid weights","future_context":"offline noncausal","normalization":"reuse exact PhaseXIII10fit-only normalization","promotion":"allseeds C1-C0 meanparticipantF1>=0.02, transitionaccuracydelta>=0.03,N1recalldelta>=0.05,no classF1loss>0.10","availability":"17variables inphysicalorder:previouswhole30s,15center2satoms,nextwhole30s; independently verified coarsepartition","ST_evaluation":"all6fixed finalstates asprespecified comparators; SCgatefailure never permits STpromotion"},
+ "limits":{"scientific_CPU_wall_seconds":24000,"GPU_seconds":7200,"new_scientific_fits":6,"new_confirmatory_updates":18000,"head_queries":90000000,"ST_training_updates":0,"SC_VAL_raw_reads":0,"SC_RESERVED_reads":0}
+}

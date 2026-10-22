@@ -1,0 +1,76 @@
+{
+  "SC_proxy": {
+    "proxy_primary": {
+      "status": "NOT_ESTIMABLE",
+      "contrast": {
+        "n_participants": 4,
+        "mean": 0.020833333333333336,
+        "bootstrap95": [
+          -0.00125,
+          0.06375
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "eligible_cases": 9,
+      "eligible_people": 4
+    },
+    "spectral_increment": {
+      "status": "NOT_ESTIMABLE",
+      "contrast": {
+        "n_participants": 4,
+        "mean": -0.025,
+        "bootstrap95": [
+          -0.07500000000000001,
+          0.0
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "eligible_cases": 9,
+      "eligible_people": 4
+    }
+  },
+  "ST_proxy": {
+    "proxy_primary": {
+      "status": "PASS",
+      "contrast": {
+        "n_participants": 12,
+        "mean": 0.11684722222222223,
+        "bootstrap95": [
+          0.04658680555555556,
+          0.21211875
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "eligible_cases": 25,
+      "eligible_people": 12
+    },
+    "spectral_increment": {
+      "status": "FAIL",
+      "contrast": {
+        "n_participants": 12,
+        "mean": -0.06470833333333333,
+        "bootstrap95": [
+          -0.13120104166666666,
+          -0.012416666666666666
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "eligible_cases": 25,
+      "eligible_people": 12
+    }
+  },
+  "ST_transfer": "PASS",
+  "SC_context": "FAIL",
+  "exact_operator_correctness": "PASS",
+  "human_event_validation": "NOT_TESTED",
+  "clinical_event_deletion": "NOT_TESTED",
+  "external_clinical_validation": "NOT_TESTED"
+}

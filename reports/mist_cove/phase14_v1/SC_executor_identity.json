@@ -1,0 +1,13 @@
+{
+  "source_sha256": {
+    "src/mist_cove/phase14/common.py": "be56136a217a0da022770d7d11307e4b3c88f61af1b7fdb9a322d908aef710f5",
+    "src/mist_cove/phase14/access_control.py": "3af7b894fb34745070b811abd1328218241ad5851353f38ea7509b98237c6b30",
+    "src/mist_cove/phase14/edf_reader.py": "5255a094aebda5c89b13fbdd597a8bcf88e8333e04836d4b197dd0a0a36a7406",
+    "src/mist_cove/phase14/proxies.py": "fb422e6748fe7b36b179869237c157e499155138982dbac4be12691e67e475e5",
+    "src/mist_cove/phase14/source_audit.py": "366176ebe0e1c045dd2cb2de5d364956b8338403d9da24621d5808e5c3a6b271",
+    "src/mist_cove/phase14/signal_preprocessing.py": "37e929838ee9927bb96eb7e2905333a90067032fb541571d412d527248c7c589",
+    "src/mist_cove/phase14/detector_worker.py": "adaa67bcde5006c01e8f12a36720408018cda8f7776c0ce9bdf61dc0b157aa07"
+  },
+  "config_sha256": "aa0de9354c205cffaef5e70f9644d83ac4fa8879894de253f5c8274b381e7215",
+  "timing": "identity recorded during fixed SC run; methods/thresholds frozen in6074419 before source proxy outcomes; no thresholds changed"
+}

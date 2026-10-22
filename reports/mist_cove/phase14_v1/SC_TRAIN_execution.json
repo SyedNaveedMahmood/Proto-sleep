@@ -1,0 +1,32 @@
+{
+  "status": "COMPLETE",
+  "role": "SC_TRAIN",
+  "records": 29,
+  "complete_records": 29,
+  "physical_epochs": 79984,
+  "scored_epochs": 79025,
+  "detector_failures": 0,
+  "sample_cases": 300,
+  "source_access": {
+    "metadata_reads": 0,
+    "source_hash_reads": 29,
+    "header_reads": 0,
+    "waveform_reads": 29,
+    "hypnogram_reads": 0,
+    "bytes_hashed": 1458967552,
+    "forbidden_opened": 0
+  },
+  "native_full_epoch_forwards": 79984,
+  "GPU_seconds": 0,
+  "historical_state_unchanged": true,
+  "peak_RSS_KiB": 1226808,
+  "stage_cost_seconds": {
+    "loading_seconds": 17.97080399202241,
+    "feature_seconds": 3.580629906951799,
+    "native_inference_seconds": 61.22971824098204,
+    "detector_seconds": 423.94603053096216
+  },
+  "audit_input_sha256": "8c2a2f020bdda523902d1b96d9cabe23cee0ac47ee929e15cb374969bd093104",
+  "coordinates_sha256": "41795300cc124fd0702e3cf5594afd686001b1cf296b91bdf6721563f173f5ec",
+  "context_data_sha256": "f2005ac148b606d7411fda29dfd7a35227e140e1e8d9dee5955b3e3f90ad9ccb"
+}

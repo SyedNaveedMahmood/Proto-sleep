@@ -1,0 +1,2395 @@
+{
+  "role": "ST_EVAL",
+  "recordings": 44,
+  "participants": 22,
+  "physical_epochs": 45446,
+  "scored_epochs": 42691,
+  "unscored_epochs": 2755,
+  "primary_detection_stage_blind": true,
+  "proxies": {
+    "EEG Fpz-Cz|HF": {
+      "event_count": 515,
+      "person_rate_per_hour_distribution": {
+        "n": 22,
+        "mean": 1.3738270331240725,
+        "median": 0.9616966521832349,
+        "min": 0.17405318291700242,
+        "max": 4.905833716123105,
+        "q25": 0.5097494156247989,
+        "q75": 1.8744880862633055
+      },
+      "person_mean_rate": {
+        "n_participants": 22,
+        "mean": 1.3738270331240725,
+        "bootstrap95": [
+          0.9200400647638908,
+          1.8767040194594016
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "duration_seconds": {
+        "n": 515,
+        "mean": 2.341747572815534,
+        "median": 2.0,
+        "min": 2.0,
+        "max": 12.0,
+        "q25": 2.0,
+        "q75": 2.0
+      },
+      "frequency_Hz": {
+        "n": 0
+      },
+      "amplitude_uV": {
+        "n": 0
+      },
+      "stage_and_unscored_event_counts": [
+        254,
+        86,
+        52,
+        6,
+        32,
+        85
+      ],
+      "stage_and_unscored_hours": [
+        36.858333333333334,
+        30.441666666666666,
+        165.425,
+        53.458333333333336,
+        69.575,
+        22.958333333333332
+      ],
+      "stage_conditioning": "post-detection descriptive, primary detector stage-blind",
+      "clinical_event_accuracy": "NOT_TESTED"
+    },
+    "EEG Fpz-Cz|alpha": {
+      "event_count": 10497,
+      "person_rate_per_hour_distribution": {
+        "n": 22,
+        "mean": 28.086391674950356,
+        "median": 21.118196600511798,
+        "min": 4.276018099547511,
+        "max": 82.93285644610633,
+        "q25": 14.409416907264582,
+        "q75": 39.29924398140881
+      },
+      "person_mean_rate": {
+        "n_participants": 22,
+        "mean": 28.086391674950356,
+        "bootstrap95": [
+          20.473717336596696,
+          37.489843682005784
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "duration_seconds": {
+        "n": 10497,
+        "mean": 2.4344098313803944,
+        "median": 2.0,
+        "min": 2.0,
+        "max": 28.0,
+        "q25": 2.0,
+        "q75": 2.0
+      },
+      "frequency_Hz": {
+        "n": 0
+      },
+      "amplitude_uV": {
+        "n": 0
+      },
+      "stage_and_unscored_event_counts": [
+        1772,
+        950,
+        6522,
+        262,
+        937,
+        54
+      ],
+      "stage_and_unscored_hours": [
+        36.858333333333334,
+        30.441666666666666,
+        165.425,
+        53.458333333333336,
+        69.575,
+        22.958333333333332
+      ],
+      "stage_conditioning": "post-detection descriptive, primary detector stage-blind",
+      "clinical_event_accuracy": "NOT_TESTED"
+    },
+    "EEG Fpz-Cz|clip": {
+      "event_count": 35,
+      "person_rate_per_hour_distribution": {
+        "n": 22,
+        "mean": 0.08802944575380438,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 1.5434083601286173,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "person_mean_rate": {
+        "n_participants": 22,
+        "mean": 0.08802944575380438,
+        "bootstrap95": [
+          0.005276039453050577,
+          0.23355928599873305
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "duration_seconds": {
+        "n": 35,
+        "mean": 0.23200000000030974,
+        "median": 0.040000000000873115,
+        "min": 0.00999999999839929,
+        "max": 2.290000000000873,
+        "q25": 0.015000000001236913,
+        "q75": 0.12000000000080036
+      },
+      "frequency_Hz": {
+        "n": 0
+      },
+      "amplitude_uV": {
+        "n": 0
+      },
+      "stage_and_unscored_event_counts": [
+        3,
+        0,
+        1,
+        0,
+        0,
+        31
+      ],
+      "stage_and_unscored_hours": [
+        36.858333333333334,
+        30.441666666666666,
+        165.425,
+        53.458333333333336,
+        69.575,
+        22.958333333333332
+      ],
+      "stage_conditioning": "post-detection descriptive, primary detector stage-blind",
+      "clinical_event_accuracy": "NOT_TESTED"
+    },
+    "EEG Fpz-Cz|delta": {
+      "event_count": 73428,
+      "person_rate_per_hour_distribution": {
+        "n": 22,
+        "mean": 193.5721854928971,
+        "median": 191.74112422644143,
+        "min": 91.8183199149324,
+        "max": 290.2562519296079,
+        "q25": 169.76715295617768,
+        "q75": 221.9570206532676
+      },
+      "person_mean_rate": {
+        "n_participants": 22,
+        "mean": 193.5721854928971,
+        "bootstrap95": [
+          173.621960415382,
+          213.71016033209696
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "duration_seconds": {
+        "n": 73428,
+        "mean": 14.79432913874816,
+        "median": 6.0,
+        "min": 2.0,
+        "max": 1860.0,
+        "q25": 4.0,
+        "q75": 14.0
+      },
+      "frequency_Hz": {
+        "n": 0
+      },
+      "amplitude_uV": {
+        "n": 0
+      },
+      "stage_and_unscored_event_counts": [
+        7336,
+        7437,
+        37662,
+        1942,
+        18233,
+        818
+      ],
+      "stage_and_unscored_hours": [
+        36.858333333333334,
+        30.441666666666666,
+        165.425,
+        53.458333333333336,
+        69.575,
+        22.958333333333332
+      ],
+      "stage_conditioning": "post-detection descriptive, primary detector stage-blind",
+      "clinical_event_accuracy": "NOT_TESTED"
+    },
+    "EEG Fpz-Cz|extreme": {
+      "event_count": 4361,
+      "person_rate_per_hour_distribution": {
+        "n": 22,
+        "mean": 11.434844520426084,
+        "median": 7.693228083820436,
+        "min": 0.38900895338067304,
+        "max": 40.349104271933854,
+        "q25": 3.1377233677143286,
+        "q75": 16.688231866735457
+      },
+      "person_mean_rate": {
+        "n_participants": 22,
+        "mean": 11.434844520426084,
+        "bootstrap95": [
+          7.084093862965381,
+          16.365984351803956
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "duration_seconds": {
+        "n": 4361,
+        "mean": 8.22371245127265,
+        "median": 0.01999999999679858,
+        "min": 0.00999999999476131,
+        "max": 1860.0,
+        "q25": 0.010000000000001563,
+        "q75": 0.040000000000873115
+      },
+      "frequency_Hz": {
+        "n": 0
+      },
+      "amplitude_uV": {
+        "n": 0
+      },
+      "stage_and_unscored_event_counts": [
+        2727,
+        326,
+        249,
+        161,
+        149,
+        749
+      ],
+      "stage_and_unscored_hours": [
+        36.858333333333334,
+        30.441666666666666,
+        165.425,
+        53.458333333333336,
+        69.575,
+        22.958333333333332
+      ],
+      "stage_conditioning": "post-detection descriptive, primary detector stage-blind",
+      "clinical_event_accuracy": "NOT_TESTED"
+    },
+    "EEG Fpz-Cz|flat": {
+      "event_count": 124,
+      "person_rate_per_hour_distribution": {
+        "n": 22,
+        "mean": 0.32647090964756986,
+        "median": 0.3056839160303503,
+        "min": 0.1170541375386116,
+        "max": 0.5599547511312217,
+        "q25": 0.24514323031036736,
+        "q75": 0.4400532706321684
+      },
+      "person_mean_rate": {
+        "n_participants": 22,
+        "mean": 0.32647090964756986,
+        "bootstrap95": [
+          0.27220374066885183,
+          0.3785393228291378
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "duration_seconds": {
+        "n": 124,
+        "mean": 572.5800000000004,
+        "median": 294.3099999999995,
+        "min": 1.0499999999992724,
+        "max": 1859.9900000000016,
+        "q25": 25.432499999999997,
+        "q75": 1043.749999999999
+      },
+      "frequency_Hz": {
+        "n": 0
+      },
+      "amplitude_uV": {
+        "n": 0
+      },
+      "stage_and_unscored_event_counts": [
+        22,
+        0,
+        0,
+        0,
+        0,
+        101
+      ],
+      "stage_and_unscored_hours": [
+        36.858333333333334,
+        30.441666666666666,
+        165.425,
+        53.458333333333336,
+        69.575,
+        22.958333333333332
+      ],
+      "stage_conditioning": "post-detection descriptive, primary detector stage-blind",
+      "clinical_event_accuracy": "NOT_TESTED"
+    },
+    "EEG Fpz-Cz|sigma": {
+      "event_count": 21547,
+      "person_rate_per_hour_distribution": {
+        "n": 22,
+        "mean": 56.81682397460258,
+        "median": 48.275077831234945,
+        "min": 3.5614661044437237,
+        "max": 127.50586395621579,
+        "q25": 24.982344861021332,
+        "q75": 85.78444882776262
+      },
+      "person_mean_rate": {
+        "n_participants": 22,
+        "mean": 56.81682397460258,
+        "bootstrap95": [
+          40.314480797171036,
+          73.84838985318783
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "duration_seconds": {
+        "n": 21547,
+        "mean": 2.408595164059962,
+        "median": 2.0,
+        "min": 2.0,
+        "max": 26.0,
+        "q25": 2.0,
+        "q75": 2.0
+      },
+      "frequency_Hz": {
+        "n": 0
+      },
+      "amplitude_uV": {
+        "n": 0
+      },
+      "stage_and_unscored_event_counts": [
+        108,
+        243,
+        19426,
+        523,
+        1228,
+        19
+      ],
+      "stage_and_unscored_hours": [
+        36.858333333333334,
+        30.441666666666666,
+        165.425,
+        53.458333333333336,
+        69.575,
+        22.958333333333332
+      ],
+      "stage_conditioning": "post-detection descriptive, primary detector stage-blind",
+      "clinical_event_accuracy": "NOT_TESTED"
+    },
+    "EEG Fpz-Cz|slow_wave": {
+      "event_count": 62835,
+      "person_rate_per_hour_distribution": {
+        "n": 22,
+        "mean": 167.20036456348183,
+        "median": 172.94999269465427,
+        "min": 8.17385663314953,
+        "max": 347.5802031275189,
+        "q25": 112.2243649969336,
+        "q75": 209.1633643360019
+      },
+      "person_mean_rate": {
+        "n_participants": 22,
+        "mean": 167.20036456348183,
+        "bootstrap95": [
+          128.28247258290946,
+          206.27117607158885
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "duration_seconds": {
+        "n": 62835,
+        "mean": 1.2550947720219614,
+        "median": 1.2299999999995634,
+        "min": 0.47999999999956344,
+        "max": 2.469999999999345,
+        "q25": 0.9899999999997817,
+        "q75": 1.4700000000011642
+      },
+      "frequency_Hz": {
+        "n": 62835,
+        "mean": 0.8519351860844702,
+        "median": 0.8130081300813008,
+        "min": 0.4048582995951417,
+        "max": 2.0833333333333335,
+        "q25": 0.6802721088435374,
+        "q75": 1.0101010101010102
+      },
+      "amplitude_uV": {
+        "n": 62835,
+        "mean": 125.03431737128585,
+        "median": 114.01309308565145,
+        "min": 75.00313033732527,
+        "max": 342.40838073757993,
+        "q25": 93.2540266871655,
+        "q75": 146.26220295192996
+      },
+      "stage_and_unscored_event_counts": [
+        3718,
+        858,
+        14085,
+        42337,
+        1093,
+        744
+      ],
+      "stage_and_unscored_hours": [
+        36.858333333333334,
+        30.441666666666666,
+        165.425,
+        53.458333333333336,
+        69.575,
+        22.958333333333332
+      ],
+      "stage_conditioning": "post-detection descriptive, primary detector stage-blind",
+      "clinical_event_accuracy": "NOT_TESTED"
+    },
+    "EEG Fpz-Cz|slow_wave_relaxed": {
+      "event_count": 150266,
+      "person_rate_per_hour_distribution": {
+        "n": 22,
+        "mean": 399.2741033300405,
+        "median": 422.56493557608286,
+        "min": 93.29873499837821,
+        "max": 642.8571428571429,
+        "q25": 308.29749621213875,
+        "q75": 487.7568661162516
+      },
+      "person_mean_rate": {
+        "n_participants": 22,
+        "mean": 399.2741033300405,
+        "bootstrap95": [
+          341.0977945810123,
+          455.35936700916926
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "duration_seconds": {
+        "n": 150266,
+        "mean": 1.208343604008889,
+        "median": 1.1700000000000728,
+        "min": 0.4399999999995998,
+        "max": 2.480000000000018,
+        "q25": 0.9324999999989814,
+        "q75": 1.430000000000291
+      },
+      "frequency_Hz": {
+        "n": 150266,
+        "mean": 0.8934204530685481,
+        "median": 0.8547008547008548,
+        "min": 0.40322580645161293,
+        "max": 2.272727272727273,
+        "q25": 0.6993006993006994,
+        "q75": 1.0724090597117364
+      },
+      "amplitude_uV": {
+        "n": 150266,
+        "mean": 86.44566911994025,
+        "median": 73.4526620460228,
+        "min": 40.00003985846325,
+        "max": 342.40838073757993,
+        "q25": 54.060741125241734,
+        "q75": 105.86037812756874
+      },
+      "stage_and_unscored_event_counts": [
+        8701,
+        2979,
+        53914,
+        77820,
+        5482,
+        1370
+      ],
+      "stage_and_unscored_hours": [
+        36.858333333333334,
+        30.441666666666666,
+        165.425,
+        53.458333333333336,
+        69.575,
+        22.958333333333332
+      ],
+      "stage_conditioning": "post-detection descriptive, primary detector stage-blind",
+      "clinical_event_accuracy": "NOT_TESTED"
+    },
+    "EEG Fpz-Cz|spindle": {
+      "event_count": 46191,
+      "person_rate_per_hour_distribution": {
+        "n": 22,
+        "mean": 121.87182364770321,
+        "median": 122.68970371865333,
+        "min": 21.07687317547843,
+        "max": 223.22224028613235,
+        "q25": 79.12778765352296,
+        "q75": 176.53115384373368
+      },
+      "person_mean_rate": {
+        "n_participants": 22,
+        "mean": 121.87182364770321,
+        "bootstrap95": [
+          95.71121414374143,
+          146.976585137839
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "duration_seconds": {
+        "n": 46191,
+        "mean": 0.9375443268169102,
+        "median": 0.8500000000021828,
+        "min": 0.5,
+        "max": 1.9900000000016007,
+        "q25": 0.6599999999998545,
+        "q75": 1.1400000000003274
+      },
+      "frequency_Hz": {
+        "n": 46191,
+        "mean": 13.404855761664702,
+        "median": 13.373387461725933,
+        "min": 11.68189567229628,
+        "max": 15.261898288289919,
+        "q25": 12.958765282207143,
+        "q75": 13.83697546238276
+      },
+      "amplitude_uV": {
+        "n": 46191,
+        "mean": 61.39862502412072,
+        "median": 58.146230519982176,
+        "min": 14.040343124685416,
+        "max": 249.79504770407289,
+        "q25": 46.067317264206125,
+        "q75": 73.2714144592986
+      },
+      "stage_and_unscored_event_counts": [
+        429,
+        898,
+        39028,
+        2812,
+        2960,
+        64
+      ],
+      "stage_and_unscored_hours": [
+        36.858333333333334,
+        30.441666666666666,
+        165.425,
+        53.458333333333336,
+        69.575,
+        22.958333333333332
+      ],
+      "stage_conditioning": "post-detection descriptive, primary detector stage-blind",
+      "clinical_event_accuracy": "NOT_TESTED"
+    },
+    "EEG Fpz-Cz|spindle_strict": {
+      "event_count": 42404,
+      "person_rate_per_hour_distribution": {
+        "n": 22,
+        "mean": 111.84203791897585,
+        "median": 112.90873865359853,
+        "min": 19.967564060979566,
+        "max": 207.33072713057075,
+        "q25": 74.20454912734324,
+        "q75": 162.56307024417487
+      },
+      "person_mean_rate": {
+        "n_participants": 22,
+        "mean": 111.84203791897585,
+        "bootstrap95": [
+          88.20077653941614,
+          133.87334462181778
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "duration_seconds": {
+        "n": 42404,
+        "mean": 0.9165526837090892,
+        "median": 0.8400000000001455,
+        "min": 0.5,
+        "max": 1.9900000000016007,
+        "q25": 0.6500000000014552,
+        "q75": 1.109999999998763
+      },
+      "frequency_Hz": {
+        "n": 42404,
+        "mean": 13.417661546994147,
+        "median": 13.389309962743045,
+        "min": 11.65040475005099,
+        "max": 15.261898288289919,
+        "q25": 12.974748186705222,
+        "q75": 13.847254352369244
+      },
+      "amplitude_uV": {
+        "n": 42404,
+        "mean": 62.585612271960144,
+        "median": 59.396591704019485,
+        "min": 13.988363661057601,
+        "max": 249.79504770407289,
+        "q25": 47.22960768802279,
+        "q75": 74.55237759479826
+      },
+      "stage_and_unscored_event_counts": [
+        360,
+        789,
+        35838,
+        2624,
+        2738,
+        55
+      ],
+      "stage_and_unscored_hours": [
+        36.858333333333334,
+        30.441666666666666,
+        165.425,
+        53.458333333333336,
+        69.575,
+        22.958333333333332
+      ],
+      "stage_conditioning": "post-detection descriptive, primary detector stage-blind",
+      "clinical_event_accuracy": "NOT_TESTED"
+    },
+    "EEG Fpz-Cz|step": {
+      "event_count": 26502,
+      "person_rate_per_hour_distribution": {
+        "n": 22,
+        "mean": 70.7780192720831,
+        "median": 45.2125091034121,
+        "min": 10.919431279620854,
+        "max": 275.8291226458429,
+        "q25": 20.666695110631682,
+        "q75": 96.29446347922776
+      },
+      "person_mean_rate": {
+        "n_participants": 22,
+        "mean": 70.7780192720831,
+        "bootstrap95": [
+          47.42967604287751,
+          100.9446440780675
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "duration_seconds": {
+        "n": 26502,
+        "mean": 0.01706059920007105,
+        "median": 0.010000000002037268,
+        "min": 0.00999999999476131,
+        "max": 0.4299999999999997,
+        "q25": 0.009999999999990905,
+        "q75": 0.020000000000436557
+      },
+      "frequency_Hz": {
+        "n": 0
+      },
+      "amplitude_uV": {
+        "n": 0
+      },
+      "stage_and_unscored_event_counts": [
+        15737,
+        3236,
+        2585,
+        606,
+        741,
+        3597
+      ],
+      "stage_and_unscored_hours": [
+        36.858333333333334,
+        30.441666666666666,
+        165.425,
+        53.458333333333336,
+        69.575,
+        22.958333333333332
+      ],
+      "stage_conditioning": "post-detection descriptive, primary detector stage-blind",
+      "clinical_event_accuracy": "NOT_TESTED"
+    },
+    "EEG Fpz-Cz|theta": {
+      "event_count": 13760,
+      "person_rate_per_hour_distribution": {
+        "n": 22,
+        "mean": 36.34297250174487,
+        "median": 33.528932985569554,
+        "min": 12.632538356372475,
+        "max": 74.03062046736503,
+        "q25": 25.70701340508719,
+        "q75": 40.111185841259804
+      },
+      "person_mean_rate": {
+        "n_participants": 22,
+        "mean": 36.34297250174487,
+        "bootstrap95": [
+          30.163296257133815,
+          43.22487986806145
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "duration_seconds": {
+        "n": 13760,
+        "mean": 2.2392441860465118,
+        "median": 2.0,
+        "min": 2.0,
+        "max": 14.0,
+        "q25": 2.0,
+        "q75": 2.0
+      },
+      "frequency_Hz": {
+        "n": 0
+      },
+      "amplitude_uV": {
+        "n": 0
+      },
+      "stage_and_unscored_event_counts": [
+        326,
+        1107,
+        6079,
+        271,
+        5918,
+        59
+      ],
+      "stage_and_unscored_hours": [
+        36.858333333333334,
+        30.441666666666666,
+        165.425,
+        53.458333333333336,
+        69.575,
+        22.958333333333332
+      ],
+      "stage_conditioning": "post-detection descriptive, primary detector stage-blind",
+      "clinical_event_accuracy": "NOT_TESTED"
+    },
+    "EEG Pz-Oz|HF": {
+      "event_count": 1016,
+      "person_rate_per_hour_distribution": {
+        "n": 22,
+        "mean": 2.6817241728669448,
+        "median": 2.1614418159206656,
+        "min": 0.5520531606747316,
+        "max": 7.341470675796368,
+        "q25": 1.651457421346991,
+        "q75": 3.492215772593815
+      },
+      "person_mean_rate": {
+        "n_participants": 22,
+        "mean": 2.6817241728669448,
+        "bootstrap95": [
+          2.0689512357112516,
+          3.3998182857700003
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "duration_seconds": {
+        "n": 1016,
+        "mean": 2.984251968503937,
+        "median": 2.0,
+        "min": 2.0,
+        "max": 36.0,
+        "q25": 2.0,
+        "q75": 4.0
+      },
+      "frequency_Hz": {
+        "n": 0
+      },
+      "amplitude_uV": {
+        "n": 0
+      },
+      "stage_and_unscored_event_counts": [
+        755,
+        33,
+        24,
+        9,
+        12,
+        183
+      ],
+      "stage_and_unscored_hours": [
+        36.858333333333334,
+        30.441666666666666,
+        165.425,
+        53.458333333333336,
+        69.575,
+        22.958333333333332
+      ],
+      "stage_conditioning": "post-detection descriptive, primary detector stage-blind",
+      "clinical_event_accuracy": "NOT_TESTED"
+    },
+    "EEG Pz-Oz|alpha": {
+      "event_count": 17404,
+      "person_rate_per_hour_distribution": {
+        "n": 22,
+        "mean": 46.512395783270115,
+        "median": 45.80232503266919,
+        "min": 8.530805687203792,
+        "max": 94.58319818358741,
+        "q25": 28.43747596738423,
+        "q75": 61.37717375196104
+      },
+      "person_mean_rate": {
+        "n_participants": 22,
+        "mean": 46.512395783270115,
+        "bootstrap95": [
+          37.36342943249791,
+          55.70810840492585
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "duration_seconds": {
+        "n": 17404,
+        "mean": 4.390025281544473,
+        "median": 2.0,
+        "min": 2.0,
+        "max": 164.0,
+        "q25": 2.0,
+        "q75": 4.0
+      },
+      "frequency_Hz": {
+        "n": 0
+      },
+      "amplitude_uV": {
+        "n": 0
+      },
+      "stage_and_unscored_event_counts": [
+        5220,
+        2590,
+        5828,
+        151,
+        3258,
+        357
+      ],
+      "stage_and_unscored_hours": [
+        36.858333333333334,
+        30.441666666666666,
+        165.425,
+        53.458333333333336,
+        69.575,
+        22.958333333333332
+      ],
+      "stage_conditioning": "post-detection descriptive, primary detector stage-blind",
+      "clinical_event_accuracy": "NOT_TESTED"
+    },
+    "EEG Pz-Oz|clip": {
+      "event_count": 2157,
+      "person_rate_per_hour_distribution": {
+        "n": 22,
+        "mean": 5.364236305647838,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 111.34133373841713,
+        "q25": 0.0,
+        "q75": 0.03817873303167421
+      },
+      "person_mean_rate": {
+        "n_participants": 22,
+        "mean": 5.364236305647838,
+        "bootstrap95": [
+          0.007801425550444673,
+          15.771763986417778
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "duration_seconds": {
+        "n": 2157,
+        "mean": 0.25063977746870847,
+        "median": 0.030000000002473826,
+        "min": 0.00999999999839929,
+        "max": 10.770000000000437,
+        "q25": 0.010000000002037268,
+        "q75": 0.11000000000058208
+      },
+      "frequency_Hz": {
+        "n": 0
+      },
+      "amplitude_uV": {
+        "n": 0
+      },
+      "stage_and_unscored_event_counts": [
+        300,
+        60,
+        1721,
+        1,
+        26,
+        49
+      ],
+      "stage_and_unscored_hours": [
+        36.858333333333334,
+        30.441666666666666,
+        165.425,
+        53.458333333333336,
+        69.575,
+        22.958333333333332
+      ],
+      "stage_conditioning": "post-detection descriptive, primary detector stage-blind",
+      "clinical_event_accuracy": "NOT_TESTED"
+    },
+    "EEG Pz-Oz|delta": {
+      "event_count": 99564,
+      "person_rate_per_hour_distribution": {
+        "n": 22,
+        "mean": 262.34584487826544,
+        "median": 263.81893827049623,
+        "min": 180.90232416831233,
+        "max": 333.31819656179044,
+        "q25": 243.9884055517942,
+        "q75": 289.2336553784727
+      },
+      "person_mean_rate": {
+        "n_participants": 22,
+        "mean": 262.34584487826544,
+        "bootstrap95": [
+          246.0539056673749,
+          277.77732379292536
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "duration_seconds": {
+        "n": 99564,
+        "mean": 8.889859788678638,
+        "median": 4.0,
+        "min": 2.0,
+        "max": 1496.0,
+        "q25": 2.0,
+        "q75": 10.0
+      },
+      "frequency_Hz": {
+        "n": 0
+      },
+      "amplitude_uV": {
+        "n": 0
+      },
+      "stage_and_unscored_event_counts": [
+        7850,
+        9763,
+        52347,
+        4454,
+        23933,
+        1217
+      ],
+      "stage_and_unscored_hours": [
+        36.858333333333334,
+        30.441666666666666,
+        165.425,
+        53.458333333333336,
+        69.575,
+        22.958333333333332
+      ],
+      "stage_conditioning": "post-detection descriptive, primary detector stage-blind",
+      "clinical_event_accuracy": "NOT_TESTED"
+    },
+    "EEG Pz-Oz|extreme": {
+      "event_count": 8087,
+      "person_rate_per_hour_distribution": {
+        "n": 22,
+        "mean": 20.936936913269157,
+        "median": 9.025652089871745,
+        "min": 0.4445816610064835,
+        "max": 175.1602612790521,
+        "q25": 5.9350759845406085,
+        "q75": 18.33910914272716
+      },
+      "person_mean_rate": {
+        "n_participants": 22,
+        "mean": 20.936936913269157,
+        "bootstrap95": [
+          9.9224080974074,
+          38.016913134021635
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "duration_seconds": {
+        "n": 8087,
+        "mean": 4.90872264127614,
+        "median": 0.029999999998835847,
+        "min": 0.00999999999476131,
+        "max": 1860.0,
+        "q25": 0.010000000002037268,
+        "q75": 0.1499999999978172
+      },
+      "frequency_Hz": {
+        "n": 0
+      },
+      "amplitude_uV": {
+        "n": 0
+      },
+      "stage_and_unscored_event_counts": [
+        2581,
+        1125,
+        2954,
+        130,
+        495,
+        802
+      ],
+      "stage_and_unscored_hours": [
+        36.858333333333334,
+        30.441666666666666,
+        165.425,
+        53.458333333333336,
+        69.575,
+        22.958333333333332
+      ],
+      "stage_conditioning": "post-detection descriptive, primary detector stage-blind",
+      "clinical_event_accuracy": "NOT_TESTED"
+    },
+    "EEG Pz-Oz|flat": {
+      "event_count": 125,
+      "person_rate_per_hour_distribution": {
+        "n": 22,
+        "mean": 0.32945262181295554,
+        "median": 0.3056839160303503,
+        "min": 0.1170541375386116,
+        "max": 0.5599547511312217,
+        "q25": 0.24514323031036736,
+        "q75": 0.4400532706321684
+      },
+      "person_mean_rate": {
+        "n_participants": 22,
+        "mean": 0.32945262181295554,
+        "bootstrap95": [
+          0.272543020350573,
+          0.3840994543759193
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "duration_seconds": {
+        "n": 125,
+        "mean": 567.9994400000004,
+        "median": 278.6299999999974,
+        "min": 1.0499999999992724,
+        "max": 1859.9900000000016,
+        "q25": 25.52,
+        "q75": 1041.6699999999983
+      },
+      "frequency_Hz": {
+        "n": 0
+      },
+      "amplitude_uV": {
+        "n": 0
+      },
+      "stage_and_unscored_event_counts": [
+        23,
+        0,
+        0,
+        0,
+        0,
+        101
+      ],
+      "stage_and_unscored_hours": [
+        36.858333333333334,
+        30.441666666666666,
+        165.425,
+        53.458333333333336,
+        69.575,
+        22.958333333333332
+      ],
+      "stage_conditioning": "post-detection descriptive, primary detector stage-blind",
+      "clinical_event_accuracy": "NOT_TESTED"
+    },
+    "EEG Pz-Oz|sigma": {
+      "event_count": 20385,
+      "person_rate_per_hour_distribution": {
+        "n": 22,
+        "mean": 53.98097554181971,
+        "median": 52.284809197636264,
+        "min": 6.381950040290088,
+        "max": 124.80375293197811,
+        "q25": 17.765057946255425,
+        "q75": 77.92490055382885
+      },
+      "person_mean_rate": {
+        "n_participants": 22,
+        "mean": 53.98097554181971,
+        "bootstrap95": [
+          38.64384515746277,
+          69.79393434291852
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "duration_seconds": {
+        "n": 20385,
+        "mean": 2.370762815795928,
+        "median": 2.0,
+        "min": 2.0,
+        "max": 18.0,
+        "q25": 2.0,
+        "q75": 2.0
+      },
+      "frequency_Hz": {
+        "n": 0
+      },
+      "amplitude_uV": {
+        "n": 0
+      },
+      "stage_and_unscored_event_counts": [
+        450,
+        363,
+        17788,
+        574,
+        1187,
+        23
+      ],
+      "stage_and_unscored_hours": [
+        36.858333333333334,
+        30.441666666666666,
+        165.425,
+        53.458333333333336,
+        69.575,
+        22.958333333333332
+      ],
+      "stage_conditioning": "post-detection descriptive, primary detector stage-blind",
+      "clinical_event_accuracy": "NOT_TESTED"
+    },
+    "EEG Pz-Oz|slow_wave": {
+      "event_count": 20255,
+      "person_rate_per_hour_distribution": {
+        "n": 22,
+        "mean": 54.10748274920493,
+        "median": 30.51664180902312,
+        "min": 1.4012325656827764,
+        "max": 187.80363404526616,
+        "q25": 8.34266989630381,
+        "q75": 99.85660385684656
+      },
+      "person_mean_rate": {
+        "n_participants": 22,
+        "mean": 54.10748274920493,
+        "bootstrap95": [
+          31.8646486234352,
+          78.80630879609772
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "duration_seconds": {
+        "n": 20255,
+        "mean": 1.3041964946926623,
+        "median": 1.2899999999999636,
+        "min": 0.48999999999796273,
+        "max": 2.470000000001164,
+        "q25": 1.0599999999994907,
+        "q75": 1.5100000000002183
+      },
+      "frequency_Hz": {
+        "n": 20255,
+        "mean": 0.813343690139182,
+        "median": 0.7751937984496123,
+        "min": 0.4048582995951417,
+        "max": 2.0408163265306123,
+        "q25": 0.6622516556291391,
+        "q75": 0.9433962264150942
+      },
+      "amplitude_uV": {
+        "n": 20255,
+        "mean": 114.83650652602256,
+        "median": 105.55328101469432,
+        "min": 75.00357304809522,
+        "max": 342.6905409957045,
+        "q25": 88.94238078827688,
+        "q75": 130.48118572157736
+      },
+      "stage_and_unscored_event_counts": [
+        428,
+        187,
+        3679,
+        15554,
+        320,
+        87
+      ],
+      "stage_and_unscored_hours": [
+        36.858333333333334,
+        30.441666666666666,
+        165.425,
+        53.458333333333336,
+        69.575,
+        22.958333333333332
+      ],
+      "stage_conditioning": "post-detection descriptive, primary detector stage-blind",
+      "clinical_event_accuracy": "NOT_TESTED"
+    },
+    "EEG Pz-Oz|slow_wave_relaxed": {
+      "event_count": 62919,
+      "person_rate_per_hour_distribution": {
+        "n": 22,
+        "mean": 167.7296715289231,
+        "median": 155.1425544394915,
+        "min": 12.027246188777164,
+        "max": 406.3627669748167,
+        "q25": 61.56804333107651,
+        "q75": 251.95440771957695
+      },
+      "person_mean_rate": {
+        "n_participants": 22,
+        "mean": 167.7296715289231,
+        "bootstrap95": [
+          119.29921726427408,
+          216.45284362528733
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "duration_seconds": {
+        "n": 62919,
+        "mean": 1.2721953622911952,
+        "median": 1.25,
+        "min": 0.4800000000000182,
+        "max": 2.469999999999345,
+        "q25": 1.0099999999993088,
+        "q75": 1.4899999999997817
+      },
+      "frequency_Hz": {
+        "n": 62919,
+        "mean": 0.8421147406930762,
+        "median": 0.8,
+        "min": 0.4048582995951417,
+        "max": 2.0833333333333335,
+        "q25": 0.6711409395973155,
+        "q75": 0.9900990099009901
+      },
+      "amplitude_uV": {
+        "n": 62919,
+        "mean": 76.26531672910195,
+        "median": 65.76894991047594,
+        "min": 40.00027157339211,
+        "max": 342.6905409957045,
+        "q25": 51.451313459509045,
+        "q75": 90.0449898084237
+      },
+      "stage_and_unscored_event_counts": [
+        987,
+        791,
+        16320,
+        43037,
+        1604,
+        180
+      ],
+      "stage_and_unscored_hours": [
+        36.858333333333334,
+        30.441666666666666,
+        165.425,
+        53.458333333333336,
+        69.575,
+        22.958333333333332
+      ],
+      "stage_conditioning": "post-detection descriptive, primary detector stage-blind",
+      "clinical_event_accuracy": "NOT_TESTED"
+    },
+    "EEG Pz-Oz|spindle": {
+      "event_count": 43078,
+      "person_rate_per_hour_distribution": {
+        "n": 22,
+        "mean": 113.98725050125277,
+        "median": 115.03856066431362,
+        "min": 22.724657302420038,
+        "max": 212.903831118061,
+        "q25": 54.14763649717999,
+        "q75": 154.3071709373086
+      },
+      "person_mean_rate": {
+        "n_participants": 22,
+        "mean": 113.98725050125277,
+        "bootstrap95": [
+          89.03924097971897,
+          139.24768409676116
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "duration_seconds": {
+        "n": 43078,
+        "mean": 0.9361277218069586,
+        "median": 0.8599999999969441,
+        "min": 0.5099999999947613,
+        "max": 1.9900000000016007,
+        "q25": 0.6599999999998545,
+        "q75": 1.139999999999418
+      },
+      "frequency_Hz": {
+        "n": 43078,
+        "mean": 13.45290112334494,
+        "median": 13.417503535799494,
+        "min": 11.492148596139034,
+        "max": 15.292380980855848,
+        "q25": 13.003723693285506,
+        "q75": 13.893888285393537
+      },
+      "amplitude_uV": {
+        "n": 43078,
+        "mean": 39.04365049733223,
+        "median": 37.25742979953685,
+        "min": 9.560448005946789,
+        "max": 212.65300908553525,
+        "q25": 29.72332394945169,
+        "q75": 46.31542950411655
+      },
+      "stage_and_unscored_event_counts": [
+        1177,
+        960,
+        35475,
+        2780,
+        2625,
+        61
+      ],
+      "stage_and_unscored_hours": [
+        36.858333333333334,
+        30.441666666666666,
+        165.425,
+        53.458333333333336,
+        69.575,
+        22.958333333333332
+      ],
+      "stage_conditioning": "post-detection descriptive, primary detector stage-blind",
+      "clinical_event_accuracy": "NOT_TESTED"
+    },
+    "EEG Pz-Oz|spindle_strict": {
+      "event_count": 39616,
+      "person_rate_per_hour_distribution": {
+        "n": 22,
+        "mean": 104.82245321829838,
+        "median": 108.07753429055336,
+        "min": 21.87172110340159,
+        "max": 194.55199374511338,
+        "q25": 51.25964259330106,
+        "q75": 141.94501487626133
+      },
+      "person_mean_rate": {
+        "n_participants": 22,
+        "mean": 104.82245321829838,
+        "bootstrap95": [
+          82.46063425424303,
+          127.13697468024455
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "duration_seconds": {
+        "n": 39616,
+        "mean": 0.9190872374798054,
+        "median": 0.8400000000001455,
+        "min": 0.5099999999983993,
+        "max": 1.9900000000016007,
+        "q25": 0.6500000000014552,
+        "q75": 1.110000000000582
+      },
+      "frequency_Hz": {
+        "n": 39616,
+        "mean": 13.462128274497958,
+        "median": 13.428449259240114,
+        "min": 11.727011441358279,
+        "max": 15.319941075925943,
+        "q25": 13.012886234348278,
+        "q75": 13.903338910827497
+      },
+      "amplitude_uV": {
+        "n": 39616,
+        "mean": 39.79766647313431,
+        "median": 38.031477964097206,
+        "min": 9.560448005946789,
+        "max": 212.65300908553525,
+        "q25": 30.442338870672472,
+        "q75": 47.07014524470844
+      },
+      "stage_and_unscored_event_counts": [
+        942,
+        829,
+        32786,
+        2605,
+        2402,
+        52
+      ],
+      "stage_and_unscored_hours": [
+        36.858333333333334,
+        30.441666666666666,
+        165.425,
+        53.458333333333336,
+        69.575,
+        22.958333333333332
+      ],
+      "stage_conditioning": "post-detection descriptive, primary detector stage-blind",
+      "clinical_event_accuracy": "NOT_TESTED"
+    },
+    "EEG Pz-Oz|step": {
+      "event_count": 13876,
+      "person_rate_per_hour_distribution": {
+        "n": 22,
+        "mean": 35.55935223287592,
+        "median": 10.125695021918183,
+        "min": 1.0236966824644549,
+        "max": 422.45176970985875,
+        "q25": 4.8696460323197455,
+        "q75": 16.864500035460058
+      },
+      "person_mean_rate": {
+        "n_participants": 22,
+        "mean": 35.55935223287592,
+        "bootstrap95": [
+          10.226087792650528,
+          77.1000521659053
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "duration_seconds": {
+        "n": 13876,
+        "mean": 0.021269097722682498,
+        "median": 0.010000000002037268,
+        "min": 0.00999999999476131,
+        "max": 0.46000000000000085,
+        "q25": 0.00999999999999801,
+        "q75": 0.020000000000436557
+      },
+      "frequency_Hz": {
+        "n": 0
+      },
+      "amplitude_uV": {
+        "n": 0
+      },
+      "stage_and_unscored_event_counts": [
+        4554,
+        661,
+        7038,
+        90,
+        681,
+        852
+      ],
+      "stage_and_unscored_hours": [
+        36.858333333333334,
+        30.441666666666666,
+        165.425,
+        53.458333333333336,
+        69.575,
+        22.958333333333332
+      ],
+      "stage_conditioning": "post-detection descriptive, primary detector stage-blind",
+      "clinical_event_accuracy": "NOT_TESTED"
+    },
+    "EEG Pz-Oz|theta": {
+      "event_count": 37334,
+      "person_rate_per_hour_distribution": {
+        "n": 22,
+        "mean": 97.51613622704946,
+        "median": 93.80455897151242,
+        "min": 51.89731125626614,
+        "max": 184.63235294117646,
+        "q25": 66.20191939168161,
+        "q75": 118.47220538360418
+      },
+      "person_mean_rate": {
+        "n_participants": 22,
+        "mean": 97.51613622704946,
+        "bootstrap95": [
+          81.70510618798747,
+          113.03097508190459
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "duration_seconds": {
+        "n": 37334,
+        "mean": 2.5209192692987625,
+        "median": 2.0,
+        "min": 2.0,
+        "max": 24.0,
+        "q25": 2.0,
+        "q75": 2.0
+      },
+      "frequency_Hz": {
+        "n": 0
+      },
+      "amplitude_uV": {
+        "n": 0
+      },
+      "stage_and_unscored_event_counts": [
+        759,
+        3582,
+        20678,
+        2263,
+        9903,
+        149
+      ],
+      "stage_and_unscored_hours": [
+        36.858333333333334,
+        30.441666666666666,
+        165.425,
+        53.458333333333336,
+        69.575,
+        22.958333333333332
+      ],
+      "stage_conditioning": "post-detection descriptive, primary detector stage-blind",
+      "clinical_event_accuracy": "NOT_TESTED"
+    },
+    "EMG submental|high": {
+      "event_count": 4179,
+      "person_rate_per_hour_distribution": {
+        "n": 22,
+        "mean": 11.098790916634604,
+        "median": 7.957252199417997,
+        "min": 1.7284321080270066,
+        "max": 30.240524781341108,
+        "q25": 4.992839743571631,
+        "q75": 17.22726388154928
+      },
+      "person_mean_rate": {
+        "n_participants": 22,
+        "mean": 11.098790916634604,
+        "bootstrap95": [
+          7.907648967261383,
+          14.599515903117084
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "duration_seconds": {
+        "n": 4179,
+        "mean": 2.2792534099066764,
+        "median": 1.0,
+        "min": 1.0,
+        "max": 48.0,
+        "q25": 1.0,
+        "q75": 2.0
+      },
+      "frequency_Hz": {
+        "n": 0
+      },
+      "amplitude_uV": {
+        "n": 0
+      },
+      "stage_and_unscored_event_counts": [
+        2638,
+        390,
+        360,
+        122,
+        119,
+        550
+      ],
+      "stage_and_unscored_hours": [
+        36.858333333333334,
+        30.441666666666666,
+        165.425,
+        53.458333333333336,
+        69.575,
+        22.958333333333332
+      ],
+      "stage_conditioning": "post-detection descriptive, primary detector stage-blind",
+      "clinical_event_accuracy": "NOT_TESTED"
+    },
+    "EMG submental|low": {
+      "event_count": 19869,
+      "person_rate_per_hour_distribution": {
+        "n": 22,
+        "mean": 52.339106596940844,
+        "median": 51.24181789436852,
+        "min": 19.281045751633986,
+        "max": 107.67095463777929,
+        "q25": 34.34923812969414,
+        "q75": 67.19367191032279
+      },
+      "person_mean_rate": {
+        "n_participants": 22,
+        "mean": 52.339106596940844,
+        "bootstrap95": [
+          43.13888762457887,
+          63.02777140002327
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "duration_seconds": {
+        "n": 19869,
+        "mean": 62.50712164678645,
+        "median": 3.0,
+        "min": 1.0,
+        "max": 1860.0,
+        "q25": 1.0,
+        "q75": 19.0
+      },
+      "frequency_Hz": {
+        "n": 0
+      },
+      "amplitude_uV": {
+        "n": 0
+      },
+      "stage_and_unscored_event_counts": [
+        5097,
+        3837,
+        7190,
+        1915,
+        1274,
+        555
+      ],
+      "stage_and_unscored_hours": [
+        36.858333333333334,
+        30.441666666666666,
+        165.425,
+        53.458333333333336,
+        69.575,
+        22.958333333333332
+      ],
+      "stage_conditioning": "post-detection descriptive, primary detector stage-blind",
+      "clinical_event_accuracy": "NOT_TESTED"
+    },
+    "EOG horizontal|excursion": {
+      "event_count": 142258,
+      "person_rate_per_hour_distribution": {
+        "n": 22,
+        "mean": 376.6117296261081,
+        "median": 334.8962945314123,
+        "min": 98.86384686631676,
+        "max": 773.3309037900875,
+        "q25": 271.7263270958409,
+        "q75": 477.77358769560396
+      },
+      "person_mean_rate": {
+        "n_participants": 22,
+        "mean": 376.6117296261081,
+        "bootstrap95": [
+          311.4745410403066,
+          446.44284010437303
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "duration_seconds": {
+        "n": 142258,
+        "mean": 0.430278297178368,
+        "median": 0.3600000000005821,
+        "min": 0.09999999999854481,
+        "max": 2.8100000000000023,
+        "q25": 0.18000000000029104,
+        "q75": 0.6100000000005821
+      },
+      "frequency_Hz": {
+        "n": 0
+      },
+      "amplitude_uV": {
+        "n": 0
+      },
+      "stage_and_unscored_event_counts": [
+        56332,
+        11485,
+        7826,
+        12530,
+        42339,
+        11746
+      ],
+      "stage_and_unscored_hours": [
+        36.858333333333334,
+        30.441666666666666,
+        165.425,
+        53.458333333333336,
+        69.575,
+        22.958333333333332
+      ],
+      "stage_conditioning": "post-detection descriptive, primary detector stage-blind",
+      "clinical_event_accuracy": "NOT_TESTED"
+    }
+  },
+  "EEG_cross_channel_concordance": {
+    "spindle": {
+      "first_events": 46191,
+      "second_events": 43078,
+      "matched": 29894,
+      "recording_F1_distribution": {
+        "n": 44,
+        "mean": 0.6044045878641218,
+        "median": 0.6494962704890492,
+        "min": 0.2021505376344086,
+        "max": 0.7589424572317263,
+        "q25": 0.5229365834318127,
+        "q75": 0.7188392670773449
+      },
+      "recordings_estimated": 44,
+      "recordings_unestimable": 0,
+      "pooled_F1": 0.6697509773829661,
+      "human_truth": false
+    },
+    "spindle_strict": {
+      "first_events": 42404,
+      "second_events": 39616,
+      "matched": 27579,
+      "recording_F1_distribution": {
+        "n": 44,
+        "mean": 0.6092052253051665,
+        "median": 0.6542518807850473,
+        "min": 0.21608040201005024,
+        "max": 0.7684521299029945,
+        "q25": 0.5242863598704526,
+        "q75": 0.7180737718190356
+      },
+      "recordings_estimated": 44,
+      "recordings_unestimable": 0,
+      "pooled_F1": 0.6724945135332846,
+      "human_truth": false
+    },
+    "slow_wave": {
+      "first_events": 62835,
+      "second_events": 20255,
+      "matched": 11482,
+      "recording_F1_distribution": {
+        "n": 44,
+        "mean": 0.19656161478485867,
+        "median": 0.15149828263165363,
+        "min": 0.007863695937090432,
+        "max": 0.4657258064516129,
+        "q25": 0.06612057793853117,
+        "q75": 0.32708442314562114
+      },
+      "recordings_estimated": 44,
+      "recordings_unestimable": 0,
+      "pooled_F1": 0.27637501504392825,
+      "human_truth": false
+    },
+    "slow_wave_relaxed": {
+      "first_events": 150266,
+      "second_events": 62919,
+      "matched": 39535,
+      "recording_F1_distribution": {
+        "n": 44,
+        "mean": 0.31881028225554825,
+        "median": 0.31050426804333275,
+        "min": 0.09730668983492616,
+        "max": 0.5002405002405003,
+        "q25": 0.19795406869747628,
+        "q75": 0.4596342976469473
+      },
+      "recordings_estimated": 44,
+      "recordings_unestimable": 0,
+      "pooled_F1": 0.37089851537397095,
+      "human_truth": false
+    },
+    "sigma": {
+      "first_events": 21547,
+      "second_events": 20385,
+      "matched": 13287,
+      "recording_F1_distribution": {
+        "n": 44,
+        "mean": 0.5228723446585298,
+        "median": 0.5585217361562403,
+        "min": 0.11382113821138211,
+        "max": 0.7755474452554745,
+        "q25": 0.44517102615694165,
+        "q75": 0.64093603375996
+      },
+      "recordings_estimated": 44,
+      "recordings_unestimable": 0,
+      "pooled_F1": 0.6337403415052942,
+      "human_truth": false
+    },
+    "delta": {
+      "first_events": 73428,
+      "second_events": 99564,
+      "matched": 48462,
+      "recording_F1_distribution": {
+        "n": 44,
+        "mean": 0.5550910954321386,
+        "median": 0.5632114561191428,
+        "min": 0.4087289884989679,
+        "max": 0.6730393221811862,
+        "q25": 0.510182008784138,
+        "q75": 0.6032046019726428
+      },
+      "recordings_estimated": 44,
+      "recordings_unestimable": 0,
+      "pooled_F1": 0.5602802441731409,
+      "human_truth": false
+    }
+  },
+  "signal_distributions": {
+    "absolute_peak_uV": {
+      "scored_person_mean": {
+        "n_participants": 22,
+        "mean": 136.7158502621063,
+        "bootstrap95": [
+          127.13425739713165,
+          145.93571310455894
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "stage_balanced_person_mean": {
+        "n_participants": 22,
+        "mean": 156.21762334855006,
+        "bootstrap95": [
+          143.29554866504924,
+          169.19809086913213
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "person_stage_matched_wrong_minus_correct": {
+        "n_participants": 22,
+        "mean": 2.7230126977843896,
+        "bootstrap95": [
+          -6.415705497921129,
+          13.517588566670579
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      }
+    },
+    "centered_RMS_uV": {
+      "scored_person_mean": {
+        "n_participants": 22,
+        "mean": 33.383577827383235,
+        "bootstrap95": [
+          31.26324687192439,
+          35.35508092820756
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "stage_balanced_person_mean": {
+        "n_participants": 22,
+        "mean": 39.54335279806889,
+        "bootstrap95": [
+          36.333531795226925,
+          42.835077345507194
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "person_stage_matched_wrong_minus_correct": {
+        "n_participants": 22,
+        "mean": 1.5203503746396279,
+        "bootstrap95": [
+          -0.8576208865168483,
+          4.386958564088853
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      }
+    },
+    "DC_uV": {
+      "scored_person_mean": {
+        "n_participants": 22,
+        "mean": -0.340723629722614,
+        "bootstrap95": [
+          -1.4613277042301085,
+          0.5289874015023462
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "stage_balanced_person_mean": {
+        "n_participants": 22,
+        "mean": -1.6892786345731559,
+        "bootstrap95": [
+          -4.948558051026602,
+          0.2970263232551136
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "person_stage_matched_wrong_minus_correct": {
+        "n_participants": 22,
+        "mean": 1.0764307682956515,
+        "bootstrap95": [
+          -1.7412518433321658,
+          4.705912086114452
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      }
+    },
+    "delta_fraction": {
+      "scored_person_mean": {
+        "n_participants": 22,
+        "mean": 0.7575182157284632,
+        "bootstrap95": [
+          0.7353449293148787,
+          0.778019706639908
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "stage_balanced_person_mean": {
+        "n_participants": 22,
+        "mean": 0.7513927549215368,
+        "bootstrap95": [
+          0.7306768257448351,
+          0.7726532128114754
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "person_stage_matched_wrong_minus_correct": {
+        "n_participants": 22,
+        "mean": -0.003840953492210433,
+        "bootstrap95": [
+          -0.01864688126177786,
+          0.009741362986260231
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      }
+    },
+    "theta_fraction": {
+      "scored_person_mean": {
+        "n_participants": 22,
+        "mean": 0.08505352753697491,
+        "bootstrap95": [
+          0.07887899546335499,
+          0.09118927331492842
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "stage_balanced_person_mean": {
+        "n_participants": 22,
+        "mean": 0.08121249327196695,
+        "bootstrap95": [
+          0.07592580522616424,
+          0.08606647544049577
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "person_stage_matched_wrong_minus_correct": {
+        "n_participants": 22,
+        "mean": -0.0030056165906369244,
+        "bootstrap95": [
+          -0.0066645224105136396,
+          0.0007061292592729401
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      }
+    },
+    "alpha_fraction": {
+      "scored_person_mean": {
+        "n_participants": 22,
+        "mean": 0.06131113064908607,
+        "bootstrap95": [
+          0.053825758847523913,
+          0.06845828574838003
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "stage_balanced_person_mean": {
+        "n_participants": 22,
+        "mean": 0.057900526377167985,
+        "bootstrap95": [
+          0.050469699757906133,
+          0.06447011199239867
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "person_stage_matched_wrong_minus_correct": {
+        "n_participants": 22,
+        "mean": 0.0007871886239906779,
+        "bootstrap95": [
+          -0.002799675019283827,
+          0.004357670882215692
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      }
+    },
+    "sigma_fraction": {
+      "scored_person_mean": {
+        "n_participants": 22,
+        "mean": 0.04033148735759355,
+        "bootstrap95": [
+          0.03407196592719879,
+          0.046549876028903626
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "stage_balanced_person_mean": {
+        "n_participants": 22,
+        "mean": 0.029646133780346393,
+        "bootstrap95": [
+          0.026100847507134272,
+          0.03350949735164684
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "person_stage_matched_wrong_minus_correct": {
+        "n_participants": 22,
+        "mean": -0.002537816510341077,
+        "bootstrap95": [
+          -0.004434725466638157,
+          -0.0006510650765688167
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      }
+    },
+    "HF_fraction": {
+      "scored_person_mean": {
+        "n_participants": 22,
+        "mean": 0.013752267433475412,
+        "bootstrap95": [
+          0.011505287234525288,
+          0.016177326244371914
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "stage_balanced_person_mean": {
+        "n_participants": 22,
+        "mean": 0.020496751732509744,
+        "bootstrap95": [
+          0.01750669678937071,
+          0.023952267314020205
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "person_stage_matched_wrong_minus_correct": {
+        "n_participants": 22,
+        "mean": 0.0032536361954707076,
+        "bootstrap95": [
+          0.0007088559675005982,
+          0.0058236689210904614
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      }
+    },
+    "EOG_RMS_uV": {
+      "scored_person_mean": {
+        "n_participants": 22,
+        "mean": 70.19372861381076,
+        "bootstrap95": [
+          60.88933180511224,
+          81.13639613489669
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "stage_balanced_person_mean": {
+        "n_participants": 22,
+        "mean": 94.48783095828804,
+        "bootstrap95": [
+          81.41232847159597,
+          107.82147449760099
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "person_stage_matched_wrong_minus_correct": {
+        "n_participants": 22,
+        "mean": -3.3987649292674296,
+        "bootstrap95": [
+          -9.32579532484902,
+          2.0085739598043872
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      }
+    },
+    "EMG_native_RMS_uV": {
+      "scored_person_mean": {
+        "n_participants": 22,
+        "mean": 13.910612909894043,
+        "bootstrap95": [
+          11.067209171145837,
+          17.11711872063002
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "stage_balanced_person_mean": {
+        "n_participants": 22,
+        "mean": 20.793670307102502,
+        "bootstrap95": [
+          16.038794728422616,
+          25.367176939064848
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "person_stage_matched_wrong_minus_correct": {
+        "n_participants": 22,
+        "mean": -0.021794458738940845,
+        "bootstrap95": [
+          -5.261060090923933,
+          4.726699198564929
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      }
+    },
+    "EMG_derived_RMS_uV": {
+      "scored_person_mean": {
+        "n_participants": 22,
+        "mean": 1.999160454136832,
+        "bootstrap95": [
+          1.7338305871312403,
+          2.2756021019488735
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "stage_balanced_person_mean": {
+        "n_participants": 22,
+        "mean": 2.8071326066596396,
+        "bootstrap95": [
+          2.488396153749504,
+          3.2322828928098466
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "person_stage_matched_wrong_minus_correct": {
+        "n_participants": 22,
+        "mean": 0.30885727169875415,
+        "bootstrap95": [
+          -0.15196654800075696,
+          1.05709698843564
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      }
+    },
+    "flat_fraction": {
+      "scored_person_mean": {
+        "n_participants": 22,
+        "mean": 0.03538192083622052,
+        "bootstrap95": [
+          0.03231813798877855,
+          0.03827871280092053
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "stage_balanced_person_mean": {
+        "n_participants": 22,
+        "mean": 0.03761346223452558,
+        "bootstrap95": [
+          0.03307538394356077,
+          0.042014137807662166
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "person_stage_matched_wrong_minus_correct": {
+        "n_participants": 22,
+        "mean": -0.007216386988199265,
+        "bootstrap95": [
+          -0.011219382656815168,
+          -0.004022064390753071
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      }
+    },
+    "step_fraction": {
+      "scored_person_mean": {
+        "n_participants": 22,
+        "mean": 0.00030752637613666584,
+        "bootstrap95": [
+          0.00020421706808418006,
+          0.00043015592518909584
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "stage_balanced_person_mean": {
+        "n_participants": 22,
+        "mean": 0.0006379425251951793,
+        "bootstrap95": [
+          0.0003835962567622039,
+          0.0009548424783034149
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "person_stage_matched_wrong_minus_correct": {
+        "n_participants": 22,
+        "mean": 0.00015383918689745914,
+        "bootstrap95": [
+          -5.505823809664051e-05,
+          0.0003902590842523482
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      }
+    },
+    "EEG_correlation": {
+      "scored_person_mean": {
+        "n_participants": 22,
+        "mean": -0.26055871323368174,
+        "bootstrap95": [
+          -0.3026455967584733,
+          -0.21649631294119673
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "stage_balanced_person_mean": {
+        "n_participants": 22,
+        "mean": -0.21494159841565227,
+        "bootstrap95": [
+          -0.24987855753094682,
+          -0.17833140275923906
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "person_stage_matched_wrong_minus_correct": {
+        "n_participants": 22,
+        "mean": -0.01625688716084094,
+        "bootstrap95": [
+          -0.031131237218520992,
+          -0.002222470450276617
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      }
+    },
+    "marker_change_fraction": {
+      "scored_person_mean": {
+        "n_participants": 22,
+        "mean": 1.687180163815958e-05,
+        "bootstrap95": [
+          1.3324993556695069e-05,
+          2.0602399994708593e-05
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "stage_balanced_person_mean": {
+        "n_participants": 22,
+        "mean": 3.9184288928566134e-05,
+        "bootstrap95": [
+          2.962694239112564e-05,
+          4.950386262609805e-05
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      },
+      "person_stage_matched_wrong_minus_correct": {
+        "n_participants": 22,
+        "mean": -3.506299495924206e-05,
+        "bootstrap95": [
+          -4.66369230847477e-05,
+          -2.370992793462995e-05
+        ],
+        "unit": "participant mean; paired views retained within participant",
+        "draws": 1000,
+        "seed": 123
+      }
+    }
+  },
+  "coherence_delta": {
+    "n": 44,
+    "mean": 0.2048951840950423,
+    "median": 0.19024220354724347,
+    "min": 0.10087959987944678,
+    "max": 0.3434000693054663,
+    "q25": 0.1625929397003561,
+    "q75": 0.24305675570143476
+  },
+  "coherence_sigma": {
+    "n": 44,
+    "mean": 0.4154435704810886,
+    "median": 0.4493786361534149,
+    "min": 0.1495303419780814,
+    "max": 0.5710914200171828,
+    "q25": 0.36422053747810423,
+    "q75": 0.4793890144210309
+  },
+  "detector_failures": 0,
+  "eligible_detector_seconds": 1362930.0,
+  "limitations": [
+    "automated proxies, not expert event labels",
+    "YASA amplitude/montage criteria unvalidated in this bipolar configuration",
+    "correlated channels are not independent experts",
+    "SCenvelope andSTrawEMG are not interchangeable"
+  ],
+  "stage_label_source": "originalR&K epoch stages, not event locations"
+}

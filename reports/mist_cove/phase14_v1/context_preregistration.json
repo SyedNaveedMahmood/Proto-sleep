@@ -1,0 +1,56 @@
+{
+  "config_sha256": "aa0de9354c205cffaef5e70f9644d83ac4fa8879894de253f5c8274b381e7215",
+  "source_sha256": {
+    "src/mist_cove/phase14/context_model.py": "5a0f07545aa7124d4d7b9d663462e763a6cc2c6a0af64e44ef2892c7afa7469a",
+    "src/mist_cove/phase14/context_operator.py": "e81e26f15932d8c689dba311a2c6e41b6c5b4ebfd669cc2f05f71d995a03a90f",
+    "src/mist_cove/phase13/model_adequacy.py": "894e6eb12fc3ad21a9e532c022d35e0ca6e58af22b753e6da3c5a8216bcd3b42",
+    "src/mist_cove/phase13/optimization.py": "dfddd73190e38b47ff0b15bb9ed7e58c55743ac0779a759d16d4619a1a48e28e",
+    "src/mist_cove/phase13/seals.py": "a245c9971c39df7ee6e97559cfa466c4f56a27067fe71fdcb0ad36723b9bcfce"
+  },
+  "study": {
+    "decision": "GO",
+    "reason": "PhaseXIII underoptimization resolved partly, transition-adjacent errors elevated, width/routing incremental gates failed; isolate temporal context at equal parameter count",
+    "capacity": "L",
+    "routing": "R0",
+    "arms": [
+      "C0",
+      "C1"
+    ],
+    "seeds": [
+      123,
+      456,
+      789
+    ],
+    "horizon": 3000,
+    "milestones": [
+      3000
+    ],
+    "batch_size": 16,
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "gradient_clip": 5,
+    "loss": "mean clean and center-local3RMS35Hz paired classification CE",
+    "weights": {
+      "C0": [
+        0,
+        1,
+        0
+      ],
+      "C1": [
+        0.25,
+        0.5,
+        0.25
+      ]
+    },
+    "boundary": "zero weight unavailable same-recording physical neighbors; renormalize valid weights",
+    "future_context": "offline noncausal",
+    "normalization": "reuse exact PhaseXIII10fit-only normalization",
+    "promotion": "allseeds C1-C0 meanparticipantF1>=0.02, transitionaccuracydelta>=0.03,N1recalldelta>=0.05,no classF1loss>0.10",
+    "availability": "17variables inphysicalorder:previouswhole30s,15center2satoms,nextwhole30s; independently verified coarsepartition",
+    "ST_evaluation": "all6fixed finalstates asprespecified comparators; SCgatefailure never permits STpromotion"
+  },
+  "data_sha256": "f2005ac148b606d7411fda29dfd7a35227e140e1e8d9dee5955b3e3f90ad9ccb",
+  "ST_values_opened": false,
+  "exposure": "both arms encode same3physicalwindows for matched compute; C0weights0/1/0, C1weights.25/.5/.25; additional useful neighbor information is intended treatment",
+  "generated_correctness": "18focused tests pass including all131072contextmasks and two exact sealed optimizer/RNG resume fixtures; first fixture bug (center also changed in missing-neighbor test) corrected before real fits"
+}

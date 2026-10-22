@@ -1,0 +1,1675 @@
+{
+  "version": "phase14-progress-v1",
+  "authorization_sha256": "df5d420eb9a7ee60036d18f95fc35fe6538a5b8cfca2ef1218db289071becef1",
+  "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+  "work_packages": [
+    {
+      "id": "WP01",
+      "title": "Repository integrity",
+      "dependencies": [],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "NOT_APPLICABLE",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/manifest.py": "a03db17ef266bb0bb88ccd89c9bc9073f9eb527f0cc76f24ae7eccda7bfe9cac"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "Generated role-denial and original reference review."
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/data_scope_receipt.json"
+      ],
+      "findings": [
+        "Official root metadata, branch/base identity and the exact approved role allowlist checked."
+      ],
+      "limitations": [
+        "Historical training-lineage signer and timestamp unavailable."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP02",
+      "title": "Consolidated Phase XIII evidence review",
+      "dependencies": [
+        "WP01"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "NOT_APPLICABLE",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/manifest.py": "a03db17ef266bb0bb88ccd89c9bc9073f9eb527f0cc76f24ae7eccda7bfe9cac"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "Generated role-denial and original reference review."
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/data_scope_receipt.json"
+      ],
+      "findings": [
+        "Official root metadata, branch/base identity and the exact approved role allowlist checked."
+      ],
+      "limitations": [
+        "Historical training-lineage signer and timestamp unavailable."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP03",
+      "title": "Strict local dataset root verification",
+      "dependencies": [
+        "WP02"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "NOT_APPLICABLE",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/manifest.py": "a03db17ef266bb0bb88ccd89c9bc9073f9eb527f0cc76f24ae7eccda7bfe9cac"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "Generated role-denial and original reference review."
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/data_scope_receipt.json"
+      ],
+      "findings": [
+        "Official root metadata, branch/base identity and the exact approved role allowlist checked."
+      ],
+      "limitations": [
+        "Historical training-lineage signer and timestamp unavailable."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP04",
+      "title": "Build the Phase XIV allowlist",
+      "dependencies": [
+        "WP03"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "NOT_APPLICABLE",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/manifest.py": "a03db17ef266bb0bb88ccd89c9bc9073f9eb527f0cc76f24ae7eccda7bfe9cac"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "Generated role-denial and original reference review."
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/data_scope_receipt.json"
+      ],
+      "findings": [
+        "Official root metadata, branch/base identity and the exact approved role allowlist checked."
+      ],
+      "limitations": [
+        "Historical training-lineage signer and timestamp unavailable."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP05",
+      "title": "Verify dataset integrity",
+      "dependencies": [
+        "WP04"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "NOT_APPLICABLE",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/access_control.py": "6ece37c2ada8017e3a3ccfd2ddb8516f0adfc59d01d5ec2c195371308b4d9760",
+          "src/mist_cove/phase14/edf_reader.py": "e912eed89b69c35d8730c55cec79864caf5631f5cd7ad3d308568698c13b60fe"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "Generated no-follow/hardlink/swap/bounds and strict paired TAL checks."
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/file_integrity_receipt.json",
+        "reports/mist_cove/phase14_v1/channel_contract.json"
+      ],
+      "findings": [
+        "All 146 approved EDF hashes, 73 strict paired geometries and observed channel rates verified."
+      ],
+      "limitations": [
+        "No unrelated SC files were accessed."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP06",
+      "title": "Inspect channel availability",
+      "dependencies": [
+        "WP05"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "NOT_APPLICABLE",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/access_control.py": "6ece37c2ada8017e3a3ccfd2ddb8516f0adfc59d01d5ec2c195371308b4d9760",
+          "src/mist_cove/phase14/edf_reader.py": "e912eed89b69c35d8730c55cec79864caf5631f5cd7ad3d308568698c13b60fe"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "Generated no-follow/hardlink/swap/bounds and strict paired TAL checks."
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/file_integrity_receipt.json",
+        "reports/mist_cove/phase14_v1/channel_contract.json"
+      ],
+      "findings": [
+        "All 146 approved EDF hashes, 73 strict paired geometries and observed channel rates verified."
+      ],
+      "limitations": [
+        "No unrelated SC files were accessed."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP07",
+      "title": "Verify hypnogram geometry",
+      "dependencies": [
+        "WP06"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "NOT_APPLICABLE",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/access_control.py": "6ece37c2ada8017e3a3ccfd2ddb8516f0adfc59d01d5ec2c195371308b4d9760",
+          "src/mist_cove/phase14/edf_reader.py": "e912eed89b69c35d8730c55cec79864caf5631f5cd7ad3d308568698c13b60fe"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "Generated no-follow/hardlink/swap/bounds and strict paired TAL checks."
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/file_integrity_receipt.json",
+        "reports/mist_cove/phase14_v1/channel_contract.json"
+      ],
+      "findings": [
+        "All 146 approved EDF hashes, 73 strict paired geometries and observed channel rates verified."
+      ],
+      "limitations": [
+        "No unrelated SC files were accessed."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP08",
+      "title": "Preregister and seal the scientific protocol",
+      "dependencies": [
+        "WP07"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "NOT_APPLICABLE",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/protocol.py": "1d4a090a6415e02603878f0fa94701638a61bda944d424e6c65e5d0a37b72262"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "Prospective commit and SHA binding."
+      ],
+      "artifacts": [
+        "configs/mist_cove_phase14_v1.json",
+        "reports/mist_cove/phase14_v1/protocol_preregistration.json"
+      ],
+      "findings": [
+        "SC scientific rules were frozen prospectively."
+      ],
+      "limitations": [
+        "Protocol amendments require separate identity."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP09",
+      "title": "Build a secure multichannel EDF loader",
+      "dependencies": [
+        "WP08"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "AUTOMATED_PROXY_ONLY_HUMAN_NOT_TESTED",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/detector_worker.py": "18ca546c4e84a8fc51e0779fb10b5c719efafa34bf37cf0853b288b2ddfb77d8",
+          "src/mist_cove/phase14/proxies.py": "d70dfa7b45c551a9296194159acb42663791d499ebe11b29e01386d73e096dce",
+          "src/mist_cove/phase14/event_schema.py": "cef5239d140195e2f35d431365d775582c3594de69ac3628c928c2c66c767c9d"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "Generated positive/flat fixtures, frequency response, finite signal schema and native EMG rates."
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/detector_manifest.json"
+      ],
+      "findings": [
+        "Stage-blind signal detectors and independent controls passed generated positive/flat checks."
+      ],
+      "limitations": [
+        "Human event validity NOT TESTED; unused classifier assets bundled in wheel."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP10",
+      "title": "Implement channel-specific calibration",
+      "dependencies": [
+        "WP09"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "AUTOMATED_PROXY_ONLY_HUMAN_NOT_TESTED",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/detector_worker.py": "18ca546c4e84a8fc51e0779fb10b5c719efafa34bf37cf0853b288b2ddfb77d8",
+          "src/mist_cove/phase14/proxies.py": "d70dfa7b45c551a9296194159acb42663791d499ebe11b29e01386d73e096dce",
+          "src/mist_cove/phase14/event_schema.py": "cef5239d140195e2f35d431365d775582c3594de69ac3628c928c2c66c767c9d"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "Generated positive/flat fixtures, frequency response, finite signal schema and native EMG rates."
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/detector_manifest.json"
+      ],
+      "findings": [
+        "Stage-blind signal detectors and independent controls passed generated positive/flat checks."
+      ],
+      "limitations": [
+        "Human event validity NOT TESTED; unused classifier assets bundled in wheel."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP11",
+      "title": "Continuous-recording preprocessing",
+      "dependencies": [
+        "WP10"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "AUTOMATED_PROXY_ONLY_HUMAN_NOT_TESTED",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/detector_worker.py": "18ca546c4e84a8fc51e0779fb10b5c719efafa34bf37cf0853b288b2ddfb77d8",
+          "src/mist_cove/phase14/proxies.py": "d70dfa7b45c551a9296194159acb42663791d499ebe11b29e01386d73e096dce",
+          "src/mist_cove/phase14/event_schema.py": "cef5239d140195e2f35d431365d775582c3594de69ac3628c928c2c66c767c9d"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "Generated positive/flat fixtures, frequency response, finite signal schema and native EMG rates."
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/detector_manifest.json"
+      ],
+      "findings": [
+        "Stage-blind signal detectors and independent controls passed generated positive/flat checks."
+      ],
+      "limitations": [
+        "Human event validity NOT TESTED; unused classifier assets bundled in wheel."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP12",
+      "title": "Define automated physiological proxies",
+      "dependencies": [
+        "WP11"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "AUTOMATED_PROXY_ONLY_HUMAN_NOT_TESTED",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/detector_worker.py": "18ca546c4e84a8fc51e0779fb10b5c719efafa34bf37cf0853b288b2ddfb77d8",
+          "src/mist_cove/phase14/proxies.py": "d70dfa7b45c551a9296194159acb42663791d499ebe11b29e01386d73e096dce",
+          "src/mist_cove/phase14/event_schema.py": "cef5239d140195e2f35d431365d775582c3594de69ac3628c928c2c66c767c9d"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "Generated positive/flat fixtures, frequency response, finite signal schema and native EMG rates."
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/detector_manifest.json"
+      ],
+      "findings": [
+        "Stage-blind signal detectors and independent controls passed generated positive/flat checks."
+      ],
+      "limitations": [
+        "Human event validity NOT TESTED; unused classifier assets bundled in wheel."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP13",
+      "title": "Implement spindle-like event detection",
+      "dependencies": [
+        "WP12"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "AUTOMATED_PROXY_ONLY_HUMAN_NOT_TESTED",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/detector_worker.py": "18ca546c4e84a8fc51e0779fb10b5c719efafa34bf37cf0853b288b2ddfb77d8",
+          "src/mist_cove/phase14/proxies.py": "d70dfa7b45c551a9296194159acb42663791d499ebe11b29e01386d73e096dce",
+          "src/mist_cove/phase14/event_schema.py": "cef5239d140195e2f35d431365d775582c3594de69ac3628c928c2c66c767c9d"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "Generated positive/flat fixtures, frequency response, finite signal schema and native EMG rates."
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/detector_manifest.json"
+      ],
+      "findings": [
+        "Stage-blind signal detectors and independent controls passed generated positive/flat checks."
+      ],
+      "limitations": [
+        "Human event validity NOT TESTED; unused classifier assets bundled in wheel."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP14",
+      "title": "Implement slow-wave-like detection",
+      "dependencies": [
+        "WP13"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "AUTOMATED_PROXY_ONLY_HUMAN_NOT_TESTED",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/detector_worker.py": "18ca546c4e84a8fc51e0779fb10b5c719efafa34bf37cf0853b288b2ddfb77d8",
+          "src/mist_cove/phase14/proxies.py": "d70dfa7b45c551a9296194159acb42663791d499ebe11b29e01386d73e096dce",
+          "src/mist_cove/phase14/event_schema.py": "cef5239d140195e2f35d431365d775582c3594de69ac3628c928c2c66c767c9d"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "Generated positive/flat fixtures, frequency response, finite signal schema and native EMG rates."
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/detector_manifest.json"
+      ],
+      "findings": [
+        "Stage-blind signal detectors and independent controls passed generated positive/flat checks."
+      ],
+      "limitations": [
+        "Human event validity NOT TESTED; unused classifier assets bundled in wheel."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP15",
+      "title": "Implement EOG/EMG and artifact proxies",
+      "dependencies": [
+        "WP14"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "AUTOMATED_PROXY_ONLY_HUMAN_NOT_TESTED",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/detector_worker.py": "18ca546c4e84a8fc51e0779fb10b5c719efafa34bf37cf0853b288b2ddfb77d8",
+          "src/mist_cove/phase14/proxies.py": "d70dfa7b45c551a9296194159acb42663791d499ebe11b29e01386d73e096dce",
+          "src/mist_cove/phase14/event_schema.py": "cef5239d140195e2f35d431365d775582c3594de69ac3628c928c2c66c767c9d"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "Generated positive/flat fixtures, frequency response, finite signal schema and native EMG rates."
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/detector_manifest.json"
+      ],
+      "findings": [
+        "Stage-blind signal detectors and independent controls passed generated positive/flat checks."
+      ],
+      "limitations": [
+        "Human event validity NOT TESTED; unused classifier assets bundled in wheel."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP16",
+      "title": "Implement transparent independent controls",
+      "dependencies": [
+        "WP15"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "AUTOMATED_PROXY_ONLY_HUMAN_NOT_TESTED",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/detector_worker.py": "18ca546c4e84a8fc51e0779fb10b5c719efafa34bf37cf0853b288b2ddfb77d8",
+          "src/mist_cove/phase14/proxies.py": "d70dfa7b45c551a9296194159acb42663791d499ebe11b29e01386d73e096dce",
+          "src/mist_cove/phase14/event_schema.py": "cef5239d140195e2f35d431365d775582c3594de69ac3628c928c2c66c767c9d"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "Generated positive/flat fixtures, frequency response, finite signal schema and native EMG rates."
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/detector_manifest.json"
+      ],
+      "findings": [
+        "Stage-blind signal detectors and independent controls passed generated positive/flat checks."
+      ],
+      "limitations": [
+        "Human event validity NOT TESTED; unused classifier assets bundled in wheel."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP17",
+      "title": "Freeze SC analysis samples",
+      "dependencies": [
+        "WP16"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "NOT_APPLICABLE",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/source_audit.py": "810c1294f8003eccd01ebce8ce64d02a8db7b5795bbdeead2dafa6993a9beef6",
+          "src/mist_cove/phase14/signal_preprocessing.py": "37e929838ee9927bb96eb7e2905333a90067032fb541571d412d527248c7c589"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "Fixed-rank sample hashes, pilot and filter control."
+      ],
+      "artifacts": [
+        "configs/mist_cove_phase14_v1.json",
+        "reports/mist_cove/phase14_v1/protocol_preregistration.json"
+      ],
+      "findings": [
+        "SC sample ranks and complete source campaign audited; no detector execution failures."
+      ],
+      "limitations": [
+        "SC TRAIN is developmental, not independent validation."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP18",
+      "title": "Establish SC detector calibration and quality controls",
+      "dependencies": [
+        "WP17"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "NOT_TESTED",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/source_audit.py": "810c1294f8003eccd01ebce8ce64d02a8db7b5795bbdeead2dafa6993a9beef6",
+          "src/mist_cove/phase14/signal_preprocessing.py": "37e929838ee9927bb96eb7e2905333a90067032fb541571d412d527248c7c589"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "Fixed-rank sample hashes, pilot and filter control."
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/detector_manifest.json"
+      ],
+      "findings": [
+        "SC sample ranks and complete source campaign audited; no detector execution failures."
+      ],
+      "limitations": [
+        "SC TRAIN is developmental, not independent validation."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP19",
+      "title": "Evaluate detector consistency on SC TRAIN development",
+      "dependencies": [
+        "WP18"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "MIXED",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/statistics.py": "7d71ce89efbf3982aa454f6f46b9671718a779fc41ff6979accb0d6ef52e302f",
+          "src/mist_cove/phase14/event_alignment.py": "495d297cefd18e71e2e601b3d24f07889be06959684d95d1e22e6d675f463f6e"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "29 recording and 15-person denominator checks."
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/sc_proxy_aggregates.json"
+      ],
+      "findings": [
+        "SC automated signal morphology and cross-channel concordance measured."
+      ],
+      "limitations": [
+        "Slow-wave cross-channel agreement is low; no expert truth."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP20",
+      "title": "Build a multichannel EEG morphology atlas",
+      "dependencies": [
+        "WP19"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "MIXED",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/statistics.py": "7d71ce89efbf3982aa454f6f46b9671718a779fc41ff6979accb0d6ef52e302f",
+          "src/mist_cove/phase14/event_alignment.py": "495d297cefd18e71e2e601b3d24f07889be06959684d95d1e22e6d675f463f6e"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "29 recording and 15-person denominator checks."
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/sc_proxy_aggregates.json"
+      ],
+      "findings": [
+        "SC automated signal morphology and cross-channel concordance measured."
+      ],
+      "limitations": [
+        "Slow-wave cross-channel agreement is low; no expert truth."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP21",
+      "title": "Quantify cross-channel physiological concordance",
+      "dependencies": [
+        "WP20"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "MIXED",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/statistics.py": "7d71ce89efbf3982aa454f6f46b9671718a779fc41ff6979accb0d6ef52e302f",
+          "src/mist_cove/phase14/event_alignment.py": "495d297cefd18e71e2e601b3d24f07889be06959684d95d1e22e6d675f463f6e"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "29 recording and 15-person denominator checks."
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/sc_proxy_aggregates.json"
+      ],
+      "findings": [
+        "SC automated signal morphology and cross-channel concordance measured."
+      ],
+      "limitations": [
+        "Slow-wave cross-channel agreement is low; no expert truth."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP22",
+      "title": "Revalidate the authenticated original model",
+      "dependencies": [
+        "WP21"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "PASS",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/source_audit.py": "810c1294f8003eccd01ebce8ce64d02a8db7b5795bbdeead2dafa6993a9beef6"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "Generated full-table and noninterference controls."
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/model_authentication.json"
+      ],
+      "findings": [
+        "Authenticated historical model adapter and exact full-input identity passed."
+      ],
+      "limitations": [
+        "Historical signer/time and full training replay unresolved."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP23",
+      "title": "Run SC local/global dependency analysis",
+      "dependencies": [
+        "WP22"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "PENDING_AGGREGATION",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/witness_audit.py": "70afd98787728baae713c1e48150410b6cc7d89298c92f6a791a4e262d29051b",
+          "src/mist_cove/phase14/event_alignment.py": "495d297cefd18e71e2e601b3d24f07889be06959684d95d1e22e6d675f463f6e"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "All 32768 masks per table, matched controls, 0/.01 neutral and physical guards."
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/SC_TRAIN_witness_execution.json"
+      ],
+      "findings": [
+        "900 exact SC tables and proxy/physical contrasts retained; primary SC proxy gate NOT ESTIMABLE."
+      ],
+      "limitations": [
+        "Only nine event-eligible developmental cases/four people."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP24",
+      "title": "Compare MIST-WIC support to automated EEG events",
+      "dependencies": [
+        "WP23"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "MIXED",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/witness_audit.py": "70afd98787728baae713c1e48150410b6cc7d89298c92f6a791a4e262d29051b",
+          "src/mist_cove/phase14/event_alignment.py": "495d297cefd18e71e2e601b3d24f07889be06959684d95d1e22e6d675f463f6e"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "All 32768 masks per table, matched controls, 0/.01 neutral and physical guards."
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/SC_TRAIN_witness_execution.json"
+      ],
+      "findings": [
+        "900 exact SC tables and proxy/physical contrasts retained; primary SC proxy gate NOT ESTIMABLE."
+      ],
+      "limitations": [
+        "Only nine event-eligible developmental cases/four people."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP25",
+      "title": "Explain correct and incorrect classifications using multiple signals",
+      "dependencies": [
+        "WP24"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "MIXED",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/witness_audit.py": "70afd98787728baae713c1e48150410b6cc7d89298c92f6a791a4e262d29051b",
+          "src/mist_cove/phase14/event_alignment.py": "495d297cefd18e71e2e601b3d24f07889be06959684d95d1e22e6d675f463f6e"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "All 32768 masks per table, matched controls, 0/.01 neutral and physical guards."
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/SC_TRAIN_witness_execution.json"
+      ],
+      "findings": [
+        "900 exact SC tables and proxy/physical contrasts retained; primary SC proxy gate NOT ESTIMABLE."
+      ],
+      "limitations": [
+        "Only nine event-eligible developmental cases/four people."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP26",
+      "title": "Test internal-versus-physical explanation validity",
+      "dependencies": [
+        "WP25"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "MIXED",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/witness_audit.py": "70afd98787728baae713c1e48150410b6cc7d89298c92f6a791a4e262d29051b",
+          "src/mist_cove/phase14/event_alignment.py": "495d297cefd18e71e2e601b3d24f07889be06959684d95d1e22e6d675f463f6e"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "All 32768 masks per table, matched controls, 0/.01 neutral and physical guards."
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/SC_TRAIN_witness_execution.json"
+      ],
+      "findings": [
+        "900 exact SC tables and proxy/physical contrasts retained; primary SC proxy gate NOT ESTIMABLE."
+      ],
+      "limitations": [
+        "Only nine event-eligible developmental cases/four people."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP27",
+      "title": "Decide whether temporal context deserves testing",
+      "dependencies": [
+        "WP26"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "NOT_APPLICABLE",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/context_model.py": "5a0f07545aa7124d4d7b9d663462e763a6cc2c6a0af64e44ef2892c7afa7469a"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "Generated throughput and parameter-count pilot."
+      ],
+      "artifacts": [
+        "configs/mist_cove_phase14_v1.json",
+        "reports/mist_cove/phase14_v1/protocol_preregistration.json"
+      ],
+      "findings": [
+        "Equal-parameter C0/C1 comparison prospectively authorized from SC transition hypothesis."
+      ],
+      "limitations": [
+        "Offline future context is noncausal."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP28",
+      "title": "Implement a tightly matched context candidate",
+      "dependencies": [
+        "WP27"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "FAIL",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/context_model.py": "5a0f07545aa7124d4d7b9d663462e763a6cc2c6a0af64e44ef2892c7afa7469a"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "Exact optimizer/RNG resume, matched random streams and final-state seals."
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/context_results.json"
+      ],
+      "findings": [
+        "All six SC fits and 18000 updates completed; C1 transition gate FAIL all three seeds."
+      ],
+      "limitations": [
+        "Five-person development group; no architecture sweep."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP29",
+      "title": "Freeze the context training comparison",
+      "dependencies": [
+        "WP28"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "FAIL",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/context_model.py": "5a0f07545aa7124d4d7b9d663462e763a6cc2c6a0af64e44ef2892c7afa7469a"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "Exact optimizer/RNG resume, matched random streams and final-state seals."
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/context_results.json"
+      ],
+      "findings": [
+        "All six SC fits and 18000 updates completed; C1 transition gate FAIL all three seeds."
+      ],
+      "limitations": [
+        "Five-person development group; no architecture sweep."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP30",
+      "title": "Train and validate the context candidate",
+      "dependencies": [
+        "WP29"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "FAIL_GATE",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/context_model.py": "5a0f07545aa7124d4d7b9d663462e763a6cc2c6a0af64e44ef2892c7afa7469a"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "Exact optimizer/RNG resume, matched random streams and final-state seals."
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/context_results.json"
+      ],
+      "findings": [
+        "All six SC fits and 18000 updates completed; C1 transition gate FAIL all three seeds."
+      ],
+      "limitations": [
+        "Five-person development group; no architecture sweep."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP31",
+      "title": "Evaluate context versus explanation behavior",
+      "dependencies": [
+        "WP30"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "PASS",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/context_operator.py": "e81e26f15932d8c689dba311a2c6e41b6c5b4ebfd669cc2f05f71d995a03a90f"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "7864320 table rows plus native identities."
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/context_operator_results.json"
+      ],
+      "findings": [
+        "60 complete 17-variable context tables and signed clauses verify exactly."
+      ],
+      "limitations": [
+        "Previous/next are whole 30-second blocks, not 45 independent atoms."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP32",
+      "title": "Seal the complete ST evaluation package",
+      "dependencies": [
+        "WP31"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "NOT_APPLICABLE",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/protocol.py": "1d4a090a6415e02603878f0fa94701638a61bda944d424e6c65e5d0a37b72262"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "Committed SHA/ancestor seal and post-amendment source identities."
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/frozen_st_protocol.json"
+      ],
+      "findings": [
+        "Final complete ST scientific package and six states committed before any ST waveform value."
+      ],
+      "limitations": [
+        "Later transport amendment documented independently."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP33",
+      "title": "Execute ST preflight",
+      "dependencies": [
+        "WP32"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "MIXED",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/source_audit.py": "810c1294f8003eccd01ebce8ce64d02a8db7b5795bbdeead2dafa6993a9beef6",
+          "src/mist_cove/phase14/edf_reader.py": "e912eed89b69c35d8730c55cec79864caf5631f5cd7ad3d308568698c13b60fe"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "44 original-file hashes, strict geometry, frozen seal, model-state identity."
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/st_classification_metrics.json",
+        "reports/mist_cove/phase14_v1/st_explanation_results.json"
+      ],
+      "findings": [
+        "All 44 ST nights and 45446 physical epochs completed with frozen original inference."
+      ],
+      "limitations": [
+        "Initial detector-worker import failure preserved; first-record predictions reused."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP34",
+      "title": "Load and verify all authorized ST recordings",
+      "dependencies": [
+        "WP33"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "MIXED",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/source_audit.py": "810c1294f8003eccd01ebce8ce64d02a8db7b5795bbdeead2dafa6993a9beef6",
+          "src/mist_cove/phase14/edf_reader.py": "e912eed89b69c35d8730c55cec79864caf5631f5cd7ad3d308568698c13b60fe"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "44 original-file hashes, strict geometry, frozen seal, model-state identity."
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/st_classification_metrics.json",
+        "reports/mist_cove/phase14_v1/st_explanation_results.json"
+      ],
+      "findings": [
+        "All 44 ST nights and 45446 physical epochs completed with frozen original inference."
+      ],
+      "limitations": [
+        "Initial detector-worker import failure preserved; first-record predictions reused."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP35",
+      "title": "Construct the ST complete physical sleep-stage grid",
+      "dependencies": [
+        "WP34"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "MIXED",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/source_audit.py": "810c1294f8003eccd01ebce8ce64d02a8db7b5795bbdeead2dafa6993a9beef6",
+          "src/mist_cove/phase14/edf_reader.py": "e912eed89b69c35d8730c55cec79864caf5631f5cd7ad3d308568698c13b60fe"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "44 original-file hashes, strict geometry, frozen seal, model-state identity."
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/st_classification_metrics.json",
+        "reports/mist_cove/phase14_v1/st_explanation_results.json"
+      ],
+      "findings": [
+        "All 44 ST nights and 45446 physical epochs completed with frozen original inference."
+      ],
+      "limitations": [
+        "Initial detector-worker import failure preserved; first-record predictions reused."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP36",
+      "title": "Run frozen original P3B inference across ST",
+      "dependencies": [
+        "WP35"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "MIXED",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/source_audit.py": "810c1294f8003eccd01ebce8ce64d02a8db7b5795bbdeead2dafa6993a9beef6",
+          "src/mist_cove/phase14/edf_reader.py": "e912eed89b69c35d8730c55cec79864caf5631f5cd7ad3d308568698c13b60fe"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "44 original-file hashes, strict geometry, frozen seal, model-state identity."
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/st_classification_metrics.json",
+        "reports/mist_cove/phase14_v1/st_explanation_results.json"
+      ],
+      "findings": [
+        "All 44 ST nights and 45446 physical epochs completed with frozen original inference."
+      ],
+      "limitations": [
+        "Initial detector-worker import failure preserved; first-record predictions reused."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP37",
+      "title": "Quantify cross-study stage classification",
+      "dependencies": [
+        "WP36"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "MIXED",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/statistics.py": "7d71ce89efbf3982aa454f6f46b9671718a779fc41ff6979accb0d6ef52e302f"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "Full scored-grid five-stage metrics and participant bootstrap."
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/st_classification_metrics.json",
+        "reports/mist_cove/phase14_v1/st_explanation_results.json"
+      ],
+      "findings": [
+        "ST minimum transfer PASS; REM recall and calibration degrade substantially."
+      ],
+      "limitations": [
+        "No clinical-population generalization."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP38",
+      "title": "Examine temazepam/placebo conditions descriptively",
+      "dependencies": [
+        "WP37"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "DESCRIPTIVE_NONCAUSAL",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/statistics.py": "7d71ce89efbf3982aa454f6f46b9671718a779fc41ff6979accb0d6ef52e302f"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "Within-person night linkage and paired participant bootstrap."
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/st_classification_metrics.json",
+        "reports/mist_cove/phase14_v1/st_explanation_results.json"
+      ],
+      "findings": [
+        "Official condition-paired descriptions across all 22 people reported."
+      ],
+      "limitations": [
+        "Causal drug effect NOT ESTABLISHED."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP39",
+      "title": "Quantify SC-to-ST signal-domain differences",
+      "dependencies": [
+        "WP38"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "DESCRIPTIVE_UNPAIRED",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/synthesis.py": "d362c85eb24ac8e5e33f45e8754ad5cc2e5585ba0f6215d8a97dbbcdb2f3e708"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "Stage-balanced participant bootstrap."
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/st_classification_metrics.json",
+        "reports/mist_cove/phase14_v1/st_explanation_results.json"
+      ],
+      "findings": [
+        "Unpaired SC/ST signal and prevalence differences quantified."
+      ],
+      "limitations": [
+        "Acquisition/medication/study differences confounded."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP40",
+      "title": "Run frozen event-proxy detectors on ST",
+      "dependencies": [
+        "WP39"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "MIXED",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/detector_worker.py": "18ca546c4e84a8fc51e0779fb10b5c719efafa34bf37cf0853b288b2ddfb77d8",
+          "src/mist_cove/phase14/statistics.py": "7d71ce89efbf3982aa454f6f46b9671718a779fc41ff6979accb0d6ef52e302f"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "Full-grid detector status and cross-channel F1 controls."
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/st_classification_metrics.json",
+        "reports/mist_cove/phase14_v1/st_explanation_results.json"
+      ],
+      "findings": [
+        "All 44 ST recordings completed frozen stage-blind detectors."
+      ],
+      "limitations": [
+        "No expert event reference."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP41",
+      "title": "Create the frozen ST witness-audit sample",
+      "dependencies": [
+        "WP40"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "MIXED",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/witness_audit.py": "70afd98787728baae713c1e48150410b6cc7d89298c92f6a791a4e262d29051b",
+          "src/mist_cove/phase14/statistics.py": "7d71ce89efbf3982aa454f6f46b9671718a779fc41ff6979accb0d6ef52e302f"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "All 32768 masks, original clauses, shift/permutation and matched controls."
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/st_classification_metrics.json",
+        "reports/mist_cove/phase14_v1/st_explanation_results.json"
+      ],
+      "findings": [
+        "219 prespecified ST samples, 1095 exact tables; random proxy PASS, sigma incremental FAIL."
+      ],
+      "limitations": [
+        "One missing stratum; only 25 primary eligible cases."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP42",
+      "title": "Test ST explanation-to-proxy concordance",
+      "dependencies": [
+        "WP41"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "MIXED",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/witness_audit.py": "70afd98787728baae713c1e48150410b6cc7d89298c92f6a791a4e262d29051b",
+          "src/mist_cove/phase14/statistics.py": "7d71ce89efbf3982aa454f6f46b9671718a779fc41ff6979accb0d6ef52e302f"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "All 32768 masks, original clauses, shift/permutation and matched controls."
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/st_classification_metrics.json",
+        "reports/mist_cove/phase14_v1/st_explanation_results.json"
+      ],
+      "findings": [
+        "219 prespecified ST samples, 1095 exact tables; random proxy PASS, sigma incremental FAIL."
+      ],
+      "limitations": [
+        "One missing stratum; only 25 primary eligible cases."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP43",
+      "title": "Evaluate ST failure mechanisms and uncertainty",
+      "dependencies": [
+        "WP42"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "MIXED",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/witness_audit.py": "70afd98787728baae713c1e48150410b6cc7d89298c92f6a791a4e262d29051b",
+          "src/mist_cove/phase14/statistics.py": "7d71ce89efbf3982aa454f6f46b9671718a779fc41ff6979accb0d6ef52e302f"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "All 32768 masks, original clauses, shift/permutation and matched controls."
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/st_classification_metrics.json",
+        "reports/mist_cove/phase14_v1/st_explanation_results.json"
+      ],
+      "findings": [
+        "219 prespecified ST samples, 1095 exact tables; random proxy PASS, sigma incremental FAIL."
+      ],
+      "limitations": [
+        "One missing stratum; only 25 primary eligible cases."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP44",
+      "title": "Integrate the three scientific views",
+      "dependencies": [
+        "WP43"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "MIXED",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/synthesis.py": "d362c85eb24ac8e5e33f45e8754ad5cc2e5585ba0f6215d8a97dbbcdb2f3e708",
+          "src/mist_cove/phase14/statistics.py": "7d71ce89efbf3982aa454f6f46b9671718a779fc41ff6979accb0d6ef52e302f"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "Participant resampling, condition pairing and fixed detector sensitivity."
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/scientific_gates.json",
+        "reports/mist_cove/phase14_v1/cross_study_metrics.json"
+      ],
+      "findings": [
+        "All structural, physical and proxy results integrated; negative gates preserved."
+      ],
+      "limitations": [
+        "Human and clinical event interpretation NOT TESTED."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP45",
+      "title": "Run prespecified robustness and falsification controls",
+      "dependencies": [
+        "WP44"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "MIXED",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/synthesis.py": "d362c85eb24ac8e5e33f45e8754ad5cc2e5585ba0f6215d8a97dbbcdb2f3e708",
+          "src/mist_cove/phase14/statistics.py": "7d71ce89efbf3982aa454f6f46b9671718a779fc41ff6979accb0d6ef52e302f"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "Participant resampling, condition pairing and fixed detector sensitivity."
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/scientific_gates.json",
+        "reports/mist_cove/phase14_v1/cross_study_metrics.json"
+      ],
+      "findings": [
+        "All structural, physical and proxy results integrated; negative gates preserved."
+      ],
+      "limitations": [
+        "Human and clinical event interpretation NOT TESTED."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP46",
+      "title": "Perform rigorous statistical analysis",
+      "dependencies": [
+        "WP45"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "MIXED",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/synthesis.py": "d362c85eb24ac8e5e33f45e8754ad5cc2e5585ba0f6215d8a97dbbcdb2f3e708",
+          "src/mist_cove/phase14/statistics.py": "7d71ce89efbf3982aa454f6f46b9671718a779fc41ff6979accb0d6ef52e302f"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "Participant resampling, condition pairing and fixed detector sensitivity."
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/scientific_gates.json",
+        "reports/mist_cove/phase14_v1/cross_study_metrics.json"
+      ],
+      "findings": [
+        "All structural, physical and proxy results integrated; negative gates preserved."
+      ],
+      "limitations": [
+        "Human and clinical event interpretation NOT TESTED."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP47",
+      "title": "Build a falsification-oriented scientific decision",
+      "dependencies": [
+        "WP46"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "MIXED",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/synthesis.py": "d362c85eb24ac8e5e33f45e8754ad5cc2e5585ba0f6215d8a97dbbcdb2f3e708",
+          "src/mist_cove/phase14/statistics.py": "7d71ce89efbf3982aa454f6f46b9671718a779fc41ff6979accb0d6ef52e302f"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "Participant resampling, condition pairing and fixed detector sensitivity."
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/scientific_gates.json",
+        "reports/mist_cove/phase14_v1/cross_study_metrics.json"
+      ],
+      "findings": [
+        "All structural, physical and proxy results integrated; negative gates preserved."
+      ],
+      "limitations": [
+        "Human and clinical event interpretation NOT TESTED."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP48",
+      "title": "Complete extensive security and correctness testing",
+      "dependencies": [
+        "WP47"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "PASS",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/publication.py": "6ba081f3289c5fbdada0c19627de049969e105b0bf06494b9b199e1396f4b555"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "1139 CPU passed, 11 CUDA skipped, exact context rows."
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/correctness.json"
+      ],
+      "findings": [
+        "Generated security, availability and resume controls plus full CPU suite passed."
+      ],
+      "limitations": [
+        "CUDA correctness NOT RUN under CPU-only patched runtime."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP49",
+      "title": "Produce a comprehensive scientific research package",
+      "dependencies": [
+        "WP48"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS_WITH_HISTORICAL_PATH_EXPOSURE",
+      "scientific_status": "MIXED",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/publication.py": "6ba081f3289c5fbdada0c19627de049969e105b0bf06494b9b199e1396f4b555",
+          "src/mist_cove/phase14/figures.py": "21a2226bae8ab7775d04f1df51dd109938c1364b064515d0a82a2d0bff04a529"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "Aggregate privacy scan and manifest digests."
+      ],
+      "artifacts": [
+        "docs/mist_cove/PHASE_XIV_SCIENTIFIC_DECISION_V1.md",
+        "reports/mist_cove/phase14_v1/DASHBOARD.md",
+        "reports/mist_cove/phase14_v1/figures/"
+      ],
+      "findings": [
+        "Fifteen focused documents, one decision report, aggregate dashboard and 12 figures compiled."
+      ],
+      "limitations": [
+        "Earlier pushed source exposed supplied root literal; history preserved."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP50",
+      "title": "GitHub delivery and final scientific decision",
+      "dependencies": [
+        "WP49"
+      ],
+      "status": "COMPLETE",
+      "engineering_status": "PASS_SUBJECT_TO_EXACT_HEAD_CI",
+      "scientific_status": "MIXED",
+      "code_configuration_identity": {
+        "config_sha256": "88ddfef75a2848b9784eabad013f8384f66434de83c3d9232ad8d9bf208e13b7",
+        "source_sha256": {
+          "src/mist_cove/phase14/publication.py": "6ba081f3289c5fbdada0c19627de049969e105b0bf06494b9b199e1396f4b555"
+        },
+        "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d",
+        "ST_scientific_freeze_commit": "d05a4d7",
+        "ST_engineering_amendment_commit": "fada272"
+      },
+      "tests": [
+        "Final local full CPU suite PASS; 1139 passed and 11 CUDA-only skips.",
+        "Implementation CI push run 39771096784 PASS, both jobs.",
+        "Exact final-commit GitHub Actions verification is the mandatory post-commit completion check."
+      ],
+      "artifacts": [
+        "https://github.com/SyedNaveedMahmood/Proto-sleep/pull/16",
+        "reports/mist_cove/phase14_v1/publication_manifest.json",
+        "reports/mist_cove/phase14_v1/correctness.json"
+      ],
+      "findings": [
+        "Draft PR #16 opened against the Phase XIII branch; implementation head 04b6143 passed both CI jobs. Final SHA requires a fresh exact-head CI check after this ledger commit."
+      ],
+      "limitations": [
+        "Historical Phase XIV source path exposure disclosed; no history rewrite.",
+        "Human validation NOT TESTED; CUDA NOT RUN.",
+        "Final exact-head CI run is checked externally after the ledger commit."
+      ],
+      "block_reason": null
+    }
+  ]
+}

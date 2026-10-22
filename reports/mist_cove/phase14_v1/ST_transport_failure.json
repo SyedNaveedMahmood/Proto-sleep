@@ -1,0 +1,13 @@
+{
+  "status": "ENGINEERING_IMPORT_FAILURE",
+  "completed_recordings": 0,
+  "source_record_values_opened": 1,
+  "native_original_epoch_forwards": 1196,
+  "native_context_base_epoch_forwards": 21528,
+  "detector_outputs_completed": 0,
+  "availability_queries": 0,
+  "reason": "standalone script directory shadowed stdlibstatistics, causing isolated YASA import failure before request consumption",
+  "retained_prediction_manifest_sha256": "ba411a9a77f60e3ade826728b0f19612b5b78eff6c51193475fc7f9607d9e53d",
+  "scientific_settings_changed": false,
+  "private_path_publication_limit": "Supplied root was present in earlier loader commits; latest source is being redacted; no EEG values uploaded and no history rewritten"
+}
