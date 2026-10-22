@@ -9,6 +9,7 @@ import io
 import numpy as np
 from scipy import signal
 import yasa
+from event_schema import validate_arrays
 
 
 def snapshot(path,expected):
@@ -40,6 +41,7 @@ def finite_row(row,offset):
 
 
 def detect_block(arrays,config,start,core_start,core_stop,duration):
+    validate_arrays(arrays)
     c=config['detector'];events={};failures=[];statuses={};runtime={}
     lo=max(10,core_start);hi=min(duration-10,core_stop)
     for channel in ('EEG Fpz-Cz','EEG Pz-Oz'):

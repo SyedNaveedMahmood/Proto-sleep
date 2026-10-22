@@ -1,0 +1,19 @@
+{
+  "generated_updates": 20,
+  "rows": [
+    {
+      "arm": "C0",
+      "seconds_per_update": 0.04584879479953088,
+      "parameters": 11974
+    },
+    {
+      "arm": "C1",
+      "seconds_per_update": 0.04580129840032896,
+      "parameters": 11974
+    }
+  ],
+  "projected_main_seconds": 824.8508387987386,
+  "fits": 6,
+  "horizon": 3000,
+  "scope_reduction": false
+}

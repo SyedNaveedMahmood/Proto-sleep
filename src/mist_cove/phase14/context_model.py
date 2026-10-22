@@ -29,7 +29,7 @@ class ContextLedger(nn.Module):
         out=self.base(x.reshape(-1,1,3000));c=out['contributions'].reshape(-1,3,15,5)*weights[:,:,None,None]
         g=out['global'].reshape(-1,3,5)*weights[:,:,None]
         return {'logits':self.base.bias+g.sum(1)+c.sum((1,2)),'contributions':c,'global':g,'weights':weights,
-                'evidence':out['evidence'].reshape(-1,3,15,5),'global_features':out['global_features'].reshape(-1,3,7)}
+                'raw_contributions':out['contributions'].reshape(-1,3,15,5),'evidence':out['evidence'].reshape(-1,3,15,5),'global_features':out['global_features'].reshape(-1,3,7)}
 
 
 def draw_update(model,optimizer,x,y,valid,generator):

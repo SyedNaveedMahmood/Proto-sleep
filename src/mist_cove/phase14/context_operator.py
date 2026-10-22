@@ -27,7 +27,7 @@ class ContextOperator:
     @torch.no_grad()
     def cache(self,x,valid):
         self.check();out=self.model(x,valid)
-        c=self.model.base(x.reshape(3,1,3000));parts=(c['contributions'].clone(),c['global_features'].clone(),out['weights'][0].clone(),out['logits'][0].clone())
+        parts=(out['raw_contributions'][0].clone(),out['global_features'][0].clone(),out['weights'][0].clone(),out['logits'][0].clone())
         return (*parts,content_digest(*parts))
     @torch.no_grad()
     def _logits(self,cache,masks,neutral=0.):
