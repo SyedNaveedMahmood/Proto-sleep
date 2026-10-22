@@ -1240,28 +1240,31 @@
       "dependencies": [
         "WP49"
       ],
-      "status": "IN_PROGRESS_EXACT_COMMIT_CI",
+      "status": "COMPLETE",
       "implementation_reference": [
         "https://github.com/SyedNaveedMahmood/Proto-sleep/pull/18"
       ],
       "data_source": "NONE",
       "test_receipt": [
         "Local full CPU regression: 1,181 passed, 11 CUDA skipped",
-        "GitHub Actions run 39814405879: every job step success, run conclusion still pending"
+        "GitHub Actions run 39815828464 on acb154f: both jobs completed success; final-closeout-commit CI to be checked after push"
       ],
-      "scientific_result": "Draft PR #18 opened against exact Phase XV branch; exact-commit GitHub Actions queued",
-      "limitations": [],
-      "blockers": [
-        "GitHub Actions has not finalized its run-level conclusion; exact-final-commit CI verification pending"
+      "scientific_result": "Draft PR #18 published against Phase XV; both Actions jobs on acb154f completed successfully; no merge or Phase XVII execution",
+      "limitations": [
+        "Real-data scientific gates remain blocked separately by unresolved DREAMS rights"
       ],
+      "blockers": [],
       "artifacts": [
         "reports/mist_cove/phase16_v1/progress.json"
       ],
       "code_configuration_identity": {
-        "pr_head_at_open": "74c35c9c94dfa377a3d708d55dc36048735c1695"
+        "publication_base": "2f15db3e4653327dd28420ff8fe6cd743b4e705e",
+        "verified_code_head_before_closeout": "acb154f09606c1b06dd26b4f9f56c3c29bcaa9fd"
       }
     }
   ],
   "draft_pr": "https://github.com/SyedNaveedMahmood/Proto-sleep/pull/18",
-  "publication_commit_at_pr_open": "74c35c9c94dfa377a3d708d55dc36048735c1695"
+  "publication_commit_at_pr_open": "74c35c9c94dfa377a3d708d55dc36048735c1695",
+  "github_pr": "https://github.com/SyedNaveedMahmood/Proto-sleep/pull/18",
+  "ci_code_head_jobs_success": "https://github.com/SyedNaveedMahmood/Proto-sleep/actions/runs/39815828464"
 }
