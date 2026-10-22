@@ -2,7 +2,7 @@ name: ci
 
 on:
   push:
-    branches: [main]
+    branches: [main, research/mist-cove-phase11b-real-eeg-audit-v1]
   pull_request:
 
 permissions:

@@ -3,8 +3,8 @@
   "files": [
     {
       "file": ".github/workflows/ci.yml",
-      "sha256": "1350dfaa5933b88a2ceeb0825d04342f2a9b4036c383c9bc003c28228ab7c34a",
-      "bytes": 2296
+      "sha256": "44754b0a692620930b4ad899bc2367ec436776d7a9cb88eeb7775b04fdf41fdf",
+      "bytes": 2343
     },
     {
       "file": "configs/mist_cove_phase11b_v1.json",
@@ -162,6 +162,11 @@
       "bytes": 101905
     },
     {
+      "file": "reports/mist_cove/phase11b_v1/github_delivery.json",
+      "sha256": "8aea2976efb86f684123df420017a598fa5c988606e908f9e6f30bc94b6332e8",
+      "bytes": 810
+    },
+    {
       "file": "reports/mist_cove/phase11b_v1/historical_reproduction.json",
       "sha256": "725d9a1e7abf5cae35e921b7ef9703437dbf1eca0a28bb3db9e7cd1c9042e9fe",
       "bytes": 316
@@ -228,8 +233,8 @@
     },
     {
       "file": "reports/mist_cove/phase11b_v1/progress.json",
-      "sha256": "b184b4c8361b976e39d9fca52ea73f06042049e60ebad055f7445904e3c7c770",
-      "bytes": 35811
+      "sha256": "cfb84e2f7cf12811f99c1ae9985b7cdc3fe0b1984e007ef7f607a767e34d4da3",
+      "bytes": 36777
     },
     {
       "file": "reports/mist_cove/phase11b_v1/resource_receipts.json",
@@ -420,5 +425,6 @@
   "historical_reports_unchanged": true,
   "existing_CI_job_unchanged_new_patched_job_added": true,
   "figures": 4,
-  "GitHub_final_commit_CI": "TO_BE_VERIFIED_ON_DELIVERED_REVISION"
+  "GitHub_final_commit_CI": "Externally verified exact-HEAD push run after final delivery commit; see PR14 checks and final response",
+  "exact_HEAD_branch_push_CI_added": true
 }

@@ -1,0 +1,16 @@
+{
+  "status": "DRAFT_DELIVERED_FOR_SCIENTIFIC_REVIEW",
+  "PR": "https://github.com/SyedNaveedMahmood/Proto-sleep/pull/14",
+  "base": "research/mist-cove-phase11a-artifact-provenance-v1",
+  "head_branch": "research/mist-cove-phase11b-real-eeg-audit-v1",
+  "reviewed_scientific_code_commit": "737267405ec323b819180a1b6a327a3378bddc49",
+  "reviewed_code_CI": {
+    "run": "https://github.com/SyedNaveedMahmood/Proto-sleep/actions/runs/39665410625",
+    "structural-tests": "PASS",
+    "patched-loader-tests": "PASS"
+  },
+  "final_delivery_revision": "Release ledger and exact-HEAD push trigger only; scientific source/results unchanged",
+  "final_commit_CI": "Exact delivered HEAD is verified using its GitHub push run after this receipt is committed",
+  "automatic_merge": false,
+  "next_phase_started": false
+}
