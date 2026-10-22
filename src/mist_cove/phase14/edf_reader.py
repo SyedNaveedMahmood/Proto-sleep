@@ -18,6 +18,18 @@ def manifest():
     return value
 
 
+class ReaderView:
+    """Metadata views cannot accidentally expose waveform-reader methods."""
+    def __init__(self,reader,values):self._reader=reader;self._values=values
+    def __getattr__(self,name):
+        if name not in {'getSignalHeaders','getSignalHeader','getSignalLabels','getNSamples','getSampleFrequency','getStartdatetime','file_duration'}:
+            raise IntegrityError('waveform methods unavailable through metadata view')
+        return getattr(self._reader,name)
+    def _physical_read(self,index,start,n):
+        if not self._values:raise IntegrityError('waveform capability not issued')
+        return self._reader.readSignal(index,start=start,n=n)
+
+
 class MultiReader:
     def __init__(self):
         self.manifest=manifest();self.access=RootAccess(allowed=self.manifest['allowed']);self.issued={id(r):r for r in self.manifest['records']}
@@ -37,7 +49,7 @@ class MultiReader:
         with sealed_memfile(data) as path:
             with pyedflib.EdfReader(path) as reader:
                 self.access.counts['waveform_reads' if values else 'header_reads']+=1
-                yield reader,data[:256]
+                yield ReaderView(reader,values),data[:256]
     def read(self,record,reader,channel,start,stop):
         self.require(record)
         if record['role']=='ST_EVAL':
@@ -52,7 +64,7 @@ class MultiReader:
         h=reader.getSignalHeader(j);factor={'uV':1.,'µV':1.,'mV':1000.,'V':1e6}.get(h['dimension'])
         # Event marker and SC envelope have nonvoltage native units; preserve.
         if factor is None and channel not in ('EMG submental','Event marker','Marker'):raise IntegrityError('unapproved physical units')
-        x=reader.readSignal(j,start=int(round(start*fs)),n=int(round((stop-start)*fs)))
+        x=reader._physical_read(j,start=int(round(start*fs)),n=int(round((stop-start)*fs)))
         if len(x)!=int(round((stop-start)*fs)) or not np.isfinite(x).all():raise IntegrityError('nonfinite/truncated calibrated samples')
         return x*(factor if factor is not None else 1.),{'channel':channel,'native_fs':fs,'units':'uV' if factor is not None else h['dimension'],
                 'source_sha256':self.manifest['allowed'][record['psg']]['sha256'],'start_seconds':start,'stop_seconds':stop}

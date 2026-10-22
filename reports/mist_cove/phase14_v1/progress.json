@@ -408,15 +408,19 @@
       "dependencies": [
         "WP18"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_TESTED",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "PENDING_SYNTHESIS",
       "code_configuration_identity": {
         "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
       },
       "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/sc_proxy_aggregates.json"
+      ],
+      "findings": [
+        "Full authorized recordings, detector concordance, signal/quality/error and classification/condition summaries retained with person-level uncertainty"
+      ],
       "limitations": [],
       "block_reason": null
     },
@@ -426,15 +430,19 @@
       "dependencies": [
         "WP19"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_TESTED",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "PENDING_SYNTHESIS",
       "code_configuration_identity": {
         "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
       },
       "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/sc_proxy_aggregates.json"
+      ],
+      "findings": [
+        "Full authorized recordings, detector concordance, signal/quality/error and classification/condition summaries retained with person-level uncertainty"
+      ],
       "limitations": [],
       "block_reason": null
     },
@@ -444,15 +452,19 @@
       "dependencies": [
         "WP20"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_TESTED",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "PENDING_SYNTHESIS",
       "code_configuration_identity": {
         "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
       },
       "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/sc_proxy_aggregates.json"
+      ],
+      "findings": [
+        "Full authorized recordings, detector concordance, signal/quality/error and classification/condition summaries retained with person-level uncertainty"
+      ],
       "limitations": [],
       "block_reason": null
     },
@@ -484,15 +496,19 @@
       "dependencies": [
         "WP22"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_TESTED",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "PENDING_AGGREGATION",
       "code_configuration_identity": {
         "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
       },
       "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/SC_TRAIN_witness_execution.json"
+      ],
+      "findings": [
+        "SCbalanced/prevalence exact circuits, matched proxy controls, correctness and guarded physical views complete"
+      ],
       "limitations": [],
       "block_reason": null
     },
@@ -502,15 +518,19 @@
       "dependencies": [
         "WP23"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_TESTED",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "PENDING_AGGREGATION",
       "code_configuration_identity": {
         "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
       },
       "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/SC_TRAIN_witness_execution.json"
+      ],
+      "findings": [
+        "SCbalanced/prevalence exact circuits, matched proxy controls, correctness and guarded physical views complete"
+      ],
       "limitations": [],
       "block_reason": null
     },
@@ -520,15 +540,19 @@
       "dependencies": [
         "WP24"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_TESTED",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "PENDING_AGGREGATION",
       "code_configuration_identity": {
         "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
       },
       "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/SC_TRAIN_witness_execution.json"
+      ],
+      "findings": [
+        "SCbalanced/prevalence exact circuits, matched proxy controls, correctness and guarded physical views complete"
+      ],
       "limitations": [],
       "block_reason": null
     },
@@ -538,15 +562,19 @@
       "dependencies": [
         "WP25"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_TESTED",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "PENDING_AGGREGATION",
       "code_configuration_identity": {
         "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
       },
       "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/SC_TRAIN_witness_execution.json"
+      ],
+      "findings": [
+        "SCbalanced/prevalence exact circuits, matched proxy controls, correctness and guarded physical views complete"
+      ],
       "limitations": [],
       "block_reason": null
     },
@@ -579,15 +607,19 @@
       "dependencies": [
         "WP27"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_TESTED",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "FAIL",
       "code_configuration_identity": {
         "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
       },
       "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/context_results.json"
+      ],
+      "findings": [
+        "All6equal-parameter fixed context trajectories complete; all seeds and exposure streams retained; SCpromotion gate evaluated"
+      ],
       "limitations": [],
       "block_reason": null
     },
@@ -597,15 +629,19 @@
       "dependencies": [
         "WP28"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_TESTED",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "FAIL",
       "code_configuration_identity": {
         "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
       },
       "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/context_results.json"
+      ],
+      "findings": [
+        "All6equal-parameter fixed context trajectories complete; all seeds and exposure streams retained; SCpromotion gate evaluated"
+      ],
       "limitations": [],
       "block_reason": null
     },
@@ -615,15 +651,19 @@
       "dependencies": [
         "WP29"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_TESTED",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "FAIL",
       "code_configuration_identity": {
         "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
       },
       "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/context_results.json"
+      ],
+      "findings": [
+        "All6equal-parameter fixed context trajectories complete; all seeds and exposure streams retained; SCpromotion gate evaluated"
+      ],
       "limitations": [],
       "block_reason": null
     },
@@ -633,15 +673,19 @@
       "dependencies": [
         "WP30"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_TESTED",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "PASS",
       "code_configuration_identity": {
         "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
       },
       "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/context_operator_results.json"
+      ],
+      "findings": [
+        "New17variable coarse context partition independently validated;60full131072-row tables and fixed-gain clauses verified; neighbor support explicitly included"
+      ],
       "limitations": [],
       "block_reason": null
     },
@@ -651,15 +695,19 @@
       "dependencies": [
         "WP31"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "NOT_TESTED",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "NOT_APPLICABLE",
       "code_configuration_identity": {
         "base_commit": "1b6f25ee48945d624cfde61af4824efcd04bb96d"
       },
       "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "artifacts": [
+        "reports/mist_cove/phase14_v1/frozen_st_protocol.json"
+      ],
+      "findings": [
+        "Complete STpackage, all6states, strict detector environment, official conditions, paired-night audit and unchanged numeric gates sealed before anySTvalues"
+      ],
       "limitations": [],
       "block_reason": null
     },

@@ -72,5 +72,34 @@
   "generated_context_throughput_pilot": {
     "status": "COMPLETE",
     "wall_seconds": 1.276349644002039
+  },
+  "context_confirmatory_training": {
+    "status": "COMPLETE",
+    "wall_seconds": 732.0937120299932,
+    "fits": 6,
+    "optimizer_updates": 18000,
+    "base_waveform_forwards_training": 1728000,
+    "peak_RSS_KiB": 790772
+  },
+  "SC_TRAIN_witness_audit": {
+    "status": "COMPLETE",
+    "wall_seconds": 374.7380675129971,
+    "cached_head_queries": 29493900,
+    "native_full_example_forwards": 3000,
+    "feature_cache_example_forwards": 1050,
+    "tables": 900,
+    "exact_tables": 900,
+    "full_identity_max_abs": 0.0
+  },
+  "context_support_and_stability_audit": {
+    "status": "COMPLETE",
+    "wall_seconds": 9.007769350995659,
+    "cached_head_queries": 7864350,
+    "tables": 60,
+    "feature_cache_base_epoch_forwards": 180
+  },
+  "SC_TRAIN_statistical_analysis": {
+    "status": "COMPLETE",
+    "wall_seconds": 6.185032455003238
   }
 }

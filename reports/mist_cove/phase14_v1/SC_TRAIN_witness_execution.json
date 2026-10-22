@@ -1,0 +1,26 @@
+{
+  "status": "COMPLETE",
+  "role": "SC_TRAIN",
+  "primary_cases": 150,
+  "prevalence_cases": 150,
+  "resources": {
+    "cached_head_queries": 29493900,
+    "native_full_example_forwards": 3000,
+    "feature_cache_example_forwards": 1050,
+    "tables": 900,
+    "exact_tables": 900,
+    "full_identity_max_abs": 0.0
+  },
+  "historical_state_unchanged": true,
+  "query_accounting": "cached availability/head operations, not complete neural inference",
+  "margin_columns": [
+    "base",
+    "mild_hf",
+    "drift",
+    "gain",
+    "neutral_.01"
+  ],
+  "proxy_alignment": "agreement with automated proxies; no expert event accuracy",
+  "cross_channel_permutation": "Pz-Oznextphysicalepoch cyclicwithinrecording, fixed policy",
+  "private_rows_sha256": "2b9849fdd31ed15869d8cf607d79739f2fbf98921ac566a7848e7fd4ffdf81f9"
+}

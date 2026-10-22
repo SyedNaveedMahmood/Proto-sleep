@@ -12,7 +12,7 @@ from mist_cove.phase9.operators import masks_tensor
 from .common import ROOT,PRIVATE,PUBLIC,read_json,write_new,measured,ledger,check_budget,sha256,canonical
 from .source_audit import cached_selection
 from .event_alignment import matched_candidates,align
-from .event_schema import event_intervals
+from .event_schema import event_intervals,validate_record_events
 
 
 class Budget:
@@ -26,7 +26,10 @@ class Budget:
 
 
 @lru_cache(maxsize=4)
-def record_events(role,recording):return read_json(PRIVATE/role/(recording+'_events.json'))
+def record_events(role,recording):
+    value=read_json(PRIVATE/role/(recording+'_events.json'))
+    for rows in value['events'].values():validate_record_events(rows,value['duration'])
+    return value
 
 
 def run(role):

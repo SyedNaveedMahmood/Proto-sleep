@@ -119,3 +119,31 @@ def test_context_sealed_exact_optimizer_and_generator_resume(tmp_path,arm):
   assert expected==actual and all(torch.equal(t,b.state_dict()[k]) for k,t in values.items())
   for a,c in zip(o.state.values(),bo.state.values()):
    assert all(torch.equal(a[k],c[k]) for k in a)
+
+
+def test_metadata_reader_cannot_expose_signal_access():
+ from mist_cove.phase14.edf_reader import ReaderView
+ class Fake:
+  file_duration=30
+  def readSignal(self,*args,**kwargs):pytest.fail('forbidden waveform read')
+ view=ReaderView(Fake(),False);assert view.file_duration==30
+ with pytest.raises(IntegrityError):view.readSignal(0)
+ with pytest.raises(IntegrityError):view._physical_read(0,0,10)
+
+
+def test_subject_grouped_interval_matching_and_budget_fairness():
+ from mist_cove.phase14.event_alignment import matched_candidates,align,interval_concordance
+ wave=np.sin(2*np.pi*13*np.arange(3000)/100);mask=(1<<1)|(1<<8)
+ c=matched_candidates(wave,mask,mask,list(range(15)),14024)
+ assert all(v.bit_count()==2 for k,v in c.items() if k!='greedy_own_budget')
+ events={'EEG Pz-Oz|spindle':[{'start':2.,'end':3.}], 'EEG Fpz-Cz|spindle':[{'start':4.,'end':5.}]}
+ result=align(events,0,c,{'EEG Pz-Oz|spindle':[[100,200]]})
+ assert 'cross_channel_permuted_same_recording' not in result['proxies']['EEG Fpz-Cz|spindle']['methods']
+ a=[{'start':0.,'end':1.},{'start':2.,'end':3.}];b=[{'start':.1,'end':1.1},{'start':2.2,'end':3.2}]
+ assert interval_concordance(a,b)['F1']==1
+
+
+def test_ST_missing_seal_denies_before_data_access(tmp_path,monkeypatch):
+ import mist_cove.phase14.protocol as p
+ monkeypatch.setattr(p,'PUBLIC',tmp_path)
+ with pytest.raises(IntegrityError):p.verify_st_seal()
