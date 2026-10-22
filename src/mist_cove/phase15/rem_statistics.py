@@ -100,6 +100,25 @@ def run():
         'within_2_epochs_transition':_rates([r['distance']<=2 for r in rem],wrong)}
     highwrong=sum(r['pred']!=r['truth'] and r['confidence']>=.9 for r in rows)
     if highwrong!=3209:raise ValueError('published high-confidence wrong count differs')
+    from .quality import _epoch_set
+    flagged={}
+    for rec in sorted({r['recording'] for r in rem}):
+        item=read(OLD_PRIVATE/'ST_EVAL'/(rec+'_events.json'))
+        flagged[rec]={key:_epoch_set(item['events'].get(key,[]),item['n_epochs']) for key in
+            ('EEG Fpz-Cz|step','EEG Pz-Oz|extreme')}
+    high_confidence={}
+    for s in ('REM_to_W','REM_to_N1','REM_to_N2','correct_REM'):
+        rr=[r for r in rem if _stratum(r)==s]
+        high=[r for r in rr if r['confidence']>=.9]
+        low=[r for r in rr if r['confidence']<.9]
+        def signals(group):
+            return {'n':len(group),
+              'EOG_excursion_mean':float(np.mean([wave[(r['recording'],r['epoch'])]['EOG_excursion_count'] for r in group])) if group else None,
+              'Fpz_sigma_mean':float(np.mean([r['features'][6] for r in group])) if group else None,
+              'within_2_transition_fraction':float(np.mean([r['distance']<=2 for r in group])) if group else None,
+              'Fpz_step_candidate_fraction':float(np.mean([r['epoch'] in flagged[r['recording']]['EEG Fpz-Cz|step'] for r in group])) if group else None,
+              'Pz_extreme_candidate_fraction':float(np.mean([r['epoch'] in flagged[r['recording']]['EEG Pz-Oz|extreme'] for r in group])) if group else None}
+        high_confidence[s]={'confidence_ge_0_9':signals(high),'confidence_lt_0_9':signals(low)}
     condition=read(OLD_PRIVATE/'conditions.json')['subjects'];paired=[]
     for person in sorted({r['person'] for r in rem}):
         by_night={}
@@ -114,6 +133,7 @@ def run():
     result={'status':LABEL,'full_grid_ECE15':full['ECE15'],'published_ECE15':oldece,
             'full_grid_calibration_bins':full['bins'],'stage_calibration':stage,
             'high_confidence_wrong_scored':highwrong,'REM_warning_indicators':warnings,
+            'REM_high_confidence_strata':high_confidence,
             'participant_aware_within_REM_contrasts':_person_bootstrap(rows,wave),
             'REM_transition_types':_transition_types(rows),
             'paired_condition_REM_recall_difference':{'people':len(a),'mean_temazepam_minus_placebo':float(a.mean()),

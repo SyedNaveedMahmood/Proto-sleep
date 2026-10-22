@@ -197,6 +197,17 @@ def analyze(rows,confusion,per_record,panel):
         person_summary.append({'person_digest':sha(person.encode())[:12],
                                'REM_scored':len(rem),'REM_correct':sum(r['pred']==4 for r in rem),
                                'paired_nights':night})
+    night_rates=[]
+    for person in sorted(persons):
+        for night in (1,2):
+            rr=[r for r in persons[person] if r['truth']==4 and r['night']==night]
+            if rr:night_rates.append(sum(r['pred']==4 for r in rr)/len(rr))
+    concentrations={}
+    for s in ('REM_to_W','REM_to_N1','REM_to_N2'):
+        counts=sorted((sum(_stratum(r)==s for r in persons[p]) for p in persons),reverse=True)
+        concentrations[s]={'people_with_error':sum(v>0 for v in counts),
+                           'top_5_people_fraction':sum(counts[:5])/sum(counts),
+                           'largest_person_error_count':counts[0]}
     status={'status':LABEL,'exact_published_confusion_reproduced':True,'confusion_matrix':confusion.tolist(),
             'scored_epochs':int(confusion.sum()),'REM_scored':int(confusion[4].sum()),
             'REM_recall':int(confusion[4,4])/int(confusion[4].sum()),
@@ -208,6 +219,9 @@ def analyze(rows,confusion,per_record,panel):
             'participant_REM_distribution':{
                 'people_with_scored_REM':sum(p['REM_scored']>0 for p in person_summary),
                 'per_person_recall':_summary([p['REM_correct']/p['REM_scored'] for p in person_summary if p['REM_scored']]),
+                'per_night_recall':_summary(night_rates),
+                'per_night_min':min(night_rates),'per_night_max':max(night_rates),
+                'error_concentration':concentrations,
                 'min_REM_scored':min(p['REM_scored'] for p in person_summary),
                 'max_REM_scored':max(p['REM_scored'] for p in person_summary)},
             'panels':{'E1':len(panel['E1']),'E2':len(panel['E2']),'E3':len(panel['E3']),

@@ -1123,6 +1123,32 @@
       "q25": 0.10959771935381692,
       "q75": 0.27742575853026064
     },
+    "per_night_recall": {
+      "n": 44,
+      "mean": 0.21956942637637517,
+      "median": 0.21290718429272648,
+      "q25": 0.11617977306752816,
+      "q75": 0.29448760636330007
+    },
+    "per_night_min": 0.020833333333333332,
+    "per_night_max": 0.5138888888888888,
+    "error_concentration": {
+      "REM_to_W": {
+        "people_with_error": 22,
+        "top_5_people_fraction": 0.4862187769164513,
+        "largest_person_error_count": 354
+      },
+      "REM_to_N1": {
+        "people_with_error": 22,
+        "top_5_people_fraction": 0.3687898089171974,
+        "largest_person_error_count": 143
+      },
+      "REM_to_N2": {
+        "people_with_error": 22,
+        "top_5_people_fraction": 0.5105740181268882,
+        "largest_person_error_count": 369
+      }
+    },
     "min_REM_scored": 180,
     "max_REM_scored": 608
   },
