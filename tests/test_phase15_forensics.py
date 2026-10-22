@@ -3,6 +3,9 @@ import numpy as np
 import pytest
 
 from mist_cove.phase15.forensics import _distances, _prob, _round_robin, _stratum
+from mist_cove.phase15.wave_diagnostics import _wave_features
+from mist_cove.phase15.explanation import _align
+from mist_cove.phase14.event_alignment import matched_candidates
 
 
 def test_physical_positions_are_not_compressed():
@@ -31,3 +34,22 @@ def test_rem_strata_and_softmax_are_exact():
     assert np.isfinite(p).all()
     assert p.sum()==pytest.approx(1.)
     assert p[0,0]>p[0,1]
+
+
+def test_generated_channel_spectral_measure_has_known_peak():
+    t=np.arange(3000)/100
+    x=np.sin(2*np.pi*13*t)[None,:]
+    f=_wave_features(x)
+    assert f['sigma_fraction'][0]>.99
+    assert f['delta_fraction'][0]<1e-6
+    assert f['RMS_uV'][0]==pytest.approx(2**-.5,rel=1e-4)
+
+
+def test_proxy_comparators_have_equal_atom_budget_without_labels():
+    t=np.arange(3000)/100
+    wave=np.sin(2*np.pi*13*t)
+    c=matched_candidates(wave,0b10101,0b111, list(range(15)),15011)
+    assert all(c[k].bit_count()==3 for k in ('exact_positive','RMS_matched',
+        'gradient_matched','random_matched','position_matched','sigma_matched','delta_matched'))
+    out=_align({'EEG Pz-Oz|spindle':[]},0,c)
+    assert out['EEG Pz-Oz|spindle']['event_count']==0
