@@ -1,0 +1,9 @@
+{
+  "status": "ENGINEERING_BUG_FIXED",
+  "completed_cases": 0,
+  "cached_states_computed_before_failure": 32768,
+  "reason": "native gradient comparator was called within no_grad; enable_grad required for feature ranking",
+  "original_attempt_preserved": true,
+  "no_fit_rerun": true,
+  "scientific_conditions_or_thresholds_changed": false
+}

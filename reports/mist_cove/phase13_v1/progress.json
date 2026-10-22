@@ -7,14 +7,18 @@
       "id": "WP01",
       "title": "Pull the completed research repository",
       "dependencies": [],
-      "status": "IN PROGRESS",
-      "engineering_status": "PENDING",
-      "scientific_status": "PENDING",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "NOT_APPLICABLE",
       "code_configuration_identity": {
         "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
       },
-      "tests": [],
-      "artifacts": [],
+      "tests": [
+        "30 focused generated security, blinding, metrics, state, resume, stream and operator tests pass;8 generated exhaustive tables and128 noninterference checks pass"
+      ],
+      "artifacts": [
+        "configs/mist_cove_phase13_v1.json"
+      ],
       "findings": [],
       "limitations": [],
       "block_reason": null
@@ -25,14 +29,18 @@
       "dependencies": [
         "WP01"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "PENDING",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "COMPLETE",
       "code_configuration_identity": {
         "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
       },
-      "tests": [],
-      "artifacts": [],
+      "tests": [
+        "30 focused generated security, blinding, metrics, state, resume, stream and operator tests pass;8 generated exhaustive tables and128 noninterference checks pass"
+      ],
+      "artifacts": [
+        "docs/mist_cove/PHASE_XIII_RESEARCH_FOUNDATION_V1.md"
+      ],
       "findings": [],
       "limitations": [],
       "block_reason": null
@@ -43,14 +51,18 @@
       "dependencies": [
         "WP02"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "PENDING",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "COMPLETE",
       "code_configuration_identity": {
         "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
       },
-      "tests": [],
-      "artifacts": [],
+      "tests": [
+        "30 focused generated security, blinding, metrics, state, resume, stream and operator tests pass;8 generated exhaustive tables and128 noninterference checks pass"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase13_v1/authentication.json"
+      ],
       "findings": [],
       "limitations": [],
       "block_reason": null
@@ -61,14 +73,18 @@
       "dependencies": [
         "WP03"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "PENDING",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "NOT_APPLICABLE",
       "code_configuration_identity": {
         "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
       },
-      "tests": [],
-      "artifacts": [],
+      "tests": [
+        "30 focused generated security, blinding, metrics, state, resume, stream and operator tests pass;8 generated exhaustive tables and128 noninterference checks pass"
+      ],
+      "artifacts": [
+        "docs/mist_cove/PHASE_XIII_SCIENTIFIC_PROTOCOL_V1.md"
+      ],
       "findings": [],
       "limitations": [],
       "block_reason": null
@@ -79,14 +95,18 @@
       "dependencies": [
         "WP04"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "PENDING",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "NOT_APPLICABLE",
       "code_configuration_identity": {
         "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
       },
-      "tests": [],
-      "artifacts": [],
+      "tests": [
+        "30 focused generated security, blinding, metrics, state, resume, stream and operator tests pass;8 generated exhaustive tables and128 noninterference checks pass"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase13_v1/source_scope_receipt.json"
+      ],
       "findings": [],
       "limitations": [],
       "block_reason": null
@@ -97,16 +117,22 @@
       "dependencies": [
         "WP05"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "PENDING",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "NOT_TESTED",
       "code_configuration_identity": {
         "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
       },
-      "tests": [],
-      "artifacts": [],
+      "tests": [
+        "30 focused generated security, blinding, metrics, state, resume, stream and operator tests pass;8 generated exhaustive tables and128 noninterference checks pass"
+      ],
+      "artifacts": [
+        "docs/mist_cove/PHASE_XIII_ANNOTATION_CODEBOOK_V1.md"
+      ],
       "findings": [],
-      "limitations": [],
+      "limitations": [
+        "No approved qualified reviewers available; user confirmed. No human agreement or physiological labels fabricated."
+      ],
       "block_reason": null
     },
     {
@@ -115,14 +141,18 @@
       "dependencies": [
         "WP06"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "PENDING",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "NOT_APPLICABLE",
       "code_configuration_identity": {
         "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
       },
-      "tests": [],
-      "artifacts": [],
+      "tests": [
+        "30 focused generated security, blinding, metrics, state, resume, stream and operator tests pass;8 generated exhaustive tables and128 noninterference checks pass"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase13_v1/sample_selection.json"
+      ],
       "findings": [],
       "limitations": [],
       "block_reason": null
@@ -133,16 +163,22 @@
       "dependencies": [
         "WP07"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "PENDING",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "NOT_TESTED",
       "code_configuration_identity": {
         "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
       },
-      "tests": [],
-      "artifacts": [],
+      "tests": [
+        "30 focused generated security, blinding, metrics, state, resume, stream and operator tests pass;8 generated exhaustive tables and128 noninterference checks pass"
+      ],
+      "artifacts": [
+        "src/mist_cove/phase13/annotation_interface.py"
+      ],
       "findings": [],
-      "limitations": [],
+      "limitations": [
+        "No approved qualified reviewers available; user confirmed. No human agreement or physiological labels fabricated."
+      ],
       "block_reason": null
     },
     {
@@ -151,17 +187,23 @@
       "dependencies": [
         "WP08"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "PENDING",
+      "status": "BLOCKED",
+      "engineering_status": "PASS",
+      "scientific_status": "NOT_TESTED",
       "code_configuration_identity": {
         "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
       },
-      "tests": [],
-      "artifacts": [],
+      "tests": [
+        "30 focused generated security, blinding, metrics, state, resume, stream and operator tests pass;8 generated exhaustive tables and128 noninterference checks pass"
+      ],
+      "artifacts": [
+        "docs/mist_cove/PHASE_XIII_BLINDED_REVIEW_PROTOCOL_V1.md"
+      ],
       "findings": [],
-      "limitations": [],
-      "block_reason": null
+      "limitations": [
+        "No approved qualified reviewers available; user confirmed. No human agreement or physiological labels fabricated."
+      ],
+      "block_reason": "User confirmed no approved qualified local reviewers; actual human study cannot proceed. Interface, protocol and generated controls complete."
     },
     {
       "id": "WP10",
@@ -169,16 +211,22 @@
       "dependencies": [
         "WP09"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "PENDING",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "NOT_TESTED",
       "code_configuration_identity": {
         "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
       },
-      "tests": [],
-      "artifacts": [],
+      "tests": [
+        "30 focused generated security, blinding, metrics, state, resume, stream and operator tests pass;8 generated exhaustive tables and128 noninterference checks pass"
+      ],
+      "artifacts": [
+        "src/mist_cove/phase13/annotation_metrics.py"
+      ],
       "findings": [],
-      "limitations": [],
+      "limitations": [
+        "No approved qualified reviewers available; user confirmed. No human agreement or physiological labels fabricated."
+      ],
       "block_reason": null
     },
     {
@@ -187,16 +235,22 @@
       "dependencies": [
         "WP10"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "PENDING",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "NOT_TESTED",
       "code_configuration_identity": {
         "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
       },
-      "tests": [],
-      "artifacts": [],
+      "tests": [
+        "30 focused generated security, blinding, metrics, state, resume, stream and operator tests pass;8 generated exhaustive tables and128 noninterference checks pass"
+      ],
+      "artifacts": [
+        "src/mist_cove/phase13/evidence_alignment.py"
+      ],
       "findings": [],
-      "limitations": [],
+      "limitations": [
+        "No approved qualified reviewers available; user confirmed. No human agreement or physiological labels fabricated."
+      ],
       "block_reason": null
     },
     {
@@ -205,16 +259,22 @@
       "dependencies": [
         "WP11"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "PENDING",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "NOT_TESTED",
       "code_configuration_identity": {
         "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
       },
-      "tests": [],
-      "artifacts": [],
+      "tests": [
+        "30 focused generated security, blinding, metrics, state, resume, stream and operator tests pass;8 generated exhaustive tables and128 noninterference checks pass"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase13_v1/annotation_readiness.json"
+      ],
       "findings": [],
-      "limitations": [],
+      "limitations": [
+        "No approved qualified reviewers available; user confirmed. No human agreement or physiological labels fabricated."
+      ],
       "block_reason": null
     },
     {
@@ -225,14 +285,18 @@
         "WP03",
         "WP05"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "PENDING",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "COMPLETE",
       "code_configuration_identity": {
         "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
       },
-      "tests": [],
-      "artifacts": [],
+      "tests": [
+        "30 focused generated security, blinding, metrics, state, resume, stream and operator tests pass;8 generated exhaustive tables and128 noninterference checks pass"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase13_v1/previous_model_diagnostics.json"
+      ],
       "findings": [],
       "limitations": [],
       "block_reason": null
@@ -243,14 +307,18 @@
       "dependencies": [
         "WP13"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "PENDING",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "NOT_APPLICABLE",
       "code_configuration_identity": {
         "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
       },
-      "tests": [],
-      "artifacts": [],
+      "tests": [
+        "30 focused generated security, blinding, metrics, state, resume, stream and operator tests pass;8 generated exhaustive tables and128 noninterference checks pass"
+      ],
+      "artifacts": [
+        "src/mist_cove/phase13/model_adequacy.py"
+      ],
       "findings": [],
       "limitations": [],
       "block_reason": null
@@ -261,15 +329,21 @@
       "dependencies": [
         "WP14"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "PENDING",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "MIXED",
       "code_configuration_identity": {
         "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
       },
-      "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "tests": [
+        "30 focused generated security, blinding, metrics, state, resume, stream and operator tests pass;8 generated exhaustive tables and128 noninterference checks pass"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase13_v1/engineering_overfit.json"
+      ],
+      "findings": [
+        "Both tiny fit-only probes reached100percent accuracy and exact resume; S misses CE<=.1 gate(.29447); L passes(.06643). No extra probe or tuning."
+      ],
       "limitations": [],
       "block_reason": null
     },
@@ -279,14 +353,18 @@
       "dependencies": [
         "WP15"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "PENDING",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "NOT_APPLICABLE",
       "code_configuration_identity": {
         "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
       },
-      "tests": [],
-      "artifacts": [],
+      "tests": [
+        "30 focused generated security, blinding, metrics, state, resume, stream and operator tests pass;8 generated exhaustive tables and128 noninterference checks pass"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase13_v1/resource_pilot.json"
+      ],
       "findings": [],
       "limitations": [],
       "block_reason": null
@@ -297,14 +375,18 @@
       "dependencies": [
         "WP16"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "PENDING",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "NOT_APPLICABLE",
       "code_configuration_identity": {
         "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
       },
-      "tests": [],
-      "artifacts": [],
+      "tests": [
+        "30 focused generated security, blinding, metrics, state, resume, stream and operator tests pass;8 generated exhaustive tables and128 noninterference checks pass"
+      ],
+      "artifacts": [
+        "reports/mist_cove/phase13_v1/adequacy_preregistration.json"
+      ],
       "findings": [],
       "limitations": [],
       "block_reason": null
@@ -313,17 +395,25 @@
       "id": "WP18",
       "title": "Execute the full controlled training campaign",
       "dependencies": [
+        "WP13",
+        "WP14",
+        "WP15",
+        "WP16",
         "WP17"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "PENDING",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "PASS",
       "code_configuration_identity": {
         "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
       },
       "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "artifacts": [
+        "reports/mist_cove/phase13_v1/campaign_execution.json"
+      ],
+      "findings": [
+        "12fixed trajectories,36milestones,36000updates,matched streams all complete"
+      ],
       "limitations": [],
       "block_reason": null
     },
@@ -333,15 +423,19 @@
       "dependencies": [
         "WP18"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "PENDING",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "PASS",
       "code_configuration_identity": {
         "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
       },
       "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "artifacts": [
+        "reports/mist_cove/phase13_v1/adequacy_summary.json"
+      ],
+      "findings": [
+        "All horizons/seeds: training and development metrics, gradient drift, calibration, saturation and local/global ledgers recorded"
+      ],
       "limitations": [],
       "block_reason": null
     },
@@ -351,15 +445,19 @@
       "dependencies": [
         "WP19"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "PENDING",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "INCONCLUSIVE",
       "code_configuration_identity": {
         "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
       },
       "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "artifacts": [
+        "reports/mist_cove/phase13_v1/stage_context_analysis.json"
+      ],
+      "findings": [
+        "Stage, preceding-stage transition and HF quality-proxy strata analyzed descriptively; no physiological ambiguity inference"
+      ],
       "limitations": [],
       "block_reason": null
     },
@@ -369,15 +467,19 @@
       "dependencies": [
         "WP20"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "PENDING",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "FAIL",
       "code_configuration_identity": {
         "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
       },
       "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "artifacts": [
+        "reports/mist_cove/phase13_v1/scientific_gates.json"
+      ],
+      "findings": [
+        "Frozen primary routing gate fails all3seeds; all7views retained, no post-hoc replacement"
+      ],
       "limitations": [],
       "block_reason": null
     },
@@ -385,35 +487,44 @@
       "id": "WP22",
       "title": "Relate independent morphology to learned representations",
       "dependencies": [
-        "WP21"
+        "WP09",
+        "WP11",
+        "WP18"
       ],
       "status": "PENDING",
       "engineering_status": "PENDING",
-      "scientific_status": "PENDING",
+      "scientific_status": "NOT_TESTED",
       "code_configuration_identity": {
         "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
       },
       "tests": [],
       "artifacts": [],
       "findings": [],
-      "limitations": [],
+      "limitations": [
+        "No approved qualified reviewers available; user confirmed. No human agreement or physiological labels fabricated."
+      ],
       "block_reason": null
     },
     {
       "id": "WP23",
       "title": "Compare explanation operators on real EEG",
       "dependencies": [
-        "WP22"
+        "WP03",
+        "WP07",
+        "WP17",
+        "WP18"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "PENDING",
+      "status": "IN_PROGRESS",
+      "engineering_status": "IN_PROGRESS",
+      "scientific_status": "IN_PROGRESS",
       "code_configuration_identity": {
         "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
       },
       "tests": [],
       "artifacts": [],
-      "findings": [],
+      "findings": [
+        "Exact original150 and new36-state/25-case operator campaign running"
+      ],
       "limitations": [],
       "block_reason": null
     },
@@ -423,15 +534,19 @@
       "dependencies": [
         "WP23"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "PENDING",
+      "status": "IN_PROGRESS",
+      "engineering_status": "IN_PROGRESS",
+      "scientific_status": "IN_PROGRESS",
       "code_configuration_identity": {
         "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
       },
       "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "artifacts": [
+        "reports/mist_cove/phase13_v1/uncertainty_summary.json"
+      ],
+      "findings": [
+        "Paired width/exposure/routing participant-cluster bootstrap completed; explanation aggregation pending"
+      ],
       "limitations": [],
       "block_reason": null
     },
@@ -441,15 +556,19 @@
       "dependencies": [
         "WP24"
       ],
-      "status": "PENDING",
-      "engineering_status": "PENDING",
-      "scientific_status": "PENDING",
+      "status": "COMPLETE",
+      "engineering_status": "PASS",
+      "scientific_status": "INCONCLUSIVE",
       "code_configuration_identity": {
         "config_sha256": "b6eab3fec684a21e78bad05ea1934b336bb63fd48c3ac655e507b0eee6529499"
       },
       "tests": [],
-      "artifacts": [],
-      "findings": [],
+      "artifacts": [
+        "docs/mist_cove/PHASE_XIII_NOVELTY_AND_FAIRNESS_V1.md"
+      ],
+      "findings": [
+        "Focused primary sources establish prior art; potential exact operator-audit contribution, no novelty priority established"
+      ],
       "limitations": [],
       "block_reason": null
     },
@@ -543,5 +662,6 @@
       "limitations": [],
       "block_reason": null
     }
-  ]
+  ],
+  "reviewer_availability": "User confirmed none approved; only the human-dependent tasks stop."
 }

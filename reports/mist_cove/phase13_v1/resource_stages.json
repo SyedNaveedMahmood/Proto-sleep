@@ -40,5 +40,20 @@
     "wall_seconds": 0.38352938399475534,
     "tables": 8,
     "table_state_evaluations": 262144
+  },
+  "confirmatory_campaign": {
+    "track": "B",
+    "status": "COMPLETE",
+    "wall_seconds": 359.7591282739886,
+    "trajectories": 12,
+    "optimizer_updates": 36000,
+    "native_full_example_forwards": 1422000,
+    "realized_updates": 36000,
+    "peak_RSS_KiB": 737964
+  },
+  "explanation_campaign": {
+    "track": "A_AND_B",
+    "status": "FAILED",
+    "wall_seconds": 0.3491119309910573
   }
 }

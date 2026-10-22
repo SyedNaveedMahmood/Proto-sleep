@@ -7,6 +7,7 @@ from .provenance import PUBLIC,PRIVATE,canonical,write_new,authenticated_json_id
 from .sampling import frozen_selection
 from .data import load_cache
 from .resources import measured
+from mist_cove.phase11b.historical import ROOT
 
 
 def prepare_packets():
@@ -41,6 +42,9 @@ def real_store(registry_path):
     reviewers=registry.get('reviewers',{})
     if not reviewers or any(not v.get('qualified_approved') or v.get('scope')!='PHASE13_TRAIN_LOCAL' for v in reviewers.values()):
         raise PermissionError('approved qualified local reviewers required before waveform packets')
+    protocol=json.loads((PUBLIC/'annotation_protocol_seal.json').read_text())
+    for name,digest in protocol['source_sha256'].items():
+        if sha256((ROOT/name).read_bytes())!=digest:raise ValueError('review protocol changed; separately version before human labels')
     receipt=json.loads((PUBLIC/'annotation_readiness.json').read_text())
     master=authenticated_json_identity(PRIVATE/'annotation_master.json',receipt['private_master_canonical_sha256'])
     context=load_cache('annotation_context.npz');cases={}
@@ -48,4 +52,15 @@ def real_store(registry_path):
         index=row['source_index']
         cases[row['case_id']]={'master':row,'wave_uV':context['wave_uV'][index,1].tolist(),
               'context_uV':[context['wave_uV'][index,j].tolist() if context['valid'][index,j] else None for j in range(3)]}
-    return ReviewStore(cases,reviewers,PRIVATE/'human_reviews',domain='REAL_TRAIN')
+    return ReviewStore(cases,reviewers,PRIVATE/'human_reviews',domain='REAL_TRAIN',protocol_identity=protocol)
+
+
+def seal_protocol():
+    names=['docs/mist_cove/PHASE_XIII_ANNOTATION_CODEBOOK_V1.md',
+           'docs/mist_cove/PHASE_XIII_BLINDED_REVIEW_PROTOCOL_V1.md',
+           'docs/mist_cove/PHASE_XIII_SCIENTIFIC_PROTOCOL_V1.md',
+           'src/mist_cove/phase13/annotation_schema.py','src/mist_cove/phase13/annotation_metrics.py',
+           'src/mist_cove/phase13/annotation_interface.py','src/mist_cove/phase13/annotation_ui.html',
+           'src/mist_cove/phase13/annotation_ui.js','src/mist_cove/phase13/annotation_packets.py']
+    write_new(PUBLIC/'annotation_protocol_seal.json',{'version':'phase13-review-protocol-v1','human_annotation_started':False,
+        'source_sha256':{name:sha256((ROOT/name).read_bytes()) for name in names}})

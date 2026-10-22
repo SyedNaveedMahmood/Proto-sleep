@@ -1,0 +1,34 @@
+{
+  "absolute_adequacy": {
+    "by_seed": {
+      "123": true,
+      "456": true,
+      "789": true
+    },
+    "status": "PASS"
+  },
+  "width": {
+    "by_seed": {
+      "123": true,
+      "456": false,
+      "789": false
+    },
+    "status": "FAIL"
+  },
+  "exposure": {
+    "by_seed": {
+      "123": true,
+      "456": true,
+      "789": true
+    },
+    "status": "PASS"
+  },
+  "routing": {
+    "by_seed": {
+      "123": false,
+      "456": false,
+      "789": false
+    },
+    "status": "FAIL"
+  }
+}

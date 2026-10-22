@@ -13,7 +13,7 @@ from .provenance import canonical,write_new
 
 
 class ReviewStore:
-    def __init__(self,cases,reviewers,directory,domain='GENERATED'):
+    def __init__(self,cases,reviewers,directory,domain='GENERATED',protocol_identity=None):
         if domain not in ('GENERATED','REAL_TRAIN'):raise PermissionError('unknown domain')
         if not reviewers:raise PermissionError('no approved qualified reviewers')
         for alias,reviewer in reviewers.items():
@@ -22,6 +22,7 @@ class ReviewStore:
             if domain=='REAL_TRAIN' and (not reviewer.get('qualified_approved') or reviewer.get('scope')!='PHASE13_TRAIN_LOCAL' or not reviewer.get('credential_category')):
                 raise PermissionError('qualified local access approval missing')
         self.cases=copy.deepcopy(cases);self.reviewers=copy.deepcopy(reviewers);self.directory=Path(directory);self.domain=domain
+        self.protocol_identity=copy.deepcopy(protocol_identity)
         self.packet_identity=hashlib.sha256(canonical({k:self.case(k) for k in sorted(self.cases)})).hexdigest()
         self.directory.mkdir(parents=True,exist_ok=True);self.locked=set();self.records=[];self.chain='0'*64;self.mutex=RLock()
         self.log=self.directory/'annotation_events.jsonl'
@@ -29,6 +30,7 @@ class ReviewStore:
             if self.log.is_symlink():raise PermissionError('annotation log symlink')
             for line in self.log.read_text().splitlines():
                 event=json.loads(line);digest=event.pop('sha256')
+                if event['domain']!=self.domain or event['packet_sha256']!=self.packet_identity or event.get('protocol_identity')!=self.protocol_identity:raise ValueError('replayed packet/protocol identity differs')
                 if event['previous']!=self.chain or hashlib.sha256(canonical(event)).hexdigest()!=digest:raise ValueError('annotation log chain differs')
                 self.chain=digest;self.records.append(event)
                 if event['action']=='lock':self.locked.add(event['reviewer'])
@@ -50,7 +52,7 @@ class ReviewStore:
             if action=='assessment':value=validate_submission(value,self.cases)
             elif action!='lock':raise ValueError('unknown action')
             event={'previous':self.chain,'reviewer':reviewer,'domain':self.domain,'action':action,'packet_sha256':self.packet_identity,
-                   'UTC_seconds':time.time(),'payload':value}
+                   'UTC_seconds':time.time(),'payload':value,'protocol_identity':self.protocol_identity}
             digest=hashlib.sha256(canonical(event)).hexdigest()
             with self.log.open('a') as stream:
                 stream.write(json.dumps({**event,'sha256':digest},allow_nan=False)+'\n');stream.flush()
@@ -61,7 +63,7 @@ class ReviewStore:
                 export={'domain':self.domain,'reviewer':reviewer,'locked':True,
                         'qualified_approved':self.reviewers[reviewer].get('qualified_approved',False),
                         'case_set_sha256':hashlib.sha256(canonical(sorted(self.cases))).hexdigest(),
-                        'final_chain_sha256':digest,'packet_sha256':self.packet_identity,'assessments':latest}
+                        'final_chain_sha256':digest,'packet_sha256':self.packet_identity,'assessments':latest,'protocol_identity':self.protocol_identity}
                 write_new(self.directory/(reviewer+'_locked.json'),export)
             return digest
 

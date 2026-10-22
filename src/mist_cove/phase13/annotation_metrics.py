@@ -84,9 +84,17 @@ def review_quality(first,second,expected_cases,duplicate_pairs=()):
                 events.append(event_agreement(aa[0]['intervals'],bb[0]['intervals']))
         result['categories'][category]={'categorical':categorical_agreement(states_a,states_b),'matched_positive_cases':events,
             'first_missing':sum(v is None for v in states_a),'second_missing':sum(v is None for v in states_b),
-            'first_uncertain_or_unassessable':sum(v in ('uncertain','not_assessable','insufficient_signal_quality') for v in states_a)}
+            'first_uncertain_or_unassessable':sum(v in ('uncertain','not_assessable','insufficient_signal_quality') for v in states_a),
+            'second_uncertain_or_unassessable':sum(v in ('uncertain','not_assessable','insufficient_signal_quality') for v in states_b),
+            'confidence_absolute_differences':[abs(aa['confidence']-bb['confidence']) for case in expected_cases
+                for aa in a.get(case,{}).get('assessments',[]) for bb in b.get(case,{}).get('assessments',[])
+                if aa['category']==category and bb['category']==category]}
     for original,duplicate in duplicate_pairs:
         for label,export in [('first',a),('second',b)]:
             if original in export and duplicate in export:
-                result['duplicates'].append({'reviewer':label,'identical_assessments':export[original]['assessments']==export[duplicate]['assessments']})
+                result['duplicates'].append({'reviewer':label,'identical_assessments':export[original]['assessments']==export[duplicate]['assessments'],
+                    'category_repeatability':[{'category':aa['category'],'same_state':aa['state']==bb['state'],
+                        'confidence_absolute_difference':abs(aa['confidence']-bb['confidence']),
+                        'event_agreement':event_agreement(aa['intervals'],bb['intervals'])}
+                        for aa in export[original]['assessments'] for bb in export[duplicate]['assessments'] if aa['category']==bb['category']]})
     return result

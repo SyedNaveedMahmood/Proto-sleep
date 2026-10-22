@@ -1,0 +1,14 @@
+{
+  "status": "COMPLETE",
+  "trajectories": 12,
+  "milestones": 36,
+  "optimizer_updates": 36000,
+  "clean_exposures": 576000,
+  "paired_exposures": 576000,
+  "native_full_example_forwards": 1422000,
+  "matched_streams": "PASS",
+  "CPU_wall_seconds": 359.75914419299806,
+  "GPU_seconds": 0,
+  "peak_RSS_KiB": 737964,
+  "fixed_final_checkpoint": 3000
+}
