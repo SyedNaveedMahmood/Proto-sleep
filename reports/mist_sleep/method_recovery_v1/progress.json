@@ -1,0 +1,689 @@
+{
+  "program": "MIST-Sleep Method Recovery Phase M0",
+  "starting_commit": "5f68b051bbcd6ab0b9ba8b432b339d7c3ebf7c5d",
+  "prompt_sha256": "1a91df7fdf1fa41e8f2fc6b5b7da423d22e353379807898a70bba3189b4dc35f",
+  "scientific_budget": {
+    "trajectories_max": 15,
+    "updates_per_trajectory_max": 1200,
+    "total_updates_max": 18000,
+    "GPU_seconds_max": 21600,
+    "CPU_seconds_max": 43200,
+    "engineering_updates_max": 200
+  },
+  "work_packages": [
+    {
+      "id": "WP01",
+      "title": "Establish the exact starting state",
+      "dependencies": [],
+      "status": "COMPLETE",
+      "code_configuration_identity": null,
+      "tests": [
+        "source/provenance audit"
+      ],
+      "artifacts": [
+        "docs/mist_sleep/METHOD_RECOVERY_FOUNDATION_V1.md",
+        "reports/mist_sleep/method_recovery_v1/frozen_protocol.json"
+      ],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP02",
+      "title": "Recover the original proposal",
+      "dependencies": [
+        "WP01"
+      ],
+      "status": "PARTIAL",
+      "code_configuration_identity": null,
+      "tests": [],
+      "artifacts": [],
+      "scientific_findings": [],
+      "limitations": [
+        "Requires scientific trajectory or unavailable original 13-page proposal"
+      ],
+      "block_reason": "Original 13-page proposal not tracked or attached; the supplied Phase M0 prompt is the available specification."
+    },
+    {
+      "id": "WP03",
+      "title": "Audit reusable repository components",
+      "dependencies": [
+        "WP02"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": null,
+      "tests": [
+        "source/provenance audit"
+      ],
+      "artifacts": [
+        "docs/mist_sleep/METHOD_RECOVERY_FOUNDATION_V1.md",
+        "reports/mist_sleep/method_recovery_v1/frozen_protocol.json"
+      ],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP04",
+      "title": "Reconcile historical evidence",
+      "dependencies": [
+        "WP03"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": null,
+      "tests": [
+        "source/provenance audit"
+      ],
+      "artifacts": [
+        "docs/mist_sleep/METHOD_RECOVERY_FOUNDATION_V1.md",
+        "reports/mist_sleep/method_recovery_v1/frozen_protocol.json"
+      ],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP05",
+      "title": "Produce a methodological threat analysis",
+      "dependencies": [
+        "WP04"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": null,
+      "tests": [
+        "source/provenance audit"
+      ],
+      "artifacts": [
+        "docs/mist_sleep/METHOD_RECOVERY_FOUNDATION_V1.md",
+        "reports/mist_sleep/method_recovery_v1/frozen_protocol.json"
+      ],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP06",
+      "title": "Freeze the overnight protocol",
+      "dependencies": [
+        "WP05"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": null,
+      "tests": [
+        "source/provenance audit"
+      ],
+      "artifacts": [
+        "docs/mist_sleep/METHOD_RECOVERY_FOUNDATION_V1.md",
+        "reports/mist_sleep/method_recovery_v1/frozen_protocol.json"
+      ],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP07",
+      "title": "Audit AttnSleep implementation fidelity",
+      "dependencies": [
+        "WP06"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": null,
+      "tests": [
+        "source/provenance audit"
+      ],
+      "artifacts": [
+        "docs/mist_sleep/METHOD_RECOVERY_FOUNDATION_V1.md",
+        "reports/mist_sleep/method_recovery_v1/frozen_protocol.json"
+      ],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP08",
+      "title": "Investigate earlier class-collapse behavior",
+      "dependencies": [
+        "WP07"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": null,
+      "tests": [
+        "source/provenance audit"
+      ],
+      "artifacts": [
+        "docs/mist_sleep/METHOD_RECOVERY_FOUNDATION_V1.md",
+        "reports/mist_sleep/method_recovery_v1/frozen_protocol.json"
+      ],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP09",
+      "title": "Validate actual EEG preprocessing",
+      "dependencies": [
+        "WP08"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": null,
+      "tests": [
+        "source/provenance audit"
+      ],
+      "artifacts": [
+        "docs/mist_sleep/METHOD_RECOVERY_FOUNDATION_V1.md",
+        "reports/mist_sleep/method_recovery_v1/frozen_protocol.json"
+      ],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP10",
+      "title": "Run baseline numerical sanity checks",
+      "dependencies": [
+        "WP09"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": null,
+      "tests": [
+        "generated unit tests / bounded engineering probe"
+      ],
+      "artifacts": [
+        "docs/mist_sleep/METHOD_RECOVERY_FOUNDATION_V1.md",
+        "reports/mist_sleep/method_recovery_v1/frozen_protocol.json"
+      ],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP11",
+      "title": "Build one shared training/evaluation contract",
+      "dependencies": [
+        "WP10"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": null,
+      "tests": [
+        "generated unit tests / bounded engineering probe"
+      ],
+      "artifacts": [
+        "docs/mist_sleep/METHOD_RECOVERY_FOUNDATION_V1.md",
+        "reports/mist_sleep/method_recovery_v1/frozen_protocol.json"
+      ],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP12",
+      "title": "Decide AttnSleep baseline readiness",
+      "dependencies": [
+        "WP11"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": null,
+      "tests": [
+        "generated unit tests / bounded engineering probe"
+      ],
+      "artifacts": [
+        "docs/mist_sleep/METHOD_RECOVERY_FOUNDATION_V1.md",
+        "reports/mist_sleep/method_recovery_v1/frozen_protocol.json"
+      ],
+      "scientific_findings": [
+        "ADAPTED_REFERENCE_ONLY; published AttnSleep reproduction not established."
+      ],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP13",
+      "title": "Implement the morphology tokenizer",
+      "dependencies": [
+        "WP12"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": null,
+      "tests": [
+        "generated unit tests / bounded engineering probe"
+      ],
+      "artifacts": [
+        "docs/mist_sleep/METHOD_RECOVERY_FOUNDATION_V1.md",
+        "reports/mist_sleep/method_recovery_v1/frozen_protocol.json"
+      ],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP14",
+      "title": "Implement the multi-scale encoder",
+      "dependencies": [
+        "WP13"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": null,
+      "tests": [
+        "generated unit tests / bounded engineering probe"
+      ],
+      "artifacts": [
+        "docs/mist_sleep/METHOD_RECOVERY_FOUNDATION_V1.md",
+        "reports/mist_sleep/method_recovery_v1/frozen_protocol.json"
+      ],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP15",
+      "title": "Build the shared prototype bank",
+      "dependencies": [
+        "WP14"
+      ],
+      "status": "PARTIAL",
+      "code_configuration_identity": null,
+      "tests": [],
+      "artifacts": [],
+      "scientific_findings": [],
+      "limitations": [
+        "Awaiting complete matched scientific trajectories"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP16",
+      "title": "Implement prototype regularization and diagnostics",
+      "dependencies": [
+        "WP15"
+      ],
+      "status": "PARTIAL",
+      "code_configuration_identity": null,
+      "tests": [],
+      "artifacts": [],
+      "scientific_findings": [],
+      "limitations": [
+        "Awaiting complete matched scientific trajectories"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP17",
+      "title": "Implement a within-epoch temporal module",
+      "dependencies": [
+        "WP16"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": null,
+      "tests": [
+        "generated unit tests / bounded engineering probe"
+      ],
+      "artifacts": [
+        "docs/mist_sleep/METHOD_RECOVERY_FOUNDATION_V1.md",
+        "reports/mist_sleep/method_recovery_v1/frozen_protocol.json"
+      ],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP18",
+      "title": "Implement morphology-preserving transformations",
+      "dependencies": [
+        "WP17"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": null,
+      "tests": [
+        "generated unit tests / bounded engineering probe"
+      ],
+      "artifacts": [
+        "docs/mist_sleep/METHOD_RECOVERY_FOUNDATION_V1.md",
+        "reports/mist_sleep/method_recovery_v1/frozen_protocol.json"
+      ],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP19",
+      "title": "Audit transformation semantics",
+      "dependencies": [
+        "WP18"
+      ],
+      "status": "PARTIAL",
+      "code_configuration_identity": null,
+      "tests": [],
+      "artifacts": [],
+      "scientific_findings": [],
+      "limitations": [
+        "Awaiting complete matched scientific trajectories"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP20",
+      "title": "Implement and verify MPI",
+      "dependencies": [
+        "WP19"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": null,
+      "tests": [
+        "generated unit tests / bounded engineering probe"
+      ],
+      "artifacts": [
+        "docs/mist_sleep/METHOD_RECOVERY_FOUNDATION_V1.md",
+        "reports/mist_sleep/method_recovery_v1/frozen_protocol.json"
+      ],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP21",
+      "title": "Implement SupCon",
+      "dependencies": [
+        "WP20"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": null,
+      "tests": [
+        "generated unit tests / bounded engineering probe"
+      ],
+      "artifacts": [
+        "docs/mist_sleep/METHOD_RECOVERY_FOUNDATION_V1.md",
+        "reports/mist_sleep/method_recovery_v1/frozen_protocol.json"
+      ],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP22",
+      "title": "Build all five scientific arms",
+      "dependencies": [
+        "WP21"
+      ],
+      "status": "PARTIAL",
+      "code_configuration_identity": null,
+      "tests": [],
+      "artifacts": [],
+      "scientific_findings": [],
+      "limitations": [
+        "Awaiting complete matched scientific trajectories"
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP23",
+      "title": "Freeze the exact internal-development cohort",
+      "dependencies": [
+        "WP22"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": null,
+      "tests": [
+        "generated unit tests / bounded engineering probe"
+      ],
+      "artifacts": [
+        "docs/mist_sleep/METHOD_RECOVERY_FOUNDATION_V1.md",
+        "reports/mist_sleep/method_recovery_v1/frozen_protocol.json"
+      ],
+      "scientific_findings": [
+        "29 authenticated SC TRAIN recordings; 10 fit and 5 internal-development people; zero excluded-source reads."
+      ],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP24",
+      "title": "Benchmark model throughput",
+      "dependencies": [
+        "WP23"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": null,
+      "tests": [
+        "generated unit tests / bounded engineering probe"
+      ],
+      "artifacts": [
+        "docs/mist_sleep/METHOD_RECOVERY_FOUNDATION_V1.md",
+        "reports/mist_sleep/method_recovery_v1/frozen_protocol.json"
+      ],
+      "scientific_findings": [
+        "65 engineering updates total; estimated scientific run fits within ceiling on idle RTX 4080 SUPER."
+      ],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP25",
+      "title": "Freeze initialization and optimization",
+      "dependencies": [
+        "WP24"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": null,
+      "tests": [
+        "generated unit tests / bounded engineering probe"
+      ],
+      "artifacts": [
+        "docs/mist_sleep/METHOD_RECOVERY_FOUNDATION_V1.md",
+        "reports/mist_sleep/method_recovery_v1/frozen_protocol.json"
+      ],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP26",
+      "title": "Execute the matched scientific runs",
+      "dependencies": [
+        "WP25"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": null,
+      "tests": [],
+      "artifacts": [],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP27",
+      "title": "Track learning trajectories",
+      "dependencies": [
+        "WP26"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": null,
+      "tests": [],
+      "artifacts": [],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP28",
+      "title": "Evaluate clean SC developmental staging",
+      "dependencies": [
+        "WP27"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": null,
+      "tests": [],
+      "artifacts": [],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP29",
+      "title": "Evaluate controlled nuisance robustness",
+      "dependencies": [
+        "WP28"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": null,
+      "tests": [],
+      "artifacts": [],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP30",
+      "title": "Test discriminative information preservation",
+      "dependencies": [
+        "WP29"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": null,
+      "tests": [],
+      "artifacts": [],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP31",
+      "title": "Isolate the contribution of MPI",
+      "dependencies": [
+        "WP30"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": null,
+      "tests": [],
+      "artifacts": [],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP32",
+      "title": "Analyze the two MPI mechanisms",
+      "dependencies": [
+        "WP31"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": null,
+      "tests": [],
+      "artifacts": [],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP33",
+      "title": "Run falsification controls",
+      "dependencies": [
+        "WP32"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": null,
+      "tests": [],
+      "artifacts": [],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP34",
+      "title": "Quantify compute efficiency",
+      "dependencies": [
+        "WP33"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": null,
+      "tests": [],
+      "artifacts": [],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP35",
+      "title": "Evaluate the feasibility GO/NO-GO decision",
+      "dependencies": [
+        "WP34"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": null,
+      "tests": [],
+      "artifacts": [],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP36",
+      "title": "Prepare independent external-transfer methodology",
+      "dependencies": [
+        "WP35"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": null,
+      "tests": [],
+      "artifacts": [],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP37",
+      "title": "Prepare the actual paper-level external study",
+      "dependencies": [
+        "WP36"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": null,
+      "tests": [],
+      "artifacts": [],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP38",
+      "title": "Prepare the initial method-paper manuscript skeleton",
+      "dependencies": [
+        "WP37"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": null,
+      "tests": [],
+      "artifacts": [],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP39",
+      "title": "Complete all testing and publication review",
+      "dependencies": [
+        "WP38"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": null,
+      "tests": [],
+      "artifacts": [],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP40",
+      "title": "Publish the overnight results and stop",
+      "dependencies": [
+        "WP39"
+      ],
+      "status": "PENDING",
+      "code_configuration_identity": null,
+      "tests": [],
+      "artifacts": [],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    }
+  ]
+}

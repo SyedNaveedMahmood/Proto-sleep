@@ -1,0 +1,72 @@
+{
+  "version": "mist-sleep-method-recovery-v1",
+  "arms": [
+    "A0",
+    "M0",
+    "M1",
+    "M2",
+    "M3"
+  ],
+  "seeds": [
+    123,
+    456
+  ],
+  "steps": 1200,
+  "milestones": [
+    300,
+    750,
+    1200
+  ],
+  "warmup_steps": 50,
+  "batch_size": 16,
+  "optimizer": "AdamW",
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "gradient_clip_norm": 5.0,
+  "sampling": "fit-only class-balanced; replacement; same per-seed stream across arms",
+  "views": "one original and one deterministic bounded augmented view for every arm",
+  "stage_loss": "mean cross-entropy of both views; no class weighting because balanced sampling",
+  "mpi_embedding_coefficient": 0.1,
+  "mpi_assignment_coefficient": 0.1,
+  "supcon_coefficient": 0.05,
+  "supcon_temperature": 0.1,
+  "prototype_regularization": {
+    "commitment": 0.05,
+    "balance": 0.01,
+    "separation": 0.01
+  },
+  "prototype_count": 64,
+  "prototype_temperature": 0.1,
+  "prototype_initialization": "50 shared stage-loss warmup steps, then fit-only cosine k-means, 4096 tokens, 12 iterations",
+  "development_selection": "fixed final 1200 update state; milestones descriptive only",
+  "primary_endpoint": "mean participant fixed-five Macro-F1 on full scored internal-development TRAIN partition",
+  "primary_contrast": "M2 minus M0",
+  "secondary_contrasts": [
+    "M2-M1",
+    "M3-M2",
+    "M3-M1",
+    "M0-A0"
+  ],
+  "resource_limits": {
+    "scientific_trajectories": 10,
+    "updates_each": 1200,
+    "scientific_updates": 12000,
+    "GPU_seconds": 21600,
+    "CPU_seconds": 43200,
+    "engineering_updates": 200
+  },
+  "go_rule": {
+    "nuisance_mean_participant_macro_f1_delta_min": 0.02,
+    "clean_mean_participant_macro_f1_delta_min": -0.02,
+    "required_seeds": 2,
+    "no_N1_REM_collapse": true,
+    "no_prototype_collapse": true
+  },
+  "source_hashes": {
+    "core.py": "99b546195bf4d2c6109ee125e9d7dccb6e5dde7db7985fdabc65ed14092bac53",
+    "augmentation.py": "412e7d40cfc0449243cf7ae3d5a333c26b22a21a64532e0e760fb9c2e592caa2",
+    "source.py": "d4466cc84405899c5a2160eea6ddf28676f55cea4c05bfeed7103434c9dbe78b",
+    "metrics.py": "fe64fd701a04cdf236b833fef972de6e9acd868eb824fdd802dbf9d86a038897",
+    "experiment.py": "3894d26e22c2b8f83b0229a160ae3ee902dbb978eb0b94e35dd91e11890bf71e"
+  }
+}
