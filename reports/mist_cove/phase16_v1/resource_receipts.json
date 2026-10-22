@@ -13,5 +13,5 @@
   "GPU_hours": 0,
   "scientific_CPU_wall_seconds": 0,
   "note": "Only documentation review and generated-only unit tests ran; no scientific EEG computation. Test wall time is reported with the full CPU regression receipt.",
-  "CPU_test_wall_seconds": 20.61
+  "CPU_test_wall_seconds": 20.57
 }

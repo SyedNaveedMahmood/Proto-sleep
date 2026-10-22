@@ -170,7 +170,7 @@
         "src/mist_cove/phase16/source.py"
       ],
       "code_configuration_identity": {
-        "sha256": "af31929a6f57c7d3236971e6d51eeb3fa56f55c14f458034c5bde13cb8110f5f"
+        "sha256": "8f98676a1737c27e20e9783035bcf6bbe367599baac103fe011c2e917ed3bd0f"
       }
     },
     {
@@ -491,7 +491,7 @@
         "tests/mist_cove/test_phase16.py"
       ],
       "code_configuration_identity": {
-        "sha256": "a9b99ca4555d18d5da8be6b3c5dd7f8b48c49cd34cb102dea806237e27dd484f"
+        "sha256": "85e7eca68bb20000f50950232c028f2096cfd89593de6d09c8bf9cb868637843"
       }
     },
     {
@@ -1083,7 +1083,7 @@
         "tests/mist_cove/test_phase16.py"
       ],
       "code_configuration_identity": {
-        "sha256": "a9b99ca4555d18d5da8be6b3c5dd7f8b48c49cd34cb102dea806237e27dd484f"
+        "sha256": "85e7eca68bb20000f50950232c028f2096cfd89593de6d09c8bf9cb868637843"
       }
     },
     {
@@ -1176,8 +1176,8 @@
       ],
       "data_source": "Public owner documentation and/or generated fixtures; no external EEG",
       "test_receipt": [
-        "Full CPU regression: 1,180 passed, 11 CUDA-only skipped, 0 failed; 20.61 s",
-        "Phase XVI generated-only: 28 passed"
+        "Full CPU regression: 1,181 passed, 11 CUDA-only skipped, 0 failed; 20.57 s",
+        "Phase XVI generated-only: 29 passed"
       ],
       "scientific_result": "Implemented/tested bounded component; real-file validation or final scientific endpoint NOT TESTED",
       "limitations": [
@@ -1188,7 +1188,7 @@
         "tests/mist_cove/test_phase16.py"
       ],
       "code_configuration_identity": {
-        "sha256": "a9b99ca4555d18d5da8be6b3c5dd7f8b48c49cd34cb102dea806237e27dd484f"
+        "sha256": "85e7eca68bb20000f50950232c028f2096cfd89593de6d09c8bf9cb868637843"
       }
     },
     {
@@ -1217,7 +1217,7 @@
         "reports/mist_cove/phase16_v1/scientific_gates.json"
       ],
       "code_configuration_identity": {
-        "sha256": "02d2ef864919adc523ee04bc36769640bc52eec189b3fa7e20c03e398f304d88"
+        "sha256": "855a711defef30e6b6797b57b08a63d77022432ff355f6ad07ca53b57900f6ca"
       }
     },
     {

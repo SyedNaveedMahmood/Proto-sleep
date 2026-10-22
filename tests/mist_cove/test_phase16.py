@@ -11,6 +11,7 @@ from mist_cove.phase16.archive_security import Member, validate_members
 from mist_cove.phase16.benchmark import (COVERED_NEGATIVE, POSITIVE, UNKNOWN,
     enforce_participant_split, joint_coverage, label_interval, match_events)
 from mist_cove.phase16.source import ARCHIVES, RightsReceipt, canonical_url, download_authorized
+from mist_cove.phase16.release import verify_manifest
 from mist_cove.phase16.reference import reviewer_events, union_events, intersection_events
 from mist_cove.phase16.spectral import atom_scores, top_atoms, selected_intervals
 from mist_cove.phase16.edf_contract import ChannelHeader, validate_event_channel
@@ -171,3 +172,7 @@ def test_generated_edf_header_channel_geometry_and_calibration():
     with pytest.raises(ValueError):
         validate_event_channel(header, event_type="spindle", expected_rate=100,
                                duration_seconds=1800, sample_count=179999)
+
+
+def test_public_phase16_release_is_exact_and_contains_no_archive():
+    assert verify_manifest() >= 15
