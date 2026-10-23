@@ -1,0 +1,14 @@
+{
+  "status": "NOT_RUN_BLOCKED",
+  "reason": "INSUFFICIENT_PERSISTENT_DISK",
+  "eligible_recordings": null,
+  "evaluated_recordings": 0,
+  "decision": "PRIMARY_EVALUATION_BLOCKED",
+  "m0_macro_f1": null,
+  "m2_macro_f1": null,
+  "effect": null,
+  "interval_95": null,
+  "success_threshold": 0.02,
+  "threshold_passed": null,
+  "severe_collapse": null
+}

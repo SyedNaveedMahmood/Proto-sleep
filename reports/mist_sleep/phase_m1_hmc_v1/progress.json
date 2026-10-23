@@ -1,0 +1,480 @@
+{
+  "phase": "M1",
+  "scientific_status": "PRIMARY_EVALUATION_BLOCKED",
+  "work_packages": [
+    {
+      "id": "WP01",
+      "status": "COMPLETE",
+      "actual_implementation": "Initialized exact M0 commit and M1 branch",
+      "tests": "verification.json and generated M1 suite; outcome analyses not run where blocked",
+      "evidence": "Git ancestry",
+      "scientific_finding": "History preserved",
+      "limitation": "No scientific inference",
+      "resource_use": "metadata/header or generated validation only; target inference 0; see resource_receipts.json",
+      "blockers": []
+    },
+    {
+      "id": "WP02",
+      "status": "COMPLETE",
+      "actual_implementation": "Read all 13 proposal text pages and M0 reports",
+      "tests": "verification.json and generated M1 suite; outcome analyses not run where blocked",
+      "evidence": "Foundation report",
+      "scientific_finding": "Representation consistency differs from transfer efficacy",
+      "limitation": "PDF layout binary absent",
+      "resource_use": "metadata/header or generated validation only; target inference 0; see resource_receipts.json",
+      "blockers": []
+    },
+    {
+      "id": "WP03",
+      "status": "COMPLETE",
+      "actual_implementation": "Preserved M0 failed +0.02 readiness decision",
+      "tests": "verification.json and generated M1 suite; outcome analyses not run where blocked",
+      "evidence": "M0 scientific_gates.json unchanged",
+      "scientific_finding": "M1 is separately authorized falsification",
+      "limitation": "M0 gate is not revised",
+      "resource_use": "metadata/header or generated validation only; target inference 0; see resource_receipts.json",
+      "blockers": []
+    },
+    {
+      "id": "WP04",
+      "status": "COMPLETE",
+      "actual_implementation": "Authenticated four checkpoint bytes and restricted-loaded states",
+      "tests": "verification.json and generated M1 suite; outcome analyses not run where blocked",
+      "evidence": "checkpoint_receipt.json",
+      "scientific_finding": "All exact final identities match",
+      "limitation": "Generated forward reproduction; no development waveform replay",
+      "resource_use": "metadata/header or generated validation only; target inference 0; see resource_receipts.json",
+      "blockers": []
+    },
+    {
+      "id": "WP05",
+      "status": "COMPLETE",
+      "actual_implementation": "Implemented inference guard and state digest",
+      "tests": "verification.json and generated M1 suite; outcome analyses not run where blocked",
+      "evidence": "test_frozen_inference_state_and_prediction_order",
+      "scientific_finding": "Optimizer/backward/state mutation rejected",
+      "limitation": "Guard is dedicated-process; arbitrary external Python is outside scope",
+      "resource_use": "metadata/header or generated validation only; target inference 0; see resource_receipts.json",
+      "blockers": []
+    },
+    {
+      "id": "WP06",
+      "status": "COMPLETE",
+      "actual_implementation": "Committed protocol and pre-waveform electrode label refinement",
+      "tests": "verification.json and generated M1 suite; outcome analyses not run where blocked",
+      "evidence": "933bcba; d7947ef",
+      "scientific_finding": "Models/channel/metric/threshold fixed before waveform values",
+      "limitation": "Initial slash-only matcher preserved in audit",
+      "resource_use": "metadata/header or generated validation only; target inference 0; see resource_receipts.json",
+      "blockers": []
+    },
+    {
+      "id": "WP07",
+      "status": "COMPLETE",
+      "actual_implementation": "Verified official metadata, DOI and CC BY 4.0",
+      "tests": "verification.json and generated M1 suite; outcome analyses not run where blocked",
+      "evidence": "data_access_receipt.json",
+      "scientific_finding": "Official v1.1 manifest authenticated",
+      "limitation": "Waveform payload not acquired",
+      "resource_use": "metadata/header or generated validation only; target inference 0; see resource_receipts.json",
+      "blockers": []
+    },
+    {
+      "id": "WP08",
+      "status": "COMPLETE_GATE_FAILED",
+      "actual_implementation": "Configured private root and measured persistent capacity",
+      "tests": "verification.json and generated M1 suite; outcome analyses not run where blocked",
+      "evidence": "resource_receipts.json",
+      "scientific_finding": "7.06 GB available; 17.7 GB estimated need including reserve",
+      "limitation": "Full acquisition blocked",
+      "resource_use": "metadata/header or generated validation only; target inference 0; see resource_receipts.json",
+      "blockers": [
+        "INSUFFICIENT_PERSISTENT_DISK"
+      ]
+    },
+    {
+      "id": "WP09",
+      "status": "IMPLEMENTED_BLOCKED",
+      "actual_implementation": "Resumable pinned-manifest official-source acquisition",
+      "tests": "verification.json and generated M1 suite; outcome analyses not run where blocked",
+      "evidence": "hmc_manifest.py; capacity control test",
+      "scientific_finding": "No bulk transfer launched",
+      "limitation": "Cannot acquire full cohort at this destination",
+      "resource_use": "metadata/header or generated validation only; target inference 0; see resource_receipts.json",
+      "blockers": [
+        "INSUFFICIENT_PERSISTENT_DISK"
+      ]
+    },
+    {
+      "id": "WP10",
+      "status": "COMPLETE",
+      "actual_implementation": "Enumerated official 151 records and 453 source triplets",
+      "tests": "verification.json and generated M1 suite; outcome analyses not run where blocked",
+      "evidence": "source_manifest.json",
+      "scientific_finding": "Removed recordings excluded",
+      "limitation": "Eligibility is not yet known",
+      "resource_use": "metadata/header or generated validation only; target inference 0; see resource_receipts.json",
+      "blockers": []
+    },
+    {
+      "id": "WP11",
+      "status": "BLOCKED",
+      "actual_implementation": "Verified metadata SHA256; full-file checker implemented",
+      "tests": "verification.json and generated M1 suite; outcome analyses not run where blocked",
+      "evidence": "hmc_manifest.py; metadata hashes",
+      "scientific_finding": "Whole waveform/scoring files not authenticated",
+      "limitation": "No full files present",
+      "resource_use": "metadata/header or generated validation only; target inference 0; see resource_receipts.json",
+      "blockers": [
+        "INSUFFICIENT_PERSISTENT_DISK"
+      ]
+    },
+    {
+      "id": "WP12",
+      "status": "COMPLETE_WITH_LIMITATION",
+      "actual_implementation": "Reviewed aggregate-only participant metadata",
+      "tests": "verification.json and generated M1 suite; outcome analyses not run where blocked",
+      "evidence": "Source and license report",
+      "scientific_finding": "Use recording clusters; no participant independence claim",
+      "limitation": "Repeated-person linkage unverified",
+      "resource_use": "metadata/header or generated validation only; target inference 0; see resource_receipts.json",
+      "blockers": []
+    },
+    {
+      "id": "WP13",
+      "status": "COMPLETE_HEADER_ONLY",
+      "actual_implementation": "Audited 151 actual EDF headers over exact HTTP ranges",
+      "tests": "verification.json and generated M1 suite; outcome analyses not run where blocked",
+      "evidence": "header_audit.json",
+      "scientific_finding": "Both EEG derivations at 256 Hz/uV in all headers",
+      "limitation": "Header hashes are not whole-EDF authentication",
+      "resource_use": "metadata/header or generated validation only; target inference 0; see resource_receipts.json",
+      "blockers": []
+    },
+    {
+      "id": "WP14",
+      "status": "PARTIAL_BLOCKED",
+      "actual_implementation": "Read EDF+ standard; strict generated CSV contract",
+      "tests": "verification.json and generated M1 suite; outcome analyses not run where blocked",
+      "evidence": "hmc_scoring.py; geometry tests",
+      "scientific_finding": "No scoring outcomes inspected",
+      "limitation": "Real HMC text schema unverified; fails closed",
+      "resource_use": "metadata/header or generated validation only; target inference 0; see resource_receipts.json",
+      "blockers": [
+        "INSUFFICIENT_PERSISTENT_DISK"
+      ]
+    },
+    {
+      "id": "WP15",
+      "status": "COMPLETE_GENERATED",
+      "actual_implementation": "Implemented explicit physical calibration and source units",
+      "tests": "verification.json and generated M1 suite; outcome analyses not run where blocked",
+      "evidence": "signal_contract.py; calibration tests",
+      "scientific_finding": "Generated scaling correct",
+      "limitation": "No actual waveform converted",
+      "resource_use": "metadata/header or generated validation only; target inference 0; see resource_receipts.json",
+      "blockers": []
+    },
+    {
+      "id": "WP16",
+      "status": "COMPLETE_GENERATED",
+      "actual_implementation": "Implemented explicit FIR polyphase 25/64 resampling",
+      "tests": "verification.json and generated M1 suite; outcome analyses not run where blocked",
+      "evidence": "Inband/alias/impulse tests",
+      "scientific_finding": "Generated passband and timing verified",
+      "limitation": "Clinical compatibility not inferred from tones",
+      "resource_use": "metadata/header or generated validation only; target inference 0; see resource_receipts.json",
+      "blockers": []
+    },
+    {
+      "id": "WP17",
+      "status": "COMPLETE_GENERATED",
+      "actual_implementation": "Preserved physical t=0 and complete epoch grid",
+      "tests": "verification.json and generated M1 suite; outcome analyses not run where blocked",
+      "evidence": "geometry tests; alignment report",
+      "scientific_finding": "No record boundary bridging or label trimming",
+      "limitation": "Real annotation alignment blocked",
+      "resource_use": "metadata/header or generated validation only; target inference 0; see resource_receipts.json",
+      "blockers": []
+    },
+    {
+      "id": "WP18",
+      "status": "COMPLETE_GENERATED",
+      "actual_implementation": "Waveform-only loader disables annotation decoding",
+      "tests": "verification.json and generated M1 suite; outcome analyses not run where blocked",
+      "evidence": "test_generated_edf_blind_reader",
+      "scientific_finding": "Generated EDF annotations inaccessible during prediction",
+      "limitation": "Full cohort prediction not executed",
+      "resource_use": "metadata/header or generated validation only; target inference 0; see resource_receipts.json",
+      "blockers": []
+    },
+    {
+      "id": "WP19",
+      "status": "COMPLETE_GENERATED",
+      "actual_implementation": "Generated EDF through full-input frozen model",
+      "tests": "verification.json and generated M1 suite; outcome analyses not run where blocked",
+      "evidence": "test_generated_edf_blind_reader; generated_validation.json",
+      "scientific_finding": "Finite ordered output, immutable model",
+      "limitation": "No clinical performance claim",
+      "resource_use": "metadata/header or generated validation only; target inference 0; see resource_receipts.json",
+      "blockers": []
+    },
+    {
+      "id": "WP20",
+      "status": "COMPLETE_GENERATED",
+      "actual_implementation": "Benchmarked four authenticated models on generated input",
+      "tests": "verification.json and generated M1 suite; outcome analyses not run where blocked",
+      "evidence": "generated_validation.json",
+      "scientific_finding": "Compute estimate within CPU ceiling",
+      "limitation": "Excludes real I/O; disk fails",
+      "resource_use": "metadata/header or generated validation only; target inference 0; see resource_receipts.json",
+      "blockers": []
+    },
+    {
+      "id": "WP21",
+      "status": "BLOCKED",
+      "actual_implementation": "Blind entrypoint implemented; target inference not launched",
+      "tests": "verification.json and generated M1 suite; outcome analyses not run where blocked",
+      "evidence": "runner.py; primary_results.json",
+      "scientific_finding": "Zero target predictions",
+      "limitation": "Insufficient disk",
+      "resource_use": "metadata/header or generated validation only; target inference 0; see resource_receipts.json",
+      "blockers": [
+        "INSUFFICIENT_PERSISTENT_DISK"
+      ]
+    },
+    {
+      "id": "WP22",
+      "status": "BLOCKED",
+      "actual_implementation": "Exclusive private seal and public hash receipt implemented",
+      "tests": "verification.json and generated M1 suite; outcome analyses not run where blocked",
+      "evidence": "seal tamper/one-time tests",
+      "scientific_finding": "No real prediction seal exists",
+      "limitation": "Blind cohort inference never ran",
+      "resource_use": "metadata/header or generated validation only; target inference 0; see resource_receipts.json",
+      "blockers": [
+        "INSUFFICIENT_PERSISTENT_DISK"
+      ]
+    },
+    {
+      "id": "WP23",
+      "status": "BLOCKED",
+      "actual_implementation": "Strict sealed one-time scoring gate implemented",
+      "tests": "verification.json and generated M1 suite; outcome analyses not run where blocked",
+      "evidence": "label access and timing tests",
+      "scientific_finding": "Zero original labels opened",
+      "limitation": "No prediction seal; real text schema also unverified",
+      "resource_use": "metadata/header or generated validation only; target inference 0; see resource_receipts.json",
+      "blockers": [
+        "INSUFFICIENT_PERSISTENT_DISK"
+      ]
+    },
+    {
+      "id": "WP24",
+      "status": "BLOCKED",
+      "actual_implementation": "Implemented fixed-five primary contrast",
+      "tests": "verification.json and generated M1 suite; outcome analyses not run where blocked",
+      "evidence": "stage_metrics.py; paired_statistics.py",
+      "scientific_finding": "Primary effect is null, not zero",
+      "limitation": "No observed outcomes",
+      "resource_use": "metadata/header or generated validation only; target inference 0; see resource_receipts.json",
+      "blockers": [
+        "INSUFFICIENT_PERSISTENT_DISK"
+      ]
+    },
+    {
+      "id": "WP25",
+      "status": "BLOCKED",
+      "actual_implementation": "Implemented stage confusion/F1/recall and calibration summaries",
+      "tests": "verification.json and generated M1 suite; outcome analyses not run where blocked",
+      "evidence": "stage_metrics.py tests",
+      "scientific_finding": "All target stage results unmeasured",
+      "limitation": "No labels or logits",
+      "resource_use": "metadata/header or generated validation only; target inference 0; see resource_receipts.json",
+      "blockers": [
+        "INSUFFICIENT_PERSISTENT_DISK"
+      ]
+    },
+    {
+      "id": "WP26",
+      "status": "BLOCKED",
+      "actual_implementation": "Implemented evaluation-only NLL/Brier/ECE/confidence",
+      "tests": "verification.json and generated M1 suite; outcome analyses not run where blocked",
+      "evidence": "confidence=1 calibration control",
+      "scientific_finding": "No calibration fitted",
+      "limitation": "Adequacy unmeasured",
+      "resource_use": "metadata/header or generated validation only; target inference 0; see resource_receipts.json",
+      "blockers": [
+        "INSUFFICIENT_PERSISTENT_DISK"
+      ]
+    },
+    {
+      "id": "WP27",
+      "status": "BLOCKED",
+      "actual_implementation": "Both seeds fixed in paired analysis",
+      "tests": "verification.json and generated M1 suite; outcome analyses not run where blocked",
+      "evidence": "paired bootstrap tests",
+      "scientific_finding": "Seed direction unmeasured",
+      "limitation": "No model-paired recording scores",
+      "resource_use": "metadata/header or generated validation only; target inference 0; see resource_receipts.json",
+      "blockers": [
+        "INSUFFICIENT_PERSISTENT_DISK"
+      ]
+    },
+    {
+      "id": "WP28",
+      "status": "BLOCKED",
+      "actual_implementation": "F4/M1 declared secondary; same inference contract",
+      "tests": "verification.json and generated M1 suite; outcome analyses not run where blocked",
+      "evidence": "channel_contract.json",
+      "scientific_finding": "No channel selection",
+      "limitation": "No secondary predictions",
+      "resource_use": "metadata/header or generated validation only; target inference 0; see resource_receipts.json",
+      "blockers": [
+        "INSUFFICIENT_PERSISTENT_DISK"
+      ]
+    },
+    {
+      "id": "WP29",
+      "status": "BLOCKED",
+      "actual_implementation": "Implemented descriptive embedding/occupancy summary",
+      "tests": "verification.json and generated M1 suite; outcome analyses not run where blocked",
+      "evidence": "representation_audit.py",
+      "scientific_finding": "No external mechanism result",
+      "limitation": "View stability, stage conditioning and source-distance analysis not executed",
+      "resource_use": "metadata/header or generated validation only; target inference 0; see resource_receipts.json",
+      "blockers": [
+        "INSUFFICIENT_PERSISTENT_DISK"
+      ]
+    },
+    {
+      "id": "WP30",
+      "status": "BLOCKED",
+      "actual_implementation": "Registered negative transfer, class collapse and confidence failures",
+      "tests": "verification.json and generated M1 suite; outcome analyses not run where blocked",
+      "evidence": "scientific_gates.json",
+      "scientific_finding": "No observed failure pattern to interpret",
+      "limitation": "No clinical outcome",
+      "resource_use": "metadata/header or generated validation only; target inference 0; see resource_receipts.json",
+      "blockers": [
+        "INSUFFICIENT_PERSISTENT_DISK"
+      ]
+    },
+    {
+      "id": "WP31",
+      "status": "BLOCKED",
+      "actual_implementation": "Implemented recording/verified-participant clustered bootstrap",
+      "tests": "verification.json and generated M1 suite; outcome analyses not run where blocked",
+      "evidence": "paired unit and invalid grouping tests",
+      "scientific_finding": "Seeds never count as patients",
+      "limitation": "No real paired units",
+      "resource_use": "metadata/header or generated validation only; target inference 0; see resource_receipts.json",
+      "blockers": [
+        "INSUFFICIENT_PERSISTENT_DISK"
+      ]
+    },
+    {
+      "id": "WP32",
+      "status": "COMPLETE_GENERATED",
+      "actual_implementation": "Generated integrity, timing, identity and label-shuffle controls",
+      "tests": "verification.json and generated M1 suite; outcome analyses not run where blocked",
+      "evidence": "falsification_controls.json; test_external_m1.py",
+      "scientific_finding": "Analytical controls behave as expected",
+      "limitation": "Engineering evidence only",
+      "resource_use": "metadata/header or generated validation only; target inference 0; see resource_receipts.json",
+      "blockers": []
+    },
+    {
+      "id": "WP33",
+      "status": "COMPLETE_BLOCKED_FINDING",
+      "actual_implementation": "Distinguished blocked evaluation from negative efficacy",
+      "tests": "verification.json and generated M1 suite; outcome analyses not run where blocked",
+      "evidence": "External results report",
+      "scientific_finding": "PRIMARY_EVALUATION_BLOCKED",
+      "limitation": "MPI benefit or failure not measured",
+      "resource_use": "metadata/header or generated validation only; target inference 0; see resource_receipts.json",
+      "blockers": [
+        "INSUFFICIENT_PERSISTENT_DISK"
+      ]
+    },
+    {
+      "id": "WP34",
+      "status": "COMPLETE_BLOCKED_FINDING",
+      "actual_implementation": "Reassessed original claims against actual evidence",
+      "tests": "verification.json and generated M1 suite; outcome analyses not run where blocked",
+      "evidence": "Method-paper implications report",
+      "scientific_finding": "No new transfer support",
+      "limitation": "Multiple-target, label efficiency and clinical semantics untested",
+      "resource_use": "metadata/header or generated validation only; target inference 0; see resource_receipts.json",
+      "blockers": [
+        "INSUFFICIENT_PERSISTENT_DISK"
+      ]
+    },
+    {
+      "id": "WP35",
+      "status": "COMPLETE",
+      "actual_implementation": "Issued BLOCKED research recommendation",
+      "tests": "verification.json and generated M1 suite; outcome analyses not run where blocked",
+      "evidence": "Scientific decision report",
+      "scientific_finding": "No GO, HOLD or PIVOT efficacy inference warranted",
+      "limitation": "Storage and integrity gates prevent the test",
+      "resource_use": "metadata/header or generated validation only; target inference 0; see resource_receipts.json",
+      "blockers": []
+    },
+    {
+      "id": "WP36",
+      "status": "COMPLETE",
+      "actual_implementation": "Preserved inherited CPU suite; added generated M1 controls",
+      "tests": "verification.json and generated M1 suite; outcome analyses not run where blocked",
+      "evidence": "verification.json; GitHub CI",
+      "scientific_finding": "All local CPU and inference-only GPU checks pass",
+      "limitation": "Tests cannot establish transfer",
+      "resource_use": "metadata/header or generated validation only; target inference 0; see resource_receipts.json",
+      "blockers": []
+    },
+    {
+      "id": "WP37",
+      "status": "COMPLETE",
+      "actual_implementation": "Produced foundation, source, model and scientific reports",
+      "tests": "verification.json and generated M1 suite; outcome analyses not run where blocked",
+      "evidence": "docs/mist_sleep/PHASE_M1_*",
+      "scientific_finding": "Null outcomes and limitations explicit",
+      "limitation": "Clinical reports explain missing evidence",
+      "resource_use": "metadata/header or generated validation only; target inference 0; see resource_receipts.json",
+      "blockers": []
+    },
+    {
+      "id": "WP38",
+      "status": "COMPLETE_WITH_LIMITATION",
+      "actual_implementation": "Generated metadata coverage, tone, cost and capacity figures",
+      "tests": "verification.json and generated M1 suite; outcome analyses not run where blocked",
+      "evidence": "figures/",
+      "scientific_finding": "Only actual metadata and generated validation plotted",
+      "limitation": "Requested clinical result figures blocked, not fabricated",
+      "resource_use": "metadata/header or generated validation only; target inference 0; see resource_receipts.json",
+      "blockers": []
+    },
+    {
+      "id": "WP39",
+      "status": "COMPLETE",
+      "actual_implementation": "Built public artifact manifest and resource accounting",
+      "tests": "verification.json and generated M1 suite; outcome analyses not run where blocked",
+      "evidence": "publication_manifest.json; resource_receipts.json",
+      "scientific_finding": "No patient-linked arrays or checkpoint bytes staged",
+      "limitation": "Unmetered fixture operation counts explicitly null",
+      "resource_use": "metadata/header or generated validation only; target inference 0; see resource_receipts.json",
+      "blockers": []
+    },
+    {
+      "id": "WP40",
+      "status": "DELIVERED",
+      "actual_implementation": "Pushed M1 branch and opened draft PR against exact M0 branch",
+      "tests": "verification.json and generated M1 suite; outcome analyses not run where blocked",
+      "evidence": "https://github.com/SyedNaveedMahmood/Proto-sleep/pull/20",
+      "scientific_finding": "Scientific result remains blocked; stop after M1",
+      "limitation": "Exact final-head CI evidence is recorded by GitHub check runs after publication, avoiding a self-referential commit hash",
+      "resource_use": "metadata/header or generated validation only; target inference 0; see resource_receipts.json",
+      "blockers": []
+    }
+  ]
+}

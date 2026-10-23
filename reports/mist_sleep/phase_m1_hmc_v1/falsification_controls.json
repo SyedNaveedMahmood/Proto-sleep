@@ -1,0 +1,14 @@
+{
+  "kind": "GENERATED_ONLY",
+  "perfect_fixed_five_f1": 1.0,
+  "stage_order_permutation_f1": 0.0,
+  "shuffled_label_f1": 0.22000000000000003,
+  "constant_paired_effect": 0.030000000000000027,
+  "constant_paired_CI": [
+    0.030000000000000027,
+    0.030000000000000027
+  ],
+  "missing_integrity_decision": "PRIMARY_EVALUATION_BLOCKED",
+  "clinical_inference": false,
+  "pass": true
+}

@@ -1,0 +1,32 @@
+{
+  "status": "HEADER_ONLY_AUDIT",
+  "expected_recordings": 151,
+  "headers_verified_over_HTTPS": 151,
+  "header_failures": 0,
+  "stored_header_bytes": 347904,
+  "source": "https://physionet-open.s3.amazonaws.com/hmc-sleep-staging/1.1/",
+  "private_receipt_sha256": "1721606a1b829cc07781ba71114cda9002b03b2861c5fdf0224a66e6f1fad143",
+  "waveform_payload_bytes": 0,
+  "scoring_annotation_bytes": 0,
+  "whole_EDF_checksum_verified": false,
+  "channels": {
+    "C4/M1": {
+      "present": 151,
+      "sample_rates": {
+        "256.0": 151
+      },
+      "units": {
+        "uV": 151
+      }
+    },
+    "F4/M1": {
+      "present": 151,
+      "sample_rates": {
+        "256.0": 151
+      },
+      "units": {
+        "uV": 151
+      }
+    }
+  }
+}

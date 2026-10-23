@@ -1,0 +1,108 @@
+{
+  "scientific_training_trajectories": 0,
+  "scientific_optimizer_updates": 0,
+  "target_adaptation_updates": 0,
+  "target_inference_epochs": 0,
+  "target_waveform_payload_bytes": 0,
+  "source_waveform_reads": 0,
+  "metadata_bytes": 61396,
+  "header_bytes": 347904,
+  "source_download_bytes": 409300,
+  "private_phase_disk_bytes_at_snapshot": 943772,
+  "disk_preflight": {
+    "free_bytes": 7063867392,
+    "required_bytes": 15700000000,
+    "reserve_bytes": 2000000000,
+    "pass": false
+  },
+  "generated_validation": {
+    "kind": "GENERATED_ONLY",
+    "models": [
+      {
+        "model": "M0_123",
+        "source_sha256": "bc2cb6d293868d8029dde631adb2c0d4962e4166c6c060e59e61a328b21fdadf",
+        "generated_full_input_exact_match": true,
+        "state_unchanged": true,
+        "epochs_per_second": 2624.876448947512
+      },
+      {
+        "model": "M0_456",
+        "source_sha256": "15dafb7c1d742fd81b014e04fc3b74f29b9819150059539d0bd879403df515f7",
+        "generated_full_input_exact_match": true,
+        "state_unchanged": true,
+        "epochs_per_second": 2627.7302701713593
+      },
+      {
+        "model": "M2_123",
+        "source_sha256": "c07d03a421cde428ec81a923baad459dded6c098bab064c41ee6cad8b95ae2f2",
+        "generated_full_input_exact_match": true,
+        "state_unchanged": true,
+        "epochs_per_second": 2652.8334581362265
+      },
+      {
+        "model": "M2_456",
+        "source_sha256": "883a743b71f8cc22d688fa5c91fc1da75f0810ae7bfb99f88a1e0b312d78f9fe",
+        "generated_full_input_exact_match": true,
+        "state_unchanged": true,
+        "epochs_per_second": 2600.4788448541117
+      }
+    ],
+    "input_shape": [
+      16,
+      1,
+      3000
+    ],
+    "epoch_inferences": 448,
+    "optimizer_updates": 0,
+    "target_waveform_reads": 0,
+    "source_waveform_reads": 0,
+    "CPU_seconds": 0.44629052999999996,
+    "wall_seconds": 0.24309153101057746,
+    "peak_RSS_KiB": 376236,
+    "runtime": {
+      "python": "3.12.9",
+      "torch": "2.10.0+cpu",
+      "numpy": "1.26.4",
+      "threads": 2
+    },
+    "signal_conversion_seconds_60s_generated": 0.00021644801017828286,
+    "signal_shape": [
+      2,
+      1,
+      3000
+    ],
+    "signal_onsets": [
+      0,
+      30
+    ],
+    "estimated_cohort_epochs_per_channel": 137712.0,
+    "estimated_8_model_channel_pass_seconds_excluding_IO": 419.4781544012949,
+    "estimate_limitations": "uses published mean TIB, generated CPU forward timing; excludes downloads, real EDF I/O, resampling, representation-view analyses and actual eligibility",
+    "historical_development_metrics_recomputed": false,
+    "wrapped_inference_epochs": 384,
+    "reference_inference_epochs": 64
+  },
+  "CPU_regression": {
+    "passed": 1246,
+    "skipped": 13,
+    "wall_seconds": 20.4,
+    "runtime": "PyTorch 2.10 CPU; generated fixtures only",
+    "log_sha256": "8d9d98e7714601677cbd5fa1b7cd07ebfefeb7ff0f21201c4c6e8f1a660d39eb"
+  },
+  "full_CPU_regression_observed_wall_seconds_by_run": [
+    20.29,
+    20.28,
+    20.4
+  ],
+  "cumulative_regression_process_CPU_seconds": null,
+  "generated_GPU_inference_test": {
+    "passed": 1,
+    "wall_seconds_upper_bound": 1.17,
+    "device_active_seconds": null,
+    "optimizer_updates": 0,
+    "limitation": "test wall time includes setup and CPU comparison; no device timer used"
+  },
+  "test_inference_calls_outside_benchmark": null,
+  "accounting_limit": "448 generated benchmark epoch forwards: 384 guarded plus 64 reference; total generated regression forward/optimizer operations belong to inherited fixture tests and were not metered per operation",
+  "initial_inspection_limit": "checkpoint metadata initially inspected under Torch 2.5.1 with weights_only=False after byte hashing; formal audit and all source-model validation reloaded with inherited restricted loader under Torch 2.10 CPU; no target inference used exploratory loads"
+}

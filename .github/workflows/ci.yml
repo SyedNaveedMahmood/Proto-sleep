@@ -2,7 +2,7 @@ name: ci
 
 on:
   push:
-    branches: [main, research/mist-cove-phase11b-real-eeg-audit-v1, research/mist-cove-phase13-explanation-adequacy-v1, research/mist-cove-phase14-multichannel-st-transfer-v1, research/mist-cove-phase16-expert-event-benchmark-v1]
+    branches: [main, research/mist-cove-phase11b-real-eeg-audit-v1, research/mist-cove-phase13-explanation-adequacy-v1, research/mist-cove-phase14-multichannel-st-transfer-v1, research/mist-cove-phase16-expert-event-benchmark-v1, research/mist-sleep-phase-m1-independent-hmc-transfer-v1]
   pull_request:
 
 permissions:
@@ -66,4 +66,4 @@ jobs:
           python -m pip install "numpy==1.26.4" -e ".[dev]"
           python -m pip check
       - name: Generated-only security and research regression
-        run: python -m pytest tests/mist_cove/test_phase11b*.py tests/test_phase11b_triad.py tests/mist_cove/test_phase13*.py tests/mist_cove/test_phase14.py -ra
+        run: python -m pytest tests/mist_cove/test_phase11b*.py tests/test_phase11b_triad.py tests/mist_cove/test_phase13*.py tests/mist_cove/test_phase14.py tests/mist_sleep/test_external_m1.py -ra

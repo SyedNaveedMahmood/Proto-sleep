@@ -1,0 +1,43 @@
+{
+  "primary": "C4/M1",
+  "secondary": "F4/M1",
+  "source": "Fpz-Cz",
+  "aliases": {
+    "C4/M1": [
+      "C4/M1",
+      "EEG C4/M1",
+      "C4-M1",
+      "EEG C4-M1"
+    ],
+    "F4/M1": [
+      "F4/M1",
+      "EEG F4/M1",
+      "F4-M1",
+      "EEG F4-M1"
+    ]
+  },
+  "actual_header_coverage": {
+    "C4/M1": {
+      "present": 151,
+      "sample_rates": {
+        "256.0": 151
+      },
+      "units": {
+        "uV": 151
+      }
+    },
+    "F4/M1": {
+      "present": 151,
+      "sample_rates": {
+        "256.0": 151
+      },
+      "units": {
+        "uV": 151
+      }
+    }
+  },
+  "montage_correction": false,
+  "initial_freeze_commit": "933bcba",
+  "pre_waveform_alias_refinement_commit": "d7947ef",
+  "refinement_reason": "EDF standard electrode-separator spelling verified in headers; no waveform or score exposure"
+}

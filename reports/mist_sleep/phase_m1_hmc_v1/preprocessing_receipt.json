@@ -1,0 +1,28 @@
+{
+  "status": "GENERATED_VALIDATION_PASSED_REAL_WAVEFORMS_NOT_OPENED",
+  "protocol_sha256": "5870af38c542352aa52d11aeb658c1dd0396a76da026247e9560455c8ea146e6",
+  "contract": {
+    "source_Hz": 256,
+    "target_Hz": 100,
+    "epoch_seconds": 30,
+    "epoch_samples": 3000,
+    "up": 25,
+    "down": 64,
+    "filter": "firwin(1281, 1/64, window=('kaiser',5.0)); float64",
+    "padding": "constant zero only at physical recording ends",
+    "alignment": "continuous full-record polyphase; t=0 at first source sample; floor(duration/30) complete epochs",
+    "units": {
+      "uV": 1.0,
+      "mV": 1000.0,
+      "V": 1000000.0
+    },
+    "polarity": "unchanged; no reference reconstruction",
+    "additional_filter": null
+  },
+  "source_normalization_authenticated": true,
+  "target_normalizer_fits": 0,
+  "generated_full_input_source_behavior_exact": true,
+  "historical_development_rescored": false,
+  "whole_HMC_EDF_checksums_verified": false,
+  "HMC_waveform_conversion_executed": false
+}

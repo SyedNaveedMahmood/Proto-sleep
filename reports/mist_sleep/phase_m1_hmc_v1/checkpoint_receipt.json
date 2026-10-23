@@ -1,0 +1,47 @@
+{
+  "status": "AUTHENTICATED_ALL_FOUR",
+  "models": [
+    {
+      "arm": "M0",
+      "seed": 123,
+      "step": 1200,
+      "sha256": "bc2cb6d293868d8029dde631adb2c0d4962e4166c6c060e59e61a328b21fdadf",
+      "parameters": 41429,
+      "prototypes": 64,
+      "restricted_loader": true,
+      "optimizer_state_restored": false
+    },
+    {
+      "arm": "M0",
+      "seed": 456,
+      "step": 1200,
+      "sha256": "15dafb7c1d742fd81b014e04fc3b74f29b9819150059539d0bd879403df515f7",
+      "parameters": 41429,
+      "prototypes": 64,
+      "restricted_loader": true,
+      "optimizer_state_restored": false
+    },
+    {
+      "arm": "M2",
+      "seed": 123,
+      "step": 1200,
+      "sha256": "c07d03a421cde428ec81a923baad459dded6c098bab064c41ee6cad8b95ae2f2",
+      "parameters": 41429,
+      "prototypes": 64,
+      "restricted_loader": true,
+      "optimizer_state_restored": false
+    },
+    {
+      "arm": "M2",
+      "seed": 456,
+      "step": 1200,
+      "sha256": "883a743b71f8cc22d688fa5c91fc1da75f0810ae7bfb99f88a1e0b312d78f9fe",
+      "parameters": 41429,
+      "prototypes": 64,
+      "restricted_loader": true,
+      "optimizer_state_restored": false
+    }
+  ],
+  "normalization_authenticated": true,
+  "state_loading_runtime": "2.10.0+cpu"
+}

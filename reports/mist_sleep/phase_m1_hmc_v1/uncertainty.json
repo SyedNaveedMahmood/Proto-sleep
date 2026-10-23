@@ -1,0 +1,8 @@
+{
+  "status": "NOT_RUN_BLOCKED",
+  "reason": "INSUFFICIENT_PERSISTENT_DISK",
+  "eligible_recordings": null,
+  "evaluated_recordings": 0,
+  "result": null,
+  "clinical_finding": "NOT_MEASURED"
+}
