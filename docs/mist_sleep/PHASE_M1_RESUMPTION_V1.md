@@ -37,3 +37,14 @@ disk reserve and complete-file SHA256 verification. This is a transport change
 only. It does not decode waveform values or annotations or modify any scientific
 implementation. Three small opaque transport probes total 3,145,728 additional
 bytes and remain private; these are included in resource accounting.
+
+Long unbounded curl responses also intermittently slowed. A 16 MB bounded-range
+probe completed in 3.89 seconds. A second intentional transport interruption
+retained 21 verified files and the 8,388,608-byte active partial. The adapter now
+fetches exact 16 MB HTTP ranges with up to four bounded prefetch requests, checks
+their Content-Range geometry and exact length, and supplies them in original byte
+order to the unchanged streaming acquisition guards. It holds prefetched bytes
+in memory, creates no disposable raw-data files, follows no redirects, and uses
+a 120-second per-range wall limit in addition to the original 30-second transport
+timeout setting. Any transport error stops the resumption; it is not retried.
+The additional 16,777,216-byte opaque probe is retained and accounted for.

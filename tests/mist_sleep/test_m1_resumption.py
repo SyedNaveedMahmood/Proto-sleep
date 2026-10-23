@@ -87,7 +87,7 @@ def test_transport_preserves_range_headers_and_opaque_bytes(monkeypatch):
     class GeneratedProcess:
         def __init__(self, command, **kwargs):
             commands.append(command)
-            self.stdout = io.BytesIO(b"HTTP/1.1 206 Partial Content\r\nContent-Range: bytes 10-14/20\r\n\r\nabcde")
+            self.stdout = io.BytesIO(b"HTTP/1.1 206 Partial Content\r\nContent-Range: bytes 10-14/15\r\n\r\nabcde")
             self.returncode = 0
         def wait(self): return self.returncode
         def communicate(self): return b"", b""
@@ -96,16 +96,16 @@ def test_transport_preserves_range_headers_and_opaque_bytes(monkeypatch):
     request = Request("https://physionet-open.s3.amazonaws.com/hmc-sleep-staging/1.1/recordings/SN001.edf",
                       headers={"Range": "bytes=10-"})
     with module.CurlResponse(request, 30) as response:
-        assert response.status == 206 and response.headers.get("Content-Range") == "bytes 10-14/20"
+        assert response.status == 206 and response.headers.get("Content-Range") == "bytes 10-14/15"
         assert response.read(3) == b"abc" and response.read(3) == b"de" and response.read(3) == b""
-    assert commands[0][1] == "--disable" and "10-" in commands[0] and "--location" not in commands[0]
+    assert commands[0][1] == "--disable" and any(v.startswith("10-") for v in commands[0]) and "--location" not in commands[0]
 
 
 def test_transport_nonzero_exit_cannot_look_like_success(monkeypatch):
     module = load_generated_transport()
     class GeneratedProcess:
         def __init__(self, *args, **kwargs):
-            self.stdout = io.BytesIO(b"HTTP/1.1 200 OK\r\n\r\n")
+            self.stdout = io.BytesIO(b"HTTP/1.1 206 Partial Content\r\nContent-Range: bytes 0-0/1\r\n\r\na")
             self.returncode = 28
         def wait(self): return self.returncode
         def communicate(self): return b"", b"generated network timeout"
@@ -115,3 +115,33 @@ def test_transport_nonzero_exit_cannot_look_like_success(monkeypatch):
     with pytest.raises(OSError):
         with module.CurlResponse(request, 30) as response:
             response.read(100)
+
+
+def test_bounded_prefetch_preserves_exact_byte_order(monkeypatch):
+    module = load_generated_transport()
+    monkeypatch.setattr(module, "CHUNK_BYTES", 4)
+    class GeneratedProcess:
+        def __init__(self, command, **kwargs):
+            requested = command[command.index("--range")+1]
+            start, end = map(int, requested.split("-")); end = min(end, 9)
+            body = b"abcdefghij"[start:end+1]
+            self.stdout = io.BytesIO(f"HTTP/1.1 206 Partial Content\r\nContent-Range: bytes {start}-{end}/10\r\n\r\n".encode()+body)
+            self.returncode = 0
+        def wait(self): return self.returncode
+        def communicate(self): return b"", b""
+        def kill(self): self.returncode = -9
+    monkeypatch.setattr(module.subprocess, "Popen", GeneratedProcess)
+    request = Request("https://physionet-open.s3.amazonaws.com/hmc-sleep-staging/1.1/recordings/SN001.edf")
+    with module.CurlResponse(request, 30) as response:
+        chunks = []
+        while chunk := response.read(3): chunks.append(chunk)
+    assert b"".join(chunks) == b"abcdefghij"
+
+
+def test_prefetch_reserves_byte_budget_before_network(monkeypatch):
+    module = load_generated_transport()
+    monkeypatch.setattr(module, "_budget_available", module.CHUNK_BYTES-1)
+    monkeypatch.setattr(module.subprocess, "Popen", lambda *a, **k: pytest.fail("source byte ceiling must precede network"))
+    request = Request("https://physionet-open.s3.amazonaws.com/hmc-sleep-staging/1.1/recordings/SN001.edf")
+    with pytest.raises(OSError, match="byte ceiling"):
+        module.CurlResponse(request, 30)
