@@ -26,3 +26,14 @@ after unblinding retains its exposure marker and all original artifacts.
 Actual execution evidence is recorded under
 `reports/mist_sleep/phase_m1_hmc_resumption_v1/`. Storage passing does not itself
 establish whole-source integrity, annotation compatibility or model performance.
+
+The first three triplets passed SHA256. A later long urllib stream slowed to
+minutes per MB, while fresh official-mirror curl ranges took about 2.35 seconds
+per MB. The stream was intentionally interrupted before any integrity failure;
+the 19,922,944-byte partial file and nine verified files were retained. Acquisition
+continues through an explicit curl transport adapter using the original acquire
+function's pinned source manifest, resume-range checks, streaming byte ceiling,
+disk reserve and complete-file SHA256 verification. This is a transport change
+only. It does not decode waveform values or annotations or modify any scientific
+implementation. Three small opaque transport probes total 3,145,728 additional
+bytes and remain private; these are included in resource accounting.

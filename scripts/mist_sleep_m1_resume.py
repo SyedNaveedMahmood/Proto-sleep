@@ -23,6 +23,7 @@ from mist_sleep.external.runner import blind, score, require_frozen_protocol, re
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("stage", choices=("acquire", "blind", "score"))
+    parser.add_argument("--resume-interrupted-curl-transport", action="store_true")
     args = parser.parse_args()
     repo = Path(__file__).resolve().parents[1]
     public = repo / "reports/mist_sleep/phase_m1_hmc_resumption_v1"
@@ -41,9 +42,19 @@ def main():
         raise RuntimeError("resumption protocol identity changed")
     if (public / "STOPPED_ON_FAILURE.json").exists():
         raise RuntimeError("resumption already stopped; automatic retry forbidden")
+    if args.resume_interrupted_curl_transport:
+        if args.stage != "acquire":
+            raise RuntimeError("transport option only permits source acquisition")
+        interruption = json.loads((private / "transport_interruption.private.json").read_text())
+        if not interruption["no_integrity_or_storage_failure"]:
+            raise RuntimeError("cannot resume a failed integrity or storage gate")
+        from mist_sleep_m1_curl_transport import install
+        install()
     started = {"stage": args.stage, "timestamp_UTC": datetime.now(timezone.utc).isoformat(),
                "protocol_sha256": digest(protocol), "automatic_deletion": False}
-    write_once(private / f"{args.stage}_started.json", started)
+    stage_identity = "acquire_curl_transport" if args.resume_interrupted_curl_transport else args.stage
+    started["transport"] = "curl via original acquisition guards" if args.resume_interrupted_curl_transport else "original"
+    write_once(private / f"{stage_identity}_started.json", started)
     wall, cpu = time.monotonic(), time.process_time()
     try:
         if args.stage == "acquire":
