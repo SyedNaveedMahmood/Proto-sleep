@@ -1,0 +1,9 @@
+{
+  "generated_only": true,
+  "event_like_components_not_clinically_annotated": true,
+  "spindle_like_projection_ratio": 1.023002028465271,
+  "slow_like_projection_ratio": 1.0318630933761597,
+  "sample_grid_shift": 0,
+  "filter_ringing": "NOT_APPLICABLE_NO_FILTER",
+  "boundary_distortion": "NO_RESAMPLING_OR_SHIFT; additive perturbations remain at boundaries"
+}

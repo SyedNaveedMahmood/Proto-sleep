@@ -1,0 +1,17 @@
+{
+  "engineering_updates_total": 65,
+  "real_fit_only_updates": 20,
+  "first_stage_loss": 1.6284555196762085,
+  "last_stage_loss": 0.45329663157463074,
+  "finite": true,
+  "overfit_loss_decreased": true,
+  "GPU_idle_before_probe": true,
+  "steady_probe_seconds_per_step": {
+    "A0": 0.0214563,
+    "M3": 0.01035
+  },
+  "estimated_12000_updates_seconds_upper_from_probe": 257.4756,
+  "GPU_peak_allocated_bytes_observed": 91641856,
+  "real_fit_probe_seconds": 0.4060126800031867,
+  "development_waveforms_used": false
+}

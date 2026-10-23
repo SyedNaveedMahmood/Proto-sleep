@@ -1,0 +1,16 @@
+{
+  "status": "COMPLETE_TEXT_SOURCE_PDF_BINARY_PENDING",
+  "source_branch": "research/mist-sleep-original-proposal-source-v1",
+  "source_registry_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117",
+  "source_text_commit": "85caad5e1e6a6c8ef744562e3a979478e7a0d57b",
+  "tracked_text": "docs/mist_sleep/original_proposal/MIST_SLEEP_ORIGINAL_PROPOSAL_TEXT.md",
+  "tracked_registry": "docs/mist_sleep/original_proposal/README.md",
+  "page_count_in_text_mirror": 13,
+  "original_pdf_expected_sha256": "4ab676da46b3ef8a49d275d336df5c251cf09cd5aaf98dc8e735cc6a2b1fcadf",
+  "original_pdf_expected_bytes": 201572,
+  "original_pdf_available_locally": false,
+  "original_pdf_verified_or_committed": false,
+  "implementation_frozen_before_source_integration": true,
+  "reconciliation": "Method intent agrees on tokenizer, multiscale encoder, 64 shared prototypes, source-fit-only k-means, MPI and SupCon controls. Overnight scope defers external, capacity, EMA, K sensitivity, single-term and clinical morphology ablations; token-alignment restriction excludes shifts and bandpass jitter from training.",
+  "tracked_text_git_blob_sha": "753d326bfc8a5e1381d1c7a8be756cf4dad3a885"
+}

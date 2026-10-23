@@ -1,0 +1,970 @@
+{
+  "program": "MIST-Sleep Method Recovery Phase M0",
+  "starting_commit": "5f68b051bbcd6ab0b9ba8b432b339d7c3ebf7c5d",
+  "prompt_sha256": "1a91df7fdf1fa41e8f2fc6b5b7da423d22e353379807898a70bba3189b4dc35f",
+  "scientific_budget": {
+    "trajectories_max": 15,
+    "updates_per_trajectory_max": 1200,
+    "total_updates_max": 18000,
+    "GPU_seconds_max": 21600,
+    "CPU_seconds_max": 43200,
+    "engineering_updates_max": 200
+  },
+  "work_packages": [
+    {
+      "id": "WP01",
+      "title": "Establish the exact starting state",
+      "dependencies": [],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_protocol_sha256": "ff032a8f1cfa76bf4adb8ae23d3436d1e3a0271e4355481695467c69b5bcb6b3",
+        "method_source_commit": "3cf3bef",
+        "proposal_source_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117"
+      },
+      "tests": [
+        "source receipt or aggregate result reviewed"
+      ],
+      "artifacts": [
+        "git branch history",
+        "reports/mist_sleep/method_recovery_v1/progress.json"
+      ],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP02",
+      "title": "Recover the original proposal",
+      "dependencies": [
+        "WP01"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_protocol_sha256": "ff032a8f1cfa76bf4adb8ae23d3436d1e3a0271e4355481695467c69b5bcb6b3",
+        "method_source_commit": "3cf3bef",
+        "proposal_source_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117"
+      },
+      "tests": [
+        "source receipt or aggregate result reviewed"
+      ],
+      "artifacts": [
+        "docs/mist_sleep/original_proposal/MIST_SLEEP_ORIGINAL_PROPOSAL_TEXT.md",
+        "reports/mist_sleep/method_recovery_v1/proposal_recovery.json"
+      ],
+      "scientific_findings": [
+        "Original 13-page text mirror integrated; original PDF binary unavailable."
+      ],
+      "limitations": [
+        "Original PDF byte-identical artifact unavailable; tracked page-by-page text is complete."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP03",
+      "title": "Audit reusable repository components",
+      "dependencies": [
+        "WP02"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_protocol_sha256": "ff032a8f1cfa76bf4adb8ae23d3436d1e3a0271e4355481695467c69b5bcb6b3",
+        "method_source_commit": "3cf3bef",
+        "proposal_source_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117"
+      },
+      "tests": [
+        "source receipt or aggregate result reviewed"
+      ],
+      "artifacts": [
+        "docs/mist_sleep/METHOD_RECOVERY_FOUNDATION_V1.md"
+      ],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP04",
+      "title": "Reconcile historical evidence",
+      "dependencies": [
+        "WP03"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_protocol_sha256": "ff032a8f1cfa76bf4adb8ae23d3436d1e3a0271e4355481695467c69b5bcb6b3",
+        "method_source_commit": "3cf3bef",
+        "proposal_source_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117"
+      },
+      "tests": [
+        "source receipt or aggregate result reviewed"
+      ],
+      "artifacts": [
+        "docs/mist_sleep/METHOD_RECOVERY_FOUNDATION_V1.md"
+      ],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP05",
+      "title": "Produce a methodological threat analysis",
+      "dependencies": [
+        "WP04"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_protocol_sha256": "ff032a8f1cfa76bf4adb8ae23d3436d1e3a0271e4355481695467c69b5bcb6b3",
+        "method_source_commit": "3cf3bef",
+        "proposal_source_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117"
+      },
+      "tests": [
+        "source receipt or aggregate result reviewed"
+      ],
+      "artifacts": [
+        "docs/mist_sleep/METHOD_RECOVERY_FOUNDATION_V1.md"
+      ],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP06",
+      "title": "Freeze the overnight protocol",
+      "dependencies": [
+        "WP05"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_protocol_sha256": "ff032a8f1cfa76bf4adb8ae23d3436d1e3a0271e4355481695467c69b5bcb6b3",
+        "method_source_commit": "3cf3bef",
+        "proposal_source_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117"
+      },
+      "tests": [
+        "source receipt or aggregate result reviewed"
+      ],
+      "artifacts": [
+        "reports/mist_sleep/method_recovery_v1/frozen_protocol.json"
+      ],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP07",
+      "title": "Audit AttnSleep implementation fidelity",
+      "dependencies": [
+        "WP06"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_protocol_sha256": "ff032a8f1cfa76bf4adb8ae23d3436d1e3a0271e4355481695467c69b5bcb6b3",
+        "method_source_commit": "3cf3bef",
+        "proposal_source_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117"
+      },
+      "tests": [
+        "source receipt or aggregate result reviewed"
+      ],
+      "artifacts": [
+        "docs/mist_sleep/ATTNSLEEP_REPRODUCTION_AUDIT_V1.md"
+      ],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP08",
+      "title": "Investigate earlier class-collapse behavior",
+      "dependencies": [
+        "WP07"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_protocol_sha256": "ff032a8f1cfa76bf4adb8ae23d3436d1e3a0271e4355481695467c69b5bcb6b3",
+        "method_source_commit": "3cf3bef",
+        "proposal_source_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117"
+      },
+      "tests": [
+        "source receipt or aggregate result reviewed"
+      ],
+      "artifacts": [
+        "docs/mist_sleep/ATTNSLEEP_REPRODUCTION_AUDIT_V1.md"
+      ],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP09",
+      "title": "Validate actual EEG preprocessing",
+      "dependencies": [
+        "WP08"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_protocol_sha256": "ff032a8f1cfa76bf4adb8ae23d3436d1e3a0271e4355481695467c69b5bcb6b3",
+        "method_source_commit": "3cf3bef",
+        "proposal_source_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117"
+      },
+      "tests": [
+        "source receipt or aggregate result reviewed"
+      ],
+      "artifacts": [
+        "reports/mist_sleep/method_recovery_v1/source_scope.json"
+      ],
+      "scientific_findings": [
+        "Authenticated 29 TRAIN recordings, 10 fit/five development; zero VAL/RESERVED/external reads."
+      ],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP10",
+      "title": "Run baseline numerical sanity checks",
+      "dependencies": [
+        "WP09"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_protocol_sha256": "ff032a8f1cfa76bf4adb8ae23d3436d1e3a0271e4355481695467c69b5bcb6b3",
+        "method_source_commit": "3cf3bef",
+        "proposal_source_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117"
+      },
+      "tests": [
+        "full CPU suite: 1194 passed, 12 skipped",
+        "generated CUDA exact resume: PASS only under deterministic runtime"
+      ],
+      "artifacts": [
+        "reports/mist_sleep/method_recovery_v1/pilot_resources.json",
+        "reports/mist_sleep/method_recovery_v1/correctness.json"
+      ],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP11",
+      "title": "Build one shared training/evaluation contract",
+      "dependencies": [
+        "WP10"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_protocol_sha256": "ff032a8f1cfa76bf4adb8ae23d3436d1e3a0271e4355481695467c69b5bcb6b3",
+        "method_source_commit": "3cf3bef",
+        "proposal_source_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117"
+      },
+      "tests": [
+        "source receipt or aggregate result reviewed"
+      ],
+      "artifacts": [
+        "src/mist_sleep/experiment.py"
+      ],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP12",
+      "title": "Decide AttnSleep baseline readiness",
+      "dependencies": [
+        "WP11"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_protocol_sha256": "ff032a8f1cfa76bf4adb8ae23d3436d1e3a0271e4355481695467c69b5bcb6b3",
+        "method_source_commit": "3cf3bef",
+        "proposal_source_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117"
+      },
+      "tests": [
+        "source receipt or aggregate result reviewed"
+      ],
+      "artifacts": [
+        "docs/mist_sleep/ATTNSLEEP_REPRODUCTION_AUDIT_V1.md"
+      ],
+      "scientific_findings": [
+        "ADAPTED_REFERENCE_ONLY; faithful published AttnSleep training not established."
+      ],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP13",
+      "title": "Implement the morphology tokenizer",
+      "dependencies": [
+        "WP12"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_protocol_sha256": "ff032a8f1cfa76bf4adb8ae23d3436d1e3a0271e4355481695467c69b5bcb6b3",
+        "method_source_commit": "3cf3bef",
+        "proposal_source_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117"
+      },
+      "tests": [
+        "source receipt or aggregate result reviewed"
+      ],
+      "artifacts": [
+        "src/mist_sleep/core.py"
+      ],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP14",
+      "title": "Implement the multi-scale encoder",
+      "dependencies": [
+        "WP13"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_protocol_sha256": "ff032a8f1cfa76bf4adb8ae23d3436d1e3a0271e4355481695467c69b5bcb6b3",
+        "method_source_commit": "3cf3bef",
+        "proposal_source_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117"
+      },
+      "tests": [
+        "source receipt or aggregate result reviewed"
+      ],
+      "artifacts": [
+        "src/mist_sleep/core.py"
+      ],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP15",
+      "title": "Build the shared prototype bank",
+      "dependencies": [
+        "WP14"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_protocol_sha256": "ff032a8f1cfa76bf4adb8ae23d3436d1e3a0271e4355481695467c69b5bcb6b3",
+        "method_source_commit": "3cf3bef",
+        "proposal_source_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117"
+      },
+      "tests": [
+        "source receipt or aggregate result reviewed"
+      ],
+      "artifacts": [
+        "reports/mist_sleep/method_recovery_v1/M2_123.json",
+        "reports/mist_sleep/method_recovery_v1/M2_456.json"
+      ],
+      "scientific_findings": [
+        "Source-fit-only 4096-token k-means input digests identical across M0-M3 within each seed."
+      ],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP16",
+      "title": "Implement prototype regularization and diagnostics",
+      "dependencies": [
+        "WP15"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_protocol_sha256": "ff032a8f1cfa76bf4adb8ae23d3436d1e3a0271e4355481695467c69b5bcb6b3",
+        "method_source_commit": "3cf3bef",
+        "proposal_source_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117"
+      },
+      "tests": [
+        "source receipt or aggregate result reviewed"
+      ],
+      "artifacts": [
+        "reports/mist_sleep/method_recovery_v1/robustness_analysis.json"
+      ],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP17",
+      "title": "Implement a within-epoch temporal module",
+      "dependencies": [
+        "WP16"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_protocol_sha256": "ff032a8f1cfa76bf4adb8ae23d3436d1e3a0271e4355481695467c69b5bcb6b3",
+        "method_source_commit": "3cf3bef",
+        "proposal_source_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117"
+      },
+      "tests": [
+        "source receipt or aggregate result reviewed"
+      ],
+      "artifacts": [
+        "src/mist_sleep/core.py"
+      ],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP18",
+      "title": "Implement morphology-preserving transformations",
+      "dependencies": [
+        "WP17"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_protocol_sha256": "ff032a8f1cfa76bf4adb8ae23d3436d1e3a0271e4355481695467c69b5bcb6b3",
+        "method_source_commit": "3cf3bef",
+        "proposal_source_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117"
+      },
+      "tests": [
+        "source receipt or aggregate result reviewed"
+      ],
+      "artifacts": [
+        "src/mist_sleep/augmentation.py"
+      ],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP19",
+      "title": "Audit transformation semantics",
+      "dependencies": [
+        "WP18"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_protocol_sha256": "ff032a8f1cfa76bf4adb8ae23d3436d1e3a0271e4355481695467c69b5bcb6b3",
+        "method_source_commit": "3cf3bef",
+        "proposal_source_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117"
+      },
+      "tests": [
+        "100 fit-only real waveform transformations",
+        "generated 13 Hz and 0.75 Hz component retention",
+        "authenticated historical P3B response on 100 fit examples"
+      ],
+      "artifacts": [
+        "reports/mist_sleep/method_recovery_v1/augmentation_audit.json",
+        "reports/mist_sleep/method_recovery_v1/generated_event_transform_audit.json",
+        "reports/mist_sleep/method_recovery_v1/historical_classifier_transformation_response.json"
+      ],
+      "scientific_findings": [
+        "Numerical bounds passed; historical classifier agreement 98%; generated component projection ratios 1.023 and 1.032."
+      ],
+      "limitations": [
+        "Clinical label preservation remains unverified; no shift or filter in frozen training family, so alignment and ringing are not applicable."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP20",
+      "title": "Implement and verify MPI",
+      "dependencies": [
+        "WP19"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_protocol_sha256": "ff032a8f1cfa76bf4adb8ae23d3436d1e3a0271e4355481695467c69b5bcb6b3",
+        "method_source_commit": "3cf3bef",
+        "proposal_source_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117"
+      },
+      "tests": [
+        "full CPU suite: 1194 passed, 12 skipped",
+        "generated CUDA exact resume: PASS only under deterministic runtime"
+      ],
+      "artifacts": [
+        "src/mist_sleep/core.py",
+        "reports/mist_sleep/method_recovery_v1/mpi_mechanism_gradients.json"
+      ],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP21",
+      "title": "Implement SupCon",
+      "dependencies": [
+        "WP20"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_protocol_sha256": "ff032a8f1cfa76bf4adb8ae23d3436d1e3a0271e4355481695467c69b5bcb6b3",
+        "method_source_commit": "3cf3bef",
+        "proposal_source_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117"
+      },
+      "tests": [
+        "source receipt or aggregate result reviewed"
+      ],
+      "artifacts": [
+        "src/mist_sleep/core.py",
+        "reports/mist_sleep/method_recovery_v1/M1_123.json"
+      ],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP22",
+      "title": "Build all five scientific arms",
+      "dependencies": [
+        "WP21"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_protocol_sha256": "ff032a8f1cfa76bf4adb8ae23d3436d1e3a0271e4355481695467c69b5bcb6b3",
+        "method_source_commit": "3cf3bef",
+        "proposal_source_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117"
+      },
+      "tests": [
+        "full CPU suite: 1194 passed, 12 skipped",
+        "generated CUDA exact resume: PASS only under deterministic runtime"
+      ],
+      "artifacts": [
+        "reports/mist_sleep/method_recovery_v1/frozen_protocol.json"
+      ],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP23",
+      "title": "Freeze the exact internal-development cohort",
+      "dependencies": [
+        "WP22"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_protocol_sha256": "ff032a8f1cfa76bf4adb8ae23d3436d1e3a0271e4355481695467c69b5bcb6b3",
+        "method_source_commit": "3cf3bef",
+        "proposal_source_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117"
+      },
+      "tests": [
+        "source receipt or aggregate result reviewed"
+      ],
+      "artifacts": [
+        "reports/mist_sleep/method_recovery_v1/source_scope.json"
+      ],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP24",
+      "title": "Benchmark model throughput",
+      "dependencies": [
+        "WP23"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_protocol_sha256": "ff032a8f1cfa76bf4adb8ae23d3436d1e3a0271e4355481695467c69b5bcb6b3",
+        "method_source_commit": "3cf3bef",
+        "proposal_source_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117"
+      },
+      "tests": [
+        "source receipt or aggregate result reviewed"
+      ],
+      "artifacts": [
+        "reports/mist_sleep/method_recovery_v1/pilot_resources.json"
+      ],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP25",
+      "title": "Freeze initialization and optimization",
+      "dependencies": [
+        "WP24"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_protocol_sha256": "ff032a8f1cfa76bf4adb8ae23d3436d1e3a0271e4355481695467c69b5bcb6b3",
+        "method_source_commit": "3cf3bef",
+        "proposal_source_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117"
+      },
+      "tests": [
+        "source receipt or aggregate result reviewed"
+      ],
+      "artifacts": [
+        "reports/mist_sleep/method_recovery_v1/frozen_protocol.json"
+      ],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP26",
+      "title": "Execute the matched scientific runs",
+      "dependencies": [
+        "WP25"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_protocol_sha256": "ff032a8f1cfa76bf4adb8ae23d3436d1e3a0271e4355481695467c69b5bcb6b3",
+        "method_source_commit": "3cf3bef",
+        "proposal_source_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117"
+      },
+      "tests": [
+        "source receipt or aggregate result reviewed"
+      ],
+      "artifacts": [
+        "reports/mist_sleep/method_recovery_v1/resource_receipts.json"
+      ],
+      "scientific_findings": [
+        "Ten matched trajectories, 12000 scientific updates and 384000 views completed."
+      ],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP27",
+      "title": "Track learning trajectories",
+      "dependencies": [
+        "WP26"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_protocol_sha256": "ff032a8f1cfa76bf4adb8ae23d3436d1e3a0271e4355481695467c69b5bcb6b3",
+        "method_source_commit": "3cf3bef",
+        "proposal_source_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117"
+      },
+      "tests": [
+        "source receipt or aggregate result reviewed"
+      ],
+      "artifacts": [
+        "reports/mist_sleep/method_recovery_v1/robustness_analysis.json"
+      ],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP28",
+      "title": "Evaluate clean SC developmental staging",
+      "dependencies": [
+        "WP27"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_protocol_sha256": "ff032a8f1cfa76bf4adb8ae23d3436d1e3a0271e4355481695467c69b5bcb6b3",
+        "method_source_commit": "3cf3bef",
+        "proposal_source_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117"
+      },
+      "tests": [
+        "source receipt or aggregate result reviewed"
+      ],
+      "artifacts": [
+        "reports/mist_sleep/method_recovery_v1/robustness_analysis.json"
+      ],
+      "scientific_findings": [
+        "M2-M0 clean two-seed mean +0.00370 participant Macro-F1."
+      ],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP29",
+      "title": "Evaluate controlled nuisance robustness",
+      "dependencies": [
+        "WP28"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_protocol_sha256": "ff032a8f1cfa76bf4adb8ae23d3436d1e3a0271e4355481695467c69b5bcb6b3",
+        "method_source_commit": "3cf3bef",
+        "proposal_source_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117"
+      },
+      "tests": [
+        "source receipt or aggregate result reviewed"
+      ],
+      "artifacts": [
+        "reports/mist_sleep/method_recovery_v1/robustness_analysis.json"
+      ],
+      "scientific_findings": [
+        "M2-M0 bounded two-seed mean +0.00585; destructive stress failed all arms."
+      ],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP30",
+      "title": "Test discriminative information preservation",
+      "dependencies": [
+        "WP29"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_protocol_sha256": "ff032a8f1cfa76bf4adb8ae23d3436d1e3a0271e4355481695467c69b5bcb6b3",
+        "method_source_commit": "3cf3bef",
+        "proposal_source_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117"
+      },
+      "tests": [
+        "source receipt or aggregate result reviewed"
+      ],
+      "artifacts": [
+        "reports/mist_sleep/method_recovery_v1/stage_information_probe.json"
+      ],
+      "scientific_findings": [
+        "Fit-only linear probe shows no consistent M2 stage-information gain."
+      ],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP31",
+      "title": "Isolate the contribution of MPI",
+      "dependencies": [
+        "WP30"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_protocol_sha256": "ff032a8f1cfa76bf4adb8ae23d3436d1e3a0271e4355481695467c69b5bcb6b3",
+        "method_source_commit": "3cf3bef",
+        "proposal_source_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117"
+      },
+      "tests": [
+        "source receipt or aggregate result reviewed"
+      ],
+      "artifacts": [
+        "reports/mist_sleep/method_recovery_v1/scientific_gates.json"
+      ],
+      "scientific_findings": [
+        "M2 improves drift and KL, but misses +0.02 bounded-Macro-F1 gate."
+      ],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP32",
+      "title": "Analyze the two MPI mechanisms",
+      "dependencies": [
+        "WP31"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_protocol_sha256": "ff032a8f1cfa76bf4adb8ae23d3436d1e3a0271e4355481695467c69b5bcb6b3",
+        "method_source_commit": "3cf3bef",
+        "proposal_source_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117"
+      },
+      "tests": [
+        "source receipt or aggregate result reviewed"
+      ],
+      "artifacts": [
+        "reports/mist_sleep/method_recovery_v1/mpi_mechanism_gradients.json"
+      ],
+      "scientific_findings": [
+        "Embedding and assignment terms have separate nonzero gradients; single-term trained ablations not run."
+      ],
+      "limitations": [
+        "Embedding-only and assignment-only scientific fits deferred under fixed ten-run budget."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP33",
+      "title": "Run falsification controls",
+      "dependencies": [
+        "WP32"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_protocol_sha256": "ff032a8f1cfa76bf4adb8ae23d3436d1e3a0271e4355481695467c69b5bcb6b3",
+        "method_source_commit": "3cf3bef",
+        "proposal_source_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117"
+      },
+      "tests": [
+        "generated counterexamples: five new falsification tests passed",
+        "full CPU suite: 1194 passed, 12 skipped"
+      ],
+      "artifacts": [
+        "tests/mist_sleep/test_core.py",
+        "tests/mist_sleep/test_cuda.py",
+        "tests/mist_sleep/test_falsification.py"
+      ],
+      "scientific_findings": [
+        "Unaligned shifts and prototype-ID permutations yield nonzero MPI; constant/uniform representations can yield zero MPI and require independent stage/variance gates; fit sampler excludes development."
+      ],
+      "limitations": [
+        "Clinical truth of stage-preserving transformations remains unverified; wrong in-range label permutations require external annotation provenance rather than a numeric range check."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP34",
+      "title": "Quantify compute efficiency",
+      "dependencies": [
+        "WP33"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_protocol_sha256": "ff032a8f1cfa76bf4adb8ae23d3436d1e3a0271e4355481695467c69b5bcb6b3",
+        "method_source_commit": "3cf3bef",
+        "proposal_source_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117"
+      },
+      "tests": [
+        "source receipt or aggregate result reviewed"
+      ],
+      "artifacts": [
+        "reports/mist_sleep/method_recovery_v1/resource_receipts.json",
+        "reports/mist_sleep/method_recovery_v1/inference_resource_audit.json"
+      ],
+      "scientific_findings": [
+        "95.44 s GPU campaign; 91.6 MB peak allocation; M2 about 5% slower than M0 in this setup."
+      ],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP35",
+      "title": "Evaluate the feasibility GO/NO-GO decision",
+      "dependencies": [
+        "WP34"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_protocol_sha256": "ff032a8f1cfa76bf4adb8ae23d3436d1e3a0271e4355481695467c69b5bcb6b3",
+        "method_source_commit": "3cf3bef",
+        "proposal_source_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117"
+      },
+      "tests": [
+        "source receipt or aggregate result reviewed"
+      ],
+      "artifacts": [
+        "reports/mist_sleep/method_recovery_v1/scientific_gates.json",
+        "docs/mist_sleep/OVERNIGHT_SCIENTIFIC_DECISION_V1.md"
+      ],
+      "scientific_findings": [
+        "MPI_FEASIBILITY_NOT_ESTABLISHED; external transfer remains NOT TESTED."
+      ],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP36",
+      "title": "Prepare independent external-transfer methodology",
+      "dependencies": [
+        "WP35"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_protocol_sha256": "ff032a8f1cfa76bf4adb8ae23d3436d1e3a0271e4355481695467c69b5bcb6b3",
+        "method_source_commit": "3cf3bef",
+        "proposal_source_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117"
+      },
+      "tests": [
+        "source receipt or aggregate result reviewed"
+      ],
+      "artifacts": [
+        "docs/mist_sleep/FUTURE_TRANSFER_EVALUATION_PROTOCOL_V1.md"
+      ],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP37",
+      "title": "Prepare the actual paper-level external study",
+      "dependencies": [
+        "WP36"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_protocol_sha256": "ff032a8f1cfa76bf4adb8ae23d3436d1e3a0271e4355481695467c69b5bcb6b3",
+        "method_source_commit": "3cf3bef",
+        "proposal_source_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117"
+      },
+      "tests": [
+        "source receipt or aggregate result reviewed"
+      ],
+      "artifacts": [
+        "docs/mist_sleep/FUTURE_TRANSFER_EVALUATION_PROTOCOL_V1.md"
+      ],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP38",
+      "title": "Prepare the initial method-paper manuscript skeleton",
+      "dependencies": [
+        "WP37"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_protocol_sha256": "ff032a8f1cfa76bf4adb8ae23d3436d1e3a0271e4355481695467c69b5bcb6b3",
+        "method_source_commit": "3cf3bef",
+        "proposal_source_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117"
+      },
+      "tests": [
+        "source receipt or aggregate result reviewed"
+      ],
+      "artifacts": [
+        "docs/mist_sleep/METHOD_PAPER_MANUSCRIPT_DRAFT_V1.md"
+      ],
+      "scientific_findings": [],
+      "limitations": [],
+      "block_reason": null
+    },
+    {
+      "id": "WP39",
+      "title": "Complete all testing and publication review",
+      "dependencies": [
+        "WP38"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_protocol_sha256": "ff032a8f1cfa76bf4adb8ae23d3436d1e3a0271e4355481695467c69b5bcb6b3",
+        "method_source_commit": "3cf3bef",
+        "proposal_source_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117"
+      },
+      "tests": [
+        "CPU full suite: 1194 passed, 12 skipped",
+        "generated CUDA deterministic exact resume: 1 passed",
+        "first PR CI commit 22c0cd5: both jobs succeeded"
+      ],
+      "artifacts": [
+        "reports/mist_sleep/method_recovery_v1/correctness.json"
+      ],
+      "scientific_findings": [
+        "1194 CPU tests passed, 12 skipped; generated CUDA deterministic exact-resume passed."
+      ],
+      "limitations": [
+        "Completed scientific runs lacked enforced deterministic CUDA runtime; they were uninterrupted.",
+        "Exact-final-commit CI check occurs after the last push."
+      ],
+      "block_reason": null
+    },
+    {
+      "id": "WP40",
+      "title": "Publish the overnight results and stop",
+      "dependencies": [
+        "WP39"
+      ],
+      "status": "COMPLETE",
+      "code_configuration_identity": {
+        "frozen_protocol_sha256": "ff032a8f1cfa76bf4adb8ae23d3436d1e3a0271e4355481695467c69b5bcb6b3",
+        "method_source_commit": "3cf3bef",
+        "proposal_source_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117"
+      },
+      "tests": [
+        "draft PR base/head verified",
+        "first PR CI run 39897709936 succeeded",
+        "exact-final-commit CI required after last push"
+      ],
+      "artifacts": [
+        "https://github.com/SyedNaveedMahmood/Proto-sleep/pull/19",
+        "reports/mist_sleep/method_recovery_v1/DASHBOARD.md"
+      ],
+      "scientific_findings": [
+        "Published aggregate-only NO-GO result for review; no merge or external study initiated."
+      ],
+      "limitations": [
+        "Original PDF binary unavailable; proposal text mirror integrated.",
+        "Exact-final-commit CI check pending at ledger commit time."
+      ],
+      "block_reason": null
+    }
+  ],
+  "github": {
+    "draft_pr": "https://github.com/SyedNaveedMahmood/Proto-sleep/pull/19",
+    "base": "research/mist-cove-phase16-expert-event-benchmark-v1",
+    "head": "research/mist-sleep-mpi-method-recovery-overnight-v1",
+    "first_exact_commit_ci_run": "https://github.com/SyedNaveedMahmood/Proto-sleep/actions/runs/39897709936",
+    "first_exact_commit_ci_result": "SUCCESS",
+    "final_commit_ci_result": "TO_VERIFY_AFTER_FINAL_PUSH"
+  }
+}

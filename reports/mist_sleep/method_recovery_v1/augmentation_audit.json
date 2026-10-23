@@ -1,0 +1,22 @@
+{
+  "fit_only_examples": 100,
+  "shape_preserved": true,
+  "nonfinite": 0,
+  "rms_ratio_range": [
+    0.9497717618942261,
+    1.0890617370605469
+  ],
+  "spindle_11_16Hz_power_ratio_range": [
+    0.9028000235557556,
+    1.1198899745941162
+  ],
+  "slow_0p5_4Hz_power_ratio_range": [
+    0.8990402221679688,
+    1.1013624668121338
+  ],
+  "max_absolute_change_normalized_units": 0.3033003807067871,
+  "time_shift_samples": 0,
+  "filter_applied": false,
+  "waveform_clipping": false,
+  "clinical_label_preservation": "UNVERIFIED"
+}

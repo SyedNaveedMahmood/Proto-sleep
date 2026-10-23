@@ -1,0 +1,16 @@
+{
+  "status": "PASS_TRAIN_ONLY",
+  "physical_epochs": 79984,
+  "scored_fit": 55153,
+  "scored_development": 23872,
+  "fit_participants": 10,
+  "development_participants": 5,
+  "recordings": 29,
+  "normalization_fit_role": "train_fit",
+  "raw_VAL_reads": 0,
+  "excluded_source_reads": 0,
+  "waveform_read_count": 29,
+  "private_cache": true,
+  "wave_cache_sha256": "1954cca9bb076262c18fe7ff38955272b57e232bb51731fc7f1eeec8b87ac440",
+  "index_cache_sha256": "15ce8fef446d83f6b0ae78aab9f46b2b0b94614c4af5984488205f720bd00fbb"
+}

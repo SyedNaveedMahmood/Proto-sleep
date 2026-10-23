@@ -1,0 +1,10 @@
+{
+  "fit_only_examples": 100,
+  "historical_classifier": "authenticated P3B raw_context seed 123",
+  "prediction_agreement": 0.9800000190734863,
+  "mean_absolute_probability_change": 0.004413734655827284,
+  "mean_confidence_change": 2.0802021026611328e-05,
+  "clinical_stage_preservation_oracle": false,
+  "raw_additional_EEG_reads": 0,
+  "model_weights_modified": false
+}
