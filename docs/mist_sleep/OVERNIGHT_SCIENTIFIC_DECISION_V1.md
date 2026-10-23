@@ -10,7 +10,7 @@ The original proposal's method is now available in the tracked 13-page text mirr
 | 4. Credible reference? | `ADAPTED_REFERENCE_ONLY`; no claim of faithful published AttnSleep reproduction. |
 | 5. Does morphology architecture train? | Yes: M0 reached 0.6902/0.7268 clean participant Macro-F1 in two fixed seeds at 1,200 updates. |
 | 6. Correct prototype initialization? | Yes: fit-only 4,096-token k-means; input digests identical across M0–M3 within each seed. |
-| 7. Transformation safety? | Numerically bounded on 100 fit samples: RMS ratios 0.950–1.089, spindle-band ratios 0.903–1.120, slow-band ratios 0.899–1.101, finite and aligned. Clinical label preservation unverified. |
+| 7. Transformation safety? | Numerically bounded on 100 fit samples: RMS ratios 0.950–1.089, spindle-band ratios 0.903–1.120, slow-band ratios 0.899–1.101, finite and aligned. Historical P3B prediction agreement was 98%; generated event-like components retained near-unit projections. Clinical label preservation unverified. |
 | 8. Correct MPI gradients/alignment? | Generated identity/shape tests pass; both terms yield nonzero encoder and bank gradients; no time shift in primary stream. |
 | 9. Representation collapse? | No constant-embedding collapse detected; M2 feature variance 0.00503/0.00478. |
 | 10. Prototype collapse? | No dead M2 units; effective counts 59.2/57.5 of 64, with 49/36 near-duplicate pairs. |

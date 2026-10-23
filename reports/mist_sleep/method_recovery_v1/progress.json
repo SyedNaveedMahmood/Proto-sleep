@@ -228,7 +228,7 @@
         "proposal_source_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117"
       },
       "tests": [
-        "full CPU suite: 1189 passed, 12 skipped",
+        "full CPU suite: 1194 passed, 12 skipped",
         "generated CUDA exact resume: PASS only under deterministic runtime"
       ],
       "artifacts": [
@@ -426,23 +426,27 @@
       "dependencies": [
         "WP18"
       ],
-      "status": "PARTIAL",
+      "status": "COMPLETE",
       "code_configuration_identity": {
         "frozen_protocol_sha256": "ff032a8f1cfa76bf4adb8ae23d3436d1e3a0271e4355481695467c69b5bcb6b3",
         "method_source_commit": "3cf3bef",
         "proposal_source_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117"
       },
       "tests": [
-        "source receipt or aggregate result reviewed"
+        "100 fit-only real waveform transformations",
+        "generated 13 Hz and 0.75 Hz component retention",
+        "authenticated historical P3B response on 100 fit examples"
       ],
       "artifacts": [
-        "reports/mist_sleep/method_recovery_v1/augmentation_audit.json"
+        "reports/mist_sleep/method_recovery_v1/augmentation_audit.json",
+        "reports/mist_sleep/method_recovery_v1/generated_event_transform_audit.json",
+        "reports/mist_sleep/method_recovery_v1/historical_classifier_transformation_response.json"
       ],
       "scientific_findings": [
-        "Numerical fit-only transform audit finite and bounded; clinical label preservation unverified."
+        "Numerical bounds passed; historical classifier agreement 98%; generated component projection ratios 1.023 and 1.032."
       ],
       "limitations": [
-        "No historical classifier-response audit and no clinical label-preservation validation; shifts and filtering excluded."
+        "Clinical label preservation remains unverified; no shift or filter in frozen training family, so alignment and ringing are not applicable."
       ],
       "block_reason": null
     },
@@ -459,7 +463,7 @@
         "proposal_source_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117"
       },
       "tests": [
-        "full CPU suite: 1189 passed, 12 skipped",
+        "full CPU suite: 1194 passed, 12 skipped",
         "generated CUDA exact resume: PASS only under deterministic runtime"
       ],
       "artifacts": [
@@ -506,7 +510,7 @@
         "proposal_source_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117"
       },
       "tests": [
-        "full CPU suite: 1189 passed, 12 skipped",
+        "full CPU suite: 1194 passed, 12 skipped",
         "generated CUDA exact resume: PASS only under deterministic runtime"
       ],
       "artifacts": [
@@ -756,23 +760,26 @@
       "dependencies": [
         "WP32"
       ],
-      "status": "PARTIAL",
+      "status": "COMPLETE",
       "code_configuration_identity": {
         "frozen_protocol_sha256": "ff032a8f1cfa76bf4adb8ae23d3436d1e3a0271e4355481695467c69b5bcb6b3",
         "method_source_commit": "3cf3bef",
         "proposal_source_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117"
       },
       "tests": [
-        "full CPU suite: 1189 passed, 12 skipped",
-        "generated CUDA exact resume: PASS only under deterministic runtime"
+        "generated counterexamples: five new falsification tests passed",
+        "full CPU suite: 1194 passed, 12 skipped"
       ],
       "artifacts": [
         "tests/mist_sleep/test_core.py",
-        "tests/mist_sleep/test_cuda.py"
+        "tests/mist_sleep/test_cuda.py",
+        "tests/mist_sleep/test_falsification.py"
       ],
-      "scientific_findings": [],
+      "scientific_findings": [
+        "Unaligned shifts and prototype-ID permutations yield nonzero MPI; constant/uniform representations can yield zero MPI and require independent stage/variance gates; fit sampler excludes development."
+      ],
       "limitations": [
-        "Not all requested falsification cases have dedicated automated tests; destructive stress, identity, shape, gradients and role controls were checked."
+        "Clinical truth of stage-preserving transformations remains unverified; wrong in-range label permutations require external annotation provenance rather than a numeric range check."
       ],
       "block_reason": null
     },
@@ -898,24 +905,26 @@
       "dependencies": [
         "WP38"
       ],
-      "status": "PARTIAL",
+      "status": "COMPLETE",
       "code_configuration_identity": {
         "frozen_protocol_sha256": "ff032a8f1cfa76bf4adb8ae23d3436d1e3a0271e4355481695467c69b5bcb6b3",
         "method_source_commit": "3cf3bef",
         "proposal_source_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117"
       },
       "tests": [
-        "full CPU suite: 1189 passed, 12 skipped",
-        "generated CUDA exact resume: PASS only under deterministic runtime"
+        "CPU full suite: 1194 passed, 12 skipped",
+        "generated CUDA deterministic exact resume: 1 passed",
+        "first PR CI commit 22c0cd5: both jobs succeeded"
       ],
       "artifacts": [
         "reports/mist_sleep/method_recovery_v1/correctness.json"
       ],
       "scientific_findings": [
-        "1189 CPU tests passed, 12 skipped; generated CUDA deterministic exact-resume passed."
+        "1194 CPU tests passed, 12 skipped; generated CUDA deterministic exact-resume passed."
       ],
       "limitations": [
-        "Exact-final-commit CI pending publication. Completed trajectories did not enforce deterministic CUDA resume runtime."
+        "Completed scientific runs lacked enforced deterministic CUDA runtime; they were uninterrupted.",
+        "Exact-final-commit CI check occurs after the last push."
       ],
       "block_reason": null
     },
@@ -925,23 +934,37 @@
       "dependencies": [
         "WP39"
       ],
-      "status": "PENDING",
+      "status": "COMPLETE",
       "code_configuration_identity": {
         "frozen_protocol_sha256": "ff032a8f1cfa76bf4adb8ae23d3436d1e3a0271e4355481695467c69b5bcb6b3",
         "method_source_commit": "3cf3bef",
         "proposal_source_commit": "de5600c980b580708250e5dd7b0df4f29f2d7117"
       },
       "tests": [
-        "source receipt or aggregate result reviewed"
+        "draft PR base/head verified",
+        "first PR CI run 39897709936 succeeded",
+        "exact-final-commit CI required after last push"
       ],
       "artifacts": [
+        "https://github.com/SyedNaveedMahmood/Proto-sleep/pull/19",
         "reports/mist_sleep/method_recovery_v1/DASHBOARD.md"
       ],
-      "scientific_findings": [],
+      "scientific_findings": [
+        "Published aggregate-only NO-GO result for review; no merge or external study initiated."
+      ],
       "limitations": [
-        "Push, draft PR and exact-final-commit CI verification pending."
+        "Original PDF binary unavailable; proposal text mirror integrated.",
+        "Exact-final-commit CI check pending at ledger commit time."
       ],
       "block_reason": null
     }
-  ]
+  ],
+  "github": {
+    "draft_pr": "https://github.com/SyedNaveedMahmood/Proto-sleep/pull/19",
+    "base": "research/mist-cove-phase16-expert-event-benchmark-v1",
+    "head": "research/mist-sleep-mpi-method-recovery-overnight-v1",
+    "first_exact_commit_ci_run": "https://github.com/SyedNaveedMahmood/Proto-sleep/actions/runs/39897709936",
+    "first_exact_commit_ci_result": "SUCCESS",
+    "final_commit_ci_result": "TO_VERIFY_AFTER_FINAL_PUSH"
+  }
 }

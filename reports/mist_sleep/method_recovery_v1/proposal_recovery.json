@@ -11,5 +11,6 @@
   "original_pdf_available_locally": false,
   "original_pdf_verified_or_committed": false,
   "implementation_frozen_before_source_integration": true,
-  "reconciliation": "Method intent agrees on tokenizer, multiscale encoder, 64 shared prototypes, source-fit-only k-means, MPI and SupCon controls. Overnight scope defers external, capacity, EMA, K sensitivity, single-term and clinical morphology ablations; token-alignment restriction excludes shifts and bandpass jitter from training."
+  "reconciliation": "Method intent agrees on tokenizer, multiscale encoder, 64 shared prototypes, source-fit-only k-means, MPI and SupCon controls. Overnight scope defers external, capacity, EMA, K sensitivity, single-term and clinical morphology ablations; token-alignment restriction excludes shifts and bandpass jitter from training.",
+  "tracked_text_git_blob_sha": "753d326bfc8a5e1381d1c7a8be756cf4dad3a885"
 }
