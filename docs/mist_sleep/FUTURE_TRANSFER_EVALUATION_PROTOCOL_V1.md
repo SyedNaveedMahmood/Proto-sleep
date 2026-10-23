@@ -1,0 +1,21 @@
+# Independently reviewable external-transfer experiment (future authorization)
+
+This is a proposal. No external EEG was acquired, decoded, trained on or evaluated during Phase M0. The present SC TRAIN development results do not establish cross-dataset efficacy.
+
+## Source-target choice and access gate
+
+The first independent external target should be selected only after channel, annotation, rights and participant-independence verification. [HMC v1.1](https://www.physionet.org/content/hmc-sleep-staging/1.1/) is an attractive clinical stress target: its official description reports 151 heterogeneous patient recordings, 256 Hz sampling, four EEG derivations and CC BY 4.0 access. Its C4/M1 or C3/M2 derivations differ materially from SC Fpz-Cz, so a direct result would combine montage, acquisition and physiology shifts; it cannot isolate pure nuisance invariance. Version 1.1 removed three invalid recordings, so a future protocol must pin the version and check its manifest before data access.
+
+[ISRUC-Sleep](https://sleeptight.isr.uc.pt/) supplies independent clinical and healthy cohorts and two expert scorers, but a channel and rights audit is required before use. [SHHS](https://sleepdata.org/datasets/shhs) is a larger independent cohort with its own access process and should remain gated until an approved data-use basis exists. EDF-20 overlaps EDF-78 and is not an independent external target. ST has already been examined historically and cannot be relabeled untouched. No target listed here is automatically authorized for this phase.
+
+## Estimand and design
+
+The primary future estimand is the paired difference in mean target-participant fixed-five Macro-F1 between M2 and M0 at a **single frozen source-trained checkpoint per seed**, evaluated inductively on target recordings with no target waveform or label used to choose model, augmentation, normalizer or checkpoint. The paper-level rule should be sealed before the first external target score: either at least +0.02 absolute Macro-F1 averaged over prespecified independent targets or at least 10% relative transfer-gap reduction, with no meaningful loss of target-supervised performance. Exactly one must be primary. The Phase M0 +0.02 *synthetic-nuisance readiness* rule is distinct and cannot substitute for this external rule.
+
+Secondary controls should include M1, M3, a credible AttnSleep implementation, a parameter-matched architecture control, a generic multi-scale control, a labeled-source/unlabeled-target DA baseline under a separately declared transductive setting, and a feasible foundation-model representation reference. Measure N1, N2, N3 and REM separately. Source-trained target-test evaluation must remain entirely separate from any target-label fine-tuning at 1%, 5%, 10%, 20% or 50% of target **training participants**. Target-test people never enter adaptation or architecture selection.
+
+Channel mapping, resampling, physical units, filtering and five-stage annotation mapping must be versioned before labels or outcomes are inspected. A fixed source-only normalizer is the default inductive choice; a target-fitted normalization policy would define a different transductive estimand and must be separately registered. If montage incompatibility makes direct transfer uninterpretable, report the incompatibility instead of silently adjusting the source model.
+
+Report all fixed seeds and targets, participant bootstrap intervals, paired subject/fold comparisons where applicable, corrected confirmatory tests, domain-classifier accuracy, MMD/CORAL, stage-linear-probe performance, prototype occupancy and negative transfer by target. Clinical prototype labels require the original proposal's quantitative spectral and shape checks plus separate review; prototype nearest neighbors alone are insufficient. Compute comparisons must include parameters, training/inference time and memory under comparable hardware and scoring throughput.
+
+The single most decisive next experiment is an independently authorized, prespecified direct-source transfer of the frozen M2 and M0 pair to one genuinely independent, channel-audited clinical cohort, with a locked target participant split and unchanged source checkpoints. Given the current Phase M0 result below the readiness threshold, the scientific review should first decide whether that expense is justified at all.

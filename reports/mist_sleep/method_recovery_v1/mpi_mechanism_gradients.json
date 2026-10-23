@@ -1,0 +1,55 @@
+{
+  "fit_only_examples": 32,
+  "status": "COMPLETE",
+  "results": {
+    "M0_123": {
+      "embedding": {
+        "loss": 0.031996630132198334,
+        "encoder_grad_norm": 0.013064494356513023,
+        "bank_grad_norm": 0.0002961484424304217
+      },
+      "assignment": {
+        "loss": 0.004686668980866671,
+        "encoder_grad_norm": 0.010854175314307213,
+        "bank_grad_norm": 0.0025603678077459335
+      }
+    },
+    "M2_123": {
+      "embedding": {
+        "loss": 0.025004692375659943,
+        "encoder_grad_norm": 0.011124275624752045,
+        "bank_grad_norm": 0.00022297230316326022
+      },
+      "assignment": {
+        "loss": 0.003441957524046302,
+        "encoder_grad_norm": 0.00518654752522707,
+        "bank_grad_norm": 0.0014784137019887567
+      }
+    },
+    "M0_456": {
+      "embedding": {
+        "loss": 0.024444784969091415,
+        "encoder_grad_norm": 0.04713202267885208,
+        "bank_grad_norm": 0.00019876811711583287
+      },
+      "assignment": {
+        "loss": 0.002799711190164089,
+        "encoder_grad_norm": 0.005208692047744989,
+        "bank_grad_norm": 0.001127753290347755
+      }
+    },
+    "M2_456": {
+      "embedding": {
+        "loss": 0.020434008911252022,
+        "encoder_grad_norm": 0.05347125232219696,
+        "bank_grad_norm": 0.00017136811220552772
+      },
+      "assignment": {
+        "loss": 0.0024959170259535313,
+        "encoder_grad_norm": 0.004524029325693846,
+        "bank_grad_norm": 0.0007085927063599229
+      }
+    }
+  },
+  "first_attempt": "CUDA cuDNN RNN backward in eval mode failed before any result; corrected to training mode for gradient diagnostic only"
+}

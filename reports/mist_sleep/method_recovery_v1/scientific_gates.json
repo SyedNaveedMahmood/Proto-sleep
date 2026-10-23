@@ -1,0 +1,27 @@
+{
+  "status": "MPI_FEASIBILITY_NOT_ESTABLISHED",
+  "primary_candidate": "M2",
+  "primary_control": "M0",
+  "same_architecture_and_augmentation": true,
+  "development_reused": true,
+  "external_transfer": "NOT_TESTED",
+  "criteria": {
+    "no_numerical_or_representation_collapse": true,
+    "prototype_effective_count_min": 57.504581451416016,
+    "prototype_dead_count_max": 0,
+    "embedding_stability_improves_both_seeds": true,
+    "prototype_KL_improves_both_seeds": true,
+    "clean_F1_delta_two_seed_mean": 0.0036960974266106116,
+    "clean_penalty_floor": -0.02,
+    "clean_gate_pass": true,
+    "bounded_F1_delta_two_seed_mean": 0.005847162111302806,
+    "bounded_improvement_target": 0.02,
+    "bounded_gain_gate_pass": false,
+    "bounded_seed_123_delta": 0.00045976390037192336,
+    "bounded_seed_456_delta": 0.011234560322233689,
+    "no_N1_REM_zero_recall_M2": true,
+    "scientific_trajectories": 10,
+    "scientific_updates": 12000
+  },
+  "interpretation": "MPI reduced bounded-view representation drift and assignment KL in both seeds, but did not reach the locked +0.02 nuisance Macro-F1 readiness threshold. No external transfer, label efficiency, clinical morphology or independent confirmation was tested."
+}

@@ -1,0 +1,33 @@
+{
+  "status": "COMPLETE",
+  "scientific_trajectories": 10,
+  "scientific_optimizer_updates": 12000,
+  "updates_per_trajectory": 1200,
+  "engineering_probe_updates": 65,
+  "training_original_or_augmented_epoch_views": 384000,
+  "training_clean_epoch_views": 192000,
+  "training_augmented_epoch_views": 192000,
+  "scientific_campaign_wall_seconds_observed": 95.44261464700685,
+  "sum_trajectory_wall_seconds": 90.30637552200642,
+  "training_milestone_development_full_epoch_forwards": 716160,
+  "nuisance_analysis_full_epoch_forwards": 716160,
+  "linear_probe_embedding_forwards": 56000,
+  "peak_cuda_allocated_bytes_campaign": 91641856,
+  "peak_process_RSS_KiB_campaign": 3257896,
+  "A0_parameters": 522805,
+  "morphology_parameters": 41429,
+  "mean_training_seconds_by_arm": {
+    "A0": 10.726969451498007,
+    "M0": 8.131379701000697,
+    "M1": 8.666173076999257,
+    "M2": 8.536313363503723,
+    "M3": 9.092352168001526
+  },
+  "GPU_allocation_limit_seconds": 21600,
+  "scientific_CPU_wall_limit_seconds": 43200,
+  "private_data_committed": false,
+  "external_EEG_reads": 0,
+  "SC_VAL_reads": 0,
+  "SC_RESERVED_reads": 0,
+  "methodological_note": "Cached full TRAIN waveforms are private and not counted as optimizer exposures; generated in-memory inference benchmark excludes source IO."
+}

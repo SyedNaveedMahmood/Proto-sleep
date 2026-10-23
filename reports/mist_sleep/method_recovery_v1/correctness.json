@@ -1,0 +1,28 @@
+{
+  "status": "PASS_WITH_DOCUMENTED_LIMITATION",
+  "CPU": {
+    "suite": "full inherited and new suite",
+    "passed": 1189,
+    "skipped": 12,
+    "failed": 0,
+    "environment": "phase11b CPU venv, Torch 2.10 CPU"
+  },
+  "CUDA": {
+    "generated_correctness_passed": 1,
+    "generated_exact_resume_passed_with_deterministic_runtime": true,
+    "initial_unconstrained_exact_resume_failed": true,
+    "required_runtime": "CUBLAS_WORKSPACE_CONFIG=:4096:8; torch.use_deterministic_algorithms(True); deterministic cuDNN; benchmark disabled",
+    "completed_scientific_runs_used_enforced_runtime": false
+  },
+  "data_boundary": {
+    "raw_SC_TRAIN_reads": 29,
+    "raw_SC_VAL_reads": 0,
+    "SC_RESERVED_reads": 0,
+    "external_EEG_reads": 0,
+    "CI_uses_generated_only": true
+  },
+  "limitations": [
+    "Full scientific trajectories were uninterrupted but not run under enforced deterministic CUDA settings; bitwise interrupted resume for those runs is unproven.",
+    "Original PDF binary absent, tracked full text available."
+  ]
+}

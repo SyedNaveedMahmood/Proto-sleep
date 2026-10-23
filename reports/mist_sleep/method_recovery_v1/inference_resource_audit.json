@@ -1,0 +1,18 @@
+{
+  "A0": {
+    "batch_size": 64,
+    "timed_batches": 100,
+    "seconds_per_batch": 0.0008387565099110361,
+    "scored_epochs_per_second": 76303.43162020674,
+    "peak_cuda_allocated_bytes": 40932352,
+    "total_parameters": 522805
+  },
+  "M0": {
+    "batch_size": 64,
+    "timed_batches": 100,
+    "seconds_per_batch": 0.0005149509898910765,
+    "scored_epochs_per_second": 124283.67214817359,
+    "peak_cuda_allocated_bytes": 28977664,
+    "total_parameters": 41429
+  }
+}
