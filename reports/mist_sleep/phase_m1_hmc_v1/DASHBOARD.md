@@ -16,3 +16,5 @@ The primary outcome is **`PRIMARY_EVALUATION_BLOCKED`**. No HMC waveform payload
 See [scientific decision](../../../docs/mist_sleep/PHASE_M1_SCIENTIFIC_DECISION_V1.md), [source audit](../../../docs/mist_sleep/PHASE_M1_HMC_SOURCE_AND_LICENSE_V1.md), [registered protocol](../../../docs/mist_sleep/PHASE_M1_FROZEN_PROTOCOL_V1.md) and [verification](verification.json).
 
 Initial freeze: 933bcba. Header-only label syntax refinement: d7947ef; primary electrode pair unchanged. Original strict-slash audit preserved. Whole EDF checksums and real HMC text schema remain unverified. No external result, clinical deployment, label efficiency or multiple-target generalization claim is supported. Stop after M1; do not merge automatically.
+
+Draft delivery: [PR #20](https://github.com/SyedNaveedMahmood/Proto-sleep/pull/20). Exact final-head CI is verified through its GitHub checks after the last publication commit; local receipts cannot contain their own final commit SHA.

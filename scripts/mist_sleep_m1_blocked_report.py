@@ -147,6 +147,12 @@ def main():
         ("COMPLETE", "Built public artifact manifest and resource accounting", "publication_manifest.json; resource_receipts.json", "No patient-linked arrays or checkpoint bytes staged", "Unmetered fixture operation counts explicitly null"),
         ("DELIVERY_PENDING", "Prepared branch and draft PR delivery", "DASHBOARD.md; final GitHub delivery receipt", "Stop after M1; do not merge", "Exact final-head CI verification occurs after push"),
     ]
+    delivery_path = PUBLIC / "delivery_receipt.json"
+    delivery = json.loads(delivery_path.read_text()) if delivery_path.exists() else None
+    if delivery:
+        work[39] = ("DELIVERED", "Pushed M1 branch and opened draft PR against exact M0 branch",
+                    delivery["draft_PR"], "Scientific result remains blocked; stop after M1",
+                    "Exact final-head CI evidence is recorded by GitHub check runs after publication, avoiding a self-referential commit hash")
     entries = []
     for i, (status, implementation_text, evidence, finding, limitation) in enumerate(work, 1):
         entries.append({"id": f"WP{i:02}", "status": status, "actual_implementation": implementation_text,
@@ -292,8 +298,13 @@ See [scientific decision](../../../docs/mist_sleep/PHASE_M1_SCIENTIFIC_DECISION_
 
 Initial freeze: 933bcba. Header-only label syntax refinement: d7947ef; primary electrode pair unchanged. Original strict-slash audit preserved. Whole EDF checksums and real HMC text schema remain unverified. No external result, clinical deployment, label efficiency or multiple-target generalization claim is supported. Stop after M1; do not merge automatically.
 """
+    if delivery:
+        dashboard += f"\nDraft delivery: [PR #20]({delivery['draft_PR']}). Exact final-head CI is verified through its GitHub checks after the last publication commit; local receipts cannot contain their own final commit SHA.\n"
     (PUBLIC/"DASHBOARD.md").write_text(dashboard)
-    candidates = sorted([*PUBLIC.rglob("*"), *DOCS.glob("PHASE_M1_*.md")])
+    candidates = sorted([*PUBLIC.rglob("*"), *DOCS.glob("PHASE_M1_*.md"),
+                         *(REPO/"src/mist_sleep/external").glob("*.py"),
+                         *(REPO/"scripts").glob("mist_sleep_m1_*.py"),
+                         REPO/"tests/mist_sleep/test_external_m1.py", REPO/".github/workflows/ci.yml", REPO/"pyproject.toml"])
     safe = {p.relative_to(REPO).as_posix(): file_sha256(p) for p in candidates
             if p.is_file() and p.name != "publication_manifest.json"}
     write("publication_manifest.json", {"status": "PUBLIC_AGGREGATES_AND_GENERATED_FIXTURES_ONLY", "files_sha256": safe,

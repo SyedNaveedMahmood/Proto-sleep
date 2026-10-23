@@ -1,0 +1,15 @@
+{
+  "status": "DRAFT_DELIVERED",
+  "draft_PR": "https://github.com/SyedNaveedMahmood/Proto-sleep/pull/20",
+  "draft": true,
+  "branch": "research/mist-sleep-phase-m1-independent-hmc-transfer-v1",
+  "base_branch": "research/mist-sleep-mpi-method-recovery-overnight-v1",
+  "base_commit": "1d6950021d43a0aa1e1c719f98dfed1b61778d10",
+  "initial_freeze_commit": "933bcba",
+  "pre_waveform_label_refinement_commit": "d7947ef",
+  "scientific_decision": "PRIMARY_EVALUATION_BLOCKED",
+  "merge_performed": false,
+  "CI_evidence": "GitHub check-runs on final PR head; verified after publication commit",
+  "GitHub_connector_PR_creation": "rejected: connected account must be collaborator",
+  "delivery_fallback": "authenticated repository-owner GitHub CLI; branch pushed with configured Git credentials"
+}

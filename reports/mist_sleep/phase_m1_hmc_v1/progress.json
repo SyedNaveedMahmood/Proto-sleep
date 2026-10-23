@@ -467,12 +467,12 @@
     },
     {
       "id": "WP40",
-      "status": "DELIVERY_PENDING",
-      "actual_implementation": "Prepared branch and draft PR delivery",
+      "status": "DELIVERED",
+      "actual_implementation": "Pushed M1 branch and opened draft PR against exact M0 branch",
       "tests": "verification.json and generated M1 suite; outcome analyses not run where blocked",
-      "evidence": "DASHBOARD.md; final GitHub delivery receipt",
-      "scientific_finding": "Stop after M1; do not merge",
-      "limitation": "Exact final-head CI verification occurs after push",
+      "evidence": "https://github.com/SyedNaveedMahmood/Proto-sleep/pull/20",
+      "scientific_finding": "Scientific result remains blocked; stop after M1",
+      "limitation": "Exact final-head CI evidence is recorded by GitHub check runs after publication, avoiding a self-referential commit hash",
       "resource_use": "metadata/header or generated validation only; target inference 0; see resource_receipts.json",
       "blockers": []
     }

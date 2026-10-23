@@ -8,7 +8,7 @@
   "metadata_bytes": 61396,
   "header_bytes": 347904,
   "source_download_bytes": 409300,
-  "private_phase_disk_bytes_at_snapshot": 941578,
+  "private_phase_disk_bytes_at_snapshot": 943772,
   "disk_preflight": {
     "free_bytes": 7063867392,
     "required_bytes": 15700000000,
