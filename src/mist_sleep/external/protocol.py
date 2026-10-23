@@ -37,6 +37,8 @@ def specification():
         "dataset": "hmc-sleep-staging", "dataset_version": "1.1", "doi": "10.13026/t79q-fr32",
         "checkpoints": CHECKPOINTS, "step": 1200, "arms": ["M0", "M2"], "seeds": [123, 456],
         "primary_channel": "C4/M1", "secondary_channel": "F4/M1", "stage_order": list(STAGES),
+        "channel_label_aliases": {"C4/M1": ["C4/M1", "EEG C4/M1", "C4-M1", "EEG C4-M1"],
+                                  "F4/M1": ["F4/M1", "EEG F4/M1", "F4-M1", "EEG F4-M1"]},
         "source_normalization": {"mean_uV": SOURCE_MEAN_UV, "std_uV": SOURCE_STD_UV,
                                  "fit_role": "train_fit", "fit_participants": 10},
         "signal": {"source_Hz": 256, "target_Hz": 100, "epoch_seconds": 30,

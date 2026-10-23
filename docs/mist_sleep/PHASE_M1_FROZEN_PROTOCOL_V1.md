@@ -11,6 +11,13 @@ loader under PyTorch 2.10 CPU. The source mean 0.2903136955214651 uV and standar
 26.31764815403481 uV come from the authenticated ten-person source-fit receipt.
 
 The primary channel is C4/M1; F4/M1 is a separately labeled secondary sensitivity.
+The initial protocol commit is `933bcba`. A subsequent header-only audit identified
+the literal EDF labels `EEG C4-M1` and `EEG F4-M1` in all 151 recordings. Before any
+waveform payload or scored annotation was accessed, explicit hyphen/slash aliases
+for these same electrode pairs were added to the machine registration. The initial
+strict-slash audit is preserved in `header_audit_initial_strict_slash.json`. No channel,
+reference, polarity, model, metric or decision threshold changed. This is a documented
+pre-waveform label-syntax refinement, not a response to prediction performance.
 Calibration uses original EDF physical scaling. Fixed 256-to-100 Hz polyphase resampling
 uses an explicit symmetric 1,281-tap Kaiser-beta-5 FIR (cutoff 1/64 at the upsampled rate),
 float64 arithmetic and constant-zero padding only at physical recording ends. Segment the

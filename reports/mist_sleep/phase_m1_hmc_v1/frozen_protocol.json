@@ -28,6 +28,20 @@
     "N3",
     "REM"
   ],
+  "channel_label_aliases": {
+    "C4/M1": [
+      "C4/M1",
+      "EEG C4/M1",
+      "C4-M1",
+      "EEG C4-M1"
+    ],
+    "F4/M1": [
+      "F4/M1",
+      "EEG F4/M1",
+      "F4-M1",
+      "EEG F4-M1"
+    ]
+  },
   "source_normalization": {
     "mean_uV": 0.2903136955214651,
     "std_uV": 26.31764815403481,
