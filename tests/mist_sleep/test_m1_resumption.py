@@ -4,6 +4,8 @@ import importlib.util
 import json
 from pathlib import Path
 import sys
+import io
+from urllib.request import Request
 
 import pytest
 
@@ -60,3 +62,56 @@ def test_changed_historical_receipt_blocks_before_acquisition(tmp_path, monkeypa
     with pytest.raises(RuntimeError, match="historical M1 blocked evidence changed"):
         module.main()
     assert not (private / "acquire_started.json").exists()
+
+
+def load_generated_transport():
+    source = Path(__file__).resolve().parents[2] / "scripts/mist_sleep_m1_curl_transport.py"
+    spec = importlib.util.spec_from_file_location("generated_m1_curl_transport", source)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+@pytest.mark.parametrize("url", ["https://example.org/recordings/SN001.edf",
+    "https://physionet-open.s3.amazonaws.com/hmc-sleep-staging/1.0/recordings/SN001.edf",
+    "https://physionet-open.s3.amazonaws.com/hmc-sleep-staging/1.1/../other.edf"])
+def test_transport_rejects_unapproved_source_before_process(url, monkeypatch):
+    module = load_generated_transport()
+    monkeypatch.setattr(module.subprocess, "Popen", lambda *a, **k: pytest.fail("no process for unapproved source"))
+    with pytest.raises(ValueError): module.CurlResponse(Request(url), 30)
+
+
+def test_transport_preserves_range_headers_and_opaque_bytes(monkeypatch):
+    module = load_generated_transport()
+    commands = []
+    class GeneratedProcess:
+        def __init__(self, command, **kwargs):
+            commands.append(command)
+            self.stdout = io.BytesIO(b"HTTP/1.1 206 Partial Content\r\nContent-Range: bytes 10-14/20\r\n\r\nabcde")
+            self.returncode = 0
+        def wait(self): return self.returncode
+        def communicate(self): return b"", b""
+        def kill(self): self.returncode = -9
+    monkeypatch.setattr(module.subprocess, "Popen", GeneratedProcess)
+    request = Request("https://physionet-open.s3.amazonaws.com/hmc-sleep-staging/1.1/recordings/SN001.edf",
+                      headers={"Range": "bytes=10-"})
+    with module.CurlResponse(request, 30) as response:
+        assert response.status == 206 and response.headers.get("Content-Range") == "bytes 10-14/20"
+        assert response.read(3) == b"abc" and response.read(3) == b"de" and response.read(3) == b""
+    assert commands[0][1] == "--disable" and "10-" in commands[0] and "--location" not in commands[0]
+
+
+def test_transport_nonzero_exit_cannot_look_like_success(monkeypatch):
+    module = load_generated_transport()
+    class GeneratedProcess:
+        def __init__(self, *args, **kwargs):
+            self.stdout = io.BytesIO(b"HTTP/1.1 200 OK\r\n\r\n")
+            self.returncode = 28
+        def wait(self): return self.returncode
+        def communicate(self): return b"", b"generated network timeout"
+        def kill(self): self.returncode = -9
+    monkeypatch.setattr(module.subprocess, "Popen", GeneratedProcess)
+    request = Request("https://physionet-open.s3.amazonaws.com/hmc-sleep-staging/1.1/recordings/SN001.edf")
+    with pytest.raises(OSError):
+        with module.CurlResponse(request, 30) as response:
+            response.read(100)
