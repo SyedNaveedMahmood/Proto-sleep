@@ -1,0 +1,65 @@
+{
+  "version": "m1-hmc-resumption-v1",
+  "timestamp_UTC": "2026-10-23T06:29:51.031970+00:00",
+  "parent_commit": "2e8cb0717cb1183ede1421dd38e957dc391a05b4",
+  "historical_blocked_report": "reports/mist_sleep/phase_m1_hmc_v1",
+  "historical_publication_manifest_sha256": "eb72ef094a55ed6bd096ce40da8054723744cf66c0836779bfeae378f09f87e1",
+  "protocol_sha256": "5870af38c542352aa52d11aeb658c1dd0396a76da026247e9560455c8ea146e6",
+  "disk_gate": {
+    "free_bytes": 26015137792,
+    "required_bytes": 15700000000,
+    "reserve_bytes": 2000000000,
+    "pass": true
+  },
+  "filesystem_device_id": 66306,
+  "directory_mode": "0o700",
+  "models": [
+    {
+      "arm": "M0",
+      "seed": 123,
+      "step": 1200,
+      "sha256": "bc2cb6d293868d8029dde631adb2c0d4962e4166c6c060e59e61a328b21fdadf",
+      "parameters": 41429,
+      "prototypes": 64,
+      "restricted_loader": true,
+      "optimizer_state_restored": false
+    },
+    {
+      "arm": "M0",
+      "seed": 456,
+      "step": 1200,
+      "sha256": "15dafb7c1d742fd81b014e04fc3b74f29b9819150059539d0bd879403df515f7",
+      "parameters": 41429,
+      "prototypes": 64,
+      "restricted_loader": true,
+      "optimizer_state_restored": false
+    },
+    {
+      "arm": "M2",
+      "seed": 123,
+      "step": 1200,
+      "sha256": "c07d03a421cde428ec81a923baad459dded6c098bab064c41ee6cad8b95ae2f2",
+      "parameters": 41429,
+      "prototypes": 64,
+      "restricted_loader": true,
+      "optimizer_state_restored": false
+    },
+    {
+      "arm": "M2",
+      "seed": 456,
+      "step": 1200,
+      "sha256": "883a743b71f8cc22d688fa5c91fc1da75f0810ae7bfb99f88a1e0b312d78f9fe",
+      "parameters": 41429,
+      "prototypes": 64,
+      "restricted_loader": true,
+      "optimizer_state_restored": false
+    }
+  ],
+  "official_recordings": 151,
+  "existing_complete_source_files": 0,
+  "scientific_changes": [],
+  "target_waveform_reads_before_resumption": 0,
+  "target_label_reads_before_resumption": 0,
+  "stop_on_new_failure": true,
+  "automatic_deletion": false
+}

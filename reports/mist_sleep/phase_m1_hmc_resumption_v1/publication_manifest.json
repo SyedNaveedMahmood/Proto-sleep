@@ -1,0 +1,21 @@
+{
+  "files_sha256": {
+    "reports/mist_sleep/phase_m1_hmc_resumption_v1/resource_receipts.json": "2d7c5095c7a5c6ac357fe41c445b72f5b5be6b025d1dbafb7579caff8662410d",
+    "reports/mist_sleep/phase_m1_hmc_resumption_v1/scientific_results.json": "3a5335c4c292eb7a97201e5c3e877e980f5bbe61bd0cb399e47d061953a86701",
+    "reports/mist_sleep/phase_m1_hmc_resumption_v1/DASHBOARD.md": "057b99bbeb27354a53225625bbe5732f6e89a910455cd63700935ed0a64b64f7",
+    "reports/mist_sleep/phase_m1_hmc_resumption_v1/verification.json": "1e82218c4d66600c09f0224f32dd1e0d20b3a4f7a4b1ddd33ef9fec6a3c620c3",
+    "reports/mist_sleep/phase_m1_hmc_resumption_v1/STOPPED_ON_FAILURE.json": "9af801fa679eb08a9eaccc37862bee15a343dde0ac6605461d470114afd2e2ad",
+    "reports/mist_sleep/phase_m1_hmc_resumption_v1/resumption_registration.json": "fa463bcacf1ac2af021137c45a569c802e6e5fbc82a7ad75e9a27ee022425cd8",
+    "reports/mist_sleep/phase_m1_hmc_resumption_v1/acquisition_partial_receipt.json": "54105ca5e0910b7254acee2d19694612f1777285ccbcb3f4d20812d72bbe5ed3",
+    "docs/mist_sleep/PHASE_M1_RESUMPTION_V1.md": "1a6753e4ee16e483bdee590eb133a9aaf7288b817f1c7324af370653676bdba9",
+    "docs/mist_sleep/PHASE_M1_RESUMPTION_RESULTS_V1.md": "057b99bbeb27354a53225625bbe5732f6e89a910455cd63700935ed0a64b64f7",
+    "scripts/mist_sleep_m1_curl_transport.py": "964c8c90b40fdcb83ea722fdb770c8a36e12247f03065bc94cda6c7302c3aaf1",
+    "scripts/mist_sleep_m1_resume.py": "8a4c8d66d489e73148edfc19e8c50bb48044b5ecc96f4ae8a2b8d41cd50498b6",
+    "scripts/mist_sleep_m1_resume_report.py": "6338daf6f13697c6eb58b6c74a1d9eafdec9f343080d54c0234e9a9e131afd8a",
+    "tests/mist_sleep/test_m1_resumption.py": "2f14382a7292195b92a320c0b082f2bb95569615a38a0320be4147627a9ae8f9"
+  },
+  "self_excluded": true,
+  "private_EDF_or_predictions_published": false,
+  "historical_manifest_sha256": "eb72ef094a55ed6bd096ce40da8054723744cf66c0836779bfeae378f09f87e1",
+  "clinical_result_figures": 0
+}

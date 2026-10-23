@@ -1,0 +1,10 @@
+{
+  "CPU_passed": 1255,
+  "CPU_skipped": 13,
+  "CPU_wall_seconds": 20.09,
+  "CPU_log_sha256": "9dd8775dba65bb716f80f051f7c1b1b578ea13714af261a06bc889cd24d7d543",
+  "fixture_policy": "generated only; actual raw HMC never supplied to tests",
+  "new_resumption_tests": 9,
+  "scientific_modules_unchanged": true,
+  "historical_publication_hashes_rechecked": true
+}
