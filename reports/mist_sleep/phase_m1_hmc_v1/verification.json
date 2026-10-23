@@ -1,0 +1,31 @@
+{
+  "CPU": {
+    "passed": 1246,
+    "skipped": 13,
+    "wall_seconds": 20.4,
+    "runtime": "PyTorch 2.10 CPU; generated fixtures only",
+    "log_sha256": "8d9d98e7714601677cbd5fa1b7cd07ebfefeb7ff0f21201c4c6e8f1a660d39eb"
+  },
+  "M1_generated_contract_tests": 52,
+  "M1_CUDA_inference_passed": 1,
+  "historical_source_implementation_unchanged": true,
+  "implementation_sha256": {
+    "src/mist_sleep/external/__init__.py": "f806fd8e918aa1c164b162d342fe468f8a3cf9e6b8394ae554858531fee2c242",
+    "src/mist_sleep/external/blind_inference.py": "a3f24bc8e2649b1d22f56ceec27bbc23d36371c77cb2bfdf7b696992ae692fc3",
+    "src/mist_sleep/external/edf_header.py": "1d509859275a2274d96a017d09751ed4e3e24243688bd3c7abe7e6e8b4670855",
+    "src/mist_sleep/external/hmc_loader.py": "8786c7fb9769763271a15e3421319013c8e1984bc8b04d98dd4406f982cd04d0",
+    "src/mist_sleep/external/hmc_manifest.py": "d8deb1383ca9bd4be0b36311288f6bca3ceb146ff51a42234bd054841a0eaf62",
+    "src/mist_sleep/external/hmc_scoring.py": "627810abe07dbe8688a763a3d85e691eac16912566bf5dafa327a095e033fec0",
+    "src/mist_sleep/external/negative_controls.py": "b798d50a56c49a0224152c2ca54670b0aed0f2b035e22c1639891d069c4cfd25",
+    "src/mist_sleep/external/paired_statistics.py": "aee6eab172d57e96d4a4683aa259415739cce4f7ea188cb0868f241ccfa64c83",
+    "src/mist_sleep/external/prediction_seal.py": "4ebf98423c7889bc1a3e24a47abd3b99357d1adfbc029ea7abf3980f20074a28",
+    "src/mist_sleep/external/protocol.py": "6458940446a4b1099d2365158c5b526f4a5c5ba8611e9d1045bfb54f58db89f4",
+    "src/mist_sleep/external/publication.py": "f1a1a97b935313e4248bfaaba7f927d7c35a4eb249a102652234a350ac9010c8",
+    "src/mist_sleep/external/representation_audit.py": "77bb236f170b3f0555efb4c04e70fec2bed9b2b66a890c29ce8b7405232d8678",
+    "src/mist_sleep/external/runner.py": "4fe139fd461b655a3df164b9892c4058962377fb4315a8b6d2c298eafa570a48",
+    "src/mist_sleep/external/signal_contract.py": "dab81a6aeddcb10394cc74ae008c965fc1e27fe5490bbd4125dcf8f60d0dc057",
+    "src/mist_sleep/external/source_checkpoint.py": "aa42a84594cecf389b1edc6c0fa7934251116fd227010db750e8d18fb1baac15",
+    "src/mist_sleep/external/stage_metrics.py": "e4ecedb6eac0a9f95ad0a4f4721acf8a52a8be8cd98f6230605e1bf0e35e17ac"
+  },
+  "real_HMC_predictions_or_outcomes": false
+}

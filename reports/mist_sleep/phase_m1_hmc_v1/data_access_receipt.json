@@ -1,0 +1,46 @@
+{
+  "status": "METADATA_AND_HEADER_ONLY",
+  "dataset": "HMC",
+  "version": "1.1",
+  "metadata": [
+    {
+      "file": "RECORDS",
+      "bytes": 3171,
+      "sha256": "4fbc32e2fe8f1e7ee3d98da3ea65a8278f9322408ed8501abc27a8e93e44d00b",
+      "status": 200
+    },
+    {
+      "file": "SHA256SUMS.txt",
+      "bytes": 43220,
+      "sha256": "8089d591e654e8a312012c173a12173251929d522d7955064fa4cae223715db7",
+      "status": 200
+    },
+    {
+      "file": "LICENSE.txt",
+      "bytes": 14842,
+      "sha256": "9a78e7f22742dde9f66ae235ec793ba2212019dc4d0ced75c4da09ced0b35fb2",
+      "status": 200
+    },
+    {
+      "file": "Subjects_info_aggregated.txt",
+      "bytes": 163,
+      "sha256": "8156364bb81ac092bf0d763b2430a0a678becd9e4d408186ab44bd36719c0901",
+      "status": 200
+    }
+  ],
+  "metadata_downloaded_bytes": 61396,
+  "header_downloaded_bytes": 347904,
+  "header_HTTP_range_requests": 302,
+  "waveform_payload_downloaded_bytes": 0,
+  "scoring_annotation_downloaded_bytes": 0,
+  "target_waveform_value_reads": 0,
+  "target_scoring_outcome_reads": 0,
+  "new_source_waveform_reads": 0,
+  "SC_VAL_reads": 0,
+  "SC_RESERVED_reads": 0,
+  "other_external_dataset_reads": 0,
+  "configured_private_root": true,
+  "known_repository_local_HMC_copy_found": false,
+  "license": "CC BY 4.0",
+  "DOI": "10.13026/t79q-fr32"
+}

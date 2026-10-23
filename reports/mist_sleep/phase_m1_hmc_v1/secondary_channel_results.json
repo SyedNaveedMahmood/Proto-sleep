@@ -1,0 +1,9 @@
+{
+  "status": "NOT_RUN_BLOCKED",
+  "reason": "INSUFFICIENT_PERSISTENT_DISK",
+  "eligible_recordings": null,
+  "evaluated_recordings": 0,
+  "channel": "F4/M1",
+  "analysis": "secondary sensitivity",
+  "result": null
+}

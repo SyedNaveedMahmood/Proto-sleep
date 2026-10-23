@@ -1,0 +1,24 @@
+{
+  "decision": "PRIMARY_EVALUATION_BLOCKED",
+  "research_recommendation": "BLOCKED",
+  "M0_decision_unchanged": "MPI_FEASIBILITY_NOT_ESTABLISHED",
+  "all_four_checkpoint_hashes": true,
+  "generated_full_input_behavior_reproduced": true,
+  "preprocessing_generated_tests": true,
+  "official_metadata_verified": true,
+  "official_source_full_files_verified": false,
+  "disk_preflight": {
+    "free_bytes": 7063867392,
+    "required_bytes": 15700000000,
+    "reserve_bytes": 2000000000,
+    "pass": false
+  },
+  "predictions_sealed": false,
+  "labels_opened": false,
+  "primary_gain": null,
+  "both_seed_directions": null,
+  "CI_lower_above_zero": null,
+  "zero_scientific_optimizer_updates": true,
+  "zero_target_fits": true,
+  "not_a_negative_MPI_efficacy_result": true
+}

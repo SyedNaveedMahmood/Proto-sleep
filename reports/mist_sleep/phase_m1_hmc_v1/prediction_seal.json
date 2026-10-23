@@ -1,0 +1,9 @@
+{
+  "status": "NOT_RUN_BLOCKED",
+  "reason": "INSUFFICIENT_PERSISTENT_DISK",
+  "eligible_recordings": null,
+  "evaluated_recordings": 0,
+  "seal_sha256": null,
+  "prediction_files": 0,
+  "labels_opened": false
+}
