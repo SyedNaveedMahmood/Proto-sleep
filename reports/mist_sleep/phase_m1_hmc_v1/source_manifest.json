@@ -1,0 +1,10 @@
+{
+  "status": "OFFICIAL_METADATA_VERIFIED",
+  "recordings": 151,
+  "files": 453,
+  "manifest_sha256": "94245458a0d8182c9e28eae38fc120e2ea0a81874c610bba9a2025251ac0787d",
+  "metadata_only": true,
+  "waveform_files_acquired": 0,
+  "scoring_files_acquired": 0,
+  "participant_linkage": "not established; recording clusters only"
+}
