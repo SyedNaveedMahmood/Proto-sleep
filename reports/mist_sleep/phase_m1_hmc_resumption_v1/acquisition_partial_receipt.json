@@ -1,0 +1,23 @@
+{
+  "status": "PARTIAL_ACQUISITION_STOPPED_ON_TRANSPORT_FAILURE",
+  "official_version": "1.1",
+  "expected_recordings": 151,
+  "expected_files": 453,
+  "fully_verified_triplets": 8,
+  "verified_complete_files": 24,
+  "verified_complete_bytes": 908992759,
+  "incomplete_files": 1,
+  "incomplete_bytes": 83886080,
+  "incomplete_files_authenticated": false,
+  "free_bytes_after_stop": 24992694272,
+  "source_checksum_recheck": "all retained complete files passed",
+  "whole_cohort_authenticated": false,
+  "waveform_value_reads": 0,
+  "annotation_semantic_reads": 0,
+  "model_inference_epochs": 0,
+  "scientific_optimizer_updates": 0,
+  "original_blocked_evidence_byte_identical": true,
+  "scientific_protocol_and_modules_unchanged": true,
+  "automatic_deletion": false,
+  "automatic_retry": false
+}

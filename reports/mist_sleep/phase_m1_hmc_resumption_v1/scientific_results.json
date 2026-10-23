@@ -1,0 +1,28 @@
+{
+  "decision": "PRIMARY_EVALUATION_BLOCKED",
+  "resumption_reason": "OFFICIAL_SOURCE_TRANSPORT_FAILURE",
+  "storage_gate_passed": true,
+  "frozen_protocol_sha256": "5870af38c542352aa52d11aeb658c1dd0396a76da026247e9560455c8ea146e6",
+  "M0_macro_f1": null,
+  "M2_macro_f1": null,
+  "M2_minus_M0": null,
+  "per_seed_effects": {
+    "123": null,
+    "456": null
+  },
+  "paired_interval_95": null,
+  "success_threshold": 0.02,
+  "threshold_evaluated": false,
+  "eligible_recordings": null,
+  "evaluated_recordings": 0,
+  "known_participants": null,
+  "predictions_sealed": false,
+  "target_labels_opened": false,
+  "stage_metrics": null,
+  "calibration_metrics": null,
+  "secondary_F4_M1_results": null,
+  "representation_shift": null,
+  "recommendation": "BLOCKED; stop this resumption; no automatic retry or next phase",
+  "original_M1_blocked_report_preserved": true,
+  "M0_decision": "MPI_FEASIBILITY_NOT_ESTABLISHED"
+}

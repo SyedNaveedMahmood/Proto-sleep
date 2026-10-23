@@ -1,0 +1,19 @@
+{
+  "stage": "acquire",
+  "timestamp_UTC": "2026-10-23T06:55:40.306637+00:00",
+  "protocol_sha256": "5870af38c542352aa52d11aeb658c1dd0396a76da026247e9560455c8ea146e6",
+  "automatic_deletion": false,
+  "transport": "curl via original acquisition guards",
+  "status": "STOPPED_ON_FAILURE",
+  "decision": "PRIMARY_EVALUATION_BLOCKED",
+  "reason": "EXECUTION_GATE_FAILURE",
+  "exception_type": "OSError",
+  "wall_seconds": 142.80570641401573,
+  "process_CPU_seconds": 0.59566914,
+  "unblind_claim_persisted": false,
+  "primary_effect": null,
+  "paired_interval_95": null,
+  "optimizer_updates": 0,
+  "target_normalization_fits": 0,
+  "automatic_retry": false
+}
