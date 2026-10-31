@@ -1,5 +1,21 @@
 # Proto-sleep
 
+> **Current research overview (2026-10-31):** The original ProtoMAE/MorphMAE work has expanded into three separate research lines: [MIST-Transfer v3](https://github.com/SyedNaveedMahmood/Proto-sleep/tree/research/mist-transfer-v3-edf-shhs), [MIST-COVE](https://github.com/SyedNaveedMahmood/Proto-sleep/tree/research/mist-cove-phase16-expert-event-benchmark-v1), and [MIST-Sleep MPI](https://github.com/SyedNaveedMahmood/Proto-sleep/tree/research/mist-sleep-phase-m1-independent-hmc-transfer-v1). **The most recent code and reports live on those branches, not on `main`.** No independent-cohort zero-shot gain, clinical event-localization advantage, or sparse-MoE benefit has yet been established.
+
+## Start here: current research and results
+
+**[Research status, history, results, limitations and future direction](RESEARCH_STATUS_AND_HISTORY.md)** — cross-branch overview with links to the original scientific reports and explicit failed, blocked and untested research gates.
+
+| Research line | Verified progress | Important limitation |
+| --- | --- | --- |
+| MIST-Transfer v3 | Raw SC audit: **74 people, 146 recordings, 397,832 epochs**; 12 source-only baseline runs completed | Four-subject validation results; 55 SC extension subjects reserved; no independent transfer demonstration |
+| MIST-COVE, through Phase XVI | Exact internal dependency/witness auditing; SC-to-ST exploratory diagnostics; generated-only expert-event benchmark software | ST REM recall poor; sigma baseline beats exact supports on studied event proxy; expert validation blocked |
+| Original MIST-Sleep MPI | Morphology-preserving invariance implemented and tested on source development data | Predeclared improvement gate failed; independent HMC evaluation blocked by storage |
+
+The speculative morphology-conditioned **sparse Mixture-of-Experts (MoE)** extension is a proposed future experiment, not a completed implementation or claimed novelty. Each research line retains independent evaluation and access rules. This README's remaining sections preserve the **historical `main` implementation** and must not be mistaken for the latest experimental protocol.
+
+---
+
 Research code for prototype-guided single-channel EEG sleep staging, including the completed ProtoMAE development branch and a leakage-safe recovery of the original MIST/MorphMAE mechanism experiment.
 
 > Research status: transition-aware macro masking is not a confirmed performance contribution. The current priority is the original MIST question: whether MorphMAE initialization improves prototype-guided representations when the comparison is repeated with clean subject-level splits.
