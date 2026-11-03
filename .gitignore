@@ -124,3 +124,6 @@ tables/local/
 poetry.toml
 pip-wheel-metadata/
 .cache/
+
+# MIST-Evidence outputs contain participant waveform snippets. Keep private.
+mist_evidence_runs/

@@ -1,0 +1,38 @@
+{
+  "model": {
+    "fs": 100,
+    "samples": 3000,
+    "scales": [
+      100,
+      200,
+      400
+    ],
+    "stride": 50,
+    "prototypes_per_scale": 16,
+    "embedding_dim": 32,
+    "radius": 10,
+    "neural_fraction_cap": 0.5,
+    "use_summary": true,
+    "use_amplitude": true,
+    "summary_only": false,
+    "use_crf": true,
+    "raw_control": false
+  },
+  "training": {
+    "epochs": 60,
+    "patience": 12,
+    "lr": 0.0003,
+    "weight_decay": 0.0001,
+    "core_epochs": 16,
+    "encode_batch": 16,
+    "grad_clip": 5.0,
+    "seed": 123,
+    "deterministic": true
+  },
+  "bank": {
+    "seed": 1337,
+    "method": "medoid",
+    "candidates_per_subject_per_scale": 64
+  },
+  "note": "Reference defaults checked against typed configs. CLI overrides are recorded in each run, not loaded silently from this file."
+}
