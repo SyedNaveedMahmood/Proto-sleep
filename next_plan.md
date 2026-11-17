@@ -1,305 +1,181 @@
-# next_plan.md - MIST-Transfer v3: cross-dataset morphology correspondence
+# next_plan.md - MIST-SSDG: shape-routed experts for single-source sleep-staging generalization
 
-**Status:** CODING-AGENT IMPLEMENTATION PLAN, NOT a completed experiment or verified SOTA claim.
-**Plan prepared:** 2026-10-09.
-**Proposed new branch:** `research/mist-transfer-v3-edf-shhs`.
-**Base for the new branch:** `origin/research/mist-evidence-v1-verified` (tested on the user's RTX 4080 SUPER); keep `research/mist-morph-transport-v2` untouched as an optional experimental comparator. Do not continue training the old architecture by default. Do not modify `main`.
-**Scientific priority:** zero-shot, single-channel EEG sleep-stage transfer between genuinely different recording studies, followed by target-label-efficient adaptation. Faithful waveform visualization is a secondary but mandatory quality check for the proposed morphology mechanism.
+**Status:** PLAN ONLY. Nothing in this file is a completed experiment, a measured result of the proposed method, or a verified SOTA or novelty claim.
+**Plan prepared:** 2026-11-18.
+**Branch:** `research/mist-ssdg-shape-routed-v1`.
+**Base:** `research/mist-transfer-v3-edf-shhs` at `15995b31821ee8db717f3d6edfa41166de65d4a3`.
+**Supersedes:** the MCR plan of 2026-10-09, archived unchanged at `docs/archive/next_plan_v3_mcr_2026-10-09.md`.
 
-## 0. Coding-agent operating contract
+Labels used below: `VERIFIED` (read from this repository or from the cited source), `INFERENCE` (reasoned from verified facts, untested), `SPECULATION` (a bet), `UNVERIFIED` (must be checked before relying on it).
 
-You are implementing a NEW research program, not resuming a successful model. Prior positive probe results, negative transfer results, and two-epoch code smokes are not interchangeable. Read the repo and this document, implement one checkpointed phase at a time, run tests, and write factual output logs. Stop if invariants fail. Do not silently add losses or retune to obtain a positive validation result.
+## 0. One-paragraph summary
 
-**Highest-level question:** Does an EEG representation built from recognizable local morphology correspondences transfer better to an unseen recording study than an equally trained unconstrained EEG representation?
+Build and freeze everything on open datasets, keep SHHS untouched until the freeze, then use SHHS as the locked final test. The benchmark is single-source domain generalization (train on one dataset, test on the others), where the published number to beat is SleepBand's 67.08 average macro-F1. The model is a standard sequence-to-sequence sleep stager with three new parts: an acquisition-invariant front end, a shape-only token router with additive experts, and an optional two-pass stage-conditional reference. A per-expert, per-class ledger of the transfer gap answers the original question of which morphology matters, whether or not the accuracy claim succeeds.
 
-**Main contribution to test, not to assert as novel already:** *acquisition-robust, source-traceable morphology correspondence*. Match each local window to actual training waveforms and explicitly quantify whether the resulting evidence survives small, physiologically acceptable changes of recording characteristics. Test that mechanism against augmentation-only, feature-only, and generic latent-consistency alternatives. Prototype learning, shapelets, optimal transport, SSL, domain generalization, and CRFs all have extensive prior art. A claim of complete novelty or SOTA is forbidden until literature and independent benchmarks establish it.
+## 1. Why the plan changed
 
-For every command, save console output to a `.txt` file and produce a concise `FINAL_COPY_PASTE.txt`. Never store subject EEG, SHHS data, tokens, or restricted annotations in GitHub. Do not touch a working tree that has a running job. Commit each completed phase separately with documented test results. Keep a versioned `experiments/registry.yaml` and machine-readable run provenance.
+### 1.1 What this repository already shows
 
-## 1. Exact local data inventory and paths
+- `VERIFIED` Inputs use one global source-TRAIN microvolt z-score (`source-train-global-uV-zscore-v1`, `src/mist_transfer/source_data.py`). The only gain augmentation is +/-2% (`GainEvidence`, `src/mist_transfer/baselines.py`).
+- `VERIFIED` Phase XIV measured ST as +20.73 microvolts stage-balanced centered RMS above SC, and spindle-candidate rates of 32.48/hour (SC) against 121.87/hour (ST) on Fpz-Cz.
+- `VERIFIED` Frozen SC to ST recall (SC figures are in-sample): Wake 0.994 to 0.909, N1 0.504 to 0.281, N2 0.921 to 0.906, N3 0.869 to 0.779, REM 0.791 to 0.216.
+- `INFERENCE` The stages with clear positive morphology (N2, N3) transfer; the low-amplitude stages (REM, N1) collapse. That pattern fits an uncorrected gain shift. No arm in the reviewed branches was tested with per-recording scaling, so this is untested.
+- `VERIFIED` Morphology objectives have not moved F1: MorphMAE initialization -0.0055 against baseline; MPI +0.00585 against a +0.02 gate.
+- `VERIFIED` P3B models are epoch-only with 13,556 and 34,197 parameters, trained on 15 subjects and validated on 4. Their 0.72 source-VAL macro-F1 is not comparable to any published table.
 
-The following are USER-REPORTED local paths, not verified accessible from the coding agent's own runtime. Preserve as defaults in `configs/data_paths.example.yaml`, override by CLI/env, and validate paths before opening data.
+### 1.2 Why not a direct MoECLIP port
 
-```yaml
-sleep_edf_20_npz: "/home/FA006/Desktop/Dimension/dataset/Preprocessed Sleep-EDF-20 dataset"
-sleep_edf_78_npz: "/home/FA006/Desktop/Dimension/dataset/Preprocessed Sleep-EDF-78 dataset"
-sleep_edfx_original_root: "/home/FA006/Desktop/Sleep_dl/Sleep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0"
-sleep_edfx_sc_raw: "/home/FA006/Desktop/Sleep_dl/Sleep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-cassette"
-sleep_edfx_st_raw: "/home/FA006/Desktop/Sleep_dl/Sleep_edf_fulldataset/physionet.org/files/sleep-edfx/1.0.0/sleep-telemetry"
-shhs_nsrr_root_if_approved: "/home/FA006/Desktop/Dimension/dataset/SHHS_NSRR"
+- MoECLIP adapts a frozen CLIP whose zero-shot generalization is worth protecting. Sleep EEG has no such backbone: the NeuroAtlas benchmark reports EEG foundation models level with supervised sleep stagers only at single-window level, and behind them once sequence context is allowed.
+- MoECLIP's own ablation attributes roughly one point of pixel AUROC and two of image AUROC to its orthogonal-subspace and ETF pieces over a plain MoE. They are small effects.
+- MoE for EEG is crowded: MoESleepNet (multi-view experts, single-channel sleep), SREA (shared plus routed experts, cross-subject, includes Sleep-EDFx and ISRUC-3), SpecMoE (spectral gating), and SleepBand (single-source generalization with a learnable Morlet filter bank).
+- What is kept from MoECLIP: token-level top-k routing, disjoint expert input subspaces, the ETF loss and the load-balance loss.
+
+## 2. Research questions
+
+- **RQ1.** Does shape-only routing with night-referenced amplitude reduce the cross-dataset gap beyond what per-recording normalization alone achieves?
+- **RQ2.** For each sleep stage, which expert carries the transfer gap, and is it routing shift (how often a morphology occurs) or response shift (how the same morphology is read)?
+
+RQ2 yields a finding even if RQ1 is null.
+
+## 3. Benchmark and the claim
+
+| Benchmark | Number to beat | Decision |
+|---|---|---|
+| In-dataset Sleep-EDF-20, single channel | Published claims up to 86.7% accuracy, 81.7 macro-F1 | Skip: saturated, protocol-inconsistent |
+| Single-source generalization, 5 datasets, 20 source-to-target pairs | SleepBand 67.08 average macro-F1, 72.25% accuracy; plain training 62.98 macro-F1 | Primary |
+| Leave-one-dataset-out | SleepBand 72.61 average macro-F1; plain training 70.35 | Secondary, if time allows |
+
+SleepBand facts (`VERIFIED` from arXiv:2607.04851): one EEG plus one EOG channel per dataset (SleepEDF Fpz-Cz + horizontal EOG; HMC F4-M1 + E1-M2; ISRUC F4-M1 + E1-M2; SHHS1 C4-M1 + ROC-LOC; CinC 2018 C3-M2 + E1-M2); 100 Hz, 0.5-35 Hz bandpass, z-score; sequences of 20 epochs; 1.15M parameters.
+
+Claim hierarchy:
+
+1. Beat 67.08 on the full 20-pair table: SOTA on single-source generalization, with SHHS as a pre-registered locked test.
+2. Beat SleepBand re-run by us but not the published number: report both.
+3. Either way: the transfer-gap ledger (RQ2).
+
+"Completely novel" and "SOTA" cannot both be promised. The design is a standard skeleton plus new mechanisms placed where the benchmark is weakest.
+
+## 4. Decisions frozen before any run
+
+- **Inputs:** EEG + EOG primary; EEG-only as a secondary table.
+- **Datasets:** Sleep-EDF, HMC, ISRUC, CinC 2018, SHHS1.
+- **Preprocessing:** 100 Hz, 0.5-35 Hz bandpass, z-score, matching SleepBand.
+- **Normalization rule:** recording-local, label-free statistics are permitted and applied identically to every arm and every dataset. This amends `docs/TRANSFER_PROTOCOL.md`, which currently forbids target statistics. The amendment must be committed before the first run. Statistics pooled across target recordings remain forbidden.
+- **Selection:** every hyperparameter is chosen on source validation only. At least three seeds per arm.
+- **SHHS rule:** no SHHS data in any form before the freeze in phase 7. This includes the third-party "Preprocessed SHHS1 dataset" deposit (doi:10.21979/N9/EAMYFO), which is C4-A1 only at 125 Hz, has no EOG, and whose licence was not read.
+- **Reused targets:** ST has been exposed by MIST-COVE and is development data, never confirmation.
+
+## 5. Architecture
+
+### 5.1 Standard skeleton (known parts)
+
+- EEG + EOG input, sequences of 20 epochs, sequence-to-sequence cross-entropy.
+- Epoch encoder of roughly 0.3-0.5M parameters and a small transformer over epochs, about 1M parameters in total (`SPECULATION` on exact size; chosen to match SleepBand's scale).
+
+### 5.2 New part 1: acquisition-invariant front end
+
+Treat each recording's acquisition chain as an unknown filter.
+
+- Cut each 30-s epoch into 2-s tokens with 1-s stride (29 tokens).
+- **Shape stream:** divide each token by its own RMS; use a sign-symmetric stem (shared weights on x and -x, then pool).
+- **Amplitude stream:** log-RMS and five band envelopes per token, each expressed as a robust rank within that recording.
+- By construction the model is invariant to per-recording gain, polarity and band-wise gain. This is the sleep analogue of cepstral mean normalization in speech.
+- Known weakness: night statistics shift with stage composition. Part 3 targets this.
+
+### 5.3 New part 2: shape-only router with additive experts
+
+- A linear router on shape features selects top-2 of K = 4 experts. It never sees amplitude, so a pure gain change between datasets cannot change routing.
+- Each expert reads a disjoint slice of the shape features plus the amplitude ranks, and emits per-token stage evidence and a pooled embedding.
+- Epoch logits = sum of token evidence (local term) + sequence-model output (context term).
+- Auxiliary losses, each ablatable: ETF on expert outputs (weight 0.01 as in MoECLIP), load balance (squared coefficient of variation of expert load).
+- In a stem trained from scratch, the frozen orthogonal split reduces to disjoint channel groups. It carries less meaning than in MoECLIP.
+
+### 5.4 New part 3 (optional): two-pass stage-conditional reference
+
+The first pass yields stage posteriors. The second pass re-references each token against that person's own predicted-N2 or predicted-wake background. No gradient updates at test time. High risk; run only if phase 4 passes and stage composition visibly hurts on HMC.
+
+### 5.5 Transfer-gap ledger (RQ2)
+
+With n_k the routing share of expert k and m_k its mean evidence for the true class, the local margin is the sum over k of n_k * m_k. The source-to-target change splits exactly:
+
+```
+delta = sum_k [ dn_k * m_k(S) ]      routing shift
+      + sum_k [ n_k(S) * dm_k ]      response shift
+      + sum_k [ dn_k * dm_k ]        interaction
 ```
 
-Note: this SHHS path is PROPOSED and must not be assumed to exist. It is an ASCII folder name used consistently in the examples below.
+Illustrative numbers only (not data): n 0.60 to 0.55 and m +1.2 to +0.3 gives -0.555 = -0.060 routing - 0.540 response + 0.045 interaction. The ledger must reconstruct the local logits to FP32 tolerance; a failed reconstruction is a hard stop. Target labels are used only for this post-hoc analysis, never for selection.
 
-Expected signal contract for the current network is single EEG, 30 s, 100 Hz, 3000 samples, five mapped labels `[Wake, N1, N2, N3, REM]` as integer `[0,1,2,3,4]`. This is an OUTPUT contract of preprocessing, never an assumption about raw EDF or SHHS. The agent must record actual sampling rates, units, electrode reference/montage, label coding, and original epoch positions before conversions.
+### 5.6 Expectations
 
-### Why EDF-20 and EDF-78 are not two independent datasets
+- `INFERENCE` Part 1 is the component most likely to move cross-dataset numbers.
+- `SPECULATION` Part 2 adds accuracy over a dense matched model. Its firmer value is the ledger.
+- `SPECULATION` Part 3 helps on clinical cohorts.
 
-EDF-20 is a subset of the expanded Sleep-EDF sleep-cassette cohort that is also represented within EDF-78. NEVER train on EDF-20 and call evaluation on all EDF-78 'external transfer'. Detect overlap from normalized subject identifiers, night identifiers, original EDF recording ID, and signal/metadata hashes, not merely NPZ filenames. EDF-78 subjects not in EDF-20 can provide **subject-held-out extension/generalization within the same SC study**; they are not a new acquisition cohort. Build a canonical manifest that joins both preprocessed sets with the original EDF+ files. Refuse ambiguous subject mappings.
+## 6. Phases and gates
 
-The original PhysioNet expansion also includes a separate Sleep-Telemetry (ST) study. SC vs ST changes study, setting, population, and may involve placebo/temazepam. This is a valuable, but confounded, **cross-study proxy**. If using SC -> ST, report its limitations, obtain the correct treatment metadata, and separate placebo and temazepam nights if confirmed. Neither independent physiological equivalence nor isolation of an acquisition-only shift may be assumed. Keep person/nights grouped for every split.
+Each phase is committed separately with its report. A failed gate stops the line; do not retune to rescue it.
 
-### Source provenance
+**Phase 1 - parallel setup.** Submit the NSRR application for SHHS. Get SleepBand's public code running. Check disk space. Commit the protocol amendment from section 4.
 
-- PhysioNet Sleep-EDF Expanded v1.0.0: https://physionet.org/content/sleep-edfx/1.0.0/
-- SC has `*PSG.edf` signal and `*Hypnogram.edf` stage annotations, with PSG channels including `Fpz-Cz` and `Pz-Oz`. ST study metadata are described by the same source. Never assume that an ST file's naming convention matches the NPZ filename convention.
-- Use `RECORDS`, `SHA256SUMS.txt`, `SC-subjects.xls`, and `ST-subjects.xls` as external provenance inputs only. Check each EDF/hypnogram pair programmatically.
+**Phase 2 - open-data pipeline.** Stream-extract EEG + EOG one file at a time (download, extract two channels at 100 Hz, delete the original) for Sleep-EDF, HMC and ISRUC. Add CinC 2018 when storage allows. Estimate: two channels at 100 Hz in float16 is about 11.5 MB per 8-hour night. Reuse the P2 manifest, hashing and split guards.
+*Gate:* P2-style integrity checks pass on every dataset; channels, native rates and stage maps recorded from headers.
 
-## 2. SHHS: easiest legitimate route (optional until approved)
+**Phase 3 - reproduce baselines.** Plain training and SleepBand on the open pairs.
+*Gate:* match SleepBand's published numbers on pairs not involving SHHS, where the paper reports per-pair values. If not matched, fix the pipeline before anything else.
 
-There is NO documented lawful unrestricted public mirror equivalent to PhysioNet's open Sleep-EDF files. SHHS is hosted by the National Sleep Research Resource (NSRR) and generally requires requesting data access and accepting its use agreement. Do not bypass that process or place credentials in scripts/logs. Use the official `nsrr` Ruby gem. The gem supports resumable downloads and filtering by file name, allowing a small pilot rather than every SHHS EDF.
+**Phase 4 - front end alone.** Add part 1 to the skeleton. Ablations: gain only, band-wise gain, sign symmetry.
+*Gate (proposed threshold):* at least +2 average macro-F1 over plain training across the open pairs, three seeds. SleepBand's own margin over plain training is about 4 points; less than 2 is not competitive.
 
-1. Request SHHS access at https://sleepdata.org/datasets/shhs (read https://sleepdata.org/showcase/where-to-start). Wait for authorization.
-2. After approval, retrieve the personal token interactively at https://sleepdata.org/token. Do not echo or commit it.
-3. Install the downloader (Ruby >= 2.7 is required): `gem install nsrr --no-document`.
-4. Use these commands **from the new proposed SHHS data root** (after approval):
+**Phase 5 - router and experts.** Add part 2. Arms: dense model of matched size with the same front end; router that also sees amplitude; full model.
+*Gate:* full minus dense matched. If no gain, keep part 2 only as the measurement instrument for the ledger, provided it matches the dense model within seed noise.
+
+**Phase 6 - two-pass reference (optional).** Conditions in 5.4.
+
+**Phase 7 - freeze.** Tag code, configs, checkpoints and the hash of every manifest. Record the tag in `experiments/registry.yaml`.
+
+**Phase 8 - SHHS locked test.** Requires approved NSRR access. Download SHHS1 only, with filtered commands, into the approved local root; never commit tokens or data:
 
 ```bash
-mkdir -p "/home/FA006/Desktop/Dimension/dataset/SHHS_NSRR"
-cd "/home/FA006/Desktop/Dimension/dataset/SHHS_NSRR"
-
-# Initial pilot: 9 documented SHHS1 participant IDs, not the entire cohort.
-nsrr download shhs/polysomnography/edfs/shhs1 \
-  --file='^shhs1-20000[1-9]\.edf$'
-nsrr download shhs/polysomnography/annotations-events-nsrr/shhs1 \
-  --file='^shhs1-20000[1-9]-nsrr\.xml$'
-
-# Metadata useful for audit. Download the folder only if authorized.
-nsrr download shhs/datasets --shallow
+nsrr download shhs/polysomnography/edfs/shhs1
+nsrr download shhs/polysomnography/annotations-events-nsrr/shhs1
 ```
 
-Check the downloaded names and paired EDF/XML files; filter matching depends on the currently published filenames. The initial 9 are for adapter smoke/testing, NEVER for claimed transfer performance. The server may demand approval or deny a specific resource. If a filtered command fails, inspect `nsrr help` and the current NSRR file tree, do not scrape or use unauthorized links. For a larger approved collection, use `nsrr download shhs/polysomnography/edfs/shhs1` and `nsrr download shhs/polysomnography/annotations-events-nsrr/shhs1`, optionally with documented filters; both are large and should run separately with disk-space checks.
+Extract C4-A1 and the EOG pair used by SleepBand. Run the frozen models on SHHS as a target, then train on SHHS as a source with the frozen hyperparameters. This completes the 20-pair table.
 
-SHHS staging is typically stored in XML annotation files, not embedded as EDF staging channels. Verify time alignment, event durations, stage-code map, EEG montage and sampling rate from headers. Different SHHS EEG derivations are not equivalent to Sleep-EDF Fpz-Cz. Never silently claim cross-montage invariance if a mapping is unavailable. Use full recording IDs and group repeated visits/related participants appropriately.
+**Phase 9 - leave-one-dataset-out.** Second table, number to beat 72.61 average macro-F1.
 
-**Verified official docs:**
-- https://sleepdata.org/datasets/shhs/pages/05-polysomnography-introduction.md
-- https://sleepdata.org/datasets/shhs/files/polysomnography
-- https://sleepdata.org/demo
-- https://github.com/nsrr/nsrr-gem
-- https://sleepdata.org/forum/extract-hypnograms-from-xml-v2/1
+**Fallback.** If access has not arrived by the freeze, write up the open-data results and add SHHS in revision. Phases 1-7 do not wait on it.
 
-## 3. Evaluation hierarchy: prevent false transfer results
+## 7. Endpoints and reporting
 
-Define **three distinct claims**, never conflate:
+- **Primary:** average macro-F1 over the 20 source-to-target pairs, mean and spread over seeds.
+- **Secondary:** accuracy, Cohen's kappa, per-stage F1 (N1 and REM in particular), calibration (ECE, NLL), per-pair table, EEG-only table.
+- **RQ2 output:** class by expert ledger for each pair, with routing, response and interaction terms.
+- Participant is the sampling unit for intervals; seeds are repeated optimizations, not independent subjects.
+- Report every run, including failed gates.
 
-**A. Same-cohort subject generalization:** develop on EDF-20 SC and evaluate only strictly disjoint EDF-78 SC participants/recordings. This can measure robustness to age/subject variation; it is NOT a new dataset. Remove every overlapping subject and night; confirm with hashes.
+## 8. Open items to verify
 
-**B. Cross-study exploratory shift:** train on SC (EDF-78 SC, with internal subject-level validation) and evaluate ST study as a separate domain. Pre-register the SC -> ST policy before inspecting ST scores. If ST influences architecture selection, ST is development data and cannot later be called the locked final test. Explicitly report the differences in population, recording location, and drug/placebo conditions.
+- `UNVERIFIED` Whether SleepBand's z-score is per recording, per epoch or global. If per recording, the gain part of the front end is already in their baseline.
+- `UNVERIFIED` Which SHHS1 recordings SleepBand uses. The common subset is 329 recordings.
+- `UNVERIFIED` Whether SleepBand's paper reports per-pair numbers (needed for the phase 3 gate).
+- `UNVERIFIED` CinC 2018 download size and available disk space.
+- `UNVERIFIED` Novelty of parts 1-3 combined. A handful of searches found no match; a full-text audit against SleepBand, SREA, MoESleepNet, SpecMoE and SleepDG is required before any novelty claim.
+- HMC and ISRUC have no Fpz-Cz, so montage shift is confounded with dataset shift on every Sleep-EDF pair. Report it as such.
 
-**C. True external cohort (highest priority if available):** after all architecture/hyperparameters are frozen using SC and/or ST development, evaluate once on an approved, participant-disjoint SHHS held-out collection. Primary metric: zero-shot mean **subject** Macro-F1 without target training. Secondary: limited-target-label adaptation using target TRAIN/VAL splits separate from locked target TEST. Only this regime potentially supports 'cross-dataset' transfer. SHHS is not equivalent to Sleep-EDF; scoring and montage differences must be documented.
+## 9. Hard stops
 
-No target test labels for checkpoint selection, feature normalization, prototype selection, augmentation strength, filtering or architecture design. Unlabeled target access, if ever allowed, must be declared as a different **transductive** protocol, not called zero-shot domain generalization. Final target test results are kept locked until the method is frozen.
+Any train/validation/test identity overlap; target data used for selection, normalization across recordings or architecture choice; SHHS opened before the freeze; ledger reconstruction failure; expert collapse (one expert taking nearly all load); non-finite gradients.
 
-Use the SC age/participant metadata for stratified analysis, not for stage-prediction inputs. Data cleaning policies should be chosen before target test labels are examined. Do not trim an evaluation night based on its ground-truth sleep-stage labels in a zero-shot protocol; that uses target annotations at inference time. Make no silent assumption that contiguous NPZ indices correspond to physically contiguous source epochs.
+## 10. Sources
 
-## 4. What from prior code to RETAIN, REUSE AS CONTROL, or DROP
-
-**Base branch:** `research/mist-evidence-v1-verified` at known inspected revision `676963bea58b749d90662d133217fe72c4156981`. Re-fetch and validate exact HEAD before development. It passed real-PC CUDA two-epoch safe epoch-only integration on fold 0, seed 123:
-
-| model | validation MF1 | interpretation |
-|---|---:|---|
-| `evidence` | 0.71277 | two-epoch software/optimization smoke |
-| `summary_only` | 0.57449 | simple control in same smoke |
-| `raw_context` | 0.69645 | nonlinear control in same smoke |
-
-These ARE NOT benchmarks, not subject-independent research confirmation, and not transfer evidence.
-
-Keep: `src/mist_evidence/{model,data,runtime,explain}.py` as a **reference** for bounded waveform matching, actual waveform-anchor provenance, additive score ledger, deterministic seeds, non-test-opening train/val loading, epoch-only fallback, safe checkpoint resume, and synthetic tests. Carry over only tested implementation where compatible with new data contract. Audit/rework the EDF-20-specific `edf_manifest()`; it currently interprets `filename[3:5]`, assumes the 20 specific IDs and supports 20-fold ordering. DO NOT reuse this for EDF-78, ST or SHHS.
-
-Keep the earlier MorphSpec-R1 objective as an OPTIONAL self-supervised comparison, not a required initializer. Its target is 16 descriptors (5 log relative band powers + 5 chunk variations + 5 chunk maxima + normalized line length). Those are generic morphology-related descriptors, not diagnosed spindles or K-complexes. MorphSpec's prior positive frozen-probe results did not translate into improved fully trainable AttnSleep staging. Do not advertise a proven transfer advantage.
-
-Leave `research/mist-morph-transport-v2` as a separate optional comparator, not the base of the new branch. It implements semi-unbalanced Sinkhorn plus background (reference `src/mist_evidence/transport.py`). Real-EEG and CUDA v2 results are not available in the conversation. **Do not install optimal transport as the default merely to look novel.** Test its extra runtime and incremental effect only if the simpler new baseline works.
-
-Avoid bringing over transition masking, WCO, spherical prototype loss penalties, or mandatory legacy WaveSleepNet modules without a new falsifiable reason. Existing AttnSleep remains a required supervised baseline; reproduce its protocol, not merely quote historical F1 numbers.
-
-## 5. Proposed v3 scientific mechanism: Morphology Correspondence Reliability (MCR)
-
-### Mechanistic hypothesis
-
-A local EEG structure should map to similar *actual training-waveform anchors* under modest recording perturbations known not to destroy that structure. A classifier using reliable, localized correspondence evidence may transfer better than one relying only on unrestricted latent activations. Stage classification and correspondence reliability are jointly measured. This hypothesis is NOT a theorem: synthetic perturbation invariance is not the same as actual electrode-montage invariance or cohort adaptation.
-
-### Frozen minimal candidate before adding optional modules
-
-```
-30-s single EEG, calibrated original channel + explicit normalization metadata
-    |-- windows 1s / 2s / 4s (overlapping, time positions known)
-    |-- measured shape, relative spectrum, envelope, normalized line length
-    |-- small local CNN with NO neighboring-epoch leakage
-    |-- immutable actual TRAIN waveform anchors, stored with provenance
-    |-- bounded observed+learned local distance and neutral background score
-    |-- simple soft correspondence distribution over anchors+background
-    |-- morphology evidence: anchor match strength, location, confidence,
-    |   unmatched/background mass, and separate measured summary variables
-    |-- auditable stage evidence model
-    +-- classifier (begin independent-epoch, add temporal context only after
-        verified original retained epoch indices)
-```
-
-Every crop must be traceable to the exact source recording and sample offset. If an anchor is associated with a sleep-stage label, call that the *source epoch stage*, not an event type. Never label an anchor 'spindle' without independent event annotations or expert review. Model confidence and correspondence certainty need calibration, including unmatched/background cases and artifacts.
-
-### One NEW candidate training term: evidence-view consistency
-
-For two plausibly acquisition-altered views `T_a(x)` and `T_b(x)` of the **same** input EEG, compute the correspondence distribution `p_i^a` and `p_i^b` of the **same aligned physical window** across all anchors plus background. Proposed form (not yet implemented):
-
-```
-L_total = L_stage + lambda_cons * L_correspondence + lambda_aux * L_morphology
-L_correspondence = average_valid_windows JS(p_i^a || p_i^b)
-```
-
-Use an anchor-matching baseline with `lambda_cons=0`, a matched augmentations-only baseline, a generic latent consistency baseline, a descriptor-only baseline, and a neural-only baseline. Stage loss remains necessary; correspondence consistency alone can collapse everything onto background. Monitor occupancy entropy, effective anchor count, all-background fraction, and cross-subject anchor concentration; have explicit hard-stop numerical diagnostics and ablate `lambda_aux` before including it in the core.
-
-**Only allowed augmentations initially:** conservative calibrated gain/noise/offset or instrument-like perturbations under separately verified constraints, without changing epoch duration, annotated stage, window alignment, or meaningful stage-associated frequencies. Test each proposed operator using clean exemplar waveform features and, where available, independent event annotations. Reject any operator that removes sigma bursts/slow oscillations or confounds the target; no automatic polarity flip, arbitrary warping, aggressive low/high-pass filtering, or simulated change of electrode derivation from a single-channel trace. Select augmentation magnitudes ONLY with source-development data.
-
-The candidate research novelty is *localized, source-traceable morphology correspondence stability across acquisition conditions with explicit uncertainty*, not 'we invented prototypes/OT/consistency'. A full-text similarity audit with WaveSleepNet, ProtoSleepNet, SleepDG, U-Sleep and relevant shapelet/domain-stability studies is mandatory before claiming originality.
-
-### Optional, only after measurements support it
-
-- Learn a correspondence-reliability gate that routes unstable/noisy windows to background or measured summary evidence, with a calibration and counterfactual ablation. Gate must not mask evidence post-hoc; its scores must be included in explanations.
-- Semi-unbalanced transport vs independent soft matching using IDENTICAL anchor bank, encoder, splits, seed and training budget. Keep it only for demonstrated generalization, calibration, localization or explanation-quality gain.
-- Add temporal context/CRF ONLY after original epoch indices are reconstructed and checked for discontinuities/night boundaries. Compare independent epochs, additive context, CRF, and both; no assumed contiguity.
-- Multi-source domain-conditional regularization ONLY after actually acquiring multiple independently characterized source studies, and only after measuring conditional stage/covariate shift. Do not equalize biologically different subjects or labels by default.
-
-## 6. Implementation tickets, in mandatory order
-
-### P0 - New branch and reproducibility skeleton
-
-- Create new branch from inspected v1 reference, no main changes; record full parent SHA in `docs/PROVENANCE.md`.
-- Add `next_plan.md` to root, `configs/data_paths.example.yaml`, `src/mist_transfer/`, `scripts/`, `tests/transfer/`, `experiments/registry.yaml`, `docs/DATA_CONTRACT.md`, and `docs/TRANSFER_PROTOCOL.md`.
-- Add CLI scripts that write JSON, CSV and text output; every invocation includes git SHA, package versions, config hash, source recording hashes, seed, split IDs, output directory, and leakage flags.
-- Unit tests must pass without user datasets (tiny generated EDF+ fixture or mocks). Existing v1 test suite must still pass; do not change old checkpoint semantics inadvertently.
-
-Acceptance: CLI help works; full environment info logged; reproducibility smoke deterministic to numerical tolerance; writing is atomic and interrupted runs resume safely. A `best.pt` file alone never means a run completed.
-
-### P1 - DATA AUDIT ONLY, NO TRAINING
-
-Implement `scripts/audit_edf_transfer_data.py`:
-
-- enumerate NPZ filenames, optional manifest text, actual NPZ keys without modifying anything, raw SC/ST PSG and hypnogram pairs;
-- parse canonical study (`SC`, `ST`), subject ID, night, PSG/Hypnogram pair, file hash, sample rate, montage, EDF amplitude units;
-- compare SC EDF20 NPZ, EDF78 NPZ and original SC EDF recordings using subject+night+PSG ID and a robust cross-representation signal overlap check; output overlap matrix and subject-disjoint partitions;
-- map annotation intervals to original 30-s grid, preserve absolute/original epoch_index, recording/night boundaries, exclusion reasons, unknown/Movement intervals;
-- reject duplicate or conflicting identifiers, label mapping, missing physical calibration, non-monotone epoch indices, disagreements in lengths or annotations;
-- verify a small NPZ sample waveform against correctly aligned raw EDF channels up to documented preprocessing transforms; DO NOT assume standardized NPZ is a byte-identical EDF epoch;
-- explicitly label preprocessed set mismatch or unknown provenance if unable to reconstruct the process.
-
-Write `reports/data_audit/edf_inventory.csv`, `overlap_matrix.csv`, `stage_distributions.csv`, `channel_units.csv`, `audit.json`, `FINAL_COPY_PASTE.txt`. No test-stage metric, no GPU training.
-
-**Gate P1:** Evidence of subject/night leakage => hard stop. If original epoch indices cannot be recovered, only independent-epoch experiments allowed. No `--assume-contiguous` unless independent alignment audit passes.
-
-### P2 - One canonical preprocessing pipeline
-
-Implement raw Sleep-EDF/SHHS loaders with `mne` or `pyedflib` if installed, but lock package version and test against raw EDF headers. Output `recording_id`, `subject_id`, `study`, `visit/night`, `x`, `y`, `original_epoch_index`, `start_seconds`, `channel`, `reference/montage`, `fs_native`, `fs_output`, `raw_units`, `amplitude_conversion`, `annotation_source`, `excluded_epochs`, and `source_sha256` as a manifest. Do not invent microvolt units for normalized NPZ data.
-
-Sleep-EDF original labels are Rechtschaffen and Kales W/R/1/2/3/4/M/?; map to W/N1/N2/N3/REM with 3+4 combined, and exclude unknown/movement with original positions retained. Verify XML stage semantics separately for SHHS; don't assume all scorer conventions are identical. Avoid any target-label-dependent trimming under zero-shot claims. Do not concatenate interrupted epochs as if adjacent. Preserve native recording length in manifest.
-
-For SHHS, pair `shhs1-ID.edf` with `shhs1-ID-nsrr.xml`, derive labels from XML in a verified 30-s alignment, record signal montage and native sampling rate, and resample to 100 Hz with explicit anti-alias filtering if needed. For EDF20/78, use `Fpz-Cz` baseline where available and separately audit `Pz-Oz` as a montage sensitivity test. SHHS may offer DIFFERENT EEG derivations; do not call them the same physical input because both are 'EEG'.
-
-**Gate P2:** Known synthetic EDF+/XML fixtures recover exact epochs, indices, stage maps and discontinuities. Differential checks against raw labels and a random audit of ten participant-night pairs pass. Unit/calibration and label review complete before training.
-
-### P3 - Establish source-only baselines FIRST
-
-Before proposing a new loss, train/evaluate matched versions of: (i) AttnSleep reproduced in this repository, (ii) v1 `evidence`, (iii) `summary_only`/measured descriptors, (iv) a compact unrestricted CNN `raw_context`, (v) a source-only augmentation baseline. Add SleepDG/U-Sleep comparisons only if modality, training datasets and code/pretraining exposure can be made compatible; otherwise compare as contextual published reference, clearly NOT head-to-head SOTA. Baselines share train/val participants, channel, stage mapping, preprocessing, training budget, selection metric, and multiple seeds.
-
-Primary SC task: within-EDF78 SC held-out participants. Secondary transfer proxy: SC -> ST. Do not tune on any locked target subset. Report Macro-F1 per subject and class, accuracy, kappa, balanced accuracy, confusion, calibration, runtime and memory, and sample counts/failed subjects.
-
-**Gate P3:** All baseline input contract and split checks pass. No architecture claims until full training at a fixed source-val-selected budget is completed. Two-epoch smoke figures are not final F1.
-
-### P4 - Minimal morphology correspondence model
-
-Reuse the verified real training-snippet/provenance extraction and bounded local distance from v1 as starting point. Reimplement an independent-epoch 1/2/4-s correspondence path under the P2 manifest. Evidence variables must sum to chosen class margin (FP32 tolerance) with explicit scale/anchor/location/summary/background contributions. Report both successful and incorrect predictions, artifacts and unmatched examples; keep source-snippet waveforms private.
-
-Unit tests: valid shape and reference, no cross-epoch receptive field, no leakage, exact additive ledger, finite gradients, immutable anchor waveform, noncollapse under easy synthetic distribution, complete source provenance, same-bank/same-seed baseline comparability.
-
-### P5 - Proposed MCR loss (ONE CHANGE)
-
-Pre-register augmentation policy and a SMALL grid or one fixed weight selected using SOURCE validation only. Compare:
-
-`M0` summary-only, `M1` unrestricted CNN, `M2` v1 matched waveform evidence, `M3` M2+augmentation without correspondence consistency, `M4` M2+generic latent consistency, `M5` M2+MCR correspondence-consistency. Optional `M6` transport same anchor bank only if earlier tests show credible mechanism benefit.
-
-Include `L_aux` only as separately named ablation, not automatically. Estimate speed/memory overhead and measure the benefit of the extra complexity. If MCR hurts zero-shot ST/held-out SC or simply matches M3/M4, DROP it. Do not pick post-hoc best perturbation or target-like tuning on locked external SHHS.
-
-### P6 - Clinical morphology and explanation checks
-
-Do not label a short EEG snippet a spindle, K-complex or slow wave because its surrounding 30-s sleep-stage label is N2/N3. Store neutral anchor IDs until independent event annotations or blinded expert ratings exist. For sampled correct and incorrect predictions across domains, export fixed-policy pairs (query crop + immutable training crop + observed descriptors + score ledger + background/uncertainty), plus adjudication CSV. If expert/event data are available, prespecify event overlap/tolerance and report precision/recall by event, domain and stage; report misidentified artifacts.
-
-Counterfactual test: remove/cap individual *evidence variables* and recompute class margins; contrast with separately justified signal-level perturbations. Exact arithmetic explanations alone do not establish physiological causality. Compare event fidelity with and without MCR, not just attractive plot quality.
-
-### P7 - Optional sequence model ONLY after original indices verified
-
-Add inter-epoch context and/or CRF as ablation using original epoch IDs and sleep-night boundaries. A label gap/missing epoch must break contextual adjacency. Test radius 0, context-only, CRF-only, both and report transition-specific F1 and false smoothing. Different histories and nights can never share context. If this stage fails, keep epoch-only architecture as final candidate.
-
-### P8 - Locked SHHS transfer and few-shot study (conditional on legal access)
-
-With the entire source-selection recipe frozen, zero-shot test on approved SHHS participant-held-out set. Target data must not be used in source-model selection, prototype fitting, scaler fitting, or augmentations. Prior to unlocking, version the manifest and hash it. For few-shot adaptation, split SHHS into TARGET TRAIN/VAL/TEST by participant; define 1%, 5%, 10% label fractions over target-TRAIN participants or epochs (specify which), balance at participant level, and repeat fixed draws/seeds. Never evaluate a tuning choice on TARGET TEST more than the frozen final protocol permits. Stage distribution shift and channel montage differences must be explicitly reported.
-
-### P9 - Paper decision and release
-
-Claim transfer improvement only if independently evaluated zero-shot Macro-F1 beats the strongest matched baseline on the locked cohort with subject-level uncertainty, without material failures in minority-stage F1/calibration, and with honest training-data parity. Claim morphology interpretability only with separate event-level or blinded expert evidence. Claim novelty only after a written 2026 full-text comparison with the nearest prior art and an identified new mechanism, not a renaming of known parts.
-
-## 7. Primary endpoints, statistical unit and stop rules
-
-- **Primary:** held-out target **subject-mean Macro-F1** in zero-shot single-EEG staging; report pooled Macro-F1 as secondary and the per-subject distribution.
-- **Transfer degradation:** `source_validation_MF1 - target_test_MF1`, with source/target population caveat, reported beside target MF1, not replacing it.
-- **Secondary:** five-stage per-class F1 (especially N1), Cohen's kappa, accuracy, stage-boundary errors if valid original indices exist, calibration (ECE/Brier, properly defined), robustness to instrument-like nuisances, low-label target adaptation, runtime and memory.
-- Use participant (or family/cluster when appropriate) as the sampling unit for confidence intervals; supervised seeds are repeated optimizations, NOT independent subjects. Specify paired stratified bootstrap or subject-cluster resampling, not only fold-sign tests.
-- Include **all** paired-fold/seed results. Compare models under same pretraining exposure and modality. Avoid treating EDF20 vs overlapping EDF78 as external transfer or comparing single-channel MIST against multi-channel foundation models as an equal-data SOTA contest.
-- **Hard stop:** any train/validation/test identity overlap, sampling-rate/stage-label mismatch, absent timestamp provenance for temporal models, target tuning, all-background collapse, no finite gradients, or unverifiable explanation accounting.
-- **Drop OT:** no consistent advantage over simpler matching in domain generalization or explanation quality after matched evaluation.
-- **Drop MCR:** no reproducible transfer improvement over augmentation-only/latent-consistency controls, or gains require stage-distorting transformations.
-- **Drop waveform evidence headline:** descriptor-only control reproduces the gains, or independent event validation fails and the model does not offer meaningful auditable correspondences.
-
-## 8. Agent command and logging conventions
-
-These are **future entrypoints to implement**, not currently runnable scripts. Never claim to have run them without actually running them on a machine with the data.
-
-```bash
-# All scripts must offer --help and --dry-run where meaningful.
-python scripts/audit_edf_transfer_data.py --config configs/data_paths.example.yaml \
-  --output-dir mist_transfer_runs/p1_audit 2>&1 | tee mist_transfer_runs/p1_audit_console.txt
-
-python scripts/build_transfer_manifest.py --config configs/data_paths.example.yaml \
-  --output-dir mist_transfer_runs/p2_manifest 2>&1 | tee mist_transfer_runs/p2_manifest_console.txt
-
-python scripts/run_transfer_experiment.py --protocol sc_subject_disjoint \
-  --variants summary_only,raw_context,evidence \
-  --seeds 123,456,789 --output-dir mist_transfer_runs/p3_source_baselines \
-  2>&1 | tee mist_transfer_runs/p3_source_baselines_console.txt
-
-python scripts/run_transfer_experiment.py --protocol sc_to_st_proxy \
-  --variants evidence,aug_only,latent_consistency,mcr \
-  --seeds 123,456,789 --output-dir mist_transfer_runs/p5_development \
-  2>&1 | tee mist_transfer_runs/p5_development_console.txt
-
-python scripts/run_transfer_experiment.py --protocol frozen_sc_to_shhs \
-  --config configs/FROZEN_FINAL_PROTOCOL.yaml \
-  --output-dir mist_transfer_runs/p8_shhs_locked \
-  2>&1 | tee mist_transfer_runs/p8_shhs_locked_console.txt
-```
-
-The agent should produce `FINAL_COPY_PASTE.txt` after each P-step with git SHA, pass/fail gates, path/subject/epoch counts, remaining blockers, and the NEXT SINGLE safe command. Use `set -o pipefail` or equivalent to preserve failure exit codes when teeing logs. Never begin long downstream jobs after a preflight failed.
-
-## 9. Prior art: direct constraints on novelty
-
-Read full methods, not just abstracts, before writing a novelty paragraph:
-
-1. WaveSleepNet, interpretable wave prototypes: https://doi.org/10.1109/JBHI.2024.3498871
-2. ProtoSleepNet, prototype micro-structure sequence model (2026 preprint): https://pmc.ncbi.nlm.nih.gov/articles/PMC13060499/
-3. SleepDG, multi-level domain alignment: https://doi.org/10.1609/aaai.v38i1.27779
-4. U-Sleep, large-cohort cross-study resilience: https://doi.org/10.1038/s41746-021-00440-5
-5. MorphSpec-R1 and evidence/transport code already in repository, not external publications.
-
-Prior art occupies prototypes, waveform visualization, local time-series shapelets, generic domain-invariant learning, entropic transport, and temporal smoothing. What must be isolated by ablations is **whether source-traceable local correspondence reliability under realistic acquisition variation actually improves genuine unseen-cohort transfer**, beyond simply adding augmentations or matching power spectra. If it does not, publish the negative finding or simplify the model; do not fabricate an architectural novelty claim.
-
-## 10. FIRST ACTION FOR THE CODING AGENT
-
-**Do not start P3+ training immediately.** First inspect this exact file, current branch, tests, prior results, available directories and permissions. Execute P0 then P1 data audit ONLY, save a short factual report and stop for review. The highest-risk unresolved problem is the EDF20/78 overlap and recovery of original epoch indices, not the lack of a new loss function. SHHS is optional until legal access and matching EDF/XML files exist. The agent must not log a requested SHHS token or attempt any bypass.
-
-### Expected first deliverables
-
-1. `docs/PROVENANCE.md`, tested data path config, new study-aware manifest and audit code.
-2. `tests/transfer/` with subject-overlap, recording-night, 30-s label alignment, gap, unit and prohibited test-opening fixtures.
-3. `reports/data_audit/FINAL_COPY_PASTE.txt` and `reports/data_audit/audit.json` with actual on-PC counts and explicit unknowns.
-4. `git status`, commit(s) on the NEW research branch, and instructions to proceed to P2 if audit passes.
-
-**Do not claim that the local screenshots verify exact numbers, raw file completeness, or SHHS access. Actual machine data inventory and metadata must be measured.**
+- Lu, Z., Hu, Y., & Chen, Y. (2026). SleepBand: Single-source domain generalization for sleep staging via physiologically structured spectral modeling. arXiv. https://arxiv.org/abs/2607.04851
+- Park, J. Y., Seo, J., Kang, M., & Park, Y. R. (2026). MoECLIP: Patch-specialized experts for zero-shot anomaly detection. arXiv. https://arxiv.org/abs/2603.03101
+- NeuroAtlas: Benchmarking foundation models for clinical EEG and brain-computer interfaces (authors not retrieved). (2026). arXiv. https://arxiv.org/html/2605.14698
+- Aligning shared and routed experts for cross-subject EEG generalization (authors not retrieved). (2026). arXiv. https://arxiv.org/abs/2602.01728
+- Darankoum, D., Habermacher, C., Volle, J., & Grudinin, S. (2026). SpecMoE: Spectral mixture-of-experts foundation model for cross-species EEG decoding. arXiv. https://arxiv.org/abs/2603.16739
+- Wu, X., et al. MoESleepNet: A multi-view mixture-of-experts model for single-channel EEG sleep stage classification. Proceedings of the Annual Meeting of the Cognitive Science Society. https://escholarship.org/content/qt7395649p/qt7395649p.pdf
+- Alvarez-Estevez, D., & Rijsman, R. (2022). Haaglanden Medisch Centrum sleep staging database (Version 1.1). PhysioNet. https://doi.org/10.13026/t79q-fr32
+- Eldele, E. (2022). Preprocessed SHHS1 dataset (Version 1). DR-NTU (Data). https://doi.org/10.21979/N9/EAMYFO
+- Automated sleep staging from single-channel electroencephalogram using hybrid neural network with manual features and attention (authors not retrieved). (2025). https://pmc.ncbi.nlm.nih.gov/articles/PMC12341640/
